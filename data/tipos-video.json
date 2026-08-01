@@ -1,0 +1,65 @@
+[
+  {
+    "id": "error-comun",
+    "nombre": "El error que todos cometen",
+    "descripcion": "Nombras un error frecuente de tu publico, explicas por que lo cometen y que hacer en su lugar.",
+    "estructura": "gancho con el error -> por que pasa -> la alternativa -> cierre",
+    "duracionIdealSegundos": 30,
+    "peso": 5,
+    "activo": true
+  },
+  {
+    "id": "antes-despues",
+    "nombre": "Antes y despues",
+    "descripcion": "Muestras un resultado concreto y luego desandas el camino hasta como se llego.",
+    "estructura": "resultado primero -> punto de partida -> los 2-3 pasos clave",
+    "duracionIdealSegundos": 45,
+    "peso": 5,
+    "activo": true
+  },
+  {
+    "id": "explicacion-rapida",
+    "nombre": "Explicacion en 30 segundos",
+    "descripcion": "Un concepto de tu campo explicado sin jerga, para alguien que empieza.",
+    "estructura": "la pregunta -> la respuesta en una frase -> el ejemplo que la aterriza",
+    "duracionIdealSegundos": 30,
+    "peso": 5,
+    "activo": true
+  },
+  {
+    "id": "detras-de-camaras",
+    "nombre": "Como se hace de verdad",
+    "descripcion": "El proceso real, sin pulir. Funciona porque nadie mas lo ensena.",
+    "estructura": "que vas a hacer -> el proceso en tiempo real -> lo que no salio bien",
+    "duracionIdealSegundos": 60,
+    "peso": 4,
+    "activo": true
+  },
+  {
+    "id": "opinion-contraria",
+    "nombre": "Opinion a contracorriente",
+    "descripcion": "Cuestionas algo que se da por sentado en tu sector, con argumento.",
+    "estructura": "la creencia comun -> por que no se sostiene -> que hacer en su lugar",
+    "duracionIdealSegundos": 40,
+    "peso": 4,
+    "activo": true
+  },
+  {
+    "id": "respuesta-pregunta",
+    "nombre": "Respuesta a una pregunta real",
+    "descripcion": "Contestas una pregunta que te han hecho de verdad. Citala literal.",
+    "estructura": "la pregunta en pantalla -> respuesta directa -> matiz o excepcion",
+    "duracionIdealSegundos": 35,
+    "peso": 5,
+    "activo": true
+  },
+  {
+    "id": "lista-corta",
+    "nombre": "Tres cosas",
+    "descripcion": "Tres elementos concretos sobre un tema. Tres, no cinco ni diez.",
+    "estructura": "promesa del gancho -> uno, dos, tres -> cual importa mas",
+    "duracionIdealSegundos": 45,
+    "peso": 4,
+    "activo": true
+  }
+]

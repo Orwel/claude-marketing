@@ -1,0 +1,33 @@
+{
+  "nombre": "PONME_EL_NOMBRE_DE_TU_MARCA",
+  "queHace": "Una frase concreta. No 'ayudamos a las empresas a crecer', sino que haces exactamente.",
+  "publico": {
+    "quienEs": "A quien le hablas. Cuanto mas estrecho, mejor funcionan los guiones.",
+    "queLeDuele": [
+      "Problema concreto 1 que tu publico tiene y sabe que tiene",
+      "Problema concreto 2"
+    ],
+    "dondeEsta": "Instagram principalmente. Anota si tambien TikTok o LinkedIn."
+  },
+  "tono": {
+    "idioma": "es",
+    "voz": "Directo, sin lenguaje de marketing. Ejemplos concretos antes que promesas.",
+    "evitar": [
+      "'descubre el secreto'",
+      "'no vas a creer'",
+      "emojis en cada linea",
+      "jerga corporativa"
+    ],
+    "tratamiento": "tu"
+  },
+  "objetivo": {
+    "principal": "guardados",
+    "porque": "Un guardado indica utilidad real; las visualizaciones solo indican alcance.",
+    "secundario": "comentarios"
+  },
+  "restricciones": [
+    "No prometer resultados concretos ni plazos",
+    "No mencionar competidores por nombre"
+  ],
+  "llamadaAccion": "Que quieres que haga quien lo ve. Se especifico."
+}

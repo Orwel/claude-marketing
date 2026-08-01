@@ -1,0 +1,20 @@
+{
+  "name": "claude-marketing",
+  "version": "0.1.0",
+  "description": "Agente de marketing automatizado: planifica, publica y aprende de sus propias metricas",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "diario": "node src/index.js diario",
+    "planificar": "node src/index.js planificar",
+    "publicar": "node src/index.js publicar",
+    "medir": "node src/index.js medir",
+    "aprender": "node src/index.js aprender",
+    "probar": "node scripts/probar-conexiones.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.70.0"
+  }
+}
