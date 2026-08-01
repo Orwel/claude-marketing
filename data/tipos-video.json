@@ -1,65 +1,82 @@
 [
   {
-    "id": "error-comun",
-    "nombre": "El error que todos cometen",
-    "descripcion": "Nombras un error frecuente de tu publico, explicas por que lo cometen y que hacer en su lugar.",
-    "estructura": "gancho con el error -> por que pasa -> la alternativa -> cierre",
-    "duracionIdealSegundos": 30,
-    "peso": 5,
-    "activo": true
-  },
-  {
-    "id": "antes-despues",
-    "nombre": "Antes y despues",
-    "descripcion": "Muestras un resultado concreto y luego desandas el camino hasta como se llego.",
-    "estructura": "resultado primero -> punto de partida -> los 2-3 pasos clave",
+    "id": "clausula-que-falla",
+    "nombre": "La clausula que va a fallar",
+    "descripcion": "Tomas una clausula que se repite en miles de contratos, muestras por que esta mal redactada y como se arregla. El valor esta en que la clausula sea reconocible: quien la ve piensa 'esa la tengo yo en mi plantilla'.",
+    "estructura": "lees la clausula tal cual -> el escenario concreto donde revienta -> la redaccion corregida -> por que la corregida aguanta",
     "duracionIdealSegundos": 45,
-    "peso": 5,
+    "porQueFunciona": "Es lo mas guardable que existe para un abogado: se guarda para copiar la redaccion buena.",
+    "peso": 8,
     "activo": true
   },
   {
-    "id": "explicacion-rapida",
-    "nombre": "Explicacion en 30 segundos",
-    "descripcion": "Un concepto de tu campo explicado sin jerga, para alguien que empieza.",
-    "estructura": "la pregunta -> la respuesta en una frase -> el ejemplo que la aterriza",
-    "duracionIdealSegundos": 30,
-    "peso": 5,
+    "id": "antes-automatizado",
+    "nombre": "Antes lo hacia a mano",
+    "descripcion": "Una tarea juridica concreta que hacias manual y ahora esta automatizada. Muestras el resultado primero y luego que fue lo que cambio. Sin explicar codigo: se muestra la salida, no la implementacion.",
+    "estructura": "el resultado ya terminado -> cuanto tomaba antes y por que -> los 2-3 pasos que lo cambiaron -> que sigue necesitando criterio humano",
+    "duracionIdealSegundos": 50,
+    "porQueFunciona": "Es la prueba de que el posicionamiento es real, no una promesa. Nadie mas en el nicho puede grabar esto.",
+    "peso": 8,
     "activo": true
   },
   {
-    "id": "detras-de-camaras",
-    "nombre": "Como se hace de verdad",
-    "descripcion": "El proceso real, sin pulir. Funciona porque nadie mas lo ensena.",
-    "estructura": "que vas a hacer -> el proceso en tiempo real -> lo que no salio bien",
-    "duracionIdealSegundos": 60,
-    "peso": 4,
-    "activo": true
-  },
-  {
-    "id": "opinion-contraria",
-    "nombre": "Opinion a contracorriente",
-    "descripcion": "Cuestionas algo que se da por sentado en tu sector, con argumento.",
-    "estructura": "la creencia comun -> por que no se sostiene -> que hacer en su lugar",
-    "duracionIdealSegundos": 40,
-    "peso": 4,
-    "activo": true
-  },
-  {
-    "id": "respuesta-pregunta",
-    "nombre": "Respuesta a una pregunta real",
-    "descripcion": "Contestas una pregunta que te han hecho de verdad. Citala literal.",
-    "estructura": "la pregunta en pantalla -> respuesta directa -> matiz o excepcion",
+    "id": "respuesta-real",
+    "nombre": "Me preguntaron esto",
+    "descripcion": "Contestas una pregunta que te hicieron de verdad, en comentarios o en consulta. Citala literal en pantalla. Alimenta el objetivo secundario: mas comentarios generan mas material.",
+    "estructura": "la pregunta literal en pantalla -> respuesta directa en una frase -> el matiz o la excepcion que casi nadie menciona",
     "duracionIdealSegundos": 35,
+    "porQueFunciona": "Si una persona lo pregunto, cien lo dudaban. Y demuestra que lees los comentarios.",
+    "peso": 7,
+    "activo": true
+  },
+  {
+    "id": "traduccion",
+    "nombre": "Que dice de verdad",
+    "descripcion": "Traduces un articulo, una clausula o una figura juridica al espanol de todos los dias. Sin latin, sin 'en aras de'. El logro es que lo entienda alguien que no es abogado.",
+    "estructura": "el texto original en pantalla -> que dice en realidad -> el ejemplo cotidiano que lo aterriza",
+    "duracionIdealSegundos": 30,
+    "porQueFunciona": "Amplia la audiencia mas alla de abogados sin perder autoridad, y es el formato que mas se comparte.",
+    "peso": 6,
+    "activo": true
+  },
+  {
+    "id": "error-de-proceso",
+    "nombre": "El error que se repite",
+    "descripcion": "Un error frecuente en demandas, contratos o gestion de procesos. No para senalar a nadie: para explicar por que se comete, que es casi siempre por una plantilla heredada que nadie reviso.",
+    "estructura": "nombras el error -> por que se comete (el origen suele ser una plantilla vieja) -> la consecuencia concreta -> que hacer en su lugar",
+    "duracionIdealSegundos": 40,
+    "porQueFunciona": "Reconocimiento inmediato. Y el diagnostico de 'la plantilla heredada' es el puente natural hacia el problema que resuelve el software.",
+    "peso": 7,
+    "activo": true
+  },
+  {
+    "id": "opinion-incomoda",
+    "nombre": "Opinion a contracorriente",
+    "descripcion": "Cuestionas algo que el gremio da por sentado, con argumento y sin buscar pelea. Reservado para cuando de verdad tengas el argumento: usado a la ligera solo genera ruido.",
+    "estructura": "la creencia comun del gremio -> por que no se sostiene -> que deberia hacerse en su lugar -> el matiz honesto sobre donde la creencia si aplica",
+    "duracionIdealSegundos": 45,
+    "porQueFunciona": "Es lo que mas comentarios genera. Tambien lo mas facil de arruinar si el argumento es flojo.",
     "peso": 5,
     "activo": true
   },
   {
-    "id": "lista-corta",
+    "id": "tres-cosas",
     "nombre": "Tres cosas",
-    "descripcion": "Tres elementos concretos sobre un tema. Tres, no cinco ni diez.",
-    "estructura": "promesa del gancho -> uno, dos, tres -> cual importa mas",
+    "descripcion": "Tres elementos concretos sobre un tema juridico o de gestion. Tres, no cinco ni diez: cabe en la retencion de un reel y se recuerda.",
+    "estructura": "la promesa del gancho -> uno, dos, tres, cada uno con su ejemplo -> cual de los tres importa mas y por que",
     "duracionIdealSegundos": 45,
-    "peso": 4,
+    "porQueFunciona": "Formato mas reconocible que hay. Precisamente por eso el gancho tiene que cargar todo el peso.",
+    "peso": 5,
+    "activo": true
+  },
+  {
+    "id": "detras-del-sistema",
+    "nombre": "Como se construyo",
+    "descripcion": "El proceso real de resolver un problema juridico con software, sin pulir. Que se intento primero, que fallo, que quedo. Sin mostrar codigo ni terminal en ningun momento.",
+    "estructura": "el problema en terminos juridicos -> lo primero que se intento y por que no sirvio -> lo que si funciono -> lo que sigue sin resolverse",
+    "duracionIdealSegundos": 60,
+    "porQueFunciona": "Casi nadie ensena los intentos fallidos. Construye confianza mejor que cualquier caso de exito pulido.",
+    "peso": 5,
     "activo": true
   }
 ]

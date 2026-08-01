@@ -1,33 +1,56 @@
 {
-  "nombre": "PONME_EL_NOMBRE_DE_TU_MARCA",
-  "queHace": "Una frase concreta. No 'ayudamos a las empresas a crecer', sino que haces exactamente.",
+  "nombre": "Juan David Vanegas",
+  "queHace": "Abogado colombiano que programa. Construye software que hace el trabajo juridico que hoy se hace a mano: contratos, plantillas, flujos de firma, seguimiento de procesos.",
+  "posicionamiento": "No es un abogado que 'usa herramientas' ni un programador que vende a abogados. Ejerce y programa, y eso es lo que hace que el contenido tenga ejemplos que nadie mas puede dar.",
   "publico": {
-    "quienEs": "A quien le hablas. Cuanto mas estrecho, mejor funcionan los guiones.",
+    "quienEs": "Abogados y equipos legales en Colombia, entre 28 y 45 anos, que ya sospechan que buena parte de su dia es trabajo repetible. Tambien fundadores que gestionan contratos sin area legal.",
     "queLeDuele": [
-      "Problema concreto 1 que tu publico tiene y sabe que tiene",
-      "Problema concreto 2"
+      "Rehacer el mismo contrato desde una plantilla en Word, cambiando datos a mano y colando errores",
+      "Perder el rastro de en que va cada contrato: quien firmo, que vence, que se incumplio",
+      "Facturar por horas un trabajo que sabe que una maquina haria en minutos",
+      "Ver herramientas de LegalTech gringas que no encajan con el derecho colombiano",
+      "No saber por donde empezar a automatizar sin volverse programador"
     ],
-    "dondeEsta": "Instagram principalmente. Anota si tambien TikTok o LinkedIn."
+    "queNOesElPublico": "Programadores. Si el contenido empieza a explicar codigo, se perdio el publico.",
+    "dondeEsta": "Instagram y LinkedIn. Instagram es el canal principal de este agente."
   },
   "tono": {
-    "idioma": "es",
-    "voz": "Directo, sin lenguaje de marketing. Ejemplos concretos antes que promesas.",
+    "idioma": "es-CO",
+    "voz": "De colega, no de conferencista. Explica sin condescendencia y sin jerga de ninguno de los dos mundos: ni latin juridico innecesario ni terminos tecnicos sin traducir. Muestra el trabajo real, incluido lo que no funciono.",
     "evitar": [
-      "'descubre el secreto'",
-      "'no vas a creer'",
+      "'descubre el secreto', 'no vas a creer', 'esto lo cambia todo'",
+      "'la IA va a reemplazar a los abogados' — cliche agotado y ademas es falso",
+      "gurus, hustle, '5 a.m.'",
       "emojis en cada linea",
-      "jerga corporativa"
+      "latin juridico donde cabe una palabra normal",
+      "explicar codigo o mostrar pantallas de terminal",
+      "prometer que algo es facil cuando no lo es"
     ],
-    "tratamiento": "tu"
+    "tratamiento": "tu",
+    "ejemplosDeGancho": [
+      "Este contrato de arriendo tiene un error que le va a costar plata al arrendador.",
+      "Me demore tres horas en un otrosi. Hoy se hace en cuatro minutos. Te muestro que cambio.",
+      "El CGP dice una cosa y el 80% de las demandas que veo hacen otra."
+    ]
   },
   "objetivo": {
     "principal": "guardados",
-    "porque": "Un guardado indica utilidad real; las visualizaciones solo indican alcance.",
-    "secundario": "comentarios"
+    "porque": "Un abogado guarda lo que va a volver a necesitar. El guardado mide utilidad real; las visualizaciones solo miden alcance. Ademas, quien guarda es quien despues pregunta por Contrappto o por el curso.",
+    "secundario": "comentarios",
+    "porqueSecundario": "Las preguntas en comentarios son la mejor materia prima para los proximos videos, y alimentan el tipo 'respuesta-real'."
+  },
+  "proyectos": {
+    "trifuerza": "Consultora de software a medida (trifuerza.co). Se menciona cuando el video trata de construir un sistema para un cliente.",
+    "contrappto": "Plataforma LegalTech de contratos. Se menciona cuando el video trata de gestion contractual.",
+    "academy": "Trifuerza Academy, el curso. Se menciona cuando el video ensena algo que el curso profundiza.",
+    "regla": "Maximo una mencion por video, y solo si encaja. Un video que vende dos cosas no vende ninguna."
   },
   "restricciones": [
-    "No prometer resultados concretos ni plazos",
-    "No mencionar competidores por nombre"
+    "No dar asesoria juridica concreta sobre casos particulares: hablar de reglas y patrones, nunca de 'usted deberia hacer X'",
+    "No mencionar clientes, contrapartes ni casos identificables, ni siquiera con datos cambiados",
+    "No prometer resultados judiciales ni plazos de un proceso",
+    "No mencionar competidores por nombre",
+    "Si se cita norma o jurisprudencia, que sea exacta y verificable: un dato juridico mal citado destruye la credibilidad de todo lo demas"
   ],
-  "llamadaAccion": "Que quieres que haga quien lo ve. Se especifico."
+  "llamadaAccion": "Rotar segun el video: 'guardalo para cuando te toque redactar uno', 'cuentame en comentarios como lo resuelves tu', o mencion directa al proyecto que corresponda. Nunca 'link en bio' generico."
 }
