@@ -53,6 +53,7 @@ export const config = {
   },
   hub: {
     puerto: Number(process.env.HUB_PUERTO || 4321),
+    clave: process.env.HUB_CLAVE || '',
   },
   stock: {
     apiKey: process.env.PEXELS_API_KEY,

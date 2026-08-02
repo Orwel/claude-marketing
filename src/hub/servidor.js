@@ -21,6 +21,31 @@ import { pagina } from './pagina.js';
  * esto sobra.
  */
 
+/**
+ * Autenticacion por clave.
+ *
+ * El hub tiene un boton que PUBLICA en tu Instagram. Sin clave, cualquiera
+ * que alcance el puerto puede pulsarlo: en una red wifi compartida, en una
+ * oficina, o el internet entero si lo despliegas en un servidor. No es una
+ * mejora opcional, es la diferencia entre una herramienta y un agujero.
+ *
+ * Si HUB_CLAVE esta vacia solo se admite trafico local, para que el caso
+ * "lo pruebo en mi portatil" siga siendo un comando sin configuracion.
+ */
+function autorizado(peticion, url) {
+  const clave = config.hub.clave;
+  const origen = peticion.socket.remoteAddress ?? '';
+  const esLocal = origen.includes('127.0.0.1') || origen.includes('::1');
+
+  if (!clave) return esLocal;
+
+  return (
+    url.searchParams.get('clave') === clave ||
+    peticion.headers['x-clave'] === clave ||
+    (peticion.headers.cookie ?? '').includes(`clave=${clave}`)
+  );
+}
+
 const TIPOS_MIME = {
   '.mp4': 'video/mp4',
   '.mp3': 'audio/mpeg',
@@ -34,6 +59,26 @@ export function arrancarHub({ puerto = config.hub.puerto } = {}) {
     const ruta = url.pathname;
 
     try {
+      if (!autorizado(peticion, url)) {
+        return respuesta
+          .writeHead(401, { 'Content-Type': 'text/html; charset=utf-8' })
+          .end(
+            config.hub.clave
+              ? '<p style="font:16px system-ui;padding:40px">Clave incorrecta. Entra con <code>?clave=TU_CLAVE</code></p>'
+              : '<p style="font:16px system-ui;padding:40px">Solo se admite acceso local. ' +
+                'Para entrar desde otro dispositivo, pon HUB_CLAVE en el .env.</p>'
+          );
+      }
+
+      // La clave viaja en la URL la primera vez; se guarda en cookie para
+      // no tener que arrastrarla en cada peticion desde el movil.
+      if (ruta === '/' && url.searchParams.get('clave')) {
+        respuesta.setHeader(
+          'Set-Cookie',
+          `clave=${config.hub.clave}; Path=/; Max-Age=2592000; SameSite=Lax`
+        );
+      }
+
       if (ruta === '/') return enviarHtml(respuesta, pagina());
       if (ruta === '/api/publicaciones') return enviarJson(respuesta, estadoActual());
       if (ruta.startsWith('/video/')) return enviarVideo(peticion, respuesta, ruta.slice(7));
@@ -52,7 +97,13 @@ export function arrancarHub({ puerto = config.hub.puerto } = {}) {
 
   servidor.listen(puerto, '0.0.0.0', () => {
     log.ok(`Hub de revision en http://localhost:${puerto}`);
-    log.info('Desde el movil: usa la IP de esta maquina en la misma red.');
+    if (config.hub.clave) {
+      log.info(`Desde otro dispositivo: http://<ip-de-esta-maquina>:${puerto}/?clave=${config.hub.clave}`);
+    } else {
+      log.aviso(
+        'Sin HUB_CLAVE solo se admite acceso local. Ponla en el .env para entrar desde el movil.'
+      );
+    }
   });
 
   return servidor;
