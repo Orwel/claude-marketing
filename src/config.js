@@ -42,8 +42,8 @@ const bool = (v, porDefecto) =>
 
 export const config = {
   ia: {
-    apiKey: process.env.ANTHROPIC_API_KEY,
-    modelo: process.env.MODELO_IA || 'claude-opus-5',
+    apiKey: process.env.GEMINI_API_KEY,
+    modelo: process.env.MODELO_IA || 'gemini-2.5-pro',
     esfuerzo: process.env.ESFUERZO_IA || 'high',
   },
   blotato: {
@@ -73,7 +73,7 @@ export const config = {
  */
 export function exigir(...claves) {
   const mapa = {
-    ia: ['ANTHROPIC_API_KEY', config.ia.apiKey],
+    ia: ['GEMINI_API_KEY', config.ia.apiKey],
     blotato: ['BLOTATO_API_KEY', config.blotato.apiKey],
     cuentaInstagram: ['BLOTATO_ACCOUNT_ID_INSTAGRAM', config.blotato.cuentaInstagram],
     igToken: ['IG_ACCESS_TOKEN', config.instagram.token],

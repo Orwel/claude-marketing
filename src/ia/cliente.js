@@ -1,59 +1,84 @@
-import Anthropic from '@anthropic-ai/sdk';
+import { GoogleGenAI } from '@google/genai';
 import { config, exigir } from '../config.js';
 
 let cliente;
 
 export function obtenerCliente() {
   exigir('ia');
-  cliente ??= new Anthropic({ apiKey: config.ia.apiKey });
+  cliente ??= new GoogleGenAI({ apiKey: config.ia.apiKey });
   return cliente;
+}
+
+/**
+ * El control de profundidad de razonamiento cambio de nombre entre familias:
+ *  - Gemini 2.5 -> thinkingConfig.thinkingBudget (-1 = dinamico, el modelo decide)
+ *  - Gemini 3   -> thinkingConfig.thinkingLevel  ('low' | 'medium' | 'high')
+ *
+ * Mandar el parametro de la otra familia da error, asi que se elige por el
+ * id del modelo. Cuando salga una familia nueva, este es el unico sitio a tocar.
+ */
+function configuracionDeRazonamiento() {
+  const nivel = config.ia.esfuerzo;
+
+  if (config.ia.modelo.startsWith('gemini-3')) {
+    // 'xhigh' y 'max' no existen en Gemini; se mapean al techo real.
+    const equivalencias = { low: 'low', medium: 'medium', high: 'high', xhigh: 'high', max: 'high' };
+    return { thinkingLevel: equivalencias[nivel] ?? 'high' };
+  }
+
+  // -1 deja que el modelo decida cuanto pensar, que es lo que queremos
+  // salvo que se pida explicitamente el nivel mas bajo.
+  return { thinkingBudget: nivel === 'low' ? 0 : -1 };
 }
 
 /**
  * Una llamada al modelo que devuelve JSON validado contra un esquema.
  *
- * Detalles de la API que importan y que es facil equivocar:
- *  - `thinking: {type: 'adaptive'}` — el modelo decide cuanto razonar.
- *    `budget_tokens` esta ELIMINADO en Opus 5 y devuelve 400.
- *  - `output_config.format` — el parametro `output_format` de nivel superior
- *    esta obsoleto; el bueno va anidado dentro de output_config.
- *  - NO se envia `temperature` / `top_p` / `top_k`: Opus 5 los rechaza con 400.
- *  - El esquema necesita `additionalProperties: false` y `required` completo.
+ * Detalles de la API de Gemini que importan y que es facil equivocar:
+ *  - `responseMimeType: 'application/json'` es OBLIGATORIO junto a responseSchema.
+ *    Sin el, el modelo devuelve el JSON envuelto en markdown y JSON.parse revienta.
+ *  - El esquema NO es JSON Schema completo, es un subconjunto de OpenAPI 3.0.
+ *    Ver src/ia/esquemas.js para lo que se puede y no se puede usar.
+ *  - El system prompt va en `config.systemInstruction`, no como un mensaje mas.
+ *  - El texto se lee de `respuesta.text` (propiedad, no funcion).
  */
 export async function pedirJsonAlModelo({ sistema, prompt, esquema, maxTokens = 8000 }) {
-  const respuesta = await obtenerCliente().messages.create({
+  const respuesta = await obtenerCliente().models.generateContent({
     model: config.ia.modelo,
-    max_tokens: maxTokens,
-    system: sistema,
-    thinking: { type: 'adaptive' },
-    output_config: {
-      effort: config.ia.esfuerzo,
-      format: { type: 'json_schema', schema: esquema },
+    contents: prompt,
+    config: {
+      systemInstruction: sistema,
+      responseMimeType: 'application/json',
+      responseSchema: esquema,
+      maxOutputTokens: maxTokens,
+      thinkingConfig: configuracionDeRazonamiento(),
     },
-    messages: [{ role: 'user', content: prompt }],
   });
 
-  // Una negativa por seguridad llega como HTTP 200 con stop_reason 'refusal'
-  // y content vacio. Hay que comprobarlo ANTES de leer content[0].
-  if (respuesta.stop_reason === 'refusal') {
+  const candidato = respuesta.candidates?.[0];
+  const motivo = candidato?.finishReason;
+
+  // Un bloqueo por filtros de seguridad no lanza excepcion: llega una respuesta
+  // valida con finishReason distinto de STOP y sin texto. Hay que mirarlo
+  // ANTES de intentar parsear, o el error que sale no dice nada util.
+  if (motivo && motivo !== 'STOP') {
+    if (motivo === 'MAX_TOKENS') {
+      throw new Error(
+        `Respuesta truncada por maxOutputTokens (${maxTokens}). Sube el limite y reintenta.`
+      );
+    }
     throw new Error(
-      `El modelo rechazo la peticion (${respuesta.stop_details?.category ?? 'sin categoria'}). ` +
-        `Revisa el prompt o el contenido de la marca.`
+      `El modelo no completo la respuesta (finishReason: ${motivo}). ` +
+        `Si es SAFETY o PROHIBITED_CONTENT, revisa el prompt o el contenido de la marca.`
     );
   }
 
-  if (respuesta.stop_reason === 'max_tokens') {
-    throw new Error(
-      `Respuesta truncada por max_tokens (${maxTokens}). Sube el limite y reintenta.`
-    );
-  }
-
-  const bloque = respuesta.content.find((b) => b.type === 'text');
-  if (!bloque) throw new Error('El modelo no devolvio ningun bloque de texto');
+  const texto = respuesta.text;
+  if (!texto) throw new Error('El modelo devolvio una respuesta vacia');
 
   try {
-    return JSON.parse(bloque.text);
+    return JSON.parse(texto);
   } catch (e) {
-    throw new Error(`El modelo devolvio JSON invalido: ${e.message}\n${bloque.text.slice(0, 500)}`);
+    throw new Error(`El modelo devolvio JSON invalido: ${e.message}\n${texto.slice(0, 500)}`);
   }
 }

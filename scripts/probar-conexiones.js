@@ -38,13 +38,38 @@ await probar('Ficheros de datos', async () => {
 });
 
 await probar(`IA (${config.ia.modelo})`, async () => {
-  const respuesta = await obtenerCliente().messages.create({
+  const ia = obtenerCliente();
+
+  // Los modelos disponibles dependen de la cuenta, asi que se preguntan
+  // en vez de suponerlos. Si el configurado no esta, el fallo es claro.
+  const disponibles = [];
+  for await (const m of await ia.models.list()) {
+    const id = m.name?.replace(/^models\//, '');
+    if (id?.startsWith('gemini') && m.supportedActions?.includes('generateContent')) {
+      disponibles.push(id);
+    }
+  }
+
+  const preferidos = disponibles.filter((id) => /gemini-3|gemini-2\.5-pro/.test(id)).slice(0, 6);
+  if (preferidos.length) {
+    console.log('    Modelos recomendados que tienes disponibles:');
+    preferidos.forEach((id) => console.log(`      ${id}${id === config.ia.modelo ? '  ← en uso' : ''}`));
+  }
+
+  if (disponibles.length && !disponibles.includes(config.ia.modelo)) {
+    throw new Error(
+      `el modelo "${config.ia.modelo}" no esta disponible para tu clave. ` +
+        `Pon uno de los de arriba en MODELO_IA.`
+    );
+  }
+
+  const respuesta = await ia.models.generateContent({
     model: config.ia.modelo,
-    max_tokens: 32,
-    output_config: { effort: 'low' },
-    messages: [{ role: 'user', content: 'Responde solo: ok' }],
+    contents: 'Responde solo: ok',
+    config: { maxOutputTokens: 32 },
   });
-  return `respondio (${respuesta.usage.input_tokens} tokens entrada)`;
+
+  return `respondio "${(respuesta.text ?? '').trim().slice(0, 20)}"`;
 });
 
 await probar('Blotato', async () => {

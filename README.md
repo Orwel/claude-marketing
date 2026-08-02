@@ -44,7 +44,7 @@ sin llegar a publicar. Ponlo en `false` cuando estés listo.
 
 | Pieza | Qué hace |
 |---|---|
-| **Claude** (`claude-opus-5`) | Escribe los guiones y analiza las métricas |
+| **Gemini** (`gemini-2.5-pro`) | Escribe los guiones y analiza las métricas |
 | **Blotato** | Publica en Instagram. Solo vías oficiales: OAuth, sin credenciales nuestras |
 | **Instagram Graph API v22** | Métricas. Solo lectura |
 | `data/marca.json` | Identidad, público, tono, objetivo |

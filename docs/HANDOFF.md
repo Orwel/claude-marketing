@@ -22,12 +22,12 @@ con la evidencia.
   │      métricas de publicaciones con +24h de vida              │
   │                          │                                   │
   │                          ▼                                   │
-  │   2. APRENDER       Claude analiza qué funcionó               │
+  │   2. APRENDER       la IA analiza qué funcionó                │
   │      → escribe en historial.aprendizajes                     │
   │      → repriorija data/tipos-video.json                      │
   │                          │                                   │
   │                          ▼                                   │
-  │   3. PLANIFICAR     Claude escribe el guion de hoy            │
+  │   3. PLANIFICAR     la IA escribe el guion de hoy             │
   │      leyendo los aprendizajes acumulados                     │
   │                          │                                   │
   │                          ▼                                   │
@@ -53,7 +53,7 @@ ayer y el bucle no cerraría. Está así en `src/flujo/diario.js`.
 | **Solo vías oficiales** | Nada de automatización de navegador ni credenciales de usuario. Blotato conecta por OAuth; las métricas vienen de la Graph API oficial. Esto es una restricción dura, no una preferencia. |
 | **Publicar por Blotato, medir por Graph API directa** | Blotato no expone insights con el detalle que necesita el bucle de aprendizaje (retención, guardados, tiempo medio visto). |
 | **Tipos de video en JSON, no en código** | `data/tipos-video.json` lo edita el humano *y* lo edita el agente (repriorización). Si estuviera en código, el agente no podría ajustarlo. |
-| **Modelo: `claude-opus-5`** | Adaptive thinking + structured outputs. Ver §4 para los detalles de API. |
+| **Modelo: Gemini** (`gemini-2.5-pro` por defecto) | Structured outputs + thinking. Se eligio porque es la clave que tiene el usuario. La capa de IA esta aislada en `src/ia/`: cambiar de proveedor toca dos archivos, `cliente.js` y `esquemas.js`. Ver §4. |
 | **Estado en JSON plano, sin base de datos** | Volumen de una publicación al día. El historial debe poder auditarse a ojo para ver qué está aprendiendo el agente. |
 | **`SIMULAR=true` por defecto** | Publicar es irreversible. Hay que optar explícitamente por publicar de verdad. |
 
@@ -90,8 +90,8 @@ claude-marketing/
     │   └── aprender.js        ★ El núcleo. Analiza y repriorija tipos.
     │
     ├── ia/
-    │   ├── cliente.js         Wrapper de la API de Anthropic. Ver §4.
-    │   ├── esquemas.js        Esquemas JSON para structured outputs
+    │   ├── cliente.js         Wrapper de la API de Gemini. Ver §4.
+    │   ├── esquemas.js        Esquemas OpenAPI para structured outputs
     │   ├── generar-guion.js   Prompt de planificación
     │   └── analizar-metricas.js  Prompt de análisis
     │
@@ -118,37 +118,48 @@ claude-marketing/
 
 ## 4. Detalles técnicos verificados (no reinventar)
 
-### API de Anthropic — lo que es fácil equivocar
+### API de Gemini — lo que es fácil equivocar
 
-Implementado en `src/ia/cliente.js`. Estos cuatro puntos son la fuente habitual
-de errores 400:
+Implementado en `src/ia/cliente.js`. Estos puntos son la fuente habitual de
+errores:
 
 ```js
-{
-  model: 'claude-opus-5',
-  thinking: { type: 'adaptive' },        // ✓ adaptive thinking
-  output_config: {
-    effort: 'high',                       // low|medium|high|xhigh|max
-    format: { type: 'json_schema', schema } // ✓ anidado en output_config
-  }
-  // ✗ NADA de temperature / top_p / top_k  → 400 en Opus 5
-  // ✗ NADA de budget_tokens                → 400 en Opus 5
-  // ✗ NO usar output_format de nivel superior (obsoleto)
-}
+await ai.models.generateContent({
+  model: 'gemini-2.5-pro',
+  contents: prompt,
+  config: {
+    systemInstruction: sistema,              // ✓ el system va aquí, no como mensaje
+    responseMimeType: 'application/json',    // ✓ OBLIGATORIO junto a responseSchema
+    responseSchema: esquema,
+    maxOutputTokens: 8000,
+    thinkingConfig: { thinkingBudget: -1 },  // 2.5 → budget; 3 → thinkingLevel
+  },
+});
+// el texto se lee de respuesta.text  (propiedad, NO función)
 ```
 
 Además:
 
-- **`thinking` está activo por defecto** en Opus 5. `max_tokens` limita
-  pensamiento + respuesta juntos, así que hay que dar holgura.
-- **Comprobar `stop_reason` antes de leer `content[0]`.** Una negativa por
-  seguridad llega como HTTP 200 con `stop_reason: 'refusal'` y `content` vacío.
-  `cliente.js` ya lo maneja.
-- **Restricciones de los esquemas JSON:** todo objeto necesita
-  `additionalProperties: false`, `required` debe listar *todas* las
-  propiedades (no hay opcionales), y no se admiten `minimum`/`maxLength`/
-  esquemas recursivos. Eso se valida en código, no en el esquema.
-- Sin prefill del turno de assistant (devuelve 400 en Opus 5).
+- **Sin `responseMimeType: 'application/json'`** el modelo devuelve el JSON
+  envuelto en markdown y `JSON.parse` revienta. Es el error número uno.
+- **`thinkingConfig` cambia de forma entre familias.** Gemini 2.5 usa
+  `thinkingBudget` (`-1` = dinámico); Gemini 3 usa `thinkingLevel`
+  (`low`/`medium`/`high`). Mandar el de la otra familia da error.
+  `configuracionDeRazonamiento()` en `cliente.js` lo resuelve por el id del
+  modelo: es el único sitio a tocar cuando salga una familia nueva.
+- **Comprobar `finishReason` antes de parsear.** Un bloqueo por filtros de
+  seguridad no lanza excepción: llega una respuesta válida con
+  `finishReason` distinto de `STOP` y sin texto.
+- **El esquema NO es JSON Schema completo**, es un subconjunto de OpenAPI 3.0:
+  no admite `additionalProperties` (el SDK lo rechaza en validación local),
+  ni esquemas recursivos. Los tipos se declaran con el enum `Type` del SDK.
+- **`propertyOrdering` no es cosmético.** Define el orden en que el modelo
+  genera los campos, y lo que se genera primero condiciona lo que viene
+  después. Por eso `razonDelTipo` va antes que el contenido que justifica, y
+  `evidencia` antes que `confianza`.
+- **El modelo se comprueba contra la cuenta**, no se supone: `npm run probar`
+  lista los modelos que la clave tiene disponibles y falla claro si el
+  configurado no está.
 
 ### Blotato
 
@@ -218,9 +229,9 @@ de guiones.
 
 | Variable | De dónde sale |
 |---|---|
-| `ANTHROPIC_API_KEY` | console.anthropic.com → Settings → API Keys |
-| `MODELO_IA` | Por defecto `claude-opus-5` |
-| `ESFUERZO_IA` | `low`\|`medium`\|`high`\|`xhigh`\|`max`. Por defecto `high` |
+| `GEMINI_API_KEY` | aistudio.google.com/apikey |
+| `MODELO_IA` | Por defecto `gemini-2.5-pro`. `npm run probar` lista los disponibles |
+| `ESFUERZO_IA` | `low`\|`medium`\|`high`. Por defecto `high` |
 | `BLOTATO_API_KEY` | my.blotato.com → Settings → API |
 | `BLOTATO_ACCOUNT_ID_INSTAGRAM` | Sale de `npm run probar` |
 | `IG_ACCESS_TOKEN` | App de Meta, token de larga duración |
@@ -249,7 +260,7 @@ npm run diario            # el ciclo completo: medir → aprender → planificar
 ### Lo que funciona
 
 - Las cuatro etapas del flujo, completas y encadenadas.
-- Integración con Anthropic (structured outputs + adaptive thinking).
+- Integración con Gemini (structured outputs + thinking).
 - Integración con Blotato (accounts, media, posts).
 - Integración con Instagram Insights v22 + tasas derivadas.
 - Bucle de aprendizaje con repriorización automática de tipos.
@@ -284,11 +295,11 @@ npm run diario            # el ciclo completo: medir → aprender → planificar
   `__dirname` no existe: usar `fileURLToPath(import.meta.url)`.
 - **Todo en español**: nombres de variables, funciones, comentarios, logs y
   mensajes de error. Es deliberado, mantenlo.
-- **Sin dependencias más allá del SDK de Anthropic.** `.env`, HTTP y
+- **Sin dependencias más allá del SDK de Gemini** (`@google/genai`). `.env`, HTTP y
   almacenamiento están resueltos con Node puro. No añadas `dotenv`, `axios` ni
   un ORM sin una razón concreta.
-- **Antes de tocar la API de Anthropic, lee §4.** Los cuatro errores de 400 son
-  fáciles de reintroducir.
+- **Antes de tocar la API de Gemini, lee §4.** Los errores de esa lista son
+  fáciles de reintroducir, sobre todo el `responseMimeType`.
 - **Dónde está el valor:** en `src/flujo/aprender.js` y en los prompts de
   `src/ia/`. La fontanería de Blotato e Instagram es sustituible; el bucle de
   aprendizaje es el producto. Si hay que elegir dónde invertir esfuerzo, es

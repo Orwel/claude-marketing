@@ -15,6 +15,6 @@
     "probar": "node scripts/probar-conexiones.js"
   },
   "dependencies": {
-    "@anthropic-ai/sdk": "^0.70.0"
+    "@google/genai": "^2.15.0"
   }
 }
