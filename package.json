@@ -14,7 +14,8 @@
     "aprender": "node src/index.js aprender",
     "probar": "node scripts/probar-conexiones.js",
     "producir": "node src/index.js producir",
-    "estudio": "remotion studio remotion/index.js"
+    "estudio": "remotion studio remotion/index.js",
+    "hub": "node src/index.js hub"
   },
   "dependencies": {
     "@elevenlabs/elevenlabs-js": "^2.60.0",

@@ -51,6 +51,9 @@ export const config = {
     voiceId: process.env.ELEVENLABS_VOICE_ID,
     modelo: process.env.ELEVENLABS_MODELO || 'eleven_multilingual_v2',
   },
+  hub: {
+    puerto: Number(process.env.HUB_PUERTO || 4321),
+  },
   stock: {
     apiKey: process.env.PEXELS_API_KEY,
   },

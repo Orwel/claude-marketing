@@ -3,7 +3,6 @@ import { log } from './util/log.js';
 import { diario } from './flujo/diario.js';
 import { planificar } from './flujo/planificar.js';
 import { publicar } from './flujo/publicar.js';
-import { producir } from './video/producir.js';
 import { medir } from './flujo/medir.js';
 import { aprender } from './flujo/aprender.js';
 
@@ -19,6 +18,7 @@ claude-marketing — agente de marketing que aprende de sus propias metricas
                          -- --id <id> --video <URL publica> [--programar <ISO>]
   npm run medir        Recoge metricas de Instagram (publicaciones con +24h)
   npm run aprender     Analiza las metricas y ajusta la estrategia
+  npm run hub          Interfaz de revision en el navegador (y en el movil)
   npm run probar       Comprueba credenciales y conexiones
 
 El flujo normal:
@@ -54,13 +54,22 @@ async function principal() {
       return diario();
     case 'planificar':
       return planificar();
-    case 'producir':
+    // Import perezoso: producir arrastra el bundler de Remotion, que tarda
+    // segundos en cargar. Cargarlo en cada comando haria que "medir" o
+    // "aprender" pagaran ese arranque sin usarlo nunca.
+    case 'hub': {
+      const { arrancarHub } = await import('./hub/servidor.js');
+      return arrancarHub({ puerto: Number(args.puerto ?? 0) || undefined });
+    }
+    case 'producir': {
+      const { producir } = await import('./video/producir.js');
       return producir({
         id: args.id,
         modoFondo: args.fondo ?? undefined,
         metrajePropio: args.metraje ?? null,
         desdeSegundo: Number(args.desde ?? 0),
       });
+    }
     case 'publicar':
       return publicar({ id: args.id, urlVideo: args.video, programarPara: args.programar ?? null });
     case 'medir':
