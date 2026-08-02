@@ -8,3 +8,6 @@ tmp/
 # El historial es estado local del agente, no codigo.
 # Quitalo del ignore si quieres versionar el aprendizaje.
 data/historial.json
+
+salida/
+remotion/public/pub_*/

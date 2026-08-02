@@ -3,6 +3,7 @@ import { log } from './util/log.js';
 import { diario } from './flujo/diario.js';
 import { planificar } from './flujo/planificar.js';
 import { publicar } from './flujo/publicar.js';
+import { producir } from './video/producir.js';
 import { medir } from './flujo/medir.js';
 import { aprender } from './flujo/aprender.js';
 
@@ -11,17 +12,20 @@ claude-marketing — agente de marketing que aprende de sus propias metricas
 
   npm run diario       Ciclo completo: medir -> aprender -> planificar
   npm run planificar   Genera el guion de hoy
-  npm run publicar     Publica un guion ya grabado
+  npm run producir     Genera el video: voz + fondos + montaje
+                         -- --id <id> [--fondo plantilla|imagen|veo]
+  npm run publicar     Publica un video ya producido
                          -- --id <id> --video <URL publica> [--programar <ISO>]
   npm run medir        Recoge metricas de Instagram (publicaciones con +24h)
   npm run aprender     Analiza las metricas y ajusta la estrategia
   npm run probar       Comprueba credenciales y conexiones
 
 El flujo normal:
-  1. npm run planificar              -> te da un guion
-  2. grabas el video y lo subes a una URL publica
-  3. npm run publicar -- --id X --video Y
-  4. al dia siguiente: npm run diario  (mide, aprende y planifica lo siguiente)
+  1. npm run planificar               -> te da un guion
+  2. npm run producir -- --id X       -> genera el video (voz + montaje)
+  3. subes el mp4 a una URL publica
+  4. npm run publicar -- --id X --video <URL>
+  5. al dia siguiente: npm run diario  (mide, aprende y planifica lo siguiente)
 `;
 
 function leerArgumentos(argv) {
@@ -49,6 +53,8 @@ async function principal() {
       return diario();
     case 'planificar':
       return planificar();
+    case 'producir':
+      return producir({ id: args.id, modoFondo: args.fondo ?? undefined });
     case 'publicar':
       return publicar({ id: args.id, urlVideo: args.video, programarPara: args.programar ?? null });
     case 'medir':

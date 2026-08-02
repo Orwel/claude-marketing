@@ -46,6 +46,19 @@ export const config = {
     modelo: process.env.MODELO_IA || 'gemini-2.5-pro',
     esfuerzo: process.env.ESFUERZO_IA || 'high',
   },
+  voz: {
+    apiKey: process.env.ELEVENLABS_API_KEY,
+    voiceId: process.env.ELEVENLABS_VOICE_ID,
+    modelo: process.env.ELEVENLABS_MODELO || 'eleven_multilingual_v2',
+  },
+  video: {
+    // 'plantilla' | 'imagen' | 'veo'
+    modoFondo: process.env.MODO_FONDO || 'plantilla',
+    modeloVeo: process.env.MODELO_VEO || 'veo-3.1-fast-generate-preview',
+    modeloImagen: process.env.MODELO_IMAGEN || 'imagen-4.0-generate-001',
+    esperaMaxVeoMs: Number(process.env.VEO_ESPERA_MAX_MIN || 15) * 60 * 1000,
+    navegador: process.env.CHROME_EJECUTABLE || '',
+  },
   blotato: {
     apiKey: process.env.BLOTATO_API_KEY,
     baseUrl: process.env.BLOTATO_BASE_URL || 'https://backend.blotato.com',
@@ -74,6 +87,8 @@ export const config = {
 export function exigir(...claves) {
   const mapa = {
     ia: ['GEMINI_API_KEY', config.ia.apiKey],
+    voz: ['ELEVENLABS_API_KEY', config.voz.apiKey],
+    vozId: ['ELEVENLABS_VOICE_ID', config.voz.voiceId],
     blotato: ['BLOTATO_API_KEY', config.blotato.apiKey],
     cuentaInstagram: ['BLOTATO_ACCOUNT_ID_INSTAGRAM', config.blotato.cuentaInstagram],
     igToken: ['IG_ACCESS_TOKEN', config.instagram.token],
