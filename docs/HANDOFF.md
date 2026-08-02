@@ -75,6 +75,14 @@ claude-marketing/
 │   ├── tipos-video.json       Catálogo de formatos. Lo edita el humano Y el agente.
 │   └── historial.json         Estado del agente (se genera solo, está en .gitignore)
 │
+├── remotion/                  Proyecto Remotion (React)
+│   ├── index.js               registerRoot
+│   ├── Root.jsx               Composition 1080x1920, duracion desde props
+│   ├── Reel.jsx               Gancho, subtitulos, fondos, metraje propio
+│   └── public/                Assets por publicacion (gitignored)
+│
+├── salida/                    mp4 renderizados (gitignored)
+│
 ├── scripts/
 │   └── probar-conexiones.js   Verifica credenciales una por una. Ejecutar primero.
 │
@@ -106,7 +114,20 @@ claude-marketing/
     │   └── insights.js        Métricas de reels + tasas derivadas
     │
     ├── video/
+    │   ├── producir.js        Orquesta voz + fondos + montaje Remotion
+    │   ├── broll.js           Fondos con Veo / Imagen (caro)
+    │   ├── stock.js           Fondos con Pexels (gratis)
     │   └── validar.js         Requisitos de Reels (9:16, 5–90s, ≤300MB)
+    │
+    ├── voz/
+    │   └── elevenlabs.js      TTS con timestamps por caracter
+    │
+    ├── almacenamiento/
+    │   └── subir.js           manual | supabase | r2 (S3 firmado a mano)
+    │
+    ├── hub/
+    │   ├── servidor.js        Servidor http + auth por clave
+    │   └── pagina.js          Interfaz de revision (movil primero)
     │
     └── util/
         ├── log.js             Logging con color y hora
@@ -199,6 +220,69 @@ inicio del caption (Blotato no siempre devuelve el id nativo).
 
 ---
 
+## 4bis. Produccion de video — lo verificado
+
+**Remotion**
+- `browserExecutable` va en `selectComposition` **y** en `renderMedia`. Solo en
+  la segunda, la primera intenta descargar Chrome igualmente.
+- La duracion NO es fija: `calculateMetadata` la lee de las props, para que el
+  video dure exactamente lo que dura la locucion.
+- Licencia: gratis para individuos y empresas de ≤3 personas. **Trifuerza puede
+  necesitar licencia de empresa** — revisar antes de produccion.
+
+**ElevenLabs**
+- `convertWithTimestamps`, no `convert`. Los tiempos por caracter son lo que
+  permite subtitular palabra a palabra; sin ellos habria que repartir por
+  numero de caracteres y cualquier pausa rompe la sincronia.
+- Se agrupan caracteres en palabras en `agruparEnPalabras()`.
+
+**Orden de la cadena**
+La locucion va **primero**: su duracion real define la del video. Al reves
+habria que estimarla y los subtitulos quedarian desincronizados.
+
+**Modos de fondo**
+`plantilla` (gratis, defecto) · `stock` (Pexels, gratis, uso comercial sin
+atribucion) · `imagen` (Imagen) · `veo` (caro, minutos por escena).
+Plantilla es el defecto porque cuando el contenido ES texto —una clausula, una
+traduccion— un fondo generado detras del dato distrae en vez de sumar.
+
+**Metraje propio (`--metraje`)**
+Tu video es la capa base con su propio audio; Remotion solo superpone. No se
+llama a ElevenLabs. El velo oscuro se aplica mas suave, porque uno fuerte
+oscurece la cara, que es justo el valor de ese modo. `--desde N` recorta el
+arranque.
+
+---
+
+## 4ter. Almacenamiento — por que existe
+
+Blotato **descarga** el video desde una URL publica; no acepta subida directa.
+Sin un sitio publico donde dejar el mp4 no hay publicacion automatica posible.
+
+- **Google Drive NO sirve** para esto: los enlaces devuelven una pagina HTML
+  del visor, no los bytes. Vale para archivo y revision, no como CDN.
+- Modos: `manual` (defecto), `supabase` (bucket **publico**), `r2` (S3
+  compatible, firma AWS v4 a mano para no arrastrar el SDK de AWS).
+
+---
+
+## 4quater. El hub de revision
+
+`npm run hub` → http://localhost:4321
+
+Existe porque la estrategia es "el agente produce, tu apruebas" y **en una
+terminal no se puede ver un video**. Una revision incomoda no ocurre, y una
+revision que no ocurre es peor que no tenerla: da falsa sensacion de control.
+
+- Sin framework ni build: servidor http de Node + una pagina. Movil primero.
+- Las acciones reutilizan las funciones de la CLI, sin duplicar logica.
+- Sirve el mp4 con `Range` o el navegador no deja saltar dentro del video.
+- **Auth**: sin `HUB_CLAVE` solo acepta trafico local. Con clave, por query,
+  cabecera o cookie. El hub publica en Instagram: exponerlo sin clave es un
+  agujero, no un detalle.
+
+---
+
 ## 5. El bucle de mejora, paso a paso
 
 Esto es lo más importante del proyecto. Está en `src/flujo/aprender.js`.
@@ -269,23 +353,39 @@ npm run diario            # el ciclo completo: medir → aprender → planificar
 
 ### Lo que falta, por prioridad
 
-1. **Rellenar `data/marca.json`.** Nada tiene sentido hasta que la marca esté
-   definida de verdad. `npm run probar` falla a propósito si sigue la
-   plantilla.
-2. **Adaptar `data/tipos-video.json` al nicho.** Los siete tipos actuales son
-   genéricos y funcionan, pero los específicos del nicho rinden mejor.
-3. **Producción del video: sigue siendo manual.** Es el único paso humano del
-   flujo. Opciones a evaluar: generación con IA, plantillas, o dejarlo manual
-   a propósito (para ciertas marcas la cara del humano *es* el producto).
-4. **Validar el fichero de video con ffprobe.** `validarMedio()` en
-   `video/validar.js` ya tiene la forma; falta enchufarle la lectura real del
-   fichero.
-5. **Programar el `npm run diario`** con cron o similar.
-6. **Multiplataforma.** Blotato ya soporta TikTok, YouTube, LinkedIn. Cambiar
-   `targetType` en `blotato/posts.js` y añadir los insights de cada una.
-7. **Umbral mínimo antes de repriorizar.** Ahora se analiza desde la primera
-   publicación (con aviso de confianza baja). Considerar no repriorizar hasta
-   tener 5+.
+1. **Credenciales.** Sin ellas nada corre:
+   `GEMINI_API_KEY` (guion) · `ELEVENLABS_API_KEY` + `ELEVENLABS_VOICE_ID`
+   (voz; **clona la tuya**, una de stock resta credibilidad) ·
+   `BLOTATO_API_KEY` + cuenta conectada · `IG_ACCESS_TOKEN` + `IG_USER_ID` ·
+   almacenamiento (R2 recomendado).
+2. **Multi-clip con transiciones y subtitulos del audio propio.** Hoy
+   `--metraje` acepta UN video. Falta: aceptar una carpeta, encadenar con
+   `@remotion/transitions`, y transcribir el audio propio con timestamps
+   (Gemini procesa audio, asi que sale con la clave que ya hay). Es lo mas
+   valioso que queda: la cara del humano con produccion automatica.
+3. **`online_followers`** para la hora optima de publicacion. Señal directa
+   de la API, no inferida del rendimiento. Se implementa rapido.
+4. **`business_discovery`** para 3-5 competidores: cadencia, formatos y
+   engagement. Como benchmark, NO como variable de control — no da views,
+   guardados ni retencion, que son privados.
+5. **Cron + despliegue.** El cron y el hub deben compartir `historial.json`:
+   si el cron corre en un servidor y la revision en el portatil, son dos
+   historiales y el bucle se parte en dos. Se despliegan juntos.
+6. **Dashboard con `@remotion/player`** — preview en el navegador sin
+   exportar, para editar el gancho y verlo al instante. Cuando haya datos.
+7. **Validar el fichero de video** con el media-parser (ya es dependencia).
+8. **Multiplataforma**: Blotato soporta TikTok, YouTube, LinkedIn. Cambiar
+   `targetType` y añadir los insights de cada una.
+
+### Decidido y descartado
+
+- **Google Drive como CDN de publicacion**: no sirve (ver §4ter). Vale como
+  archivo y revision.
+- **ManyChat para publicar**: no publica Reels, es automatizacion de
+  conversaciones (DMs, comentarios). Complementario —comentario → DM con la
+  minuta convierte comentarios en leads— pero no sustituye a Blotato.
+- **Supabase del proyecto de Contrappto** para guardar videos: mezcla la base
+  de produccion del producto legal con marketing. Proyecto aparte o R2.
 
 ---
 
