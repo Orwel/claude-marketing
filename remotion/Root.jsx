@@ -22,6 +22,7 @@ export const Root = () => (
       palabras: [],
       audio: null,
       fondos: [],
+      metraje: null,
       duracionSegundos: 30,
       marca: {},
     }}

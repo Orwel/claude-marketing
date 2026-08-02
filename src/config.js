@@ -51,6 +51,9 @@ export const config = {
     voiceId: process.env.ELEVENLABS_VOICE_ID,
     modelo: process.env.ELEVENLABS_MODELO || 'eleven_multilingual_v2',
   },
+  stock: {
+    apiKey: process.env.PEXELS_API_KEY,
+  },
   video: {
     // 'plantilla' | 'imagen' | 'veo'
     modoFondo: process.env.MODO_FONDO || 'plantilla',
@@ -100,6 +103,7 @@ export function exigir(...claves) {
   const mapa = {
     ia: ['GEMINI_API_KEY', config.ia.apiKey],
     voz: ['ELEVENLABS_API_KEY', config.voz.apiKey],
+    pexels: ['PEXELS_API_KEY', config.stock.apiKey],
     vozId: ['ELEVENLABS_VOICE_ID', config.voz.voiceId],
     blotato: ['BLOTATO_API_KEY', config.blotato.apiKey],
     cuentaInstagram: ['BLOTATO_ACCOUNT_ID_INSTAGRAM', config.blotato.cuentaInstagram],

@@ -1,4 +1,4 @@
-import { resolve, basename } from 'node:path';
+import { resolve, basename, extname } from 'node:path';
 import { mkdirSync, rmSync, copyFileSync, existsSync } from 'node:fs';
 import { bundle } from '@remotion/bundler';
 import { selectComposition, renderMedia } from '@remotion/renderer';
@@ -7,6 +7,7 @@ import { log } from '../util/log.js';
 import { leerHistorial, actualizarPublicacion, leerJson } from '../util/almacen.js';
 import { generarLocucion } from '../voz/elevenlabs.js';
 import { generarBrollConIA, generarFondosConImagen } from './broll.js';
+import { generarBrollDeArchivo } from './stock.js';
 import { validarMedio } from './validar.js';
 
 const FPS = 30;
@@ -25,11 +26,13 @@ const FPS = 30;
  * define cuanto dura el video. Al reves habria que estimar la duracion y
  * los subtitulos quedarian desincronizados.
  */
-export async function producir({ id, modoFondo = config.video.modoFondo }) {
+export async function producir({ id, modoFondo = config.video.modoFondo, metrajePropio = null, desdeSegundo = 0 }) {
   log.paso('Produciendo el video');
 
   if (!id) throw new Error('Falta --id. Usa el que devolvio "npm run planificar".');
-  exigir('voz');
+
+  // Con metraje propio la voz ya esta grabada: no hace falta ElevenLabs.
+  if (!metrajePropio) exigir('voz');
 
   const historial = leerHistorial(config.rutas.historial);
   const publicacion = historial.publicaciones.find((p) => p.id === id);
@@ -45,14 +48,36 @@ export async function producir({ id, modoFondo = config.video.modoFondo }) {
   rmSync(trabajo, { recursive: true, force: true });
   mkdirSync(trabajo, { recursive: true });
 
-  // 1. Locucion -------------------------------------------------------------
-  log.info('Generando locucion con ElevenLabs...');
-  const textoHablado = [guion.gancho, ...guion.guion.map((e) => e.voz)].join(' ');
+  // 1. Audio y duracion -----------------------------------------------------
+  let duracionSegundos;
+  let palabras = [];
+  let audioParaRemotion = null;
+  let metraje = null;
 
-  const { rutaAudio, duracionSegundos, palabras } = await generarLocucion({
-    texto: textoHablado,
-    rutaSalida: resolve(trabajo, 'voz.mp3'),
-  });
+  if (metrajePropio) {
+    // Tu propio video manda: trae su audio y su duracion. Remotion solo
+    // pone encima gancho, subtitulos y marca.
+    if (!existsSync(metrajePropio)) throw new Error(`No existe el video ${metrajePropio}`);
+
+    const destino = resolve(trabajo, `metraje${extname(metrajePropio)}`);
+    copyFileSync(metrajePropio, destino);
+
+    duracionSegundos = await duracionDeVideo(destino, desdeSegundo);
+    metraje = { archivo: `${id}/${basename(destino)}`, desdeSegundo, volumen: 1 };
+
+    log.info(`Metraje propio: ${duracionSegundos.toFixed(1)}s utiles desde el segundo ${desdeSegundo}`);
+    log.aviso('Sin locucion sintetica no hay subtitulos automaticos todavia (ver TODO de transcripcion).');
+  } else {
+    log.info('Generando locucion con ElevenLabs...');
+    const textoHablado = [guion.gancho, ...guion.guion.map((e) => e.voz)].join(' ');
+    const locucion = await generarLocucion({
+      texto: textoHablado,
+      rutaSalida: resolve(trabajo, 'voz.mp3'),
+    });
+    duracionSegundos = locucion.duracionSegundos;
+    palabras = locucion.palabras;
+    audioParaRemotion = `${id}/voz.mp3`;
+  }
 
   // La duracion real manda sobre la estimada por el modelo de texto.
   const problemas = validarMedio({ duracionSegundos });
@@ -63,7 +88,11 @@ export async function producir({ id, modoFondo = config.video.modoFondo }) {
 
   // 2. Fondos ---------------------------------------------------------------
   let fondos = [];
-  if (modoFondo === 'veo') {
+  if (metrajePropio) {
+    log.info('Metraje propio: no se generan fondos.');
+  } else if (modoFondo === 'stock') {
+    fondos = await generarBrollDeArchivo({ escenas: guion.guion, directorio: trabajo, marca });
+  } else if (modoFondo === 'veo') {
     fondos = await generarBrollConIA({ escenas: guion.guion, directorio: trabajo, marca });
   } else if (modoFondo === 'imagen') {
     fondos = await generarFondosConImagen({ escenas: guion.guion, directorio: trabajo, marca });
@@ -87,8 +116,9 @@ export async function producir({ id, modoFondo = config.video.modoFondo }) {
   const props = {
     guion,
     palabras,
-    audio: `${id}/voz.mp3`,
+    audio: audioParaRemotion,
     fondos: fondosParaRemotion,
+    metraje,
     duracionSegundos,
     marca: { colores: marca.colores ?? {} },
   };
@@ -129,7 +159,7 @@ export async function producir({ id, modoFondo = config.video.modoFondo }) {
     video: {
       ruta: salida,
       duracionSegundos,
-      modoFondo,
+      modoFondo: metrajePropio ? 'metraje-propio' : modoFondo,
       producidoEn: new Date().toISOString(),
     },
   });
@@ -141,4 +171,28 @@ export async function producir({ id, modoFondo = config.video.modoFondo }) {
   );
 
   return { ruta: salida, duracionSegundos };
+}
+
+/**
+ * Duracion util de un video. Se usa el parser de medios de Remotion en vez
+ * de ffprobe porque ya viene con la dependencia y evita asumir que hay un
+ * ffmpeg completo en la maquina.
+ */
+async function duracionDeVideo(ruta, desdeSegundo) {
+  const { parseMedia } = await import('@remotion/media-parser');
+  const { nodeReader } = await import('@remotion/media-parser/node');
+
+  const { slowDurationInSeconds } = await parseMedia({
+    src: ruta,
+    reader: nodeReader,
+    fields: { slowDurationInSeconds: true },
+  });
+
+  const util = slowDurationInSeconds - desdeSegundo;
+  if (util <= 0) {
+    throw new Error(
+      `--desde ${desdeSegundo}s deja el video en ${util.toFixed(1)}s. El video dura ${slowDurationInSeconds.toFixed(1)}s.`
+    );
+  }
+  return util;
 }

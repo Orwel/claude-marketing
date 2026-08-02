@@ -13,7 +13,8 @@ claude-marketing — agente de marketing que aprende de sus propias metricas
   npm run diario       Ciclo completo: medir -> aprender -> planificar
   npm run planificar   Genera el guion de hoy
   npm run producir     Genera el video: voz + fondos + montaje
-                         -- --id <id> [--fondo plantilla|imagen|veo]
+                         -- --id <id> [--fondo plantilla|stock|imagen|veo]
+                         -- --id <id> --metraje <tu-video.mp4> [--desde 2]
   npm run publicar     Publica un video ya producido
                          -- --id <id> --video <URL publica> [--programar <ISO>]
   npm run medir        Recoge metricas de Instagram (publicaciones con +24h)
@@ -54,7 +55,12 @@ async function principal() {
     case 'planificar':
       return planificar();
     case 'producir':
-      return producir({ id: args.id, modoFondo: args.fondo ?? undefined });
+      return producir({
+        id: args.id,
+        modoFondo: args.fondo ?? undefined,
+        metrajePropio: args.metraje ?? null,
+        desdeSegundo: Number(args.desde ?? 0),
+      });
     case 'publicar':
       return publicar({ id: args.id, urlVideo: args.video, programarPara: args.programar ?? null });
     case 'medir':

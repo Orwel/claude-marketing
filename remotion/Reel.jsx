@@ -24,23 +24,38 @@ const MARCA = {
  * nada de rutas hardcodeadas, para que la misma composicion sirva
  * para cualquier guion.
  */
-export const Reel = ({ guion, palabras, audio, fondos, duracionSegundos, marca }) => {
+export const Reel = ({ guion, palabras, audio, fondos, metraje, duracionSegundos, marca }) => {
   const { fps } = useVideoConfig();
   const colores = { ...MARCA, ...(marca?.colores ?? {}) };
 
+  // Si hay metraje propio, ES el video: se graba con su audio y Remotion
+  // solo pone encima gancho, subtitulos y marca. Es el modo que mas rinde
+  // para marca personal, porque combina tu cara (que es el activo) con la
+  // consistencia de la plantilla.
+  const conMetrajePropio = Boolean(metraje?.archivo);
+
   return (
     <AbsoluteFill style={{ backgroundColor: colores.fondo }}>
-      <Fondo fondos={fondos} guion={guion} fps={fps} colores={colores} />
+      {conMetrajePropio ? (
+        <MetrajePropio metraje={metraje} fps={fps} />
+      ) : (
+        <Fondo fondos={fondos} guion={guion} fps={fps} colores={colores} />
+      )}
 
-      {/* Velo oscuro: sin el, el texto blanco sobre un fondo generado
-          es ilegible en cuanto el fondo tiene zonas claras. */}
+      {/* Velo oscuro para que el texto blanco sea legible. Sobre metraje
+          propio se aplica mas suave y solo abajo: un velo fuerte oscurece
+          la cara, que es justo lo que da valor a ese modo. */}
       <AbsoluteFill
         style={{
-          background: `linear-gradient(180deg, rgba(0,0,0,.55) 0%, rgba(0,0,0,.25) 45%, rgba(0,0,0,.75) 100%)`,
+          background: conMetrajePropio
+            ? `linear-gradient(180deg, rgba(0,0,0,.35) 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,0) 55%, rgba(0,0,0,.7) 100%)`
+            : `linear-gradient(180deg, rgba(0,0,0,.55) 0%, rgba(0,0,0,.25) 45%, rgba(0,0,0,.75) 100%)`,
         }}
       />
 
-      {audio ? <Audio src={staticFile(audio)} /> : null}
+      {/* Con metraje propio el audio ya viene en el video; solo se anade
+          pista aparte cuando la voz es sintetica. */}
+      {audio && !conMetrajePropio ? <Audio src={staticFile(audio)} /> : null}
 
       <Gancho texto={guion.gancho} fps={fps} colores={colores} />
       <Subtitulos palabras={palabras} fps={fps} colores={colores} />
@@ -81,6 +96,26 @@ const Fondo = ({ fondos, guion, fps, colores }) => {
 };
 
 const cubrir = { width: '100%', height: '100%', objectFit: 'cover' };
+
+/**
+ * Tu propio video como capa base.
+ *
+ * `startFrom` recorta el arranque, que es donde siempre sobra metraje:
+ * los segundos entre que le das a grabar y empiezas a hablar. Cortar eso
+ * automaticamente es la diferencia entre un reel que arranca flojo y uno
+ * que entra directo al gancho.
+ *
+ * objectFit cover recorta a 9:16 aunque hayas grabado en horizontal, pero
+ * grabar ya en vertical siempre da mejor encuadre.
+ */
+const MetrajePropio = ({ metraje, fps }) => (
+  <OffthreadVideo
+    src={staticFile(metraje.archivo)}
+    startFrom={Math.round((metraje.desdeSegundo ?? 0) * fps)}
+    volume={metraje.volumen ?? 1}
+    style={cubrir}
+  />
+);
 
 /** Un zoom lento sobre la imagen fija; sin el, el reel se siente muerto. */
 const ImagenConZoom = ({ archivo, duracion }) => {
