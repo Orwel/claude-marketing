@@ -3,6 +3,7 @@ import { log } from '../util/log.js';
 import { leerHistorial, actualizarPublicacion } from '../util/almacen.js';
 import { subirMedio } from '../blotato/media.js';
 import { publicarEnInstagram, componerTexto } from '../blotato/posts.js';
+import { subirVideo } from '../almacenamiento/subir.js';
 
 /**
  * Etapa 2: publicar.
@@ -18,7 +19,6 @@ export async function publicar({ id, urlVideo, programarPara = null }) {
   log.paso('Publicando');
 
   if (!id) throw new Error('Falta --id. Usa el id que devolvio "npm run planificar".');
-  if (!urlVideo) throw new Error('Falta --video <URL publica del video>.');
 
   const historial = leerHistorial(config.rutas.historial);
   const publicacion = historial.publicaciones.find((p) => p.id === id);
@@ -26,6 +26,19 @@ export async function publicar({ id, urlVideo, programarPara = null }) {
   if (!publicacion) throw new Error(`No existe la publicacion ${id} en el historial`);
   if (publicacion.estado === 'publicada') {
     throw new Error(`La publicacion ${id} ya se publico el ${publicacion.publicadaEn}`);
+  }
+
+  // Sin --video se sube el mp4 que produjo "npm run producir". Es lo que
+  // permite encadenar el flujo entero sin intervencion.
+  if (!urlVideo) {
+    if (!publicacion.video?.ruta) {
+      throw new Error(
+        `La publicacion ${id} no tiene video producido. Ejecuta primero:\n` +
+          `  npm run producir -- --id ${id}\n` +
+          `O pasa una URL publica con --video.`
+      );
+    }
+    urlVideo = await subirVideo(publicacion.video.ruta);
   }
 
   const texto = componerTexto(publicacion.guion);

@@ -59,6 +59,18 @@ export const config = {
     esperaMaxVeoMs: Number(process.env.VEO_ESPERA_MAX_MIN || 15) * 60 * 1000,
     navegador: process.env.CHROME_EJECUTABLE || '',
   },
+  almacenamiento: {
+    // 'manual' | 'supabase' | 'r2'
+    proveedor: process.env.ALMACENAMIENTO || 'manual',
+    bucket: process.env.BUCKET || 'reels',
+    supabaseUrl: process.env.SUPABASE_URL,
+    supabaseKey: process.env.SUPABASE_SERVICE_KEY,
+    endpoint: process.env.S3_ENDPOINT,
+    accessKey: process.env.S3_ACCESS_KEY,
+    secretKey: process.env.S3_SECRET_KEY,
+    region: process.env.S3_REGION || 'auto',
+    urlPublica: process.env.S3_URL_PUBLICA,
+  },
   blotato: {
     apiKey: process.env.BLOTATO_API_KEY,
     baseUrl: process.env.BLOTATO_BASE_URL || 'https://backend.blotato.com',
