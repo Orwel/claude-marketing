@@ -13,6 +13,13 @@ rindieron los anteriores, y la estrategia se ajusta sola con la evidencia.
 
 ## Arranque
 
+**Sin tocar la terminal:** doble clic en **`iniciar.bat`** (Windows) o
+**`iniciar.sh`** (macOS/Linux). Comprueba que hay Node, instala lo que falte la
+primera vez, arranca el hub y abre el navegador. La ventana se queda abierta
+porque el servidor corre ahí dentro — cerrarla apaga el hub.
+
+**Desde la terminal**, si lo prefieres:
+
 ```bash
 npm install
 cp .env.example .env      # rellena las credenciales
@@ -53,6 +60,18 @@ sin llegar a publicar. Ponlo en `false` cuando estés listo.
 
 El bucle de aprendizaje está en `src/flujo/aprender.js`. Es la parte que
 distingue esto de un programador de publicaciones cualquiera.
+
+## Que arranque solo con el ordenador
+
+El lanzador evita la terminal, pero sigues teniendo que hacer doble clic. Para
+que esté siempre disponible:
+
+- **Windows** — `Win+R` → `shell:startup` → arrastra un acceso directo a
+  `iniciar.bat`. Arranca al iniciar sesión.
+- **Siempre encendido de verdad** — despliégalo en un servidor pequeño
+  (Fly.io, Railway). Es lo que hace falta igualmente para el cron diario: el
+  cron y el hub tienen que compartir el mismo `historial.json`, o el bucle de
+  aprendizaje se parte en dos. Ahí `HUB_CLAVE` deja de ser opcional.
 
 ## Documentación
 
