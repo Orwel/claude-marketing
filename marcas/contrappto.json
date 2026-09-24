@@ -1,0 +1,24 @@
+{
+  "id": "contrappto",
+  "nombre": "Contrappto",
+  "_fuente": "Colores verificados en contrappto/src/app/globals.css (--brand-*) el 24-sep-2026",
+  "fuentes": {
+    "titulo": { "familia": "Sora", "peso": 800 },
+    "texto": { "familia": "Sora", "peso": 500 },
+    "enfasis": { "familia": "Sora", "peso": 700 }
+  },
+  "colores": {
+    "fondo": "#07141D",
+    "fondo2": "#0F2533",
+    "tinta": "#F0F6FC",
+    "tenue": "#9BB0BD",
+    "acento": "#0090DE",
+    "alerta": "#FFB038",
+    "linea": "#224A62"
+  },
+  "radio": 28,
+  "resaltado": "marcador",
+  "subtitulo": { "caja": true, "mayusculas": false, "palabraActiva": "acento" },
+  "firma": { "tipo": "logo", "icono": "marcas/contrappto/icono.png", "texto": "contrappto", "web": "contrappto.com" },
+  "fondoEstilo": "rejilla"
+}

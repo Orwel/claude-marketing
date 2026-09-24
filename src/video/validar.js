@@ -1,89 +1,86 @@
+import { execFileSync } from 'node:child_process';
+import { statSync } from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
 /**
- * Requisitos de Instagram Reels que hay que cumplir antes de publicar.
- * Comprobarlos aqui evita el ciclo caro: subir el medio a Blotato,
- * lanzar el post y descubrir el rechazo horas despues.
+ * Requisitos de Reels, TikTok y Shorts verticales. Se comprueban sobre el
+ * archivo real (con el ffprobe que trae Remotion) antes de que llegue a
+ * Drive: descubrir el rechazo al publicar a mano cuesta mas.
  */
 export const LIMITES_REEL = {
-  relacionAspecto: '9:16',
   anchoRecomendado: 1080,
   altoRecomendado: 1920,
   duracionMinSegundos: 5,
   duracionMaxSegundos: 90,
   formatos: ['mp4', 'mov'],
   tamanoMaxMb: 300,
+  codec: 'h264',
+  formatoPixel: 'yuv420p',
 };
 
-/** Valida el guion antes de producir el video. Devuelve una lista de problemas. */
-export function validarGuion(guion, tiposVideo) {
+/** Valida los datos del medio. Devuelve una lista de problemas; vacia = listo. */
+export function validarMedio({ anchoPx, altoPx, duracionSegundos, tamanoMb, formato, codec, formatoPixel }, { vertical = true } = {}) {
   const problemas = [];
 
-  const duracion = guion.duracionEstimadaSegundos;
-  if (duracion < LIMITES_REEL.duracionMinSegundos || duracion > LIMITES_REEL.duracionMaxSegundos) {
-    problemas.push(
-      `Duracion ${duracion}s fuera de rango (${LIMITES_REEL.duracionMinSegundos}-${LIMITES_REEL.duracionMaxSegundos}s)`
-    );
+  if (anchoPx && altoPx) {
+    const esperada = vertical ? 9 / 16 : 16 / 9;
+    if (Math.abs(anchoPx / altoPx - esperada) > 0.02) problemas.push(`Relacion de aspecto ${anchoPx}x${altoPx} no es ${vertical ? '9:16' : '16:9'}`);
   }
-
-  const idsValidos = tiposVideo.map((t) => t.id);
-  if (!idsValidos.includes(guion.tipoVideo)) {
-    problemas.push(
-      `Tipo de video "${guion.tipoVideo}" no existe. Validos: ${idsValidos.join(', ')}`
-    );
+  if (vertical && duracionSegundos && (duracionSegundos < LIMITES_REEL.duracionMinSegundos || duracionSegundos > LIMITES_REEL.duracionMaxSegundos)) {
+    problemas.push(`Duracion ${duracionSegundos.toFixed(1)}s fuera de rango para Reels (${LIMITES_REEL.duracionMinSegundos}-${LIMITES_REEL.duracionMaxSegundos}s)`);
   }
-
-  if (!guion.guion?.length) {
-    problemas.push('El guion no tiene escenas');
-  } else {
-    const finUltima = Math.max(...guion.guion.map((e) => e.segundoFin));
-    if (Math.abs(finUltima - duracion) > 5) {
-      problemas.push(
-        `Las escenas terminan en ${finUltima}s pero la duracion declarada es ${duracion}s`
-      );
-    }
-  }
-
-  if (!guion.pieDeFoto?.trim()) problemas.push('Falta el pie de foto');
-  if (guion.pieDeFoto?.length > 2200) {
-    problemas.push(`Pie de foto de ${guion.pieDeFoto.length} caracteres (Instagram corta en 2200)`);
-  }
-
-  const hashtags = guion.hashtags ?? [];
-  if (hashtags.length > 30) problemas.push(`${hashtags.length} hashtags (Instagram admite 30)`);
+  if (tamanoMb && tamanoMb > LIMITES_REEL.tamanoMaxMb) problemas.push(`${tamanoMb.toFixed(1)}MB supera ${LIMITES_REEL.tamanoMaxMb}MB`);
+  if (formato && !LIMITES_REEL.formatos.includes(formato.toLowerCase())) problemas.push(`Formato ${formato} no admitido`);
+  // H.264 + yuv420p: cualquier otra combinacion la red la recodifica y pierde calidad, o la rechaza.
+  if (codec && codec !== LIMITES_REEL.codec) problemas.push(`Codec ${codec}; se espera ${LIMITES_REEL.codec}`);
+  if (formatoPixel && formatoPixel !== LIMITES_REEL.formatoPixel) problemas.push(`Formato de pixel ${formatoPixel}; se espera ${LIMITES_REEL.formatoPixel}`);
 
   return problemas;
 }
 
-/**
- * Valida el fichero de video en si. Lo dejamos declarativo porque la
- * produccion del video todavia es manual (ver TODOs en docs/HANDOFF.md):
- * cuando se automatice, aqui se enchufa ffprobe.
- */
-export function validarMedio({ anchoPx, altoPx, duracionSegundos, tamanoMb, formato }) {
-  const problemas = [];
+/** Lee el archivo con ffprobe (el que trae Remotion, para no pedir instalar ffmpeg aparte). */
+export function inspeccionar(archivo) {
+  const salida = execFileSync('npx', ['remotion', 'ffprobe', '-v', 'error', '-print_format', 'json', '-show_streams', '-show_format', archivo], {
+    encoding: 'utf8',
+  });
+  const datos = JSON.parse(salida);
+  const video = datos.streams.find((s) => s.codec_type === 'video');
+  return {
+    anchoPx: video.width,
+    altoPx: video.height,
+    duracionSegundos: Number(datos.format.duration),
+    tamanoMb: statSync(archivo).size / 1024 / 1024,
+    formato: path.extname(archivo).slice(1),
+    codec: video.codec_name,
+    formatoPixel: video.pix_fmt,
+  };
+}
 
-  if (anchoPx && altoPx) {
-    const relacion = anchoPx / altoPx;
-    const esperada = 9 / 16;
-    if (Math.abs(relacion - esperada) > 0.02) {
-      problemas.push(`Relacion de aspecto ${anchoPx}x${altoPx} no es 9:16`);
+export function validarArchivo(archivo) {
+  const medio = inspeccionar(archivo);
+  const problemas = validarMedio(medio, { vertical: medio.altoPx > medio.anchoPx });
+  return { medio, problemas };
+}
+
+// Uso directo: npm run validar -- salida/2026-10/archivo.mp4
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
+  const archivos = process.argv.slice(2);
+  if (!archivos.length) {
+    console.error('Uso: npm run validar -- <video.mp4> [otro.mp4 ...]');
+    process.exit(1);
+  }
+  let fallos = 0;
+  for (const archivo of archivos) {
+    const { medio, problemas } = validarArchivo(archivo);
+    const resumen = `${medio.anchoPx}x${medio.altoPx} · ${medio.duracionSegundos.toFixed(1)}s · ${medio.tamanoMb.toFixed(1)}MB · ${medio.codec}/${medio.formatoPixel}`;
+    if (problemas.length) {
+      fallos++;
+      console.log(`✗ ${path.basename(archivo)} (${resumen})`);
+      for (const p of problemas) console.log(`   - ${p}`);
+    } else {
+      console.log(`✓ ${path.basename(archivo)} (${resumen})`);
     }
   }
-
-  if (
-    duracionSegundos &&
-    (duracionSegundos < LIMITES_REEL.duracionMinSegundos ||
-      duracionSegundos > LIMITES_REEL.duracionMaxSegundos)
-  ) {
-    problemas.push(`Duracion real ${duracionSegundos}s fuera de rango`);
-  }
-
-  if (tamanoMb && tamanoMb > LIMITES_REEL.tamanoMaxMb) {
-    problemas.push(`${tamanoMb}MB supera el limite de ${LIMITES_REEL.tamanoMaxMb}MB`);
-  }
-
-  if (formato && !LIMITES_REEL.formatos.includes(formato.toLowerCase())) {
-    problemas.push(`Formato ${formato} no admitido (usa ${LIMITES_REEL.formatos.join(' o ')})`);
-  }
-
-  return problemas;
+  process.exit(fallos ? 1 : 0);
 }

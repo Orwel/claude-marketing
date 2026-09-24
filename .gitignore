@@ -5,9 +5,7 @@ node_modules/
 tmp/
 .DS_Store
 
-# El historial es estado local del agente, no codigo.
-# Quitalo del ignore si quieres versionar el aprendizaje.
-data/historial.json
-
+# Renders: viven en Drive, no en git.
 salida/
-remotion/public/pub_*/
+# Metraje crudo copiado o enlazado para el Studio.
+public/crudos/

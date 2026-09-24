@@ -1,0 +1,124 @@
+{
+  "slug": "la-fecha-que-cuesta-plata",
+  "titulo": "La fecha que cuesta plata",
+  "pilar": "Contratos explicados (Contrappto)",
+  "plantilla": "Animado",
+  "formato": "vertical",
+  "estado": "borrador",
+  "cuentas": [
+    "contrappto",
+    "juanda"
+  ],
+  "guion": [
+    "1. Hay una fecha en tu contrato de arriendo que casi nadie recuerda",
+    "2. (Sin presentacion: esta pieza va en Contrappto)",
+    "3. El reajuste anual: si no se aplica a tiempo, ese dinero no vuelve",
+    "4. Un arrendador con cuatro inmuebles perdio un año de incremento",
+    "5. Mira la fecha de inicio de tus contratos y anotala",
+    "6. En Contrappto el contrato te avisa solo"
+  ],
+  "escenas": [
+    {
+      "tipo": "gancho",
+      "segundos": 3.2,
+      "texto": "$gancho"
+    },
+    {
+      "tipo": "lineaTiempo",
+      "segundos": 5,
+      "titulo": "Las fechas de tu *arriendo*",
+      "meses": 12,
+      "etiquetaPagos": "Pago del canon, cada mes",
+      "hitos": [
+        {
+          "mes": 0,
+          "texto": "Firma",
+          "detalle": "Mes 0"
+        },
+        {
+          "mes": 12,
+          "texto": "Reajuste anual",
+          "detalle": "Mes 12",
+          "destacado": true
+        }
+      ]
+    },
+    {
+      "tipo": "dato",
+      "segundos": 5,
+      "titulo": "Si no se aplica a tiempo, *ese dinero no vuelve*",
+      "cantidad": 4,
+      "icono": "casa",
+      "cifra": {
+        "desde": 0,
+        "hasta": 4800000,
+        "prefijo": "$",
+        "leyenda": "perdidos en un año, con 4 inmuebles"
+      },
+      "nota": "Ejemplo ilustrativo: canon de $2.000.000 y reajuste del 5 %"
+    },
+    {
+      "tipo": "notificacion",
+      "segundos": 3.6,
+      "titulo": "$tituloAviso",
+      "hora": "9:41",
+      "fecha": "jueves, 1 de octubre",
+      "avisos": [
+        {
+          "titulo": "Reajuste en 30 días",
+          "cuerpo": "El arriendo del apto 301 cumple un año el 1 de noviembre. Aplica el reajuste a tiempo.",
+          "cuando": "ahora"
+        }
+      ]
+    },
+    {
+      "tipo": "cierre",
+      "segundos": 3.6,
+      "texto": "$cierre",
+      "cta": "$cta",
+      "web": "$web"
+    }
+  ],
+  "variantes": {
+    "contrappto": {
+      "etiqueta": "Arriendos",
+      "gancho": "Hay una fecha en tu *arriendo* que casi nadie recuerda",
+      "tituloAviso": "Contrappto te avisa *antes*",
+      "cierre": "Tu contrato te avisa *solo*",
+      "cta": "Crea tu contrato gratis en Contrappto",
+      "web": "contrappto.com",
+      "copy": "El reajuste anual es la fecha que más plata cuesta cuando se olvida. En Contrappto tu contrato te avisa antes. Crea el primero gratis: link en el perfil."
+    },
+    "juanda": {
+      "etiqueta": "Contratos explicados",
+      "gancho": "Hay una fecha en tu contrato de *arriendo* que casi nadie recuerda",
+      "tituloAviso": "Que el contrato te *avise*",
+      "cierre": "Anota hoy la fecha de *inicio* de tus contratos",
+      "cta": "Crea tu contrato gratis en Contrappto",
+      "web": "Link en mi perfil",
+      "copy": "Revisa hoy la fecha de inicio de tus arriendos y anótala. Si quieres que el contrato te avise solo, lo construí en Contrappto: link en mi perfil."
+    }
+  },
+  "verificar": [
+    {
+      "dato": "El reajuste del canon de vivienda se hace cada 12 meses de ejecución (hito 'Mes 12').",
+      "fuente_sugerida": "Ley 820 de 2003, art. 20",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "'Si no se aplica a tiempo, ese dinero no vuelve': que el reajuste no aplicado no se puede cobrar retroactivamente.",
+      "fuente_sugerida": "Ley 820 de 2003, art. 20 y jurisprudencia",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Cifras del ejemplo: canon $2.000.000 y reajuste del 5 % (4 × 12 × $100.000 = $4.800.000). Son ilustrativas; el tope real depende del IPC del año anterior.",
+      "fuente_sugerida": "DANE, IPC",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Que Contrappto envía hoy un aviso de reajuste como el del celular (texto y anticipación de 30 días).",
+      "fuente_sugerida": "Motor de avisos de Contrappto (alertas de la operación, plan Pro)",
+      "estado": "pendiente"
+    }
+  ]
+}

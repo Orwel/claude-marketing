@@ -1,33 +1,41 @@
 import React from 'react';
-import { Composition } from 'remotion';
-import { Reel } from './Reel.jsx';
+import { Composition, Folder } from 'remotion';
+import { MARCAS, PIEZAS, idComposicion } from './catalogo.js';
+import { Animado } from './plantillas/Animado.jsx';
+import { duracionPieza, FORMATOS } from './util.js';
 
 const FPS = 30;
+const PLANTILLAS = { Animado };
 
 /**
- * La duracion NO es fija: sale de la locucion real de ElevenLabs.
- * calculateMetadata la lee de las props en tiempo de render, que es la
- * unica forma de que el video dure exactamente lo que dura la voz.
+ * Una composicion por cada pieza × cuenta. Se agrupan por mes en el Studio,
+ * igual que en la carpeta de Drive, para revisar el mes de un vistazo.
  */
-export const Root = () => (
-  <Composition
-    id="Reel"
-    component={Reel}
-    durationInFrames={30 * FPS}
-    fps={FPS}
-    width={1080}
-    height={1920}
-    defaultProps={{
-      guion: { gancho: 'Vista previa', guion: [] },
-      palabras: [],
-      audio: null,
-      fondos: [],
-      metraje: null,
-      duracionSegundos: 30,
-      marca: {},
-    }}
-    calculateMetadata={({ props }) => ({
-      durationInFrames: Math.max(1, Math.round((props.duracionSegundos ?? 30) * FPS)),
-    })}
-  />
-);
+export const Root = () => {
+  const meses = [...new Set(PIEZAS.map((p) => p.mes))].sort();
+  return (
+    <>
+      {meses.map((mes) => (
+        <Folder key={mes} name={mes}>
+          {PIEZAS.filter((p) => p.mes === mes).flatMap((pieza) => {
+            const Plantilla = PLANTILLAS[pieza.plantilla];
+            if (!Plantilla) return [];
+            const { ancho, alto } = FORMATOS[pieza.formato ?? 'vertical'];
+            return pieza.cuentas.map((cuenta) => (
+              <Composition
+                key={idComposicion(pieza, cuenta)}
+                id={idComposicion(pieza, cuenta)}
+                component={Plantilla}
+                fps={FPS}
+                width={ancho}
+                height={alto}
+                durationInFrames={duracionPieza(pieza, FPS)}
+                defaultProps={{ pieza, marca: MARCAS[cuenta] }}
+              />
+            ));
+          })}
+        </Folder>
+      ))}
+    </>
+  );
+};

@@ -1,0 +1,60 @@
+{
+  "slug": "contrappto-promo",
+  "titulo": "Contrappto · promocional motion graphics (prueba)",
+  "pilar": "Producto (Contrappto)",
+  "plantilla": "Animado",
+  "formato": "vertical",
+  "estado": "prueba",
+  "cuentas": ["contrappto"],
+  "escenas": [
+    { "tipo": "gancho", "segundos": 2.6, "texto": "$gancho" },
+    {
+      "tipo": "frase",
+      "segundos": 3.8,
+      "texto": "Tu contrato tiene *vida*",
+      "subtexto": "Se crea, se firma, se cumple y se renegocia. Contrappto lo acompaña de principio a fin."
+    },
+    {
+      "tipo": "pasos",
+      "segundos": 8,
+      "pasos": [
+        { "icono": "documento", "titulo": "Créalo", "texto": "Guiado o con IA, con cláusulas que tienen base legal." },
+        { "icono": "firmar", "titulo": "Fírmalo", "texto": "Desde el celular, con la identidad de cada parte verificada." },
+        { "icono": "campana", "titulo": "Vívelo", "texto": "Avisos antes de cada fecha, por correo y WhatsApp." },
+        { "icono": "ciclo", "titulo": "Renegócialo", "texto": "Otrosí, prórroga, cesión o terminación." }
+      ]
+    },
+    {
+      "tipo": "notificacion",
+      "segundos": 3.8,
+      "titulo": "Ninguna fecha *se te pasa*",
+      "hora": "9:41",
+      "fecha": "lunes, 5 de octubre",
+      "avisos": [
+        { "titulo": "Pago del canon en 3 días", "cuerpo": "Tu arriendo vence el 8 de octubre.", "cuando": "ahora" },
+        { "titulo": "Firma completa", "cuerpo": "Las dos partes firmaron tu contrato de prestación de servicios.", "cuando": "hace 2 h" }
+      ]
+    },
+    {
+      "tipo": "frase",
+      "segundos": 3.8,
+      "texto": "El tercero *neutral*",
+      "subtexto": "Contrappto no es abogado de ninguna de las partes: deja claro lo que ambas firmaron."
+    },
+    { "tipo": "cierre", "segundos": 3.8, "texto": "$cierre", "cta": "$cta", "web": "contrappto.com" }
+  ],
+  "variantes": {
+    "contrappto": {
+      "etiqueta": "Contratos vivos",
+      "gancho": "¿Sabes qué *firmaste*?",
+      "cierre": "Sepa qué firmó y no se le pase una *fecha*",
+      "cta": "Crea tu contrato gratis"
+    }
+  },
+  "verificar": [
+    { "dato": "'Cláusulas que tienen base legal' (tomado de la landing: 'cada cláusula tiene base legal').", "estado": "pendiente" },
+    { "dato": "Firma con verificación de identidad en el plan gratis (el canvas dice 'por ahora').", "estado": "pendiente" },
+    { "dato": "Avisos por WhatsApp: solo en Pro. ¿Se menciona sin aclarar el plan?", "estado": "pendiente" },
+    { "dato": "'Gratis': plan Free con 2 contratos vivos.", "estado": "pendiente" }
+  ]
+}

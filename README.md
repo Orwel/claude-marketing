@@ -1,81 +1,49 @@
-# claude-marketing
+# claude-marketing · estudio de producción
 
-Agente de marketing para Instagram que **aprende de sus propias métricas**.
+Estudio de video con **Remotion**, manejado desde Claude Code, para las tres
+cuentas: **juanda.trifuerza**, **trifuerza.co** y **Contrappto**.
 
-No es un programador de publicaciones. Cada guion se escribe sabiendo cómo
-rindieron los anteriores, y la estrategia se ajusta sola con la evidencia.
+No publica nada. Produce el MP4 terminado y lo deja en Drive; tú publicas a mano.
+La estrategia vive en el FigJam de Trifuerza (zonas 5, 7 y 8 y la parrilla del mes).
 
 ```
-  medir  →  aprender  →  planificar  →  [grabar]  →  publicar
-    ↑                                                    │
-    └────────────────────  al día siguiente  ────────────┘
+ tú grabas ──► Drive/Redes sociales/2026-10 octubre/videos grabados
+                                    │
+                         Remotion (marca + pieza)
+                                    │
+ tú publicas ◄── Drive/Redes sociales/2026-10 octubre/videos editados
 ```
 
 ## Arranque
 
-**Sin tocar la terminal:** doble clic en **`iniciar.bat`** (Windows) o
-**`iniciar.sh`** (macOS/Linux). Comprueba que hay Node, instala lo que falte la
-primera vez, arranca el hub y abre el navegador. La ventana se queda abierta
-porque el servidor corre ahí dentro — cerrarla apaga el hub.
-
-**Desde la terminal**, si lo prefieres:
-
 ```bash
 npm install
-cp .env.example .env      # rellena las credenciales
+cp .env.example .env     # pon la ruta de tu carpeta de Drive en CARPETA_REDES
+npm run estudio          # Remotion Studio: aquí se revisa todo
 ```
-
-Luego edita `data/marca.json` — nada funciona hasta que la marca esté definida.
-
-```bash
-npm run probar            # verifica cada integración por separado
-```
-
-`probar` te dice, entre otras cosas, el `accountId` de Instagram que tienes que
-poner en `BLOTATO_ACCOUNT_ID_INSTAGRAM`.
 
 ## Uso
 
 ```bash
-npm run planificar        # genera el guion de hoy
-# ... grabas el video y lo subes a una URL pública ...
-npm run publicar -- --id <id> --video <URL>
-
-npm run diario            # al día siguiente: mide, aprende y planifica lo siguiente
+npm run render -- la-fecha-que-cuesta-plata            # todas sus cuentas
+npm run render -- la-fecha-que-cuesta-plata juanda     # solo una
+npm run validar -- ruta/al/video.mp4                   # revisar un MP4 cualquiera
 ```
 
-`SIMULAR=true` (el valor por defecto) hace que `publicar` imprima lo que haría
-sin llegar a publicar. Ponlo en `false` cuando estés listo.
+`render` deja el MP4 en `CARPETA_REDES/<mes>/videos editados/` (o en `salida/`
+si no hay `.env`), lo valida y te recuerda los datos jurídicos por verificar.
 
-## Cómo está montado
+## Tres capas
 
-| Pieza | Qué hace |
-|---|---|
-| **Gemini** (`gemini-2.5-pro`) | Escribe los guiones y analiza las métricas |
-| **Blotato** | Publica en Instagram. Solo vías oficiales: OAuth, sin credenciales nuestras |
-| **Instagram Graph API v22** | Métricas. Solo lectura |
-| `data/marca.json` | Identidad, público, tono, objetivo |
-| `data/tipos-video.json` | Catálogo de formatos. Lo edita el humano **y** el agente |
-| `data/historial.json` | Estado del agente: publicaciones, métricas y aprendizajes |
+| Capa | Dónde | Qué decide |
+|---|---|---|
+| Marca | `marcas/<cuenta>.json` | Cómo se ve: fuentes, colores, radios, resaltado, firma |
+| Pieza | `piezas/AAAA-MM/<slug>.json` | Qué dice: escenas, y por cuenta gancho, cierre, CTA y copy |
+| Plantilla | `remotion/plantillas/` | Cómo se arma: lee marca + pieza y no sabe de ninguna cuenta |
 
-El bucle de aprendizaje está en `src/flujo/aprender.js`. Es la parte que
-distingue esto de un programador de publicaciones cualquiera.
-
-## Que arranque solo con el ordenador
-
-El lanzador evita la terminal, pero sigues teniendo que hacer doble clic. Para
-que esté siempre disponible:
-
-- **Windows** — `Win+R` → `shell:startup` → arrastra un acceso directo a
-  `iniciar.bat`. Arranca al iniciar sesión.
-- **Siempre encendido de verdad** — despliégalo en un servidor pequeño
-  (Fly.io, Railway). Es lo que hace falta igualmente para el cron diario: el
-  cron y el hub tienen que compartir el mismo `historial.json`, o el bucle de
-  aprendizaje se parte en dos. Ahí `HUB_CLAVE` deja de ser opcional.
+Crear un JSON en `piezas/` basta para que aparezca en el Studio.
 
 ## Documentación
 
-**[`docs/HANDOFF.md`](docs/HANDOFF.md)** — spec completo: arquitectura,
-decisiones tomadas, detalles verificados de cada API, el bucle de mejora paso a
-paso y los TODOs priorizados. Pégalo en un chat nuevo para retomar el proyecto
-sin perder contexto.
+- [`docs/HANDOFF.md`](docs/HANDOFF.md): cómo está montado y las decisiones que ya se tomaron.
+- [`docs/PLAN.md`](docs/PLAN.md): plan de trabajo por entregas.

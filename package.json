@@ -1,31 +1,21 @@
 {
   "name": "claude-marketing",
-  "version": "0.1.0",
-  "description": "Agente de marketing automatizado: planifica, publica y aprende de sus propias metricas",
+  "version": "0.2.0",
+  "description": "Estudio de produccion de video con Remotion para juanda.trifuerza, trifuerza.co y Contrappto",
   "type": "module",
+  "private": true,
   "engines": {
     "node": ">=20"
   },
   "scripts": {
-    "diario": "node src/index.js diario",
-    "planificar": "node src/index.js planificar",
-    "publicar": "node src/index.js publicar",
-    "medir": "node src/index.js medir",
-    "aprender": "node src/index.js aprender",
-    "probar": "node scripts/probar-conexiones.js",
-    "producir": "node src/index.js producir",
     "estudio": "remotion studio remotion/index.js",
-    "hub": "node src/index.js hub"
+    "render": "node src/render.js",
+    "validar": "node src/video/validar.js"
   },
   "dependencies": {
-    "@elevenlabs/elevenlabs-js": "^2.60.0",
-    "@google/genai": "^2.15.0",
-    "@remotion/bundler": "^4.0.504",
-    "@remotion/cli": "^4.0.504",
-    "@remotion/media-parser": "^4.0.504",
-    "@remotion/renderer": "^4.0.504",
+    "@remotion/cli": "4.0.504",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
-    "remotion": "^4.0.504"
+    "remotion": "4.0.504"
   }
 }
