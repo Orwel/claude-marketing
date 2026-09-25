@@ -3,6 +3,19 @@
 Bitácora viva: lo que falló, cómo se resolvió y lo que le gusta o no a Juan David.
 Se lee al empezar cada sesión (lo pide `CLAUDE.md`). Lo más nuevo, arriba.
 
+## 2026-09-25 (tarde)
+
+- La sesión en la nube no alcanza el PC aunque Juan David escriba desde el computador: para sus videos
+  hace falta una sesión local (Claude Desktop o `claude remote-control` en la carpeta del repo).
+- Los videos grabados llegan como `.MOV` del iPhone (60-106 MB). El proxy H.264 los endereza y los
+  hace legibles para Remotion. **Por verificar en la primera prueba real:** si vienen en HDR (HLG/Dolby
+  Vision), los colores del proxy pueden salir lavados; en ese caso hay que tonemapear o grabar en SDR
+  (Ajustes → Cámara → Formatos → Más compatible, y apagar "Video HDR").
+- En Windows, lanzar `npx` desde Node falla sin shell: todo pasa por `src/remotion-cli.js`, que llama
+  a la CLI de Remotion con el mismo Node.
+- whisper.cpp 1.5.5 se baja del espejo de Remotion (en Windows no hay que compilar). Para
+  `large-v3-turbo` hace falta 1.7.x.
+
 ## 2026-09-25
 
 **Gusto**

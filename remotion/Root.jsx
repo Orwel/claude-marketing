@@ -2,13 +2,16 @@ import React from 'react';
 import { Composition, Folder, staticFile } from 'remotion';
 import { MARCAS, PIEZAS, idComposicion } from './catalogo.js';
 import { Animado } from './plantillas/Animado.jsx';
-import { aplicarVoz, duracionPieza, FORMATOS } from './util.js';
+import { Vertical } from './plantillas/Vertical.jsx';
+import { aplicarVoz, duracionDe, duracionPieza, FORMATOS } from './util.js';
 
 /**
  * Si la pieza ya tiene voz (npm run voz), cada escena dura al menos lo que dura
  * su frase mas un respiro. Sin manifiesto, la pieza queda como esta escrita.
  */
 async function conVoz({ props }) {
+  // La voz solo aplica a Animado; el Vertical dura lo que dura el metraje cortado.
+  if (props.pieza.plantilla === 'Vertical') return { durationInFrames: duracionDe(props.pieza, FPS, props.marca.id) };
   const id = `${props.pieza.slug}--${props.marca.id}`;
   const respuesta = await fetch(staticFile(`voz/${id}.json`)).catch(() => null);
   if (!respuesta?.ok) return { durationInFrames: duracionPieza(props.pieza, FPS) };
@@ -18,7 +21,7 @@ async function conVoz({ props }) {
 }
 
 const FPS = 30;
-const PLANTILLAS = { Animado };
+const PLANTILLAS = { Animado, Vertical };
 
 /**
  * Una composicion por cada pieza × cuenta. Se agrupan por mes en el Studio,
@@ -42,7 +45,7 @@ export const Root = () => {
                 fps={FPS}
                 width={ancho}
                 height={alto}
-                durationInFrames={duracionPieza(pieza, FPS)}
+                durationInFrames={duracionDe(pieza, FPS, cuenta)}
                 defaultProps={{ pieza, marca: MARCAS[cuenta], voz: null }}
                 calculateMetadata={conVoz}
               />

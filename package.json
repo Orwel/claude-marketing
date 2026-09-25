@@ -12,10 +12,13 @@
     "render": "node src/render.js",
     "validar": "node src/video/validar.js",
     "pista": "node src/audio/pista.js",
-    "voz": "node src/voz/locutar.js"
+    "voz": "node src/voz/locutar.js",
+    "vertical": "node src/vertical/preparar.js"
   },
   "dependencies": {
+    "@remotion/captions": "4.0.504",
     "@remotion/cli": "4.0.504",
+    "@remotion/install-whisper-cpp": "4.0.504",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "remotion": "4.0.504"

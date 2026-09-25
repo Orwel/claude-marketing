@@ -80,6 +80,20 @@ export function duracionPieza(pieza, fps) {
   return tramosDe(pieza, fps).at(-1).fin;
 }
 
+/** Lo que dura la tarjeta de cierre que la plantilla Vertical agrega despues del metraje. */
+export const SEGUNDOS_CIERRE = 3.5;
+
+/**
+ * Duracion total segun la plantilla: Animado suma escenas; Vertical suma los
+ * tramos del metraje y, si la cuenta tiene cierre o CTA, la tarjeta final.
+ */
+export function duracionDe(pieza, fps, cuenta) {
+  if (pieza.plantilla !== 'Vertical') return duracionPieza(pieza, fps);
+  const metraje = (pieza.metraje?.segmentos ?? []).reduce((s, x) => s + aCuadros(x.hasta - x.desde, fps), 0);
+  const v = pieza.variantes?.[cuenta] ?? {};
+  return Math.max(1, metraje + (v.cierre || v.cta ? aCuadros(SEGUNDOS_CIERRE, fps) : 0));
+}
+
 export const FORMATOS = {
   vertical: { ancho: 1080, alto: 1920 },
   horizontal: { ancho: 1920, alto: 1080 },

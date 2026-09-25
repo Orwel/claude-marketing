@@ -1,7 +1,7 @@
-import { execFileSync } from 'node:child_process';
 import { statSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { remotion } from '../remotion-cli.js';
 
 /**
  * Requisitos de Reels, TikTok y Shorts verticales. Se comprueban sobre el
@@ -41,9 +41,7 @@ export function validarMedio({ anchoPx, altoPx, duracionSegundos, tamanoMb, form
 
 /** Lee el archivo con ffprobe (el que trae Remotion, para no pedir instalar ffmpeg aparte). */
 export function inspeccionar(archivo) {
-  const salida = execFileSync('npx', ['remotion', 'ffprobe', '-v', 'error', '-print_format', 'json', '-show_streams', '-show_format', archivo], {
-    encoding: 'utf8',
-  });
+  const salida = remotion(['ffprobe', '-v', 'error', '-print_format', 'json', '-show_streams', '-show_format', archivo], { silencioso: true });
   const datos = JSON.parse(salida);
   const video = datos.streams.find((s) => s.codec_type === 'video');
   return {

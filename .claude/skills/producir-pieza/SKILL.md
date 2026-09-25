@@ -8,7 +8,8 @@ description: Produce un video (o carrusel) de marketing con el estudio Remotion 
 1. **Entender el pedido.** Cuenta(s), objetivo, duración, guion de 6 líneas (gancho, quién soy, dato,
    ejemplo, qué hacer hoy, CTA), qué se ve, energía, voz, qué evitar. Si falta el guion o la cuenta,
    preguntar; lo demás se decide con `marcas/` y `docs/TONO.md`.
-2. **Elegir plantilla.** Animado (100 % generado), Vertical (metraje propio, pendiente), DemoApp,
+2. **Elegir plantilla.** Animado (100 % generado), Vertical (metraje propio: `npm run vertical -- AAAA-MM`
+   crea las piezas en borrador desde "videos grabados"; luego se completan gancho, cierre y CTA), DemoApp,
    Clase, Carrusel. Ver escenas disponibles en `remotion/escenas/` y en `docs/HANDOFF.md`.
 3. **Escribir la pieza** en `piezas/AAAA-MM/<slug>.json`: escenas, `variantes` por cuenta
    (etiqueta, gancho, cierre, cta, web, copy), `verificar[]` con cada dato jurídico o de producto.

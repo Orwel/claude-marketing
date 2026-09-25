@@ -1,8 +1,8 @@
-import { execFileSync } from 'node:child_process';
 import { mkdirSync, readdirSync, readFileSync } from 'node:fs';
 import path from 'node:path';
 import { carpetaEditados, config, RAIZ } from './config.js';
 import { escribirPista } from './audio/pista.js';
+import { remotion } from './remotion-cli.js';
 import { validarArchivo } from './video/validar.js';
 
 /**
@@ -49,9 +49,9 @@ for (const cuenta of cuentas) {
   console.log(`\n▶ ${id} → ${salida}`);
   // La pista se regenera en cada render: si cambiaron los tiempos (o llego la voz), el audio los sigue.
   if (pieza.pista) console.log(`♪ Pista: ${escribirPista(pieza, cuenta)}`);
-  const argumentos = ['remotion', 'render', 'remotion/index.js', id, salida, '--codec=h264', '--pixel-format=yuv420p', '--color-space=bt709', '--log=warn'];
+  const argumentos = ['render', 'remotion/index.js', id, salida, '--codec=h264', '--pixel-format=yuv420p', '--color-space=bt709', '--log=warn'];
   if (config.chrome) argumentos.push(`--browser-executable=${config.chrome}`);
-  execFileSync('npx', argumentos, { cwd: RAIZ, stdio: 'inherit' });
+  remotion(argumentos);
 
   const { medio, problemas } = validarArchivo(salida);
   if (problemas.length) {

@@ -11,3 +11,6 @@ salida/
 public/crudos/
 public/audio/
 public/voz/
+.whisper/
+trabajo/
+whisper-bin-x64.zip

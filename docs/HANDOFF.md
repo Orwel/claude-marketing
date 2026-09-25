@@ -50,7 +50,7 @@ remotion/
   componentes/                Fondo, TextoCinetico, Firma/Etiqueta, Celular, Iconos, Aparecer
   escenas/                    gancho, frase, lineaTiempo, dato, notificacion, pasos, cierre
   plantillas/Animado.jsx      video 100 % generado
-  plantillas/Vertical.jsx     PENDIENTE: el Reel.jsx anterior, sin adaptar
+  plantillas/Vertical.jsx     metraje propio cortado + gancho + subtítulos + cierre
 docs/TONO.md                  tono, público y restricciones para escribir copys
 archivo/agente-anterior/      el proyecto anterior, solo consulta (LEEME.md dice qué se aprovechó)
 src/
@@ -58,6 +58,16 @@ src/
   render.js                   npm run render -- <slug> [cuenta]
   video/validar.js            requisitos de Reels con ffprobe
 ```
+
+### Plantilla Vertical (metraje propio)
+
+`npm run vertical -- 2026-10` lee `CARPETA_REDES/2026-10 octubre/videos grabados/` y por cada video:
+proxy H.264 en `public/crudos/` → audio 16 kHz → whisper.cpp local (`@remotion/install-whisper-cpp`,
+se instala solo en `.whisper/`) → `src/vertical/corte.js` decide el corte (tomas separadas por pausas
+de 1 s, "otra" descarta la toma, silencios de más de 0,35 s fuera) → pieza en borrador
+`piezas/2026-10/grabado-<archivo>.json`. Si la pieza ya existe, solo se actualiza el corte; gancho,
+cierre, CTA y copy se respetan. Luego se revisa en el Studio y `npm run render -- <slug>`.
+El corte se probó con transcripción simulada; falta la primera prueba con metraje real (en el PC).
 
 ### Cómo se escribe una pieza
 

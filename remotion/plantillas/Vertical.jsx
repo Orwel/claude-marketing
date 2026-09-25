@@ -1,236 +1,145 @@
-// PENDIENTE (segunda entrega): esta es la plantilla del agente anterior (Reel.jsx).
-// Todavia lee colores propios y props de ElevenLabs; hay que pasarla a marca + pieza,
-// subtitulos desde Whisper y metraje desde "videos grabados". No esta registrada en Root.
-import React from 'react';
-import {
-  AbsoluteFill,
-  Audio,
-  Img,
-  OffthreadVideo,
-  Sequence,
-  interpolate,
-  spring,
-  staticFile,
-  useCurrentFrame,
-  useVideoConfig,
-} from 'remotion';
-
-const MARCA = {
-  fondo: '#0F1620',
-  acento: '#E8B04B',
-  texto: '#FFFFFF',
-  tenue: 'rgba(255,255,255,0.55)',
-};
+import { createTikTokStyleCaptions } from '@remotion/captions';
+import React, { useMemo } from 'react';
+import { AbsoluteFill, interpolate, OffthreadVideo, Sequence, Series, spring, staticFile, useCurrentFrame, useVideoConfig } from 'remotion';
+import { Fondo } from '../componentes/Fondo.jsx';
+import { Etiqueta } from '../componentes/Firma.jsx';
+import { TextoCinetico } from '../componentes/TextoCinetico.jsx';
+import { Cierre } from '../escenas/Cierre.jsx';
+import { fuente, useFuentes } from '../fuentes.js';
+import { ContextoMarca, useMarca } from '../marca.js';
+import { aCuadros, conAlfa, SEGUNDOS_CIERRE } from '../util.js';
 
 /**
- * El reel completo. Recibe todo por props desde producir.js:
- * nada de rutas hardcodeadas, para que la misma composicion sirva
- * para cualquier guion.
+ * Plantilla Vertical: el metraje de Juan David, ya cortado, con gancho,
+ * subtitulos quemados y cierre en la marca de la cuenta.
+ *
+ * El corte (que tramos del video quedan) lo decide src/vertical/corte.js y
+ * llega en pieza.metraje.segmentos; los subtitulos llegan ya en la linea de
+ * tiempo del video cortado. Esta plantilla solo monta y viste.
  */
-export const Reel = ({ guion, palabras, audio, fondos, metraje, duracionSegundos, marca }) => {
+export const Vertical = ({ pieza, marca }) => {
+  useFuentes();
   const { fps } = useVideoConfig();
-  const colores = { ...MARCA, ...(marca?.colores ?? {}) };
-
-  // Si hay metraje propio, ES el video: se graba con su audio y Remotion
-  // solo pone encima gancho, subtitulos y marca. Es el modo que mas rinde
-  // para marca personal, porque combina tu cara (que es el activo) con la
-  // consistencia de la plantilla.
-  const conMetrajePropio = Boolean(metraje?.archivo);
+  const variante = pieza.variantes?.[marca.id] ?? {};
+  const segmentos = pieza.metraje?.segmentos ?? [];
+  const cuadrosMetraje = segmentos.reduce((s, x) => s + aCuadros(x.hasta - x.desde, fps), 0);
+  const conCierre = Boolean(variante.cierre || variante.cta);
 
   return (
-    <AbsoluteFill style={{ backgroundColor: colores.fondo }}>
-      {conMetrajePropio ? (
-        <MetrajePropio metraje={metraje} fps={fps} />
-      ) : (
-        <Fondo fondos={fondos} guion={guion} fps={fps} colores={colores} />
-      )}
+    <ContextoMarca.Provider value={marca}>
+      <AbsoluteFill style={{ backgroundColor: marca.colores.fondo }}>
+        <Series>
+          {segmentos.map((s, i) => (
+            <Series.Sequence key={i} durationInFrames={aCuadros(s.hasta - s.desde, fps)} name={`toma ${i + 1}`}>
+              <Tramo archivo={pieza.metraje.archivo} desde={s.desde} hasta={s.hasta} indice={i} />
+            </Series.Sequence>
+          ))}
+        </Series>
 
-      {/* Velo oscuro para que el texto blanco sea legible. Sobre metraje
-          propio se aplica mas suave y solo abajo: un velo fuerte oscurece
-          la cara, que es justo lo que da valor a ese modo. */}
-      <AbsoluteFill
-        style={{
-          background: conMetrajePropio
-            ? `linear-gradient(180deg, rgba(0,0,0,.35) 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,0) 55%, rgba(0,0,0,.7) 100%)`
-            : `linear-gradient(180deg, rgba(0,0,0,.55) 0%, rgba(0,0,0,.25) 45%, rgba(0,0,0,.75) 100%)`,
-        }}
-      />
+        {/* Velos: arriba para el gancho, abajo para los subtitulos. Suaves: la cara es el valor. */}
+        <AbsoluteFill style={{ background: 'linear-gradient(180deg, rgba(0,0,0,.45) 0%, rgba(0,0,0,0) 26%, rgba(0,0,0,0) 55%, rgba(0,0,0,.55) 100%)' }} />
 
-      {/* Con metraje propio el audio ya viene en el video; solo se anade
-          pista aparte cuando la voz es sintetica. */}
-      {audio && !conMetrajePropio ? <Audio src={staticFile(audio)} /> : null}
-
-      <Gancho texto={guion.gancho} fps={fps} colores={colores} />
-      <Subtitulos palabras={palabras} fps={fps} colores={colores} />
-      <BarraProgreso duracionSegundos={duracionSegundos} fps={fps} colores={colores} />
-    </AbsoluteFill>
-  );
-};
-
-/**
- * Fondo por escena. Si hay clips o imagenes generadas, se usan; si no,
- * un degradado animado con los colores de la marca. El modo plantilla no
- * es un placeholder: para contenido que ES texto, es la mejor opcion.
- */
-const Fondo = ({ fondos, guion, fps, colores }) => {
-  if (!fondos?.length) return <FondoPlantilla colores={colores} />;
-
-  return (
-    <>
-      {guion.guion.map((escena, i) => {
-        const fondo = fondos.find((f) => f.indice === i);
-        if (!fondo) return null;
-
-        const desde = Math.round(escena.segundoInicio * fps);
-        const duracion = Math.max(1, Math.round((escena.segundoFin - escena.segundoInicio) * fps));
-
-        return (
-          <Sequence key={i} from={desde} durationInFrames={duracion}>
-            {fondo.ruta.endsWith('.mp4') ? (
-              <OffthreadVideo src={staticFile(fondo.archivo)} muted style={cubrir} />
-            ) : (
-              <ImagenConZoom archivo={fondo.archivo} duracion={duracion} />
-            )}
+        <Sequence durationInFrames={cuadrosMetraje}>
+          <Subtitulos subtitulos={pieza.subtitulos ?? []} />
+        </Sequence>
+        {variante.gancho ? (
+          <Sequence durationInFrames={Math.min(cuadrosMetraje, Math.round(3.2 * fps))}>
+            <Gancho texto={variante.gancho} />
           </Sequence>
-        );
-      })}
-    </>
+        ) : null}
+        {variante.etiqueta ? (
+          <AbsoluteFill style={{ top: 150, left: 80, height: 'auto', alignItems: 'flex-start' }}>
+            <Etiqueta texto={variante.etiqueta} />
+          </AbsoluteFill>
+        ) : null}
+
+        {conCierre ? (
+          <Sequence from={cuadrosMetraje} durationInFrames={aCuadros(SEGUNDOS_CIERRE, fps)}>
+            <AbsoluteFill>
+              <Fondo />
+              <Cierre texto={variante.cierre || ''} cta={variante.cta} web={variante.web} />
+            </AbsoluteFill>
+          </Sequence>
+        ) : null}
+        <Progreso />
+      </AbsoluteFill>
+    </ContextoMarca.Provider>
   );
 };
 
-const cubrir = { width: '100%', height: '100%', objectFit: 'cover' };
-
 /**
- * Tu propio video como capa base.
- *
- * `startFrom` recorta el arranque, que es donde siempre sobra metraje:
- * los segundos entre que le das a grabar y empiezas a hablar. Cortar eso
- * automaticamente es la diferencia entre un reel que arranca flojo y uno
- * que entra directo al gancho.
- *
- * objectFit cover recorta a 9:16 aunque hayas grabado en horizontal, pero
- * grabar ya en vertical siempre da mejor encuadre.
+ * Un tramo del metraje. Los tramos alternan entre plano normal y un empuje
+ * de camara (1.12x): en un video de cortes secos, cambiar el encuadre en cada
+ * corte es lo que hace que el salto se sienta intencional y no un error.
  */
-const MetrajePropio = ({ metraje, fps }) => (
-  <OffthreadVideo
-    src={staticFile(metraje.archivo)}
-    startFrom={Math.round((metraje.desdeSegundo ?? 0) * fps)}
-    volume={metraje.volumen ?? 1}
-    style={cubrir}
-  />
-);
-
-/** Un zoom lento sobre la imagen fija; sin el, el reel se siente muerto. */
-const ImagenConZoom = ({ archivo, duracion }) => {
+const Tramo = ({ archivo, desde, hasta, indice }) => {
   const frame = useCurrentFrame();
-  const escala = interpolate(frame, [0, duracion], [1, 1.12], { extrapolateRight: 'clamp' });
+  const { fps } = useVideoConfig();
+  const base = indice % 2 === 1 ? 1.12 : 1;
+  const deriva = interpolate(frame, [0, (hasta - desde) * fps], [0, 0.03]);
   return (
     <AbsoluteFill style={{ overflow: 'hidden' }}>
-      <Img src={staticFile(archivo)} style={{ ...cubrir, transform: `scale(${escala})` }} />
+      <OffthreadVideo
+        src={staticFile(archivo)}
+        trimBefore={Math.round(desde * fps)}
+        trimAfter={Math.round(hasta * fps)}
+        style={{ width: '100%', height: '100%', objectFit: 'cover', transform: `scale(${base + deriva})`, transformOrigin: '50% 35%' }}
+      />
     </AbsoluteFill>
   );
 };
 
-const FondoPlantilla = ({ colores }) => {
+const Gancho = ({ texto }) => {
   const frame = useCurrentFrame();
-  const giro = interpolate(frame, [0, 900], [0, 40]);
+  const { durationInFrames } = useVideoConfig();
+  const { colores, radio } = useMarca();
+  const salida = interpolate(frame, [durationInFrames - 8, durationInFrames], [1, 0], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' });
   return (
-    <AbsoluteFill
-      style={{
-        background: `linear-gradient(${135 + giro}deg, ${colores.fondo} 0%, #1B2836 55%, ${colores.fondo} 100%)`,
-      }}
-    />
-  );
-};
-
-/** El gancho ocupa la pantalla los primeros 3 segundos: son los que deciden. */
-const Gancho = ({ texto, fps, colores }) => {
-  const frame = useCurrentFrame();
-  const duracion = Math.round(3 * fps);
-  if (frame > duracion) return null;
-
-  const entrada = spring({ frame, fps, config: { damping: 200 } });
-  const salida = interpolate(frame, [duracion - 10, duracion], [1, 0], {
-    extrapolateLeft: 'clamp',
-    extrapolateRight: 'clamp',
-  });
-
-  return (
-    <AbsoluteFill
-      style={{
-        justifyContent: 'center',
-        alignItems: 'center',
-        padding: 90,
-        opacity: salida,
-        transform: `translateY(${interpolate(entrada, [0, 1], [40, 0])}px)`,
-      }}
-    >
-      <div
-        style={{
-          fontFamily: 'Georgia, serif',
-          fontSize: 82,
-          lineHeight: 1.15,
-          fontWeight: 700,
-          color: colores.texto,
-          textAlign: 'center',
-          textShadow: '0 6px 30px rgba(0,0,0,.6)',
-        }}
-      >
-        {texto}
+    <AbsoluteFill style={{ top: 250, height: 'auto', padding: '0 70px', opacity: salida }}>
+      <div style={{ background: conAlfa(colores.fondo, 0.82), borderRadius: radio, padding: '30px 36px', backdropFilter: 'blur(6px)' }}>
+        <TextoCinetico texto={texto} tamano={70} desde={2} paso={2} anchoMax={880} />
       </div>
-      <div style={{ height: 6, width: 120, background: colores.acento, marginTop: 40 }} />
     </AbsoluteFill>
   );
 };
 
 /**
- * Subtitulos palabra a palabra usando los timestamps reales de ElevenLabs.
- * Se muestran en grupos de pocas palabras, no linea a linea: en vertical
- * y a pantalla completa, una linea larga obliga a leer en vez de escuchar.
+ * Subtitulos por paginas de pocas palabras, con la palabra que se esta
+ * diciendo resaltada. Van en el tercio inferior, por encima de la zona que
+ * tapa la interfaz de Instagram.
  */
-const Subtitulos = ({ palabras, fps, colores }) => {
+const Subtitulos = ({ subtitulos }) => {
   const frame = useCurrentFrame();
-  if (!palabras?.length) return null;
-
-  const segundo = frame / fps;
-  const POR_GRUPO = 4;
-
-  const indiceActual = palabras.findIndex((p) => segundo >= p.inicio && segundo <= p.fin);
-  if (indiceActual === -1) return null;
-
-  const grupo = Math.floor(indiceActual / POR_GRUPO);
-  const visibles = palabras.slice(grupo * POR_GRUPO, grupo * POR_GRUPO + POR_GRUPO);
+  const { fps } = useVideoConfig();
+  const marca = useMarca();
+  const { colores } = marca;
+  const { pages } = useMemo(() => createTikTokStyleCaptions({ captions: subtitulos, combineTokensWithinMilliseconds: 1100 }), [subtitulos]);
+  const ms = (frame / fps) * 1000;
+  const pagina = pages.find((p) => ms >= p.startMs && ms < p.startMs + p.durationMs);
+  if (!pagina) return null;
+  const entrada = spring({ frame: frame - Math.round((pagina.startMs / 1000) * fps), fps, config: { damping: 18, stiffness: 220 } });
+  const caja = marca.subtitulo?.caja;
 
   return (
-    <AbsoluteFill
-      style={{ justifyContent: 'flex-end', alignItems: 'center', padding: '0 70px 320px' }}
-    >
+    <AbsoluteFill style={{ top: 1180, height: 'auto', alignItems: 'center', padding: '0 70px' }}>
       <div
         style={{
-          display: 'flex',
-          flexWrap: 'wrap',
-          justifyContent: 'center',
-          gap: '0 18px',
-          fontFamily: 'Georgia, serif',
+          ...fuente(marca.fuentes.enfasis),
           fontSize: 66,
-          fontWeight: 700,
-          lineHeight: 1.25,
+          lineHeight: 1.15,
           textAlign: 'center',
+          color: colores.tinta,
+          transform: `scale(${0.9 + entrada * 0.1})`,
+          ...(caja
+            ? { background: conAlfa(colores.fondo, 0.78), padding: '14px 26px', borderRadius: 18 }
+            : { textShadow: '0 4px 18px rgba(0,0,0,.85), 0 2px 4px rgba(0,0,0,.9)' }),
         }}
       >
-        {visibles.map((palabra, i) => {
-          const activa = segundo >= palabra.inicio && segundo <= palabra.fin;
+        {pagina.tokens.map((t, i) => {
+          const activa = ms >= t.fromMs && ms < t.toMs;
           return (
-            <span
-              key={`${grupo}-${i}`}
-              style={{
-                color: activa ? colores.acento : colores.texto,
-                textShadow: '0 4px 24px rgba(0,0,0,.85)',
-                transform: activa ? 'scale(1.06)' : 'scale(1)',
-                display: 'inline-block',
-              }}
-            >
-              {palabra.texto}
+            <span key={i} style={{ color: activa ? colores.acento : undefined, whiteSpace: 'pre' }}>
+              {t.text}
             </span>
           );
         })}
@@ -239,13 +148,9 @@ const Subtitulos = ({ palabras, fps, colores }) => {
   );
 };
 
-/** Barra de progreso: sube la retencion porque el espectador ve cuanto queda. */
-const BarraProgreso = ({ duracionSegundos, fps, colores }) => {
+const Progreso = () => {
   const frame = useCurrentFrame();
-  const avance = Math.min(1, frame / (duracionSegundos * fps));
-  return (
-    <AbsoluteFill style={{ justifyContent: 'flex-end' }}>
-      <div style={{ height: 8, width: `${avance * 100}%`, background: colores.acento }} />
-    </AbsoluteFill>
-  );
+  const { durationInFrames } = useVideoConfig();
+  const { colores } = useMarca();
+  return <div style={{ position: 'absolute', left: 0, bottom: 0, height: 8, width: `${(frame / (durationInFrames - 1)) * 100}%`, background: colores.acento }} />;
 };
