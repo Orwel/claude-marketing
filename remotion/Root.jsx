@@ -1,8 +1,21 @@
 import React from 'react';
-import { Composition, Folder } from 'remotion';
+import { Composition, Folder, staticFile } from 'remotion';
 import { MARCAS, PIEZAS, idComposicion } from './catalogo.js';
 import { Animado } from './plantillas/Animado.jsx';
-import { duracionPieza, FORMATOS } from './util.js';
+import { aplicarVoz, duracionPieza, FORMATOS } from './util.js';
+
+/**
+ * Si la pieza ya tiene voz (npm run voz), cada escena dura al menos lo que dura
+ * su frase mas un respiro. Sin manifiesto, la pieza queda como esta escrita.
+ */
+async function conVoz({ props }) {
+  const id = `${props.pieza.slug}--${props.marca.id}`;
+  const respuesta = await fetch(staticFile(`voz/${id}.json`)).catch(() => null);
+  if (!respuesta?.ok) return { durationInFrames: duracionPieza(props.pieza, FPS) };
+  const voz = await respuesta.json();
+  const pieza = aplicarVoz(props.pieza, voz);
+  return { durationInFrames: duracionPieza(pieza, FPS), props: { ...props, pieza, voz } };
+}
 
 const FPS = 30;
 const PLANTILLAS = { Animado };
@@ -30,7 +43,8 @@ export const Root = () => {
                 width={ancho}
                 height={alto}
                 durationInFrames={duracionPieza(pieza, FPS)}
-                defaultProps={{ pieza, marca: MARCAS[cuenta] }}
+                defaultProps={{ pieza, marca: MARCAS[cuenta], voz: null }}
+                calculateMetadata={conVoz}
               />
             ));
           })}

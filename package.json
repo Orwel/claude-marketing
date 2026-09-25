@@ -10,7 +10,9 @@
   "scripts": {
     "estudio": "remotion studio remotion/index.js",
     "render": "node src/render.js",
-    "validar": "node src/video/validar.js"
+    "validar": "node src/video/validar.js",
+    "pista": "node src/audio/pista.js",
+    "voz": "node src/voz/locutar.js"
   },
   "dependencies": {
     "@remotion/cli": "4.0.504",

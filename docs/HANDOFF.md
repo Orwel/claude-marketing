@@ -61,6 +61,20 @@ src/
 
 ### Cómo se escribe una pieza
 
+Campos de pieza con ritmo (ver `contrappto-en-accion.json`): `bpm`, `transicion: "barrido"`
+(corte seco tapado por franjas, sin solape), `formas: true` (figuras que laten) y `pista: true`
+(música sintetizada por `src/audio/pista.js`, sin licencias, con whoosh en cada corte y golpe en
+cada impacto). Antes de abrir el Studio: `npm run pista -- <slug>`; `render` la regenera solo.
+
+Voz: cada escena puede traer `voz` (texto o `"$campo"`). `npm run voz -- <slug>` llama a ElevenLabs
+con la voz clonada (`ELEVENLABS_API_KEY`, `ELEVENLABS_VOICE_ID`), deja un mp3 por escena y un
+manifiesto en `public/voz/`. La plantilla alarga cada escena a lo que dura su frase y baja la música.
+**Sin probar contra la API real**: en la sesión en la nube `api.elevenlabs.io` está bloqueado por la
+política de red. El camino de manifiesto sí se probó con un audio falso.
+
+Escenas: gancho, frase, lineaTiempo, dato, notificacion, pasos, cierre, golpe, partes, pantalla
+(captura real con `recorte` para esconder datos), ritmo y celularReal.
+
 - `escenas[]`: cada una con `tipo` y `segundos`. Entre escenas hay 10 cuadros de fundido.
 - Un texto que empieza por `$` se lee de la variante de la cuenta (`"$gancho"`).
 - `*palabras*` entre asteriscos se resaltan: marcador en Contrappto, subrayado en juanda.
@@ -80,6 +94,7 @@ src/
 Hecho (primera entrega):
 - Estructura de tres capas, marcas contrappto y juanda, plantilla Animado con 7 escenas.
 - "La fecha que cuesta plata" en contrappto y juanda (19 s) y un promocional de Contrappto (24 s). Los tres validados.
+- "Contrappto en acción" (23 s): versión con ritmo, personas, capturas reales de la app (`public/marcas/contrappto/app/`, copiadas de `contrappto/public/images/home`) y pista sintetizada.
 - Drive: `Redes sociales/2026-10 octubre` y `2026-11 noviembre`, cada una con `videos grabados` y `videos editados`.
 
 Siguiente: ver `docs/PLAN.md`.

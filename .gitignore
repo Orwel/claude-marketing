@@ -9,3 +9,5 @@ tmp/
 salida/
 # Metraje crudo copiado o enlazado para el Studio.
 public/crudos/
+public/audio/
+public/voz/

@@ -1,0 +1,163 @@
+{
+  "slug": "contrappto-en-accion",
+  "titulo": "Contrappto en acción · promocional con ritmo (prueba)",
+  "pilar": "Producto (Contrappto)",
+  "plantilla": "Animado",
+  "formato": "vertical",
+  "estado": "prueba",
+  "cuentas": [
+    "contrappto"
+  ],
+  "bpm": 120,
+  "transicion": "barrido",
+  "formas": true,
+  "pista": true,
+  "volumenPista": 0.75,
+  "escenas": [
+    {
+      "tipo": "golpe",
+      "segundos": 2.5,
+      "lineas": [
+        "Firmaste",
+        "el contrato.",
+        "*¿Y después?*"
+      ],
+      "voz": "Firmaste el contrato. ¿Y después?"
+    },
+    {
+      "tipo": "partes",
+      "segundos": 3.5,
+      "titulo": "Dos partes. *Un* contrato.",
+      "izquierda": "Arrendador",
+      "derecha": "Arrendatario",
+      "centro": "Tercero neutral",
+      "voz": "Entre las dos partes, Contrappto es el tercero neutral: no es abogado de ninguna."
+    },
+    {
+      "tipo": "pantalla",
+      "segundos": 2.5,
+      "titulo": "Créalo *respondiendo preguntas*",
+      "imagen": "marcas/contrappto/app/chat-creation.png",
+      "anchoImagen": 851,
+      "recorte": {
+        "x": 20,
+        "y": 70,
+        "ancho": 520,
+        "alto": 430
+      },
+      "foco": {
+        "x": 0.3,
+        "y": 0.4
+      },
+      "llamado": "Sin plantillas en Word",
+      "voz": "Lo creas respondiendo preguntas. Nada de plantillas en Word."
+    },
+    {
+      "tipo": "pantalla",
+      "segundos": 2.5,
+      "titulo": "Fírmalo con *identidad verificada*",
+      "imagen": "marcas/contrappto/app/execution.png",
+      "anchoImagen": 1811,
+      "recorte": {
+        "x": 340,
+        "y": 132,
+        "ancho": 640,
+        "alto": 360
+      },
+      "foco": {
+        "x": 0.3,
+        "y": 0.2
+      },
+      "llamado": "Código verificable",
+      "voz": "Lo firman con la identidad verificada, y queda con un código que cualquiera puede comprobar."
+    },
+    {
+      "tipo": "pantalla",
+      "segundos": 2.5,
+      "titulo": "Cada pago, *registrado*",
+      "imagen": "marcas/contrappto/app/tasks-facts.png",
+      "anchoImagen": 1197,
+      "recorte": {
+        "x": 60,
+        "y": 195,
+        "ancho": 720,
+        "alto": 520
+      },
+      "foco": {
+        "x": 0.4,
+        "y": 0.3
+      },
+      "llamado": "Validado por las partes",
+      "voz": "Cada pago queda registrado, y lo validan las partes."
+    },
+    {
+      "tipo": "ritmo",
+      "segundos": 2.5,
+      "palabras": [
+        "Crea.",
+        "Firma.",
+        "Cumple.",
+        "Renegocia."
+      ]
+    },
+    {
+      "tipo": "celularReal",
+      "segundos": 3.5,
+      "titulo": "Y te *avisa* antes",
+      "imagen": "marcas/contrappto/app/portada2.png",
+      "avisos": [
+        {
+          "titulo": "Reajuste en 30 días",
+          "cuerpo": "Apto 301 cumple un año"
+        },
+        {
+          "titulo": "Pago del canon en 3 días",
+          "cuerpo": "Vence el 8 de octubre"
+        }
+      ],
+      "voz": "Y antes de cada fecha, te avisa."
+    },
+    {
+      "tipo": "cierre",
+      "segundos": 3.5,
+      "texto": "$cierre",
+      "cta": "$cta",
+      "web": "contrappto.com",
+      "voz": "Crea tu contrato gratis en contrappto punto com."
+    }
+  ],
+  "variantes": {
+    "contrappto": {
+      "etiqueta": "Contratos vivos",
+      "cierre": "Tu contrato, *vivo*",
+      "cta": "Crea tu contrato gratis",
+      "copy": "Firmar es el comienzo, no el final. Contrappto crea, firma y acompaña tu contrato: te avisa antes de cada fecha. Crea el primero gratis."
+    }
+  },
+  "verificar": [
+    {
+      "dato": "Capturas reales de contrappto.com (public/images/home). Revisar que no aparezcan datos de un cliente real: en la de preguntas se recortaron las respuestas; en la de ejecución, el título y la dirección.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "'Validado por las partes': los hechos (pagos) los valida la contraparte con Validar/Rechazar. Confirmar que funciona así.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "'Código verificable': el código del contrato se puede verificar (QR / hash).",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Avisos de reajuste y de pago como los del celular.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "'Gratis': plan Free con 2 contratos vivos.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Locución (campo voz de cada escena): mismos datos de producto que el texto en pantalla.",
+      "estado": "pendiente"
+    }
+  ]
+}
