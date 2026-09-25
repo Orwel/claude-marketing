@@ -4,7 +4,7 @@
   "pilar": "Producto (Contrappto)",
   "plantilla": "Animado",
   "formato": "vertical",
-  "estado": "prueba",
+  "estado": "prueba · no publicar",
   "cuentas": [
     "contrappto"
   ],
@@ -135,6 +135,10 @@
     }
   },
   "verificar": [
+    {
+      "dato": "Las capturas de public/marcas/contrappto/app/ son de una versión vieja de la app. Reemplazarlas por capturas actuales antes de publicar.",
+      "estado": "pendiente"
+    },
     {
       "dato": "Capturas reales de contrappto.com (public/images/home). Revisar que no aparezcan datos de un cliente real: en la de preguntas se recortaron las respuestas; en la de ejecución, el título y la dirección.",
       "estado": "pendiente"
