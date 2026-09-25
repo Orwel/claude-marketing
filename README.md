@@ -48,4 +48,6 @@ Crear un JSON en `piezas/` basta para que aparezca en el Studio.
 - [`docs/HANDOFF.md`](docs/HANDOFF.md): cómo está montado y las decisiones que ya se tomaron.
 - [`docs/PLAN.md`](docs/PLAN.md): plan de trabajo (vive en el FigJam, zona 5B).
 - [`docs/TONO.md`](docs/TONO.md): tono y restricciones para escribir copys.
+- [`docs/APRENDIZAJES.md`](docs/APRENDIZAJES.md): bitácora de lo aprendido en cada sesión.
+- [`CLAUDE.md`](CLAUDE.md) y la skill `producir-pieza`: lo que Claude Code lee solo al abrir el repo.
 - [`archivo/agente-anterior/`](archivo/agente-anterior/LEEME.md): el proyecto anterior, solo como consulta.
