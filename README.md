@@ -46,4 +46,6 @@ Crear un JSON en `piezas/` basta para que aparezca en el Studio.
 ## Documentación
 
 - [`docs/HANDOFF.md`](docs/HANDOFF.md): cómo está montado y las decisiones que ya se tomaron.
-- [`docs/PLAN.md`](docs/PLAN.md): plan de trabajo por entregas.
+- [`docs/PLAN.md`](docs/PLAN.md): plan de trabajo (vive en el FigJam, zona 5B).
+- [`docs/TONO.md`](docs/TONO.md): tono y restricciones para escribir copys.
+- [`archivo/agente-anterior/`](archivo/agente-anterior/LEEME.md): el proyecto anterior, solo como consulta.

@@ -23,7 +23,7 @@ Lo que este repo necesita saber de ella:
 
 | Decisión | Por qué |
 |---|---|
-| Sin publicación automática | La publica Juan David a mano. Blotato, Graph API, ElevenLabs, Gemini y Veo salieron (siguen en el historial de git, antes del commit "Reorientar a estudio de producción"). |
+| Sin publicación automática | La publica Juan David a mano. Blotato, Graph API, Gemini y Veo salieron. El proyecto anterior completo está en `archivo/agente-anterior/` como consulta: no se ejecuta ni se importa (ver su `LEEME.md`). |
 | Tres capas: marca, pieza, plantilla | Cambiar de cuenta es cambiar un JSON de marca; republicar es cambiar la variante. La plantilla nunca tiene un color ni un texto de una cuenta. |
 | Drive como carpeta de trabajo | Google Drive para escritorio sincroniza `G:\Mi unidad\Redes sociales`. La ruta va en `.env` (`CARPETA_REDES`), nunca en el código. |
 | Carpeta por mes `AAAA-MM mes` | `2026-10 octubre`: se ordena bien en Drive aunque cambie el año. Dentro: `videos grabados` y `videos editados`. |
@@ -51,6 +51,8 @@ remotion/
   escenas/                    gancho, frase, lineaTiempo, dato, notificacion, pasos, cierre
   plantillas/Animado.jsx      video 100 % generado
   plantillas/Vertical.jsx     PENDIENTE: el Reel.jsx anterior, sin adaptar
+docs/TONO.md                  tono, público y restricciones para escribir copys
+archivo/agente-anterior/      el proyecto anterior, solo consulta (LEEME.md dice qué se aprovechó)
 src/
   config.js                   .env sin dependencias + carpeta del mes
   render.js                   npm run render -- <slug> [cuenta]
