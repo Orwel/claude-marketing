@@ -16,7 +16,6 @@
     "vertical": "node src/vertical/preparar.js"
   },
   "dependencies": {
-    "@remotion/captions": "4.0.504",
     "@remotion/cli": "4.0.504",
     "@remotion/install-whisper-cpp": "4.0.504",
     "react": "^19.2.8",

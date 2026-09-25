@@ -63,11 +63,16 @@ src/
 
 `npm run vertical -- 2026-10` lee `CARPETA_REDES/2026-10 octubre/videos grabados/` y por cada video:
 proxy H.264 en `public/crudos/` → audio 16 kHz → whisper.cpp local (`@remotion/install-whisper-cpp`,
-se instala solo en `.whisper/`) → `src/vertical/corte.js` decide el corte (tomas separadas por pausas
-de 1 s, "otra" descarta la toma, silencios de más de 0,35 s fuera) → pieza en borrador
-`piezas/2026-10/grabado-<archivo>.json`. Si la pieza ya existe, solo se actualiza el corte; gancho,
-cierre, CTA y copy se respetan. Luego se revisa en el Studio y `npm run render -- <slug>`.
-El corte se probó con transcripción simulada; falta la primera prueba con metraje real (en el PC).
+se instala solo en `.whisper/`) → tramos con voz (`silencedetect`), sobre los que se anclan las
+palabras de Whisper → `src/vertical/corte.js` decide el corte (tomas separadas por pausas de 1 s,
+"otra" descarta la toma, silencios de más de 0,35 s fuera si ahorran 0,25 s o más).
+
+Una pieza Vertical declara sus videos en `metraje.fuentes` (en orden; puede unir varias
+grabaciones) y `metraje.correcciones` para palabras que Whisper escribe mal. Cada `npm run vertical`
+rehace el corte de las piezas que usan esos videos (salvo `metraje.manual: true`) sin tocar lo
+editorial; los videos que ninguna pieza usa salen como borrador `piezas/AAAA-MM/grabado-<archivo>.json`.
+Luego se revisa en el Studio y `npm run render -- <slug>`. Probado con metraje real el 25-sep-2026
+(ver APRENDIZAJES).
 
 ### Cómo se escribe una pieza
 
@@ -106,6 +111,8 @@ Hecho (primera entrega):
 - "La fecha que cuesta plata" en contrappto y juanda (19 s) y un promocional de Contrappto (24 s). Los tres validados.
 - "Contrappto en acción" (23 s): versión con ritmo, personas, capturas reales de la app (`public/marcas/contrappto/app/`, copiadas de `contrappto/public/images/home`) y pista sintetizada.
 - Drive: `Redes sociales/2026-10 octubre` y `2026-11 noviembre`, cada una con `videos grabados` y `videos editados`.
+- Primera prueba real de Vertical: "La IA que nadie entiende del todo" (25,6 s) y su republicación `-b`
+  (26,2 s), en juanda, validadas. Datos sobre Wolfram en `verificar[]`.
 
 Siguiente: ver `docs/PLAN.md`.
 

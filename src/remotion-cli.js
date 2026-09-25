@@ -1,4 +1,4 @@
-import { execFileSync } from 'node:child_process';
+import { execFileSync, spawnSync } from 'node:child_process';
 import path from 'node:path';
 import { RAIZ } from './config.js';
 
@@ -16,4 +16,11 @@ export function remotion(argumentos, { silencioso = false } = {}) {
     stdio: silencioso ? ['ignore', 'pipe', 'pipe'] : 'inherit',
     maxBuffer: 64 * 1024 * 1024,
   });
+}
+
+/** Igual, pero devuelve stdout y stderr juntos: ffmpeg escribe sus analisis (silencedetect) en stderr. */
+export function remotionSalida(argumentos) {
+  const r = spawnSync(process.execPath, [CLI, ...argumentos], { cwd: RAIZ, encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 });
+  if (r.status !== 0) throw new Error(`remotion ${argumentos[0]} fallo:\n${r.stderr}`);
+  return `${r.stdout}\n${r.stderr}`;
 }

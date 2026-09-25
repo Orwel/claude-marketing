@@ -1,0 +1,485 @@
+{
+  "slug": "la-ia-que-nadie-entiende",
+  "titulo": "La IA que nadie entiende del todo",
+  "pilar": "IA sin humo",
+  "plantilla": "Vertical",
+  "formato": "vertical",
+  "estado": "borrador",
+  "cuentas": [
+    "juanda"
+  ],
+  "guion": [
+    "1. No te preocupes si no entiendes cómo funciona la IA por dentro",
+    "2. Ni el científico que mejor ha explicado cómo funciona ChatGPT, Stephen Wolfram, puede decir del todo por qué estos modelos funcionan tan bien",
+    "3. La genialidad fue lograr algo que parecía imposible: explicar el lenguaje con matemáticas",
+    "4. Algo que ni el propio Wolfram sabe explicar por qué"
+  ],
+  "metraje": {
+    "fuentes": [
+      "IMG_3772.MOV",
+      "IMG_3776.MOV"
+    ],
+    "correcciones": [
+      {
+        "de": "chat GPT",
+        "a": "ChatGPT"
+      }
+    ],
+    "segmentos": [
+      {
+        "desde": 4.49,
+        "hasta": 17.195,
+        "archivo": "crudos/2026-10/IMG_3772.mp4"
+      },
+      {
+        "desde": 0.55,
+        "hasta": 9.887,
+        "archivo": "crudos/2026-10/IMG_3776.mp4"
+      }
+    ]
+  },
+  "variantes": {
+    "juanda": {
+      "etiqueta": "IA sin humo",
+      "gancho": "¿No *entiendes* cómo funciona la IA?",
+      "cierre": "No hace falta entenderla por dentro para *usarla con criterio*",
+      "cta": "Sígueme: así la uso en mi trabajo",
+      "web": "@juanda.trifuerza",
+      "copy": "Si no entiendes cómo funciona la IA por dentro, no estás atrasado: Stephen Wolfram, que escribió una de las explicaciones más claras de cómo funciona ChatGPT, reconoce que nadie sabe del todo por qué estos modelos funcionan tan bien.\n\nLo que sí se aprende es a usarla con criterio: qué le pides, qué revisas y qué nunca le delegas. Eso es lo que muestro aquí, con casos de mi trabajo como abogado.\n\nSígueme si quieres usar la IA sin tragarte el humo."
+    }
+  },
+  "verificar": [
+    {
+      "dato": "Stephen Wolfram como 'el científico que mejor ha explicado cómo funciona ChatGPT' (es una opinión: sostenerla con su ensayo o bajarla a 'uno de los que mejor lo ha explicado').",
+      "fuente_sugerida": "Stephen Wolfram, 'What Is ChatGPT Doing … and Why Does It Work?' (febrero de 2023)",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Que Wolfram reconoce que no se puede explicar del todo por qué estos modelos funcionan tan bien (en el video: 'no puede decir del todo por qué' / 'ni el propio Wolfram sabe explicar por qué').",
+      "fuente_sugerida": "Mismo ensayo: pasaje sobre que no hay una razón teórica última de por qué funciona",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "'La genialidad fue lograr explicar el lenguaje con matemáticas': de quién es el logro (OpenAI / la investigación en redes neuronales) y si la frase es justa como resumen.",
+      "fuente_sugerida": "Mismo ensayo",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Revisar los subtítulos palabra por palabra (whisper) antes de publicar.",
+      "estado": "pendiente"
+    }
+  ],
+  "subtitulos": [
+    {
+      "text": "No",
+      "startMs": 120,
+      "endMs": 283,
+      "timestampMs": null,
+      "confidence": 0.72395
+    },
+    {
+      "text": " te",
+      "startMs": 283,
+      "endMs": 446,
+      "timestampMs": null,
+      "confidence": 0.97257
+    },
+    {
+      "text": " preocupes",
+      "startMs": 446,
+      "endMs": 934,
+      "timestampMs": null,
+      "confidence": 0.989647
+    },
+    {
+      "text": " si",
+      "startMs": 934,
+      "endMs": 1097,
+      "timestampMs": null,
+      "confidence": 0.983297
+    },
+    {
+      "text": " no",
+      "startMs": 1097,
+      "endMs": 1260,
+      "timestampMs": null,
+      "confidence": 0.994103
+    },
+    {
+      "text": " entiendes",
+      "startMs": 1260,
+      "endMs": 1748,
+      "timestampMs": null,
+      "confidence": 0.990529
+    },
+    {
+      "text": " cómo",
+      "startMs": 1748,
+      "endMs": 2004,
+      "timestampMs": null,
+      "confidence": 0.691876
+    },
+    {
+      "text": " funciona",
+      "startMs": 2004,
+      "endMs": 2446,
+      "timestampMs": null,
+      "confidence": 0.986916
+    },
+    {
+      "text": " la",
+      "startMs": 2446,
+      "endMs": 2609,
+      "timestampMs": null,
+      "confidence": 0.916432
+    },
+    {
+      "text": " IA",
+      "startMs": 2609,
+      "endMs": 2772,
+      "timestampMs": null,
+      "confidence": 0.771859
+    },
+    {
+      "text": " por",
+      "startMs": 2772,
+      "endMs": 2981,
+      "timestampMs": null,
+      "confidence": 0.950332
+    },
+    {
+      "text": " dentro,",
+      "startMs": 2981,
+      "endMs": 3330,
+      "timestampMs": null,
+      "confidence": 0.990747
+    },
+    {
+      "text": " ni",
+      "startMs": 3800,
+      "endMs": 3981,
+      "timestampMs": null,
+      "confidence": 0.930021
+    },
+    {
+      "text": " el",
+      "startMs": 3981,
+      "endMs": 4162,
+      "timestampMs": null,
+      "confidence": 0.990108
+    },
+    {
+      "text": " científico",
+      "startMs": 4162,
+      "endMs": 4756,
+      "timestampMs": null,
+      "confidence": 0.977381
+    },
+    {
+      "text": " que",
+      "startMs": 4756,
+      "endMs": 4989,
+      "timestampMs": null,
+      "confidence": 0.972609
+    },
+    {
+      "text": " mejor",
+      "startMs": 4989,
+      "endMs": 5325,
+      "timestampMs": null,
+      "confidence": 0.987144
+    },
+    {
+      "text": " ha",
+      "startMs": 5325,
+      "endMs": 5506,
+      "timestampMs": null,
+      "confidence": 0.953597
+    },
+    {
+      "text": " explicado",
+      "startMs": 5506,
+      "endMs": 6048,
+      "timestampMs": null,
+      "confidence": 0.995647
+    },
+    {
+      "text": " cómo",
+      "startMs": 6048,
+      "endMs": 6333,
+      "timestampMs": null,
+      "confidence": 0.952098
+    },
+    {
+      "text": " funciona",
+      "startMs": 6333,
+      "endMs": 6824,
+      "timestampMs": null,
+      "confidence": 0.986926
+    },
+    {
+      "text": " ChatGPT,",
+      "startMs": 6824,
+      "endMs": 7340,
+      "timestampMs": null,
+      "confidence": 0.112163
+    },
+    {
+      "text": " Stephen",
+      "startMs": 7601,
+      "endMs": 8211,
+      "timestampMs": null,
+      "confidence": 0.826265
+    },
+    {
+      "text": " Wolfram,",
+      "startMs": 8211,
+      "endMs": 8820,
+      "timestampMs": null,
+      "confidence": 0.928654
+    },
+    {
+      "text": " puede",
+      "startMs": 9095,
+      "endMs": 9426,
+      "timestampMs": null,
+      "confidence": 0.969315
+    },
+    {
+      "text": " decir",
+      "startMs": 9426,
+      "endMs": 9756,
+      "timestampMs": null,
+      "confidence": 0.988468
+    },
+    {
+      "text": " del",
+      "startMs": 9756,
+      "endMs": 9985,
+      "timestampMs": null,
+      "confidence": 0.957874
+    },
+    {
+      "text": " todo",
+      "startMs": 9985,
+      "endMs": 10264,
+      "timestampMs": null,
+      "confidence": 0.995989
+    },
+    {
+      "text": " por",
+      "startMs": 10264,
+      "endMs": 10493,
+      "timestampMs": null,
+      "confidence": 0.768138
+    },
+    {
+      "text": " qué",
+      "startMs": 10493,
+      "endMs": 10721,
+      "timestampMs": null,
+      "confidence": 0.861881
+    },
+    {
+      "text": " estos",
+      "startMs": 10721,
+      "endMs": 11052,
+      "timestampMs": null,
+      "confidence": 0.86623
+    },
+    {
+      "text": " modelos",
+      "startMs": 11052,
+      "endMs": 11484,
+      "timestampMs": null,
+      "confidence": 0.984692
+    },
+    {
+      "text": " funcionan",
+      "startMs": 11484,
+      "endMs": 12017,
+      "timestampMs": null,
+      "confidence": 0.963538
+    },
+    {
+      "text": " tan",
+      "startMs": 12017,
+      "endMs": 12246,
+      "timestampMs": null,
+      "confidence": 0.398201
+    },
+    {
+      "text": " bien.",
+      "startMs": 12246,
+      "endMs": 12525,
+      "timestampMs": null,
+      "confidence": 0.9936
+    },
+    {
+      "text": "La",
+      "startMs": 12830,
+      "endMs": 13010,
+      "timestampMs": null,
+      "confidence": 0.829986
+    },
+    {
+      "text": " genialidad",
+      "startMs": 13010,
+      "endMs": 13600,
+      "timestampMs": null,
+      "confidence": 0.998955
+    },
+    {
+      "text": " fue",
+      "startMs": 14088,
+      "endMs": 14290,
+      "timestampMs": null,
+      "confidence": 0.974894
+    },
+    {
+      "text": " lograr",
+      "startMs": 14290,
+      "endMs": 14627,
+      "timestampMs": null,
+      "confidence": 0.99065
+    },
+    {
+      "text": " algo",
+      "startMs": 14627,
+      "endMs": 14873,
+      "timestampMs": null,
+      "confidence": 0.994457
+    },
+    {
+      "text": " que",
+      "startMs": 14873,
+      "endMs": 15075,
+      "timestampMs": null,
+      "confidence": 0.989917
+    },
+    {
+      "text": " parecía",
+      "startMs": 15075,
+      "endMs": 15456,
+      "timestampMs": null,
+      "confidence": 0.991628
+    },
+    {
+      "text": " imposible,",
+      "startMs": 15456,
+      "endMs": 15927,
+      "timestampMs": null,
+      "confidence": 0.980496
+    },
+    {
+      "text": " explicar",
+      "startMs": 16220,
+      "endMs": 16709,
+      "timestampMs": null,
+      "confidence": 0.830408
+    },
+    {
+      "text": " el",
+      "startMs": 16709,
+      "endMs": 16889,
+      "timestampMs": null,
+      "confidence": 0.962704
+    },
+    {
+      "text": " lenguaje",
+      "startMs": 16889,
+      "endMs": 17379,
+      "timestampMs": null,
+      "confidence": 0.954829
+    },
+    {
+      "text": " con",
+      "startMs": 17379,
+      "endMs": 17611,
+      "timestampMs": null,
+      "confidence": 0.955365
+    },
+    {
+      "text": " matemáticas,",
+      "startMs": 17611,
+      "endMs": 18255,
+      "timestampMs": null,
+      "confidence": 0.977166
+    },
+    {
+      "text": " algo",
+      "startMs": 18255,
+      "endMs": 18538,
+      "timestampMs": null,
+      "confidence": 0.997225
+    },
+    {
+      "text": " que",
+      "startMs": 19035,
+      "endMs": 19247,
+      "timestampMs": null,
+      "confidence": 0.995946
+    },
+    {
+      "text": " ni",
+      "startMs": 19247,
+      "endMs": 19411,
+      "timestampMs": null,
+      "confidence": 0.935747
+    },
+    {
+      "text": " el",
+      "startMs": 19411,
+      "endMs": 19576,
+      "timestampMs": null,
+      "confidence": 0.955616
+    },
+    {
+      "text": " propio",
+      "startMs": 19576,
+      "endMs": 19928,
+      "timestampMs": null,
+      "confidence": 0.993502
+    },
+    {
+      "text": " Wolfram",
+      "startMs": 19928,
+      "endMs": 20328,
+      "timestampMs": null,
+      "confidence": 0.987834
+    },
+    {
+      "text": " sabe",
+      "startMs": 20328,
+      "endMs": 20586,
+      "timestampMs": null,
+      "confidence": 0.938935
+    },
+    {
+      "text": " explicar",
+      "startMs": 20917,
+      "endMs": 21405,
+      "timestampMs": null,
+      "confidence": 0.98921
+    },
+    {
+      "text": " por",
+      "startMs": 21405,
+      "endMs": 21636,
+      "timestampMs": null,
+      "confidence": 0.893457
+    },
+    {
+      "text": " qué.",
+      "startMs": 21636,
+      "endMs": 21867,
+      "timestampMs": null,
+      "confidence": 0.929608
+    }
+  ],
+  "transcripcion": [
+    "No te preocupes si no entiendes cómo funciona la IA por dentro, ni el científico que mejor ha explicado cómo funciona ChatGPT, Stephen Wolfram, puede decir del todo por qué estos modelos funcionan tan bien.",
+    "La genialidad fue lograr algo que parecía imposible, explicar el lenguaje con matemáticas, algo que ni el propio Wolfram sabe explicar por qué."
+  ],
+  "descartadas": []
+}

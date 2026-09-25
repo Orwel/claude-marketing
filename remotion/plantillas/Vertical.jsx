@@ -1,4 +1,3 @@
-import { createTikTokStyleCaptions } from '@remotion/captions';
 import React, { useMemo } from 'react';
 import { AbsoluteFill, interpolate, OffthreadVideo, Sequence, Series, spring, staticFile, useCurrentFrame, useVideoConfig } from 'remotion';
 import { Fondo } from '../componentes/Fondo.jsx';
@@ -31,7 +30,7 @@ export const Vertical = ({ pieza, marca }) => {
         <Series>
           {segmentos.map((s, i) => (
             <Series.Sequence key={i} durationInFrames={aCuadros(s.hasta - s.desde, fps)} name={`toma ${i + 1}`}>
-              <Tramo archivo={pieza.metraje.archivo} desde={s.desde} hasta={s.hasta} indice={i} />
+              <Tramo archivo={s.archivo ?? pieza.metraje.archivo} desde={s.desde} hasta={s.hasta} indice={i} />
             </Series.Sequence>
           ))}
         </Series>
@@ -48,7 +47,7 @@ export const Vertical = ({ pieza, marca }) => {
           </Sequence>
         ) : null}
         {variante.etiqueta ? (
-          <AbsoluteFill style={{ top: 150, left: 80, height: 'auto', alignItems: 'flex-start' }}>
+          <AbsoluteFill style={{ top: 232, left: 80, height: 'auto', alignItems: 'flex-start' }}>
             <Etiqueta texto={variante.etiqueta} />
           </AbsoluteFill>
         ) : null}
@@ -95,13 +94,38 @@ const Gancho = ({ texto }) => {
   const { colores, radio } = useMarca();
   const salida = interpolate(frame, [durationInFrames - 8, durationInFrames], [1, 0], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' });
   return (
-    <AbsoluteFill style={{ top: 250, height: 'auto', padding: '0 70px', opacity: salida }}>
+    <AbsoluteFill style={{ top: 312, height: 'auto', padding: '0 70px', opacity: salida }}>
       <div style={{ background: conAlfa(colores.fondo, 0.82), borderRadius: radio, padding: '30px 36px', backdropFilter: 'blur(6px)' }}>
         <TextoCinetico texto={texto} tamano={70} desde={2} paso={2} anchoMax={880} />
       </div>
     </AbsoluteFill>
   );
 };
+
+/**
+ * Paginas de subtitulos. Se abre una nueva al terminar una frase (coma, punto),
+ * tras una pausa o cuando la pagina ya lleva 1,2 s o 5 palabras: asi ninguna
+ * mezcla el final de una idea con el comienzo de otra (ni de otro video, en
+ * piezas que unen varias grabaciones). Cada pagina se queda hasta que empieza
+ * la siguiente, para que los subtitulos no parpadeen en las pausas cortas.
+ */
+function paginar(subtitulos) {
+  const paginas = [];
+  let actual = null;
+  for (const s of subtitulos) {
+    const previo = actual?.tokens.at(-1);
+    if (!actual || /[,.;:?!]$/.test(previo.text) || s.startMs - previo.toMs > 300 || s.startMs - actual.startMs > 1200 || actual.tokens.length >= 5) {
+      actual = { startMs: s.startMs, tokens: [] };
+      paginas.push(actual);
+    }
+    actual.tokens.push({ text: s.text.trim(), fromMs: s.startMs, toMs: s.endMs });
+  }
+  paginas.forEach((p, i) => {
+    const fin = p.tokens.at(-1).toMs + 250;
+    p.finMs = Math.min(fin, paginas[i + 1]?.startMs ?? fin);
+  });
+  return paginas;
+}
 
 /**
  * Subtitulos por paginas de pocas palabras, con la palabra que se esta
@@ -113,9 +137,9 @@ const Subtitulos = ({ subtitulos }) => {
   const { fps } = useVideoConfig();
   const marca = useMarca();
   const { colores } = marca;
-  const { pages } = useMemo(() => createTikTokStyleCaptions({ captions: subtitulos, combineTokensWithinMilliseconds: 1100 }), [subtitulos]);
+  const paginas = useMemo(() => paginar(subtitulos), [subtitulos]);
   const ms = (frame / fps) * 1000;
-  const pagina = pages.find((p) => ms >= p.startMs && ms < p.startMs + p.durationMs);
+  const pagina = paginas.find((p) => ms >= p.startMs && ms < p.finMs);
   if (!pagina) return null;
   const entrada = spring({ frame: frame - Math.round((pagina.startMs / 1000) * fps), fps, config: { damping: 18, stiffness: 220 } });
   const caja = marca.subtitulo?.caja;
@@ -138,7 +162,8 @@ const Subtitulos = ({ subtitulos }) => {
         {pagina.tokens.map((t, i) => {
           const activa = ms >= t.fromMs && ms < t.toMs;
           return (
-            <span key={i} style={{ color: activa ? colores.acento : undefined, whiteSpace: 'pre' }}>
+            <span key={i} style={{ color: activa ? colores.acento : undefined }}>
+              {i ? ' ' : ''}
               {t.text}
             </span>
           );
