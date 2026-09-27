@@ -94,6 +94,63 @@ export function duracionDe(pieza, fps, cuenta) {
   return Math.max(1, metraje + (v.cierre || v.cta ? aCuadros(SEGUNDOS_CIERRE, fps) : 0));
 }
 
+const sinTildes = (t) =>
+  t
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '')
+    .replace(/[^a-z0-9ñ ]/g, '')
+    .trim();
+
+/**
+ * Cuadro en que se dice una palabra (o frase) en el video ya cortado. Los
+ * graficos se anclan a lo dicho y no a segundos: si el corte cambia, el
+ * grafico sigue cayendo sobre su palabra. `vez` elige la aparicion (1, 2...).
+ */
+export function cuadroDePalabra(subtitulos, en, fps, vez = 1, despuesDe = -1) {
+  const buscadas = sinTildes(en).split(' ');
+  let vista = 0;
+  for (let i = 0; i < subtitulos.length; i++) {
+    // `despuesDe`: el fin de un grafico y sus marcas se buscan despues de que el grafico entra.
+    if ((subtitulos[i].startMs / 1000) * fps <= despuesDe) continue;
+    if (buscadas.every((b, k) => sinTildes(subtitulos[i + k]?.text ?? '') === b) && ++vista === vez) {
+      return Math.round((subtitulos[i].startMs / 1000) * fps);
+    }
+  }
+  throw new Error(`No se dice "${en}" (vez ${vez}) en los subtitulos`);
+}
+
+/**
+ * Linea de tiempo de una pieza Vertical, en cuadros. La usan la plantilla y el
+ * sintetizador de audio: asi cada whoosh cae en su transicion y cada efecto en
+ * su grafico sin sincronizar a mano.
+ *  - tramos: los pedazos de metraje en orden, con su archivo.
+ *  - cambios: cuadros donde cambia de grabacion (ahi va una transicion).
+ *  - graficos: cada uno con inicio y fin; `en`/`hasta` son palabras dichas,
+ *    `dura` son segundos. Entran un poco antes de la palabra: anticiparse se
+ *    siente intencional, llegar tarde se siente como error.
+ */
+export function lineaVertical(pieza, fps) {
+  let cursor = 0;
+  const tramos = (pieza.metraje?.segmentos ?? []).map((s) => {
+    const cuadros = aCuadros(s.hasta - s.desde, fps);
+    const t = { ...s, archivo: s.archivo ?? pieza.metraje.archivo, inicio: cursor, cuadros };
+    cursor += cuadros;
+    return t;
+  });
+  const cambios = tramos.slice(1).filter((t, i) => t.archivo !== tramos[i].archivo).map((t) => t.inicio);
+  const subtitulos = pieza.subtitulos ?? [];
+  const adelanto = 4;
+  const graficos = (pieza.graficos ?? []).map((g) => {
+    const inicio = Math.max(0, cuadroDePalabra(subtitulos, g.en, fps, g.vez) - adelanto + aCuadros(g.corrimiento ?? 0, fps));
+    const fin = g.hasta ? cuadroDePalabra(subtitulos, g.hasta, fps, g.vezHasta, inicio + adelanto) - adelanto : inicio + aCuadros(g.dura ?? 2.5, fps);
+    // Marcas internas del grafico, tambien ancladas a palabras, relativas a su inicio.
+    const marcas = Object.fromEntries(Object.entries(g.marcas ?? {}).map(([k, palabra]) => [k, cuadroDePalabra(subtitulos, palabra, fps, 1, inicio) - adelanto - inicio]));
+    return { ...g, inicio, fin: Math.min(fin, cursor), marcas };
+  });
+  return { tramos, cambios, graficos, cuadrosMetraje: cursor };
+}
+
 export const FORMATOS = {
   vertical: { ancho: 1080, alto: 1920 },
   horizontal: { ancho: 1920, alto: 1080 },

@@ -1,11 +1,20 @@
 {
   "id": "juanda",
   "nombre": "juanda.trifuerza",
-  "_pendiente": "fondo2, tenue, alerta y linea son propuestos: derivados de la paleta que diste. Confirmar.",
+  "_pendiente": "fondo2, tenue, alerta y linea son propuestos: derivados de la paleta que diste. secundario es el azul de Trifuerza (#0090DE), para graficos. Confirmar.",
   "fuentes": {
-    "titulo": { "familia": "Fraunces", "peso": 600 },
-    "texto": { "familia": "Inter", "peso": 500 },
-    "enfasis": { "familia": "Inter", "peso": 700 }
+    "titulo": {
+      "familia": "Fraunces",
+      "peso": 600
+    },
+    "texto": {
+      "familia": "Inter",
+      "peso": 500
+    },
+    "enfasis": {
+      "familia": "Inter",
+      "peso": 700
+    }
   },
   "colores": {
     "fondo": "#0B1426",
@@ -13,12 +22,21 @@
     "tinta": "#F4EFE6",
     "tenue": "#A7ADBA",
     "acento": "#F26B1D",
+    "secundario": "#0090DE",
     "alerta": "#F26B1D",
     "linea": "#2A3754"
   },
   "radio": 14,
   "resaltado": "subrayado",
-  "subtitulo": { "caja": false, "mayusculas": false, "palabraActiva": "acento" },
-  "firma": { "tipo": "handle", "texto": "juanda.trifuerza", "web": "@juanda.trifuerza" },
+  "subtitulo": {
+    "caja": false,
+    "mayusculas": false,
+    "palabraActiva": "acento"
+  },
+  "firma": {
+    "tipo": "handle",
+    "texto": "juanda.trifuerza",
+    "web": "@juanda.trifuerza"
+  },
   "fondoEstilo": "grano"
 }

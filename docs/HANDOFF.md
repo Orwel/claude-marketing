@@ -72,7 +72,15 @@ grabaciones) y `metraje.correcciones` para palabras que Whisper escribe mal. Cad
 rehace el corte de las piezas que usan esos videos (salvo `metraje.manual: true`) sin tocar lo
 editorial; los videos que ninguna pieza usa salen como borrador `piezas/AAAA-MM/grabado-<archivo>.json`.
 Luego se revisa en el Studio y `npm run render -- <slug>`. Probado con metraje real el 25-sep-2026
-(ver APRENDIZAJES).
+(ver APRENDIZAJES). Un archivo pedido por nombre que no está en la carpeta del mes se busca en `raw/`.
+
+**Motion graphics** (`pieza.graficos`, componentes en `remotion/graficos/`): cada gráfico se ancla a una
+palabra dicha (`en`, `hasta` o `dura`, `vez`, `marcas`). Modos: `arriba` (el video pasa a tarjeta abajo
+y el gráfico ocupa arriba) y `encima` (sobre el video, a la altura del pecho). Tipos: `cajaNegra`,
+`ensayo`, `sello` (`pregunta` | `tachar`), `lenguaje`, `webinar`, y `zoom` (acercamiento sin gráfico).
+Entre grabaciones distintas y antes del cierre va un barrido diagonal. Con `pista: true`, `render`
+genera música y efectos sincronizados (`sintetizarVertical` en `src/audio/pista.js`). Modelo:
+`piezas/2026-10/la-ia-que-nadie-entiende-webinar.json`.
 
 ### Cómo se escribe una pieza
 

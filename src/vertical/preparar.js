@@ -29,7 +29,9 @@ const WHISPER_DIR = path.join(RAIZ, '.whisper');
 const WHISPER_VERSION = process.env.WHISPER_VERSION || '1.5.5';
 const WHISPER_MODELO = process.env.WHISPER_MODELO || 'medium';
 
-const [mes, soloArchivo] = process.argv.slice(2);
+const [mes, ...resto] = process.argv.slice(2);
+// npm parte "Cierre webinar.MOV" en dos argumentos aunque vaya entre comillas: se vuelven a unir.
+const soloArchivo = resto.join(' ') || undefined;
 if (!/^\d{4}-\d{2}$/.test(mes ?? '')) {
   console.error('Uso: npm run vertical -- AAAA-MM [archivo]');
   process.exit(1);
@@ -38,7 +40,11 @@ if (!config.carpetaRedes) {
   console.error('Falta CARPETA_REDES en .env (p. ej. G:\\Mi unidad\\Redes sociales)');
   process.exit(1);
 }
-const origen = path.join(config.carpetaRedes, carpetaDelMes(mes), config.subcarpetaGrabados);
+const grabados = path.join(config.carpetaRedes, carpetaDelMes(mes), config.subcarpetaGrabados);
+// Un archivo pedido por nombre que no esta en el mes se busca en raw/: ahi deja Juan David
+// lo que graba sin mes asignado (cierres, material de webinar).
+const enRaw = path.join(config.carpetaRedes, 'raw');
+const origen = soloArchivo && !existsSync(path.join(grabados, soloArchivo)) && existsSync(path.join(enRaw, soloArchivo)) ? enRaw : grabados;
 if (!existsSync(origen)) {
   console.error(`No existe ${origen}`);
   process.exit(1);
@@ -128,11 +134,38 @@ for (const archivo of videos) {
   if (!existsSync(r.voz)) writeFileSync(r.voz, JSON.stringify(medirVoz(r.wav)));
 }
 
+/**
+ * Ganancia para que la voz de cada grabacion suene igual: cada toma sale del
+ * iPhone a un nivel distinto (en octubre, 7 dB entre una y otra) y al unirlas
+ * el salto se nota. Se lleva la voz a -24 dBFS RMS sin pasar el pico de -1 dBFS.
+ */
+function gananciaDe(wav) {
+  const b = readFileSync(wav);
+  let suma = 0;
+  let n = 0;
+  let pico = 0;
+  for (let i = 44; i < b.length - 1; i += 2) {
+    const v = Math.abs(b.readInt16LE(i) / 32768);
+    pico = Math.max(pico, v);
+    // Solo cuenta lo que es voz: el silencio bajaria el promedio y subiria la ganancia de mas.
+    if (v > 0.01) {
+      suma += v * v;
+      n++;
+    }
+  }
+  if (!n) return 1;
+  const rms = 10 * Math.log10(suma / n);
+  const maxima = 10 ** (-1 / 20) / pico;
+  return +Math.min(10 ** ((-24 - rms) / 20), maxima).toFixed(2);
+}
+
 /** Corte de un video ya procesado (lee lo que dejo el paso anterior en trabajo/). */
 function corteDe(archivo) {
   const r = rutas(archivo);
   if (!existsSync(r.transcripcion) || !existsSync(r.voz)) return null;
   const corte = planificarCorte(JSON.parse(readFileSync(r.transcripcion, 'utf8')), { voz: JSON.parse(readFileSync(r.voz, 'utf8')) });
+  const volumen = gananciaDe(r.wav);
+  corte.segmentos = corte.segmentos.map((s) => ({ ...s, volumen }));
   return { archivo: r.publico, corte };
 }
 

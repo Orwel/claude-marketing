@@ -21,12 +21,6 @@ cargarEnv();
 
 const MESES = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
 
-/** '2026-10' → '2026-10 octubre', el nombre de la carpeta del mes en Drive. */
-export function carpetaDelMes(mes) {
-  const [, m] = mes.split('-').map(Number);
-  return `${mes} ${MESES[m - 1]}`;
-}
-
 export const config = {
   /** Carpeta sincronizada por Google Drive para escritorio, p. ej. G:\Mi unidad\Redes sociales */
   carpetaRedes: process.env.CARPETA_REDES || '',
@@ -34,6 +28,18 @@ export const config = {
   subcarpetaEditados: process.env.SUBCARPETA_EDITADOS || 'videos editados',
   chrome: process.env.CHROME_EJECUTABLE || '',
 };
+
+/**
+ * '2026-10' → nombre de la carpeta del mes en Drive. Se acepta '2026-10 octubre'
+ * y tambien 'Octubre' (asi la organizo Juan David el 27-sep-2026); gana la que
+ * exista. Si no existe ninguna, la primera, que ordena bien aunque cambie el año.
+ */
+export function carpetaDelMes(mes) {
+  const [, m] = mes.split('-').map(Number);
+  const nombre = MESES[m - 1];
+  const opciones = [`${mes} ${nombre}`, nombre[0].toUpperCase() + nombre.slice(1), nombre];
+  return opciones.find((o) => config.carpetaRedes && existsSync(path.join(config.carpetaRedes, o))) ?? opciones[0];
+}
 
 /** Donde deja el render los terminados: la carpeta del mes en Drive si esta configurada; si no, salida/. */
 export function carpetaEditados(mes) {

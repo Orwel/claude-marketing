@@ -3,6 +3,41 @@
 Bitácora viva: lo que falló, cómo se resolvió y lo que le gusta o no a Juan David.
 Se lee al empezar cada sesión (lo pide `CLAUDE.md`). Lo más nuevo, arriba.
 
+## 2026-09-27 · versión webinar con motion graphics
+
+Pidió `la-ia-que-nadie-entiende-webinar`: la misma pieza + "Cierre webinar.MOV", con motion graphics
+de lo que va diciendo, música, efectos y transiciones, "muuuy profesional", al estilo de
+contrappto.com y trifuerza.co.
+
+**Gusto**
+- Quiere animación tipo web (HTML/CSS), no plantillas genéricas. El lenguaje sale de los sitios:
+  tarjetas de vidrio (blur 24 px, borde de medio pixel) con la barra degradada de trifuerza.co,
+  la constelación de nodos con glifos y pulsos del hero de trifuerza.co, ventanas con puntos mac,
+  typewriter, pastillas con aro que late y el botón con brillo (`cta-glow`) de Contrappto, curva
+  `[0.22, 1, 0.36, 1]` y resortes 400/25. Referencias exactas: `contrappto/src/components/{landing,marketing}`
+  y `tri-app/tri-app2/components/{TrifuerzaConstellation,hero,ecosistema}`.
+
+**Técnico**
+- **Drive cambió de estructura** a mitad de sesión: `Redes sociales/Octubre/Raw` y `Octubre/Edited`
+  (los 3 videos de la primera prueba y los renders viejos ya no están). `carpetaDelMes` acepta
+  `2026-10 octubre` u `Octubre`; `.env` con `SUBCARPETA_GRABADOS=Raw` y `SUBCARPETA_EDITADOS=Edited`.
+  Las piezas se rehacen igual: proxies y transcripciones viven en el repo (`public/crudos`, `trabajo/`).
+- **npm parte los nombres con espacio** ("Cierre webinar.MOV" llega como dos argumentos): `preparar` los une.
+- **La voz de cada grabación sale a otro volumen** (7 dB entre IMG_3772 y el cierre). `preparar` guarda
+  `volumen` por segmento para llevar la voz a -24 dBFS RMS sin pasar -1 dBFS de pico. El ffmpeg de
+  Remotion no trae `volumedetect`: se mide en Node sobre el WAV.
+- **Gráficos anclados a palabras**, no a segundos (`pieza.graficos`, `en`/`hasta`/`marcas`): si cambia
+  el corte, siguen cayendo en su palabra. `hasta` y `marcas` se buscan *después* de que entra el gráfico
+  (un `hasta: "La"` encontraba el "la" del segundo 2).
+- **Modo tarjeta**: con un gráfico "arriba", el video se encoge al 48 % abajo. Los subtítulos se mueven
+  a la franja entre gráfico y tarjeta: encima de la tarjeta caían sobre la cara. El video se agranda
+  solo cuando el gráfico ya salió; si crecen a la vez, queda un fantasma del gráfico sobre la cara.
+- Un sello grande que ya dice la palabra ("IMPOSIBLE") oculta el subtítulo: repetido se ve torpe.
+- Sonido: los tiempos de cada gráfico están en `remotion/graficos/tiempos.js`, que leen el componente
+  y el sintetizador; así el pop cae en el cuadro en que aparece la ficha. Música 100 BPM ~12 dB bajo la
+  voz; sube en la tarjeta final.
+- `*tan bien*?` separa el "?" (queda como palabra aparte): el asterisco va después del signo.
+
 ## 2026-09-25 (noche) · primera prueba real de la plantilla Vertical
 
 Videos: IMG_3770, IMG_3772 e IMG_3776 de octubre (iPhone). Salieron `la-ia-que-nadie-entiende`

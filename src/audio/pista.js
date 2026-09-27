@@ -1,7 +1,8 @@
 import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { aplicarVoz, tramosDe } from '../../remotion/util.js';
+import { efectosDe } from '../../remotion/graficos/tiempos.js';
+import { aplicarVoz, duracionDe, lineaVertical, partirPalabras, tramosDe } from '../../remotion/util.js';
 import { RAIZ } from '../config.js';
 
 /**
@@ -133,13 +134,176 @@ export function sintetizar(pieza) {
   return wav;
 }
 
+/**
+ * Pista para la plantilla Vertical: musica de fondo y diseño sonoro sobre la
+ * voz grabada de Juan David. Aqui la voz manda, asi que la musica es otra:
+ * mas lenta (100 BPM), sin palmas, y va muy por debajo mientras el habla
+ * (su voz queda en -24 dBFS RMS tras la ganancia de preparar). Sube en la
+ * tarjeta final, donde ya no hay voz.
+ *
+ * Cada efecto sale de la misma linea de tiempo que la plantilla
+ * (lineaVertical y efectosDe), asi el pop cae en el cuadro en que aparece
+ * la ficha y el whoosh en el cuadro del barrido.
+ */
+export function sintetizarVertical(pieza, cuenta) {
+  const linea = lineaVertical(pieza, FPS);
+  const segundos = duracionDe(pieza, FPS, cuenta) / FPS;
+  const n = Math.ceil(segundos * TASA);
+  const musica = new Float32Array(n);
+  const efectos = new Float32Array(n);
+  const ruido = azar(11);
+  const pulso = 60 / (pieza.bpm ?? 100);
+  const finVoz = linea.cuadrosMetraje / FPS;
+  const variante = pieza.variantes?.[cuenta] ?? {};
+
+  const sumar = (buffer, inicio, duracion, f) => {
+    const a = Math.floor(inicio * TASA);
+    const b = Math.min(n, a + Math.floor(duracion * TASA));
+    for (let i = Math.max(0, a); i < b; i++) buffer[i] += f((i - a) / TASA);
+  };
+
+  // --- Musica: pad, arpegio con eco, bombo suave y hats. La menor, Fa, Do, Sol.
+  const progresion = [
+    [220.0, 261.63, 329.63],
+    [174.61, 220.0, 261.63],
+    [261.63, 329.63, 392.0],
+    [196.0, 246.94, 293.66],
+  ];
+  const compas = pulso * 4;
+  const inicioRitmo = Math.min(3, linea.graficos[0]?.inicio / FPS || 3);
+  for (let t = 0, c = 0; t < segundos; t += compas, c++) {
+    const acorde = progresion[c % progresion.length];
+    // Pad: tres voces con un poco de desafinacion y ataque lento: calor sin ocupar el rango de la voz.
+    sumar(musica, t, compas + 0.4, (x) => {
+      const env = Math.min(1, x / 0.6) * Math.min(1, Math.max(0, (compas + 0.4 - x) / 0.5));
+      return acorde.reduce((s, f) => s + Math.sin(2 * Math.PI * (f / 2) * x) + 0.5 * Math.sin(2 * Math.PI * (f / 2) * 1.004 * x) + 0.2 * Math.sin(2 * Math.PI * f * x), 0) * env * 0.05;
+    });
+    // Arpegio en corcheas, una octava arriba, con eco a 3/8 de pulso.
+    for (let k = 0; k < 8; k++) {
+      const f = acorde[[0, 1, 2, 1, 2, 0, 1, 2][k]] * 2;
+      for (const [retardo, nivel] of [[0, 1], [pulso * 0.75, 0.35], [pulso * 1.5, 0.12]]) {
+        sumar(musica, t + k * (pulso / 2) + retardo, 0.5, (x) => Math.sin(2 * Math.PI * f * x) * Math.exp(-7 * x) * Math.min(1, x * 300) * 0.07 * nivel);
+      }
+    }
+    if (t < inicioRitmo) continue;
+    for (let k = 0; k < 8; k++) {
+      const tk = t + k * (pulso / 2);
+      // Bombo en 1 y 3, sub y corto; se calla el ultimo compas antes del cierre para que la subida respire.
+      if (k % 4 === 0 && (tk < finVoz - compas || tk >= finVoz)) {
+        sumar(musica, tk, 0.35, (x) => Math.sin(2 * Math.PI * (48 * x + (60 / 25) * (1 - Math.exp(-25 * x)))) * Math.exp(-10 * x) * 0.45);
+      }
+      let previo = 0;
+      sumar(musica, tk + pulso / 4, 0.05, (x) => {
+        const r = ruido();
+        const agudo = r - previo;
+        previo = r;
+        return agudo * Math.exp(-70 * x) * 0.05;
+      });
+    }
+  }
+  // Acorde final que se queda sonando.
+  sumar(musica, finVoz, segundos - finVoz, (x) => progresion[0].reduce((s, f) => s + Math.sin(2 * Math.PI * f * x) + 0.4 * Math.sin(2 * Math.PI * f * 2 * x), 0) * Math.min(1, x / 0.05) * Math.exp(-0.9 * x) * 0.06);
+
+  // --- Efectos
+  const sonidos = {
+    swish: (t0) => {
+      let y = 0;
+      let previo = 0;
+      sumar(efectos, t0 - 0.12, 0.34, (x) => {
+        const p = x / 0.34;
+        y += (0.05 + p * 0.45) * (ruido() - y);
+        const agudo = y - previo;
+        previo = y;
+        return (y * 0.5 + agudo * 2) * Math.sin(Math.PI * p) ** 2 * 0.5;
+      });
+    },
+    pop: (t0) => sumar(efectos, t0, 0.09, (x) => Math.sin(2 * Math.PI * (620 * x + 300 * (1 - Math.exp(-40 * x)) / 40)) * Math.exp(-45 * x) * 0.32),
+    tecla: (t0) => {
+      const nivel = 0.5 + Math.abs(ruido()) * 0.5;
+      sumar(efectos, t0, 0.03, (x) => (ruido() * Math.exp(-220 * x) * 0.6 + Math.sin(2 * Math.PI * 2400 * x) * Math.exp(-300 * x) * 0.4) * 0.11 * nivel);
+    },
+    brillo: (t0) => [1567.98, 2093.0, 2637.02].forEach((f, k) => sumar(efectos, t0 + k * 0.03, 1.2, (x) => Math.sin(2 * Math.PI * f * x) * Math.exp(-4 * x) * Math.min(1, x * 400) * 0.05)),
+    impacto: (t0) => sumar(efectos, t0, 0.7, (x) => Math.sin(2 * Math.PI * (40 * x + 2.4 * (1 - Math.exp(-22 * x)))) * Math.exp(-6 * x) * 0.75 + ruido() * Math.exp(-28 * x) * 0.3),
+    golpe: (t0) => sumar(efectos, t0, 0.3, (x) => Math.sin(2 * Math.PI * (45 * x + 1.4 * (1 - Math.exp(-20 * x)))) * Math.exp(-11 * x) * 0.4),
+    whoosh: (t0) => {
+      let y = 0;
+      sumar(efectos, t0 - 0.35, 0.6, (x) => {
+        const p = x / 0.6;
+        y += (0.02 + p * 0.5) * (ruido() - y);
+        const env = p < 0.58 ? (p / 0.58) ** 2 : Math.exp(-10 * (p - 0.58));
+        return y * env * 0.9;
+      });
+      sumar(efectos, t0, 0.5, (x) => Math.sin(2 * Math.PI * 55 * x) * Math.exp(-8 * x) * 0.35);
+    },
+    subida: (t0, dur) => {
+      let y = 0;
+      sumar(efectos, t0 - dur, dur, (x) => {
+        const p = x / dur;
+        y += (0.01 + p * p * 0.6) * (ruido() - y);
+        return (y * 0.6 + Math.sin(2 * Math.PI * (200 * x + (600 / (2 * dur)) * x * x)) * 0.15) * p ** 2 * 0.5;
+      });
+    },
+  };
+
+  const cuadros = (c) => c / FPS;
+  if (variante.gancho) sonidos.swish(0.05);
+  for (const g of linea.graficos) for (const e of efectosDe(g)) sonidos[e.tipo](cuadros(g.inicio + e.cuadro));
+  for (const c of linea.cambios) sonidos.whoosh(cuadros(c));
+  if (variante.cierre || variante.cta) {
+    sonidos.subida(finVoz, 1.3);
+    sonidos.whoosh(finVoz);
+    sonidos.impacto(finVoz + 0.02);
+    // El boton del CTA aparece cuando termina de entrar la frase (ver escenas/Cierre.jsx).
+    const finTexto = 4 + partirPalabras(variante.cierre || '').length * 3 + 6;
+    if (variante.cta) {
+      sonidos.pop(finVoz + cuadros(finTexto + 10));
+      sonidos.brillo(finVoz + cuadros(finTexto + 12));
+    }
+  }
+
+  // --- Mezcla: la musica se agacha bajo la voz y sube en el cierre. Sin normalizar: los niveles
+  // estan pensados contra la voz, y normalizar los moveria.
+  const mezcla = new Float32Array(n);
+  for (let i = 0; i < n; i++) {
+    const t = i / TASA;
+    const cierre = Math.min(1, Math.max(0, (t - finVoz + 0.3) / 0.6));
+    const gMusica = 0.17 + cierre * 0.55;
+    const salida = Math.min(1, Math.max(0, (segundos - t) / 1.2));
+    mezcla[i] = Math.tanh((musica[i] * gMusica + efectos[i] * 0.8) * salida * 1.1) * 0.9;
+  }
+  return aWav(mezcla);
+}
+
+function aWav(mezcla) {
+  const n = mezcla.length;
+  const wav = Buffer.alloc(44 + n * 2);
+  wav.write('RIFF', 0);
+  wav.writeUInt32LE(36 + n * 2, 4);
+  wav.write('WAVEfmt ', 8);
+  wav.writeUInt32LE(16, 16);
+  wav.writeUInt16LE(1, 20);
+  wav.writeUInt16LE(1, 22);
+  wav.writeUInt32LE(TASA, 24);
+  wav.writeUInt32LE(TASA * 2, 28);
+  wav.writeUInt16LE(2, 32);
+  wav.writeUInt16LE(16, 34);
+  wav.write('data', 36);
+  wav.writeUInt32LE(n * 2, 40);
+  for (let i = 0; i < n; i++) wav.writeInt16LE(Math.round(Math.max(-1, Math.min(1, mezcla[i])) * 32767), 44 + i * 2);
+  return wav;
+}
+
 /** Una pista por cuenta: con voz, cada cuenta puede durar distinto y la musica tiene que seguirla. */
 export function escribirPista(pieza, cuenta) {
   const id = `${pieza.slug}--${cuenta}`;
-  const manifiesto = path.join(RAIZ, 'public', 'voz', `${id}.json`);
-  const voz = existsSync(manifiesto) ? JSON.parse(readFileSync(manifiesto, 'utf8')) : null;
   const destino = path.join(RAIZ, 'public', 'audio', `${id}.wav`);
   mkdirSync(path.dirname(destino), { recursive: true });
+  if (pieza.plantilla === 'Vertical') {
+    writeFileSync(destino, sintetizarVertical(pieza, cuenta));
+    return destino;
+  }
+  const manifiesto = path.join(RAIZ, 'public', 'voz', `${id}.json`);
+  const voz = existsSync(manifiesto) ? JSON.parse(readFileSync(manifiesto, 'utf8')) : null;
   writeFileSync(destino, sintetizar(aplicarVoz(pieza, voz)));
   return destino;
 }
