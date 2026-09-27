@@ -3,6 +3,26 @@
 Bitácora viva: lo que falló, cómo se resolvió y lo que le gusta o no a Juan David.
 Se lee al empezar cada sesión (lo pide `CLAUDE.md`). Lo más nuevo, arriba.
 
+## 2026-09-27 (noche) · correcciones de Juan David a la versión webinar
+
+- **No le gustó nada el whoosh de ruido:** "suena como la estática de una pantalla de TV" (el swish
+  del gancho y los barridos). Todos los efectos de `sintetizarVertical` son tonales ahora: swish =
+  tres tonos que suben una octava; barrido = acorde que crece al revés hasta el corte + golpe grave;
+  subida = tono que sube dos octavas; teclas y contratiempos = tics senoidales. **Regla: nada de
+  ruido blanco en los efectos.** Del resto del video dijo "súper bien".
+- **No le gusta cómo se le ve el pantalón** en los planos de cuerpo entero (IMG_3772).
+  `metraje.encuadres` (`{ "IMG_3772.MOV": { escala: 1.45, origenY: 5 } }`) recorta ese plano de la
+  cintura para arriba. Regla: planos abiertos, de la cintura para arriba. El original ya no estaba en
+  Drive, así que el recorte sale del proxy de 1080 (algo menos nítido).
+
+## 2026-09-27 (tarde) · render de la versión webinar
+
+- **Render muerto en el cuadro 0:** el `delayRender` de OffthreadVideo pasó los 28 s con el equipo cargado (Whisper y una copia desde Drive a la vez). Timeout a 120 s en `remotion.config.mjs`.
+- **El ffmpeg de Remotion es mínimo:** trae loudnorm, atempo, amix y volume, pero no afftdn/arnndn, eq, deesser, acompressor ni vidstab. Limpieza de audio, color o estabilización piden un ffmpeg completo (`winget install --id Gyan.FFmpeg -e --source winget`).
+- **whisper.cpp 1.5.5 y `splitOnWord`:** `--split-on-word true` hace que lea `true` como archivo de entrada.
+- **Leer de Drive es lento** (archivos bajo demanda): copiar primero a `trabajo/<mes>/00-crudo` con robocopy (sale con código 1 cuando copió bien).
+- **Gusto:** cuando pide "dame el video", quiere terminado el que se está trabajando, no abrir el mes completo.
+
 ## 2026-09-27 · versión webinar con motion graphics
 
 Pidió `la-ia-que-nadie-entiende-webinar`: la misma pieza + "Cierre webinar.MOV", con motion graphics

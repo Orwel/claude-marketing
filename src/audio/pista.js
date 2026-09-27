@@ -151,7 +151,6 @@ export function sintetizarVertical(pieza, cuenta) {
   const n = Math.ceil(segundos * TASA);
   const musica = new Float32Array(n);
   const efectos = new Float32Array(n);
-  const ruido = azar(11);
   const pulso = 60 / (pieza.bpm ?? 100);
   const finVoz = linea.cuadrosMetraje / FPS;
   const variante = pieza.variantes?.[cuenta] ?? {};
@@ -192,57 +191,46 @@ export function sintetizarVertical(pieza, cuenta) {
       if (k % 4 === 0 && (tk < finVoz - compas || tk >= finVoz)) {
         sumar(musica, tk, 0.35, (x) => Math.sin(2 * Math.PI * (48 * x + (60 / 25) * (1 - Math.exp(-25 * x)))) * Math.exp(-10 * x) * 0.45);
       }
-      let previo = 0;
-      sumar(musica, tk + pulso / 4, 0.05, (x) => {
-        const r = ruido();
-        const agudo = r - previo;
-        previo = r;
-        return agudo * Math.exp(-70 * x) * 0.05;
-      });
+      // Contratiempo: tic tonal alto y corto. Con ruido sonaba a estatica.
+      sumar(musica, tk + pulso / 4, 0.04, (x) => Math.sin(2 * Math.PI * 5200 * x) * Math.exp(-120 * x) * 0.03);
     }
   }
   // Acorde final que se queda sonando.
   sumar(musica, finVoz, segundos - finVoz, (x) => progresion[0].reduce((s, f) => s + Math.sin(2 * Math.PI * f * x) + 0.4 * Math.sin(2 * Math.PI * f * 2 * x), 0) * Math.min(1, x / 0.05) * Math.exp(-0.9 * x) * 0.06);
 
-  // --- Efectos
+  // --- Efectos. Todos tonales: nada de ruido blanco. Un whoosh hecho con ruido suena a estatica
+  // de televisor (a Juan David no le gusto nada, 27-sep-2026); con tonos suena musical y limpio.
+  const nota = (f, x) => Math.sin(2 * Math.PI * f * x);
   const sonidos = {
-    swish: (t0) => {
-      let y = 0;
-      let previo = 0;
-      sumar(efectos, t0 - 0.12, 0.34, (x) => {
-        const p = x / 0.34;
-        y += (0.05 + p * 0.45) * (ruido() - y);
-        const agudo = y - previo;
-        previo = y;
-        return (y * 0.5 + agudo * 2) * Math.sin(Math.PI * p) ** 2 * 0.5;
-      });
-    },
-    pop: (t0) => sumar(efectos, t0, 0.09, (x) => Math.sin(2 * Math.PI * (620 * x + 300 * (1 - Math.exp(-40 * x)) / 40)) * Math.exp(-45 * x) * 0.32),
-    tecla: (t0) => {
-      const nivel = 0.5 + Math.abs(ruido()) * 0.5;
-      sumar(efectos, t0, 0.03, (x) => (ruido() * Math.exp(-220 * x) * 0.6 + Math.sin(2 * Math.PI * 2400 * x) * Math.exp(-300 * x) * 0.4) * 0.11 * nivel);
-    },
-    brillo: (t0) => [1567.98, 2093.0, 2637.02].forEach((f, k) => sumar(efectos, t0 + k * 0.03, 1.2, (x) => Math.sin(2 * Math.PI * f * x) * Math.exp(-4 * x) * Math.min(1, x * 400) * 0.05)),
-    impacto: (t0) => sumar(efectos, t0, 0.7, (x) => Math.sin(2 * Math.PI * (40 * x + 2.4 * (1 - Math.exp(-22 * x)))) * Math.exp(-6 * x) * 0.75 + ruido() * Math.exp(-28 * x) * 0.3),
+    // Tarjeta que entra: tres tonos suaves que suben juntos una octava, con envolvente de campana.
+    swish: (t0) =>
+      sumar(efectos, t0 - 0.1, 0.32, (x) => {
+        const p = x / 0.32;
+        const glide = (f) => 2 * Math.PI * f * (x + (0.32 / Math.LN2) * (2 ** p - 1) * 0.5);
+        return (Math.sin(glide(330)) + 0.6 * Math.sin(glide(495)) + 0.3 * Math.sin(glide(660))) * Math.sin(Math.PI * p) ** 2 * 0.09;
+      }),
+    pop: (t0) => sumar(efectos, t0, 0.09, (x) => Math.sin(2 * Math.PI * (620 * x + (300 * (1 - Math.exp(-40 * x))) / 40)) * Math.exp(-45 * x) * 0.3),
+    // Tecla: un tic corto y agudo, sin el soplido del ruido.
+    tecla: (t0) => sumar(efectos, t0, 0.025, (x) => nota(1900, x) * Math.exp(-260 * x) * 0.07),
+    brillo: (t0) => [1567.98, 2093.0, 2637.02].forEach((f, k) => sumar(efectos, t0 + k * 0.03, 1.2, (x) => nota(f, x) * Math.exp(-4 * x) * Math.min(1, x * 400) * 0.05)),
+    impacto: (t0) => sumar(efectos, t0, 0.8, (x) => (Math.sin(2 * Math.PI * (40 * x + 2.4 * (1 - Math.exp(-22 * x)))) * 0.75 + nota(80, x) * 0.2) * Math.exp(-6 * x)),
     golpe: (t0) => sumar(efectos, t0, 0.3, (x) => Math.sin(2 * Math.PI * (45 * x + 1.4 * (1 - Math.exp(-20 * x)))) * Math.exp(-11 * x) * 0.4),
+    // Barrido: un acorde "al reves" (crece hasta el corte y se corta seco) y un golpe grave en el corte.
     whoosh: (t0) => {
-      let y = 0;
-      sumar(efectos, t0 - 0.35, 0.6, (x) => {
-        const p = x / 0.6;
-        y += (0.02 + p * 0.5) * (ruido() - y);
-        const env = p < 0.58 ? (p / 0.58) ** 2 : Math.exp(-10 * (p - 0.58));
-        return y * env * 0.9;
+      sumar(efectos, t0 - 0.45, 0.47, (x) => {
+        const p = x / 0.47;
+        const acorde = nota(220, x) + 0.7 * nota(329.63, x) + 0.5 * nota(440, x) + 0.25 * nota(659.26, x);
+        return acorde * p ** 3 * Math.min(1, (0.47 - x) / 0.02) * 0.13;
       });
-      sumar(efectos, t0, 0.5, (x) => Math.sin(2 * Math.PI * 55 * x) * Math.exp(-8 * x) * 0.35);
+      sumar(efectos, t0, 0.5, (x) => nota(55, x) * Math.exp(-8 * x) * 0.4);
     },
-    subida: (t0, dur) => {
-      let y = 0;
+    // Subida antes del cierre: tono que sube dos octavas con su octava arriba, sin soplido.
+    subida: (t0, dur) =>
       sumar(efectos, t0 - dur, dur, (x) => {
         const p = x / dur;
-        y += (0.01 + p * p * 0.6) * (ruido() - y);
-        return (y * 0.6 + Math.sin(2 * Math.PI * (200 * x + (600 / (2 * dur)) * x * x)) * 0.15) * p ** 2 * 0.5;
-      });
-    },
+        const fase = 2 * Math.PI * 220 * (dur / Math.log(4)) * (4 ** p - 1);
+        return (Math.sin(fase) + 0.4 * Math.sin(2 * fase)) * p ** 2 * 0.12;
+      }),
   };
 
   const cuadros = (c) => c / FPS;

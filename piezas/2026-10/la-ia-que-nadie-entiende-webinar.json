@@ -47,7 +47,13 @@
         "volumen": 0.6,
         "archivo": "crudos/2026-10/Cierre webinar.mp4"
       }
-    ]
+    ],
+    "encuadres": {
+      "IMG_3772.MOV": {
+        "escala": 1.45,
+        "origenY": 5
+      }
+    }
   },
   "graficos": [
     {

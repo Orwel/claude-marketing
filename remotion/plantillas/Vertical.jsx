@@ -54,7 +54,7 @@ export const Vertical = ({ pieza, marca }) => {
     <ContextoMarca.Provider value={marca}>
       <AbsoluteFill style={{ backgroundColor: marca.colores.fondo }}>
         <Fondo />
-        <Escenario tramos={tramos} p={p} zooms={zooms} cambios={cambios} />
+        <Escenario tramos={tramos} p={p} zooms={zooms} cambios={cambios} encuadres={pieza.metraje?.encuadres ?? {}} />
 
         {/* Velos: arriba para el gancho, abajo para los subtitulos. Suaves: la cara es el valor. */}
         <AbsoluteFill style={{ background: 'linear-gradient(180deg, rgba(0,0,0,.40) 0%, rgba(0,0,0,0) 24%, rgba(0,0,0,0) 55%, rgba(0,0,0,.50) 100%)' }} />
@@ -126,7 +126,7 @@ function progresoTarjeta(frame, enTarjeta) {
   return Math.max(0, ...enTarjeta.map((t) => Math.min(avance(frame, t.inicio, 16), 1 - avance(frame, t.fin - 1, 14))));
 }
 
-const Escenario = ({ tramos, p, zooms, cambios }) => {
+const Escenario = ({ tramos, p, zooms, cambios, encuadres }) => {
   const frame = useCurrentFrame();
   const { width, height } = useVideoConfig();
   const { colores } = useMarca();
@@ -154,12 +154,24 @@ const Escenario = ({ tramos, p, zooms, cambios }) => {
     >
       {tramos.map((t, i) => (
         <Sequence key={i} from={t.inicio} durationInFrames={t.cuadros} name={`toma ${i + 1}`}>
-          <Tramo t={t} indice={i} tramos={tramos} zoom={zoom} entra={cambios.includes(t.inicio)} sale={cambios.includes(t.inicio + t.cuadros)} />
+          <Tramo t={t} indice={i} tramos={tramos} zoom={zoom} encuadre={encuadreDe(t.archivo, encuadres)} entra={cambios.includes(t.inicio)} sale={cambios.includes(t.inicio + t.cuadros)} />
         </Sequence>
       ))}
     </AbsoluteFill>
   );
 };
+
+/**
+ * Encuadre fijo de una grabacion (`metraje.encuadres`, por nombre de archivo):
+ * `{ escala, origenY }` recorta el plano desde arriba. Sirve para planos
+ * abiertos: en IMG_3772 se veia de cuerpo entero y a Juan David no le gusta
+ * como se ve el pantalon; recortado queda de la cintura para arriba.
+ */
+function encuadreDe(archivo, encuadres) {
+  const base = (n) => n.split('/').pop().replace(/.[^.]+$/, '').toLowerCase();
+  const clave = Object.keys(encuadres).find((k) => base(k) === base(archivo));
+  return clave ? encuadres[clave] : null;
+}
 
 /**
  * Un tramo del metraje. Dentro de una misma grabacion, los tramos alternan
@@ -168,7 +180,7 @@ const Escenario = ({ tramos, p, zooms, cambios }) => {
  * grabacion no hace falta: ya cambia el plano, y el barrido tapa el corte
  * con un desenfoque de movimiento a cada lado.
  */
-const Tramo = ({ t, indice, tramos, zoom, entra, sale }) => {
+const Tramo = ({ t, indice, tramos, zoom, encuadre, entra, sale }) => {
   const { fps } = useVideoConfig();
   const frame = useCurrentFrame();
   let seguidos = 0;
@@ -180,6 +192,7 @@ const Tramo = ({ t, indice, tramos, zoom, entra, sale }) => {
   const fx = Math.max(fxEntra, fxSale);
   return (
     <AbsoluteFill style={{ overflow: 'hidden' }}>
+      <AbsoluteFill style={encuadre ? { transform: `scale(${encuadre.escala ?? 1})`, transformOrigin: `50% ${encuadre.origenY ?? 0}%` } : undefined}>
       <OffthreadVideo
         src={staticFile(t.archivo)}
         trimBefore={Math.round(t.desde * fps)}
@@ -194,6 +207,7 @@ const Tramo = ({ t, indice, tramos, zoom, entra, sale }) => {
           filter: fx > 0.02 ? `blur(${fx * 10}px)` : undefined,
         }}
       />
+      </AbsoluteFill>
     </AbsoluteFill>
   );
 };
