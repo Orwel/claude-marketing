@@ -1,7 +1,9 @@
 import React from 'react';
 import { Composition, Folder, staticFile } from 'remotion';
 import { MARCAS, PIEZAS, idComposicion } from './catalogo.js';
+import { formatoDe, lineaMontaje } from './montaje/linea.js';
 import { Animado } from './plantillas/Animado.jsx';
+import { Montaje } from './plantillas/Montaje.jsx';
 import { Vertical } from './plantillas/Vertical.jsx';
 import { aplicarVoz, duracionDe, duracionPieza, FORMATOS } from './util.js';
 
@@ -34,6 +36,7 @@ export const Root = () => {
       {meses.map((mes) => (
         <Folder key={mes} name={mes}>
           {PIEZAS.filter((p) => p.mes === mes).flatMap((pieza) => {
+            if (pieza.plantilla === 'Montaje') return composicionesMontaje(pieza);
             const Plantilla = PLANTILLAS[pieza.plantilla];
             if (!Plantilla) return [];
             const { ancho, alto } = FORMATOS[pieza.formato ?? 'vertical'];
@@ -56,3 +59,30 @@ export const Root = () => {
     </>
   );
 };
+
+/**
+ * Montaje: una composicion por cuenta y red (<slug>--<cuenta>--ig|li). Contrappto
+ * sale 16:9 en LinkedIn; las demas cuentas en 4:5. Sin armar (npm run armar) no aparece.
+ */
+function composicionesMontaje(pieza) {
+  if (!pieza.generado) return [];
+  return pieza.cuentas.flatMap((cuenta) =>
+    ['instagram', 'linkedin'].map((red) => {
+      const f = formatoDe(cuenta, red);
+      const marca = MARCAS[cuenta];
+      const id = `${pieza.slug}--${cuenta}--${f.sufijo}`;
+      return (
+        <Composition
+          key={id}
+          id={id}
+          component={Montaje}
+          fps={FPS}
+          width={f.ancho}
+          height={f.alto}
+          durationInFrames={lineaMontaje(pieza, cuenta, marca.montaje?.densidad ?? 2).total}
+          defaultProps={{ pieza, marca, red }}
+        />
+      );
+    })
+  );
+}

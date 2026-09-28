@@ -1,0 +1,5737 @@
+{
+  "slug": "v10-desorden",
+  "codigo": "V10",
+  "titulo": "La IA no arregla el desorden, lo acelera",
+  "plantilla": "Montaje",
+  "tipo": "cuerpo",
+  "tono": "energico",
+  "cuentas": [
+    "juanda",
+    "trifuerza",
+    "contrappto"
+  ],
+  "lowerThird": "Abogado y desarrollador de software",
+  "cuerpo": {
+    "archivo": "copy_B098CB0D-CB2E-44AD-9CD8-B8ACDDFD163C.mov"
+  },
+  "_tomas": "Dos tomas: copy_B098CB0D (escogida: arranca completa, 'Si tu trabajo es un desorden'; cierra natural sin 'sígueme'; agrega contratos y propuestas, que sirve a Contrappto) y copy_70711746 (descartada: le falta el arranque y termina en 'sígueme para más contenido').",
+  "correcciones": [
+    {
+      "de": "como\"Spec drive in development\"",
+      "a": "como \"Spec-Driven Development\""
+    },
+    {
+      "de": "Spec drive in development",
+      "a": "Spec-Driven Development"
+    }
+  ],
+  "resaltar": [
+    "desorden",
+    "multiplica",
+    "caos",
+    "velocidad",
+    "dirección",
+    "estructura",
+    "contratos"
+  ],
+  "beats": [
+    {
+      "tipo": "comparativa",
+      "en": "proceso claro",
+      "hasta": "y se ve",
+      "nivel": 1,
+      "columnas": [
+        "claro",
+        "caos"
+      ],
+      "izquierda": {
+        "titulo": "Proceso claro",
+        "icono": "Rocket",
+        "tono": "bien",
+        "items": [
+          "Lo hace *volar*"
+        ]
+      },
+      "derecha": {
+        "titulo": "Caos",
+        "icono": "Tornado",
+        "items": [
+          "Caos a *toda velocidad*"
+        ]
+      }
+    },
+    {
+      "tipo": "correos",
+      "en": "documentos",
+      "hasta": "el que",
+      "nivel": 1,
+      "correos": [
+        "contrato_v2.docx",
+        "RE: contrato final",
+        "contrato_FINAL_v3.pdf",
+        "FW: FW: la versión buena",
+        "contrato_final_final.docx"
+      ]
+    },
+    {
+      "tipo": "cifra",
+      "en": "triple",
+      "dura": 2.6,
+      "nivel": 2,
+      "valor": 3,
+      "sufijo": "×",
+      "etiqueta": "de caos, con peores cosas hechas",
+      "titulo": "Más rápido, no mejor",
+      "icono": "Layers"
+    },
+    {
+      "tipo": "tarjeta",
+      "en": "sin dirección",
+      "dura": 2.4,
+      "nivel": 2,
+      "icono": "Gauge",
+      "titulo": "Velocidad *sin dirección*",
+      "texto": "no sirve de nada"
+    },
+    {
+      "tipo": "pasos",
+      "en": "primero",
+      "hasta": "esto es",
+      "nivel": 1,
+      "titulo": "El orden correcto",
+      "paso": 10,
+      "items": [
+        {
+          "texto": "*Ordena*",
+          "icono": "ListChecks",
+          "en": "ordena"
+        },
+        {
+          "texto": "Estructura",
+          "icono": "LayoutTemplate",
+          "en": "estructura"
+        },
+        {
+          "texto": "Acelera",
+          "icono": "FastForward",
+          "en": "acelera"
+        },
+        {
+          "texto": "Implementa",
+          "icono": "Zap",
+          "en": "implementa"
+        }
+      ]
+    },
+    {
+      "tipo": "tarjeta",
+      "en": "programación",
+      "dura": 3.4,
+      "nivel": 2,
+      "icono": "FileCode",
+      "titulo": "Spec-Driven *Development*",
+      "texto": "Primero la especificación, después el código."
+    },
+    {
+      "tipo": "tarjeta",
+      "en": "documentos jurídicos",
+      "hasta": "primero",
+      "nivel": 1,
+      "icono": "Signature",
+      "titulo": "Igual con *contratos* y propuestas",
+      "texto": "Primero estructura. Después acelera."
+    }
+  ],
+  "variantes": {
+    "juanda": {
+      "gancho": "La IA no arregla tu desorden: *lo acelera*"
+    },
+    "trifuerza": {
+      "gancho": "Primero *ordena*, después acelera"
+    },
+    "contrappto": {
+      "gancho": "Tus contratos en desorden, *ahora más rápido*",
+      "titular": "La IA no ordena: acelera lo que ya tienes"
+    }
+  },
+  "verificar": [
+    {
+      "dato": "Término 'Spec-Driven Development' (en el video se dice 'Spec drive in development'): el subtítulo lo corrige; confirmar que se acepta así.",
+      "estado": "pendiente"
+    }
+  ],
+  "golpes": [
+    {
+      "en": "rápido",
+      "estilo": "golpe",
+      "texto": "Aún más rápido"
+    },
+    {
+      "en": "multiplica",
+      "estilo": "golpe",
+      "texto": "multiplica"
+    },
+    {
+      "en": "velocidad",
+      "estilo": "frase",
+      "texto": "Caos *a toda velocidad*"
+    },
+    {
+      "en": "acelera",
+      "vez": 2,
+      "estilo": "golpe",
+      "texto": "Después acelera"
+    }
+  ],
+  "generado": {
+    "beats": [
+      {
+        "tipo": "comparativa",
+        "en": "proceso claro",
+        "hasta": "y se ve",
+        "nivel": 1,
+        "columnas": [
+          "claro",
+          "caos"
+        ],
+        "izquierda": {
+          "titulo": "Proceso claro",
+          "icono": "Rocket",
+          "tono": "bien",
+          "items": [
+            "Lo hace *volar*"
+          ]
+        },
+        "derecha": {
+          "titulo": "Caos",
+          "icono": "Tornado",
+          "items": [
+            "Caos a *toda velocidad*"
+          ]
+        },
+        "inicioMs": 11587,
+        "finMs": 16071,
+        "columnasCuadros": [
+          17,
+          78
+        ]
+      },
+      {
+        "tipo": "correos",
+        "en": "documentos",
+        "hasta": "el que",
+        "nivel": 1,
+        "correos": [
+          "contrato_v2.docx",
+          "RE: contrato final",
+          "contrato_FINAL_v3.pdf",
+          "FW: FW: la versión buena",
+          "contrato_final_final.docx"
+        ],
+        "inicioMs": 19018,
+        "finMs": 22946
+      },
+      {
+        "tipo": "cifra",
+        "en": "triple",
+        "dura": 2.6,
+        "nivel": 2,
+        "valor": 3,
+        "sufijo": "×",
+        "etiqueta": "de caos, con peores cosas hechas",
+        "titulo": "Más rápido, no mejor",
+        "icono": "Layers",
+        "inicioMs": 28074,
+        "finMs": 30674
+      },
+      {
+        "tipo": "tarjeta",
+        "en": "sin dirección",
+        "dura": 2.4,
+        "nivel": 2,
+        "icono": "Gauge",
+        "titulo": "Velocidad *sin dirección*",
+        "texto": "no sirve de nada",
+        "inicioMs": 32900,
+        "finMs": 35300
+      },
+      {
+        "tipo": "pasos",
+        "en": "primero",
+        "hasta": "esto es",
+        "nivel": 1,
+        "titulo": "El orden correcto",
+        "paso": 10,
+        "items": [
+          {
+            "texto": "*Ordena*",
+            "icono": "ListChecks",
+            "en": "ordena"
+          },
+          {
+            "texto": "Estructura",
+            "icono": "LayoutTemplate",
+            "en": "estructura"
+          },
+          {
+            "texto": "Acelera",
+            "icono": "FastForward",
+            "en": "acelera"
+          },
+          {
+            "texto": "Implementa",
+            "icono": "Zap",
+            "en": "implementa"
+          }
+        ],
+        "inicioMs": 34911,
+        "finMs": 38929,
+        "itemsCuadros": [
+          17,
+          41,
+          75,
+          98
+        ]
+      },
+      {
+        "tipo": "tarjeta",
+        "en": "programación",
+        "dura": 3.4,
+        "nivel": 2,
+        "icono": "FileCode",
+        "titulo": "Spec-Driven *Development*",
+        "texto": "Primero la especificación, después el código.",
+        "inicioMs": 39865,
+        "finMs": 43265
+      },
+      {
+        "tipo": "tarjeta",
+        "en": "documentos jurídicos",
+        "hasta": "primero",
+        "nivel": 1,
+        "icono": "Signature",
+        "titulo": "Igual con *contratos* y propuestas",
+        "texto": "Primero estructura. Después acelera.",
+        "inicioMs": 51454,
+        "finMs": 55357
+      }
+    ],
+    "montajes": {
+      "juanda": {
+        "segmentos": [
+          {
+            "desde": 1.391,
+            "hasta": 67.961,
+            "archivo": "limpios/2026-10/copy_B098CB0D-CB2E-44AD-9CD8-B8ACDDFD163C.mp4",
+            "parte": "cuerpo",
+            "velocidad": 1.12
+          },
+          {
+            "desde": 1.15,
+            "hasta": 10.66,
+            "archivo": "limpios/2026-10/copy_E75C37C5-89F8-440F-A6DD-563DD9567B87.mp4",
+            "parte": "cierre",
+            "velocidad": 1.12,
+            "encuadre": {
+              "x": 0.478,
+              "y": 0.7,
+              "alto": 0.512
+            }
+          }
+        ],
+        "subtitulos": [
+          {
+            "text": " Si",
+            "startMs": 179,
+            "endMs": 320,
+            "timestampMs": null,
+            "confidence": 0.590029,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tu",
+            "startMs": 320,
+            "endMs": 461,
+            "timestampMs": null,
+            "confidence": 0.937695,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " trabajo",
+            "startMs": 461,
+            "endMs": 803,
+            "timestampMs": null,
+            "confidence": 0.978174,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " es",
+            "startMs": 803,
+            "endMs": 944,
+            "timestampMs": null,
+            "confidence": 0.97633,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " un",
+            "startMs": 944,
+            "endMs": 1084,
+            "timestampMs": null,
+            "confidence": 0.977005,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " desorden,",
+            "startMs": 1084,
+            "endMs": 1467,
+            "timestampMs": null,
+            "confidence": 0.777883,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " la",
+            "startMs": 1467,
+            "endMs": 1608,
+            "timestampMs": null,
+            "confidence": 0.923564,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " inteligencia",
+            "startMs": 1608,
+            "endMs": 2151,
+            "timestampMs": null,
+            "confidence": 0.523627,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " artificial",
+            "startMs": 2151,
+            "endMs": 2614,
+            "timestampMs": null,
+            "confidence": 0.948814,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " no",
+            "startMs": 2614,
+            "endMs": 2755,
+            "timestampMs": null,
+            "confidence": 0.941951,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " te",
+            "startMs": 2755,
+            "endMs": 2896,
+            "timestampMs": null,
+            "confidence": 0.848827,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " lo",
+            "startMs": 2896,
+            "endMs": 3037,
+            "timestampMs": null,
+            "confidence": 0.939646,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " va",
+            "startMs": 3037,
+            "endMs": 3178,
+            "timestampMs": null,
+            "confidence": 0.463154,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " a",
+            "startMs": 3178,
+            "endMs": 3279,
+            "timestampMs": null,
+            "confidence": 0.945076,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " arreglar,",
+            "startMs": 3279,
+            "endMs": 3661,
+            "timestampMs": null,
+            "confidence": 0.545482,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " lo",
+            "startMs": 3929,
+            "endMs": 4076,
+            "timestampMs": null,
+            "confidence": 0.919872,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 4076,
+            "endMs": 4265,
+            "timestampMs": null,
+            "confidence": 0.993157,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " va",
+            "startMs": 4265,
+            "endMs": 4413,
+            "timestampMs": null,
+            "confidence": 0.962327,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " a",
+            "startMs": 4413,
+            "endMs": 4518,
+            "timestampMs": null,
+            "confidence": 0.94088,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " hacer",
+            "startMs": 4518,
+            "endMs": 4792,
+            "timestampMs": null,
+            "confidence": 0.915494,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " es",
+            "startMs": 4792,
+            "endMs": 4939,
+            "timestampMs": null,
+            "confidence": 0.957326,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " devolverte",
+            "startMs": 4939,
+            "endMs": 5424,
+            "timestampMs": null,
+            "confidence": 0.796973,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " un",
+            "startMs": 5424,
+            "endMs": 5571,
+            "timestampMs": null,
+            "confidence": 0.922237,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " desorden",
+            "startMs": 5571,
+            "endMs": 5971,
+            "timestampMs": null,
+            "confidence": 0.926567,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " aún",
+            "startMs": 5971,
+            "endMs": 6161,
+            "timestampMs": null,
+            "confidence": 0.463091,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " más",
+            "startMs": 6339,
+            "endMs": 6574,
+            "timestampMs": null,
+            "confidence": 0.985695,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " rápido,",
+            "startMs": 6574,
+            "endMs": 6964,
+            "timestampMs": null,
+            "confidence": 0.475565,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " la",
+            "startMs": 7321,
+            "endMs": 7521,
+            "timestampMs": null,
+            "confidence": 0.933476,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " IA",
+            "startMs": 7521,
+            "endMs": 7721,
+            "timestampMs": null,
+            "confidence": 0.532291,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " no",
+            "startMs": 7721,
+            "endMs": 7920,
+            "timestampMs": null,
+            "confidence": 0.722854,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ordena",
+            "startMs": 7920,
+            "endMs": 8347,
+            "timestampMs": null,
+            "confidence": 0.991539,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " nada,",
+            "startMs": 8347,
+            "endMs": 8661,
+            "timestampMs": null,
+            "confidence": 0.942602,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " multiplica",
+            "startMs": 8929,
+            "endMs": 9400,
+            "timestampMs": null,
+            "confidence": 0.912088,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " lo",
+            "startMs": 9400,
+            "endMs": 9544,
+            "timestampMs": null,
+            "confidence": 0.987457,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 9544,
+            "endMs": 9728,
+            "timestampMs": null,
+            "confidence": 0.998719,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ya",
+            "startMs": 9728,
+            "endMs": 9871,
+            "timestampMs": null,
+            "confidence": 0.968592,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tienes,",
+            "startMs": 9871,
+            "endMs": 10179,
+            "timestampMs": null,
+            "confidence": 0.699501,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " así",
+            "startMs": 10625,
+            "endMs": 10809,
+            "timestampMs": null,
+            "confidence": 0.9409,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 10809,
+            "endMs": 10994,
+            "timestampMs": null,
+            "confidence": 0.995611,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " si",
+            "startMs": 10994,
+            "endMs": 11137,
+            "timestampMs": null,
+            "confidence": 0.963984,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tienes",
+            "startMs": 11137,
+            "endMs": 11444,
+            "timestampMs": null,
+            "confidence": 0.97606,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " un",
+            "startMs": 11444,
+            "endMs": 11587,
+            "timestampMs": null,
+            "confidence": 0.98634,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " proceso",
+            "startMs": 11587,
+            "endMs": 11936,
+            "timestampMs": null,
+            "confidence": 0.996742,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " claro,",
+            "startMs": 11936,
+            "endMs": 12202,
+            "timestampMs": null,
+            "confidence": 0.557057,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " lo",
+            "startMs": 12202,
+            "endMs": 12346,
+            "timestampMs": null,
+            "confidence": 0.933026,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " va",
+            "startMs": 12346,
+            "endMs": 12488,
+            "timestampMs": null,
+            "confidence": 0.621296,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " a",
+            "startMs": 12488,
+            "endMs": 12591,
+            "timestampMs": null,
+            "confidence": 0.961109,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " hacer",
+            "startMs": 12591,
+            "endMs": 12857,
+            "timestampMs": null,
+            "confidence": 0.990998,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " volar,",
+            "startMs": 13125,
+            "endMs": 13392,
+            "timestampMs": null,
+            "confidence": 0.495145,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " y",
+            "startMs": 13392,
+            "endMs": 13495,
+            "timestampMs": null,
+            "confidence": 0.822629,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " si",
+            "startMs": 13495,
+            "endMs": 13638,
+            "timestampMs": null,
+            "confidence": 0.984557,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tienes",
+            "startMs": 13638,
+            "endMs": 13947,
+            "timestampMs": null,
+            "confidence": 0.975686,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " caos,",
+            "startMs": 13947,
+            "endMs": 14173,
+            "timestampMs": null,
+            "confidence": 0.860822,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " vas",
+            "startMs": 14173,
+            "endMs": 14358,
+            "timestampMs": null,
+            "confidence": 0.984359,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " a",
+            "startMs": 14358,
+            "endMs": 14461,
+            "timestampMs": null,
+            "confidence": 0.997877,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tener",
+            "startMs": 14461,
+            "endMs": 14728,
+            "timestampMs": null,
+            "confidence": 0.990271,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " caos",
+            "startMs": 14728,
+            "endMs": 14954,
+            "timestampMs": null,
+            "confidence": 0.983331,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " a",
+            "startMs": 14954,
+            "endMs": 15056,
+            "timestampMs": null,
+            "confidence": 0.95947,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " toda",
+            "startMs": 15056,
+            "endMs": 15283,
+            "timestampMs": null,
+            "confidence": 0.98581,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " velocidad,",
+            "startMs": 15283,
+            "endMs": 15714,
+            "timestampMs": null,
+            "confidence": 0.583918,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " y",
+            "startMs": 16071,
+            "endMs": 16188,
+            "timestampMs": null,
+            "confidence": 0.953264,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " se",
+            "startMs": 16188,
+            "endMs": 16352,
+            "timestampMs": null,
+            "confidence": 0.983397,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ve",
+            "startMs": 16352,
+            "endMs": 16515,
+            "timestampMs": null,
+            "confidence": 0.996462,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " igual",
+            "startMs": 16515,
+            "endMs": 16819,
+            "timestampMs": null,
+            "confidence": 0.994412,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " en",
+            "startMs": 16819,
+            "endMs": 16982,
+            "timestampMs": null,
+            "confidence": 0.962472,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " todos",
+            "startMs": 16982,
+            "endMs": 17286,
+            "timestampMs": null,
+            "confidence": 0.973075,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " lados,",
+            "startMs": 17286,
+            "endMs": 17589,
+            "timestampMs": null,
+            "confidence": 0.710097,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " quien",
+            "startMs": 18036,
+            "endMs": 18235,
+            "timestampMs": null,
+            "confidence": 0.87116,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tiene",
+            "startMs": 18235,
+            "endMs": 18434,
+            "timestampMs": null,
+            "confidence": 0.959126,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " sus",
+            "startMs": 18434,
+            "endMs": 18571,
+            "timestampMs": null,
+            "confidence": 0.959918,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " documentos",
+            "startMs": 19018,
+            "endMs": 19464,
+            "timestampMs": null,
+            "confidence": 0.878821,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " regados",
+            "startMs": 19464,
+            "endMs": 19795,
+            "timestampMs": null,
+            "confidence": 0.996776,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " en",
+            "startMs": 19795,
+            "endMs": 19930,
+            "timestampMs": null,
+            "confidence": 0.940772,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " el",
+            "startMs": 19930,
+            "endMs": 20066,
+            "timestampMs": null,
+            "confidence": 0.947657,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " correo,",
+            "startMs": 20066,
+            "endMs": 20357,
+            "timestampMs": null,
+            "confidence": 0.625314,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ahora",
+            "startMs": 20536,
+            "endMs": 20759,
+            "timestampMs": null,
+            "confidence": 0.984487,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " los",
+            "startMs": 20759,
+            "endMs": 20913,
+            "timestampMs": null,
+            "confidence": 0.974234,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tiene",
+            "startMs": 20913,
+            "endMs": 21137,
+            "timestampMs": null,
+            "confidence": 0.976636,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " regados",
+            "startMs": 21137,
+            "endMs": 21429,
+            "timestampMs": null,
+            "confidence": 0.986596,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " y",
+            "startMs": 21607,
+            "endMs": 21703,
+            "timestampMs": null,
+            "confidence": 0.900043,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " en",
+            "startMs": 21703,
+            "endMs": 21837,
+            "timestampMs": null,
+            "confidence": 0.962865,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " más",
+            "startMs": 21837,
+            "endMs": 22009,
+            "timestampMs": null,
+            "confidence": 0.953104,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " versiones,",
+            "startMs": 22009,
+            "endMs": 22411,
+            "timestampMs": null,
+            "confidence": 0.824013,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " el",
+            "startMs": 22946,
+            "endMs": 23075,
+            "timestampMs": null,
+            "confidence": 0.944337,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 23075,
+            "endMs": 23240,
+            "timestampMs": null,
+            "confidence": 0.994894,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " no",
+            "startMs": 23240,
+            "endMs": 23370,
+            "timestampMs": null,
+            "confidence": 0.989946,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " sabe",
+            "startMs": 23370,
+            "endMs": 23571,
+            "timestampMs": null,
+            "confidence": 0.986959,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ni",
+            "startMs": 23839,
+            "endMs": 23981,
+            "timestampMs": null,
+            "confidence": 0.71573,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " siquiera",
+            "startMs": 23981,
+            "endMs": 24368,
+            "timestampMs": null,
+            "confidence": 0.884462,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 24368,
+            "endMs": 24551,
+            "timestampMs": null,
+            "confidence": 0.771584,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " responde",
+            "startMs": 24551,
+            "endMs": 24937,
+            "timestampMs": null,
+            "confidence": 0.737044,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ni",
+            "startMs": 24937,
+            "endMs": 25080,
+            "timestampMs": null,
+            "confidence": 0.789071,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " por",
+            "startMs": 25080,
+            "endMs": 25263,
+            "timestampMs": null,
+            "confidence": 0.612621,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " qué,",
+            "startMs": 25263,
+            "endMs": 25446,
+            "timestampMs": null,
+            "confidence": 0.498174,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " y",
+            "startMs": 25625,
+            "endMs": 25721,
+            "timestampMs": null,
+            "confidence": 0.87022,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " solamente",
+            "startMs": 25721,
+            "endMs": 26129,
+            "timestampMs": null,
+            "confidence": 0.70017,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " copia",
+            "startMs": 26129,
+            "endMs": 26380,
+            "timestampMs": null,
+            "confidence": 0.979241,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " lo",
+            "startMs": 26380,
+            "endMs": 26516,
+            "timestampMs": null,
+            "confidence": 0.965764,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 26516,
+            "endMs": 26690,
+            "timestampMs": null,
+            "confidence": 0.996599,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " le",
+            "startMs": 26690,
+            "endMs": 26826,
+            "timestampMs": null,
+            "confidence": 0.947399,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " da",
+            "startMs": 26826,
+            "endMs": 26961,
+            "timestampMs": null,
+            "confidence": 0.979731,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " la",
+            "startMs": 26961,
+            "endMs": 27096,
+            "timestampMs": null,
+            "confidence": 0.737098,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " IA,",
+            "startMs": 27096,
+            "endMs": 27232,
+            "timestampMs": null,
+            "confidence": 0.83499,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ahora",
+            "startMs": 27500,
+            "endMs": 27726,
+            "timestampMs": null,
+            "confidence": 0.978174,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tiene",
+            "startMs": 27726,
+            "endMs": 27953,
+            "timestampMs": null,
+            "confidence": 0.967226,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " el",
+            "startMs": 27953,
+            "endMs": 28074,
+            "timestampMs": null,
+            "confidence": 0.963778,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " triple",
+            "startMs": 28074,
+            "endMs": 28336,
+            "timestampMs": null,
+            "confidence": 0.967977,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " de",
+            "startMs": 28336,
+            "endMs": 28457,
+            "timestampMs": null,
+            "confidence": 0.992672,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " caos",
+            "startMs": 28457,
+            "endMs": 28648,
+            "timestampMs": null,
+            "confidence": 0.985188,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " con",
+            "startMs": 28648,
+            "endMs": 28805,
+            "timestampMs": null,
+            "confidence": 0.961371,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " peores",
+            "startMs": 28805,
+            "endMs": 29066,
+            "timestampMs": null,
+            "confidence": 0.982279,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " cosas",
+            "startMs": 29066,
+            "endMs": 29293,
+            "timestampMs": null,
+            "confidence": 0.989493,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " hechas,",
+            "startMs": 29293,
+            "endMs": 29554,
+            "timestampMs": null,
+            "confidence": 0.800759,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " la",
+            "startMs": 30000,
+            "endMs": 30136,
+            "timestampMs": null,
+            "confidence": 0.985624,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " inteligencia",
+            "startMs": 30136,
+            "endMs": 30660,
+            "timestampMs": null,
+            "confidence": 0.873002,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " artificial",
+            "startMs": 30660,
+            "endMs": 31106,
+            "timestampMs": null,
+            "confidence": 0.997432,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " te",
+            "startMs": 31106,
+            "endMs": 31242,
+            "timestampMs": null,
+            "confidence": 0.98015,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " da",
+            "startMs": 31242,
+            "endMs": 31378,
+            "timestampMs": null,
+            "confidence": 0.991684,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " velocidad,",
+            "startMs": 31378,
+            "endMs": 31786,
+            "timestampMs": null,
+            "confidence": 0.859548,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " pero",
+            "startMs": 32143,
+            "endMs": 32356,
+            "timestampMs": null,
+            "confidence": 0.979914,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " la",
+            "startMs": 32356,
+            "endMs": 32492,
+            "timestampMs": null,
+            "confidence": 0.980525,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " velocidad",
+            "startMs": 32492,
+            "endMs": 32900,
+            "timestampMs": null,
+            "confidence": 0.995011,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " sin",
+            "startMs": 32900,
+            "endMs": 33074,
+            "timestampMs": null,
+            "confidence": 0.998696,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " dirección",
+            "startMs": 33074,
+            "endMs": 33482,
+            "timestampMs": null,
+            "confidence": 0.996639,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " no",
+            "startMs": 33661,
+            "endMs": 33825,
+            "timestampMs": null,
+            "confidence": 0.671007,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " sirve",
+            "startMs": 33825,
+            "endMs": 34130,
+            "timestampMs": null,
+            "confidence": 0.995556,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " de",
+            "startMs": 34130,
+            "endMs": 34296,
+            "timestampMs": null,
+            "confidence": 0.955919,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " nada,",
+            "startMs": 34296,
+            "endMs": 34554,
+            "timestampMs": null,
+            "confidence": 0.95651,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " primero",
+            "startMs": 34911,
+            "endMs": 35243,
+            "timestampMs": null,
+            "confidence": 0.929661,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ordena,",
+            "startMs": 35243,
+            "endMs": 35536,
+            "timestampMs": null,
+            "confidence": 0.977066,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " primero",
+            "startMs": 35714,
+            "endMs": 36056,
+            "timestampMs": null,
+            "confidence": 0.980015,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " estructura,",
+            "startMs": 36056,
+            "endMs": 36518,
+            "timestampMs": null,
+            "confidence": 0.960374,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " después",
+            "startMs": 36786,
+            "endMs": 37175,
+            "timestampMs": null,
+            "confidence": 0.971745,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " acelera,",
+            "startMs": 37175,
+            "endMs": 37565,
+            "timestampMs": null,
+            "confidence": 0.963247,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " después",
+            "startMs": 37565,
+            "endMs": 37954,
+            "timestampMs": null,
+            "confidence": 0.966844,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " implementa,",
+            "startMs": 37954,
+            "endMs": 38482,
+            "timestampMs": null,
+            "confidence": 0.904252,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " esto",
+            "startMs": 38929,
+            "endMs": 39179,
+            "timestampMs": null,
+            "confidence": 0.973435,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " es",
+            "startMs": 39179,
+            "endMs": 39339,
+            "timestampMs": null,
+            "confidence": 0.981882,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " lo",
+            "startMs": 39339,
+            "endMs": 39500,
+            "timestampMs": null,
+            "confidence": 0.992532,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 39500,
+            "endMs": 39705,
+            "timestampMs": null,
+            "confidence": 0.997763,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " en",
+            "startMs": 39705,
+            "endMs": 39865,
+            "timestampMs": null,
+            "confidence": 0.974316,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " programación",
+            "startMs": 39865,
+            "endMs": 40482,
+            "timestampMs": null,
+            "confidence": 0.98475,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " se",
+            "startMs": 40482,
+            "endMs": 40642,
+            "timestampMs": null,
+            "confidence": 0.98052,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " conoce",
+            "startMs": 40642,
+            "endMs": 40984,
+            "timestampMs": null,
+            "confidence": 0.991945,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " como \"Spec-Driven Development\",",
+            "startMs": 40984,
+            "endMs": 43125,
+            "timestampMs": null,
+            "confidence": 0.211111,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " y",
+            "startMs": 43571,
+            "endMs": 43683,
+            "timestampMs": null,
+            "confidence": 0.944728,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " es",
+            "startMs": 43683,
+            "endMs": 43839,
+            "timestampMs": null,
+            "confidence": 0.995084,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " la",
+            "startMs": 44375,
+            "endMs": 44500,
+            "timestampMs": null,
+            "confidence": 0.991019,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " clave",
+            "startMs": 44500,
+            "endMs": 44732,
+            "timestampMs": null,
+            "confidence": 0.997828,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " para",
+            "startMs": 44911,
+            "endMs": 45154,
+            "timestampMs": null,
+            "confidence": 0.969736,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 45154,
+            "endMs": 45353,
+            "timestampMs": null,
+            "confidence": 0.992434,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " la",
+            "startMs": 45353,
+            "endMs": 45507,
+            "timestampMs": null,
+            "confidence": 0.980572,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " inteligencia",
+            "startMs": 45507,
+            "endMs": 46104,
+            "timestampMs": null,
+            "confidence": 0.938824,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " artificial",
+            "startMs": 46104,
+            "endMs": 46613,
+            "timestampMs": null,
+            "confidence": 0.997881,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " no",
+            "startMs": 46613,
+            "endMs": 46767,
+            "timestampMs": null,
+            "confidence": 0.975614,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " alucine",
+            "startMs": 46767,
+            "endMs": 47143,
+            "timestampMs": null,
+            "confidence": 0.97335,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tanto",
+            "startMs": 47321,
+            "endMs": 47588,
+            "timestampMs": null,
+            "confidence": 0.99445,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " y",
+            "startMs": 47588,
+            "endMs": 47689,
+            "timestampMs": null,
+            "confidence": 0.755583,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " no",
+            "startMs": 47689,
+            "endMs": 47832,
+            "timestampMs": null,
+            "confidence": 0.983708,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " se",
+            "startMs": 47832,
+            "endMs": 47976,
+            "timestampMs": null,
+            "confidence": 0.991026,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " vaya",
+            "startMs": 47976,
+            "endMs": 48200,
+            "timestampMs": null,
+            "confidence": 0.988638,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " a",
+            "startMs": 48200,
+            "endMs": 48303,
+            "timestampMs": null,
+            "confidence": 0.989283,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " dañar",
+            "startMs": 48303,
+            "endMs": 48568,
+            "timestampMs": null,
+            "confidence": 0.998108,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tu",
+            "startMs": 48568,
+            "endMs": 48712,
+            "timestampMs": null,
+            "confidence": 0.991874,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " código,",
+            "startMs": 48712,
+            "endMs": 49018,
+            "timestampMs": null,
+            "confidence": 0.950407,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " lo",
+            "startMs": 49375,
+            "endMs": 49519,
+            "timestampMs": null,
+            "confidence": 0.973149,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " mismo",
+            "startMs": 49519,
+            "endMs": 49785,
+            "timestampMs": null,
+            "confidence": 0.998426,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " lo",
+            "startMs": 49785,
+            "endMs": 49929,
+            "timestampMs": null,
+            "confidence": 0.961931,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " puedes",
+            "startMs": 49929,
+            "endMs": 50236,
+            "timestampMs": null,
+            "confidence": 0.959529,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " utilizar",
+            "startMs": 50236,
+            "endMs": 50625,
+            "timestampMs": null,
+            "confidence": 0.969231,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " cuando",
+            "startMs": 50893,
+            "endMs": 51194,
+            "timestampMs": null,
+            "confidence": 0.928168,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " crees",
+            "startMs": 51194,
+            "endMs": 51454,
+            "timestampMs": null,
+            "confidence": 0.929565,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " documentos",
+            "startMs": 51454,
+            "endMs": 51915,
+            "timestampMs": null,
+            "confidence": 0.976775,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " jurídicos",
+            "startMs": 51915,
+            "endMs": 52336,
+            "timestampMs": null,
+            "confidence": 0.986924,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " y",
+            "startMs": 52336,
+            "endMs": 52437,
+            "timestampMs": null,
+            "confidence": 0.952832,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " contratos",
+            "startMs": 52437,
+            "endMs": 52857,
+            "timestampMs": null,
+            "confidence": 0.969442,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " o",
+            "startMs": 53214,
+            "endMs": 53318,
+            "timestampMs": null,
+            "confidence": 0.613123,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " cosas",
+            "startMs": 53318,
+            "endMs": 53588,
+            "timestampMs": null,
+            "confidence": 0.995501,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " serias",
+            "startMs": 53588,
+            "endMs": 53899,
+            "timestampMs": null,
+            "confidence": 0.979677,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " propuestas",
+            "startMs": 53899,
+            "endMs": 54377,
+            "timestampMs": null,
+            "confidence": 0.575273,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " para",
+            "startMs": 54377,
+            "endMs": 54605,
+            "timestampMs": null,
+            "confidence": 0.985173,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " clientes,",
+            "startMs": 54605,
+            "endMs": 55000,
+            "timestampMs": null,
+            "confidence": 0.96428,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " primero",
+            "startMs": 55357,
+            "endMs": 55707,
+            "timestampMs": null,
+            "confidence": 0.93644,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " estructura,",
+            "startMs": 55707,
+            "endMs": 56181,
+            "timestampMs": null,
+            "confidence": 0.976839,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " primero",
+            "startMs": 56181,
+            "endMs": 56531,
+            "timestampMs": null,
+            "confidence": 0.927338,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ordena,",
+            "startMs": 56531,
+            "endMs": 56841,
+            "timestampMs": null,
+            "confidence": 0.963148,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " la",
+            "startMs": 56841,
+            "endMs": 56985,
+            "timestampMs": null,
+            "confidence": 0.982354,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " IA",
+            "startMs": 56985,
+            "endMs": 57129,
+            "timestampMs": null,
+            "confidence": 0.982396,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " te",
+            "startMs": 57129,
+            "endMs": 57273,
+            "timestampMs": null,
+            "confidence": 0.97397,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " puede",
+            "startMs": 57273,
+            "endMs": 57541,
+            "timestampMs": null,
+            "confidence": 0.949997,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ayudar",
+            "startMs": 57541,
+            "endMs": 57850,
+            "timestampMs": null,
+            "confidence": 0.992201,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " a",
+            "startMs": 57850,
+            "endMs": 57954,
+            "timestampMs": null,
+            "confidence": 0.98861,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ordenar,",
+            "startMs": 57954,
+            "endMs": 58304,
+            "timestampMs": null,
+            "confidence": 0.874888,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " después",
+            "startMs": 58482,
+            "endMs": 58795,
+            "timestampMs": null,
+            "confidence": 0.967857,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " acelera.",
+            "startMs": 58795,
+            "endMs": 59107,
+            "timestampMs": null,
+            "confidence": 0.943774,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Esto",
+            "startMs": 59616,
+            "endMs": 59860,
+            "timestampMs": null,
+            "confidence": 0.660439,
+            "parte": "cierre"
+          },
+          {
+            "text": " apenas",
+            "startMs": 59860,
+            "endMs": 60193,
+            "timestampMs": null,
+            "confidence": 0.430723,
+            "parte": "cierre"
+          },
+          {
+            "text": " es",
+            "startMs": 60193,
+            "endMs": 60348,
+            "timestampMs": null,
+            "confidence": 0.971916,
+            "parte": "cierre"
+          },
+          {
+            "text": " un",
+            "startMs": 60348,
+            "endMs": 60504,
+            "timestampMs": null,
+            "confidence": 0.792633,
+            "parte": "cierre"
+          },
+          {
+            "text": " poco",
+            "startMs": 60504,
+            "endMs": 60747,
+            "timestampMs": null,
+            "confidence": 0.980701,
+            "parte": "cierre"
+          },
+          {
+            "text": " de",
+            "startMs": 60747,
+            "endMs": 60903,
+            "timestampMs": null,
+            "confidence": 0.940939,
+            "parte": "cierre"
+          },
+          {
+            "text": " lo",
+            "startMs": 60903,
+            "endMs": 61058,
+            "timestampMs": null,
+            "confidence": 0.992248,
+            "parte": "cierre"
+          },
+          {
+            "text": " que",
+            "startMs": 61058,
+            "endMs": 61257,
+            "timestampMs": null,
+            "confidence": 0.990142,
+            "parte": "cierre"
+          },
+          {
+            "text": " voy",
+            "startMs": 61257,
+            "endMs": 61457,
+            "timestampMs": null,
+            "confidence": 0.798973,
+            "parte": "cierre"
+          },
+          {
+            "text": " a",
+            "startMs": 61457,
+            "endMs": 61568,
+            "timestampMs": null,
+            "confidence": 0.989296,
+            "parte": "cierre"
+          },
+          {
+            "text": " explicar",
+            "startMs": 61568,
+            "endMs": 61989,
+            "timestampMs": null,
+            "confidence": 0.947313,
+            "parte": "cierre"
+          },
+          {
+            "text": " en",
+            "startMs": 61989,
+            "endMs": 62145,
+            "timestampMs": null,
+            "confidence": 0.926446,
+            "parte": "cierre"
+          },
+          {
+            "text": " mi",
+            "startMs": 62145,
+            "endMs": 62300,
+            "timestampMs": null,
+            "confidence": 0.985951,
+            "parte": "cierre"
+          },
+          {
+            "text": " webinar",
+            "startMs": 62300,
+            "endMs": 62677,
+            "timestampMs": null,
+            "confidence": 0.903759,
+            "parte": "cierre"
+          },
+          {
+            "text": " gratuito",
+            "startMs": 62677,
+            "endMs": 63098,
+            "timestampMs": null,
+            "confidence": 0.936014,
+            "parte": "cierre"
+          },
+          {
+            "text": " sobre",
+            "startMs": 63366,
+            "endMs": 63639,
+            "timestampMs": null,
+            "confidence": 0.809517,
+            "parte": "cierre"
+          },
+          {
+            "text": " fundamentos",
+            "startMs": 63639,
+            "endMs": 64164,
+            "timestampMs": null,
+            "confidence": 0.63345,
+            "parte": "cierre"
+          },
+          {
+            "text": " de",
+            "startMs": 64164,
+            "endMs": 64312,
+            "timestampMs": null,
+            "confidence": 0.946259,
+            "parte": "cierre"
+          },
+          {
+            "text": " la",
+            "startMs": 64312,
+            "endMs": 64459,
+            "timestampMs": null,
+            "confidence": 0.986393,
+            "parte": "cierre"
+          },
+          {
+            "text": " inteligencia",
+            "startMs": 64459,
+            "endMs": 65026,
+            "timestampMs": null,
+            "confidence": 0.585565,
+            "parte": "cierre"
+          },
+          {
+            "text": " artificial.",
+            "startMs": 65026,
+            "endMs": 65509,
+            "timestampMs": null,
+            "confidence": 0.734905,
+            "parte": "cierre"
+          },
+          {
+            "text": " Comenta",
+            "startMs": 65866,
+            "endMs": 66256,
+            "timestampMs": null,
+            "confidence": 0.675138,
+            "parte": "cierre"
+          },
+          {
+            "text": " clase",
+            "startMs": 66256,
+            "endMs": 66554,
+            "timestampMs": null,
+            "confidence": 0.832936,
+            "parte": "cierre"
+          },
+          {
+            "text": " e",
+            "startMs": 66554,
+            "endMs": 66670,
+            "timestampMs": null,
+            "confidence": 0.952165,
+            "parte": "cierre"
+          },
+          {
+            "text": " inscríbete.",
+            "startMs": 66937,
+            "endMs": 67562,
+            "timestampMs": null,
+            "confidence": 0.902545,
+            "parte": "cierre"
+          }
+        ],
+        "cuerpoInicioMs": 0,
+        "cuerpoRecorteMs": 0,
+        "cierreInicioMs": 59437,
+        "duracionMs": 67929
+      },
+      "trifuerza": {
+        "segmentos": [
+          {
+            "desde": 1.391,
+            "hasta": 67.961,
+            "archivo": "limpios/2026-10/copy_B098CB0D-CB2E-44AD-9CD8-B8ACDDFD163C.mp4",
+            "parte": "cuerpo",
+            "velocidad": 1.12
+          }
+        ],
+        "subtitulos": [
+          {
+            "text": " Si",
+            "startMs": 179,
+            "endMs": 320,
+            "timestampMs": null,
+            "confidence": 0.590029,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tu",
+            "startMs": 320,
+            "endMs": 461,
+            "timestampMs": null,
+            "confidence": 0.937695,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " trabajo",
+            "startMs": 461,
+            "endMs": 803,
+            "timestampMs": null,
+            "confidence": 0.978174,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " es",
+            "startMs": 803,
+            "endMs": 944,
+            "timestampMs": null,
+            "confidence": 0.97633,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " un",
+            "startMs": 944,
+            "endMs": 1084,
+            "timestampMs": null,
+            "confidence": 0.977005,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " desorden,",
+            "startMs": 1084,
+            "endMs": 1467,
+            "timestampMs": null,
+            "confidence": 0.777883,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " la",
+            "startMs": 1467,
+            "endMs": 1608,
+            "timestampMs": null,
+            "confidence": 0.923564,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " inteligencia",
+            "startMs": 1608,
+            "endMs": 2151,
+            "timestampMs": null,
+            "confidence": 0.523627,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " artificial",
+            "startMs": 2151,
+            "endMs": 2614,
+            "timestampMs": null,
+            "confidence": 0.948814,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " no",
+            "startMs": 2614,
+            "endMs": 2755,
+            "timestampMs": null,
+            "confidence": 0.941951,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " te",
+            "startMs": 2755,
+            "endMs": 2896,
+            "timestampMs": null,
+            "confidence": 0.848827,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " lo",
+            "startMs": 2896,
+            "endMs": 3037,
+            "timestampMs": null,
+            "confidence": 0.939646,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " va",
+            "startMs": 3037,
+            "endMs": 3178,
+            "timestampMs": null,
+            "confidence": 0.463154,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " a",
+            "startMs": 3178,
+            "endMs": 3279,
+            "timestampMs": null,
+            "confidence": 0.945076,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " arreglar,",
+            "startMs": 3279,
+            "endMs": 3661,
+            "timestampMs": null,
+            "confidence": 0.545482,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " lo",
+            "startMs": 3929,
+            "endMs": 4076,
+            "timestampMs": null,
+            "confidence": 0.919872,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 4076,
+            "endMs": 4265,
+            "timestampMs": null,
+            "confidence": 0.993157,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " va",
+            "startMs": 4265,
+            "endMs": 4413,
+            "timestampMs": null,
+            "confidence": 0.962327,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " a",
+            "startMs": 4413,
+            "endMs": 4518,
+            "timestampMs": null,
+            "confidence": 0.94088,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " hacer",
+            "startMs": 4518,
+            "endMs": 4792,
+            "timestampMs": null,
+            "confidence": 0.915494,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " es",
+            "startMs": 4792,
+            "endMs": 4939,
+            "timestampMs": null,
+            "confidence": 0.957326,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " devolverte",
+            "startMs": 4939,
+            "endMs": 5424,
+            "timestampMs": null,
+            "confidence": 0.796973,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " un",
+            "startMs": 5424,
+            "endMs": 5571,
+            "timestampMs": null,
+            "confidence": 0.922237,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " desorden",
+            "startMs": 5571,
+            "endMs": 5971,
+            "timestampMs": null,
+            "confidence": 0.926567,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " aún",
+            "startMs": 5971,
+            "endMs": 6161,
+            "timestampMs": null,
+            "confidence": 0.463091,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " más",
+            "startMs": 6339,
+            "endMs": 6574,
+            "timestampMs": null,
+            "confidence": 0.985695,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " rápido,",
+            "startMs": 6574,
+            "endMs": 6964,
+            "timestampMs": null,
+            "confidence": 0.475565,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " la",
+            "startMs": 7321,
+            "endMs": 7521,
+            "timestampMs": null,
+            "confidence": 0.933476,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " IA",
+            "startMs": 7521,
+            "endMs": 7721,
+            "timestampMs": null,
+            "confidence": 0.532291,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " no",
+            "startMs": 7721,
+            "endMs": 7920,
+            "timestampMs": null,
+            "confidence": 0.722854,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ordena",
+            "startMs": 7920,
+            "endMs": 8347,
+            "timestampMs": null,
+            "confidence": 0.991539,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " nada,",
+            "startMs": 8347,
+            "endMs": 8661,
+            "timestampMs": null,
+            "confidence": 0.942602,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " multiplica",
+            "startMs": 8929,
+            "endMs": 9400,
+            "timestampMs": null,
+            "confidence": 0.912088,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " lo",
+            "startMs": 9400,
+            "endMs": 9544,
+            "timestampMs": null,
+            "confidence": 0.987457,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 9544,
+            "endMs": 9728,
+            "timestampMs": null,
+            "confidence": 0.998719,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ya",
+            "startMs": 9728,
+            "endMs": 9871,
+            "timestampMs": null,
+            "confidence": 0.968592,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tienes,",
+            "startMs": 9871,
+            "endMs": 10179,
+            "timestampMs": null,
+            "confidence": 0.699501,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " así",
+            "startMs": 10625,
+            "endMs": 10809,
+            "timestampMs": null,
+            "confidence": 0.9409,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 10809,
+            "endMs": 10994,
+            "timestampMs": null,
+            "confidence": 0.995611,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " si",
+            "startMs": 10994,
+            "endMs": 11137,
+            "timestampMs": null,
+            "confidence": 0.963984,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tienes",
+            "startMs": 11137,
+            "endMs": 11444,
+            "timestampMs": null,
+            "confidence": 0.97606,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " un",
+            "startMs": 11444,
+            "endMs": 11587,
+            "timestampMs": null,
+            "confidence": 0.98634,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " proceso",
+            "startMs": 11587,
+            "endMs": 11936,
+            "timestampMs": null,
+            "confidence": 0.996742,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " claro,",
+            "startMs": 11936,
+            "endMs": 12202,
+            "timestampMs": null,
+            "confidence": 0.557057,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " lo",
+            "startMs": 12202,
+            "endMs": 12346,
+            "timestampMs": null,
+            "confidence": 0.933026,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " va",
+            "startMs": 12346,
+            "endMs": 12488,
+            "timestampMs": null,
+            "confidence": 0.621296,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " a",
+            "startMs": 12488,
+            "endMs": 12591,
+            "timestampMs": null,
+            "confidence": 0.961109,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " hacer",
+            "startMs": 12591,
+            "endMs": 12857,
+            "timestampMs": null,
+            "confidence": 0.990998,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " volar,",
+            "startMs": 13125,
+            "endMs": 13392,
+            "timestampMs": null,
+            "confidence": 0.495145,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " y",
+            "startMs": 13392,
+            "endMs": 13495,
+            "timestampMs": null,
+            "confidence": 0.822629,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " si",
+            "startMs": 13495,
+            "endMs": 13638,
+            "timestampMs": null,
+            "confidence": 0.984557,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tienes",
+            "startMs": 13638,
+            "endMs": 13947,
+            "timestampMs": null,
+            "confidence": 0.975686,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " caos,",
+            "startMs": 13947,
+            "endMs": 14173,
+            "timestampMs": null,
+            "confidence": 0.860822,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " vas",
+            "startMs": 14173,
+            "endMs": 14358,
+            "timestampMs": null,
+            "confidence": 0.984359,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " a",
+            "startMs": 14358,
+            "endMs": 14461,
+            "timestampMs": null,
+            "confidence": 0.997877,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tener",
+            "startMs": 14461,
+            "endMs": 14728,
+            "timestampMs": null,
+            "confidence": 0.990271,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " caos",
+            "startMs": 14728,
+            "endMs": 14954,
+            "timestampMs": null,
+            "confidence": 0.983331,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " a",
+            "startMs": 14954,
+            "endMs": 15056,
+            "timestampMs": null,
+            "confidence": 0.95947,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " toda",
+            "startMs": 15056,
+            "endMs": 15283,
+            "timestampMs": null,
+            "confidence": 0.98581,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " velocidad,",
+            "startMs": 15283,
+            "endMs": 15714,
+            "timestampMs": null,
+            "confidence": 0.583918,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " y",
+            "startMs": 16071,
+            "endMs": 16188,
+            "timestampMs": null,
+            "confidence": 0.953264,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " se",
+            "startMs": 16188,
+            "endMs": 16352,
+            "timestampMs": null,
+            "confidence": 0.983397,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ve",
+            "startMs": 16352,
+            "endMs": 16515,
+            "timestampMs": null,
+            "confidence": 0.996462,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " igual",
+            "startMs": 16515,
+            "endMs": 16819,
+            "timestampMs": null,
+            "confidence": 0.994412,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " en",
+            "startMs": 16819,
+            "endMs": 16982,
+            "timestampMs": null,
+            "confidence": 0.962472,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " todos",
+            "startMs": 16982,
+            "endMs": 17286,
+            "timestampMs": null,
+            "confidence": 0.973075,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " lados,",
+            "startMs": 17286,
+            "endMs": 17589,
+            "timestampMs": null,
+            "confidence": 0.710097,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " quien",
+            "startMs": 18036,
+            "endMs": 18235,
+            "timestampMs": null,
+            "confidence": 0.87116,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tiene",
+            "startMs": 18235,
+            "endMs": 18434,
+            "timestampMs": null,
+            "confidence": 0.959126,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " sus",
+            "startMs": 18434,
+            "endMs": 18571,
+            "timestampMs": null,
+            "confidence": 0.959918,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " documentos",
+            "startMs": 19018,
+            "endMs": 19464,
+            "timestampMs": null,
+            "confidence": 0.878821,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " regados",
+            "startMs": 19464,
+            "endMs": 19795,
+            "timestampMs": null,
+            "confidence": 0.996776,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " en",
+            "startMs": 19795,
+            "endMs": 19930,
+            "timestampMs": null,
+            "confidence": 0.940772,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " el",
+            "startMs": 19930,
+            "endMs": 20066,
+            "timestampMs": null,
+            "confidence": 0.947657,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " correo,",
+            "startMs": 20066,
+            "endMs": 20357,
+            "timestampMs": null,
+            "confidence": 0.625314,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ahora",
+            "startMs": 20536,
+            "endMs": 20759,
+            "timestampMs": null,
+            "confidence": 0.984487,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " los",
+            "startMs": 20759,
+            "endMs": 20913,
+            "timestampMs": null,
+            "confidence": 0.974234,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tiene",
+            "startMs": 20913,
+            "endMs": 21137,
+            "timestampMs": null,
+            "confidence": 0.976636,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " regados",
+            "startMs": 21137,
+            "endMs": 21429,
+            "timestampMs": null,
+            "confidence": 0.986596,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " y",
+            "startMs": 21607,
+            "endMs": 21703,
+            "timestampMs": null,
+            "confidence": 0.900043,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " en",
+            "startMs": 21703,
+            "endMs": 21837,
+            "timestampMs": null,
+            "confidence": 0.962865,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " más",
+            "startMs": 21837,
+            "endMs": 22009,
+            "timestampMs": null,
+            "confidence": 0.953104,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " versiones,",
+            "startMs": 22009,
+            "endMs": 22411,
+            "timestampMs": null,
+            "confidence": 0.824013,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " el",
+            "startMs": 22946,
+            "endMs": 23075,
+            "timestampMs": null,
+            "confidence": 0.944337,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 23075,
+            "endMs": 23240,
+            "timestampMs": null,
+            "confidence": 0.994894,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " no",
+            "startMs": 23240,
+            "endMs": 23370,
+            "timestampMs": null,
+            "confidence": 0.989946,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " sabe",
+            "startMs": 23370,
+            "endMs": 23571,
+            "timestampMs": null,
+            "confidence": 0.986959,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ni",
+            "startMs": 23839,
+            "endMs": 23981,
+            "timestampMs": null,
+            "confidence": 0.71573,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " siquiera",
+            "startMs": 23981,
+            "endMs": 24368,
+            "timestampMs": null,
+            "confidence": 0.884462,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 24368,
+            "endMs": 24551,
+            "timestampMs": null,
+            "confidence": 0.771584,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " responde",
+            "startMs": 24551,
+            "endMs": 24937,
+            "timestampMs": null,
+            "confidence": 0.737044,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ni",
+            "startMs": 24937,
+            "endMs": 25080,
+            "timestampMs": null,
+            "confidence": 0.789071,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " por",
+            "startMs": 25080,
+            "endMs": 25263,
+            "timestampMs": null,
+            "confidence": 0.612621,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " qué,",
+            "startMs": 25263,
+            "endMs": 25446,
+            "timestampMs": null,
+            "confidence": 0.498174,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " y",
+            "startMs": 25625,
+            "endMs": 25721,
+            "timestampMs": null,
+            "confidence": 0.87022,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " solamente",
+            "startMs": 25721,
+            "endMs": 26129,
+            "timestampMs": null,
+            "confidence": 0.70017,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " copia",
+            "startMs": 26129,
+            "endMs": 26380,
+            "timestampMs": null,
+            "confidence": 0.979241,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " lo",
+            "startMs": 26380,
+            "endMs": 26516,
+            "timestampMs": null,
+            "confidence": 0.965764,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 26516,
+            "endMs": 26690,
+            "timestampMs": null,
+            "confidence": 0.996599,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " le",
+            "startMs": 26690,
+            "endMs": 26826,
+            "timestampMs": null,
+            "confidence": 0.947399,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " da",
+            "startMs": 26826,
+            "endMs": 26961,
+            "timestampMs": null,
+            "confidence": 0.979731,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " la",
+            "startMs": 26961,
+            "endMs": 27096,
+            "timestampMs": null,
+            "confidence": 0.737098,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " IA,",
+            "startMs": 27096,
+            "endMs": 27232,
+            "timestampMs": null,
+            "confidence": 0.83499,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ahora",
+            "startMs": 27500,
+            "endMs": 27726,
+            "timestampMs": null,
+            "confidence": 0.978174,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tiene",
+            "startMs": 27726,
+            "endMs": 27953,
+            "timestampMs": null,
+            "confidence": 0.967226,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " el",
+            "startMs": 27953,
+            "endMs": 28074,
+            "timestampMs": null,
+            "confidence": 0.963778,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " triple",
+            "startMs": 28074,
+            "endMs": 28336,
+            "timestampMs": null,
+            "confidence": 0.967977,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " de",
+            "startMs": 28336,
+            "endMs": 28457,
+            "timestampMs": null,
+            "confidence": 0.992672,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " caos",
+            "startMs": 28457,
+            "endMs": 28648,
+            "timestampMs": null,
+            "confidence": 0.985188,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " con",
+            "startMs": 28648,
+            "endMs": 28805,
+            "timestampMs": null,
+            "confidence": 0.961371,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " peores",
+            "startMs": 28805,
+            "endMs": 29066,
+            "timestampMs": null,
+            "confidence": 0.982279,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " cosas",
+            "startMs": 29066,
+            "endMs": 29293,
+            "timestampMs": null,
+            "confidence": 0.989493,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " hechas,",
+            "startMs": 29293,
+            "endMs": 29554,
+            "timestampMs": null,
+            "confidence": 0.800759,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " la",
+            "startMs": 30000,
+            "endMs": 30136,
+            "timestampMs": null,
+            "confidence": 0.985624,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " inteligencia",
+            "startMs": 30136,
+            "endMs": 30660,
+            "timestampMs": null,
+            "confidence": 0.873002,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " artificial",
+            "startMs": 30660,
+            "endMs": 31106,
+            "timestampMs": null,
+            "confidence": 0.997432,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " te",
+            "startMs": 31106,
+            "endMs": 31242,
+            "timestampMs": null,
+            "confidence": 0.98015,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " da",
+            "startMs": 31242,
+            "endMs": 31378,
+            "timestampMs": null,
+            "confidence": 0.991684,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " velocidad,",
+            "startMs": 31378,
+            "endMs": 31786,
+            "timestampMs": null,
+            "confidence": 0.859548,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " pero",
+            "startMs": 32143,
+            "endMs": 32356,
+            "timestampMs": null,
+            "confidence": 0.979914,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " la",
+            "startMs": 32356,
+            "endMs": 32492,
+            "timestampMs": null,
+            "confidence": 0.980525,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " velocidad",
+            "startMs": 32492,
+            "endMs": 32900,
+            "timestampMs": null,
+            "confidence": 0.995011,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " sin",
+            "startMs": 32900,
+            "endMs": 33074,
+            "timestampMs": null,
+            "confidence": 0.998696,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " dirección",
+            "startMs": 33074,
+            "endMs": 33482,
+            "timestampMs": null,
+            "confidence": 0.996639,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " no",
+            "startMs": 33661,
+            "endMs": 33825,
+            "timestampMs": null,
+            "confidence": 0.671007,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " sirve",
+            "startMs": 33825,
+            "endMs": 34130,
+            "timestampMs": null,
+            "confidence": 0.995556,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " de",
+            "startMs": 34130,
+            "endMs": 34296,
+            "timestampMs": null,
+            "confidence": 0.955919,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " nada,",
+            "startMs": 34296,
+            "endMs": 34554,
+            "timestampMs": null,
+            "confidence": 0.95651,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " primero",
+            "startMs": 34911,
+            "endMs": 35243,
+            "timestampMs": null,
+            "confidence": 0.929661,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ordena,",
+            "startMs": 35243,
+            "endMs": 35536,
+            "timestampMs": null,
+            "confidence": 0.977066,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " primero",
+            "startMs": 35714,
+            "endMs": 36056,
+            "timestampMs": null,
+            "confidence": 0.980015,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " estructura,",
+            "startMs": 36056,
+            "endMs": 36518,
+            "timestampMs": null,
+            "confidence": 0.960374,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " después",
+            "startMs": 36786,
+            "endMs": 37175,
+            "timestampMs": null,
+            "confidence": 0.971745,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " acelera,",
+            "startMs": 37175,
+            "endMs": 37565,
+            "timestampMs": null,
+            "confidence": 0.963247,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " después",
+            "startMs": 37565,
+            "endMs": 37954,
+            "timestampMs": null,
+            "confidence": 0.966844,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " implementa,",
+            "startMs": 37954,
+            "endMs": 38482,
+            "timestampMs": null,
+            "confidence": 0.904252,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " esto",
+            "startMs": 38929,
+            "endMs": 39179,
+            "timestampMs": null,
+            "confidence": 0.973435,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " es",
+            "startMs": 39179,
+            "endMs": 39339,
+            "timestampMs": null,
+            "confidence": 0.981882,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " lo",
+            "startMs": 39339,
+            "endMs": 39500,
+            "timestampMs": null,
+            "confidence": 0.992532,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 39500,
+            "endMs": 39705,
+            "timestampMs": null,
+            "confidence": 0.997763,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " en",
+            "startMs": 39705,
+            "endMs": 39865,
+            "timestampMs": null,
+            "confidence": 0.974316,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " programación",
+            "startMs": 39865,
+            "endMs": 40482,
+            "timestampMs": null,
+            "confidence": 0.98475,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " se",
+            "startMs": 40482,
+            "endMs": 40642,
+            "timestampMs": null,
+            "confidence": 0.98052,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " conoce",
+            "startMs": 40642,
+            "endMs": 40984,
+            "timestampMs": null,
+            "confidence": 0.991945,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " como \"Spec-Driven Development\",",
+            "startMs": 40984,
+            "endMs": 43125,
+            "timestampMs": null,
+            "confidence": 0.211111,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " y",
+            "startMs": 43571,
+            "endMs": 43683,
+            "timestampMs": null,
+            "confidence": 0.944728,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " es",
+            "startMs": 43683,
+            "endMs": 43839,
+            "timestampMs": null,
+            "confidence": 0.995084,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " la",
+            "startMs": 44375,
+            "endMs": 44500,
+            "timestampMs": null,
+            "confidence": 0.991019,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " clave",
+            "startMs": 44500,
+            "endMs": 44732,
+            "timestampMs": null,
+            "confidence": 0.997828,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " para",
+            "startMs": 44911,
+            "endMs": 45154,
+            "timestampMs": null,
+            "confidence": 0.969736,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 45154,
+            "endMs": 45353,
+            "timestampMs": null,
+            "confidence": 0.992434,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " la",
+            "startMs": 45353,
+            "endMs": 45507,
+            "timestampMs": null,
+            "confidence": 0.980572,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " inteligencia",
+            "startMs": 45507,
+            "endMs": 46104,
+            "timestampMs": null,
+            "confidence": 0.938824,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " artificial",
+            "startMs": 46104,
+            "endMs": 46613,
+            "timestampMs": null,
+            "confidence": 0.997881,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " no",
+            "startMs": 46613,
+            "endMs": 46767,
+            "timestampMs": null,
+            "confidence": 0.975614,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " alucine",
+            "startMs": 46767,
+            "endMs": 47143,
+            "timestampMs": null,
+            "confidence": 0.97335,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tanto",
+            "startMs": 47321,
+            "endMs": 47588,
+            "timestampMs": null,
+            "confidence": 0.99445,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " y",
+            "startMs": 47588,
+            "endMs": 47689,
+            "timestampMs": null,
+            "confidence": 0.755583,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " no",
+            "startMs": 47689,
+            "endMs": 47832,
+            "timestampMs": null,
+            "confidence": 0.983708,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " se",
+            "startMs": 47832,
+            "endMs": 47976,
+            "timestampMs": null,
+            "confidence": 0.991026,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " vaya",
+            "startMs": 47976,
+            "endMs": 48200,
+            "timestampMs": null,
+            "confidence": 0.988638,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " a",
+            "startMs": 48200,
+            "endMs": 48303,
+            "timestampMs": null,
+            "confidence": 0.989283,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " dañar",
+            "startMs": 48303,
+            "endMs": 48568,
+            "timestampMs": null,
+            "confidence": 0.998108,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tu",
+            "startMs": 48568,
+            "endMs": 48712,
+            "timestampMs": null,
+            "confidence": 0.991874,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " código,",
+            "startMs": 48712,
+            "endMs": 49018,
+            "timestampMs": null,
+            "confidence": 0.950407,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " lo",
+            "startMs": 49375,
+            "endMs": 49519,
+            "timestampMs": null,
+            "confidence": 0.973149,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " mismo",
+            "startMs": 49519,
+            "endMs": 49785,
+            "timestampMs": null,
+            "confidence": 0.998426,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " lo",
+            "startMs": 49785,
+            "endMs": 49929,
+            "timestampMs": null,
+            "confidence": 0.961931,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " puedes",
+            "startMs": 49929,
+            "endMs": 50236,
+            "timestampMs": null,
+            "confidence": 0.959529,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " utilizar",
+            "startMs": 50236,
+            "endMs": 50625,
+            "timestampMs": null,
+            "confidence": 0.969231,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " cuando",
+            "startMs": 50893,
+            "endMs": 51194,
+            "timestampMs": null,
+            "confidence": 0.928168,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " crees",
+            "startMs": 51194,
+            "endMs": 51454,
+            "timestampMs": null,
+            "confidence": 0.929565,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " documentos",
+            "startMs": 51454,
+            "endMs": 51915,
+            "timestampMs": null,
+            "confidence": 0.976775,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " jurídicos",
+            "startMs": 51915,
+            "endMs": 52336,
+            "timestampMs": null,
+            "confidence": 0.986924,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " y",
+            "startMs": 52336,
+            "endMs": 52437,
+            "timestampMs": null,
+            "confidence": 0.952832,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " contratos",
+            "startMs": 52437,
+            "endMs": 52857,
+            "timestampMs": null,
+            "confidence": 0.969442,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " o",
+            "startMs": 53214,
+            "endMs": 53318,
+            "timestampMs": null,
+            "confidence": 0.613123,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " cosas",
+            "startMs": 53318,
+            "endMs": 53588,
+            "timestampMs": null,
+            "confidence": 0.995501,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " serias",
+            "startMs": 53588,
+            "endMs": 53899,
+            "timestampMs": null,
+            "confidence": 0.979677,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " propuestas",
+            "startMs": 53899,
+            "endMs": 54377,
+            "timestampMs": null,
+            "confidence": 0.575273,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " para",
+            "startMs": 54377,
+            "endMs": 54605,
+            "timestampMs": null,
+            "confidence": 0.985173,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " clientes,",
+            "startMs": 54605,
+            "endMs": 55000,
+            "timestampMs": null,
+            "confidence": 0.96428,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " primero",
+            "startMs": 55357,
+            "endMs": 55707,
+            "timestampMs": null,
+            "confidence": 0.93644,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " estructura,",
+            "startMs": 55707,
+            "endMs": 56181,
+            "timestampMs": null,
+            "confidence": 0.976839,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " primero",
+            "startMs": 56181,
+            "endMs": 56531,
+            "timestampMs": null,
+            "confidence": 0.927338,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ordena,",
+            "startMs": 56531,
+            "endMs": 56841,
+            "timestampMs": null,
+            "confidence": 0.963148,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " la",
+            "startMs": 56841,
+            "endMs": 56985,
+            "timestampMs": null,
+            "confidence": 0.982354,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " IA",
+            "startMs": 56985,
+            "endMs": 57129,
+            "timestampMs": null,
+            "confidence": 0.982396,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " te",
+            "startMs": 57129,
+            "endMs": 57273,
+            "timestampMs": null,
+            "confidence": 0.97397,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " puede",
+            "startMs": 57273,
+            "endMs": 57541,
+            "timestampMs": null,
+            "confidence": 0.949997,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ayudar",
+            "startMs": 57541,
+            "endMs": 57850,
+            "timestampMs": null,
+            "confidence": 0.992201,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " a",
+            "startMs": 57850,
+            "endMs": 57954,
+            "timestampMs": null,
+            "confidence": 0.98861,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ordenar,",
+            "startMs": 57954,
+            "endMs": 58304,
+            "timestampMs": null,
+            "confidence": 0.874888,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " después",
+            "startMs": 58482,
+            "endMs": 58795,
+            "timestampMs": null,
+            "confidence": 0.967857,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " acelera.",
+            "startMs": 58795,
+            "endMs": 59107,
+            "timestampMs": null,
+            "confidence": 0.943774,
+            "parte": "cuerpo"
+          }
+        ],
+        "cuerpoInicioMs": 0,
+        "cuerpoRecorteMs": 0,
+        "cierreInicioMs": null,
+        "duracionMs": 59437
+      },
+      "contrappto": {
+        "segmentos": [
+          {
+            "desde": 1.391,
+            "hasta": 67.961,
+            "archivo": "limpios/2026-10/copy_B098CB0D-CB2E-44AD-9CD8-B8ACDDFD163C.mp4",
+            "parte": "cuerpo",
+            "velocidad": 1.12
+          },
+          {
+            "desde": 1.4,
+            "hasta": 7.9,
+            "archivo": "limpios/2026-10/IMG_4360.mp4",
+            "parte": "cierre",
+            "velocidad": 1.12,
+            "encuadre": {
+              "x": 0.483,
+              "y": 0.703,
+              "alto": 0.431
+            }
+          },
+          {
+            "desde": 8.5,
+            "hasta": 21.95,
+            "archivo": "limpios/2026-10/IMG_4360.mp4",
+            "parte": "cierre",
+            "velocidad": 1.12,
+            "encuadre": {
+              "x": 0.567,
+              "y": 0.709,
+              "alto": 0.519
+            }
+          }
+        ],
+        "subtitulos": [
+          {
+            "text": " Si",
+            "startMs": 179,
+            "endMs": 320,
+            "timestampMs": null,
+            "confidence": 0.590029,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tu",
+            "startMs": 320,
+            "endMs": 461,
+            "timestampMs": null,
+            "confidence": 0.937695,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " trabajo",
+            "startMs": 461,
+            "endMs": 803,
+            "timestampMs": null,
+            "confidence": 0.978174,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " es",
+            "startMs": 803,
+            "endMs": 944,
+            "timestampMs": null,
+            "confidence": 0.97633,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " un",
+            "startMs": 944,
+            "endMs": 1084,
+            "timestampMs": null,
+            "confidence": 0.977005,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " desorden,",
+            "startMs": 1084,
+            "endMs": 1467,
+            "timestampMs": null,
+            "confidence": 0.777883,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " la",
+            "startMs": 1467,
+            "endMs": 1608,
+            "timestampMs": null,
+            "confidence": 0.923564,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " inteligencia",
+            "startMs": 1608,
+            "endMs": 2151,
+            "timestampMs": null,
+            "confidence": 0.523627,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " artificial",
+            "startMs": 2151,
+            "endMs": 2614,
+            "timestampMs": null,
+            "confidence": 0.948814,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " no",
+            "startMs": 2614,
+            "endMs": 2755,
+            "timestampMs": null,
+            "confidence": 0.941951,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " te",
+            "startMs": 2755,
+            "endMs": 2896,
+            "timestampMs": null,
+            "confidence": 0.848827,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " lo",
+            "startMs": 2896,
+            "endMs": 3037,
+            "timestampMs": null,
+            "confidence": 0.939646,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " va",
+            "startMs": 3037,
+            "endMs": 3178,
+            "timestampMs": null,
+            "confidence": 0.463154,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " a",
+            "startMs": 3178,
+            "endMs": 3279,
+            "timestampMs": null,
+            "confidence": 0.945076,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " arreglar,",
+            "startMs": 3279,
+            "endMs": 3661,
+            "timestampMs": null,
+            "confidence": 0.545482,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " lo",
+            "startMs": 3929,
+            "endMs": 4076,
+            "timestampMs": null,
+            "confidence": 0.919872,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 4076,
+            "endMs": 4265,
+            "timestampMs": null,
+            "confidence": 0.993157,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " va",
+            "startMs": 4265,
+            "endMs": 4413,
+            "timestampMs": null,
+            "confidence": 0.962327,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " a",
+            "startMs": 4413,
+            "endMs": 4518,
+            "timestampMs": null,
+            "confidence": 0.94088,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " hacer",
+            "startMs": 4518,
+            "endMs": 4792,
+            "timestampMs": null,
+            "confidence": 0.915494,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " es",
+            "startMs": 4792,
+            "endMs": 4939,
+            "timestampMs": null,
+            "confidence": 0.957326,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " devolverte",
+            "startMs": 4939,
+            "endMs": 5424,
+            "timestampMs": null,
+            "confidence": 0.796973,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " un",
+            "startMs": 5424,
+            "endMs": 5571,
+            "timestampMs": null,
+            "confidence": 0.922237,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " desorden",
+            "startMs": 5571,
+            "endMs": 5971,
+            "timestampMs": null,
+            "confidence": 0.926567,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " aún",
+            "startMs": 5971,
+            "endMs": 6161,
+            "timestampMs": null,
+            "confidence": 0.463091,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " más",
+            "startMs": 6339,
+            "endMs": 6574,
+            "timestampMs": null,
+            "confidence": 0.985695,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " rápido,",
+            "startMs": 6574,
+            "endMs": 6964,
+            "timestampMs": null,
+            "confidence": 0.475565,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " la",
+            "startMs": 7321,
+            "endMs": 7521,
+            "timestampMs": null,
+            "confidence": 0.933476,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " IA",
+            "startMs": 7521,
+            "endMs": 7721,
+            "timestampMs": null,
+            "confidence": 0.532291,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " no",
+            "startMs": 7721,
+            "endMs": 7920,
+            "timestampMs": null,
+            "confidence": 0.722854,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ordena",
+            "startMs": 7920,
+            "endMs": 8347,
+            "timestampMs": null,
+            "confidence": 0.991539,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " nada,",
+            "startMs": 8347,
+            "endMs": 8661,
+            "timestampMs": null,
+            "confidence": 0.942602,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " multiplica",
+            "startMs": 8929,
+            "endMs": 9400,
+            "timestampMs": null,
+            "confidence": 0.912088,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " lo",
+            "startMs": 9400,
+            "endMs": 9544,
+            "timestampMs": null,
+            "confidence": 0.987457,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 9544,
+            "endMs": 9728,
+            "timestampMs": null,
+            "confidence": 0.998719,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ya",
+            "startMs": 9728,
+            "endMs": 9871,
+            "timestampMs": null,
+            "confidence": 0.968592,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tienes,",
+            "startMs": 9871,
+            "endMs": 10179,
+            "timestampMs": null,
+            "confidence": 0.699501,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " así",
+            "startMs": 10625,
+            "endMs": 10809,
+            "timestampMs": null,
+            "confidence": 0.9409,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 10809,
+            "endMs": 10994,
+            "timestampMs": null,
+            "confidence": 0.995611,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " si",
+            "startMs": 10994,
+            "endMs": 11137,
+            "timestampMs": null,
+            "confidence": 0.963984,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tienes",
+            "startMs": 11137,
+            "endMs": 11444,
+            "timestampMs": null,
+            "confidence": 0.97606,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " un",
+            "startMs": 11444,
+            "endMs": 11587,
+            "timestampMs": null,
+            "confidence": 0.98634,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " proceso",
+            "startMs": 11587,
+            "endMs": 11936,
+            "timestampMs": null,
+            "confidence": 0.996742,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " claro,",
+            "startMs": 11936,
+            "endMs": 12202,
+            "timestampMs": null,
+            "confidence": 0.557057,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " lo",
+            "startMs": 12202,
+            "endMs": 12346,
+            "timestampMs": null,
+            "confidence": 0.933026,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " va",
+            "startMs": 12346,
+            "endMs": 12488,
+            "timestampMs": null,
+            "confidence": 0.621296,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " a",
+            "startMs": 12488,
+            "endMs": 12591,
+            "timestampMs": null,
+            "confidence": 0.961109,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " hacer",
+            "startMs": 12591,
+            "endMs": 12857,
+            "timestampMs": null,
+            "confidence": 0.990998,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " volar,",
+            "startMs": 13125,
+            "endMs": 13392,
+            "timestampMs": null,
+            "confidence": 0.495145,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " y",
+            "startMs": 13392,
+            "endMs": 13495,
+            "timestampMs": null,
+            "confidence": 0.822629,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " si",
+            "startMs": 13495,
+            "endMs": 13638,
+            "timestampMs": null,
+            "confidence": 0.984557,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tienes",
+            "startMs": 13638,
+            "endMs": 13947,
+            "timestampMs": null,
+            "confidence": 0.975686,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " caos,",
+            "startMs": 13947,
+            "endMs": 14173,
+            "timestampMs": null,
+            "confidence": 0.860822,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " vas",
+            "startMs": 14173,
+            "endMs": 14358,
+            "timestampMs": null,
+            "confidence": 0.984359,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " a",
+            "startMs": 14358,
+            "endMs": 14461,
+            "timestampMs": null,
+            "confidence": 0.997877,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tener",
+            "startMs": 14461,
+            "endMs": 14728,
+            "timestampMs": null,
+            "confidence": 0.990271,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " caos",
+            "startMs": 14728,
+            "endMs": 14954,
+            "timestampMs": null,
+            "confidence": 0.983331,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " a",
+            "startMs": 14954,
+            "endMs": 15056,
+            "timestampMs": null,
+            "confidence": 0.95947,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " toda",
+            "startMs": 15056,
+            "endMs": 15283,
+            "timestampMs": null,
+            "confidence": 0.98581,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " velocidad,",
+            "startMs": 15283,
+            "endMs": 15714,
+            "timestampMs": null,
+            "confidence": 0.583918,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " y",
+            "startMs": 16071,
+            "endMs": 16188,
+            "timestampMs": null,
+            "confidence": 0.953264,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " se",
+            "startMs": 16188,
+            "endMs": 16352,
+            "timestampMs": null,
+            "confidence": 0.983397,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ve",
+            "startMs": 16352,
+            "endMs": 16515,
+            "timestampMs": null,
+            "confidence": 0.996462,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " igual",
+            "startMs": 16515,
+            "endMs": 16819,
+            "timestampMs": null,
+            "confidence": 0.994412,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " en",
+            "startMs": 16819,
+            "endMs": 16982,
+            "timestampMs": null,
+            "confidence": 0.962472,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " todos",
+            "startMs": 16982,
+            "endMs": 17286,
+            "timestampMs": null,
+            "confidence": 0.973075,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " lados,",
+            "startMs": 17286,
+            "endMs": 17589,
+            "timestampMs": null,
+            "confidence": 0.710097,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " quien",
+            "startMs": 18036,
+            "endMs": 18235,
+            "timestampMs": null,
+            "confidence": 0.87116,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tiene",
+            "startMs": 18235,
+            "endMs": 18434,
+            "timestampMs": null,
+            "confidence": 0.959126,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " sus",
+            "startMs": 18434,
+            "endMs": 18571,
+            "timestampMs": null,
+            "confidence": 0.959918,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " documentos",
+            "startMs": 19018,
+            "endMs": 19464,
+            "timestampMs": null,
+            "confidence": 0.878821,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " regados",
+            "startMs": 19464,
+            "endMs": 19795,
+            "timestampMs": null,
+            "confidence": 0.996776,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " en",
+            "startMs": 19795,
+            "endMs": 19930,
+            "timestampMs": null,
+            "confidence": 0.940772,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " el",
+            "startMs": 19930,
+            "endMs": 20066,
+            "timestampMs": null,
+            "confidence": 0.947657,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " correo,",
+            "startMs": 20066,
+            "endMs": 20357,
+            "timestampMs": null,
+            "confidence": 0.625314,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ahora",
+            "startMs": 20536,
+            "endMs": 20759,
+            "timestampMs": null,
+            "confidence": 0.984487,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " los",
+            "startMs": 20759,
+            "endMs": 20913,
+            "timestampMs": null,
+            "confidence": 0.974234,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tiene",
+            "startMs": 20913,
+            "endMs": 21137,
+            "timestampMs": null,
+            "confidence": 0.976636,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " regados",
+            "startMs": 21137,
+            "endMs": 21429,
+            "timestampMs": null,
+            "confidence": 0.986596,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " y",
+            "startMs": 21607,
+            "endMs": 21703,
+            "timestampMs": null,
+            "confidence": 0.900043,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " en",
+            "startMs": 21703,
+            "endMs": 21837,
+            "timestampMs": null,
+            "confidence": 0.962865,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " más",
+            "startMs": 21837,
+            "endMs": 22009,
+            "timestampMs": null,
+            "confidence": 0.953104,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " versiones,",
+            "startMs": 22009,
+            "endMs": 22411,
+            "timestampMs": null,
+            "confidence": 0.824013,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " el",
+            "startMs": 22946,
+            "endMs": 23075,
+            "timestampMs": null,
+            "confidence": 0.944337,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 23075,
+            "endMs": 23240,
+            "timestampMs": null,
+            "confidence": 0.994894,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " no",
+            "startMs": 23240,
+            "endMs": 23370,
+            "timestampMs": null,
+            "confidence": 0.989946,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " sabe",
+            "startMs": 23370,
+            "endMs": 23571,
+            "timestampMs": null,
+            "confidence": 0.986959,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ni",
+            "startMs": 23839,
+            "endMs": 23981,
+            "timestampMs": null,
+            "confidence": 0.71573,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " siquiera",
+            "startMs": 23981,
+            "endMs": 24368,
+            "timestampMs": null,
+            "confidence": 0.884462,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 24368,
+            "endMs": 24551,
+            "timestampMs": null,
+            "confidence": 0.771584,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " responde",
+            "startMs": 24551,
+            "endMs": 24937,
+            "timestampMs": null,
+            "confidence": 0.737044,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ni",
+            "startMs": 24937,
+            "endMs": 25080,
+            "timestampMs": null,
+            "confidence": 0.789071,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " por",
+            "startMs": 25080,
+            "endMs": 25263,
+            "timestampMs": null,
+            "confidence": 0.612621,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " qué,",
+            "startMs": 25263,
+            "endMs": 25446,
+            "timestampMs": null,
+            "confidence": 0.498174,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " y",
+            "startMs": 25625,
+            "endMs": 25721,
+            "timestampMs": null,
+            "confidence": 0.87022,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " solamente",
+            "startMs": 25721,
+            "endMs": 26129,
+            "timestampMs": null,
+            "confidence": 0.70017,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " copia",
+            "startMs": 26129,
+            "endMs": 26380,
+            "timestampMs": null,
+            "confidence": 0.979241,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " lo",
+            "startMs": 26380,
+            "endMs": 26516,
+            "timestampMs": null,
+            "confidence": 0.965764,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 26516,
+            "endMs": 26690,
+            "timestampMs": null,
+            "confidence": 0.996599,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " le",
+            "startMs": 26690,
+            "endMs": 26826,
+            "timestampMs": null,
+            "confidence": 0.947399,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " da",
+            "startMs": 26826,
+            "endMs": 26961,
+            "timestampMs": null,
+            "confidence": 0.979731,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " la",
+            "startMs": 26961,
+            "endMs": 27096,
+            "timestampMs": null,
+            "confidence": 0.737098,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " IA,",
+            "startMs": 27096,
+            "endMs": 27232,
+            "timestampMs": null,
+            "confidence": 0.83499,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ahora",
+            "startMs": 27500,
+            "endMs": 27726,
+            "timestampMs": null,
+            "confidence": 0.978174,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tiene",
+            "startMs": 27726,
+            "endMs": 27953,
+            "timestampMs": null,
+            "confidence": 0.967226,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " el",
+            "startMs": 27953,
+            "endMs": 28074,
+            "timestampMs": null,
+            "confidence": 0.963778,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " triple",
+            "startMs": 28074,
+            "endMs": 28336,
+            "timestampMs": null,
+            "confidence": 0.967977,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " de",
+            "startMs": 28336,
+            "endMs": 28457,
+            "timestampMs": null,
+            "confidence": 0.992672,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " caos",
+            "startMs": 28457,
+            "endMs": 28648,
+            "timestampMs": null,
+            "confidence": 0.985188,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " con",
+            "startMs": 28648,
+            "endMs": 28805,
+            "timestampMs": null,
+            "confidence": 0.961371,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " peores",
+            "startMs": 28805,
+            "endMs": 29066,
+            "timestampMs": null,
+            "confidence": 0.982279,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " cosas",
+            "startMs": 29066,
+            "endMs": 29293,
+            "timestampMs": null,
+            "confidence": 0.989493,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " hechas,",
+            "startMs": 29293,
+            "endMs": 29554,
+            "timestampMs": null,
+            "confidence": 0.800759,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " la",
+            "startMs": 30000,
+            "endMs": 30136,
+            "timestampMs": null,
+            "confidence": 0.985624,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " inteligencia",
+            "startMs": 30136,
+            "endMs": 30660,
+            "timestampMs": null,
+            "confidence": 0.873002,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " artificial",
+            "startMs": 30660,
+            "endMs": 31106,
+            "timestampMs": null,
+            "confidence": 0.997432,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " te",
+            "startMs": 31106,
+            "endMs": 31242,
+            "timestampMs": null,
+            "confidence": 0.98015,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " da",
+            "startMs": 31242,
+            "endMs": 31378,
+            "timestampMs": null,
+            "confidence": 0.991684,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " velocidad,",
+            "startMs": 31378,
+            "endMs": 31786,
+            "timestampMs": null,
+            "confidence": 0.859548,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " pero",
+            "startMs": 32143,
+            "endMs": 32356,
+            "timestampMs": null,
+            "confidence": 0.979914,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " la",
+            "startMs": 32356,
+            "endMs": 32492,
+            "timestampMs": null,
+            "confidence": 0.980525,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " velocidad",
+            "startMs": 32492,
+            "endMs": 32900,
+            "timestampMs": null,
+            "confidence": 0.995011,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " sin",
+            "startMs": 32900,
+            "endMs": 33074,
+            "timestampMs": null,
+            "confidence": 0.998696,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " dirección",
+            "startMs": 33074,
+            "endMs": 33482,
+            "timestampMs": null,
+            "confidence": 0.996639,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " no",
+            "startMs": 33661,
+            "endMs": 33825,
+            "timestampMs": null,
+            "confidence": 0.671007,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " sirve",
+            "startMs": 33825,
+            "endMs": 34130,
+            "timestampMs": null,
+            "confidence": 0.995556,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " de",
+            "startMs": 34130,
+            "endMs": 34296,
+            "timestampMs": null,
+            "confidence": 0.955919,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " nada,",
+            "startMs": 34296,
+            "endMs": 34554,
+            "timestampMs": null,
+            "confidence": 0.95651,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " primero",
+            "startMs": 34911,
+            "endMs": 35243,
+            "timestampMs": null,
+            "confidence": 0.929661,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ordena,",
+            "startMs": 35243,
+            "endMs": 35536,
+            "timestampMs": null,
+            "confidence": 0.977066,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " primero",
+            "startMs": 35714,
+            "endMs": 36056,
+            "timestampMs": null,
+            "confidence": 0.980015,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " estructura,",
+            "startMs": 36056,
+            "endMs": 36518,
+            "timestampMs": null,
+            "confidence": 0.960374,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " después",
+            "startMs": 36786,
+            "endMs": 37175,
+            "timestampMs": null,
+            "confidence": 0.971745,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " acelera,",
+            "startMs": 37175,
+            "endMs": 37565,
+            "timestampMs": null,
+            "confidence": 0.963247,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " después",
+            "startMs": 37565,
+            "endMs": 37954,
+            "timestampMs": null,
+            "confidence": 0.966844,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " implementa,",
+            "startMs": 37954,
+            "endMs": 38482,
+            "timestampMs": null,
+            "confidence": 0.904252,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " esto",
+            "startMs": 38929,
+            "endMs": 39179,
+            "timestampMs": null,
+            "confidence": 0.973435,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " es",
+            "startMs": 39179,
+            "endMs": 39339,
+            "timestampMs": null,
+            "confidence": 0.981882,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " lo",
+            "startMs": 39339,
+            "endMs": 39500,
+            "timestampMs": null,
+            "confidence": 0.992532,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 39500,
+            "endMs": 39705,
+            "timestampMs": null,
+            "confidence": 0.997763,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " en",
+            "startMs": 39705,
+            "endMs": 39865,
+            "timestampMs": null,
+            "confidence": 0.974316,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " programación",
+            "startMs": 39865,
+            "endMs": 40482,
+            "timestampMs": null,
+            "confidence": 0.98475,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " se",
+            "startMs": 40482,
+            "endMs": 40642,
+            "timestampMs": null,
+            "confidence": 0.98052,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " conoce",
+            "startMs": 40642,
+            "endMs": 40984,
+            "timestampMs": null,
+            "confidence": 0.991945,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " como \"Spec-Driven Development\",",
+            "startMs": 40984,
+            "endMs": 43125,
+            "timestampMs": null,
+            "confidence": 0.211111,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " y",
+            "startMs": 43571,
+            "endMs": 43683,
+            "timestampMs": null,
+            "confidence": 0.944728,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " es",
+            "startMs": 43683,
+            "endMs": 43839,
+            "timestampMs": null,
+            "confidence": 0.995084,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " la",
+            "startMs": 44375,
+            "endMs": 44500,
+            "timestampMs": null,
+            "confidence": 0.991019,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " clave",
+            "startMs": 44500,
+            "endMs": 44732,
+            "timestampMs": null,
+            "confidence": 0.997828,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " para",
+            "startMs": 44911,
+            "endMs": 45154,
+            "timestampMs": null,
+            "confidence": 0.969736,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 45154,
+            "endMs": 45353,
+            "timestampMs": null,
+            "confidence": 0.992434,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " la",
+            "startMs": 45353,
+            "endMs": 45507,
+            "timestampMs": null,
+            "confidence": 0.980572,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " inteligencia",
+            "startMs": 45507,
+            "endMs": 46104,
+            "timestampMs": null,
+            "confidence": 0.938824,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " artificial",
+            "startMs": 46104,
+            "endMs": 46613,
+            "timestampMs": null,
+            "confidence": 0.997881,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " no",
+            "startMs": 46613,
+            "endMs": 46767,
+            "timestampMs": null,
+            "confidence": 0.975614,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " alucine",
+            "startMs": 46767,
+            "endMs": 47143,
+            "timestampMs": null,
+            "confidence": 0.97335,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tanto",
+            "startMs": 47321,
+            "endMs": 47588,
+            "timestampMs": null,
+            "confidence": 0.99445,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " y",
+            "startMs": 47588,
+            "endMs": 47689,
+            "timestampMs": null,
+            "confidence": 0.755583,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " no",
+            "startMs": 47689,
+            "endMs": 47832,
+            "timestampMs": null,
+            "confidence": 0.983708,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " se",
+            "startMs": 47832,
+            "endMs": 47976,
+            "timestampMs": null,
+            "confidence": 0.991026,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " vaya",
+            "startMs": 47976,
+            "endMs": 48200,
+            "timestampMs": null,
+            "confidence": 0.988638,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " a",
+            "startMs": 48200,
+            "endMs": 48303,
+            "timestampMs": null,
+            "confidence": 0.989283,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " dañar",
+            "startMs": 48303,
+            "endMs": 48568,
+            "timestampMs": null,
+            "confidence": 0.998108,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tu",
+            "startMs": 48568,
+            "endMs": 48712,
+            "timestampMs": null,
+            "confidence": 0.991874,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " código,",
+            "startMs": 48712,
+            "endMs": 49018,
+            "timestampMs": null,
+            "confidence": 0.950407,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " lo",
+            "startMs": 49375,
+            "endMs": 49519,
+            "timestampMs": null,
+            "confidence": 0.973149,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " mismo",
+            "startMs": 49519,
+            "endMs": 49785,
+            "timestampMs": null,
+            "confidence": 0.998426,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " lo",
+            "startMs": 49785,
+            "endMs": 49929,
+            "timestampMs": null,
+            "confidence": 0.961931,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " puedes",
+            "startMs": 49929,
+            "endMs": 50236,
+            "timestampMs": null,
+            "confidence": 0.959529,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " utilizar",
+            "startMs": 50236,
+            "endMs": 50625,
+            "timestampMs": null,
+            "confidence": 0.969231,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " cuando",
+            "startMs": 50893,
+            "endMs": 51194,
+            "timestampMs": null,
+            "confidence": 0.928168,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " crees",
+            "startMs": 51194,
+            "endMs": 51454,
+            "timestampMs": null,
+            "confidence": 0.929565,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " documentos",
+            "startMs": 51454,
+            "endMs": 51915,
+            "timestampMs": null,
+            "confidence": 0.976775,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " jurídicos",
+            "startMs": 51915,
+            "endMs": 52336,
+            "timestampMs": null,
+            "confidence": 0.986924,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " y",
+            "startMs": 52336,
+            "endMs": 52437,
+            "timestampMs": null,
+            "confidence": 0.952832,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " contratos",
+            "startMs": 52437,
+            "endMs": 52857,
+            "timestampMs": null,
+            "confidence": 0.969442,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " o",
+            "startMs": 53214,
+            "endMs": 53318,
+            "timestampMs": null,
+            "confidence": 0.613123,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " cosas",
+            "startMs": 53318,
+            "endMs": 53588,
+            "timestampMs": null,
+            "confidence": 0.995501,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " serias",
+            "startMs": 53588,
+            "endMs": 53899,
+            "timestampMs": null,
+            "confidence": 0.979677,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " propuestas",
+            "startMs": 53899,
+            "endMs": 54377,
+            "timestampMs": null,
+            "confidence": 0.575273,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " para",
+            "startMs": 54377,
+            "endMs": 54605,
+            "timestampMs": null,
+            "confidence": 0.985173,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " clientes,",
+            "startMs": 54605,
+            "endMs": 55000,
+            "timestampMs": null,
+            "confidence": 0.96428,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " primero",
+            "startMs": 55357,
+            "endMs": 55707,
+            "timestampMs": null,
+            "confidence": 0.93644,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " estructura,",
+            "startMs": 55707,
+            "endMs": 56181,
+            "timestampMs": null,
+            "confidence": 0.976839,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " primero",
+            "startMs": 56181,
+            "endMs": 56531,
+            "timestampMs": null,
+            "confidence": 0.927338,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ordena,",
+            "startMs": 56531,
+            "endMs": 56841,
+            "timestampMs": null,
+            "confidence": 0.963148,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " la",
+            "startMs": 56841,
+            "endMs": 56985,
+            "timestampMs": null,
+            "confidence": 0.982354,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " IA",
+            "startMs": 56985,
+            "endMs": 57129,
+            "timestampMs": null,
+            "confidence": 0.982396,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " te",
+            "startMs": 57129,
+            "endMs": 57273,
+            "timestampMs": null,
+            "confidence": 0.97397,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " puede",
+            "startMs": 57273,
+            "endMs": 57541,
+            "timestampMs": null,
+            "confidence": 0.949997,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ayudar",
+            "startMs": 57541,
+            "endMs": 57850,
+            "timestampMs": null,
+            "confidence": 0.992201,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " a",
+            "startMs": 57850,
+            "endMs": 57954,
+            "timestampMs": null,
+            "confidence": 0.98861,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ordenar,",
+            "startMs": 57954,
+            "endMs": 58304,
+            "timestampMs": null,
+            "confidence": 0.874888,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " después",
+            "startMs": 58482,
+            "endMs": 58795,
+            "timestampMs": null,
+            "confidence": 0.967857,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " acelera.",
+            "startMs": 58795,
+            "endMs": 59107,
+            "timestampMs": null,
+            "confidence": 0.943774,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Si",
+            "startMs": 59616,
+            "endMs": 59754,
+            "timestampMs": null,
+            "confidence": 0.562455,
+            "parte": "cierre"
+          },
+          {
+            "text": " necesitas",
+            "startMs": 59754,
+            "endMs": 60168,
+            "timestampMs": null,
+            "confidence": 0.727593,
+            "parte": "cierre"
+          },
+          {
+            "text": " contratar",
+            "startMs": 60168,
+            "endMs": 60582,
+            "timestampMs": null,
+            "confidence": 0.94769,
+            "parte": "cierre"
+          },
+          {
+            "text": " a",
+            "startMs": 60582,
+            "endMs": 60680,
+            "timestampMs": null,
+            "confidence": 0.930454,
+            "parte": "cierre"
+          },
+          {
+            "text": " más",
+            "startMs": 60680,
+            "endMs": 60858,
+            "timestampMs": null,
+            "confidence": 0.912456,
+            "parte": "cierre"
+          },
+          {
+            "text": " de",
+            "startMs": 60858,
+            "endMs": 60996,
+            "timestampMs": null,
+            "confidence": 0.994882,
+            "parte": "cierre"
+          },
+          {
+            "text": " 20,",
+            "startMs": 60996,
+            "endMs": 61134,
+            "timestampMs": null,
+            "confidence": 0.773778,
+            "parte": "cierre"
+          },
+          {
+            "text": " 30",
+            "startMs": 61402,
+            "endMs": 61560,
+            "timestampMs": null,
+            "confidence": 0.960811,
+            "parte": "cierre"
+          },
+          {
+            "text": " o",
+            "startMs": 61560,
+            "endMs": 61673,
+            "timestampMs": null,
+            "confidence": 0.886833,
+            "parte": "cierre"
+          },
+          {
+            "text": " 50",
+            "startMs": 61673,
+            "endMs": 61831,
+            "timestampMs": null,
+            "confidence": 0.964477,
+            "parte": "cierre"
+          },
+          {
+            "text": " personas",
+            "startMs": 61831,
+            "endMs": 62261,
+            "timestampMs": null,
+            "confidence": 0.983342,
+            "parte": "cierre"
+          },
+          {
+            "text": " al",
+            "startMs": 62261,
+            "endMs": 62419,
+            "timestampMs": null,
+            "confidence": 0.959027,
+            "parte": "cierre"
+          },
+          {
+            "text": " tiempo",
+            "startMs": 62419,
+            "endMs": 62758,
+            "timestampMs": null,
+            "confidence": 0.975106,
+            "parte": "cierre"
+          },
+          {
+            "text": " o",
+            "startMs": 62758,
+            "endMs": 62871,
+            "timestampMs": null,
+            "confidence": 0.565626,
+            "parte": "cierre"
+          },
+          {
+            "text": " lo",
+            "startMs": 62871,
+            "endMs": 63029,
+            "timestampMs": null,
+            "confidence": 0.975694,
+            "parte": "cierre"
+          },
+          {
+            "text": " haces",
+            "startMs": 63029,
+            "endMs": 63323,
+            "timestampMs": null,
+            "confidence": 0.966752,
+            "parte": "cierre"
+          },
+          {
+            "text": " al",
+            "startMs": 63323,
+            "endMs": 63481,
+            "timestampMs": null,
+            "confidence": 0.920871,
+            "parte": "cierre"
+          },
+          {
+            "text": " año,",
+            "startMs": 63481,
+            "endMs": 63685,
+            "timestampMs": null,
+            "confidence": 0.713542,
+            "parte": "cierre"
+          },
+          {
+            "text": " escríbeme",
+            "startMs": 63685,
+            "endMs": 64160,
+            "timestampMs": null,
+            "confidence": 0.687334,
+            "parte": "cierre"
+          },
+          {
+            "text": " y",
+            "startMs": 64160,
+            "endMs": 64272,
+            "timestampMs": null,
+            "confidence": 0.942065,
+            "parte": "cierre"
+          },
+          {
+            "text": " te",
+            "startMs": 64272,
+            "endMs": 64430,
+            "timestampMs": null,
+            "confidence": 0.947663,
+            "parte": "cierre"
+          },
+          {
+            "text": " muestro",
+            "startMs": 64430,
+            "endMs": 64815,
+            "timestampMs": null,
+            "confidence": 0.995936,
+            "parte": "cierre"
+          },
+          {
+            "text": " el",
+            "startMs": 64815,
+            "endMs": 64973,
+            "timestampMs": null,
+            "confidence": 0.989902,
+            "parte": "cierre"
+          },
+          {
+            "text": " dashboard",
+            "startMs": 65420,
+            "endMs": 65955,
+            "timestampMs": null,
+            "confidence": 0.659058,
+            "parte": "cierre"
+          },
+          {
+            "text": " de",
+            "startMs": 65955,
+            "endMs": 66134,
+            "timestampMs": null,
+            "confidence": 0.953484,
+            "parte": "cierre"
+          },
+          {
+            "text": " contracto",
+            "startMs": 66312,
+            "endMs": 66777,
+            "timestampMs": null,
+            "confidence": 0.269096,
+            "parte": "cierre"
+          },
+          {
+            "text": " para",
+            "startMs": 66777,
+            "endMs": 67020,
+            "timestampMs": null,
+            "confidence": 0.898848,
+            "parte": "cierre"
+          },
+          {
+            "text": " que",
+            "startMs": 67020,
+            "endMs": 67219,
+            "timestampMs": null,
+            "confidence": 0.961553,
+            "parte": "cierre"
+          },
+          {
+            "text": " puedas",
+            "startMs": 67219,
+            "endMs": 67550,
+            "timestampMs": null,
+            "confidence": 0.967715,
+            "parte": "cierre"
+          },
+          {
+            "text": " empezar",
+            "startMs": 67550,
+            "endMs": 67926,
+            "timestampMs": null,
+            "confidence": 0.824313,
+            "parte": "cierre"
+          },
+          {
+            "text": " a",
+            "startMs": 67926,
+            "endMs": 68037,
+            "timestampMs": null,
+            "confidence": 0.984029,
+            "parte": "cierre"
+          },
+          {
+            "text": " utilizarlo",
+            "startMs": 68037,
+            "endMs": 68545,
+            "timestampMs": null,
+            "confidence": 0.948692,
+            "parte": "cierre"
+          },
+          {
+            "text": " y",
+            "startMs": 68902,
+            "endMs": 69015,
+            "timestampMs": null,
+            "confidence": 0.922902,
+            "parte": "cierre"
+          },
+          {
+            "text": " mejorar",
+            "startMs": 69015,
+            "endMs": 69399,
+            "timestampMs": null,
+            "confidence": 0.96358,
+            "parte": "cierre"
+          },
+          {
+            "text": " tus",
+            "startMs": 69399,
+            "endMs": 69603,
+            "timestampMs": null,
+            "confidence": 0.978954,
+            "parte": "cierre"
+          },
+          {
+            "text": " flujos",
+            "startMs": 69603,
+            "endMs": 69942,
+            "timestampMs": null,
+            "confidence": 0.987025,
+            "parte": "cierre"
+          },
+          {
+            "text": " contractuales,",
+            "startMs": 69942,
+            "endMs": 70598,
+            "timestampMs": null,
+            "confidence": 0.864105,
+            "parte": "cierre"
+          },
+          {
+            "text": " generar",
+            "startMs": 71045,
+            "endMs": 71472,
+            "timestampMs": null,
+            "confidence": 0.973907,
+            "parte": "cierre"
+          },
+          {
+            "text": " alertas",
+            "startMs": 71472,
+            "endMs": 71901,
+            "timestampMs": null,
+            "confidence": 0.994272,
+            "parte": "cierre"
+          },
+          {
+            "text": " y",
+            "startMs": 71901,
+            "endMs": 72027,
+            "timestampMs": null,
+            "confidence": 0.948766,
+            "parte": "cierre"
+          },
+          {
+            "text": " darle",
+            "startMs": 72384,
+            "endMs": 72629,
+            "timestampMs": null,
+            "confidence": 0.952276,
+            "parte": "cierre"
+          },
+          {
+            "text": " seguimiento",
+            "startMs": 72629,
+            "endMs": 73098,
+            "timestampMs": null,
+            "confidence": 0.993269,
+            "parte": "cierre"
+          },
+          {
+            "text": " a",
+            "startMs": 73455,
+            "endMs": 73570,
+            "timestampMs": null,
+            "confidence": 0.988583,
+            "parte": "cierre"
+          },
+          {
+            "text": " tus",
+            "startMs": 73570,
+            "endMs": 73774,
+            "timestampMs": null,
+            "confidence": 0.990922,
+            "parte": "cierre"
+          },
+          {
+            "text": " contratos",
+            "startMs": 73774,
+            "endMs": 74253,
+            "timestampMs": null,
+            "confidence": 0.91148,
+            "parte": "cierre"
+          },
+          {
+            "text": " para",
+            "startMs": 74253,
+            "endMs": 74503,
+            "timestampMs": null,
+            "confidence": 0.9142,
+            "parte": "cierre"
+          },
+          {
+            "text": " que",
+            "startMs": 74503,
+            "endMs": 74708,
+            "timestampMs": null,
+            "confidence": 0.925747,
+            "parte": "cierre"
+          },
+          {
+            "text": " no",
+            "startMs": 74708,
+            "endMs": 74867,
+            "timestampMs": null,
+            "confidence": 0.979137,
+            "parte": "cierre"
+          },
+          {
+            "text": " se",
+            "startMs": 74867,
+            "endMs": 75027,
+            "timestampMs": null,
+            "confidence": 0.982279,
+            "parte": "cierre"
+          },
+          {
+            "text": " te",
+            "startMs": 75027,
+            "endMs": 75186,
+            "timestampMs": null,
+            "confidence": 0.964481,
+            "parte": "cierre"
+          },
+          {
+            "text": " vuelva",
+            "startMs": 75186,
+            "endMs": 75528,
+            "timestampMs": null,
+            "confidence": 0.931409,
+            "parte": "cierre"
+          },
+          {
+            "text": " a",
+            "startMs": 75528,
+            "endMs": 75641,
+            "timestampMs": null,
+            "confidence": 0.891504,
+            "parte": "cierre"
+          },
+          {
+            "text": " pasar",
+            "startMs": 75641,
+            "endMs": 75937,
+            "timestampMs": null,
+            "confidence": 0.99862,
+            "parte": "cierre"
+          },
+          {
+            "text": " ningún",
+            "startMs": 75937,
+            "endMs": 76279,
+            "timestampMs": null,
+            "confidence": 0.951252,
+            "parte": "cierre"
+          },
+          {
+            "text": " vencimiento.",
+            "startMs": 76279,
+            "endMs": 76848,
+            "timestampMs": null,
+            "confidence": 0.958914,
+            "parte": "cierre"
+          }
+        ],
+        "cuerpoInicioMs": 0,
+        "cuerpoRecorteMs": 0,
+        "cierreInicioMs": 59437,
+        "duracionMs": 77250
+      }
+    },
+    "cuerpoMs": 59437,
+    "descartadas": [],
+    "texto": [
+      "Si tu trabajo es un desorden, la inteligencia artificial no te lo va a arreglar, lo que va a hacer es devolverte un desorden aún más rápido, la IA no ordena nada, multiplica lo que ya tienes, así que si tienes un proceso claro, lo va a hacer volar, y si tienes caos, vas a tener caos a toda velocidad, y se ve igual en todos lados, quien tiene sus documentos regados en el correo, ahora los tiene regados y en más versiones, el que no sabe ni siquiera que responde ni por qué, y solamente copia lo que le da la IA, ahora tiene el triple de caos con peores cosas hechas, la inteligencia artificial te da velocidad, pero la velocidad sin dirección no sirve de nada, primero ordena, primero estructura, después acelera, después implementa, esto es lo que en programación se conoce como\"Spec drive in development\", y es la clave para que la inteligencia artificial no alucine tanto y no se vaya a dañar tu código, lo mismo lo puedes utilizar cuando crees documentos jurídicos y contratos o cosas serias propuestas para clientes, primero estructura, primero ordena, la IA te puede ayudar a ordenar, después acelera."
+    ],
+    "avisos": [
+      "trifuerza: sin cierre grabado disponible"
+    ]
+  }
+}

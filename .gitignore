@@ -14,3 +14,8 @@ public/voz/
 .whisper/
 trabajo/
 whisper-bin-x64.zip
+# Metraje limpio, grabaciones de la app y material propio del evento: pesan GB, viven en local y en Drive.
+public/limpios/
+public/app/
+public/broll/
+.whisper17/

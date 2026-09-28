@@ -1,0 +1,1530 @@
+{
+  "slug": "v08-el-prompt",
+  "codigo": "V08",
+  "titulo": "Ese prompt buenísimo que a ti no te funcionó",
+  "plantilla": "Montaje",
+  "tipo": "cuerpo",
+  "tono": "sobrio",
+  "cuentas": [
+    "juanda",
+    "trifuerza"
+  ],
+  "lowerThird": "Profesor universitario",
+  "cuerpo": {
+    "archivo": "copy_F0D75C81-A00C-40D1-9576-26A5FD927F15.mov"
+  },
+  "resaltar": [
+    "mágico",
+    "mediocre",
+    "contexto",
+    "cuatro",
+    "quieres",
+    "molde"
+  ],
+  "beats": [
+    {
+      "tipo": "comparativa",
+      "en": "funcionó",
+      "hasta": "No es",
+      "nivel": 2,
+      "columnas": [
+        "funcionó",
+        "mediocre"
+      ],
+      "izquierda": {
+        "titulo": "A otro",
+        "icono": "Sparkles",
+        "tono": "bien",
+        "items": [
+          "Le funcionó *espectacular*"
+        ]
+      },
+      "derecha": {
+        "titulo": "A ti",
+        "icono": "Frown",
+        "items": [
+          "Te salió *mediocre*"
+        ]
+      }
+    },
+    {
+      "tipo": "tarjeta",
+      "en": "contexto",
+      "hasta": "Un prompt",
+      "nivel": 1,
+      "icono": "UserRound",
+      "titulo": "Traía el contexto *de otra persona*",
+      "texto": "No el tuyo."
+    },
+    {
+      "tipo": "lista",
+      "en": "Quién quieres",
+      "hasta": "Y lo que",
+      "nivel": 1,
+      "titulo": "Las *cuatro* cosas",
+      "items": [
+        {
+          "texto": "Quién quieres que sea",
+          "icono": "UserRound",
+          "en": "Quién quieres"
+        },
+        {
+          "texto": "Qué necesitas que salga",
+          "icono": "Target",
+          "en": "qué necesitas"
+        },
+        {
+          "texto": "Para quién es",
+          "icono": "Users",
+          "en": "para quién"
+        },
+        {
+          "texto": "Cómo lo quieres",
+          "icono": "SlidersHorizontal",
+          "en": "cómo lo"
+        }
+      ]
+    },
+    {
+      "tipo": "lista",
+      "en": "qué no",
+      "hasta": "Lo que",
+      "nivel": 1,
+      "titulo": "Y la que nadie pone: *qué no quieres*",
+      "items": [
+        {
+          "texto": "Sin relleno",
+          "icono": "Ban",
+          "en": "relleno"
+        },
+        {
+          "texto": "Sin repetir lo que ya dijiste",
+          "icono": "Repeat",
+          "en": "repetir"
+        },
+        {
+          "texto": "Sin inventar datos",
+          "icono": "CircleX",
+          "en": "inventar"
+        }
+      ]
+    },
+    {
+      "tipo": "tarjeta",
+      "en": "molde",
+      "dura": 3,
+      "nivel": 1,
+      "icono": "Puzzle",
+      "titulo": "Era el molde. *Lo que faltaba eras tú.*"
+    }
+  ],
+  "variantes": {
+    "juanda": {
+      "gancho": "No existe el *prompt mágico*"
+    },
+    "trifuerza": {
+      "gancho": "Ese prompt buenísimo que *a ti no te funcionó*"
+    }
+  },
+  "verificar": [],
+  "golpes": [
+    {
+      "en": "mágico",
+      "estilo": "frase",
+      "texto": "El prompt mágico *no existe*"
+    },
+    {
+      "en": "mediocre",
+      "estilo": "golpe",
+      "texto": "Mediocre"
+    },
+    {
+      "en": "relleno",
+      "estilo": "golpe",
+      "texto": "Sin relleno"
+    },
+    {
+      "en": "eras",
+      "estilo": "golpe",
+      "texto": "Eras tú"
+    }
+  ],
+  "generado": {
+    "beats": [
+      {
+        "tipo": "tarjeta",
+        "en": "contexto",
+        "hasta": "Un prompt",
+        "nivel": 1,
+        "icono": "UserRound",
+        "titulo": "Traía el contexto *de otra persona*",
+        "texto": "No el tuyo.",
+        "inicioMs": 1415,
+        "finMs": 2250
+      },
+      {
+        "tipo": "lista",
+        "en": "Quién quieres",
+        "hasta": "Y lo que",
+        "nivel": 1,
+        "titulo": "Las *cuatro* cosas",
+        "items": [
+          {
+            "texto": "Quién quieres que sea",
+            "icono": "UserRound",
+            "en": "Quién quieres"
+          },
+          {
+            "texto": "Qué necesitas que salga",
+            "icono": "Target",
+            "en": "qué necesitas"
+          },
+          {
+            "texto": "Para quién es",
+            "icono": "Users",
+            "en": "para quién"
+          },
+          {
+            "texto": "Cómo lo quieres",
+            "icono": "SlidersHorizontal",
+            "en": "cómo lo"
+          }
+        ],
+        "inicioMs": 5821,
+        "finMs": 11268,
+        "itemsCuadros": [
+          7,
+          58,
+          106,
+          138
+        ]
+      },
+      {
+        "tipo": "lista",
+        "en": "qué no",
+        "hasta": "Lo que",
+        "nivel": 1,
+        "titulo": "Y la que nadie pone: *qué no quieres*",
+        "items": [
+          {
+            "texto": "Sin relleno",
+            "icono": "Ban",
+            "en": "relleno"
+          },
+          {
+            "texto": "Sin repetir lo que ya dijiste",
+            "icono": "Repeat",
+            "en": "repetir"
+          },
+          {
+            "texto": "Sin inventar datos",
+            "icono": "CircleX",
+            "en": "inventar"
+          }
+        ],
+        "inicioMs": 13143,
+        "finMs": 16011,
+        "itemsCuadros": [
+          61,
+          84,
+          130
+        ]
+      },
+      {
+        "tipo": "tarjeta",
+        "en": "molde",
+        "dura": 3,
+        "nivel": 1,
+        "icono": "Puzzle",
+        "titulo": "Era el molde. *Lo que faltaba eras tú.*",
+        "inicioMs": 19264,
+        "finMs": 22264
+      }
+    ],
+    "montajes": {
+      "juanda": {
+        "segmentos": [
+          {
+            "desde": 17.363,
+            "hasta": 19.683,
+            "archivo": "limpios/2026-10/copy_F0D75C81-A00C-40D1-9576-26A5FD927F15.mp4",
+            "parte": "cuerpo",
+            "velocidad": 1.12
+          },
+          {
+            "desde": 19.883,
+            "hasta": 29.983,
+            "archivo": "limpios/2026-10/copy_F0D75C81-A00C-40D1-9576-26A5FD927F15.mp4",
+            "parte": "cuerpo",
+            "velocidad": 1.12
+          },
+          {
+            "desde": 30.183,
+            "hasta": 32.283,
+            "archivo": "limpios/2026-10/copy_F0D75C81-A00C-40D1-9576-26A5FD927F15.mp4",
+            "parte": "cuerpo",
+            "velocidad": 1.12
+          },
+          {
+            "desde": 32.483,
+            "hasta": 42.193,
+            "archivo": "limpios/2026-10/copy_F0D75C81-A00C-40D1-9576-26A5FD927F15.mp4",
+            "parte": "cuerpo",
+            "velocidad": 1.12
+          },
+          {
+            "desde": 1.045,
+            "hasta": 12.015,
+            "archivo": "limpios/2026-10/copy_50060AFC-FB40-470B-BFC8-C1274B09F368.mp4",
+            "parte": "cierre",
+            "velocidad": 1.12,
+            "encuadre": {
+              "x": 0.511,
+              "y": 0.703,
+              "alto": 0.556
+            }
+          }
+        ],
+        "subtitulos": [
+          {
+            "text": " persona,",
+            "startMs": 179,
+            "endMs": 554,
+            "timestampMs": null,
+            "confidence": 0.839221,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " no",
+            "startMs": 821,
+            "endMs": 965,
+            "timestampMs": null,
+            "confidence": 0.984833,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tu",
+            "startMs": 965,
+            "endMs": 1108,
+            "timestampMs": null,
+            "confidence": 0.978674,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " propio",
+            "startMs": 1108,
+            "endMs": 1415,
+            "timestampMs": null,
+            "confidence": 0.990656,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " contexto.",
+            "startMs": 1415,
+            "endMs": 1804,
+            "timestampMs": null,
+            "confidence": 0.974658,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Un",
+            "startMs": 2250,
+            "endMs": 2392,
+            "timestampMs": null,
+            "confidence": 0.828379,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " prompt",
+            "startMs": 2392,
+            "endMs": 2696,
+            "timestampMs": null,
+            "confidence": 0.998159,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " sirve",
+            "startMs": 3232,
+            "endMs": 3589,
+            "timestampMs": null,
+            "confidence": 0.961896,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " cuando",
+            "startMs": 3768,
+            "endMs": 4036,
+            "timestampMs": null,
+            "confidence": 0.978323,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " le",
+            "startMs": 4036,
+            "endMs": 4161,
+            "timestampMs": null,
+            "confidence": 0.980424,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " dices",
+            "startMs": 4161,
+            "endMs": 4393,
+            "timestampMs": null,
+            "confidence": 0.996185,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " cuatro",
+            "startMs": 4571,
+            "endMs": 4954,
+            "timestampMs": null,
+            "confidence": 0.723979,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " cosas.",
+            "startMs": 4954,
+            "endMs": 5286,
+            "timestampMs": null,
+            "confidence": 0.544955,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Quién",
+            "startMs": 5821,
+            "endMs": 6179,
+            "timestampMs": null,
+            "confidence": 0.640143,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " quieres",
+            "startMs": 6446,
+            "endMs": 6794,
+            "timestampMs": null,
+            "confidence": 0.988655,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 6794,
+            "endMs": 6978,
+            "timestampMs": null,
+            "confidence": 0.996143,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " sea,",
+            "startMs": 6978,
+            "endMs": 7161,
+            "timestampMs": null,
+            "confidence": 0.947934,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " qué",
+            "startMs": 7518,
+            "endMs": 7719,
+            "timestampMs": null,
+            "confidence": 0.924114,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " necesitas",
+            "startMs": 7719,
+            "endMs": 8188,
+            "timestampMs": null,
+            "confidence": 0.971979,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 8188,
+            "endMs": 8388,
+            "timestampMs": null,
+            "confidence": 0.971317,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " salga,",
+            "startMs": 8388,
+            "endMs": 8679,
+            "timestampMs": null,
+            "confidence": 0.950095,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " para",
+            "startMs": 9125,
+            "endMs": 9347,
+            "timestampMs": null,
+            "confidence": 0.954034,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " quién",
+            "startMs": 9347,
+            "endMs": 9609,
+            "timestampMs": null,
+            "confidence": 0.966105,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " es",
+            "startMs": 9609,
+            "endMs": 9750,
+            "timestampMs": null,
+            "confidence": 0.510045,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " y",
+            "startMs": 10107,
+            "endMs": 10196,
+            "timestampMs": null,
+            "confidence": 0.734112,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " cómo",
+            "startMs": 10196,
+            "endMs": 10393,
+            "timestampMs": null,
+            "confidence": 0.952723,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " lo",
+            "startMs": 10393,
+            "endMs": 10518,
+            "timestampMs": null,
+            "confidence": 0.985718,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " quieres.",
+            "startMs": 10518,
+            "endMs": 10821,
+            "timestampMs": null,
+            "confidence": 0.882093,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Y",
+            "startMs": 11268,
+            "endMs": 11371,
+            "timestampMs": null,
+            "confidence": 0.760101,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " lo",
+            "startMs": 11371,
+            "endMs": 11516,
+            "timestampMs": null,
+            "confidence": 0.935121,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 11516,
+            "endMs": 11703,
+            "timestampMs": null,
+            "confidence": 0.9976,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " casi",
+            "startMs": 11703,
+            "endMs": 11930,
+            "timestampMs": null,
+            "confidence": 0.902288,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " nunca",
+            "startMs": 11930,
+            "endMs": 12200,
+            "timestampMs": null,
+            "confidence": 0.858151,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " nadie",
+            "startMs": 12200,
+            "endMs": 12469,
+            "timestampMs": null,
+            "confidence": 0.809392,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " pone,",
+            "startMs": 12469,
+            "endMs": 12696,
+            "timestampMs": null,
+            "confidence": 0.706668,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " qué",
+            "startMs": 13143,
+            "endMs": 13411,
+            "timestampMs": null,
+            "confidence": 0.599361,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " no",
+            "startMs": 13679,
+            "endMs": 13835,
+            "timestampMs": null,
+            "confidence": 0.880322,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " quieres.",
+            "startMs": 13835,
+            "endMs": 14214,
+            "timestampMs": null,
+            "confidence": 0.532453,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Sin",
+            "startMs": 14750,
+            "endMs": 14936,
+            "timestampMs": null,
+            "confidence": 0.979809,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " relleno,",
+            "startMs": 14936,
+            "endMs": 15286,
+            "timestampMs": null,
+            "confidence": 0.866878,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " sin",
+            "startMs": 15554,
+            "endMs": 15712,
+            "timestampMs": null,
+            "confidence": 0.993384,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " repetir",
+            "startMs": 15712,
+            "endMs": 16011,
+            "timestampMs": null,
+            "confidence": 0.976518,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " lo",
+            "startMs": 16011,
+            "endMs": 16134,
+            "timestampMs": null,
+            "confidence": 0.984365,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 16134,
+            "endMs": 16292,
+            "timestampMs": null,
+            "confidence": 0.995528,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ya",
+            "startMs": 16292,
+            "endMs": 16415,
+            "timestampMs": null,
+            "confidence": 0.92784,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " dijiste,",
+            "startMs": 16415,
+            "endMs": 16714,
+            "timestampMs": null,
+            "confidence": 0.95585,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " sin",
+            "startMs": 17071,
+            "endMs": 17248,
+            "timestampMs": null,
+            "confidence": 0.975653,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " inventar",
+            "startMs": 17248,
+            "endMs": 17621,
+            "timestampMs": null,
+            "confidence": 0.978586,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " datos.",
+            "startMs": 17621,
+            "endMs": 17875,
+            "timestampMs": null,
+            "confidence": 0.648091,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Lo",
+            "startMs": 18411,
+            "endMs": 18528,
+            "timestampMs": null,
+            "confidence": 0.941151,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 18528,
+            "endMs": 18679,
+            "timestampMs": null,
+            "confidence": 0.991435,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " copiaste",
+            "startMs": 18679,
+            "endMs": 18996,
+            "timestampMs": null,
+            "confidence": 0.971788,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " era",
+            "startMs": 18996,
+            "endMs": 19147,
+            "timestampMs": null,
+            "confidence": 0.979716,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " el",
+            "startMs": 19147,
+            "endMs": 19264,
+            "timestampMs": null,
+            "confidence": 0.982238,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " molde,",
+            "startMs": 19264,
+            "endMs": 19482,
+            "timestampMs": null,
+            "confidence": 0.724619,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " lo",
+            "startMs": 19929,
+            "endMs": 20026,
+            "timestampMs": null,
+            "confidence": 0.971706,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 20026,
+            "endMs": 20151,
+            "timestampMs": null,
+            "confidence": 0.998331,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " le",
+            "startMs": 20151,
+            "endMs": 20247,
+            "timestampMs": null,
+            "confidence": 0.989479,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " faltaba",
+            "startMs": 20247,
+            "endMs": 20483,
+            "timestampMs": null,
+            "confidence": 0.996717,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " eras",
+            "startMs": 20483,
+            "endMs": 20636,
+            "timestampMs": null,
+            "confidence": 0.658521,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tú.",
+            "startMs": 20636,
+            "endMs": 20732,
+            "timestampMs": null,
+            "confidence": 0.928157,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Si",
+            "startMs": 21813,
+            "endMs": 21958,
+            "timestampMs": null,
+            "confidence": 0.73224,
+            "parte": "cierre"
+          },
+          {
+            "text": " quieres",
+            "startMs": 21958,
+            "endMs": 22310,
+            "timestampMs": null,
+            "confidence": 0.975091,
+            "parte": "cierre"
+          },
+          {
+            "text": " entender",
+            "startMs": 22310,
+            "endMs": 22704,
+            "timestampMs": null,
+            "confidence": 0.852446,
+            "parte": "cierre"
+          },
+          {
+            "text": " mejor",
+            "startMs": 22704,
+            "endMs": 22973,
+            "timestampMs": null,
+            "confidence": 0.912043,
+            "parte": "cierre"
+          },
+          {
+            "text": " cómo",
+            "startMs": 23152,
+            "endMs": 23385,
+            "timestampMs": null,
+            "confidence": 0.90059,
+            "parte": "cierre"
+          },
+          {
+            "text": " funciona",
+            "startMs": 23385,
+            "endMs": 23788,
+            "timestampMs": null,
+            "confidence": 0.971119,
+            "parte": "cierre"
+          },
+          {
+            "text": " la",
+            "startMs": 23788,
+            "endMs": 23938,
+            "timestampMs": null,
+            "confidence": 0.959715,
+            "parte": "cierre"
+          },
+          {
+            "text": " Inteligencia",
+            "startMs": 23938,
+            "endMs": 24510,
+            "timestampMs": null,
+            "confidence": 0.678802,
+            "parte": "cierre"
+          },
+          {
+            "text": " Artificial,",
+            "startMs": 24510,
+            "endMs": 24998,
+            "timestampMs": null,
+            "confidence": 0.370631,
+            "parte": "cierre"
+          },
+          {
+            "text": " comenta",
+            "startMs": 24998,
+            "endMs": 25359,
+            "timestampMs": null,
+            "confidence": 0.760042,
+            "parte": "cierre"
+          },
+          {
+            "text": " clase",
+            "startMs": 25359,
+            "endMs": 25635,
+            "timestampMs": null,
+            "confidence": 0.573985,
+            "parte": "cierre"
+          },
+          {
+            "text": " y",
+            "startMs": 25635,
+            "endMs": 25741,
+            "timestampMs": null,
+            "confidence": 0.58971,
+            "parte": "cierre"
+          },
+          {
+            "text": " te",
+            "startMs": 26009,
+            "endMs": 26157,
+            "timestampMs": null,
+            "confidence": 0.767135,
+            "parte": "cierre"
+          },
+          {
+            "text": " daré",
+            "startMs": 26157,
+            "endMs": 26390,
+            "timestampMs": null,
+            "confidence": 0.965361,
+            "parte": "cierre"
+          },
+          {
+            "text": " acceso",
+            "startMs": 26390,
+            "endMs": 26708,
+            "timestampMs": null,
+            "confidence": 0.988286,
+            "parte": "cierre"
+          },
+          {
+            "text": " gratuito",
+            "startMs": 26708,
+            "endMs": 27111,
+            "timestampMs": null,
+            "confidence": 0.919932,
+            "parte": "cierre"
+          },
+          {
+            "text": " al",
+            "startMs": 27111,
+            "endMs": 27259,
+            "timestampMs": null,
+            "confidence": 0.971284,
+            "parte": "cierre"
+          },
+          {
+            "text": " webinar",
+            "startMs": 27438,
+            "endMs": 27771,
+            "timestampMs": null,
+            "confidence": 0.564913,
+            "parte": "cierre"
+          },
+          {
+            "text": " que",
+            "startMs": 27771,
+            "endMs": 27946,
+            "timestampMs": null,
+            "confidence": 0.924455,
+            "parte": "cierre"
+          },
+          {
+            "text": " estaré dictando",
+            "startMs": 27946,
+            "endMs": 28612,
+            "timestampMs": null,
+            "confidence": 0.887542,
+            "parte": "cierre"
+          },
+          {
+            "text": " sobre",
+            "startMs": 28612,
+            "endMs": 28866,
+            "timestampMs": null,
+            "confidence": 0.970319,
+            "parte": "cierre"
+          },
+          {
+            "text": " fundamentos",
+            "startMs": 29223,
+            "endMs": 29750,
+            "timestampMs": null,
+            "confidence": 0.654916,
+            "parte": "cierre"
+          },
+          {
+            "text": " de",
+            "startMs": 29750,
+            "endMs": 29897,
+            "timestampMs": null,
+            "confidence": 0.976313,
+            "parte": "cierre"
+          },
+          {
+            "text": " la",
+            "startMs": 29897,
+            "endMs": 30045,
+            "timestampMs": null,
+            "confidence": 0.948614,
+            "parte": "cierre"
+          },
+          {
+            "text": " Inteligencia",
+            "startMs": 30045,
+            "endMs": 30613,
+            "timestampMs": null,
+            "confidence": 0.902855,
+            "parte": "cierre"
+          },
+          {
+            "text": " Artificial.",
+            "startMs": 30613,
+            "endMs": 31098,
+            "timestampMs": null,
+            "confidence": 0.924881,
+            "parte": "cierre"
+          }
+        ],
+        "cuerpoInicioMs": 0,
+        "cuerpoRecorteMs": 0,
+        "cierreInicioMs": 21634,
+        "duracionMs": 31429
+      },
+      "trifuerza": {
+        "segmentos": [
+          {
+            "desde": 17.363,
+            "hasta": 19.683,
+            "archivo": "limpios/2026-10/copy_F0D75C81-A00C-40D1-9576-26A5FD927F15.mp4",
+            "parte": "cuerpo",
+            "velocidad": 1.12
+          },
+          {
+            "desde": 19.883,
+            "hasta": 29.983,
+            "archivo": "limpios/2026-10/copy_F0D75C81-A00C-40D1-9576-26A5FD927F15.mp4",
+            "parte": "cuerpo",
+            "velocidad": 1.12
+          },
+          {
+            "desde": 30.183,
+            "hasta": 32.283,
+            "archivo": "limpios/2026-10/copy_F0D75C81-A00C-40D1-9576-26A5FD927F15.mp4",
+            "parte": "cuerpo",
+            "velocidad": 1.12
+          },
+          {
+            "desde": 32.483,
+            "hasta": 42.193,
+            "archivo": "limpios/2026-10/copy_F0D75C81-A00C-40D1-9576-26A5FD927F15.mp4",
+            "parte": "cuerpo",
+            "velocidad": 1.12
+          }
+        ],
+        "subtitulos": [
+          {
+            "text": " persona,",
+            "startMs": 179,
+            "endMs": 554,
+            "timestampMs": null,
+            "confidence": 0.839221,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " no",
+            "startMs": 821,
+            "endMs": 965,
+            "timestampMs": null,
+            "confidence": 0.984833,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tu",
+            "startMs": 965,
+            "endMs": 1108,
+            "timestampMs": null,
+            "confidence": 0.978674,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " propio",
+            "startMs": 1108,
+            "endMs": 1415,
+            "timestampMs": null,
+            "confidence": 0.990656,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " contexto.",
+            "startMs": 1415,
+            "endMs": 1804,
+            "timestampMs": null,
+            "confidence": 0.974658,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Un",
+            "startMs": 2250,
+            "endMs": 2392,
+            "timestampMs": null,
+            "confidence": 0.828379,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " prompt",
+            "startMs": 2392,
+            "endMs": 2696,
+            "timestampMs": null,
+            "confidence": 0.998159,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " sirve",
+            "startMs": 3232,
+            "endMs": 3589,
+            "timestampMs": null,
+            "confidence": 0.961896,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " cuando",
+            "startMs": 3768,
+            "endMs": 4036,
+            "timestampMs": null,
+            "confidence": 0.978323,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " le",
+            "startMs": 4036,
+            "endMs": 4161,
+            "timestampMs": null,
+            "confidence": 0.980424,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " dices",
+            "startMs": 4161,
+            "endMs": 4393,
+            "timestampMs": null,
+            "confidence": 0.996185,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " cuatro",
+            "startMs": 4571,
+            "endMs": 4954,
+            "timestampMs": null,
+            "confidence": 0.723979,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " cosas.",
+            "startMs": 4954,
+            "endMs": 5286,
+            "timestampMs": null,
+            "confidence": 0.544955,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Quién",
+            "startMs": 5821,
+            "endMs": 6179,
+            "timestampMs": null,
+            "confidence": 0.640143,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " quieres",
+            "startMs": 6446,
+            "endMs": 6794,
+            "timestampMs": null,
+            "confidence": 0.988655,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 6794,
+            "endMs": 6978,
+            "timestampMs": null,
+            "confidence": 0.996143,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " sea,",
+            "startMs": 6978,
+            "endMs": 7161,
+            "timestampMs": null,
+            "confidence": 0.947934,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " qué",
+            "startMs": 7518,
+            "endMs": 7719,
+            "timestampMs": null,
+            "confidence": 0.924114,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " necesitas",
+            "startMs": 7719,
+            "endMs": 8188,
+            "timestampMs": null,
+            "confidence": 0.971979,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 8188,
+            "endMs": 8388,
+            "timestampMs": null,
+            "confidence": 0.971317,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " salga,",
+            "startMs": 8388,
+            "endMs": 8679,
+            "timestampMs": null,
+            "confidence": 0.950095,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " para",
+            "startMs": 9125,
+            "endMs": 9347,
+            "timestampMs": null,
+            "confidence": 0.954034,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " quién",
+            "startMs": 9347,
+            "endMs": 9609,
+            "timestampMs": null,
+            "confidence": 0.966105,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " es",
+            "startMs": 9609,
+            "endMs": 9750,
+            "timestampMs": null,
+            "confidence": 0.510045,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " y",
+            "startMs": 10107,
+            "endMs": 10196,
+            "timestampMs": null,
+            "confidence": 0.734112,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " cómo",
+            "startMs": 10196,
+            "endMs": 10393,
+            "timestampMs": null,
+            "confidence": 0.952723,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " lo",
+            "startMs": 10393,
+            "endMs": 10518,
+            "timestampMs": null,
+            "confidence": 0.985718,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " quieres.",
+            "startMs": 10518,
+            "endMs": 10821,
+            "timestampMs": null,
+            "confidence": 0.882093,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Y",
+            "startMs": 11268,
+            "endMs": 11371,
+            "timestampMs": null,
+            "confidence": 0.760101,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " lo",
+            "startMs": 11371,
+            "endMs": 11516,
+            "timestampMs": null,
+            "confidence": 0.935121,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 11516,
+            "endMs": 11703,
+            "timestampMs": null,
+            "confidence": 0.9976,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " casi",
+            "startMs": 11703,
+            "endMs": 11930,
+            "timestampMs": null,
+            "confidence": 0.902288,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " nunca",
+            "startMs": 11930,
+            "endMs": 12200,
+            "timestampMs": null,
+            "confidence": 0.858151,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " nadie",
+            "startMs": 12200,
+            "endMs": 12469,
+            "timestampMs": null,
+            "confidence": 0.809392,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " pone,",
+            "startMs": 12469,
+            "endMs": 12696,
+            "timestampMs": null,
+            "confidence": 0.706668,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " qué",
+            "startMs": 13143,
+            "endMs": 13411,
+            "timestampMs": null,
+            "confidence": 0.599361,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " no",
+            "startMs": 13679,
+            "endMs": 13835,
+            "timestampMs": null,
+            "confidence": 0.880322,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " quieres.",
+            "startMs": 13835,
+            "endMs": 14214,
+            "timestampMs": null,
+            "confidence": 0.532453,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Sin",
+            "startMs": 14750,
+            "endMs": 14936,
+            "timestampMs": null,
+            "confidence": 0.979809,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " relleno,",
+            "startMs": 14936,
+            "endMs": 15286,
+            "timestampMs": null,
+            "confidence": 0.866878,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " sin",
+            "startMs": 15554,
+            "endMs": 15712,
+            "timestampMs": null,
+            "confidence": 0.993384,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " repetir",
+            "startMs": 15712,
+            "endMs": 16011,
+            "timestampMs": null,
+            "confidence": 0.976518,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " lo",
+            "startMs": 16011,
+            "endMs": 16134,
+            "timestampMs": null,
+            "confidence": 0.984365,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 16134,
+            "endMs": 16292,
+            "timestampMs": null,
+            "confidence": 0.995528,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ya",
+            "startMs": 16292,
+            "endMs": 16415,
+            "timestampMs": null,
+            "confidence": 0.92784,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " dijiste,",
+            "startMs": 16415,
+            "endMs": 16714,
+            "timestampMs": null,
+            "confidence": 0.95585,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " sin",
+            "startMs": 17071,
+            "endMs": 17248,
+            "timestampMs": null,
+            "confidence": 0.975653,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " inventar",
+            "startMs": 17248,
+            "endMs": 17621,
+            "timestampMs": null,
+            "confidence": 0.978586,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " datos.",
+            "startMs": 17621,
+            "endMs": 17875,
+            "timestampMs": null,
+            "confidence": 0.648091,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Lo",
+            "startMs": 18411,
+            "endMs": 18528,
+            "timestampMs": null,
+            "confidence": 0.941151,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 18528,
+            "endMs": 18679,
+            "timestampMs": null,
+            "confidence": 0.991435,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " copiaste",
+            "startMs": 18679,
+            "endMs": 18996,
+            "timestampMs": null,
+            "confidence": 0.971788,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " era",
+            "startMs": 18996,
+            "endMs": 19147,
+            "timestampMs": null,
+            "confidence": 0.979716,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " el",
+            "startMs": 19147,
+            "endMs": 19264,
+            "timestampMs": null,
+            "confidence": 0.982238,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " molde,",
+            "startMs": 19264,
+            "endMs": 19482,
+            "timestampMs": null,
+            "confidence": 0.724619,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " lo",
+            "startMs": 19929,
+            "endMs": 20026,
+            "timestampMs": null,
+            "confidence": 0.971706,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 20026,
+            "endMs": 20151,
+            "timestampMs": null,
+            "confidence": 0.998331,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " le",
+            "startMs": 20151,
+            "endMs": 20247,
+            "timestampMs": null,
+            "confidence": 0.989479,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " faltaba",
+            "startMs": 20247,
+            "endMs": 20483,
+            "timestampMs": null,
+            "confidence": 0.996717,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " eras",
+            "startMs": 20483,
+            "endMs": 20636,
+            "timestampMs": null,
+            "confidence": 0.658521,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tú.",
+            "startMs": 20636,
+            "endMs": 20732,
+            "timestampMs": null,
+            "confidence": 0.928157,
+            "parte": "cuerpo"
+          }
+        ],
+        "cuerpoInicioMs": 0,
+        "cuerpoRecorteMs": 0,
+        "cierreInicioMs": null,
+        "duracionMs": 21634
+      }
+    },
+    "cuerpoMs": 21634,
+    "descartadas": [
+      "No existe el prompt mágico, y si te vendieron uno, te vendieron algo vacío. Te pasaron ese que a otro le funcionó espectacular. Lo pegaste igualito, pero a ti te salió mediocre. No es la herramienta, es que ese prompt traía el contexto de otra"
+    ],
+    "texto": [
+      "persona, no tu propio contexto. Un prompt sirve cuando le dices cuatro cosas. Quién quieres que sea, qué necesitas que salga, para quién es y cómo lo quieres. Y lo que casi nunca nadie pone, qué no quieres. Sin relleno, sin repetir lo que ya dijiste, sin inventar datos. Lo que copiaste era el molde, lo que le faltaba eras tú."
+    ],
+    "avisos": [
+      "beat comparativa: no se dice \"funcionó\"",
+      "trifuerza: sin cierre grabado disponible"
+    ]
+  }
+}

@@ -23,7 +23,7 @@ Lo que este repo necesita saber de ella:
 
 | Decisión | Por qué |
 |---|---|
-| Sin publicación automática | La publica Juan David a mano. Blotato, Graph API, Gemini y Veo salieron. El proyecto anterior completo está en `archivo/agente-anterior/` como consulta: no se ejecuta ni se importa (ver su `LEEME.md`). |
+| Publicación por Metricool (desde 28-sep-2026) | Reemplaza la publicación a mano. Calendario en `calendario/AAAA-MM.json`; se programa con el conector de Metricool solo lo que Juan David aprobó y sin `verificar[]` pendiente. El video entra como enlace de Drive (Drive vinculado en Metricool). Artículos de LinkedIn y stories con sticker siguen a mano. Blotato, Graph API, Gemini y Veo siguen fuera; `archivo/agente-anterior/` es solo consulta. |
 | Tres capas: marca, pieza, plantilla | Cambiar de cuenta es cambiar un JSON de marca; republicar es cambiar la variante. La plantilla nunca tiene un color ni un texto de una cuenta. |
 | Drive como carpeta de trabajo | Google Drive para escritorio sincroniza `G:\Mi unidad\Redes sociales`. La ruta va en `.env` (`CARPETA_REDES`), nunca en el código. |
 | Carpeta por mes `AAAA-MM mes` | `2026-10 octubre`: se ordena bien en Drive aunque cambie el año. Dentro: `videos grabados` y `videos editados`. |

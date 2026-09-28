@@ -20,12 +20,13 @@ export const LIMITES_REEL = {
 };
 
 /** Valida los datos del medio. Devuelve una lista de problemas; vacia = listo. */
-export function validarMedio({ anchoPx, altoPx, duracionSegundos, tamanoMb, formato, codec, formatoPixel }, { vertical = true } = {}) {
+export function validarMedio({ anchoPx, altoPx, duracionSegundos, tamanoMb, formato, codec, formatoPixel }, { vertical = true, aspecto } = {}) {
   const problemas = [];
 
   if (anchoPx && altoPx) {
-    const esperada = vertical ? 9 / 16 : 16 / 9;
-    if (Math.abs(anchoPx / altoPx - esperada) > 0.02) problemas.push(`Relacion de aspecto ${anchoPx}x${altoPx} no es ${vertical ? '9:16' : '16:9'}`);
+    // aspecto: [ancho, alto] esperado (4:5 en LinkedIn); si no, 9:16 o 16:9.
+    const [aw, ah] = aspecto ?? (vertical ? [9, 16] : [16, 9]);
+    if (Math.abs(anchoPx / altoPx - aw / ah) > 0.02) problemas.push(`Relacion de aspecto ${anchoPx}x${altoPx} no es ${aw}:${ah}`);
   }
   if (vertical && duracionSegundos && (duracionSegundos < LIMITES_REEL.duracionMinSegundos || duracionSegundos > LIMITES_REEL.duracionMaxSegundos)) {
     problemas.push(`Duracion ${duracionSegundos.toFixed(1)}s fuera de rango para Reels (${LIMITES_REEL.duracionMinSegundos}-${LIMITES_REEL.duracionMaxSegundos}s)`);

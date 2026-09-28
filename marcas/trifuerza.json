@@ -1,0 +1,65 @@
+{
+  "id": "trifuerza",
+  "nombre": "Trifuerza.co",
+  "_fuente": "Paleta dada por Juan David el 27-sep-2026 (prompt de produccion de octubre). fondo2 y la tipografia (Inter) son propuestas: confirmar.",
+  "fuentes": {
+    "titulo": {
+      "familia": "Inter",
+      "peso": 700
+    },
+    "texto": {
+      "familia": "Inter",
+      "peso": 500
+    },
+    "enfasis": {
+      "familia": "Inter",
+      "peso": 700
+    }
+  },
+  "colores": {
+    "fondo": "#0B1426",
+    "fondo2": "#15213A",
+    "tinta": "#F4EFE6",
+    "tenue": "#A7ADBA",
+    "acento": "#F28C28",
+    "secundario": "#0090DE",
+    "alerta": "#F28C28",
+    "linea": "#2A3754"
+  },
+  "radio": 20,
+  "resaltado": "subrayado",
+  "subtitulo": {
+    "caja": false,
+    "mayusculas": false,
+    "palabraActiva": "acento"
+  },
+  "firma": {
+    "tipo": "imagen",
+    "src": "marcas/trifuerza/logo-horizontal-claro.png",
+    "texto": "Trifuerza",
+    "web": "trifuerza.co",
+    "_fuente": "Drive: Redes sociales/Assets/Logos/Trifuerza (Mesa de trabajo 6 copia = letras navy, para fondo claro; Mesa de trabajo 6 = letras claras, para video o fondo oscuro)"
+  },
+  "fondoEstilo": "rejilla",
+  "claro": false,
+  "montaje": {
+    "grado": "brightness(1.03) contrast(1.02) saturate(0.97)",
+    "densidad": 1,
+    "subtitulos": {
+      "instagram": true,
+      "linkedin": true,
+      "tamano": 54
+    },
+    "cta": "Link en el perfil",
+    "tono": "sobrio",
+    "logo": {
+      "src": "marcas/trifuerza/logo-horizontal-claro.png",
+      "alto": 58
+    }
+  },
+  "_navy": "28-sep-2026: a Juan David no le gusto el fondo blanco; desde aqui Trifuerza va en navy. Lo ya entregado en octubre salio en blanco y no se toca.",
+  "web": {
+    "titulo": "Trifuerza",
+    "acentoTexto": "#FFB038"
+  }
+}

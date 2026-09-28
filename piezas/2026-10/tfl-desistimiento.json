@@ -1,0 +1,1077 @@
+{
+  "plantilla": "Montaje",
+  "tipo": "cuerpo",
+  "sinCierre": true,
+  "lowerThird": "Abogado y desarrollador de software",
+  "correcciones": [
+    {
+      "de": "Banegas",
+      "a": "Vanegas"
+    },
+    {
+      "de": "TriFuerza",
+      "a": "Trifuerza"
+    },
+    {
+      "de": "contracto",
+      "a": "Contrappto"
+    },
+    {
+      "de": "Contrapto",
+      "a": "Contrappto"
+    },
+    {
+      "de": "cuentas de cobre",
+      "a": "cuentas de cobro"
+    },
+    {
+      "de": "cuentas de cobra",
+      "a": "cuentas de cobro"
+    },
+    {
+      "de": "cree Trifuerza",
+      "a": "creé Trifuerza"
+    }
+  ],
+  "slug": "tfl-desistimiento",
+  "codigo": "TFL_DES",
+  "titulo": "Nunca más un desistimiento tácito",
+  "tono": "tension",
+  "cuentas": [
+    "trifuerza"
+  ],
+  "cuerpo": {
+    "archivo": "copy_0A21D394-A7D2-4D51-AE67-56CF290572AC.mov"
+  },
+  "resaltar": [
+    "desistimiento",
+    "inmediatamente",
+    "Telegram",
+    "término",
+    "triunfar"
+  ],
+  "verificar": [
+    {
+      "dato": "Desistimiento tácito (art. 317 CGP): una alerta oportuna evita perderlo por inactividad",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Trifuerza Legal: alertas inmediatas por Telegram y correo, base de clientes, firma electrónica",
+      "estado": "pendiente"
+    }
+  ],
+  "generado": {
+    "beats": [
+      {
+        "tipo": "escena",
+        "escena": "tabla",
+        "en": "alerta",
+        "hasta": "te llega",
+        "tema": {
+          "acento": "#C9A227",
+          "acentoTexto": "#E8C547",
+          "fondo": "#030712",
+          "panel": "#111827",
+          "borde": "#1F2937",
+          "titulo": "Trifuerza Legal"
+        },
+        "ventana": "Trifuerza Legal",
+        "items": [
+          {
+            "texto": "Demanda laboral",
+            "detalle": "11001-31-05-012-2024",
+            "mono": true,
+            "estado": "Activo",
+            "critico": true
+          },
+          {
+            "texto": "Proceso ejecutivo",
+            "detalle": "05001-40-03-008-2025",
+            "mono": true,
+            "estado": "Al día",
+            "tono": "ok"
+          },
+          {
+            "texto": "Acción de tutela",
+            "detalle": "76001-31-05-002-2025",
+            "mono": true,
+            "estado": "Al día",
+            "tono": "ok"
+          },
+          {
+            "alerta": true,
+            "texto": "Nueva actuación en radicado crítico",
+            "detalle": "Sincronizado hace 2 min",
+            "en": "actualización"
+          }
+        ],
+        "inicioMs": 4961,
+        "finMs": 8871,
+        "itemsCuadros": [
+          null,
+          null,
+          null,
+          83
+        ]
+      },
+      {
+        "tipo": "escena",
+        "escena": "avisos",
+        "en": "Telegram",
+        "hasta": "nunca más",
+        "tema": {
+          "acento": "#C9A227",
+          "acentoTexto": "#E8C547",
+          "fondo": "#030712",
+          "panel": "#111827",
+          "borde": "#1F2937",
+          "titulo": "Trifuerza Legal"
+        },
+        "items": [
+          {
+            "app": "telegram",
+            "titulo": "Nueva actuación · Demanda laboral",
+            "texto": "11001-31-05-012-2024",
+            "mono": true,
+            "en": "Telegram"
+          },
+          {
+            "app": "correo",
+            "titulo": "Trifuerza Legal: actuación registrada",
+            "texto": "Revísala antes de que corra el término",
+            "en": "correo"
+          }
+        ],
+        "inicioMs": 10767,
+        "finMs": 14081,
+        "itemsCuadros": [
+          7,
+          35
+        ]
+      },
+      {
+        "tipo": "escena",
+        "escena": "documentos",
+        "en": "clientes",
+        "hasta": "hoy en día",
+        "tema": {
+          "acento": "#C9A227",
+          "acentoTexto": "#E8C547",
+          "fondo": "#030712",
+          "panel": "#111827",
+          "borde": "#1F2937",
+          "titulo": "Trifuerza Legal"
+        },
+        "ventana": "Trifuerza Legal",
+        "items": [
+          {
+            "texto": "Base de clientes",
+            "icono": "Users",
+            "en": "clientes",
+            "listo": "Activo"
+          },
+          {
+            "texto": "Firma electrónica",
+            "icono": "PenLine",
+            "en": "firma",
+            "listo": "Firmado"
+          },
+          {
+            "texto": "Términos al día",
+            "icono": "CalendarClock",
+            "en": "término",
+            "listo": "Al día"
+          }
+        ],
+        "inicioMs": 19104,
+        "finMs": 25455,
+        "itemsCuadros": [
+          7,
+          31,
+          186
+        ]
+      }
+    ],
+    "montajes": {
+      "trifuerza": {
+        "segmentos": [
+          {
+            "desde": 0,
+            "hasta": 35.207,
+            "archivo": "limpios/2026-10/copy_0A21D394-A7D2-4D51-AE67-56CF290572AC.mp4",
+            "parte": "cuerpo",
+            "velocidad": 1.12
+          }
+        ],
+        "subtitulos": [
+          {
+            "text": " ¿Cuántos",
+            "startMs": 87,
+            "endMs": 438,
+            "timestampMs": null,
+            "confidence": 0.736746,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " abogados",
+            "startMs": 438,
+            "endMs": 832,
+            "timestampMs": null,
+            "confidence": 0.971829,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " no",
+            "startMs": 832,
+            "endMs": 977,
+            "timestampMs": null,
+            "confidence": 0.947646,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " han",
+            "startMs": 977,
+            "endMs": 1163,
+            "timestampMs": null,
+            "confidence": 0.989687,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " perdido",
+            "startMs": 1163,
+            "endMs": 1515,
+            "timestampMs": null,
+            "confidence": 0.982489,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " un",
+            "startMs": 1515,
+            "endMs": 1660,
+            "timestampMs": null,
+            "confidence": 0.960966,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " pleito",
+            "startMs": 1660,
+            "endMs": 1971,
+            "timestampMs": null,
+            "confidence": 0.992085,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " por",
+            "startMs": 1971,
+            "endMs": 2157,
+            "timestampMs": null,
+            "confidence": 0.957415,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " desistimiento",
+            "startMs": 2157,
+            "endMs": 2757,
+            "timestampMs": null,
+            "confidence": 0.965723,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tácito?",
+            "startMs": 2757,
+            "endMs": 3068,
+            "timestampMs": null,
+            "confidence": 0.764545,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Por",
+            "startMs": 3068,
+            "endMs": 3254,
+            "timestampMs": null,
+            "confidence": 0.95774,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " eso",
+            "startMs": 3254,
+            "endMs": 3441,
+            "timestampMs": null,
+            "confidence": 0.99271,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " creé Trifuerza",
+            "startMs": 3441,
+            "endMs": 4104,
+            "timestampMs": null,
+            "confidence": 0.638672,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Legal,",
+            "startMs": 4104,
+            "endMs": 4372,
+            "timestampMs": null,
+            "confidence": 0.184388,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " te",
+            "startMs": 4819,
+            "endMs": 4961,
+            "timestampMs": null,
+            "confidence": 0.921365,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " alerta",
+            "startMs": 4961,
+            "endMs": 5265,
+            "timestampMs": null,
+            "confidence": 0.981414,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " inmediatamente",
+            "startMs": 5444,
+            "endMs": 6198,
+            "timestampMs": null,
+            "confidence": 0.604431,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " sobre",
+            "startMs": 6198,
+            "endMs": 6515,
+            "timestampMs": null,
+            "confidence": 0.967301,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " cualquier",
+            "startMs": 7051,
+            "endMs": 7500,
+            "timestampMs": null,
+            "confidence": 0.759274,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " actualización",
+            "startMs": 7500,
+            "endMs": 8121,
+            "timestampMs": null,
+            "confidence": 0.942496,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " en",
+            "startMs": 8121,
+            "endMs": 8271,
+            "timestampMs": null,
+            "confidence": 0.855543,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tus",
+            "startMs": 8271,
+            "endMs": 8463,
+            "timestampMs": null,
+            "confidence": 0.912578,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " procesos,",
+            "startMs": 8463,
+            "endMs": 8871,
+            "timestampMs": null,
+            "confidence": 0.798929,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " te",
+            "startMs": 8871,
+            "endMs": 9020,
+            "timestampMs": null,
+            "confidence": 0.981583,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " llega",
+            "startMs": 9020,
+            "endMs": 9298,
+            "timestampMs": null,
+            "confidence": 0.993932,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " la",
+            "startMs": 9298,
+            "endMs": 9448,
+            "timestampMs": null,
+            "confidence": 0.96895,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " actualización",
+            "startMs": 9448,
+            "endMs": 10069,
+            "timestampMs": null,
+            "confidence": 0.997596,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " a",
+            "startMs": 10069,
+            "endMs": 10176,
+            "timestampMs": null,
+            "confidence": 0.944128,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tu",
+            "startMs": 10622,
+            "endMs": 10767,
+            "timestampMs": null,
+            "confidence": 0.983354,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Telegram",
+            "startMs": 10767,
+            "endMs": 11158,
+            "timestampMs": null,
+            "confidence": 0.513783,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " o",
+            "startMs": 11337,
+            "endMs": 11448,
+            "timestampMs": null,
+            "confidence": 0.920871,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " a",
+            "startMs": 11448,
+            "endMs": 11560,
+            "timestampMs": null,
+            "confidence": 0.649412,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tu",
+            "startMs": 11560,
+            "endMs": 11716,
+            "timestampMs": null,
+            "confidence": 0.987087,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " correo",
+            "startMs": 11716,
+            "endMs": 12051,
+            "timestampMs": null,
+            "confidence": 0.985536,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " electrónico",
+            "startMs": 12051,
+            "endMs": 12609,
+            "timestampMs": null,
+            "confidence": 0.989823,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " de",
+            "startMs": 12609,
+            "endMs": 12765,
+            "timestampMs": null,
+            "confidence": 0.939331,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " forma",
+            "startMs": 13301,
+            "endMs": 13599,
+            "timestampMs": null,
+            "confidence": 0.983224,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " inmediata,",
+            "startMs": 13599,
+            "endMs": 14081,
+            "timestampMs": null,
+            "confidence": 0.57751,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " nunca",
+            "startMs": 14081,
+            "endMs": 14380,
+            "timestampMs": null,
+            "confidence": 0.98295,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " más",
+            "startMs": 14380,
+            "endMs": 14587,
+            "timestampMs": null,
+            "confidence": 0.974115,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " vas",
+            "startMs": 14587,
+            "endMs": 14793,
+            "timestampMs": null,
+            "confidence": 0.835751,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " a",
+            "startMs": 14793,
+            "endMs": 14908,
+            "timestampMs": null,
+            "confidence": 0.985925,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " volver",
+            "startMs": 14908,
+            "endMs": 15253,
+            "timestampMs": null,
+            "confidence": 0.932882,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " a",
+            "startMs": 15253,
+            "endMs": 15367,
+            "timestampMs": null,
+            "confidence": 0.989138,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " perder",
+            "startMs": 15367,
+            "endMs": 15712,
+            "timestampMs": null,
+            "confidence": 0.998698,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " el",
+            "startMs": 16069,
+            "endMs": 16224,
+            "timestampMs": null,
+            "confidence": 0.995353,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " estado",
+            "startMs": 16224,
+            "endMs": 16555,
+            "timestampMs": null,
+            "confidence": 0.983926,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " de",
+            "startMs": 16555,
+            "endMs": 16711,
+            "timestampMs": null,
+            "confidence": 0.971873,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " un",
+            "startMs": 16711,
+            "endMs": 16866,
+            "timestampMs": null,
+            "confidence": 0.985979,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " proceso,",
+            "startMs": 16866,
+            "endMs": 17242,
+            "timestampMs": null,
+            "confidence": 0.582388,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " además",
+            "startMs": 17242,
+            "endMs": 17574,
+            "timestampMs": null,
+            "confidence": 0.903204,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tienes",
+            "startMs": 17574,
+            "endMs": 17906,
+            "timestampMs": null,
+            "confidence": 0.929259,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " base",
+            "startMs": 17906,
+            "endMs": 18150,
+            "timestampMs": null,
+            "confidence": 0.8944,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " de",
+            "startMs": 18150,
+            "endMs": 18304,
+            "timestampMs": null,
+            "confidence": 0.986265,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " datos",
+            "startMs": 18304,
+            "endMs": 18592,
+            "timestampMs": null,
+            "confidence": 0.995854,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " de",
+            "startMs": 18592,
+            "endMs": 18747,
+            "timestampMs": null,
+            "confidence": 0.85005,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " clientes,",
+            "startMs": 19104,
+            "endMs": 19640,
+            "timestampMs": null,
+            "confidence": 0.978805,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " firma",
+            "startMs": 19908,
+            "endMs": 20176,
+            "timestampMs": null,
+            "confidence": 0.928295,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " electrónica",
+            "startMs": 20622,
+            "endMs": 21180,
+            "timestampMs": null,
+            "confidence": 0.99574,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " y",
+            "startMs": 21180,
+            "endMs": 21292,
+            "timestampMs": null,
+            "confidence": 0.959455,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " todo",
+            "startMs": 21292,
+            "endMs": 21537,
+            "timestampMs": null,
+            "confidence": 0.99106,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " lo",
+            "startMs": 21537,
+            "endMs": 21694,
+            "timestampMs": null,
+            "confidence": 0.995361,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 21872,
+            "endMs": 22079,
+            "timestampMs": null,
+            "confidence": 0.995402,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " necesites",
+            "startMs": 22079,
+            "endMs": 22562,
+            "timestampMs": null,
+            "confidence": 0.995357,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " para",
+            "startMs": 22562,
+            "endMs": 22816,
+            "timestampMs": null,
+            "confidence": 0.909996,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 22816,
+            "endMs": 23023,
+            "timestampMs": null,
+            "confidence": 0.991875,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " nunca",
+            "startMs": 23023,
+            "endMs": 23322,
+            "timestampMs": null,
+            "confidence": 0.922541,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " se",
+            "startMs": 23322,
+            "endMs": 23483,
+            "timestampMs": null,
+            "confidence": 0.976165,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " te",
+            "startMs": 23483,
+            "endMs": 23645,
+            "timestampMs": null,
+            "confidence": 0.985577,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " vuelva",
+            "startMs": 23645,
+            "endMs": 23989,
+            "timestampMs": null,
+            "confidence": 0.937693,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " a",
+            "startMs": 23989,
+            "endMs": 24104,
+            "timestampMs": null,
+            "confidence": 0.985575,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " pasar",
+            "startMs": 24462,
+            "endMs": 24694,
+            "timestampMs": null,
+            "confidence": 0.996506,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " un",
+            "startMs": 24694,
+            "endMs": 24819,
+            "timestampMs": null,
+            "confidence": 0.984788,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " término,",
+            "startMs": 25087,
+            "endMs": 25455,
+            "timestampMs": null,
+            "confidence": 0.590716,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " hoy",
+            "startMs": 25455,
+            "endMs": 25650,
+            "timestampMs": null,
+            "confidence": 0.991694,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " en",
+            "startMs": 25650,
+            "endMs": 25802,
+            "timestampMs": null,
+            "confidence": 0.985406,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " día",
+            "startMs": 25802,
+            "endMs": 25997,
+            "timestampMs": null,
+            "confidence": 0.987943,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " los",
+            "startMs": 25997,
+            "endMs": 26193,
+            "timestampMs": null,
+            "confidence": 0.972005,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " abogados",
+            "startMs": 26193,
+            "endMs": 26604,
+            "timestampMs": null,
+            "confidence": 0.992222,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 26872,
+            "endMs": 27076,
+            "timestampMs": null,
+            "confidence": 0.984057,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " van",
+            "startMs": 27076,
+            "endMs": 27280,
+            "timestampMs": null,
+            "confidence": 0.992472,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " a",
+            "startMs": 27280,
+            "endMs": 27394,
+            "timestampMs": null,
+            "confidence": 0.995621,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " triunfar",
+            "startMs": 27394,
+            "endMs": 27824,
+            "timestampMs": null,
+            "confidence": 0.990939,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " van",
+            "startMs": 27824,
+            "endMs": 28028,
+            "timestampMs": null,
+            "confidence": 0.819318,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " a",
+            "startMs": 28028,
+            "endMs": 28141,
+            "timestampMs": null,
+            "confidence": 0.983886,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ser",
+            "startMs": 28141,
+            "endMs": 28345,
+            "timestampMs": null,
+            "confidence": 0.998155,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " los",
+            "startMs": 28345,
+            "endMs": 28549,
+            "timestampMs": null,
+            "confidence": 0.966739,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " abogados",
+            "startMs": 28549,
+            "endMs": 28979,
+            "timestampMs": null,
+            "confidence": 0.955188,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 28979,
+            "endMs": 29183,
+            "timestampMs": null,
+            "confidence": 0.998879,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " utilicen",
+            "startMs": 29183,
+            "endMs": 29613,
+            "timestampMs": null,
+            "confidence": 0.713624,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " estas",
+            "startMs": 29613,
+            "endMs": 29908,
+            "timestampMs": null,
+            "confidence": 0.982287,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " aplicaciones.",
+            "startMs": 30176,
+            "endMs": 30979,
+            "timestampMs": null,
+            "confidence": 0.958003,
+            "parte": "cuerpo"
+          }
+        ],
+        "cuerpoInicioMs": 0,
+        "cuerpoRecorteMs": 0,
+        "cierreInicioMs": null,
+        "duracionMs": 31435
+      }
+    },
+    "cuerpoMs": 31435,
+    "descartadas": [],
+    "texto": [
+      "¿Cuántos abogados no han perdido un pleito por desistimiento tácito? Por eso cree Trifuerza Legal, te alerta inmediatamente sobre cualquier actualización en tus procesos, te llega la actualización a tu Telegram o a tu correo electrónico de forma inmediata, nunca más vas a volver a perder el estado de un proceso, además tienes base de datos de clientes, firma electrónica y todo lo que necesites para que nunca se te vuelva a pasar un término, hoy en día los abogados que van a triunfar van a ser los abogados que utilicen estas aplicaciones."
+    ],
+    "avisos": []
+  },
+  "beats": [
+    {
+      "tipo": "escena",
+      "escena": "tabla",
+      "en": "alerta",
+      "hasta": "te llega",
+      "tema": {
+        "acento": "#C9A227",
+        "acentoTexto": "#E8C547",
+        "fondo": "#030712",
+        "panel": "#111827",
+        "borde": "#1F2937",
+        "titulo": "Trifuerza Legal"
+      },
+      "ventana": "Trifuerza Legal",
+      "items": [
+        {
+          "texto": "Demanda laboral",
+          "detalle": "11001-31-05-012-2024",
+          "mono": true,
+          "estado": "Activo",
+          "critico": true
+        },
+        {
+          "texto": "Proceso ejecutivo",
+          "detalle": "05001-40-03-008-2025",
+          "mono": true,
+          "estado": "Al día",
+          "tono": "ok"
+        },
+        {
+          "texto": "Acción de tutela",
+          "detalle": "76001-31-05-002-2025",
+          "mono": true,
+          "estado": "Al día",
+          "tono": "ok"
+        },
+        {
+          "alerta": true,
+          "texto": "Nueva actuación en radicado crítico",
+          "detalle": "Sincronizado hace 2 min",
+          "en": "actualización"
+        }
+      ]
+    },
+    {
+      "tipo": "escena",
+      "escena": "avisos",
+      "en": "Telegram",
+      "hasta": "nunca más",
+      "tema": {
+        "acento": "#C9A227",
+        "acentoTexto": "#E8C547",
+        "fondo": "#030712",
+        "panel": "#111827",
+        "borde": "#1F2937",
+        "titulo": "Trifuerza Legal"
+      },
+      "items": [
+        {
+          "app": "telegram",
+          "titulo": "Nueva actuación · Demanda laboral",
+          "texto": "11001-31-05-012-2024",
+          "mono": true,
+          "en": "Telegram"
+        },
+        {
+          "app": "correo",
+          "titulo": "Trifuerza Legal: actuación registrada",
+          "texto": "Revísala antes de que corra el término",
+          "en": "correo"
+        }
+      ]
+    },
+    {
+      "tipo": "escena",
+      "escena": "documentos",
+      "en": "clientes",
+      "hasta": "hoy en día",
+      "tema": {
+        "acento": "#C9A227",
+        "acentoTexto": "#E8C547",
+        "fondo": "#030712",
+        "panel": "#111827",
+        "borde": "#1F2937",
+        "titulo": "Trifuerza Legal"
+      },
+      "ventana": "Trifuerza Legal",
+      "items": [
+        {
+          "texto": "Base de clientes",
+          "icono": "Users",
+          "en": "clientes",
+          "listo": "Activo"
+        },
+        {
+          "texto": "Firma electrónica",
+          "icono": "PenLine",
+          "en": "firma",
+          "listo": "Firmado"
+        },
+        {
+          "texto": "Términos al día",
+          "icono": "CalendarClock",
+          "en": "término",
+          "listo": "Al día"
+        }
+      ]
+    }
+  ],
+  "golpes": [
+    {
+      "en": "desistimiento",
+      "estilo": "contorno"
+    },
+    {
+      "en": "triunfar",
+      "estilo": "serif"
+    }
+  ]
+}

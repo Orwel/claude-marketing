@@ -1,0 +1,200 @@
+{
+  "plantilla": "Montaje",
+  "tipo": "cuerpo",
+  "sinCierre": true,
+  "correcciones": [
+    {
+      "de": "Banegas",
+      "a": "Vanegas"
+    },
+    {
+      "de": "TriFuerza",
+      "a": "Trifuerza"
+    },
+    {
+      "de": "contracto",
+      "a": "Contrappto"
+    },
+    {
+      "de": "Contrapto",
+      "a": "Contrappto"
+    },
+    {
+      "de": "cuentas de cobre",
+      "a": "cuentas de cobro"
+    },
+    {
+      "de": "cuentas de cobra",
+      "a": "cuentas de cobro"
+    }
+  ],
+  "slug": "tf-trifuerza",
+  "codigo": "TF_TRI",
+  "titulo": "La Trifuerza",
+  "tono": "sobrio",
+  "cuentas": [
+    "trifuerza"
+  ],
+  "cuerpo": {
+    "archivo": "copy_745F8B2E-810A-420F-BE98-43FDA35CFF46.mov"
+  },
+  "resaltar": [
+    "tecnología",
+    "diseño",
+    "derecho"
+  ],
+  "verificar": [],
+  "generado": {
+    "beats": [
+      {
+        "tipo": "escena",
+        "escena": "pasos",
+        "en": "tecnología",
+        "hasta": "",
+        "dura": 4,
+        "fondo3d": true,
+        "ventana": "La Trifuerza",
+        "items": [
+          {
+            "texto": "Tecnología",
+            "icono": "Cpu",
+            "en": "tecnología"
+          },
+          {
+            "texto": "Diseño",
+            "icono": "Palette",
+            "en": "diseño"
+          },
+          {
+            "texto": "Derecho",
+            "icono": "Scale",
+            "en": "derecho"
+          }
+        ],
+        "inicioMs": 2500,
+        "finMs": 6500,
+        "itemsCuadros": [
+          7,
+          27,
+          58
+        ]
+      }
+    ],
+    "montajes": {
+      "trifuerza": {
+        "segmentos": [
+          {
+            "desde": 2.695,
+            "hasta": 7.195,
+            "archivo": "limpios/2026-10/copy_745F8B2E-810A-420F-BE98-43FDA35CFF46.mp4",
+            "parte": "cuerpo",
+            "velocidad": 1.12
+          },
+          {
+            "desde": 7.395,
+            "hasta": 8.195,
+            "archivo": "limpios/2026-10/copy_745F8B2E-810A-420F-BE98-43FDA35CFF46.mp4",
+            "parte": "cuerpo",
+            "velocidad": 1.12
+          }
+        ],
+        "subtitulos": [
+          {
+            "text": " La",
+            "startMs": 179,
+            "endMs": 402,
+            "timestampMs": null,
+            "confidence": 0.726579,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Trifuerza",
+            "startMs": 402,
+            "endMs": 1071,
+            "timestampMs": null,
+            "confidence": 0.264743,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " es",
+            "startMs": 1518,
+            "endMs": 2232,
+            "timestampMs": null,
+            "confidence": 0.952707,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tecnología,",
+            "startMs": 2500,
+            "endMs": 3169,
+            "timestampMs": null,
+            "confidence": 0.770659,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " diseño",
+            "startMs": 3169,
+            "endMs": 3604,
+            "timestampMs": null,
+            "confidence": 0.944004,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " y",
+            "startMs": 3604,
+            "endMs": 3750,
+            "timestampMs": null,
+            "confidence": 0.978614,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " derecho.",
+            "startMs": 4196,
+            "endMs": 4464,
+            "timestampMs": null,
+            "confidence": 0.862806,
+            "parte": "cuerpo"
+          }
+        ],
+        "cuerpoInicioMs": 0,
+        "cuerpoRecorteMs": 0,
+        "cierreInicioMs": null,
+        "duracionMs": 4732
+      }
+    },
+    "cuerpoMs": 4732,
+    "descartadas": [],
+    "texto": [
+      "La Trifuerza es tecnología, diseño y derecho."
+    ],
+    "avisos": []
+  },
+  "beats": [
+    {
+      "tipo": "escena",
+      "escena": "pasos",
+      "en": "tecnología",
+      "hasta": "",
+      "dura": 4,
+      "fondo3d": true,
+      "ventana": "La Trifuerza",
+      "items": [
+        {
+          "texto": "Tecnología",
+          "icono": "Cpu",
+          "en": "tecnología"
+        },
+        {
+          "texto": "Diseño",
+          "icono": "Palette",
+          "en": "diseño"
+        },
+        {
+          "texto": "Derecho",
+          "icono": "Scale",
+          "en": "derecho"
+        }
+      ]
+    }
+  ]
+}

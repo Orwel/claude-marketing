@@ -1,0 +1,1111 @@
+{
+  "plantilla": "Montaje",
+  "tipo": "cuerpo",
+  "sinCierre": true,
+  "lowerThird": "Abogado y desarrollador de software",
+  "correcciones": [
+    {
+      "de": "Banegas",
+      "a": "Vanegas"
+    },
+    {
+      "de": "TriFuerza",
+      "a": "Trifuerza"
+    },
+    {
+      "de": "contracto",
+      "a": "Contrappto"
+    },
+    {
+      "de": "Contrapto",
+      "a": "Contrappto"
+    },
+    {
+      "de": "cuentas de cobre",
+      "a": "cuentas de cobro"
+    },
+    {
+      "de": "cuentas de cobra",
+      "a": "cuentas de cobro"
+    },
+    {
+      "de": "Contrato para Empresas",
+      "a": "Contrappto para Empresas"
+    }
+  ],
+  "slug": "ctp-empresas",
+  "codigo": "CTP_EMP",
+  "titulo": "Contrappto para Empresas",
+  "tono": "tension",
+  "cuentas": [
+    "contrappto"
+  ],
+  "cuerpo": {
+    "archivo": "copy_C830E9CB-64DA-40D2-A4DD-CB359056DEED.mov"
+  },
+  "resaltar": [
+    "masiva",
+    "plantillas",
+    "alertas",
+    "recibos",
+    "asistente"
+  ],
+  "verificar": [
+    {
+      "dato": "Contrappto para Empresas: contratación masiva, plantillas, alertas, seguimiento, recibos y cuentas de cobro automáticas, asistente IA",
+      "estado": "pendiente"
+    }
+  ],
+  "generado": {
+    "beats": [
+      {
+        "tipo": "escena",
+        "escena": "masiva",
+        "en": "masiva",
+        "hasta": "todas",
+        "fondo3d": true,
+        "ventana": "Contrappto para Empresas",
+        "unidad": "contratos",
+        "items": [
+          {
+            "n": 2,
+            "en": "2"
+          },
+          {
+            "n": 10,
+            "en": "10"
+          },
+          {
+            "n": 20,
+            "en": "20"
+          },
+          {
+            "n": 30,
+            "en": "30"
+          },
+          {
+            "n": 40,
+            "en": "40"
+          }
+        ],
+        "inicioMs": 2617,
+        "finMs": 5893,
+        "itemsCuadros": [
+          32,
+          46,
+          53,
+          68,
+          84
+        ]
+      },
+      {
+        "tipo": "escena",
+        "escena": "app",
+        "en": "plantillas",
+        "hasta": "en contratos",
+        "app": {
+          "archivo": "app/2026-10/contrappto.mp4",
+          "desde": 72,
+          "velocidad": 0.5,
+          "tapar": [
+            {
+              "x": 0.03,
+              "y": 0.184,
+              "w": 0.94,
+              "h": 0.034,
+              "fondo": "#0A1A24"
+            }
+          ]
+        },
+        "titulo": "Una plantilla, *muchas personas*",
+        "items": [
+          {
+            "texto": "Plantillas",
+            "icono": "Layers",
+            "en": "plantillas"
+          },
+          {
+            "texto": "Contratación masiva",
+            "icono": "Users",
+            "en": "masiva"
+          }
+        ],
+        "inicioMs": 17169,
+        "finMs": 21250,
+        "itemsCuadros": [
+          7,
+          67
+        ]
+      },
+      {
+        "tipo": "escena",
+        "escena": "documentos",
+        "en": "alertas",
+        "hasta": "y un asistente",
+        "ventana": "Contrappto · automático",
+        "items": [
+          {
+            "texto": "Alerta de vencimiento",
+            "icono": "Bell",
+            "en": "alertas",
+            "listo": "Activa"
+          },
+          {
+            "texto": "Seguimiento",
+            "icono": "Activity",
+            "en": "seguimientos",
+            "listo": "Al día"
+          },
+          {
+            "texto": "Recibo_0012.pdf",
+            "en": "recibos"
+          },
+          {
+            "texto": "Cuenta_de_cobro.pdf",
+            "en": "cobro"
+          }
+        ],
+        "inicioMs": 23621,
+        "finMs": 28382,
+        "itemsCuadros": [
+          7,
+          33,
+          86,
+          null
+        ]
+      },
+      {
+        "tipo": "escena",
+        "escena": "app",
+        "en": "asistente",
+        "hasta": "",
+        "dura": 5,
+        "app": {
+          "archivo": "app/2026-10/contrappto.mp4",
+          "desde": 44,
+          "velocidad": 1,
+          "tapar": [
+            {
+              "x": 0.1,
+              "y": 0.146,
+              "w": 0.87,
+              "h": 0.044,
+              "texto": "Contrato de arriendo vacacional"
+            }
+          ]
+        },
+        "lado": "derecha",
+        "titulo": "Asistente con *IA*",
+        "items": [
+          {
+            "texto": "¿Cuándo vence?",
+            "icono": "Bot",
+            "en": "asistente"
+          }
+        ],
+        "inicioMs": 29107,
+        "finMs": 34107,
+        "itemsCuadros": [
+          7
+        ]
+      }
+    ],
+    "montajes": {
+      "contrappto": {
+        "segmentos": [
+          {
+            "desde": 1.097,
+            "hasta": 33.497,
+            "archivo": "limpios/2026-10/copy_C830E9CB-64DA-40D2-A4DD-CB359056DEED.mp4",
+            "parte": "cuerpo",
+            "velocidad": 1.12
+          },
+          {
+            "desde": 33.997,
+            "hasta": 38.287,
+            "archivo": "limpios/2026-10/copy_C830E9CB-64DA-40D2-A4DD-CB359056DEED.mp4",
+            "parte": "cuerpo",
+            "velocidad": 1.12
+          }
+        ],
+        "subtitulos": [
+          {
+            "text": " Si",
+            "startMs": 179,
+            "endMs": 327,
+            "timestampMs": null,
+            "confidence": 0.758834,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " en",
+            "startMs": 327,
+            "endMs": 476,
+            "timestampMs": null,
+            "confidence": 0.815459,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tu",
+            "startMs": 476,
+            "endMs": 624,
+            "timestampMs": null,
+            "confidence": 0.987507,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " empresa",
+            "startMs": 624,
+            "endMs": 984,
+            "timestampMs": null,
+            "confidence": 0.983475,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tienen",
+            "startMs": 984,
+            "endMs": 1303,
+            "timestampMs": null,
+            "confidence": 0.581562,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " la",
+            "startMs": 1303,
+            "endMs": 1451,
+            "timestampMs": null,
+            "confidence": 0.942743,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " necesidad",
+            "startMs": 1451,
+            "endMs": 1896,
+            "timestampMs": null,
+            "confidence": 0.993225,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " de",
+            "startMs": 1896,
+            "endMs": 2045,
+            "timestampMs": null,
+            "confidence": 0.979194,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " contratación",
+            "startMs": 2045,
+            "endMs": 2617,
+            "timestampMs": null,
+            "confidence": 0.979115,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " masiva",
+            "startMs": 2617,
+            "endMs": 2935,
+            "timestampMs": null,
+            "confidence": 0.947112,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " con",
+            "startMs": 2935,
+            "endMs": 3126,
+            "timestampMs": null,
+            "confidence": 0.857554,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " más",
+            "startMs": 3126,
+            "endMs": 3317,
+            "timestampMs": null,
+            "confidence": 0.899464,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " de",
+            "startMs": 3317,
+            "endMs": 3465,
+            "timestampMs": null,
+            "confidence": 0.986316,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " 2,",
+            "startMs": 3465,
+            "endMs": 3571,
+            "timestampMs": null,
+            "confidence": 0.462022,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " 10,",
+            "startMs": 3929,
+            "endMs": 4152,
+            "timestampMs": null,
+            "confidence": 0.93834,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " 20,",
+            "startMs": 4152,
+            "endMs": 4375,
+            "timestampMs": null,
+            "confidence": 0.957664,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " 30,",
+            "startMs": 4643,
+            "endMs": 5000,
+            "timestampMs": null,
+            "confidence": 0.752738,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " 40",
+            "startMs": 5179,
+            "endMs": 5299,
+            "timestampMs": null,
+            "confidence": 0.978592,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " personas,",
+            "startMs": 5299,
+            "endMs": 5625,
+            "timestampMs": null,
+            "confidence": 0.580921,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " todas",
+            "startMs": 5893,
+            "endMs": 6189,
+            "timestampMs": null,
+            "confidence": 0.978838,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " las",
+            "startMs": 6189,
+            "endMs": 6395,
+            "timestampMs": null,
+            "confidence": 0.985902,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 6395,
+            "endMs": 6599,
+            "timestampMs": null,
+            "confidence": 0.985077,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tú",
+            "startMs": 6599,
+            "endMs": 6759,
+            "timestampMs": null,
+            "confidence": 0.717358,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " quieras,",
+            "startMs": 6759,
+            "endMs": 7146,
+            "timestampMs": null,
+            "confidence": 0.468498,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " y",
+            "startMs": 7146,
+            "endMs": 7261,
+            "timestampMs": null,
+            "confidence": 0.917884,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " necesitas",
+            "startMs": 7261,
+            "endMs": 7739,
+            "timestampMs": null,
+            "confidence": 0.9417,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " hacer",
+            "startMs": 7739,
+            "endMs": 8036,
+            "timestampMs": null,
+            "confidence": 0.978345,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " el",
+            "startMs": 8304,
+            "endMs": 8492,
+            "timestampMs": null,
+            "confidence": 0.989742,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " mismo",
+            "startMs": 8492,
+            "endMs": 8842,
+            "timestampMs": null,
+            "confidence": 0.990541,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " contrato",
+            "startMs": 8842,
+            "endMs": 9354,
+            "timestampMs": null,
+            "confidence": 0.98524,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " con",
+            "startMs": 9354,
+            "endMs": 9596,
+            "timestampMs": null,
+            "confidence": 0.975141,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " muchas",
+            "startMs": 9596,
+            "endMs": 10000,
+            "timestampMs": null,
+            "confidence": 0.907366,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " personas",
+            "startMs": 10268,
+            "endMs": 10684,
+            "timestampMs": null,
+            "confidence": 0.9866,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " al",
+            "startMs": 10684,
+            "endMs": 10837,
+            "timestampMs": null,
+            "confidence": 0.965589,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tiempo",
+            "startMs": 10837,
+            "endMs": 11166,
+            "timestampMs": null,
+            "confidence": 0.994685,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " y",
+            "startMs": 11166,
+            "endMs": 11276,
+            "timestampMs": null,
+            "confidence": 0.995615,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " quieres",
+            "startMs": 11276,
+            "endMs": 11648,
+            "timestampMs": null,
+            "confidence": 0.99222,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " facilitar",
+            "startMs": 11648,
+            "endMs": 12109,
+            "timestampMs": null,
+            "confidence": 0.991287,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ese",
+            "startMs": 12109,
+            "endMs": 12306,
+            "timestampMs": null,
+            "confidence": 0.828229,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " proceso,",
+            "startMs": 12306,
+            "endMs": 12679,
+            "timestampMs": null,
+            "confidence": 0.896087,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " escríbeme",
+            "startMs": 12946,
+            "endMs": 13435,
+            "timestampMs": null,
+            "confidence": 0.707657,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " y",
+            "startMs": 13435,
+            "endMs": 13551,
+            "timestampMs": null,
+            "confidence": 0.966942,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " activamos",
+            "startMs": 13551,
+            "endMs": 14039,
+            "timestampMs": null,
+            "confidence": 0.994135,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Contrappto para Empresas,",
+            "startMs": 14039,
+            "endMs": 15179,
+            "timestampMs": null,
+            "confidence": 0.193646,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " con",
+            "startMs": 15536,
+            "endMs": 15732,
+            "timestampMs": null,
+            "confidence": 0.962579,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " el",
+            "startMs": 15732,
+            "endMs": 15884,
+            "timestampMs": null,
+            "confidence": 0.984868,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 15884,
+            "endMs": 16080,
+            "timestampMs": null,
+            "confidence": 0.986899,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " podrás",
+            "startMs": 16080,
+            "endMs": 16407,
+            "timestampMs": null,
+            "confidence": 0.974444,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tener",
+            "startMs": 16407,
+            "endMs": 16690,
+            "timestampMs": null,
+            "confidence": 0.982352,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " todas",
+            "startMs": 16690,
+            "endMs": 16973,
+            "timestampMs": null,
+            "confidence": 0.986015,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " las",
+            "startMs": 16973,
+            "endMs": 17169,
+            "timestampMs": null,
+            "confidence": 0.993703,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " plantillas",
+            "startMs": 17169,
+            "endMs": 17670,
+            "timestampMs": null,
+            "confidence": 0.987583,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " de",
+            "startMs": 17670,
+            "endMs": 17822,
+            "timestampMs": null,
+            "confidence": 0.978939,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tus",
+            "startMs": 17822,
+            "endMs": 18018,
+            "timestampMs": null,
+            "confidence": 0.977739,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " contratos",
+            "startMs": 18018,
+            "endMs": 18476,
+            "timestampMs": null,
+            "confidence": 0.967883,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " y",
+            "startMs": 18476,
+            "endMs": 18585,
+            "timestampMs": null,
+            "confidence": 0.967853,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " contratación",
+            "startMs": 18585,
+            "endMs": 19172,
+            "timestampMs": null,
+            "confidence": 0.911883,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " masiva,",
+            "startMs": 19172,
+            "endMs": 19499,
+            "timestampMs": null,
+            "confidence": 0.326872,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " disponible",
+            "startMs": 19499,
+            "endMs": 20000,
+            "timestampMs": null,
+            "confidence": 0.971714,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " a",
+            "startMs": 20536,
+            "endMs": 20628,
+            "timestampMs": null,
+            "confidence": 0.984372,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tu",
+            "startMs": 20628,
+            "endMs": 20757,
+            "timestampMs": null,
+            "confidence": 0.993051,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " alcance,",
+            "startMs": 20757,
+            "endMs": 21071,
+            "timestampMs": null,
+            "confidence": 0.470581,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " en",
+            "startMs": 21250,
+            "endMs": 21406,
+            "timestampMs": null,
+            "confidence": 0.920356,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " contratos",
+            "startMs": 21406,
+            "endMs": 21875,
+            "timestampMs": null,
+            "confidence": 0.73823,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " digitales",
+            "startMs": 22054,
+            "endMs": 22545,
+            "timestampMs": null,
+            "confidence": 0.974715,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 22545,
+            "endMs": 22755,
+            "timestampMs": null,
+            "confidence": 0.839679,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " quedarán",
+            "startMs": 22755,
+            "endMs": 23199,
+            "timestampMs": null,
+            "confidence": 0.835526,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " con",
+            "startMs": 23199,
+            "endMs": 23410,
+            "timestampMs": null,
+            "confidence": 0.987592,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " sus",
+            "startMs": 23410,
+            "endMs": 23621,
+            "timestampMs": null,
+            "confidence": 0.942444,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " alertas,",
+            "startMs": 23621,
+            "endMs": 24018,
+            "timestampMs": null,
+            "confidence": 0.985733,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " sus",
+            "startMs": 24375,
+            "endMs": 24487,
+            "timestampMs": null,
+            "confidence": 0.905541,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " seguimientos,",
+            "startMs": 24487,
+            "endMs": 24821,
+            "timestampMs": null,
+            "confidence": 0.98201,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " la",
+            "startMs": 25089,
+            "endMs": 25241,
+            "timestampMs": null,
+            "confidence": 0.883272,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " creación",
+            "startMs": 25241,
+            "endMs": 25652,
+            "timestampMs": null,
+            "confidence": 0.995664,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " de",
+            "startMs": 25652,
+            "endMs": 25804,
+            "timestampMs": null,
+            "confidence": 0.998681,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " recibos",
+            "startMs": 26250,
+            "endMs": 26644,
+            "timestampMs": null,
+            "confidence": 0.552503,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " y",
+            "startMs": 26644,
+            "endMs": 26760,
+            "timestampMs": null,
+            "confidence": 0.983905,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " cuentas de cobro",
+            "startMs": 26760,
+            "endMs": 27618,
+            "timestampMs": null,
+            "confidence": 0.985601,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " automáticamente,",
+            "startMs": 27618,
+            "endMs": 28382,
+            "timestampMs": null,
+            "confidence": 0.453242,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " y",
+            "startMs": 28382,
+            "endMs": 28498,
+            "timestampMs": null,
+            "confidence": 0.947717,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " un",
+            "startMs": 28498,
+            "endMs": 28661,
+            "timestampMs": null,
+            "confidence": 0.936969,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " asistente",
+            "startMs": 29107,
+            "endMs": 29545,
+            "timestampMs": null,
+            "confidence": 0.936809,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " con",
+            "startMs": 29545,
+            "endMs": 29732,
+            "timestampMs": null,
+            "confidence": 0.969137,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Inteligencia",
+            "startMs": 29732,
+            "endMs": 30295,
+            "timestampMs": null,
+            "confidence": 0.678703,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Artificial",
+            "startMs": 30295,
+            "endMs": 30774,
+            "timestampMs": null,
+            "confidence": 0.985026,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 30774,
+            "endMs": 30962,
+            "timestampMs": null,
+            "confidence": 0.996751,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " te",
+            "startMs": 30962,
+            "endMs": 31107,
+            "timestampMs": null,
+            "confidence": 0.989191,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ayudará",
+            "startMs": 31107,
+            "endMs": 31462,
+            "timestampMs": null,
+            "confidence": 0.733218,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " en",
+            "startMs": 31462,
+            "endMs": 31607,
+            "timestampMs": null,
+            "confidence": 0.987664,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tus",
+            "startMs": 31607,
+            "endMs": 31795,
+            "timestampMs": null,
+            "confidence": 0.992381,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " contratos.",
+            "startMs": 31795,
+            "endMs": 32232,
+            "timestampMs": null,
+            "confidence": 0.980396,
+            "parte": "cuerpo"
+          }
+        ],
+        "cuerpoInicioMs": 0,
+        "cuerpoRecorteMs": 0,
+        "cierreInicioMs": null,
+        "duracionMs": 32759
+      }
+    },
+    "cuerpoMs": 32759,
+    "descartadas": [],
+    "texto": [
+      "Si en tu empresa tienen la necesidad de contratación masiva con más de 2, 10, 20, 30, 40 personas, todas las que tú quieras, y necesitas hacer el mismo contrato con muchas personas al tiempo y quieres facilitar ese proceso, escríbeme y activamos Contrato para Empresas, con el que podrás tener todas las plantillas de tus contratos y contratación masiva, disponible a tu alcance, en contratos digitales que quedarán con sus alertas, sus seguimientos, la creación de recibos y cuentas de cobre automáticamente, y un",
+      "asistente con Inteligencia Artificial que te ayudará en tus contratos."
+    ],
+    "avisos": []
+  },
+  "beats": [
+    {
+      "tipo": "escena",
+      "escena": "masiva",
+      "en": "masiva",
+      "hasta": "todas",
+      "fondo3d": true,
+      "ventana": "Contrappto para Empresas",
+      "unidad": "contratos",
+      "items": [
+        {
+          "n": 2,
+          "en": "2"
+        },
+        {
+          "n": 10,
+          "en": "10"
+        },
+        {
+          "n": 20,
+          "en": "20"
+        },
+        {
+          "n": 30,
+          "en": "30"
+        },
+        {
+          "n": 40,
+          "en": "40"
+        }
+      ]
+    },
+    {
+      "tipo": "escena",
+      "escena": "app",
+      "en": "plantillas",
+      "hasta": "en contratos",
+      "app": {
+        "archivo": "app/2026-10/contrappto.mp4",
+        "desde": 72,
+        "velocidad": 0.5,
+        "tapar": [
+          {
+            "x": 0.03,
+            "y": 0.184,
+            "w": 0.94,
+            "h": 0.034,
+            "fondo": "#0A1A24"
+          }
+        ]
+      },
+      "titulo": "Una plantilla, *muchas personas*",
+      "items": [
+        {
+          "texto": "Plantillas",
+          "icono": "Layers",
+          "en": "plantillas"
+        },
+        {
+          "texto": "Contratación masiva",
+          "icono": "Users",
+          "en": "masiva"
+        }
+      ]
+    },
+    {
+      "tipo": "escena",
+      "escena": "documentos",
+      "en": "alertas",
+      "hasta": "y un asistente",
+      "ventana": "Contrappto · automático",
+      "items": [
+        {
+          "texto": "Alerta de vencimiento",
+          "icono": "Bell",
+          "en": "alertas",
+          "listo": "Activa"
+        },
+        {
+          "texto": "Seguimiento",
+          "icono": "Activity",
+          "en": "seguimientos",
+          "listo": "Al día"
+        },
+        {
+          "texto": "Recibo_0012.pdf",
+          "en": "recibos"
+        },
+        {
+          "texto": "Cuenta_de_cobro.pdf",
+          "en": "cobro"
+        }
+      ]
+    },
+    {
+      "tipo": "escena",
+      "escena": "app",
+      "en": "asistente",
+      "hasta": "",
+      "dura": 5,
+      "app": {
+        "archivo": "app/2026-10/contrappto.mp4",
+        "desde": 44,
+        "velocidad": 1,
+        "tapar": [
+          {
+            "x": 0.1,
+            "y": 0.146,
+            "w": 0.87,
+            "h": 0.044,
+            "texto": "Contrato de arriendo vacacional"
+          }
+        ]
+      },
+      "lado": "derecha",
+      "titulo": "Asistente con *IA*",
+      "items": [
+        {
+          "texto": "¿Cuándo vence?",
+          "icono": "Bot",
+          "en": "asistente"
+        }
+      ]
+    }
+  ],
+  "golpes": [
+    {
+      "en": "escríbeme",
+      "estilo": "pastilla"
+    }
+  ],
+  "variantes": {
+    "contrappto": {
+      "cta": "Escríbeme"
+    }
+  }
+}

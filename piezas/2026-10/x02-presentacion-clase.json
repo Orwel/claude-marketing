@@ -1,0 +1,764 @@
+{
+  "plantilla": "Montaje",
+  "tipo": "cuerpo",
+  "sinCierre": true,
+  "correcciones": [
+    {
+      "de": "Banegas",
+      "a": "Vanegas"
+    },
+    {
+      "de": "TriFuerza",
+      "a": "Trifuerza"
+    },
+    {
+      "de": "contracto",
+      "a": "Contrappto"
+    },
+    {
+      "de": "Contrapto",
+      "a": "Contrappto"
+    },
+    {
+      "de": "cuentas de cobre",
+      "a": "cuentas de cobro"
+    },
+    {
+      "de": "cuentas de cobra",
+      "a": "cuentas de cobro"
+    }
+  ],
+  "slug": "x02-presentacion-clase",
+  "codigo": "X02",
+  "titulo": "Quién soy y la clase de IA",
+  "tono": "energico",
+  "cuentas": [
+    "juanda"
+  ],
+  "cuerpo": {
+    "archivo": "copy_798944AE-791D-490C-8238-5E0A518A3B4E.mov"
+  },
+  "resaltar": [
+    "abogado",
+    "Trifuerza",
+    "Contrappto",
+    "experto",
+    "clase"
+  ],
+  "verificar": [
+    {
+      "dato": "Contrappto: \"una aplicación de contratos digitales única en el mundo\"",
+      "estado": "pendiente"
+    }
+  ],
+  "generado": {
+    "beats": [
+      {
+        "tipo": "escena",
+        "escena": "pasos",
+        "en": "abogado",
+        "hasta": "la combinación",
+        "ventana": "Juan David Vanegas",
+        "items": [
+          {
+            "texto": "Abogado",
+            "icono": "Scale",
+            "en": "abogado"
+          },
+          {
+            "texto": "Desarrollador",
+            "icono": "Code",
+            "en": "desarrollador"
+          },
+          {
+            "texto": "Creador",
+            "icono": "Sparkles",
+            "en": "creador"
+          }
+        ],
+        "inicioMs": 1429,
+        "finMs": 4643,
+        "itemsCuadros": [
+          7,
+          22,
+          66
+        ]
+      },
+      {
+        "tipo": "escena",
+        "escena": "pasos",
+        "en": "tecnología",
+        "hasta": "y Contrappto",
+        "ventana": "La Trifuerza",
+        "items": [
+          {
+            "texto": "Tecnología",
+            "icono": "Cpu",
+            "en": "tecnología"
+          },
+          {
+            "texto": "Diseño",
+            "icono": "Palette",
+            "en": "diseño"
+          },
+          {
+            "texto": "Derecho",
+            "icono": "Scale",
+            "en": "derecho"
+          }
+        ],
+        "inicioMs": 5714,
+        "finMs": 7500,
+        "itemsCuadros": [
+          7,
+          23,
+          38
+        ]
+      },
+      {
+        "tipo": "escena",
+        "escena": "app",
+        "en": "Contrappto",
+        "hasta": "Soy experto",
+        "fondo3d": true,
+        "app": {
+          "archivo": "app/2026-10/contrappto.mp4",
+          "desde": 0,
+          "velocidad": 1,
+          "tapar": []
+        },
+        "titulo": "Contrappto",
+        "items": [
+          {
+            "texto": "Contratos digitales",
+            "icono": "FileCheck",
+            "en": "contratos"
+          }
+        ],
+        "inicioMs": 7637,
+        "finMs": 11786,
+        "itemsCuadros": [
+          57
+        ]
+      }
+    ],
+    "montajes": {
+      "juanda": {
+        "segmentos": [
+          {
+            "desde": 2.203,
+            "hasta": 15.203,
+            "archivo": "limpios/2026-10/copy_798944AE-791D-490C-8238-5E0A518A3B4E.mp4",
+            "parte": "cuerpo",
+            "velocidad": 1.12
+          },
+          {
+            "desde": 15.403,
+            "hasta": 26.603,
+            "archivo": "limpios/2026-10/copy_798944AE-791D-490C-8238-5E0A518A3B4E.mp4",
+            "parte": "cuerpo",
+            "velocidad": 1.12
+          }
+        ],
+        "subtitulos": [
+          {
+            "text": " Soy",
+            "startMs": 179,
+            "endMs": 371,
+            "timestampMs": null,
+            "confidence": 0.781009,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Juan",
+            "startMs": 371,
+            "endMs": 607,
+            "timestampMs": null,
+            "confidence": 0.985891,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " David",
+            "startMs": 607,
+            "endMs": 886,
+            "timestampMs": null,
+            "confidence": 0.981422,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Vanegas,",
+            "startMs": 886,
+            "endMs": 1250,
+            "timestampMs": null,
+            "confidence": 0.607459,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " abogado",
+            "startMs": 1429,
+            "endMs": 1803,
+            "timestampMs": null,
+            "confidence": 0.885724,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " y",
+            "startMs": 1803,
+            "endMs": 1913,
+            "timestampMs": null,
+            "confidence": 0.97718,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " desarrollador",
+            "startMs": 1913,
+            "endMs": 2552,
+            "timestampMs": null,
+            "confidence": 0.996261,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " de",
+            "startMs": 2552,
+            "endMs": 2706,
+            "timestampMs": null,
+            "confidence": 0.959177,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " software,",
+            "startMs": 2706,
+            "endMs": 3125,
+            "timestampMs": null,
+            "confidence": 0.789385,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " creador",
+            "startMs": 3393,
+            "endMs": 3743,
+            "timestampMs": null,
+            "confidence": 0.916852,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " de",
+            "startMs": 3743,
+            "endMs": 3887,
+            "timestampMs": null,
+            "confidence": 0.992051,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " la",
+            "startMs": 3887,
+            "endMs": 4031,
+            "timestampMs": null,
+            "confidence": 0.766114,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Trifuerza,",
+            "startMs": 4031,
+            "endMs": 4464,
+            "timestampMs": null,
+            "confidence": 0.223163,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " la",
+            "startMs": 4643,
+            "endMs": 4810,
+            "timestampMs": null,
+            "confidence": 0.887697,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " combinación",
+            "startMs": 4810,
+            "endMs": 5404,
+            "timestampMs": null,
+            "confidence": 0.981178,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " entre",
+            "startMs": 5404,
+            "endMs": 5714,
+            "timestampMs": null,
+            "confidence": 0.994446,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tecnología,",
+            "startMs": 5714,
+            "endMs": 6262,
+            "timestampMs": null,
+            "confidence": 0.968575,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " diseño",
+            "startMs": 6262,
+            "endMs": 6619,
+            "timestampMs": null,
+            "confidence": 0.979895,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " y",
+            "startMs": 6619,
+            "endMs": 6738,
+            "timestampMs": null,
+            "confidence": 0.962571,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " derecho,",
+            "startMs": 6738,
+            "endMs": 7143,
+            "timestampMs": null,
+            "confidence": 0.414145,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " y",
+            "startMs": 7500,
+            "endMs": 7637,
+            "timestampMs": null,
+            "confidence": 0.972006,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Contrappto,",
+            "startMs": 7637,
+            "endMs": 8214,
+            "timestampMs": null,
+            "confidence": 0.29436,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " una",
+            "startMs": 8482,
+            "endMs": 8671,
+            "timestampMs": null,
+            "confidence": 0.987782,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " aplicación",
+            "startMs": 8671,
+            "endMs": 9153,
+            "timestampMs": null,
+            "confidence": 0.973114,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " de",
+            "startMs": 9153,
+            "endMs": 9299,
+            "timestampMs": null,
+            "confidence": 0.952692,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " contratos",
+            "startMs": 9299,
+            "endMs": 9738,
+            "timestampMs": null,
+            "confidence": 0.973917,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " digitales",
+            "startMs": 9738,
+            "endMs": 10179,
+            "timestampMs": null,
+            "confidence": 0.883011,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " única",
+            "startMs": 10446,
+            "endMs": 10737,
+            "timestampMs": null,
+            "confidence": 0.975535,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " en",
+            "startMs": 10737,
+            "endMs": 10893,
+            "timestampMs": null,
+            "confidence": 0.995304,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " el",
+            "startMs": 10893,
+            "endMs": 11049,
+            "timestampMs": null,
+            "confidence": 0.989863,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " mundo.",
+            "startMs": 11049,
+            "endMs": 11339,
+            "timestampMs": null,
+            "confidence": 0.862472,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Soy",
+            "startMs": 11786,
+            "endMs": 11879,
+            "timestampMs": null,
+            "confidence": 0.652643,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " experto",
+            "startMs": 11879,
+            "endMs": 12054,
+            "timestampMs": null,
+            "confidence": 0.969686,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " en",
+            "startMs": 12232,
+            "endMs": 12383,
+            "timestampMs": null,
+            "confidence": 0.988617,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Inteligencia",
+            "startMs": 12383,
+            "endMs": 12967,
+            "timestampMs": null,
+            "confidence": 0.531042,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Artificial",
+            "startMs": 12967,
+            "endMs": 13463,
+            "timestampMs": null,
+            "confidence": 0.932774,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " y",
+            "startMs": 13463,
+            "endMs": 13571,
+            "timestampMs": null,
+            "confidence": 0.376533,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " si",
+            "startMs": 13839,
+            "endMs": 13976,
+            "timestampMs": null,
+            "confidence": 0.880506,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " quieres",
+            "startMs": 13976,
+            "endMs": 14308,
+            "timestampMs": null,
+            "confidence": 0.937612,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " saber",
+            "startMs": 14308,
+            "endMs": 14562,
+            "timestampMs": null,
+            "confidence": 0.968509,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " un",
+            "startMs": 14562,
+            "endMs": 14699,
+            "timestampMs": null,
+            "confidence": 0.867898,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " poco",
+            "startMs": 14699,
+            "endMs": 14913,
+            "timestampMs": null,
+            "confidence": 0.995782,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " más,",
+            "startMs": 14913,
+            "endMs": 15089,
+            "timestampMs": null,
+            "confidence": 0.891489,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " únete",
+            "startMs": 15446,
+            "endMs": 15782,
+            "timestampMs": null,
+            "confidence": 0.822096,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " a",
+            "startMs": 15782,
+            "endMs": 15912,
+            "timestampMs": null,
+            "confidence": 0.991577,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " mi",
+            "startMs": 15912,
+            "endMs": 16093,
+            "timestampMs": null,
+            "confidence": 0.661552,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " clase,",
+            "startMs": 16093,
+            "endMs": 16429,
+            "timestampMs": null,
+            "confidence": 0.596191,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " a",
+            "startMs": 16607,
+            "endMs": 16711,
+            "timestampMs": null,
+            "confidence": 0.955959,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " mi",
+            "startMs": 16711,
+            "endMs": 16856,
+            "timestampMs": null,
+            "confidence": 0.997261,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " webinar",
+            "startMs": 16856,
+            "endMs": 17209,
+            "timestampMs": null,
+            "confidence": 0.835063,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " de",
+            "startMs": 17209,
+            "endMs": 17354,
+            "timestampMs": null,
+            "confidence": 0.980522,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Inteligencia",
+            "startMs": 17354,
+            "endMs": 17915,
+            "timestampMs": null,
+            "confidence": 0.789834,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Artificial",
+            "startMs": 17915,
+            "endMs": 18393,
+            "timestampMs": null,
+            "confidence": 0.991894,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 18661,
+            "endMs": 18821,
+            "timestampMs": null,
+            "confidence": 0.847023,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " vamos",
+            "startMs": 18821,
+            "endMs": 19054,
+            "timestampMs": null,
+            "confidence": 0.980417,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " a",
+            "startMs": 19054,
+            "endMs": 19143,
+            "timestampMs": null,
+            "confidence": 0.995004,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tener.",
+            "startMs": 19143,
+            "endMs": 19375,
+            "timestampMs": null,
+            "confidence": 0.676897,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Comenta",
+            "startMs": 19643,
+            "endMs": 20033,
+            "timestampMs": null,
+            "confidence": 0.944562,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " clase",
+            "startMs": 20033,
+            "endMs": 20331,
+            "timestampMs": null,
+            "confidence": 0.636628,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " y",
+            "startMs": 20331,
+            "endMs": 20446,
+            "timestampMs": null,
+            "confidence": 0.92247,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " te",
+            "startMs": 20714,
+            "endMs": 20876,
+            "timestampMs": null,
+            "confidence": 0.989442,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " lo",
+            "startMs": 20876,
+            "endMs": 21038,
+            "timestampMs": null,
+            "confidence": 0.98346,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " envío.",
+            "startMs": 21038,
+            "endMs": 21339,
+            "timestampMs": null,
+            "confidence": 0.957994,
+            "parte": "cuerpo"
+          }
+        ],
+        "cuerpoInicioMs": 0,
+        "cuerpoRecorteMs": 0,
+        "cierreInicioMs": null,
+        "duracionMs": 21607
+      }
+    },
+    "cuerpoMs": 21607,
+    "descartadas": [],
+    "texto": [
+      "Soy Juan David Banegas, abogado y desarrollador de software, creador de la Trifuerza, la combinación entre tecnología, diseño y derecho, y Contrapto, una aplicación de contratos digitales única en el mundo. Soy experto en Inteligencia Artificial y si quieres saber un poco más, únete a mi clase, a mi webinar de Inteligencia Artificial que vamos a tener. Comenta clase y te lo envío."
+    ],
+    "avisos": []
+  },
+  "beats": [
+    {
+      "tipo": "escena",
+      "escena": "pasos",
+      "en": "abogado",
+      "hasta": "la combinación",
+      "ventana": "Juan David Vanegas",
+      "items": [
+        {
+          "texto": "Abogado",
+          "icono": "Scale",
+          "en": "abogado"
+        },
+        {
+          "texto": "Desarrollador",
+          "icono": "Code",
+          "en": "desarrollador"
+        },
+        {
+          "texto": "Creador",
+          "icono": "Sparkles",
+          "en": "creador"
+        }
+      ]
+    },
+    {
+      "tipo": "escena",
+      "escena": "pasos",
+      "en": "tecnología",
+      "hasta": "y Contrappto",
+      "ventana": "La Trifuerza",
+      "items": [
+        {
+          "texto": "Tecnología",
+          "icono": "Cpu",
+          "en": "tecnología"
+        },
+        {
+          "texto": "Diseño",
+          "icono": "Palette",
+          "en": "diseño"
+        },
+        {
+          "texto": "Derecho",
+          "icono": "Scale",
+          "en": "derecho"
+        }
+      ]
+    },
+    {
+      "tipo": "escena",
+      "escena": "app",
+      "en": "Contrappto",
+      "hasta": "Soy experto",
+      "fondo3d": true,
+      "app": {
+        "archivo": "app/2026-10/contrappto.mp4",
+        "desde": 0,
+        "velocidad": 1,
+        "tapar": []
+      },
+      "titulo": "Contrappto",
+      "items": [
+        {
+          "texto": "Contratos digitales",
+          "icono": "FileCheck",
+          "en": "contratos"
+        }
+      ]
+    }
+  ],
+  "golpes": [
+    {
+      "en": "experto",
+      "estilo": "serif"
+    },
+    {
+      "en": "clase",
+      "vez": 2,
+      "estilo": "pastilla"
+    }
+  ]
+}

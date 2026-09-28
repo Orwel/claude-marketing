@@ -23,6 +23,22 @@ export const Firma = ({ tamano = 1 }) => {
     );
   }
 
+  // Logo oficial completo en imagen (Trifuerza.co, desde el Drive de marca): se usa tal cual, sin
+  // recolorear ni recortar; la version (letras claras u oscuras) la elige la marca segun su fondo.
+  if (firma.tipo === 'imagen') {
+    return <Img src={staticFile(firma.src)} style={{ height: 96 * tamano, width: 'auto' }} />;
+  }
+
+  // Sin archivo de logo oficial: nombre en texto, nunca un logo redibujado.
+  if (firma.tipo === 'texto') {
+    return (
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6 * tamano }}>
+        <span style={{ ...fuente(marca.fuentes.titulo), fontSize: 60 * tamano, color: colores.tinta, letterSpacing: '-0.01em' }}>{firma.texto}</span>
+        <span style={{ ...fuente(marca.fuentes.texto), fontSize: 30 * tamano, color: colores.acento }}>{firma.web}</span>
+      </div>
+    );
+  }
+
   return (
     <div style={{ display: 'flex', alignItems: 'baseline', gap: 4 * tamano }}>
       <span style={{ ...fuente(marca.fuentes.titulo), fontSize: 64 * tamano, color: colores.tinta }}>juanda</span>

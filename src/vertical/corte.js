@@ -26,6 +26,9 @@ export const OPCIONES = {
   // Un corte que quita menos que esto se nota como un tic y no ahorra nada: se deja la pausa.
   recorteMin: 0.25,
   palabrasDescarte: ['otra', 'otra vez', 'de nuevo', 'repito'],
+  // Palabras que se quitan sin descartar la toma: muletillas y marcas habladas para edicion
+  // ('marca dato' → beat grafico en ese punto). Vacio por defecto: Vertical no las usa.
+  palabrasQuitar: [],
 };
 
 const normalizar = (t) =>
@@ -65,8 +68,13 @@ export function tramosDeVoz(silencios, duracion, minimo = 0.25) {
  * cada tramo mas se parece a lo que tardaria en decirse su grupo al ritmo
  * medio del video. Terminar un grupo en coma o punto suma: las pausas caen
  * donde hay puntuacion. Dentro del tramo, cada palabra dura segun sus letras.
+ *
+ * Con `sinVacios` ningun tramo puede quedar sin palabras (si hay palabras de
+ * sobra): Whisper comprime sus tiempos y, sin esto, el ultimo tramo con voz
+ * quedaba vacio y el corte lo botaba ("Comenta clase e inscribete" perdia el
+ * "inscribete", 27-sep-2026).
  */
-export function alinearAVoz(palabras, voz) {
+export function alinearAVoz(palabras, voz, sinVacios = false) {
   if (!voz?.length || !palabras.length) return palabras;
   const peso = (p) => p.limpia.replace(/ /g, '').length + 1.5;
   const acumulado = [0];
@@ -85,6 +93,7 @@ export function alinearAVoz(palabras, voz) {
     for (let j = 0; j <= w; j++) {
       for (let i = 0; i <= j; i++) {
         if (costo[k - 1][i] === Infinity) continue;
+        if (sinVacios && i === j && w >= n) continue;
         const esperado = (acumulado[j] - acumulado[i]) / ritmo;
         const puntuacion = j > i && /[,.;:?!]$/.test(palabras[j - 1].text.trim()) ? 0.15 : 0;
         const c = costo[k - 1][i] + (esperado - dur) ** 2 - puntuacion;
@@ -116,7 +125,7 @@ export function planificarCorte(captions, opciones = {}) {
     .filter((c) => !esMarca(c.text))
     .map((c) => ({ ...c, desde: c.startMs / 1000, hasta: c.endMs / 1000, limpia: normalizar(c.text) }))
     .filter((p) => p.limpia && p.hasta >= p.desde);
-  const palabras = alinearAVoz(leidas, o.voz);
+  const palabras = alinearAVoz(leidas, o.voz, o.sinVacios);
 
   // 1. Tomas
   const tomas = [];
@@ -148,6 +157,20 @@ export function planificarCorte(captions, opciones = {}) {
     const salto = toma[idx + 1]?.limpia === 'vez' ? 2 : 1;
     const resto = idx >= toma.length - 3 ? [] : toma.slice(idx + salto);
     if (resto.length) buenas.push(resto);
+  }
+
+  // 2b. Quitar muletillas y marcas: el hueco que dejan lo cierra el paso 3.
+  if (o.palabrasQuitar.length) {
+    const quitar = o.palabrasQuitar.map((q) => q.split(' '));
+    for (let t = 0; t < buenas.length; t++) {
+      const toma = buenas[t];
+      const fuera = new Set();
+      toma.forEach((p, i) => {
+        for (const q of quitar) if (q.every((w, k) => toma[i + k]?.limpia === w)) q.forEach((_, k) => fuera.add(i + k));
+      });
+      buenas[t] = toma.filter((_, i) => !fuera.has(i));
+    }
+    for (let t = buenas.length - 1; t >= 0; t--) if (!buenas[t].length) buenas.splice(t, 1);
   }
 
   // 3. Silencios: tramos de palabras seguidas, con aire, sin solaparse. Una pausa que solo
@@ -235,4 +258,28 @@ export function unirCortes(cortes) {
     unido.duracionFinal = +(unido.duracionFinal + corte.duracionFinal).toFixed(2);
   }
   return unido;
+}
+
+/**
+ * whisper.cpp sin --split-on-word entrega fragmentos de palabra ("Se", "is",
+ * " sent", "encias"). Un fragmento que empieza con espacio abre palabra nueva;
+ * la puntuacion suelta se pega a la anterior. La palabra dura desde su primer
+ * fragmento hasta el ultimo. (--split-on-word no sirve: la libreria le pasa
+ * "true" y whisper.cpp lo lee como archivo de entrada.)
+ */
+export function unirTokens(captions) {
+  const palabras = [];
+  for (const c of captions) {
+    const previa = palabras.at(-1);
+    const t = c.text.trim();
+    const suelta = /^[,.;:?!"')\]]+$/.test(t);
+    // ¿, ¡ y una comilla pegada a letras abren palabra aunque el fragmento no traiga espacio.
+    const abre = /^[¿¡]/.test(t) || /^["'«(][A-Za-zÁÉÍÓÚÑáéíóúñ]/.test(t);
+    if (previa && !abre && (suelta || !/^\s/.test(c.text)) && !/^\s*\[/.test(c.text)) {
+      previa.text += c.text.trim();
+      previa.endMs = c.endMs;
+      previa.confidence = Math.min(previa.confidence ?? 1, c.confidence ?? 1);
+    } else palabras.push({ ...c, text: /^\s/.test(c.text) || !palabras.length ? ` ${c.text.trim()}` : ` ${c.text.trim()}` });
+  }
+  return palabras.filter((p) => p.text.trim());
 }

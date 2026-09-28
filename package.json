@@ -13,11 +13,17 @@
     "validar": "node src/video/validar.js",
     "pista": "node src/audio/pista.js",
     "voz": "node src/voz/locutar.js",
-    "vertical": "node src/vertical/preparar.js"
+    "vertical": "node src/vertical/preparar.js",
+    "armar": "node src/montaje/armar.js",
+    "montaje": "node src/montaje/render.js",
+    "pendientes": "node src/montaje/pendientes.js",
+    "cola": "node src/montaje/cola.js",
+    "revisar": "node src/montaje/revisar.js"
   },
   "dependencies": {
     "@remotion/cli": "4.0.504",
     "@remotion/install-whisper-cpp": "4.0.504",
+    "lucide-react": "^1.48.0",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "remotion": "4.0.504"

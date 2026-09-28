@@ -1,0 +1,1952 @@
+{
+  "slug": "demo-ctp2-trazabilidad",
+  "codigo": "DEMO_CTP2",
+  "titulo": "El contrato no puede vivir en el correo del que lo hizo",
+  "plantilla": "Montaje",
+  "tipo": "demo",
+  "tono": "tension",
+  "cuentas": [
+    "contrappto"
+  ],
+  "lowerThird": "Creador de Contrappto",
+  "cuerpo": {
+    "archivo": "copy_D946F1D0-3A5D-4AE5-8E89-CEA21E455495.mov"
+  },
+  "correcciones": [
+    {
+      "de": "en\"Contrapto\"",
+      "a": "en Contrappto"
+    },
+    {
+      "de": "confirma biométrica",
+      "a": "con firma biométrica"
+    }
+  ],
+  "beats": [
+    {
+      "tipo": "correos",
+      "en": "correo",
+      "hasta": "Aquí",
+      "nivel": 1,
+      "correos": [
+        "RE: contrato proveedor",
+        "Drive › Contratos › viejos",
+        "PC de quien ya se fue",
+        "contrato_firmado (1).pdf",
+        "FW: ¿alguien lo tiene?"
+      ]
+    },
+    {
+      "tipo": "pantalla",
+      "en": "Aquí",
+      "hasta": "Inmutable",
+      "texto": "el expediente: documento, partes, contrato digital y fechas",
+      "escena": "app",
+      "app": {
+        "archivo": "app/2026-10/contrappto.mp4",
+        "desde": 12.8,
+        "velocidad": 0.15,
+        "tapar": [
+          {
+            "x": 0.1,
+            "y": 0.146,
+            "w": 0.87,
+            "h": 0.044,
+            "texto": "Contrato de arriendo vacacional"
+          }
+        ]
+      },
+      "fondo3d": true,
+      "titulo": "Todo en un *expediente*",
+      "items": [
+        {
+          "texto": "Documento y partes",
+          "icono": "FileText"
+        },
+        {
+          "texto": "Fechas clave",
+          "icono": "CalendarClock"
+        }
+      ]
+    },
+    {
+      "tipo": "pantalla",
+      "en": "Inmutable",
+      "hasta": "Eso no",
+      "texto": "el historial: adjuntos, quién lo hizo, quién lo cambió, qué cambió y cuándo",
+      "escena": "app",
+      "app": {
+        "archivo": "app/2026-10/contrappto.mp4",
+        "desde": 16,
+        "velocidad": 0.7,
+        "tapar": [
+          {
+            "x": 0.1,
+            "y": 0.146,
+            "w": 0.87,
+            "h": 0.044,
+            "texto": "Contrato de arriendo vacacional"
+          }
+        ]
+      },
+      "lado": "derecha",
+      "titulo": "El *historial* completo",
+      "items": [
+        {
+          "texto": "Quién lo hizo",
+          "icono": "UserRound"
+        },
+        {
+          "texto": "Qué cambió",
+          "icono": "GitCompare"
+        },
+        {
+          "texto": "Cuándo",
+          "icono": "Clock"
+        }
+      ]
+    },
+    {
+      "tipo": "pantalla",
+      "en": "encuentras",
+      "hasta": "Ahora",
+      "texto": "buscador: por participantes, por fechas, por lo que sea",
+      "escena": "tabla",
+      "ventana": "Contrappto · buscar",
+      "busqueda": "arriendo 2025",
+      "items": [
+        {
+          "texto": "Contrato de arriendo · Local 3",
+          "detalle": "Firmado 12 mar 2025",
+          "icono": "FileText",
+          "estado": "Vigente",
+          "tono": "ok"
+        },
+        {
+          "texto": "Arriendo apartamento 402",
+          "detalle": "Firmado 4 ago 2025",
+          "icono": "FileText",
+          "estado": "Vigente",
+          "tono": "ok"
+        },
+        {
+          "texto": "Arriendo bodega norte",
+          "detalle": "Terminado 30 nov 2025",
+          "icono": "FileText",
+          "estado": "Finalizado",
+          "tono": "activo"
+        }
+      ]
+    },
+    {
+      "tipo": "tarjeta",
+      "en": "se va la persona",
+      "hasta": "Te rompieron",
+      "nivel": 1,
+      "icono": "UserRoundX",
+      "titulo": "Se va la persona, *no la información*"
+    },
+    {
+      "tipo": "pantalla",
+      "en": "Además",
+      "dura": 3.2,
+      "texto": "firma biométrica con identificación de la cédula",
+      "escena": "firma",
+      "documento": "Contrato de arriendo",
+      "estado": "Validando la cédula…",
+      "listo": "✓ Identidad verificada"
+    }
+  ],
+  "variantes": {
+    "contrappto": {
+      "gancho": "¿Dónde está el contrato *con ese proveedor*?",
+      "titular": "El contrato no puede vivir en el correo de nadie"
+    }
+  },
+  "verificar": [
+    {
+      "dato": "Contrappto: expediente con documento, partes y fechas; historial inmutable de cambios con autor y fecha; búsqueda por participantes y fechas; firma biométrica con identificación de cédula. Confirmar que existe hoy tal como se dice.",
+      "estado": "pendiente"
+    }
+  ],
+  "generado": {
+    "beats": [
+      {
+        "tipo": "correos",
+        "en": "correo",
+        "hasta": "Aquí",
+        "nivel": 1,
+        "correos": [
+          "RE: contrato proveedor",
+          "Drive › Contratos › viejos",
+          "PC de quien ya se fue",
+          "contrato_firmado (1).pdf",
+          "FW: ¿alguien lo tiene?"
+        ],
+        "inicioMs": 3906,
+        "finMs": 12233
+      },
+      {
+        "tipo": "pantalla",
+        "en": "Aquí",
+        "hasta": "Inmutable",
+        "texto": "el expediente: documento, partes, contrato digital y fechas",
+        "escena": "app",
+        "app": {
+          "archivo": "app/2026-10/contrappto.mp4",
+          "desde": 12.8,
+          "velocidad": 0.15,
+          "tapar": [
+            {
+              "x": 0.1,
+              "y": 0.146,
+              "w": 0.87,
+              "h": 0.044,
+              "texto": "Contrato de arriendo vacacional"
+            }
+          ]
+        },
+        "fondo3d": true,
+        "titulo": "Todo en un *expediente*",
+        "items": [
+          {
+            "texto": "Documento y partes",
+            "icono": "FileText"
+          },
+          {
+            "texto": "Fechas clave",
+            "icono": "CalendarClock"
+          }
+        ],
+        "inicioMs": 12233,
+        "finMs": 16777
+      },
+      {
+        "tipo": "pantalla",
+        "en": "Inmutable",
+        "hasta": "Eso no",
+        "texto": "el historial: adjuntos, quién lo hizo, quién lo cambió, qué cambió y cuándo",
+        "escena": "app",
+        "app": {
+          "archivo": "app/2026-10/contrappto.mp4",
+          "desde": 16,
+          "velocidad": 0.7,
+          "tapar": [
+            {
+              "x": 0.1,
+              "y": 0.146,
+              "w": 0.87,
+              "h": 0.044,
+              "texto": "Contrato de arriendo vacacional"
+            }
+          ]
+        },
+        "lado": "derecha",
+        "titulo": "El *historial* completo",
+        "items": [
+          {
+            "texto": "Quién lo hizo",
+            "icono": "UserRound"
+          },
+          {
+            "texto": "Qué cambió",
+            "icono": "GitCompare"
+          },
+          {
+            "texto": "Cuándo",
+            "icono": "Clock"
+          }
+        ],
+        "inicioMs": 16777,
+        "finMs": 25268
+      },
+      {
+        "tipo": "pantalla",
+        "en": "encuentras",
+        "hasta": "Ahora",
+        "texto": "buscador: por participantes, por fechas, por lo que sea",
+        "escena": "tabla",
+        "ventana": "Contrappto · buscar",
+        "busqueda": "arriendo 2025",
+        "items": [
+          {
+            "texto": "Contrato de arriendo · Local 3",
+            "detalle": "Firmado 12 mar 2025",
+            "icono": "FileText",
+            "estado": "Vigente",
+            "tono": "ok"
+          },
+          {
+            "texto": "Arriendo apartamento 402",
+            "detalle": "Firmado 4 ago 2025",
+            "icono": "FileText",
+            "estado": "Vigente",
+            "tono": "ok"
+          },
+          {
+            "texto": "Arriendo bodega norte",
+            "detalle": "Terminado 30 nov 2025",
+            "icono": "FileText",
+            "estado": "Finalizado",
+            "tono": "activo"
+          }
+        ],
+        "inicioMs": 27199,
+        "finMs": 30893
+      },
+      {
+        "tipo": "tarjeta",
+        "en": "se va la persona",
+        "hasta": "Te rompieron",
+        "nivel": 1,
+        "icono": "UserRoundX",
+        "titulo": "Se va la persona, *no la información*",
+        "inicioMs": 32946,
+        "finMs": 35268
+      },
+      {
+        "tipo": "pantalla",
+        "en": "Además",
+        "dura": 3.2,
+        "texto": "firma biométrica con identificación de la cédula",
+        "escena": "firma",
+        "documento": "Contrato de arriendo",
+        "estado": "Validando la cédula…",
+        "listo": "✓ Identidad verificada",
+        "inicioMs": 39732,
+        "finMs": 42932
+      }
+    ],
+    "montajes": {
+      "contrappto": {
+        "segmentos": [
+          {
+            "desde": 3.799,
+            "hasta": 16.599,
+            "archivo": "limpios/2026-10/copy_D946F1D0-3A5D-4AE5-8E89-CEA21E455495.mp4",
+            "parte": "cuerpo",
+            "velocidad": 1.12
+          },
+          {
+            "desde": 16.999,
+            "hasta": 23.799,
+            "archivo": "limpios/2026-10/copy_D946F1D0-3A5D-4AE5-8E89-CEA21E455495.mp4",
+            "parte": "cuerpo",
+            "velocidad": 1.12
+          },
+          {
+            "desde": 24.199,
+            "hasta": 53.699,
+            "archivo": "limpios/2026-10/copy_D946F1D0-3A5D-4AE5-8E89-CEA21E455495.mp4",
+            "parte": "cuerpo",
+            "velocidad": 1.12
+          },
+          {
+            "desde": 1.4,
+            "hasta": 7.9,
+            "archivo": "limpios/2026-10/IMG_4360.mp4",
+            "parte": "cierre",
+            "velocidad": 1.12,
+            "encuadre": {
+              "x": 0.483,
+              "y": 0.703,
+              "alto": 0.431
+            }
+          },
+          {
+            "desde": 8.5,
+            "hasta": 21.95,
+            "archivo": "limpios/2026-10/IMG_4360.mp4",
+            "parte": "cierre",
+            "velocidad": 1.12,
+            "encuadre": {
+              "x": 0.567,
+              "y": 0.709,
+              "alto": 0.519
+            }
+          }
+        ],
+        "subtitulos": [
+          {
+            "text": " ¿Dónde",
+            "startMs": 179,
+            "endMs": 484,
+            "timestampMs": null,
+            "confidence": 0.697524,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " está",
+            "startMs": 484,
+            "endMs": 742,
+            "timestampMs": null,
+            "confidence": 0.957512,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " el",
+            "startMs": 742,
+            "endMs": 906,
+            "timestampMs": null,
+            "confidence": 0.970889,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " contrato",
+            "startMs": 906,
+            "endMs": 1352,
+            "timestampMs": null,
+            "confidence": 0.972576,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " con",
+            "startMs": 1352,
+            "endMs": 1562,
+            "timestampMs": null,
+            "confidence": 0.957466,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ese",
+            "startMs": 1562,
+            "endMs": 1774,
+            "timestampMs": null,
+            "confidence": 0.802631,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " proveedor?",
+            "startMs": 1774,
+            "endMs": 2267,
+            "timestampMs": null,
+            "confidence": 0.834168,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Y",
+            "startMs": 2267,
+            "endMs": 2384,
+            "timestampMs": null,
+            "confidence": 0.366579,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " empieza",
+            "startMs": 2384,
+            "endMs": 2783,
+            "timestampMs": null,
+            "confidence": 0.896446,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " la",
+            "startMs": 2783,
+            "endMs": 2947,
+            "timestampMs": null,
+            "confidence": 0.954596,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " búsqueda.",
+            "startMs": 2947,
+            "endMs": 3393,
+            "timestampMs": null,
+            "confidence": 0.470752,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " En",
+            "startMs": 3571,
+            "endMs": 3739,
+            "timestampMs": null,
+            "confidence": 0.678359,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " el",
+            "startMs": 3739,
+            "endMs": 3906,
+            "timestampMs": null,
+            "confidence": 0.854607,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " correo,",
+            "startMs": 3906,
+            "endMs": 4265,
+            "timestampMs": null,
+            "confidence": 0.935451,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " en",
+            "startMs": 4265,
+            "endMs": 4432,
+            "timestampMs": null,
+            "confidence": 0.880919,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " un",
+            "startMs": 4432,
+            "endMs": 4600,
+            "timestampMs": null,
+            "confidence": 0.65188,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " drive,",
+            "startMs": 4600,
+            "endMs": 4911,
+            "timestampMs": null,
+            "confidence": 0.814313,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " en",
+            "startMs": 5179,
+            "endMs": 5338,
+            "timestampMs": null,
+            "confidence": 0.967798,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " una",
+            "startMs": 5338,
+            "endMs": 5544,
+            "timestampMs": null,
+            "confidence": 0.93947,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " carpeta",
+            "startMs": 5544,
+            "endMs": 5932,
+            "timestampMs": null,
+            "confidence": 0.954838,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " de",
+            "startMs": 5932,
+            "endMs": 6092,
+            "timestampMs": null,
+            "confidence": 0.93594,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " un",
+            "startMs": 6092,
+            "endMs": 6252,
+            "timestampMs": null,
+            "confidence": 0.947739,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " computador",
+            "startMs": 6252,
+            "endMs": 6778,
+            "timestampMs": null,
+            "confidence": 0.980626,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 6778,
+            "endMs": 6983,
+            "timestampMs": null,
+            "confidence": 0.903435,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ya",
+            "startMs": 6983,
+            "endMs": 7143,
+            "timestampMs": null,
+            "confidence": 0.963442,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " se",
+            "startMs": 7411,
+            "endMs": 7564,
+            "timestampMs": null,
+            "confidence": 0.977885,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " llevaron,",
+            "startMs": 7564,
+            "endMs": 7981,
+            "timestampMs": null,
+            "confidence": 0.745171,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " el",
+            "startMs": 7981,
+            "endMs": 8135,
+            "timestampMs": null,
+            "confidence": 0.945511,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " contrato",
+            "startMs": 8135,
+            "endMs": 8551,
+            "timestampMs": null,
+            "confidence": 0.993519,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " no",
+            "startMs": 8551,
+            "endMs": 8704,
+            "timestampMs": null,
+            "confidence": 0.96227,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " puede",
+            "startMs": 8704,
+            "endMs": 8989,
+            "timestampMs": null,
+            "confidence": 0.96612,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " seguir",
+            "startMs": 8989,
+            "endMs": 9319,
+            "timestampMs": null,
+            "confidence": 0.973738,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " siendo",
+            "startMs": 9319,
+            "endMs": 9647,
+            "timestampMs": null,
+            "confidence": 0.996421,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " un",
+            "startMs": 9647,
+            "endMs": 9801,
+            "timestampMs": null,
+            "confidence": 0.970852,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " PDF",
+            "startMs": 9801,
+            "endMs": 9998,
+            "timestampMs": null,
+            "confidence": 0.700345,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " muerto",
+            "startMs": 9998,
+            "endMs": 10328,
+            "timestampMs": null,
+            "confidence": 0.884059,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " en",
+            "startMs": 10328,
+            "endMs": 10481,
+            "timestampMs": null,
+            "confidence": 0.955139,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " el",
+            "startMs": 10481,
+            "endMs": 10635,
+            "timestampMs": null,
+            "confidence": 0.989512,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " correo",
+            "startMs": 10635,
+            "endMs": 10963,
+            "timestampMs": null,
+            "confidence": 0.996848,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " del",
+            "startMs": 10963,
+            "endMs": 11161,
+            "timestampMs": null,
+            "confidence": 0.745491,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 11607,
+            "endMs": 11816,
+            "timestampMs": null,
+            "confidence": 0.990569,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " lo",
+            "startMs": 11816,
+            "endMs": 11978,
+            "timestampMs": null,
+            "confidence": 0.979699,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " hizo.",
+            "startMs": 11978,
+            "endMs": 12233,
+            "timestampMs": null,
+            "confidence": 0.940693,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Aquí",
+            "startMs": 12233,
+            "endMs": 12488,
+            "timestampMs": null,
+            "confidence": 0.992837,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " en Contrappto",
+            "startMs": 12488,
+            "endMs": 13068,
+            "timestampMs": null,
+            "confidence": 0.241855,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " lo",
+            "startMs": 13068,
+            "endMs": 13229,
+            "timestampMs": null,
+            "confidence": 0.969091,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tienes",
+            "startMs": 13229,
+            "endMs": 13578,
+            "timestampMs": null,
+            "confidence": 0.990888,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " completo,",
+            "startMs": 13578,
+            "endMs": 14018,
+            "timestampMs": null,
+            "confidence": 0.60427,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " el",
+            "startMs": 14196,
+            "endMs": 14348,
+            "timestampMs": null,
+            "confidence": 0.873656,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " documento,",
+            "startMs": 14348,
+            "endMs": 14804,
+            "timestampMs": null,
+            "confidence": 0.990834,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " las",
+            "startMs": 14804,
+            "endMs": 14999,
+            "timestampMs": null,
+            "confidence": 0.962876,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " partes,",
+            "startMs": 14999,
+            "endMs": 15324,
+            "timestampMs": null,
+            "confidence": 0.980374,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " el",
+            "startMs": 15324,
+            "endMs": 15476,
+            "timestampMs": null,
+            "confidence": 0.990363,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " contrato",
+            "startMs": 15476,
+            "endMs": 15888,
+            "timestampMs": null,
+            "confidence": 0.995892,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " digital,",
+            "startMs": 15888,
+            "endMs": 16256,
+            "timestampMs": null,
+            "confidence": 0.953023,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " las",
+            "startMs": 16256,
+            "endMs": 16452,
+            "timestampMs": null,
+            "confidence": 0.983134,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " fechas.",
+            "startMs": 16452,
+            "endMs": 16777,
+            "timestampMs": null,
+            "confidence": 0.484321,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Inmutable,",
+            "startMs": 16777,
+            "endMs": 17232,
+            "timestampMs": null,
+            "confidence": 0.729868,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " con",
+            "startMs": 17679,
+            "endMs": 17884,
+            "timestampMs": null,
+            "confidence": 0.987142,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " una",
+            "startMs": 17884,
+            "endMs": 18089,
+            "timestampMs": null,
+            "confidence": 0.984534,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " única",
+            "startMs": 18089,
+            "endMs": 18387,
+            "timestampMs": null,
+            "confidence": 0.991544,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " fuente",
+            "startMs": 18387,
+            "endMs": 18729,
+            "timestampMs": null,
+            "confidence": 0.97526,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " de",
+            "startMs": 18729,
+            "endMs": 18889,
+            "timestampMs": null,
+            "confidence": 0.935301,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " verdad,",
+            "startMs": 18889,
+            "endMs": 19232,
+            "timestampMs": null,
+            "confidence": 0.66172,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " todo",
+            "startMs": 19232,
+            "endMs": 19483,
+            "timestampMs": null,
+            "confidence": 0.879608,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " lo",
+            "startMs": 19483,
+            "endMs": 19643,
+            "timestampMs": null,
+            "confidence": 0.9931,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 19821,
+            "endMs": 20044,
+            "timestampMs": null,
+            "confidence": 0.994936,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ha",
+            "startMs": 20044,
+            "endMs": 20217,
+            "timestampMs": null,
+            "confidence": 0.978674,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " pasado",
+            "startMs": 20217,
+            "endMs": 20587,
+            "timestampMs": null,
+            "confidence": 0.997151,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " con",
+            "startMs": 20587,
+            "endMs": 20809,
+            "timestampMs": null,
+            "confidence": 0.989959,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " él,",
+            "startMs": 20809,
+            "endMs": 20982,
+            "timestampMs": null,
+            "confidence": 0.724437,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " estos",
+            "startMs": 21161,
+            "endMs": 21560,
+            "timestampMs": null,
+            "confidence": 0.649638,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " adjuntos,",
+            "startMs": 21560,
+            "endMs": 22143,
+            "timestampMs": null,
+            "confidence": 0.857219,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " quién",
+            "startMs": 22411,
+            "endMs": 22657,
+            "timestampMs": null,
+            "confidence": 0.78706,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " lo",
+            "startMs": 22657,
+            "endMs": 22789,
+            "timestampMs": null,
+            "confidence": 0.99739,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " hizo,",
+            "startMs": 22789,
+            "endMs": 22998,
+            "timestampMs": null,
+            "confidence": 0.966169,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " quién",
+            "startMs": 22998,
+            "endMs": 23244,
+            "timestampMs": null,
+            "confidence": 0.949581,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " lo",
+            "startMs": 23244,
+            "endMs": 23377,
+            "timestampMs": null,
+            "confidence": 0.994461,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " cambió,",
+            "startMs": 23377,
+            "endMs": 23661,
+            "timestampMs": null,
+            "confidence": 0.961892,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " qué",
+            "startMs": 23929,
+            "endMs": 24166,
+            "timestampMs": null,
+            "confidence": 0.885826,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " cambió",
+            "startMs": 24166,
+            "endMs": 24562,
+            "timestampMs": null,
+            "confidence": 0.989298,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " y",
+            "startMs": 24562,
+            "endMs": 24694,
+            "timestampMs": null,
+            "confidence": 0.803014,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " cuándo.",
+            "startMs": 24694,
+            "endMs": 25089,
+            "timestampMs": null,
+            "confidence": 0.754601,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Eso",
+            "startMs": 25268,
+            "endMs": 25514,
+            "timestampMs": null,
+            "confidence": 0.939378,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " no",
+            "startMs": 25514,
+            "endMs": 25705,
+            "timestampMs": null,
+            "confidence": 0.967813,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " lo",
+            "startMs": 25705,
+            "endMs": 25896,
+            "timestampMs": null,
+            "confidence": 0.934442,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " borra",
+            "startMs": 25896,
+            "endMs": 26252,
+            "timestampMs": null,
+            "confidence": 0.879804,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " nadie.",
+            "startMs": 26252,
+            "endMs": 26607,
+            "timestampMs": null,
+            "confidence": 0.540655,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Y",
+            "startMs": 26964,
+            "endMs": 27062,
+            "timestampMs": null,
+            "confidence": 0.971869,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " lo",
+            "startMs": 27062,
+            "endMs": 27199,
+            "timestampMs": null,
+            "confidence": 0.991904,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " encuentras",
+            "startMs": 27199,
+            "endMs": 27650,
+            "timestampMs": null,
+            "confidence": 0.995687,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " por",
+            "startMs": 27650,
+            "endMs": 27827,
+            "timestampMs": null,
+            "confidence": 0.988617,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " los",
+            "startMs": 27827,
+            "endMs": 28003,
+            "timestampMs": null,
+            "confidence": 0.994082,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " participantes,",
+            "startMs": 28003,
+            "endMs": 28571,
+            "timestampMs": null,
+            "confidence": 0.982193,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " por",
+            "startMs": 28839,
+            "endMs": 29034,
+            "timestampMs": null,
+            "confidence": 0.968413,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " las",
+            "startMs": 29034,
+            "endMs": 29229,
+            "timestampMs": null,
+            "confidence": 0.985725,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " fechas,",
+            "startMs": 29229,
+            "endMs": 29554,
+            "timestampMs": null,
+            "confidence": 0.975573,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " por",
+            "startMs": 29732,
+            "endMs": 29897,
+            "timestampMs": null,
+            "confidence": 0.993942,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " lo",
+            "startMs": 29897,
+            "endMs": 30026,
+            "timestampMs": null,
+            "confidence": 0.998133,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 30026,
+            "endMs": 30192,
+            "timestampMs": null,
+            "confidence": 0.996063,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " sea.",
+            "startMs": 30192,
+            "endMs": 30357,
+            "timestampMs": null,
+            "confidence": 0.987807,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Ahora,",
+            "startMs": 30893,
+            "endMs": 31100,
+            "timestampMs": null,
+            "confidence": 0.740522,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " cuando",
+            "startMs": 31100,
+            "endMs": 31339,
+            "timestampMs": null,
+            "confidence": 0.992763,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " alguien",
+            "startMs": 31607,
+            "endMs": 31974,
+            "timestampMs": null,
+            "confidence": 0.989395,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " se",
+            "startMs": 31974,
+            "endMs": 32125,
+            "timestampMs": null,
+            "confidence": 0.998639,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " va",
+            "startMs": 32125,
+            "endMs": 32277,
+            "timestampMs": null,
+            "confidence": 0.928569,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " de",
+            "startMs": 32277,
+            "endMs": 32428,
+            "timestampMs": null,
+            "confidence": 0.992244,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " la",
+            "startMs": 32428,
+            "endMs": 32579,
+            "timestampMs": null,
+            "confidence": 0.996003,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " empresa,",
+            "startMs": 32579,
+            "endMs": 32946,
+            "timestampMs": null,
+            "confidence": 0.852879,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " se",
+            "startMs": 32946,
+            "endMs": 33097,
+            "timestampMs": null,
+            "confidence": 0.993312,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " va",
+            "startMs": 33097,
+            "endMs": 33248,
+            "timestampMs": null,
+            "confidence": 0.99839,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " la",
+            "startMs": 33248,
+            "endMs": 33399,
+            "timestampMs": null,
+            "confidence": 0.865055,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " persona,",
+            "startMs": 33399,
+            "endMs": 33766,
+            "timestampMs": null,
+            "confidence": 0.844665,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " no",
+            "startMs": 33766,
+            "endMs": 33918,
+            "timestampMs": null,
+            "confidence": 0.992559,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " se",
+            "startMs": 33918,
+            "endMs": 34069,
+            "timestampMs": null,
+            "confidence": 0.989027,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " va",
+            "startMs": 34069,
+            "endMs": 34220,
+            "timestampMs": null,
+            "confidence": 0.99767,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " la",
+            "startMs": 34220,
+            "endMs": 34371,
+            "timestampMs": null,
+            "confidence": 0.990146,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " información.",
+            "startMs": 34371,
+            "endMs": 34911,
+            "timestampMs": null,
+            "confidence": 0.895864,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ¿Te",
+            "startMs": 35268,
+            "endMs": 35407,
+            "timestampMs": null,
+            "confidence": 0.597423,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " rompieron",
+            "startMs": 35407,
+            "endMs": 35823,
+            "timestampMs": null,
+            "confidence": 0.993473,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " el",
+            "startMs": 35823,
+            "endMs": 35962,
+            "timestampMs": null,
+            "confidence": 0.996546,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " contrato?",
+            "startMs": 35962,
+            "endMs": 36339,
+            "timestampMs": null,
+            "confidence": 0.831687,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ¿Se",
+            "startMs": 36518,
+            "endMs": 36662,
+            "timestampMs": null,
+            "confidence": 0.902963,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " incendió?",
+            "startMs": 36662,
+            "endMs": 37054,
+            "timestampMs": null,
+            "confidence": 0.934632,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " El",
+            "startMs": 37411,
+            "endMs": 37574,
+            "timestampMs": null,
+            "confidence": 0.848168,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " contrato",
+            "startMs": 37574,
+            "endMs": 38019,
+            "timestampMs": null,
+            "confidence": 0.999622,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " nunca",
+            "startMs": 38019,
+            "endMs": 38322,
+            "timestampMs": null,
+            "confidence": 0.654551,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " más",
+            "startMs": 38322,
+            "endMs": 38533,
+            "timestampMs": null,
+            "confidence": 0.985406,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " lo",
+            "startMs": 38533,
+            "endMs": 38696,
+            "timestampMs": null,
+            "confidence": 0.985718,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " vas",
+            "startMs": 38696,
+            "endMs": 38907,
+            "timestampMs": null,
+            "confidence": 0.986257,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " a",
+            "startMs": 38907,
+            "endMs": 39024,
+            "timestampMs": null,
+            "confidence": 0.990777,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " perder.",
+            "startMs": 39024,
+            "endMs": 39375,
+            "timestampMs": null,
+            "confidence": 0.903638,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Además,",
+            "startMs": 39732,
+            "endMs": 40087,
+            "timestampMs": null,
+            "confidence": 0.625706,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " recuerda,",
+            "startMs": 40087,
+            "endMs": 40536,
+            "timestampMs": null,
+            "confidence": 0.85752,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " con firma biométrica",
+            "startMs": 40714,
+            "endMs": 41752,
+            "timestampMs": null,
+            "confidence": 0.651095,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " y",
+            "startMs": 41752,
+            "endMs": 41875,
+            "timestampMs": null,
+            "confidence": 0.949613,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " con",
+            "startMs": 42054,
+            "endMs": 42252,
+            "timestampMs": null,
+            "confidence": 0.969879,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " identificación",
+            "startMs": 42252,
+            "endMs": 42934,
+            "timestampMs": null,
+            "confidence": 0.975699,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " de",
+            "startMs": 42934,
+            "endMs": 43088,
+            "timestampMs": null,
+            "confidence": 0.996155,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tu",
+            "startMs": 43088,
+            "endMs": 43241,
+            "timestampMs": null,
+            "confidence": 0.988972,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " cédula.",
+            "startMs": 43241,
+            "endMs": 43571,
+            "timestampMs": null,
+            "confidence": 0.98435,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Si",
+            "startMs": 44018,
+            "endMs": 44156,
+            "timestampMs": null,
+            "confidence": 0.562455,
+            "parte": "cierre"
+          },
+          {
+            "text": " necesitas",
+            "startMs": 44156,
+            "endMs": 44570,
+            "timestampMs": null,
+            "confidence": 0.727593,
+            "parte": "cierre"
+          },
+          {
+            "text": " contratar",
+            "startMs": 44570,
+            "endMs": 44984,
+            "timestampMs": null,
+            "confidence": 0.94769,
+            "parte": "cierre"
+          },
+          {
+            "text": " a",
+            "startMs": 44984,
+            "endMs": 45082,
+            "timestampMs": null,
+            "confidence": 0.930454,
+            "parte": "cierre"
+          },
+          {
+            "text": " más",
+            "startMs": 45082,
+            "endMs": 45260,
+            "timestampMs": null,
+            "confidence": 0.912456,
+            "parte": "cierre"
+          },
+          {
+            "text": " de",
+            "startMs": 45260,
+            "endMs": 45397,
+            "timestampMs": null,
+            "confidence": 0.994882,
+            "parte": "cierre"
+          },
+          {
+            "text": " 20,",
+            "startMs": 45397,
+            "endMs": 45536,
+            "timestampMs": null,
+            "confidence": 0.773778,
+            "parte": "cierre"
+          },
+          {
+            "text": " 30",
+            "startMs": 45804,
+            "endMs": 45962,
+            "timestampMs": null,
+            "confidence": 0.960811,
+            "parte": "cierre"
+          },
+          {
+            "text": " o",
+            "startMs": 45962,
+            "endMs": 46075,
+            "timestampMs": null,
+            "confidence": 0.886833,
+            "parte": "cierre"
+          },
+          {
+            "text": " 50",
+            "startMs": 46075,
+            "endMs": 46233,
+            "timestampMs": null,
+            "confidence": 0.964477,
+            "parte": "cierre"
+          },
+          {
+            "text": " personas",
+            "startMs": 46233,
+            "endMs": 46662,
+            "timestampMs": null,
+            "confidence": 0.983342,
+            "parte": "cierre"
+          },
+          {
+            "text": " al",
+            "startMs": 46662,
+            "endMs": 46821,
+            "timestampMs": null,
+            "confidence": 0.959027,
+            "parte": "cierre"
+          },
+          {
+            "text": " tiempo",
+            "startMs": 46821,
+            "endMs": 47160,
+            "timestampMs": null,
+            "confidence": 0.975106,
+            "parte": "cierre"
+          },
+          {
+            "text": " o",
+            "startMs": 47160,
+            "endMs": 47273,
+            "timestampMs": null,
+            "confidence": 0.565626,
+            "parte": "cierre"
+          },
+          {
+            "text": " lo",
+            "startMs": 47273,
+            "endMs": 47431,
+            "timestampMs": null,
+            "confidence": 0.975694,
+            "parte": "cierre"
+          },
+          {
+            "text": " haces",
+            "startMs": 47431,
+            "endMs": 47725,
+            "timestampMs": null,
+            "confidence": 0.966752,
+            "parte": "cierre"
+          },
+          {
+            "text": " al",
+            "startMs": 47725,
+            "endMs": 47883,
+            "timestampMs": null,
+            "confidence": 0.920871,
+            "parte": "cierre"
+          },
+          {
+            "text": " año,",
+            "startMs": 47883,
+            "endMs": 48087,
+            "timestampMs": null,
+            "confidence": 0.713542,
+            "parte": "cierre"
+          },
+          {
+            "text": " escríbeme",
+            "startMs": 48087,
+            "endMs": 48562,
+            "timestampMs": null,
+            "confidence": 0.687334,
+            "parte": "cierre"
+          },
+          {
+            "text": " y",
+            "startMs": 48562,
+            "endMs": 48674,
+            "timestampMs": null,
+            "confidence": 0.942065,
+            "parte": "cierre"
+          },
+          {
+            "text": " te",
+            "startMs": 48674,
+            "endMs": 48832,
+            "timestampMs": null,
+            "confidence": 0.947663,
+            "parte": "cierre"
+          },
+          {
+            "text": " muestro",
+            "startMs": 48832,
+            "endMs": 49217,
+            "timestampMs": null,
+            "confidence": 0.995936,
+            "parte": "cierre"
+          },
+          {
+            "text": " el",
+            "startMs": 49217,
+            "endMs": 49375,
+            "timestampMs": null,
+            "confidence": 0.989902,
+            "parte": "cierre"
+          },
+          {
+            "text": " dashboard",
+            "startMs": 49821,
+            "endMs": 50357,
+            "timestampMs": null,
+            "confidence": 0.659058,
+            "parte": "cierre"
+          },
+          {
+            "text": " de",
+            "startMs": 50357,
+            "endMs": 50536,
+            "timestampMs": null,
+            "confidence": 0.953484,
+            "parte": "cierre"
+          },
+          {
+            "text": " contracto",
+            "startMs": 50714,
+            "endMs": 51179,
+            "timestampMs": null,
+            "confidence": 0.269096,
+            "parte": "cierre"
+          },
+          {
+            "text": " para",
+            "startMs": 51179,
+            "endMs": 51421,
+            "timestampMs": null,
+            "confidence": 0.898848,
+            "parte": "cierre"
+          },
+          {
+            "text": " que",
+            "startMs": 51421,
+            "endMs": 51621,
+            "timestampMs": null,
+            "confidence": 0.961553,
+            "parte": "cierre"
+          },
+          {
+            "text": " puedas",
+            "startMs": 51621,
+            "endMs": 51952,
+            "timestampMs": null,
+            "confidence": 0.967715,
+            "parte": "cierre"
+          },
+          {
+            "text": " empezar",
+            "startMs": 51952,
+            "endMs": 52328,
+            "timestampMs": null,
+            "confidence": 0.824313,
+            "parte": "cierre"
+          },
+          {
+            "text": " a",
+            "startMs": 52328,
+            "endMs": 52438,
+            "timestampMs": null,
+            "confidence": 0.984029,
+            "parte": "cierre"
+          },
+          {
+            "text": " utilizarlo",
+            "startMs": 52438,
+            "endMs": 52946,
+            "timestampMs": null,
+            "confidence": 0.948692,
+            "parte": "cierre"
+          },
+          {
+            "text": " y",
+            "startMs": 53304,
+            "endMs": 53417,
+            "timestampMs": null,
+            "confidence": 0.922902,
+            "parte": "cierre"
+          },
+          {
+            "text": " mejorar",
+            "startMs": 53417,
+            "endMs": 53801,
+            "timestampMs": null,
+            "confidence": 0.96358,
+            "parte": "cierre"
+          },
+          {
+            "text": " tus",
+            "startMs": 53801,
+            "endMs": 54004,
+            "timestampMs": null,
+            "confidence": 0.978954,
+            "parte": "cierre"
+          },
+          {
+            "text": " flujos",
+            "startMs": 54004,
+            "endMs": 54344,
+            "timestampMs": null,
+            "confidence": 0.987025,
+            "parte": "cierre"
+          },
+          {
+            "text": " contractuales,",
+            "startMs": 54344,
+            "endMs": 55000,
+            "timestampMs": null,
+            "confidence": 0.864105,
+            "parte": "cierre"
+          },
+          {
+            "text": " generar",
+            "startMs": 55446,
+            "endMs": 55874,
+            "timestampMs": null,
+            "confidence": 0.973907,
+            "parte": "cierre"
+          },
+          {
+            "text": " alertas",
+            "startMs": 55874,
+            "endMs": 56303,
+            "timestampMs": null,
+            "confidence": 0.994272,
+            "parte": "cierre"
+          },
+          {
+            "text": " y",
+            "startMs": 56303,
+            "endMs": 56429,
+            "timestampMs": null,
+            "confidence": 0.948766,
+            "parte": "cierre"
+          },
+          {
+            "text": " darle",
+            "startMs": 56786,
+            "endMs": 57030,
+            "timestampMs": null,
+            "confidence": 0.952276,
+            "parte": "cierre"
+          },
+          {
+            "text": " seguimiento",
+            "startMs": 57030,
+            "endMs": 57500,
+            "timestampMs": null,
+            "confidence": 0.993269,
+            "parte": "cierre"
+          },
+          {
+            "text": " a",
+            "startMs": 57857,
+            "endMs": 57971,
+            "timestampMs": null,
+            "confidence": 0.988583,
+            "parte": "cierre"
+          },
+          {
+            "text": " tus",
+            "startMs": 57971,
+            "endMs": 58176,
+            "timestampMs": null,
+            "confidence": 0.990922,
+            "parte": "cierre"
+          },
+          {
+            "text": " contratos",
+            "startMs": 58176,
+            "endMs": 58654,
+            "timestampMs": null,
+            "confidence": 0.91148,
+            "parte": "cierre"
+          },
+          {
+            "text": " para",
+            "startMs": 58654,
+            "endMs": 58904,
+            "timestampMs": null,
+            "confidence": 0.9142,
+            "parte": "cierre"
+          },
+          {
+            "text": " que",
+            "startMs": 58904,
+            "endMs": 59110,
+            "timestampMs": null,
+            "confidence": 0.925747,
+            "parte": "cierre"
+          },
+          {
+            "text": " no",
+            "startMs": 59110,
+            "endMs": 59269,
+            "timestampMs": null,
+            "confidence": 0.979137,
+            "parte": "cierre"
+          },
+          {
+            "text": " se",
+            "startMs": 59269,
+            "endMs": 59429,
+            "timestampMs": null,
+            "confidence": 0.982279,
+            "parte": "cierre"
+          },
+          {
+            "text": " te",
+            "startMs": 59429,
+            "endMs": 59588,
+            "timestampMs": null,
+            "confidence": 0.964481,
+            "parte": "cierre"
+          },
+          {
+            "text": " vuelva",
+            "startMs": 59588,
+            "endMs": 59929,
+            "timestampMs": null,
+            "confidence": 0.931409,
+            "parte": "cierre"
+          },
+          {
+            "text": " a",
+            "startMs": 59929,
+            "endMs": 60043,
+            "timestampMs": null,
+            "confidence": 0.891504,
+            "parte": "cierre"
+          },
+          {
+            "text": " pasar",
+            "startMs": 60043,
+            "endMs": 60339,
+            "timestampMs": null,
+            "confidence": 0.99862,
+            "parte": "cierre"
+          },
+          {
+            "text": " ningún",
+            "startMs": 60339,
+            "endMs": 60680,
+            "timestampMs": null,
+            "confidence": 0.951252,
+            "parte": "cierre"
+          },
+          {
+            "text": " vencimiento.",
+            "startMs": 60680,
+            "endMs": 61250,
+            "timestampMs": null,
+            "confidence": 0.958914,
+            "parte": "cierre"
+          }
+        ],
+        "cuerpoInicioMs": 0,
+        "cuerpoRecorteMs": 0,
+        "cierreInicioMs": 43839,
+        "duracionMs": 61652
+      }
+    },
+    "cuerpoMs": 43839,
+    "descartadas": [],
+    "texto": [
+      "¿Dónde está el contrato con ese proveedor? Y empieza la búsqueda. En el correo, en un drive, en una carpeta de un computador que ya se llevaron, el contrato no puede seguir siendo un PDF muerto en el correo del que lo hizo. Aquí en\"Contrapto\" lo tienes completo, el documento, las partes, el contrato digital, las fechas. Inmutable, con una única fuente de verdad, todo lo que ha pasado con él, estos adjuntos, quién lo hizo, quién lo cambió, qué cambió y cuándo. Eso no lo borra nadie. Y lo encuentras por los participantes, por las fechas, por lo que sea. Ahora, cuando alguien se va de la empresa, se va la persona, no se va la información. ¿Te rompieron el contrato? ¿Se incendió? El contrato nunca más lo vas a perder. Además, recuerda, confirma biométrica y con identificación de tu cédula."
+    ],
+    "avisos": []
+  }
+}

@@ -1,0 +1,1745 @@
+{
+  "slug": "demo-ctp1-volumen",
+  "codigo": "DEMO_CTP1",
+  "titulo": "Contratar a doscientas personas con el mismo documento",
+  "plantilla": "Montaje",
+  "tipo": "demo",
+  "tono": "tension",
+  "cuentas": [
+    "contrappto"
+  ],
+  "lowerThird": "Creador de Contrappto",
+  "cuerpo": {
+    "archivo": "copy_70E40F95-D662-48B9-B239-2E63C543C912.mov"
+  },
+  "beats": [
+    {
+      "tipo": "cifra",
+      "en": "200 veces",
+      "hasta": "esto",
+      "nivel": 1,
+      "valor": 200,
+      "etiqueta": "veces el *mismo* documento",
+      "titulo": "Copiar y pegar",
+      "icono": "Copy",
+      "puntos": 200
+    },
+    {
+      "tipo": "pantalla",
+      "en": "el documento queda",
+      "hasta": "subes",
+      "texto": "la plantilla con los espacios que cambian: nombre, cargo, salario y fecha",
+      "escena": "app",
+      "app": {
+        "archivo": "app/2026-10/contrappto.mp4",
+        "desde": 72,
+        "velocidad": 0.5,
+        "tapar": [
+          {
+            "x": 0.03,
+            "y": 0.184,
+            "w": 0.94,
+            "h": 0.034,
+            "fondo": "#0A1A24"
+          }
+        ]
+      },
+      "fondo3d": true,
+      "titulo": "Sube la *plantilla*",
+      "items": [
+        {
+          "texto": "Nombre · cargo · salario · fecha",
+          "icono": "Variable"
+        }
+      ]
+    },
+    {
+      "tipo": "pantalla",
+      "en": "subes",
+      "hasta": "cada persona",
+      "texto": "cargar la lista: 200 filas",
+      "escena": "masiva",
+      "ventana": "Contrappto · carga masiva",
+      "unidad": "filas cargadas",
+      "items": [
+        {
+          "n": 50
+        },
+        {
+          "n": 120
+        },
+        {
+          "n": 200
+        }
+      ],
+      "paso": 20
+    },
+    {
+      "tipo": "pantalla",
+      "en": "cada persona",
+      "hasta": "y aquí",
+      "texto": "el envío: cada quien recibe el suyo en su correo",
+      "escena": "avisos",
+      "items": [
+        {
+          "app": "correo",
+          "titulo": "Tu contrato está listo para firmar",
+          "texto": "Contrappto · Contrato laboral"
+        },
+        {
+          "app": "correo",
+          "titulo": "Tu contrato está listo para firmar",
+          "texto": "Contrappto · Contrato laboral"
+        },
+        {
+          "app": "correo",
+          "titulo": "Tu contrato está listo para firmar",
+          "texto": "Contrappto · Contrato laboral"
+        }
+      ]
+    },
+    {
+      "tipo": "pantalla",
+      "en": "aquí las",
+      "hasta": "así puedes",
+      "texto": "el tablero con las firmas entrando: quién firmó, quién no y desde cuándo",
+      "escena": "tabla",
+      "ventana": "Contrappto · firmas",
+      "items": [
+        {
+          "texto": "Ana Martínez",
+          "detalle": "Firmó hoy, 9:12 a. m.",
+          "icono": "UserCheck",
+          "estado": "Firmó",
+          "tono": "ok"
+        },
+        {
+          "texto": "Carlos Ruiz",
+          "detalle": "Enviado hace 2 días",
+          "icono": "UserRound",
+          "estado": "Pendiente",
+          "tono": "pendiente"
+        },
+        {
+          "texto": "Luz Adriana",
+          "detalle": "Firmó ayer, 4:40 p. m.",
+          "icono": "UserCheck",
+          "estado": "Firmó",
+          "tono": "ok"
+        },
+        {
+          "texto": "Mateo Gómez",
+          "detalle": "Vio el contrato hace 1 hora",
+          "icono": "Eye",
+          "estado": "Visto",
+          "tono": "activo"
+        }
+      ]
+    },
+    {
+      "tipo": "comparativa",
+      "en": "antes",
+      "dura": 3.2,
+      "nivel": 1,
+      "columnas": [
+        "antes",
+        "ahora"
+      ],
+      "izquierda": {
+        "titulo": "Antes",
+        "icono": "CalendarDays",
+        "items": [
+          "Una *semana* de una persona"
+        ]
+      },
+      "derecha": {
+        "titulo": "Ahora",
+        "icono": "Clock",
+        "tono": "bien",
+        "items": [
+          "Una *tarde*"
+        ]
+      }
+    }
+  ],
+  "variantes": {
+    "contrappto": {
+      "gancho": "200 contrataciones, *un solo documento*",
+      "titular": "Contratar a 200 personas con el mismo documento"
+    }
+  },
+  "verificar": [
+    {
+      "dato": "Contrappto: plantilla con campos variables, carga masiva por lista, envío individual por correo y tablero de firmas. Confirmar que existe hoy tal como se dice.",
+      "estado": "pendiente"
+    }
+  ],
+  "generado": {
+    "beats": [
+      {
+        "tipo": "cifra",
+        "en": "200 veces",
+        "hasta": "esto",
+        "nivel": 1,
+        "valor": 200,
+        "etiqueta": "veces el *mismo* documento",
+        "titulo": "Copiar y pegar",
+        "icono": "Copy",
+        "puntos": 200,
+        "inicioMs": 4099,
+        "finMs": 8661
+      },
+      {
+        "tipo": "pantalla",
+        "en": "el documento queda",
+        "hasta": "subes",
+        "texto": "la plantilla con los espacios que cambian: nombre, cargo, salario y fecha",
+        "escena": "app",
+        "app": {
+          "archivo": "app/2026-10/contrappto.mp4",
+          "desde": 72,
+          "velocidad": 0.5,
+          "tapar": [
+            {
+              "x": 0.03,
+              "y": 0.184,
+              "w": 0.94,
+              "h": 0.034,
+              "fondo": "#0A1A24"
+            }
+          ]
+        },
+        "fondo3d": true,
+        "titulo": "Sube la *plantilla*",
+        "items": [
+          {
+            "texto": "Nombre · cargo · salario · fecha",
+            "icono": "Variable"
+          }
+        ],
+        "inicioMs": 10893,
+        "finMs": 18125
+      },
+      {
+        "tipo": "pantalla",
+        "en": "subes",
+        "hasta": "cada persona",
+        "texto": "cargar la lista: 200 filas",
+        "escena": "masiva",
+        "ventana": "Contrappto · carga masiva",
+        "unidad": "filas cargadas",
+        "items": [
+          {
+            "n": 50
+          },
+          {
+            "n": 120
+          },
+          {
+            "n": 200
+          }
+        ],
+        "paso": 20,
+        "inicioMs": 18125,
+        "finMs": 20536
+      },
+      {
+        "tipo": "pantalla",
+        "en": "cada persona",
+        "hasta": "y aquí",
+        "texto": "el envío: cada quien recibe el suyo en su correo",
+        "escena": "avisos",
+        "items": [
+          {
+            "app": "correo",
+            "titulo": "Tu contrato está listo para firmar",
+            "texto": "Contrappto · Contrato laboral"
+          },
+          {
+            "app": "correo",
+            "titulo": "Tu contrato está listo para firmar",
+            "texto": "Contrappto · Contrato laboral"
+          },
+          {
+            "app": "correo",
+            "titulo": "Tu contrato está listo para firmar",
+            "texto": "Contrappto · Contrato laboral"
+          }
+        ],
+        "inicioMs": 20536,
+        "finMs": 24705
+      },
+      {
+        "tipo": "pantalla",
+        "en": "aquí las",
+        "hasta": "así puedes",
+        "texto": "el tablero con las firmas entrando: quién firmó, quién no y desde cuándo",
+        "escena": "tabla",
+        "ventana": "Contrappto · firmas",
+        "items": [
+          {
+            "texto": "Ana Martínez",
+            "detalle": "Firmó hoy, 9:12 a. m.",
+            "icono": "UserCheck",
+            "estado": "Firmó",
+            "tono": "ok"
+          },
+          {
+            "texto": "Carlos Ruiz",
+            "detalle": "Enviado hace 2 días",
+            "icono": "UserRound",
+            "estado": "Pendiente",
+            "tono": "pendiente"
+          },
+          {
+            "texto": "Luz Adriana",
+            "detalle": "Firmó ayer, 4:40 p. m.",
+            "icono": "UserCheck",
+            "estado": "Firmó",
+            "tono": "ok"
+          },
+          {
+            "texto": "Mateo Gómez",
+            "detalle": "Vio el contrato hace 1 hora",
+            "icono": "Eye",
+            "estado": "Visto",
+            "tono": "activo"
+          }
+        ],
+        "inicioMs": 25268,
+        "finMs": 31429
+      },
+      {
+        "tipo": "comparativa",
+        "en": "antes",
+        "dura": 3.2,
+        "nivel": 1,
+        "columnas": [
+          "antes",
+          "ahora"
+        ],
+        "izquierda": {
+          "titulo": "Antes",
+          "icono": "CalendarDays",
+          "items": [
+            "Una *semana* de una persona"
+          ]
+        },
+        "derecha": {
+          "titulo": "Ahora",
+          "icono": "Clock",
+          "tono": "bien",
+          "items": [
+            "Una *tarde*"
+          ]
+        },
+        "inicioMs": 38353,
+        "finMs": 41553,
+        "columnasCuadros": [
+          7,
+          72
+        ]
+      }
+    ],
+    "montajes": {
+      "contrappto": {
+        "segmentos": [
+          {
+            "desde": 0.542,
+            "hasta": 28.642,
+            "archivo": "limpios/2026-10/copy_70E40F95-D662-48B9-B239-2E63C543C912.mp4",
+            "parte": "cuerpo",
+            "velocidad": 1.12
+          },
+          {
+            "desde": 28.942,
+            "hasta": 47.252,
+            "archivo": "limpios/2026-10/copy_70E40F95-D662-48B9-B239-2E63C543C912.mp4",
+            "parte": "cuerpo",
+            "velocidad": 1.12
+          },
+          {
+            "desde": 1.4,
+            "hasta": 7.9,
+            "archivo": "limpios/2026-10/IMG_4360.mp4",
+            "parte": "cierre",
+            "velocidad": 1.12,
+            "encuadre": {
+              "x": 0.483,
+              "y": 0.703,
+              "alto": 0.431
+            }
+          },
+          {
+            "desde": 8.5,
+            "hasta": 21.95,
+            "archivo": "limpios/2026-10/IMG_4360.mp4",
+            "parte": "cierre",
+            "velocidad": 1.12,
+            "encuadre": {
+              "x": 0.567,
+              "y": 0.709,
+              "alto": 0.519
+            }
+          }
+        ],
+        "subtitulos": [
+          {
+            "text": " Si",
+            "startMs": 179,
+            "endMs": 342,
+            "timestampMs": null,
+            "confidence": 0.899136,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " contratas",
+            "startMs": 342,
+            "endMs": 834,
+            "timestampMs": null,
+            "confidence": 0.939332,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " a",
+            "startMs": 834,
+            "endMs": 951,
+            "timestampMs": null,
+            "confidence": 0.95108,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " 200",
+            "startMs": 951,
+            "endMs": 1162,
+            "timestampMs": null,
+            "confidence": 0.949179,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " personas",
+            "startMs": 1162,
+            "endMs": 1606,
+            "timestampMs": null,
+            "confidence": 0.971753,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " al",
+            "startMs": 1606,
+            "endMs": 1771,
+            "timestampMs": null,
+            "confidence": 0.936129,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " año,",
+            "startMs": 1771,
+            "endMs": 1980,
+            "timestampMs": null,
+            "confidence": 0.856495,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " hoy",
+            "startMs": 1980,
+            "endMs": 2191,
+            "timestampMs": null,
+            "confidence": 0.809487,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " alguien",
+            "startMs": 2191,
+            "endMs": 2589,
+            "timestampMs": null,
+            "confidence": 0.928857,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " está",
+            "startMs": 2768,
+            "endMs": 3050,
+            "timestampMs": null,
+            "confidence": 0.942319,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " copiando",
+            "startMs": 3050,
+            "endMs": 3536,
+            "timestampMs": null,
+            "confidence": 0.920405,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " y",
+            "startMs": 3536,
+            "endMs": 3664,
+            "timestampMs": null,
+            "confidence": 0.962972,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " pegando",
+            "startMs": 3664,
+            "endMs": 4099,
+            "timestampMs": null,
+            "confidence": 0.939696,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " 200",
+            "startMs": 4099,
+            "endMs": 4330,
+            "timestampMs": null,
+            "confidence": 0.768627,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " veces",
+            "startMs": 4330,
+            "endMs": 4663,
+            "timestampMs": null,
+            "confidence": 0.973405,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " el",
+            "startMs": 4663,
+            "endMs": 4842,
+            "timestampMs": null,
+            "confidence": 0.944661,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " mismo",
+            "startMs": 4842,
+            "endMs": 5175,
+            "timestampMs": null,
+            "confidence": 0.897029,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " documento",
+            "startMs": 5175,
+            "endMs": 5712,
+            "timestampMs": null,
+            "confidence": 0.998904,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " y",
+            "startMs": 5712,
+            "endMs": 5841,
+            "timestampMs": null,
+            "confidence": 0.61114,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ahí",
+            "startMs": 5841,
+            "endMs": 6071,
+            "timestampMs": null,
+            "confidence": 0.918049,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " es",
+            "startMs": 6429,
+            "endMs": 6602,
+            "timestampMs": null,
+            "confidence": 0.976062,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " donde",
+            "startMs": 6602,
+            "endMs": 6922,
+            "timestampMs": null,
+            "confidence": 0.964085,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " se",
+            "startMs": 6922,
+            "endMs": 7096,
+            "timestampMs": null,
+            "confidence": 0.963753,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " cuela",
+            "startMs": 7096,
+            "endMs": 7416,
+            "timestampMs": null,
+            "confidence": 0.78043,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " el",
+            "startMs": 7416,
+            "endMs": 7589,
+            "timestampMs": null,
+            "confidence": 0.978928,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " error,",
+            "startMs": 8036,
+            "endMs": 8393,
+            "timestampMs": null,
+            "confidence": 0.239041,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " esto",
+            "startMs": 8661,
+            "endMs": 8934,
+            "timestampMs": null,
+            "confidence": 0.932079,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " te",
+            "startMs": 8934,
+            "endMs": 9107,
+            "timestampMs": null,
+            "confidence": 0.67756,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " lo",
+            "startMs": 9286,
+            "endMs": 9459,
+            "timestampMs": null,
+            "confidence": 0.993102,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " hace",
+            "startMs": 9459,
+            "endMs": 9732,
+            "timestampMs": null,
+            "confidence": 0.940279,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " una",
+            "startMs": 9911,
+            "endMs": 10104,
+            "timestampMs": null,
+            "confidence": 0.944694,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " sola",
+            "startMs": 10104,
+            "endMs": 10342,
+            "timestampMs": null,
+            "confidence": 0.948239,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " vez,",
+            "startMs": 10342,
+            "endMs": 10536,
+            "timestampMs": null,
+            "confidence": 0.519356,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " el",
+            "startMs": 10893,
+            "endMs": 11049,
+            "timestampMs": null,
+            "confidence": 0.972261,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " documento",
+            "startMs": 11049,
+            "endMs": 11518,
+            "timestampMs": null,
+            "confidence": 0.99724,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " queda",
+            "startMs": 11518,
+            "endMs": 11808,
+            "timestampMs": null,
+            "confidence": 0.98581,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " armado",
+            "startMs": 11808,
+            "endMs": 12143,
+            "timestampMs": null,
+            "confidence": 0.994103,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " y",
+            "startMs": 12679,
+            "endMs": 12816,
+            "timestampMs": null,
+            "confidence": 0.95313,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " solamente",
+            "startMs": 12816,
+            "endMs": 13393,
+            "timestampMs": null,
+            "confidence": 0.680715,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " cambian",
+            "startMs": 13571,
+            "endMs": 13964,
+            "timestampMs": null,
+            "confidence": 0.741209,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " los",
+            "startMs": 13964,
+            "endMs": 14171,
+            "timestampMs": null,
+            "confidence": 0.942344,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " espacios",
+            "startMs": 14171,
+            "endMs": 14611,
+            "timestampMs": null,
+            "confidence": 0.975809,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " según",
+            "startMs": 14611,
+            "endMs": 14911,
+            "timestampMs": null,
+            "confidence": 0.892596,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " el",
+            "startMs": 15089,
+            "endMs": 15317,
+            "timestampMs": null,
+            "confidence": 0.975923,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " nombre,",
+            "startMs": 15317,
+            "endMs": 15804,
+            "timestampMs": null,
+            "confidence": 0.966851,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " el",
+            "startMs": 15982,
+            "endMs": 16154,
+            "timestampMs": null,
+            "confidence": 0.909983,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " cargo,",
+            "startMs": 16154,
+            "endMs": 16474,
+            "timestampMs": null,
+            "confidence": 0.970165,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " el",
+            "startMs": 16474,
+            "endMs": 16646,
+            "timestampMs": null,
+            "confidence": 0.98907,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " salario",
+            "startMs": 16646,
+            "endMs": 17064,
+            "timestampMs": null,
+            "confidence": 0.995133,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " y",
+            "startMs": 17064,
+            "endMs": 17187,
+            "timestampMs": null,
+            "confidence": 0.965506,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " la",
+            "startMs": 17187,
+            "endMs": 17359,
+            "timestampMs": null,
+            "confidence": 0.904256,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " fecha,",
+            "startMs": 17359,
+            "endMs": 17679,
+            "timestampMs": null,
+            "confidence": 0.58428,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " subes",
+            "startMs": 18125,
+            "endMs": 18442,
+            "timestampMs": null,
+            "confidence": 0.848118,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " la",
+            "startMs": 18442,
+            "endMs": 18612,
+            "timestampMs": null,
+            "confidence": 0.984091,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " lista,",
+            "startMs": 18612,
+            "endMs": 18929,
+            "timestampMs": null,
+            "confidence": 0.667827,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " 200",
+            "startMs": 19196,
+            "endMs": 19387,
+            "timestampMs": null,
+            "confidence": 0.972149,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " filas",
+            "startMs": 19387,
+            "endMs": 19662,
+            "timestampMs": null,
+            "confidence": 0.984981,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " y",
+            "startMs": 19662,
+            "endMs": 19767,
+            "timestampMs": null,
+            "confidence": 0.875539,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " sale,",
+            "startMs": 19767,
+            "endMs": 20000,
+            "timestampMs": null,
+            "confidence": 0.671069,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " cada",
+            "startMs": 20536,
+            "endMs": 21071,
+            "timestampMs": null,
+            "confidence": 0.980959,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " persona",
+            "startMs": 21607,
+            "endMs": 22043,
+            "timestampMs": null,
+            "confidence": 0.995796,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " recibe",
+            "startMs": 22043,
+            "endMs": 22428,
+            "timestampMs": null,
+            "confidence": 0.993667,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " su",
+            "startMs": 22428,
+            "endMs": 22607,
+            "timestampMs": null,
+            "confidence": 0.991318,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " contrato",
+            "startMs": 22607,
+            "endMs": 23095,
+            "timestampMs": null,
+            "confidence": 0.997554,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " con",
+            "startMs": 23095,
+            "endMs": 23325,
+            "timestampMs": null,
+            "confidence": 0.947399,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " sus",
+            "startMs": 23325,
+            "endMs": 23556,
+            "timestampMs": null,
+            "confidence": 0.969233,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " datos",
+            "startMs": 23556,
+            "endMs": 23889,
+            "timestampMs": null,
+            "confidence": 0.996527,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " a",
+            "startMs": 23889,
+            "endMs": 24018,
+            "timestampMs": null,
+            "confidence": 0.792899,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " su",
+            "startMs": 24196,
+            "endMs": 24358,
+            "timestampMs": null,
+            "confidence": 0.997352,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " correo",
+            "startMs": 24358,
+            "endMs": 24705,
+            "timestampMs": null,
+            "confidence": 0.996466,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " y",
+            "startMs": 24705,
+            "endMs": 24821,
+            "timestampMs": null,
+            "confidence": 0.454388,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " aquí",
+            "startMs": 25268,
+            "endMs": 25505,
+            "timestampMs": null,
+            "confidence": 0.96426,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " las",
+            "startMs": 25505,
+            "endMs": 25699,
+            "timestampMs": null,
+            "confidence": 0.937864,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ves",
+            "startMs": 25699,
+            "endMs": 25893,
+            "timestampMs": null,
+            "confidence": 0.992112,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " entrando",
+            "startMs": 26429,
+            "endMs": 26871,
+            "timestampMs": null,
+            "confidence": 0.982465,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " una",
+            "startMs": 26871,
+            "endMs": 27080,
+            "timestampMs": null,
+            "confidence": 0.913647,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " por",
+            "startMs": 27080,
+            "endMs": 27290,
+            "timestampMs": null,
+            "confidence": 0.990845,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " una,",
+            "startMs": 27290,
+            "endMs": 27500,
+            "timestampMs": null,
+            "confidence": 0.819288,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " quién",
+            "startMs": 27679,
+            "endMs": 28125,
+            "timestampMs": null,
+            "confidence": 0.385412,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " firmó,",
+            "startMs": 28125,
+            "endMs": 28571,
+            "timestampMs": null,
+            "confidence": 0.738678,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " quién",
+            "startMs": 28929,
+            "endMs": 29254,
+            "timestampMs": null,
+            "confidence": 0.972617,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " no",
+            "startMs": 29254,
+            "endMs": 29429,
+            "timestampMs": null,
+            "confidence": 0.995672,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " y",
+            "startMs": 29429,
+            "endMs": 29554,
+            "timestampMs": null,
+            "confidence": 0.897794,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " desde",
+            "startMs": 29732,
+            "endMs": 29939,
+            "timestampMs": null,
+            "confidence": 0.98496,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " cuándo",
+            "startMs": 29939,
+            "endMs": 30179,
+            "timestampMs": null,
+            "confidence": 0.796247,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " está",
+            "startMs": 30446,
+            "endMs": 30722,
+            "timestampMs": null,
+            "confidence": 0.668525,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " esperando,",
+            "startMs": 30722,
+            "endMs": 31250,
+            "timestampMs": null,
+            "confidence": 0.762925,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " así",
+            "startMs": 31429,
+            "endMs": 31696,
+            "timestampMs": null,
+            "confidence": 0.989238,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " puedes",
+            "startMs": 31696,
+            "endMs": 32143,
+            "timestampMs": null,
+            "confidence": 0.960208,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " llevar",
+            "startMs": 32500,
+            "endMs": 32857,
+            "timestampMs": null,
+            "confidence": 0.979613,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " el",
+            "startMs": 33214,
+            "endMs": 33422,
+            "timestampMs": null,
+            "confidence": 0.989791,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " control",
+            "startMs": 33422,
+            "endMs": 33929,
+            "timestampMs": null,
+            "confidence": 0.992956,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " de",
+            "startMs": 34196,
+            "endMs": 34378,
+            "timestampMs": null,
+            "confidence": 0.993589,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tus",
+            "startMs": 34378,
+            "endMs": 34611,
+            "timestampMs": null,
+            "confidence": 0.989429,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " flujos",
+            "startMs": 34611,
+            "endMs": 34999,
+            "timestampMs": null,
+            "confidence": 0.991106,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " contractuales",
+            "startMs": 34999,
+            "endMs": 35749,
+            "timestampMs": null,
+            "confidence": 0.984648,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " con",
+            "startMs": 35749,
+            "endMs": 35982,
+            "timestampMs": null,
+            "confidence": 0.975943,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " mucha",
+            "startMs": 36429,
+            "endMs": 36753,
+            "timestampMs": null,
+            "confidence": 0.925475,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " más",
+            "startMs": 36753,
+            "endMs": 36977,
+            "timestampMs": null,
+            "confidence": 0.972726,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " precisión,",
+            "startMs": 36977,
+            "endMs": 37500,
+            "timestampMs": null,
+            "confidence": 0.712422,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " lo",
+            "startMs": 37946,
+            "endMs": 38124,
+            "timestampMs": null,
+            "confidence": 0.989714,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 38124,
+            "endMs": 38353,
+            "timestampMs": null,
+            "confidence": 0.9979,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " antes",
+            "startMs": 38353,
+            "endMs": 38682,
+            "timestampMs": null,
+            "confidence": 0.981849,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " era",
+            "startMs": 38682,
+            "endMs": 38911,
+            "timestampMs": null,
+            "confidence": 0.990837,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " una",
+            "startMs": 38911,
+            "endMs": 39139,
+            "timestampMs": null,
+            "confidence": 0.98673,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " semana",
+            "startMs": 39139,
+            "endMs": 39520,
+            "timestampMs": null,
+            "confidence": 0.997805,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " de",
+            "startMs": 39520,
+            "endMs": 39697,
+            "timestampMs": null,
+            "confidence": 0.974806,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " una",
+            "startMs": 39697,
+            "endMs": 39926,
+            "timestampMs": null,
+            "confidence": 0.968522,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " persona,",
+            "startMs": 39926,
+            "endMs": 40357,
+            "timestampMs": null,
+            "confidence": 0.697133,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ahora",
+            "startMs": 40536,
+            "endMs": 40729,
+            "timestampMs": null,
+            "confidence": 0.990611,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " en",
+            "startMs": 40729,
+            "endMs": 40833,
+            "timestampMs": null,
+            "confidence": 0.709607,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " una",
+            "startMs": 40833,
+            "endMs": 40967,
+            "timestampMs": null,
+            "confidence": 0.992006,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tarde.",
+            "startMs": 40967,
+            "endMs": 41161,
+            "timestampMs": null,
+            "confidence": 0.950769,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Si",
+            "startMs": 41616,
+            "endMs": 41754,
+            "timestampMs": null,
+            "confidence": 0.562455,
+            "parte": "cierre"
+          },
+          {
+            "text": " necesitas",
+            "startMs": 41754,
+            "endMs": 42168,
+            "timestampMs": null,
+            "confidence": 0.727593,
+            "parte": "cierre"
+          },
+          {
+            "text": " contratar",
+            "startMs": 42168,
+            "endMs": 42582,
+            "timestampMs": null,
+            "confidence": 0.94769,
+            "parte": "cierre"
+          },
+          {
+            "text": " a",
+            "startMs": 42582,
+            "endMs": 42680,
+            "timestampMs": null,
+            "confidence": 0.930454,
+            "parte": "cierre"
+          },
+          {
+            "text": " más",
+            "startMs": 42680,
+            "endMs": 42858,
+            "timestampMs": null,
+            "confidence": 0.912456,
+            "parte": "cierre"
+          },
+          {
+            "text": " de",
+            "startMs": 42858,
+            "endMs": 42996,
+            "timestampMs": null,
+            "confidence": 0.994882,
+            "parte": "cierre"
+          },
+          {
+            "text": " 20,",
+            "startMs": 42996,
+            "endMs": 43134,
+            "timestampMs": null,
+            "confidence": 0.773778,
+            "parte": "cierre"
+          },
+          {
+            "text": " 30",
+            "startMs": 43402,
+            "endMs": 43560,
+            "timestampMs": null,
+            "confidence": 0.960811,
+            "parte": "cierre"
+          },
+          {
+            "text": " o",
+            "startMs": 43560,
+            "endMs": 43673,
+            "timestampMs": null,
+            "confidence": 0.886833,
+            "parte": "cierre"
+          },
+          {
+            "text": " 50",
+            "startMs": 43673,
+            "endMs": 43831,
+            "timestampMs": null,
+            "confidence": 0.964477,
+            "parte": "cierre"
+          },
+          {
+            "text": " personas",
+            "startMs": 43831,
+            "endMs": 44261,
+            "timestampMs": null,
+            "confidence": 0.983342,
+            "parte": "cierre"
+          },
+          {
+            "text": " al",
+            "startMs": 44261,
+            "endMs": 44419,
+            "timestampMs": null,
+            "confidence": 0.959027,
+            "parte": "cierre"
+          },
+          {
+            "text": " tiempo",
+            "startMs": 44419,
+            "endMs": 44758,
+            "timestampMs": null,
+            "confidence": 0.975106,
+            "parte": "cierre"
+          },
+          {
+            "text": " o",
+            "startMs": 44758,
+            "endMs": 44871,
+            "timestampMs": null,
+            "confidence": 0.565626,
+            "parte": "cierre"
+          },
+          {
+            "text": " lo",
+            "startMs": 44871,
+            "endMs": 45029,
+            "timestampMs": null,
+            "confidence": 0.975694,
+            "parte": "cierre"
+          },
+          {
+            "text": " haces",
+            "startMs": 45029,
+            "endMs": 45323,
+            "timestampMs": null,
+            "confidence": 0.966752,
+            "parte": "cierre"
+          },
+          {
+            "text": " al",
+            "startMs": 45323,
+            "endMs": 45481,
+            "timestampMs": null,
+            "confidence": 0.920871,
+            "parte": "cierre"
+          },
+          {
+            "text": " año,",
+            "startMs": 45481,
+            "endMs": 45685,
+            "timestampMs": null,
+            "confidence": 0.713542,
+            "parte": "cierre"
+          },
+          {
+            "text": " escríbeme",
+            "startMs": 45685,
+            "endMs": 46160,
+            "timestampMs": null,
+            "confidence": 0.687334,
+            "parte": "cierre"
+          },
+          {
+            "text": " y",
+            "startMs": 46160,
+            "endMs": 46272,
+            "timestampMs": null,
+            "confidence": 0.942065,
+            "parte": "cierre"
+          },
+          {
+            "text": " te",
+            "startMs": 46272,
+            "endMs": 46430,
+            "timestampMs": null,
+            "confidence": 0.947663,
+            "parte": "cierre"
+          },
+          {
+            "text": " muestro",
+            "startMs": 46430,
+            "endMs": 46815,
+            "timestampMs": null,
+            "confidence": 0.995936,
+            "parte": "cierre"
+          },
+          {
+            "text": " el",
+            "startMs": 46815,
+            "endMs": 46973,
+            "timestampMs": null,
+            "confidence": 0.989902,
+            "parte": "cierre"
+          },
+          {
+            "text": " dashboard",
+            "startMs": 47420,
+            "endMs": 47955,
+            "timestampMs": null,
+            "confidence": 0.659058,
+            "parte": "cierre"
+          },
+          {
+            "text": " de",
+            "startMs": 47955,
+            "endMs": 48134,
+            "timestampMs": null,
+            "confidence": 0.953484,
+            "parte": "cierre"
+          },
+          {
+            "text": " contracto",
+            "startMs": 48313,
+            "endMs": 48777,
+            "timestampMs": null,
+            "confidence": 0.269096,
+            "parte": "cierre"
+          },
+          {
+            "text": " para",
+            "startMs": 48777,
+            "endMs": 49020,
+            "timestampMs": null,
+            "confidence": 0.898848,
+            "parte": "cierre"
+          },
+          {
+            "text": " que",
+            "startMs": 49020,
+            "endMs": 49219,
+            "timestampMs": null,
+            "confidence": 0.961553,
+            "parte": "cierre"
+          },
+          {
+            "text": " puedas",
+            "startMs": 49219,
+            "endMs": 49550,
+            "timestampMs": null,
+            "confidence": 0.967715,
+            "parte": "cierre"
+          },
+          {
+            "text": " empezar",
+            "startMs": 49550,
+            "endMs": 49926,
+            "timestampMs": null,
+            "confidence": 0.824313,
+            "parte": "cierre"
+          },
+          {
+            "text": " a",
+            "startMs": 49926,
+            "endMs": 50037,
+            "timestampMs": null,
+            "confidence": 0.984029,
+            "parte": "cierre"
+          },
+          {
+            "text": " utilizarlo",
+            "startMs": 50037,
+            "endMs": 50545,
+            "timestampMs": null,
+            "confidence": 0.948692,
+            "parte": "cierre"
+          },
+          {
+            "text": " y",
+            "startMs": 50902,
+            "endMs": 51015,
+            "timestampMs": null,
+            "confidence": 0.922902,
+            "parte": "cierre"
+          },
+          {
+            "text": " mejorar",
+            "startMs": 51015,
+            "endMs": 51399,
+            "timestampMs": null,
+            "confidence": 0.96358,
+            "parte": "cierre"
+          },
+          {
+            "text": " tus",
+            "startMs": 51399,
+            "endMs": 51603,
+            "timestampMs": null,
+            "confidence": 0.978954,
+            "parte": "cierre"
+          },
+          {
+            "text": " flujos",
+            "startMs": 51603,
+            "endMs": 51942,
+            "timestampMs": null,
+            "confidence": 0.987025,
+            "parte": "cierre"
+          },
+          {
+            "text": " contractuales,",
+            "startMs": 51942,
+            "endMs": 52598,
+            "timestampMs": null,
+            "confidence": 0.864105,
+            "parte": "cierre"
+          },
+          {
+            "text": " generar",
+            "startMs": 53045,
+            "endMs": 53472,
+            "timestampMs": null,
+            "confidence": 0.973907,
+            "parte": "cierre"
+          },
+          {
+            "text": " alertas",
+            "startMs": 53472,
+            "endMs": 53901,
+            "timestampMs": null,
+            "confidence": 0.994272,
+            "parte": "cierre"
+          },
+          {
+            "text": " y",
+            "startMs": 53901,
+            "endMs": 54027,
+            "timestampMs": null,
+            "confidence": 0.948766,
+            "parte": "cierre"
+          },
+          {
+            "text": " darle",
+            "startMs": 54384,
+            "endMs": 54629,
+            "timestampMs": null,
+            "confidence": 0.952276,
+            "parte": "cierre"
+          },
+          {
+            "text": " seguimiento",
+            "startMs": 54629,
+            "endMs": 55098,
+            "timestampMs": null,
+            "confidence": 0.993269,
+            "parte": "cierre"
+          },
+          {
+            "text": " a",
+            "startMs": 55455,
+            "endMs": 55570,
+            "timestampMs": null,
+            "confidence": 0.988583,
+            "parte": "cierre"
+          },
+          {
+            "text": " tus",
+            "startMs": 55570,
+            "endMs": 55774,
+            "timestampMs": null,
+            "confidence": 0.990922,
+            "parte": "cierre"
+          },
+          {
+            "text": " contratos",
+            "startMs": 55774,
+            "endMs": 56253,
+            "timestampMs": null,
+            "confidence": 0.91148,
+            "parte": "cierre"
+          },
+          {
+            "text": " para",
+            "startMs": 56253,
+            "endMs": 56503,
+            "timestampMs": null,
+            "confidence": 0.9142,
+            "parte": "cierre"
+          },
+          {
+            "text": " que",
+            "startMs": 56503,
+            "endMs": 56708,
+            "timestampMs": null,
+            "confidence": 0.925747,
+            "parte": "cierre"
+          },
+          {
+            "text": " no",
+            "startMs": 56708,
+            "endMs": 56867,
+            "timestampMs": null,
+            "confidence": 0.979137,
+            "parte": "cierre"
+          },
+          {
+            "text": " se",
+            "startMs": 56867,
+            "endMs": 57027,
+            "timestampMs": null,
+            "confidence": 0.982279,
+            "parte": "cierre"
+          },
+          {
+            "text": " te",
+            "startMs": 57027,
+            "endMs": 57186,
+            "timestampMs": null,
+            "confidence": 0.964481,
+            "parte": "cierre"
+          },
+          {
+            "text": " vuelva",
+            "startMs": 57186,
+            "endMs": 57528,
+            "timestampMs": null,
+            "confidence": 0.931409,
+            "parte": "cierre"
+          },
+          {
+            "text": " a",
+            "startMs": 57528,
+            "endMs": 57641,
+            "timestampMs": null,
+            "confidence": 0.891504,
+            "parte": "cierre"
+          },
+          {
+            "text": " pasar",
+            "startMs": 57641,
+            "endMs": 57938,
+            "timestampMs": null,
+            "confidence": 0.99862,
+            "parte": "cierre"
+          },
+          {
+            "text": " ningún",
+            "startMs": 57938,
+            "endMs": 58279,
+            "timestampMs": null,
+            "confidence": 0.951252,
+            "parte": "cierre"
+          },
+          {
+            "text": " vencimiento.",
+            "startMs": 58279,
+            "endMs": 58848,
+            "timestampMs": null,
+            "confidence": 0.958914,
+            "parte": "cierre"
+          }
+        ],
+        "cuerpoInicioMs": 0,
+        "cuerpoRecorteMs": 0,
+        "cierreInicioMs": 41438,
+        "duracionMs": 59250
+      }
+    },
+    "cuerpoMs": 41438,
+    "descartadas": [],
+    "texto": [
+      "Si contratas a 200 personas al año, hoy alguien está copiando y pegando 200 veces el mismo documento y ahí es donde se cuela el error, esto te lo hace una sola vez, el documento queda armado y solamente cambian los espacios según el nombre, el cargo, el salario y la fecha, subes la lista, 200 filas y sale, cada persona recibe su contrato con sus datos a su correo y aquí las ves entrando una por una, quién firmó, quién no y desde cuándo está esperando, así puedes llevar el control de tus flujos contractuales con mucha más precisión, lo que antes era una semana de una persona, ahora en una tarde."
+    ],
+    "avisos": []
+  }
+}

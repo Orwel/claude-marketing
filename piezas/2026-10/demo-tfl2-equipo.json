@@ -1,0 +1,1271 @@
+{
+  "slug": "demo-tfl2-equipo",
+  "codigo": "DEMO_TFL2",
+  "titulo": "Cinco abogados, doscientos procesos, un solo tablero",
+  "plantilla": "Montaje",
+  "tipo": "demo",
+  "tono": "sobrio",
+  "cuentas": [
+    "trifuerza"
+  ],
+  "lowerThird": "Creador de Trifuerza",
+  "cuerpo": {
+    "archivo": "copy_3A1B1234-D08C-43F0-907C-227472862D9E.mov"
+  },
+  "correcciones": [
+    {
+      "de": "trifuerza legal",
+      "a": "Trifuerza Legal"
+    }
+  ],
+  "resaltar": [
+    "responsable",
+    "carga",
+    "reporte",
+    "automático"
+  ],
+  "beats": [
+    {
+      "tipo": "cifra",
+      "en": "cinco abogados",
+      "hasta": "En",
+      "nivel": 1,
+      "valor": 200,
+      "etiqueta": "procesos · 5 abogados",
+      "titulo": "Un solo tablero",
+      "icono": "LayoutDashboard",
+      "puntos": 200
+    },
+    {
+      "tipo": "pantalla",
+      "en": "cada proceso",
+      "hasta": "El socio",
+      "texto": "asignación: cada proceso con responsable",
+      "escena": "kanban",
+      "tema": {
+        "acento": "#C9A227",
+        "acentoTexto": "#E8C547",
+        "fondo": "#030712",
+        "panel": "#111827",
+        "borde": "#1F2937",
+        "titulo": "Trifuerza Legal"
+      },
+      "ventana": "Trifuerza Legal · asignación",
+      "tablero": [
+        {
+          "nombre": "Sin asignar",
+          "color": "#6B7280"
+        },
+        {
+          "nombre": "Laura",
+          "color": "#C9A227"
+        },
+        {
+          "nombre": "Andrés",
+          "color": "#3B82F6"
+        }
+      ],
+      "items": [
+        {
+          "texto": "Demanda laboral",
+          "de": 0,
+          "a": 1
+        },
+        {
+          "texto": "Proceso ejecutivo",
+          "de": 0,
+          "a": 2
+        },
+        {
+          "texto": "Acción de tutela",
+          "de": 0,
+          "a": 1
+        }
+      ]
+    },
+    {
+      "tipo": "pantalla",
+      "en": "El socio",
+      "hasta": "Y esto",
+      "texto": "vista por abogado: la carga real de cada uno",
+      "escena": "metricas",
+      "tema": {
+        "acento": "#C9A227",
+        "acentoTexto": "#E8C547",
+        "fondo": "#030712",
+        "panel": "#111827",
+        "borde": "#1F2937",
+        "titulo": "Trifuerza Legal"
+      },
+      "items": [
+        {
+          "valor": 42,
+          "etiqueta": "Laura · procesos"
+        },
+        {
+          "valor": 37,
+          "etiqueta": "Andrés · procesos",
+          "tono": "ok"
+        },
+        {
+          "valor": 29,
+          "etiqueta": "Camila · procesos",
+          "tono": "pendiente"
+        }
+      ]
+    },
+    {
+      "tipo": "pantalla",
+      "en": "el reporte",
+      "hasta": "Un solo",
+      "texto": "reporte al cliente",
+      "escena": "documentos",
+      "tema": {
+        "acento": "#C9A227",
+        "acentoTexto": "#E8C547",
+        "fondo": "#030712",
+        "panel": "#111827",
+        "borde": "#1F2937",
+        "titulo": "Trifuerza Legal"
+      },
+      "ventana": "Trifuerza Legal · reportes",
+      "items": [
+        {
+          "texto": "Reporte_cliente_octubre.pdf",
+          "listo": "Enviado"
+        },
+        {
+          "texto": "Estado_de_procesos.pdf",
+          "listo": "Enviado"
+        }
+      ]
+    },
+    {
+      "tipo": "lista",
+      "en": "Un solo plan",
+      "hasta": "Tu firma",
+      "nivel": 1,
+      "titulo": "Un solo plan",
+      "items": [
+        {
+          "texto": "Cinco abogados",
+          "icono": "Users",
+          "en": "cinco"
+        },
+        {
+          "texto": "Monitoreo judicial *automático*",
+          "icono": "BellRing",
+          "en": "monitoreo"
+        },
+        {
+          "texto": "200 procesos, todo habilitado",
+          "icono": "FolderCheck",
+          "en": "200"
+        }
+      ]
+    }
+  ],
+  "variantes": {
+    "trifuerza": {
+      "gancho": "Cinco abogados. *200 procesos*."
+    }
+  },
+  "verificar": [
+    {
+      "dato": "Trifuerza Legal: monitoreo judicial automático, responsable por proceso, vista de carga por abogado y reporte al cliente: confirmar que el producto lo hace hoy.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "'Un solo plan, cinco abogados, 200 procesos, todo habilitado': confirmar el plan comercial vigente.",
+      "estado": "pendiente"
+    }
+  ],
+  "generado": {
+    "beats": [
+      {
+        "tipo": "cifra",
+        "en": "cinco abogados",
+        "hasta": "En",
+        "nivel": 1,
+        "valor": 200,
+        "etiqueta": "procesos · 5 abogados",
+        "titulo": "Un solo tablero",
+        "icono": "LayoutDashboard",
+        "puntos": 200,
+        "inicioMs": 2672,
+        "finMs": 6250
+      },
+      {
+        "tipo": "pantalla",
+        "en": "cada proceso",
+        "hasta": "El socio",
+        "texto": "asignación: cada proceso con responsable",
+        "escena": "kanban",
+        "tema": {
+          "acento": "#C9A227",
+          "acentoTexto": "#E8C547",
+          "fondo": "#030712",
+          "panel": "#111827",
+          "borde": "#1F2937",
+          "titulo": "Trifuerza Legal"
+        },
+        "ventana": "Trifuerza Legal · asignación",
+        "tablero": [
+          {
+            "nombre": "Sin asignar",
+            "color": "#6B7280"
+          },
+          {
+            "nombre": "Laura",
+            "color": "#C9A227"
+          },
+          {
+            "nombre": "Andrés",
+            "color": "#3B82F6"
+          }
+        ],
+        "items": [
+          {
+            "texto": "Demanda laboral",
+            "de": 0,
+            "a": 1
+          },
+          {
+            "texto": "Proceso ejecutivo",
+            "de": 0,
+            "a": 2
+          },
+          {
+            "texto": "Acción de tutela",
+            "de": 0,
+            "a": 1
+          }
+        ],
+        "inicioMs": 7246,
+        "finMs": 11161
+      },
+      {
+        "tipo": "pantalla",
+        "en": "El socio",
+        "hasta": "Y esto",
+        "texto": "vista por abogado: la carga real de cada uno",
+        "escena": "metricas",
+        "tema": {
+          "acento": "#C9A227",
+          "acentoTexto": "#E8C547",
+          "fondo": "#030712",
+          "panel": "#111827",
+          "borde": "#1F2937",
+          "titulo": "Trifuerza Legal"
+        },
+        "items": [
+          {
+            "valor": 42,
+            "etiqueta": "Laura · procesos"
+          },
+          {
+            "valor": 37,
+            "etiqueta": "Andrés · procesos",
+            "tono": "ok"
+          },
+          {
+            "valor": 29,
+            "etiqueta": "Camila · procesos",
+            "tono": "pendiente"
+          }
+        ],
+        "inicioMs": 11161,
+        "finMs": 18393
+      },
+      {
+        "tipo": "pantalla",
+        "en": "el reporte",
+        "hasta": "Un solo",
+        "texto": "reporte al cliente",
+        "escena": "documentos",
+        "tema": {
+          "acento": "#C9A227",
+          "acentoTexto": "#E8C547",
+          "fondo": "#030712",
+          "panel": "#111827",
+          "borde": "#1F2937",
+          "titulo": "Trifuerza Legal"
+        },
+        "ventana": "Trifuerza Legal · reportes",
+        "items": [
+          {
+            "texto": "Reporte_cliente_octubre.pdf",
+            "listo": "Enviado"
+          },
+          {
+            "texto": "Estado_de_procesos.pdf",
+            "listo": "Enviado"
+          }
+        ],
+        "inicioMs": 21744,
+        "finMs": 26518
+      },
+      {
+        "tipo": "lista",
+        "en": "Un solo plan",
+        "hasta": "Tu firma",
+        "nivel": 1,
+        "titulo": "Un solo plan",
+        "items": [
+          {
+            "texto": "Cinco abogados",
+            "icono": "Users",
+            "en": "cinco"
+          },
+          {
+            "texto": "Monitoreo judicial *automático*",
+            "icono": "BellRing",
+            "en": "monitoreo"
+          },
+          {
+            "texto": "200 procesos, todo habilitado",
+            "icono": "FolderCheck",
+            "en": "200"
+          }
+        ],
+        "inicioMs": 26518,
+        "finMs": 34107,
+        "itemsCuadros": [
+          39,
+          66,
+          141
+        ]
+      }
+    ],
+    "montajes": {
+      "trifuerza": {
+        "segmentos": [
+          {
+            "desde": 0.561,
+            "hasta": 7.361,
+            "archivo": "limpios/2026-10/copy_3A1B1234-D08C-43F0-907C-227472862D9E.mp4",
+            "parte": "cuerpo",
+            "velocidad": 1.12
+          },
+          {
+            "desde": 8.061,
+            "hasta": 13.561,
+            "archivo": "limpios/2026-10/copy_3A1B1234-D08C-43F0-907C-227472862D9E.mp4",
+            "parte": "cuerpo",
+            "velocidad": 1.12
+          },
+          {
+            "desde": 13.961,
+            "hasta": 43.471,
+            "archivo": "limpios/2026-10/copy_3A1B1234-D08C-43F0-907C-227472862D9E.mp4",
+            "parte": "cuerpo",
+            "velocidad": 1.12
+          }
+        ],
+        "subtitulos": [
+          {
+            "text": " Cuando",
+            "startMs": 179,
+            "endMs": 504,
+            "timestampMs": null,
+            "confidence": 0.637646,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " eres",
+            "startMs": 504,
+            "endMs": 742,
+            "timestampMs": null,
+            "confidence": 0.991473,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tú",
+            "startMs": 742,
+            "endMs": 894,
+            "timestampMs": null,
+            "confidence": 0.883708,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " solo,",
+            "startMs": 894,
+            "endMs": 1133,
+            "timestampMs": null,
+            "confidence": 0.641677,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " te",
+            "startMs": 1133,
+            "endMs": 1285,
+            "timestampMs": null,
+            "confidence": 0.942432,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " acuerdas.",
+            "startMs": 1285,
+            "endMs": 1696,
+            "timestampMs": null,
+            "confidence": 0.71636,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Cuando",
+            "startMs": 2143,
+            "endMs": 2473,
+            "timestampMs": null,
+            "confidence": 0.566447,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " son",
+            "startMs": 2473,
+            "endMs": 2672,
+            "timestampMs": null,
+            "confidence": 0.973853,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " cinco",
+            "startMs": 2672,
+            "endMs": 2959,
+            "timestampMs": null,
+            "confidence": 0.714677,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " abogados",
+            "startMs": 2959,
+            "endMs": 3378,
+            "timestampMs": null,
+            "confidence": 0.973909,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " con",
+            "startMs": 3378,
+            "endMs": 3576,
+            "timestampMs": null,
+            "confidence": 0.901602,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " 200",
+            "startMs": 3576,
+            "endMs": 3775,
+            "timestampMs": null,
+            "confidence": 0.92004,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " procesos,",
+            "startMs": 3775,
+            "endMs": 4194,
+            "timestampMs": null,
+            "confidence": 0.54528,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ya",
+            "startMs": 4194,
+            "endMs": 4348,
+            "timestampMs": null,
+            "confidence": 0.608989,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " casi",
+            "startMs": 4348,
+            "endMs": 4591,
+            "timestampMs": null,
+            "confidence": 0.89044,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " nadie",
+            "startMs": 4591,
+            "endMs": 4878,
+            "timestampMs": null,
+            "confidence": 0.999596,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " se",
+            "startMs": 4878,
+            "endMs": 5032,
+            "timestampMs": null,
+            "confidence": 0.988812,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " acuerda",
+            "startMs": 5032,
+            "endMs": 5406,
+            "timestampMs": null,
+            "confidence": 0.953886,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " de",
+            "startMs": 5406,
+            "endMs": 5561,
+            "timestampMs": null,
+            "confidence": 0.95659,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " nada.",
+            "startMs": 5561,
+            "endMs": 5804,
+            "timestampMs": null,
+            "confidence": 0.959035,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " En",
+            "startMs": 6250,
+            "endMs": 6420,
+            "timestampMs": null,
+            "confidence": 0.656103,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Trifuerza Legal,",
+            "startMs": 6420,
+            "endMs": 7246,
+            "timestampMs": null,
+            "confidence": 0.358978,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " cada",
+            "startMs": 7246,
+            "endMs": 7512,
+            "timestampMs": null,
+            "confidence": 0.98528,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " proceso",
+            "startMs": 7512,
+            "endMs": 7925,
+            "timestampMs": null,
+            "confidence": 0.994302,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tiene",
+            "startMs": 7925,
+            "endMs": 8241,
+            "timestampMs": null,
+            "confidence": 0.989655,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " un",
+            "startMs": 8241,
+            "endMs": 8411,
+            "timestampMs": null,
+            "confidence": 0.962461,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " responsable,",
+            "startMs": 8411,
+            "endMs": 9018,
+            "timestampMs": null,
+            "confidence": 0.609953,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " se",
+            "startMs": 9286,
+            "endMs": 9421,
+            "timestampMs": null,
+            "confidence": 0.964315,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ve",
+            "startMs": 9421,
+            "endMs": 9556,
+            "timestampMs": null,
+            "confidence": 0.992046,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " de",
+            "startMs": 9556,
+            "endMs": 9691,
+            "timestampMs": null,
+            "confidence": 0.996884,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " quién",
+            "startMs": 9691,
+            "endMs": 9942,
+            "timestampMs": null,
+            "confidence": 0.832328,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " es",
+            "startMs": 9942,
+            "endMs": 10077,
+            "timestampMs": null,
+            "confidence": 0.97879,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " y",
+            "startMs": 10077,
+            "endMs": 10174,
+            "timestampMs": null,
+            "confidence": 0.959704,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " desde",
+            "startMs": 10174,
+            "endMs": 10425,
+            "timestampMs": null,
+            "confidence": 0.960891,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " cuándo.",
+            "startMs": 10425,
+            "endMs": 10714,
+            "timestampMs": null,
+            "confidence": 0.843168,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " El",
+            "startMs": 11161,
+            "endMs": 11321,
+            "timestampMs": null,
+            "confidence": 0.947901,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " socio",
+            "startMs": 11321,
+            "endMs": 11619,
+            "timestampMs": null,
+            "confidence": 0.954911,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " o",
+            "startMs": 11619,
+            "endMs": 11733,
+            "timestampMs": null,
+            "confidence": 0.954221,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " el",
+            "startMs": 11733,
+            "endMs": 11894,
+            "timestampMs": null,
+            "confidence": 0.932867,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " trabajador",
+            "startMs": 11894,
+            "endMs": 12421,
+            "timestampMs": null,
+            "confidence": 0.99549,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " entra",
+            "startMs": 12421,
+            "endMs": 12719,
+            "timestampMs": null,
+            "confidence": 0.987568,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " y",
+            "startMs": 12719,
+            "endMs": 12833,
+            "timestampMs": null,
+            "confidence": 0.955748,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ve",
+            "startMs": 12833,
+            "endMs": 12994,
+            "timestampMs": null,
+            "confidence": 0.989664,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " la",
+            "startMs": 12994,
+            "endMs": 13154,
+            "timestampMs": null,
+            "confidence": 0.992869,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " carga",
+            "startMs": 13154,
+            "endMs": 13452,
+            "timestampMs": null,
+            "confidence": 0.98747,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " real",
+            "startMs": 13452,
+            "endMs": 13704,
+            "timestampMs": null,
+            "confidence": 0.907483,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " de",
+            "startMs": 13704,
+            "endMs": 13864,
+            "timestampMs": null,
+            "confidence": 0.971725,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " cada",
+            "startMs": 13864,
+            "endMs": 14116,
+            "timestampMs": null,
+            "confidence": 0.846211,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " uno,",
+            "startMs": 14116,
+            "endMs": 14322,
+            "timestampMs": null,
+            "confidence": 0.848132,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " no",
+            "startMs": 14322,
+            "endMs": 14482,
+            "timestampMs": null,
+            "confidence": 0.995353,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " lo",
+            "startMs": 14482,
+            "endMs": 14643,
+            "timestampMs": null,
+            "confidence": 0.978588,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 14911,
+            "endMs": 15118,
+            "timestampMs": null,
+            "confidence": 0.995232,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " cada",
+            "startMs": 15118,
+            "endMs": 15371,
+            "timestampMs": null,
+            "confidence": 0.984508,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " quien",
+            "startMs": 15371,
+            "endMs": 15670,
+            "timestampMs": null,
+            "confidence": 0.92951,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " dice",
+            "startMs": 15670,
+            "endMs": 15922,
+            "timestampMs": null,
+            "confidence": 0.990163,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 15922,
+            "endMs": 16129,
+            "timestampMs": null,
+            "confidence": 0.982186,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tiene,",
+            "startMs": 16129,
+            "endMs": 16429,
+            "timestampMs": null,
+            "confidence": 0.94823,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " lo",
+            "startMs": 16696,
+            "endMs": 16837,
+            "timestampMs": null,
+            "confidence": 0.979761,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 16837,
+            "endMs": 17017,
+            "timestampMs": null,
+            "confidence": 0.998822,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " efectivamente",
+            "startMs": 17017,
+            "endMs": 17597,
+            "timestampMs": null,
+            "confidence": 0.987375,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tiene.",
+            "startMs": 17597,
+            "endMs": 17857,
+            "timestampMs": null,
+            "confidence": 0.811566,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Y",
+            "startMs": 18393,
+            "endMs": 18490,
+            "timestampMs": null,
+            "confidence": 0.674456,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " esto",
+            "startMs": 18490,
+            "endMs": 18704,
+            "timestampMs": null,
+            "confidence": 0.959406,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " es",
+            "startMs": 18704,
+            "endMs": 18839,
+            "timestampMs": null,
+            "confidence": 0.921531,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " lo",
+            "startMs": 19018,
+            "endMs": 19186,
+            "timestampMs": null,
+            "confidence": 0.99456,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 19186,
+            "endMs": 19401,
+            "timestampMs": null,
+            "confidence": 0.98963,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " más",
+            "startMs": 19401,
+            "endMs": 19617,
+            "timestampMs": null,
+            "confidence": 0.993328,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " se",
+            "startMs": 19617,
+            "endMs": 19785,
+            "timestampMs": null,
+            "confidence": 0.998129,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " usa.",
+            "startMs": 19785,
+            "endMs": 20000,
+            "timestampMs": null,
+            "confidence": 0.657522,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Nadie",
+            "startMs": 20357,
+            "endMs": 20643,
+            "timestampMs": null,
+            "confidence": 0.923343,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " lo",
+            "startMs": 20643,
+            "endMs": 20797,
+            "timestampMs": null,
+            "confidence": 0.979118,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " pregunta",
+            "startMs": 20797,
+            "endMs": 21215,
+            "timestampMs": null,
+            "confidence": 0.986521,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " al",
+            "startMs": 21215,
+            "endMs": 21370,
+            "timestampMs": null,
+            "confidence": 0.985883,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " comprar",
+            "startMs": 21370,
+            "endMs": 21744,
+            "timestampMs": null,
+            "confidence": 0.988276,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " el",
+            "startMs": 21744,
+            "endMs": 21897,
+            "timestampMs": null,
+            "confidence": 0.7895,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " reporte",
+            "startMs": 21897,
+            "endMs": 22271,
+            "timestampMs": null,
+            "confidence": 0.978795,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 22271,
+            "endMs": 22470,
+            "timestampMs": null,
+            "confidence": 0.991594,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " le",
+            "startMs": 22470,
+            "endMs": 22624,
+            "timestampMs": null,
+            "confidence": 0.844186,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " mandas",
+            "startMs": 22624,
+            "endMs": 22954,
+            "timestampMs": null,
+            "confidence": 0.993006,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " al",
+            "startMs": 22954,
+            "endMs": 23108,
+            "timestampMs": null,
+            "confidence": 0.966475,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " cliente",
+            "startMs": 23108,
+            "endMs": 23482,
+            "timestampMs": null,
+            "confidence": 0.999051,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " sin",
+            "startMs": 23750,
+            "endMs": 23954,
+            "timestampMs": null,
+            "confidence": 0.679334,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " armarlo",
+            "startMs": 23954,
+            "endMs": 24341,
+            "timestampMs": null,
+            "confidence": 0.986754,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " a",
+            "startMs": 24341,
+            "endMs": 24454,
+            "timestampMs": null,
+            "confidence": 0.997052,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " mano",
+            "startMs": 24454,
+            "endMs": 24704,
+            "timestampMs": null,
+            "confidence": 0.993134,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " todos",
+            "startMs": 24704,
+            "endMs": 25000,
+            "timestampMs": null,
+            "confidence": 0.90017,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " los",
+            "startMs": 25357,
+            "endMs": 25612,
+            "timestampMs": null,
+            "confidence": 0.998353,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " meses.",
+            "startMs": 25612,
+            "endMs": 25982,
+            "timestampMs": null,
+            "confidence": 0.90379,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Un",
+            "startMs": 26518,
+            "endMs": 26690,
+            "timestampMs": null,
+            "confidence": 0.726471,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " solo",
+            "startMs": 26690,
+            "endMs": 26962,
+            "timestampMs": null,
+            "confidence": 0.9821,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " plan,",
+            "startMs": 26962,
+            "endMs": 27232,
+            "timestampMs": null,
+            "confidence": 0.831208,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " cinco",
+            "startMs": 27589,
+            "endMs": 27843,
+            "timestampMs": null,
+            "confidence": 0.799022,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " abogados,",
+            "startMs": 27843,
+            "endMs": 28214,
+            "timestampMs": null,
+            "confidence": 0.851465,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " monitoreo",
+            "startMs": 28482,
+            "endMs": 28941,
+            "timestampMs": null,
+            "confidence": 0.964446,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " judicial",
+            "startMs": 28941,
+            "endMs": 29356,
+            "timestampMs": null,
+            "confidence": 0.825158,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " automático",
+            "startMs": 29356,
+            "endMs": 29858,
+            "timestampMs": null,
+            "confidence": 0.989149,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " inmediatamente,",
+            "startMs": 29858,
+            "endMs": 30536,
+            "timestampMs": null,
+            "confidence": 0.689329,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " 200",
+            "startMs": 30982,
+            "endMs": 31269,
+            "timestampMs": null,
+            "confidence": 0.979103,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " procesos,",
+            "startMs": 31269,
+            "endMs": 31875,
+            "timestampMs": null,
+            "confidence": 0.86117,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " todo",
+            "startMs": 32232,
+            "endMs": 32463,
+            "timestampMs": null,
+            "confidence": 0.99768,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " habilitado,",
+            "startMs": 32463,
+            "endMs": 32946,
+            "timestampMs": null,
+            "confidence": 0.931703,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " todo",
+            "startMs": 33125,
+            "endMs": 33385,
+            "timestampMs": null,
+            "confidence": 0.996156,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " automático.",
+            "startMs": 33385,
+            "endMs": 33929,
+            "timestampMs": null,
+            "confidence": 0.726415,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Tu",
+            "startMs": 34107,
+            "endMs": 34295,
+            "timestampMs": null,
+            "confidence": 0.384945,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " firma,",
+            "startMs": 34295,
+            "endMs": 34643,
+            "timestampMs": null,
+            "confidence": 0.757816,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " bienvenida",
+            "startMs": 35000,
+            "endMs": 35621,
+            "timestampMs": null,
+            "confidence": 0.974516,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " al",
+            "startMs": 35621,
+            "endMs": 35811,
+            "timestampMs": null,
+            "confidence": 0.993115,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " mundo",
+            "startMs": 35811,
+            "endMs": 36162,
+            "timestampMs": null,
+            "confidence": 0.997406,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " del",
+            "startMs": 36162,
+            "endMs": 36405,
+            "timestampMs": null,
+            "confidence": 0.895217,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " legal",
+            "startMs": 36405,
+            "endMs": 36756,
+            "timestampMs": null,
+            "confidence": 0.415887,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tech.",
+            "startMs": 36756,
+            "endMs": 37054,
+            "timestampMs": null,
+            "confidence": 0.788414,
+            "parte": "cuerpo"
+          }
+        ],
+        "cuerpoInicioMs": 0,
+        "cuerpoRecorteMs": 0,
+        "cierreInicioMs": null,
+        "duracionMs": 37330
+      }
+    },
+    "cuerpoMs": 37330,
+    "descartadas": [],
+    "texto": [
+      "Cuando eres tú solo, te acuerdas. Cuando son cinco abogados con 200 procesos, ya casi nadie se acuerda de nada.",
+      "En trifuerza legal, cada proceso tiene un responsable, se ve de quién es y desde cuándo. El socio o el trabajador entra y ve la carga real de cada uno, no lo que cada quien dice que tiene, lo que efectivamente tiene. Y esto es lo que más se usa. Nadie lo pregunta al comprar el reporte que le mandas al cliente sin armarlo a mano todos los meses. Un solo plan, cinco abogados, monitoreo judicial automático inmediatamente, 200 procesos, todo habilitado, todo automático. Tu firma, bienvenida al mundo del legal tech."
+    ],
+    "avisos": [
+      "trifuerza: sin cierre grabado disponible"
+    ]
+  }
+}

@@ -1,0 +1,1490 @@
+{
+  "plantilla": "Montaje",
+  "tipo": "cuerpo",
+  "sinCierre": true,
+  "lowerThird": "Abogado, desarrollador y profesor universitario",
+  "correcciones": [
+    {
+      "de": "Banegas",
+      "a": "Vanegas"
+    },
+    {
+      "de": "TriFuerza",
+      "a": "Trifuerza"
+    },
+    {
+      "de": "contracto",
+      "a": "Contrappto"
+    },
+    {
+      "de": "Contrapto",
+      "a": "Contrappto"
+    },
+    {
+      "de": "cuentas de cobre",
+      "a": "cuentas de cobro"
+    },
+    {
+      "de": "cuentas de cobra",
+      "a": "cuentas de cobro"
+    },
+    {
+      "de": "lételo",
+      "a": "léetelo"
+    },
+    {
+      "de": "Que historia",
+      "a": "Qué historia"
+    },
+    {
+      "de": "de\"nunca",
+      "a": "de \"nunca"
+    }
+  ],
+  "slug": "x05-control-freddy-vega",
+  "codigo": "X05",
+  "titulo": "Me leí Control, de Freddy Vega",
+  "tono": "energico",
+  "cuentas": [
+    "juanda"
+  ],
+  "cuerpo": {
+    "archivo": "copy_B7C9132C-7477-4EED-A34F-6F608899DF25.mov"
+  },
+  "resaltar": [
+    "Control",
+    "Platzi",
+    "aprender",
+    "resiliencia",
+    "riqueza",
+    "prosperidad"
+  ],
+  "verificar": [
+    {
+      "dato": "Control es el libro de Freddy Vega, fundador de Platzi",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Platzi: \"la startup más importante de Latinoamérica\" (opinión, no dato)",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Mención de un tercero (Platzi / Freddy Vega): decisión de Juan David de publicarlo",
+      "estado": "aprobado"
+    }
+  ],
+  "generado": {
+    "beats": [
+      {
+        "tipo": "escena",
+        "escena": "medio",
+        "en": "Control",
+        "hasta": "No solamente",
+        "items": [
+          {
+            "foto": "broll/2026-10/img_3423.jpg",
+            "vertical": true,
+            "pie": "Control · Freddy Vega",
+            "icono": "BookOpen",
+            "en": "Control"
+          }
+        ],
+        "inicioMs": 528,
+        "finMs": 2411,
+        "itemsCuadros": [
+          7
+        ]
+      },
+      {
+        "tipo": "escena",
+        "escena": "medio",
+        "en": "startups",
+        "hasta": "a la cual",
+        "items": [
+          {
+            "clip": "broll/2026-10/img_3425.mp4",
+            "vertical": true,
+            "pie": "PlatziConf Bogotá",
+            "icono": "MapPin",
+            "en": "startups"
+          },
+          {
+            "foto": "broll/2026-10/img_3378.jpg",
+            "vertical": true,
+            "pie": "Latinoamérica",
+            "en": "Latinoamérica"
+          }
+        ],
+        "inicioMs": 7819,
+        "finMs": 12054,
+        "itemsCuadros": [
+          7,
+          106
+        ]
+      },
+      {
+        "tipo": "escena",
+        "escena": "medio",
+        "en": "filosofía",
+        "hasta": "Freddy",
+        "items": [
+          {
+            "foto": "broll/2026-10/img_3433.jpg",
+            "pie": "Nunca pares de aprender",
+            "icono": "GraduationCap",
+            "en": "filosofía"
+          }
+        ],
+        "inicioMs": 16138,
+        "finMs": 18304,
+        "itemsCuadros": [
+          7
+        ]
+      },
+      {
+        "tipo": "escena",
+        "escena": "medio",
+        "en": "firmaste",
+        "hasta": "De verdad",
+        "items": [
+          {
+            "foto": "broll/2026-10/img_3420.jpg",
+            "vertical": true,
+            "pie": "Me lo firmó en la PlatziConf",
+            "icono": "PenLine",
+            "en": "firmaste",
+            "foco": "50% 40%"
+          },
+          {
+            "foto": "broll/2026-10/img_3423.jpg",
+            "vertical": true,
+            "pie": "\"Gracias Juan David!\"",
+            "en": "PlatziConf"
+          }
+        ],
+        "inicioMs": 19538,
+        "finMs": 21384,
+        "itemsCuadros": [
+          7,
+          47
+        ]
+      },
+      {
+        "tipo": "escena",
+        "escena": "medio",
+        "en": "entrar",
+        "hasta": "Que historia",
+        "items": [
+          {
+            "clip": "broll/2026-10/img_3381.mp4",
+            "vertical": true,
+            "pie": "Platzi",
+            "icono": "Code",
+            "en": "entrar"
+          }
+        ],
+        "inicioMs": 28771,
+        "finMs": 31771,
+        "itemsCuadros": [
+          7
+        ]
+      },
+      {
+        "tipo": "escena",
+        "escena": "medio",
+        "en": "adaptaciones",
+        "hasta": "Además",
+        "items": [
+          {
+            "clip": "broll/2026-10/img_3403.mp4",
+            "vertical": true,
+            "pie": "Adaptarse a nuevos contextos",
+            "icono": "Bot",
+            "en": "adaptaciones"
+          }
+        ],
+        "inicioMs": 37722,
+        "finMs": 39375,
+        "itemsCuadros": [
+          7
+        ]
+      },
+      {
+        "tipo": "escena",
+        "escena": "medio",
+        "en": "riqueza",
+        "hasta": "Si aún",
+        "items": [
+          {
+            "foto": "broll/2026-10/img_3434.jpg",
+            "pie": "Riqueza y prosperidad",
+            "icono": "TrendingUp",
+            "en": "riqueza"
+          }
+        ],
+        "inicioMs": 42589,
+        "finMs": 44554,
+        "itemsCuadros": [
+          7
+        ]
+      }
+    ],
+    "montajes": {
+      "juanda": {
+        "segmentos": [
+          {
+            "desde": 0.694,
+            "hasta": 20.994,
+            "archivo": "limpios/2026-10/copy_B7C9132C-7477-4EED-A34F-6F608899DF25.mp4",
+            "parte": "cuerpo",
+            "velocidad": 1.12
+          },
+          {
+            "desde": 21.394,
+            "hasta": 53.444,
+            "archivo": "limpios/2026-10/copy_B7C9132C-7477-4EED-A34F-6F608899DF25.mp4",
+            "parte": "cuerpo",
+            "velocidad": 1.12
+          }
+        ],
+        "subtitulos": [
+          {
+            "text": " Me",
+            "startMs": 179,
+            "endMs": 331,
+            "timestampMs": null,
+            "confidence": 0.478576,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " leí",
+            "startMs": 331,
+            "endMs": 528,
+            "timestampMs": null,
+            "confidence": 0.778859,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Control,",
+            "startMs": 528,
+            "endMs": 898,
+            "timestampMs": null,
+            "confidence": 0.305766,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " el",
+            "startMs": 898,
+            "endMs": 1051,
+            "timestampMs": null,
+            "confidence": 0.958218,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " libro",
+            "startMs": 1051,
+            "endMs": 1334,
+            "timestampMs": null,
+            "confidence": 0.992943,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " de",
+            "startMs": 1334,
+            "endMs": 1487,
+            "timestampMs": null,
+            "confidence": 0.984166,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Freddy",
+            "startMs": 1487,
+            "endMs": 1813,
+            "timestampMs": null,
+            "confidence": 0.758454,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Vega.",
+            "startMs": 1813,
+            "endMs": 2054,
+            "timestampMs": null,
+            "confidence": 0.644594,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " No",
+            "startMs": 2411,
+            "endMs": 2625,
+            "timestampMs": null,
+            "confidence": 0.679346,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " solamente",
+            "startMs": 2625,
+            "endMs": 3268,
+            "timestampMs": null,
+            "confidence": 0.719094,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " es",
+            "startMs": 3268,
+            "endMs": 3482,
+            "timestampMs": null,
+            "confidence": 0.961659,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " apasionante",
+            "startMs": 3839,
+            "endMs": 4417,
+            "timestampMs": null,
+            "confidence": 0.986498,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " entender",
+            "startMs": 4417,
+            "endMs": 4856,
+            "timestampMs": null,
+            "confidence": 0.951415,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " cómo",
+            "startMs": 4856,
+            "endMs": 5111,
+            "timestampMs": null,
+            "confidence": 0.534391,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " el",
+            "startMs": 5111,
+            "endMs": 5272,
+            "timestampMs": null,
+            "confidence": 0.99612,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " founder",
+            "startMs": 5272,
+            "endMs": 5666,
+            "timestampMs": null,
+            "confidence": 0.938389,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " de",
+            "startMs": 5666,
+            "endMs": 5828,
+            "timestampMs": null,
+            "confidence": 0.973556,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Platzi",
+            "startMs": 5828,
+            "endMs": 6174,
+            "timestampMs": null,
+            "confidence": 0.950207,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " creó",
+            "startMs": 6174,
+            "endMs": 6429,
+            "timestampMs": null,
+            "confidence": 0.828021,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " una",
+            "startMs": 6607,
+            "endMs": 7054,
+            "timestampMs": null,
+            "confidence": 0.893203,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " de",
+            "startMs": 7411,
+            "endMs": 7589,
+            "timestampMs": null,
+            "confidence": 0.989332,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " las",
+            "startMs": 7589,
+            "endMs": 7819,
+            "timestampMs": null,
+            "confidence": 0.988093,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " startups",
+            "startMs": 7819,
+            "endMs": 8304,
+            "timestampMs": null,
+            "confidence": 0.94776,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " más",
+            "startMs": 8571,
+            "endMs": 8775,
+            "timestampMs": null,
+            "confidence": 0.930822,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " importantes",
+            "startMs": 8775,
+            "endMs": 9341,
+            "timestampMs": null,
+            "confidence": 0.982943,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " del",
+            "startMs": 9341,
+            "endMs": 9545,
+            "timestampMs": null,
+            "confidence": 0.950574,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " mundo,",
+            "startMs": 9545,
+            "endMs": 9839,
+            "timestampMs": null,
+            "confidence": 0.811654,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " sino",
+            "startMs": 9839,
+            "endMs": 10088,
+            "timestampMs": null,
+            "confidence": 0.843752,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " la",
+            "startMs": 10088,
+            "endMs": 10246,
+            "timestampMs": null,
+            "confidence": 0.94146,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " más",
+            "startMs": 10246,
+            "endMs": 10450,
+            "timestampMs": null,
+            "confidence": 0.980219,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " importante",
+            "startMs": 10450,
+            "endMs": 10971,
+            "timestampMs": null,
+            "confidence": 0.873709,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " de",
+            "startMs": 10971,
+            "endMs": 11129,
+            "timestampMs": null,
+            "confidence": 0.975346,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Latinoamérica,",
+            "startMs": 11129,
+            "endMs": 11786,
+            "timestampMs": null,
+            "confidence": 0.662805,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " a",
+            "startMs": 12054,
+            "endMs": 12167,
+            "timestampMs": null,
+            "confidence": 0.958135,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " la",
+            "startMs": 12167,
+            "endMs": 12326,
+            "timestampMs": null,
+            "confidence": 0.993661,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " cual",
+            "startMs": 12326,
+            "endMs": 12575,
+            "timestampMs": null,
+            "confidence": 0.978148,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " como",
+            "startMs": 12575,
+            "endMs": 12825,
+            "timestampMs": null,
+            "confidence": 0.534146,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " profesor",
+            "startMs": 12825,
+            "endMs": 13256,
+            "timestampMs": null,
+            "confidence": 0.992619,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " universitario",
+            "startMs": 13256,
+            "endMs": 13914,
+            "timestampMs": null,
+            "confidence": 0.987293,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " constantemente",
+            "startMs": 13914,
+            "endMs": 14617,
+            "timestampMs": null,
+            "confidence": 0.553635,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " les",
+            "startMs": 14617,
+            "endMs": 14821,
+            "timestampMs": null,
+            "confidence": 0.933029,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " estoy",
+            "startMs": 15089,
+            "endMs": 15379,
+            "timestampMs": null,
+            "confidence": 0.987119,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " compartiendo",
+            "startMs": 15379,
+            "endMs": 15982,
+            "timestampMs": null,
+            "confidence": 0.936938,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " la",
+            "startMs": 15982,
+            "endMs": 16138,
+            "timestampMs": null,
+            "confidence": 0.98414,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " filosofía",
+            "startMs": 16138,
+            "endMs": 16607,
+            "timestampMs": null,
+            "confidence": 0.996955,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " de \"nunca",
+            "startMs": 16607,
+            "endMs": 16987,
+            "timestampMs": null,
+            "confidence": 0.515993,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " pares",
+            "startMs": 16987,
+            "endMs": 17277,
+            "timestampMs": null,
+            "confidence": 0.973379,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " de",
+            "startMs": 17277,
+            "endMs": 17433,
+            "timestampMs": null,
+            "confidence": 0.944278,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " aprender\".",
+            "startMs": 17433,
+            "endMs": 17857,
+            "timestampMs": null,
+            "confidence": 0.869297,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Freddy",
+            "startMs": 18304,
+            "endMs": 18648,
+            "timestampMs": null,
+            "confidence": 0.286513,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Vega,",
+            "startMs": 18648,
+            "endMs": 18901,
+            "timestampMs": null,
+            "confidence": 0.810076,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " wow,",
+            "startMs": 18901,
+            "endMs": 19107,
+            "timestampMs": null,
+            "confidence": 0.410049,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " me",
+            "startMs": 19375,
+            "endMs": 19538,
+            "timestampMs": null,
+            "confidence": 0.915093,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " firmaste",
+            "startMs": 19538,
+            "endMs": 19980,
+            "timestampMs": null,
+            "confidence": 0.981201,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " el",
+            "startMs": 19980,
+            "endMs": 20144,
+            "timestampMs": null,
+            "confidence": 0.948093,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " libro",
+            "startMs": 20144,
+            "endMs": 20446,
+            "timestampMs": null,
+            "confidence": 0.995376,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " en",
+            "startMs": 20714,
+            "endMs": 20871,
+            "timestampMs": null,
+            "confidence": 0.495774,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " PlatziConf.",
+            "startMs": 20871,
+            "endMs": 21384,
+            "timestampMs": null,
+            "confidence": 0.324343,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " De",
+            "startMs": 21384,
+            "endMs": 21540,
+            "timestampMs": null,
+            "confidence": 0.806966,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " verdad,",
+            "startMs": 21540,
+            "endMs": 21875,
+            "timestampMs": null,
+            "confidence": 0.662762,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " he",
+            "startMs": 22232,
+            "endMs": 22344,
+            "timestampMs": null,
+            "confidence": 0.969361,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " aprendido",
+            "startMs": 22344,
+            "endMs": 22679,
+            "timestampMs": null,
+            "confidence": 0.998222,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tanto",
+            "startMs": 23125,
+            "endMs": 23404,
+            "timestampMs": null,
+            "confidence": 0.984902,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " de",
+            "startMs": 23404,
+            "endMs": 23554,
+            "timestampMs": null,
+            "confidence": 0.987792,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Platzi",
+            "startMs": 23554,
+            "endMs": 23876,
+            "timestampMs": null,
+            "confidence": 0.99048,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " y",
+            "startMs": 23876,
+            "endMs": 23984,
+            "timestampMs": null,
+            "confidence": 0.71099,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " he",
+            "startMs": 23984,
+            "endMs": 24134,
+            "timestampMs": null,
+            "confidence": 0.540756,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " aprendido",
+            "startMs": 24134,
+            "endMs": 24585,
+            "timestampMs": null,
+            "confidence": 0.997788,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tanto",
+            "startMs": 24585,
+            "endMs": 24863,
+            "timestampMs": null,
+            "confidence": 0.980411,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " de",
+            "startMs": 24863,
+            "endMs": 25013,
+            "timestampMs": null,
+            "confidence": 0.995121,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ti",
+            "startMs": 25013,
+            "endMs": 25164,
+            "timestampMs": null,
+            "confidence": 0.958972,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 25164,
+            "endMs": 25357,
+            "timestampMs": null,
+            "confidence": 0.592725,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " quisiera",
+            "startMs": 25804,
+            "endMs": 25986,
+            "timestampMs": null,
+            "confidence": 0.974675,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 25986,
+            "endMs": 26071,
+            "timestampMs": null,
+            "confidence": 0.999291,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " todo",
+            "startMs": 26250,
+            "endMs": 26461,
+            "timestampMs": null,
+            "confidence": 0.982056,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " el",
+            "startMs": 26461,
+            "endMs": 26595,
+            "timestampMs": null,
+            "confidence": 0.991083,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " mundo",
+            "startMs": 26595,
+            "endMs": 26843,
+            "timestampMs": null,
+            "confidence": 0.999763,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " de",
+            "startMs": 26843,
+            "endMs": 26977,
+            "timestampMs": null,
+            "confidence": 0.650054,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " verdad",
+            "startMs": 26977,
+            "endMs": 27264,
+            "timestampMs": null,
+            "confidence": 0.999573,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tuviera",
+            "startMs": 27264,
+            "endMs": 27589,
+            "timestampMs": null,
+            "confidence": 0.979094,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " la",
+            "startMs": 27946,
+            "endMs": 28095,
+            "timestampMs": null,
+            "confidence": 0.99235,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " oportunidad",
+            "startMs": 28095,
+            "endMs": 28622,
+            "timestampMs": null,
+            "confidence": 0.997409,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " de",
+            "startMs": 28622,
+            "endMs": 28771,
+            "timestampMs": null,
+            "confidence": 0.988346,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " entrar",
+            "startMs": 28771,
+            "endMs": 29088,
+            "timestampMs": null,
+            "confidence": 0.996322,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " a",
+            "startMs": 29088,
+            "endMs": 29193,
+            "timestampMs": null,
+            "confidence": 0.961373,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Platzi",
+            "startMs": 29193,
+            "endMs": 29510,
+            "timestampMs": null,
+            "confidence": 0.995108,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " y",
+            "startMs": 29510,
+            "endMs": 29615,
+            "timestampMs": null,
+            "confidence": 0.953697,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " además",
+            "startMs": 29615,
+            "endMs": 29932,
+            "timestampMs": null,
+            "confidence": 0.91302,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " leyeran",
+            "startMs": 29932,
+            "endMs": 30292,
+            "timestampMs": null,
+            "confidence": 0.483175,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tu",
+            "startMs": 30292,
+            "endMs": 30439,
+            "timestampMs": null,
+            "confidence": 0.9855,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " libro.",
+            "startMs": 30439,
+            "endMs": 30714,
+            "timestampMs": null,
+            "confidence": 0.871354,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Qué historia",
+            "startMs": 30982,
+            "endMs": 31607,
+            "timestampMs": null,
+            "confidence": 0.49771,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " de",
+            "startMs": 31607,
+            "endMs": 31763,
+            "timestampMs": null,
+            "confidence": 0.996516,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " vida",
+            "startMs": 31763,
+            "endMs": 32009,
+            "timestampMs": null,
+            "confidence": 0.999123,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tan",
+            "startMs": 32009,
+            "endMs": 32210,
+            "timestampMs": null,
+            "confidence": 0.989532,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " apasionante,",
+            "startMs": 32210,
+            "endMs": 32768,
+            "timestampMs": null,
+            "confidence": 0.760161,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " cargada",
+            "startMs": 33036,
+            "endMs": 33407,
+            "timestampMs": null,
+            "confidence": 0.914759,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " de",
+            "startMs": 33407,
+            "endMs": 33560,
+            "timestampMs": null,
+            "confidence": 0.996717,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " obstáculos,",
+            "startMs": 33560,
+            "endMs": 34062,
+            "timestampMs": null,
+            "confidence": 0.976775,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " cargado",
+            "startMs": 34062,
+            "endMs": 34432,
+            "timestampMs": null,
+            "confidence": 0.716057,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " de",
+            "startMs": 34432,
+            "endMs": 34586,
+            "timestampMs": null,
+            "confidence": 0.996808,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " metas,",
+            "startMs": 34586,
+            "endMs": 34869,
+            "timestampMs": null,
+            "confidence": 0.982482,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " cargado",
+            "startMs": 34869,
+            "endMs": 35240,
+            "timestampMs": null,
+            "confidence": 0.988216,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " de",
+            "startMs": 35240,
+            "endMs": 35393,
+            "timestampMs": null,
+            "confidence": 0.999382,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " aprendizajes,",
+            "startMs": 35393,
+            "endMs": 35982,
+            "timestampMs": null,
+            "confidence": 0.956379,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " cargado",
+            "startMs": 36161,
+            "endMs": 36595,
+            "timestampMs": null,
+            "confidence": 0.996892,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " de",
+            "startMs": 36595,
+            "endMs": 36773,
+            "timestampMs": null,
+            "confidence": 0.998521,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " resiliencia,",
+            "startMs": 36773,
+            "endMs": 37411,
+            "timestampMs": null,
+            "confidence": 0.766455,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " de",
+            "startMs": 37589,
+            "endMs": 37722,
+            "timestampMs": null,
+            "confidence": 0.956287,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " adaptaciones",
+            "startMs": 37722,
+            "endMs": 38237,
+            "timestampMs": null,
+            "confidence": 0.993843,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " a",
+            "startMs": 38237,
+            "endMs": 38332,
+            "timestampMs": null,
+            "confidence": 0.996379,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " nuevos",
+            "startMs": 38332,
+            "endMs": 38618,
+            "timestampMs": null,
+            "confidence": 0.993384,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " contextos.",
+            "startMs": 38618,
+            "endMs": 39018,
+            "timestampMs": null,
+            "confidence": 0.710913,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Además",
+            "startMs": 39375,
+            "endMs": 39691,
+            "timestampMs": null,
+            "confidence": 0.947393,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " nos",
+            "startMs": 39691,
+            "endMs": 39880,
+            "timestampMs": null,
+            "confidence": 0.995881,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " da",
+            "startMs": 39880,
+            "endMs": 40028,
+            "timestampMs": null,
+            "confidence": 0.972129,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " unos",
+            "startMs": 40028,
+            "endMs": 40259,
+            "timestampMs": null,
+            "confidence": 0.996335,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " datos",
+            "startMs": 40259,
+            "endMs": 40532,
+            "timestampMs": null,
+            "confidence": 0.996586,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " importantísimos",
+            "startMs": 40532,
+            "endMs": 41227,
+            "timestampMs": null,
+            "confidence": 0.958954,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " sobre",
+            "startMs": 41227,
+            "endMs": 41501,
+            "timestampMs": null,
+            "confidence": 0.984545,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " cómo",
+            "startMs": 41501,
+            "endMs": 41732,
+            "timestampMs": null,
+            "confidence": 0.970558,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " conseguir",
+            "startMs": 41732,
+            "endMs": 42174,
+            "timestampMs": null,
+            "confidence": 0.995661,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " la",
+            "startMs": 42174,
+            "endMs": 42321,
+            "timestampMs": null,
+            "confidence": 0.972123,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " riqueza,",
+            "startMs": 42589,
+            "endMs": 42959,
+            "timestampMs": null,
+            "confidence": 0.969677,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " cómo",
+            "startMs": 42959,
+            "endMs": 43197,
+            "timestampMs": null,
+            "confidence": 0.909103,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " conseguir",
+            "startMs": 43197,
+            "endMs": 43654,
+            "timestampMs": null,
+            "confidence": 0.994099,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " prosperidad.",
+            "startMs": 43654,
+            "endMs": 44196,
+            "timestampMs": null,
+            "confidence": 0.904994,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Si",
+            "startMs": 44554,
+            "endMs": 44680,
+            "timestampMs": null,
+            "confidence": 0.9652,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " aún",
+            "startMs": 44680,
+            "endMs": 44844,
+            "timestampMs": null,
+            "confidence": 0.934766,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " no",
+            "startMs": 44844,
+            "endMs": 44971,
+            "timestampMs": null,
+            "confidence": 0.997946,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " te",
+            "startMs": 44971,
+            "endMs": 45098,
+            "timestampMs": null,
+            "confidence": 0.913924,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " lo",
+            "startMs": 45098,
+            "endMs": 45226,
+            "timestampMs": null,
+            "confidence": 0.978655,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " has",
+            "startMs": 45226,
+            "endMs": 45389,
+            "timestampMs": null,
+            "confidence": 0.987069,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " leído,",
+            "startMs": 45389,
+            "endMs": 45625,
+            "timestampMs": null,
+            "confidence": 0.941178,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " léetelo",
+            "startMs": 45804,
+            "endMs": 46229,
+            "timestampMs": null,
+            "confidence": 0.882287,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ya.",
+            "startMs": 46229,
+            "endMs": 46429,
+            "timestampMs": null,
+            "confidence": 0.954913,
+            "parte": "cuerpo"
+          }
+        ],
+        "cuerpoInicioMs": 0,
+        "cuerpoRecorteMs": 0,
+        "cierreInicioMs": null,
+        "duracionMs": 46741
+      }
+    },
+    "cuerpoMs": 46741,
+    "descartadas": [],
+    "texto": [
+      "Me leí Control, el libro de Freddy Vega. No solamente es apasionante entender cómo el founder de Platzi creó una de las startups más importantes del mundo, sino la más importante de Latinoamérica, a la cual como profesor universitario constantemente les estoy compartiendo la filosofía de\"nunca pares de aprender\". Freddy Vega, wow, me firmaste el libro en PlatziConf. De verdad, he aprendido tanto de Platzi y he aprendido tanto de ti que quisiera que todo el mundo de verdad tuviera la oportunidad de entrar a Platzi y además leyeran tu libro. Que historia de vida tan apasionante, cargada de obstáculos, cargado de metas, cargado de aprendizajes, cargado de resiliencia, de adaptaciones a nuevos contextos. Además nos da unos datos importantísimos sobre cómo conseguir la riqueza, cómo conseguir prosperidad. Si aún no te lo has leído, lételo ya."
+    ],
+    "avisos": []
+  },
+  "beats": [
+    {
+      "tipo": "escena",
+      "escena": "medio",
+      "en": "Control",
+      "hasta": "No solamente",
+      "items": [
+        {
+          "foto": "broll/2026-10/img_3423.jpg",
+          "vertical": true,
+          "pie": "Control · Freddy Vega",
+          "icono": "BookOpen",
+          "en": "Control"
+        }
+      ]
+    },
+    {
+      "tipo": "escena",
+      "escena": "medio",
+      "en": "startups",
+      "hasta": "a la cual",
+      "items": [
+        {
+          "clip": "broll/2026-10/img_3425.mp4",
+          "vertical": true,
+          "pie": "PlatziConf Bogotá",
+          "icono": "MapPin",
+          "en": "startups"
+        },
+        {
+          "foto": "broll/2026-10/img_3378.jpg",
+          "vertical": true,
+          "pie": "Latinoamérica",
+          "en": "Latinoamérica"
+        }
+      ]
+    },
+    {
+      "tipo": "escena",
+      "escena": "medio",
+      "en": "filosofía",
+      "hasta": "Freddy",
+      "items": [
+        {
+          "foto": "broll/2026-10/img_3433.jpg",
+          "pie": "Nunca pares de aprender",
+          "icono": "GraduationCap",
+          "en": "filosofía"
+        }
+      ]
+    },
+    {
+      "tipo": "escena",
+      "escena": "medio",
+      "en": "firmaste",
+      "hasta": "De verdad",
+      "items": [
+        {
+          "foto": "broll/2026-10/img_3420.jpg",
+          "vertical": true,
+          "pie": "Me lo firmó en la PlatziConf",
+          "icono": "PenLine",
+          "en": "firmaste",
+          "foco": "50% 40%"
+        },
+        {
+          "foto": "broll/2026-10/img_3423.jpg",
+          "vertical": true,
+          "pie": "\"Gracias Juan David!\"",
+          "en": "PlatziConf"
+        }
+      ]
+    },
+    {
+      "tipo": "escena",
+      "escena": "medio",
+      "en": "entrar",
+      "hasta": "Que historia",
+      "items": [
+        {
+          "clip": "broll/2026-10/img_3381.mp4",
+          "vertical": true,
+          "pie": "Platzi",
+          "icono": "Code",
+          "en": "entrar"
+        }
+      ]
+    },
+    {
+      "tipo": "escena",
+      "escena": "medio",
+      "en": "adaptaciones",
+      "hasta": "Además",
+      "items": [
+        {
+          "clip": "broll/2026-10/img_3403.mp4",
+          "vertical": true,
+          "pie": "Adaptarse a nuevos contextos",
+          "icono": "Bot",
+          "en": "adaptaciones"
+        }
+      ]
+    },
+    {
+      "tipo": "escena",
+      "escena": "medio",
+      "en": "riqueza",
+      "hasta": "Si aún",
+      "items": [
+        {
+          "foto": "broll/2026-10/img_3434.jpg",
+          "pie": "Riqueza y prosperidad",
+          "icono": "TrendingUp",
+          "en": "riqueza"
+        }
+      ]
+    }
+  ],
+  "golpes": [
+    {
+      "en": "apasionante",
+      "estilo": "serif"
+    },
+    {
+      "en": "resiliencia",
+      "estilo": "golpe"
+    },
+    {
+      "en": "léetelo",
+      "estilo": "pastilla"
+    }
+  ],
+  "variantes": {
+    "juanda": {
+      "cta": null
+    }
+  }
+}

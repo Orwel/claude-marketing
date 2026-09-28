@@ -1,0 +1,223 @@
+{
+  "plantilla": "Montaje",
+  "tipo": "cuerpo",
+  "sinCierre": true,
+  "correcciones": [
+    {
+      "de": "Banegas",
+      "a": "Vanegas"
+    },
+    {
+      "de": "TriFuerza",
+      "a": "Trifuerza"
+    },
+    {
+      "de": "contracto",
+      "a": "Contrappto"
+    },
+    {
+      "de": "Contrapto",
+      "a": "Contrappto"
+    },
+    {
+      "de": "cuentas de cobre",
+      "a": "cuentas de cobro"
+    },
+    {
+      "de": "cuentas de cobra",
+      "a": "cuentas de cobro"
+    }
+  ],
+  "slug": "ctp-flujos",
+  "codigo": "CTP_FLU",
+  "titulo": "Mejora tus flujos contractuales",
+  "tono": "tension",
+  "cuentas": [
+    "contrappto"
+  ],
+  "cuerpo": {
+    "archivo": "copy_55BF2926-DF5C-49C1-B47A-D1E3E1CBC4E0.mov"
+  },
+  "resaltar": [
+    "flujos",
+    "escríbeme"
+  ],
+  "verificar": [],
+  "generado": {
+    "beats": [
+      {
+        "tipo": "escena",
+        "escena": "pasos",
+        "en": "mejorar",
+        "hasta": "",
+        "dura": 4.5,
+        "ventana": "Contrappto · ciclo de vida",
+        "paso": 20,
+        "items": [
+          {
+            "texto": "Creación",
+            "icono": "FilePlus"
+          },
+          {
+            "texto": "Firma",
+            "icono": "PenLine"
+          },
+          {
+            "texto": "Ejecución",
+            "icono": "Activity"
+          },
+          {
+            "texto": "Finalizado",
+            "icono": "CircleCheck"
+          }
+        ],
+        "inicioMs": 1539,
+        "finMs": 6039
+      }
+    ],
+    "montajes": {
+      "contrappto": {
+        "segmentos": [
+          {
+            "desde": 1.283,
+            "hasta": 5.283,
+            "archivo": "limpios/2026-10/copy_55BF2926-DF5C-49C1-B47A-D1E3E1CBC4E0.mp4",
+            "parte": "cuerpo",
+            "velocidad": 1.12
+          },
+          {
+            "desde": 5.483,
+            "hasta": 6.653,
+            "archivo": "limpios/2026-10/copy_55BF2926-DF5C-49C1-B47A-D1E3E1CBC4E0.mp4",
+            "parte": "cuerpo",
+            "velocidad": 1.12
+          }
+        ],
+        "subtitulos": [
+          {
+            "text": " Si",
+            "startMs": 179,
+            "endMs": 355,
+            "timestampMs": null,
+            "confidence": 0.654042,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " sientes",
+            "startMs": 355,
+            "endMs": 783,
+            "timestampMs": null,
+            "confidence": 0.936006,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 783,
+            "endMs": 1010,
+            "timestampMs": null,
+            "confidence": 0.982077,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " necesitas",
+            "startMs": 1010,
+            "endMs": 1539,
+            "timestampMs": null,
+            "confidence": 0.991384,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " mejorar",
+            "startMs": 1539,
+            "endMs": 1968,
+            "timestampMs": null,
+            "confidence": 0.983595,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tus",
+            "startMs": 1968,
+            "endMs": 2195,
+            "timestampMs": null,
+            "confidence": 0.965499,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " flujos",
+            "startMs": 2195,
+            "endMs": 2572,
+            "timestampMs": null,
+            "confidence": 0.96274,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " contractuales,",
+            "startMs": 2572,
+            "endMs": 3304,
+            "timestampMs": null,
+            "confidence": 0.821731,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " escríbeme.",
+            "startMs": 3750,
+            "endMs": 4196,
+            "timestampMs": null,
+            "confidence": 0.642996,
+            "parte": "cuerpo"
+          }
+        ],
+        "cuerpoInicioMs": 0,
+        "cuerpoRecorteMs": 0,
+        "cierreInicioMs": null,
+        "duracionMs": 4616
+      }
+    },
+    "cuerpoMs": 4616,
+    "descartadas": [],
+    "texto": [
+      "Si sientes que necesitas mejorar tus flujos contractuales, escríbeme."
+    ],
+    "avisos": []
+  },
+  "beats": [
+    {
+      "tipo": "escena",
+      "escena": "pasos",
+      "en": "mejorar",
+      "hasta": "",
+      "dura": 4.5,
+      "ventana": "Contrappto · ciclo de vida",
+      "paso": 20,
+      "items": [
+        {
+          "texto": "Creación",
+          "icono": "FilePlus"
+        },
+        {
+          "texto": "Firma",
+          "icono": "PenLine"
+        },
+        {
+          "texto": "Ejecución",
+          "icono": "Activity"
+        },
+        {
+          "texto": "Finalizado",
+          "icono": "CircleCheck"
+        }
+      ]
+    }
+  ],
+  "golpes": [
+    {
+      "en": "escríbeme",
+      "estilo": "pastilla"
+    }
+  ],
+  "variantes": {
+    "contrappto": {
+      "cta": "Escríbeme"
+    }
+  }
+}

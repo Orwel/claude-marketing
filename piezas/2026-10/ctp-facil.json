@@ -1,0 +1,255 @@
+{
+  "plantilla": "Montaje",
+  "tipo": "cuerpo",
+  "sinCierre": true,
+  "correcciones": [
+    {
+      "de": "Banegas",
+      "a": "Vanegas"
+    },
+    {
+      "de": "TriFuerza",
+      "a": "Trifuerza"
+    },
+    {
+      "de": "contracto",
+      "a": "Contrappto"
+    },
+    {
+      "de": "Contrapto",
+      "a": "Contrappto"
+    },
+    {
+      "de": "cuentas de cobre",
+      "a": "cuentas de cobro"
+    },
+    {
+      "de": "cuentas de cobra",
+      "a": "cuentas de cobro"
+    }
+  ],
+  "slug": "ctp-facil",
+  "codigo": "CTP_FAC",
+  "titulo": "Contratos fáciles, rápidos y gratis",
+  "tono": "tension",
+  "cuentas": [
+    "contrappto"
+  ],
+  "cuerpo": {
+    "archivo": "copy_81BE9A38-9E6F-49E9-9B40-22C040925964.mov"
+  },
+  "resaltar": [
+    "fácil",
+    "rápida",
+    "gratuita"
+  ],
+  "verificar": [
+    {
+      "dato": "Contrappto: creación de contratos gratuita (¿plan gratuito vigente?)",
+      "estado": "pendiente"
+    }
+  ],
+  "generado": {
+    "beats": [
+      {
+        "tipo": "escena",
+        "escena": "app",
+        "en": "crear",
+        "hasta": "",
+        "dura": 5,
+        "fondo3d": true,
+        "app": {
+          "archivo": "app/2026-10/contrappto.mp4",
+          "desde": 81,
+          "velocidad": 1.3,
+          "tapar": []
+        },
+        "titulo": "Crea tu contrato",
+        "items": [
+          {
+            "texto": "Fácil",
+            "icono": "Sparkles",
+            "en": "fácil"
+          },
+          {
+            "texto": "Rápida",
+            "icono": "Zap",
+            "en": "rápida"
+          },
+          {
+            "texto": "Gratuita",
+            "icono": "Gift",
+            "en": "gratuita"
+          }
+        ],
+        "inicioMs": 944,
+        "finMs": 5944,
+        "itemsCuadros": [
+          51,
+          62,
+          78
+        ]
+      }
+    ],
+    "montajes": {
+      "contrappto": {
+        "segmentos": [
+          {
+            "desde": 0.981,
+            "hasta": 7.031,
+            "archivo": "limpios/2026-10/copy_81BE9A38-9E6F-49E9-9B40-22C040925964.mp4",
+            "parte": "cuerpo",
+            "velocidad": 1.12
+          }
+        ],
+        "subtitulos": [
+          {
+            "text": " Si",
+            "startMs": 179,
+            "endMs": 370,
+            "timestampMs": null,
+            "confidence": 0.680431,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " necesitas",
+            "startMs": 370,
+            "endMs": 944,
+            "timestampMs": null,
+            "confidence": 0.926356,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " crear",
+            "startMs": 944,
+            "endMs": 1298,
+            "timestampMs": null,
+            "confidence": 0.953163,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " contratos",
+            "startMs": 1298,
+            "endMs": 1872,
+            "timestampMs": null,
+            "confidence": 0.957944,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " de",
+            "startMs": 1872,
+            "endMs": 2063,
+            "timestampMs": null,
+            "confidence": 0.955733,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " forma",
+            "startMs": 2063,
+            "endMs": 2419,
+            "timestampMs": null,
+            "confidence": 0.971237,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " fácil,",
+            "startMs": 2419,
+            "endMs": 2774,
+            "timestampMs": null,
+            "confidence": 0.850931,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " rápida",
+            "startMs": 2774,
+            "endMs": 3184,
+            "timestampMs": null,
+            "confidence": 0.985957,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " y",
+            "startMs": 3184,
+            "endMs": 3321,
+            "timestampMs": null,
+            "confidence": 0.974652,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " gratuita,",
+            "startMs": 3321,
+            "endMs": 3839,
+            "timestampMs": null,
+            "confidence": 0.718405,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " escríbeme",
+            "startMs": 4375,
+            "endMs": 4911,
+            "timestampMs": null,
+            "confidence": 0.7188,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ya.",
+            "startMs": 4911,
+            "endMs": 5089,
+            "timestampMs": null,
+            "confidence": 0.837087,
+            "parte": "cuerpo"
+          }
+        ],
+        "cuerpoInicioMs": 0,
+        "cuerpoRecorteMs": 0,
+        "cierreInicioMs": null,
+        "duracionMs": 5402
+      }
+    },
+    "cuerpoMs": 5402,
+    "descartadas": [],
+    "texto": [
+      "Si necesitas crear contratos de forma fácil, rápida y gratuita, escríbeme ya."
+    ],
+    "avisos": []
+  },
+  "beats": [
+    {
+      "tipo": "escena",
+      "escena": "app",
+      "en": "crear",
+      "hasta": "",
+      "dura": 5,
+      "fondo3d": true,
+      "app": {
+        "archivo": "app/2026-10/contrappto.mp4",
+        "desde": 81,
+        "velocidad": 1.3,
+        "tapar": []
+      },
+      "titulo": "Crea tu contrato",
+      "items": [
+        {
+          "texto": "Fácil",
+          "icono": "Sparkles",
+          "en": "fácil"
+        },
+        {
+          "texto": "Rápida",
+          "icono": "Zap",
+          "en": "rápida"
+        },
+        {
+          "texto": "Gratuita",
+          "icono": "Gift",
+          "en": "gratuita"
+        }
+      ]
+    }
+  ],
+  "variantes": {
+    "contrappto": {
+      "cta": "Escríbeme"
+    }
+  }
+}

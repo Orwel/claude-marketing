@@ -1,0 +1,25 @@
+{
+  "_nota": "Qué clip del rodaje de octubre es intro o cierre de cada cuenta (paso 0). Lo lee src/montaje/armar.js.",
+  "intros": {
+    "juanda": "copy_59207FD2-B124-4946-962B-80A04E3F4B1D.mov",
+    "trifuerza": "copy_0736E297-E9C6-4E8B-BAE0-5EF63E0F7449.mov",
+    "contrappto": "copy_A546AE05-DDA9-44DE-983C-E1CBFA17ECE3.mov"
+  },
+  "cierres": {
+    "clase15": "copy_E75C37C5-89F8-440F-A6DD-563DD9567B87.mov",
+    "ctp": "IMG_4360.MOV",
+    "webinar": "copy_50060AFC-FB40-470B-BFC8-C1274B09F368.mov"
+  },
+  "_cierresAlternos": {
+    "juanda": [],
+    "contrappto": [
+      "copy_55BF2926 (flujos contractuales, escríbeme)",
+      "copy_804AC034 (lista de funciones + agendamos reunión)",
+      "copy_81BE9A38 ('fácil, rápida y gratuita')",
+      "copy_BFF3EB35 ('sin necesitar nunca más un abogado': no usar sin revisar)"
+    ]
+  },
+  "_descartados": {
+    "copy_399311EA-1FA7-4700-B508-97E65BB57416.mov": "cierre clase08: lo dice agachado y lejos de la cámara; Juan David pidió quitarlo (27-sep-2026)"
+  }
+}

@@ -1,0 +1,3286 @@
+{
+  "slug": "v02-seis-sentencias",
+  "codigo": "V02",
+  "titulo": "Seis sentencias falsas y treinta años de carrera",
+  "plantilla": "Montaje",
+  "tipo": "cuerpo",
+  "tono": "tension",
+  "cuentas": [
+    "juanda",
+    "trifuerza"
+  ],
+  "lowerThird": "Abogado y desarrollador de software",
+  "cuerpo": {
+    "archivo": "copy_05024536-73E3-4AE5-ADCF-A5E8E15868CA.mov"
+  },
+  "_tomas": "copy_63B22B0F es el mismo archivo exportado dos veces (audio idéntico): no es otra toma.",
+  "resaltar": [
+    "falsas",
+    "ChatGPT",
+    "sanción",
+    "existe",
+    "suena",
+    "buscando"
+  ],
+  "beats": [
+    {
+      "tipo": "tarjeta",
+      "en": "Nueva York",
+      "hasta": "No los",
+      "nivel": 2,
+      "icono": "Landmark",
+      "titulo": "Nueva York · *2023*",
+      "texto": "Seis casos ante un juez federal"
+    },
+    {
+      "tipo": "lista",
+      "en": "nombres",
+      "hasta": "Y ojo",
+      "nivel": 1,
+      "titulo": "Lo que le dio *ChatGPT*",
+      "items": [
+        {
+          "texto": "Nombres",
+          "icono": "UserRound",
+          "en": "nombres"
+        },
+        {
+          "texto": "Números",
+          "icono": "Hash",
+          "en": "números"
+        },
+        {
+          "texto": "Citas",
+          "icono": "Quote",
+          "en": "citas"
+        }
+      ]
+    },
+    {
+      "tipo": "tarjeta",
+      "en": "preguntó",
+      "hasta": "Cinco mil",
+      "nivel": 1,
+      "icono": "MessageCircleQuestionMark",
+      "titulo": "«¿Los casos son *reales*?»",
+      "texto": "La herramienta respondió: sí."
+    },
+    {
+      "tipo": "cifra",
+      "en": "Cinco mil",
+      "dura": 3,
+      "nivel": 1,
+      "prefijo": "US$ ",
+      "valor": 5000,
+      "etiqueta": "de *sanción*",
+      "titulo": "Sanción al abogado",
+      "icono": "Gavel"
+    },
+    {
+      "tipo": "tarjeta",
+      "en": "código",
+      "hasta": "Si investigas",
+      "nivel": 1,
+      "icono": "Code",
+      "titulo": "Si escribes código",
+      "texto": "Una librería que *no existe*, con una firma perfecta."
+    },
+    {
+      "tipo": "tarjeta",
+      "en": "investigas",
+      "hasta": "Él no",
+      "nivel": 1,
+      "icono": "FileSearch",
+      "titulo": "Si investigas",
+      "texto": "El paper que *no aparece* en ningún lado."
+    },
+    {
+      "tipo": "comparativa",
+      "en": "buscador",
+      "hasta": "completamente",
+      "nivel": 1,
+      "columnas": [
+        "buscador",
+        "construye"
+      ],
+      "izquierda": {
+        "titulo": "Un buscador",
+        "icono": "Search",
+        "items": [
+          "Trae lo que *existe*"
+        ]
+      },
+      "derecha": {
+        "titulo": "La IA generativa",
+        "icono": "Sparkles",
+        "tono": "bien",
+        "items": [
+          "Construye lo que *suena bien*"
+        ]
+      }
+    }
+  ],
+  "variantes": {
+    "juanda": {
+      "gancho": "Seis sentencias. Las seis *falsas*."
+    },
+    "trifuerza": {
+      "gancho": "Seis sentencias *falsas* y 30 años de carrera"
+    }
+  },
+  "verificar": [
+    {
+      "dato": "Caso de Nueva York, 2023: abogado con ~30 años de ejercicio, seis casos inexistentes dados por ChatGPT ante un juez federal (Mata v. Avianca, S.D.N.Y.).",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Que preguntó a ChatGPT si los casos eran reales y la herramienta dijo que sí.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Sanción de 5.000 dólares.",
+      "estado": "pendiente"
+    }
+  ],
+  "generado": {
+    "beats": [
+      {
+        "tipo": "tarjeta",
+        "en": "Nueva York",
+        "hasta": "No los",
+        "nivel": 2,
+        "icono": "Landmark",
+        "titulo": "Nueva York · *2023*",
+        "texto": "Seis casos ante un juez federal",
+        "inicioMs": 4151,
+        "finMs": 11161
+      },
+      {
+        "tipo": "lista",
+        "en": "nombres",
+        "hasta": "Y ojo",
+        "nivel": 1,
+        "titulo": "Lo que le dio *ChatGPT*",
+        "items": [
+          {
+            "texto": "Nombres",
+            "icono": "UserRound",
+            "en": "nombres"
+          },
+          {
+            "texto": "Números",
+            "icono": "Hash",
+            "en": "números"
+          },
+          {
+            "texto": "Citas",
+            "icono": "Quote",
+            "en": "citas"
+          }
+        ],
+        "inicioMs": 13809,
+        "finMs": 15446,
+        "itemsCuadros": [
+          7,
+          20,
+          38
+        ]
+      },
+      {
+        "tipo": "tarjeta",
+        "en": "preguntó",
+        "hasta": "Cinco mil",
+        "nivel": 1,
+        "icono": "MessageCircleQuestionMark",
+        "titulo": "«¿Los casos son *reales*?»",
+        "texto": "La herramienta respondió: sí.",
+        "inicioMs": 18997,
+        "finMs": 23571
+      },
+      {
+        "tipo": "cifra",
+        "en": "Cinco mil",
+        "dura": 3,
+        "nivel": 1,
+        "prefijo": "US$ ",
+        "valor": 5000,
+        "etiqueta": "de *sanción*",
+        "titulo": "Sanción al abogado",
+        "icono": "Gavel",
+        "inicioMs": 23571,
+        "finMs": 26571
+      },
+      {
+        "tipo": "tarjeta",
+        "en": "código",
+        "hasta": "Si investigas",
+        "nivel": 1,
+        "icono": "Code",
+        "titulo": "Si escribes código",
+        "texto": "Una librería que *no existe*, con una firma perfecta.",
+        "inicioMs": 34096,
+        "finMs": 39911
+      },
+      {
+        "tipo": "tarjeta",
+        "en": "investigas",
+        "hasta": "Él no",
+        "nivel": 1,
+        "icono": "FileSearch",
+        "titulo": "Si investigas",
+        "texto": "El paper que *no aparece* en ningún lado.",
+        "inicioMs": 40029,
+        "finMs": 45804
+      },
+      {
+        "tipo": "comparativa",
+        "en": "buscador",
+        "hasta": "completamente",
+        "nivel": 1,
+        "columnas": [
+          "buscador",
+          "construye"
+        ],
+        "izquierda": {
+          "titulo": "Un buscador",
+          "icono": "Search",
+          "items": [
+            "Trae lo que *existe*"
+          ]
+        },
+        "derecha": {
+          "titulo": "La IA generativa",
+          "icono": "Sparkles",
+          "tono": "bien",
+          "items": [
+            "Construye lo que *suena bien*"
+          ]
+        },
+        "inicioMs": 52241,
+        "finMs": 57581,
+        "columnasCuadros": [
+          7,
+          86
+        ]
+      }
+    ],
+    "montajes": {
+      "juanda": {
+        "segmentos": [
+          {
+            "desde": 1.275,
+            "hasta": 27.475,
+            "archivo": "limpios/2026-10/copy_05024536-73E3-4AE5-ADCF-A5E8E15868CA.mp4",
+            "parte": "cuerpo",
+            "velocidad": 1.12
+          },
+          {
+            "desde": 27.675,
+            "hasta": 45.975,
+            "archivo": "limpios/2026-10/copy_05024536-73E3-4AE5-ADCF-A5E8E15868CA.mp4",
+            "parte": "cuerpo",
+            "velocidad": 1.12
+          },
+          {
+            "desde": 46.175,
+            "hasta": 68.105,
+            "archivo": "limpios/2026-10/copy_05024536-73E3-4AE5-ADCF-A5E8E15868CA.mp4",
+            "parte": "cuerpo",
+            "velocidad": 1.12
+          },
+          {
+            "desde": 1.045,
+            "hasta": 12.015,
+            "archivo": "limpios/2026-10/copy_50060AFC-FB40-470B-BFC8-C1274B09F368.mp4",
+            "parte": "cierre",
+            "velocidad": 1.12,
+            "encuadre": {
+              "x": 0.511,
+              "y": 0.703,
+              "alto": 0.556
+            }
+          }
+        ],
+        "subtitulos": [
+          {
+            "text": " Seis",
+            "startMs": 179,
+            "endMs": 380,
+            "timestampMs": null,
+            "confidence": 0.344916,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " sentencias,",
+            "startMs": 380,
+            "endMs": 804,
+            "timestampMs": null,
+            "confidence": 0.822945,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " las",
+            "startMs": 1071,
+            "endMs": 1278,
+            "timestampMs": null,
+            "confidence": 0.972162,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " seis",
+            "startMs": 1278,
+            "endMs": 1530,
+            "timestampMs": null,
+            "confidence": 0.994198,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " falsas,",
+            "startMs": 1530,
+            "endMs": 1875,
+            "timestampMs": null,
+            "confidence": 0.42003,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " y",
+            "startMs": 2054,
+            "endMs": 2174,
+            "timestampMs": null,
+            "confidence": 0.958236,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " el",
+            "startMs": 2174,
+            "endMs": 2343,
+            "timestampMs": null,
+            "confidence": 0.964553,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " abogado",
+            "startMs": 2343,
+            "endMs": 2753,
+            "timestampMs": null,
+            "confidence": 0.98413,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " llevaba",
+            "startMs": 2753,
+            "endMs": 3162,
+            "timestampMs": null,
+            "confidence": 0.828927,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " 30",
+            "startMs": 3162,
+            "endMs": 3331,
+            "timestampMs": null,
+            "confidence": 0.690192,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " años",
+            "startMs": 3331,
+            "endMs": 3596,
+            "timestampMs": null,
+            "confidence": 0.998841,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ejerciendo.",
+            "startMs": 3596,
+            "endMs": 4151,
+            "timestampMs": null,
+            "confidence": 0.938186,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Nueva",
+            "startMs": 4151,
+            "endMs": 4464,
+            "timestampMs": null,
+            "confidence": 0.790552,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " York,",
+            "startMs": 5000,
+            "endMs": 5299,
+            "timestampMs": null,
+            "confidence": 0.779605,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " 2023.",
+            "startMs": 5299,
+            "endMs": 5598,
+            "timestampMs": null,
+            "confidence": 0.408492,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Un",
+            "startMs": 5598,
+            "endMs": 5788,
+            "timestampMs": null,
+            "confidence": 0.752012,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " abogado",
+            "startMs": 5788,
+            "endMs": 6250,
+            "timestampMs": null,
+            "confidence": 0.998357,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " presenta",
+            "startMs": 6696,
+            "endMs": 7188,
+            "timestampMs": null,
+            "confidence": 0.948598,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ante",
+            "startMs": 7188,
+            "endMs": 7471,
+            "timestampMs": null,
+            "confidence": 0.998079,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " un",
+            "startMs": 7471,
+            "endMs": 7653,
+            "timestampMs": null,
+            "confidence": 0.985058,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " juez",
+            "startMs": 7653,
+            "endMs": 7937,
+            "timestampMs": null,
+            "confidence": 0.953255,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " federal",
+            "startMs": 7937,
+            "endMs": 8377,
+            "timestampMs": null,
+            "confidence": 0.982122,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " seis",
+            "startMs": 8377,
+            "endMs": 8661,
+            "timestampMs": null,
+            "confidence": 0.93473,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " casos",
+            "startMs": 8839,
+            "endMs": 9196,
+            "timestampMs": null,
+            "confidence": 0.92761,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 9375,
+            "endMs": 9596,
+            "timestampMs": null,
+            "confidence": 0.974096,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " respaldan",
+            "startMs": 9596,
+            "endMs": 10114,
+            "timestampMs": null,
+            "confidence": 0.95418,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " su",
+            "startMs": 10114,
+            "endMs": 10287,
+            "timestampMs": null,
+            "confidence": 0.965289,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " argumento.",
+            "startMs": 10287,
+            "endMs": 10804,
+            "timestampMs": null,
+            "confidence": 0.914705,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " No",
+            "startMs": 11161,
+            "endMs": 11317,
+            "timestampMs": null,
+            "confidence": 0.698151,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " los",
+            "startMs": 11317,
+            "endMs": 11518,
+            "timestampMs": null,
+            "confidence": 0.977995,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " inventó",
+            "startMs": 11518,
+            "endMs": 11897,
+            "timestampMs": null,
+            "confidence": 0.984827,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " él,",
+            "startMs": 11897,
+            "endMs": 12054,
+            "timestampMs": null,
+            "confidence": 0.771535,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " se",
+            "startMs": 12232,
+            "endMs": 12399,
+            "timestampMs": null,
+            "confidence": 0.957695,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " los",
+            "startMs": 12399,
+            "endMs": 12613,
+            "timestampMs": null,
+            "confidence": 0.963005,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " dio",
+            "startMs": 12613,
+            "endMs": 12828,
+            "timestampMs": null,
+            "confidence": 0.944013,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ChatGPT,",
+            "startMs": 12828,
+            "endMs": 13304,
+            "timestampMs": null,
+            "confidence": 0.165733,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " con",
+            "startMs": 13571,
+            "endMs": 13809,
+            "timestampMs": null,
+            "confidence": 0.944532,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " nombres,",
+            "startMs": 13809,
+            "endMs": 14256,
+            "timestampMs": null,
+            "confidence": 0.809391,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " números",
+            "startMs": 14256,
+            "endMs": 14704,
+            "timestampMs": null,
+            "confidence": 0.980135,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " y",
+            "startMs": 14704,
+            "endMs": 14836,
+            "timestampMs": null,
+            "confidence": 0.95992,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " citas.",
+            "startMs": 14836,
+            "endMs": 15179,
+            "timestampMs": null,
+            "confidence": 0.922175,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Y",
+            "startMs": 15446,
+            "endMs": 15568,
+            "timestampMs": null,
+            "confidence": 0.974912,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ojo",
+            "startMs": 15568,
+            "endMs": 15787,
+            "timestampMs": null,
+            "confidence": 0.924844,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " porque",
+            "startMs": 15787,
+            "endMs": 16153,
+            "timestampMs": null,
+            "confidence": 0.652104,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " esto",
+            "startMs": 16153,
+            "endMs": 16421,
+            "timestampMs": null,
+            "confidence": 0.777477,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " es",
+            "startMs": 16421,
+            "endMs": 16591,
+            "timestampMs": null,
+            "confidence": 0.988248,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " lo",
+            "startMs": 16591,
+            "endMs": 16762,
+            "timestampMs": null,
+            "confidence": 0.981661,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " importante.",
+            "startMs": 16762,
+            "endMs": 17321,
+            "timestampMs": null,
+            "confidence": 0.640798,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Él",
+            "startMs": 17679,
+            "endMs": 17857,
+            "timestampMs": null,
+            "confidence": 0.471878,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " sí",
+            "startMs": 17857,
+            "endMs": 18036,
+            "timestampMs": null,
+            "confidence": 0.848695,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " desconfió,",
+            "startMs": 18036,
+            "endMs": 18571,
+            "timestampMs": null,
+            "confidence": 0.592734,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " le",
+            "startMs": 18839,
+            "endMs": 18997,
+            "timestampMs": null,
+            "confidence": 0.938865,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " preguntó",
+            "startMs": 18997,
+            "endMs": 19425,
+            "timestampMs": null,
+            "confidence": 0.966308,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " a",
+            "startMs": 19425,
+            "endMs": 19538,
+            "timestampMs": null,
+            "confidence": 0.975387,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " la",
+            "startMs": 19538,
+            "endMs": 19696,
+            "timestampMs": null,
+            "confidence": 0.92638,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " herramienta",
+            "startMs": 19696,
+            "endMs": 20259,
+            "timestampMs": null,
+            "confidence": 0.983436,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " si",
+            "startMs": 20259,
+            "endMs": 20417,
+            "timestampMs": null,
+            "confidence": 0.656708,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " los",
+            "startMs": 20417,
+            "endMs": 20620,
+            "timestampMs": null,
+            "confidence": 0.965624,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " casos",
+            "startMs": 20620,
+            "endMs": 20912,
+            "timestampMs": null,
+            "confidence": 0.972125,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " eran",
+            "startMs": 20912,
+            "endMs": 21161,
+            "timestampMs": null,
+            "confidence": 0.990554,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " reales",
+            "startMs": 21518,
+            "endMs": 21750,
+            "timestampMs": null,
+            "confidence": 0.957242,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " y",
+            "startMs": 21750,
+            "endMs": 21827,
+            "timestampMs": null,
+            "confidence": 0.491755,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " la",
+            "startMs": 21827,
+            "endMs": 21935,
+            "timestampMs": null,
+            "confidence": 0.795479,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " herramienta",
+            "startMs": 21935,
+            "endMs": 22321,
+            "timestampMs": null,
+            "confidence": 0.995902,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " le",
+            "startMs": 22500,
+            "endMs": 22629,
+            "timestampMs": null,
+            "confidence": 0.895026,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " dijo",
+            "startMs": 22629,
+            "endMs": 22831,
+            "timestampMs": null,
+            "confidence": 0.963913,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 22831,
+            "endMs": 22996,
+            "timestampMs": null,
+            "confidence": 0.9092,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " sí.",
+            "startMs": 22996,
+            "endMs": 23125,
+            "timestampMs": null,
+            "confidence": 0.93027,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Cinco",
+            "startMs": 23571,
+            "endMs": 23886,
+            "timestampMs": null,
+            "confidence": 0.155668,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " mil",
+            "startMs": 23886,
+            "endMs": 24104,
+            "timestampMs": null,
+            "confidence": 0.99523,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " dólares",
+            "startMs": 24104,
+            "endMs": 24514,
+            "timestampMs": null,
+            "confidence": 0.971817,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " de",
+            "startMs": 24514,
+            "endMs": 24683,
+            "timestampMs": null,
+            "confidence": 0.94598,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " sanción",
+            "startMs": 24683,
+            "endMs": 25095,
+            "timestampMs": null,
+            "confidence": 0.981736,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " y",
+            "startMs": 25095,
+            "endMs": 25215,
+            "timestampMs": null,
+            "confidence": 0.995524,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " su",
+            "startMs": 25215,
+            "endMs": 25384,
+            "timestampMs": null,
+            "confidence": 0.987328,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " nombre",
+            "startMs": 25384,
+            "endMs": 25746,
+            "timestampMs": null,
+            "confidence": 0.996991,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " en",
+            "startMs": 25746,
+            "endMs": 25916,
+            "timestampMs": null,
+            "confidence": 0.988783,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " todos",
+            "startMs": 25916,
+            "endMs": 26230,
+            "timestampMs": null,
+            "confidence": 0.962913,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " los",
+            "startMs": 26230,
+            "endMs": 26448,
+            "timestampMs": null,
+            "confidence": 0.994378,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " titulares",
+            "startMs": 26448,
+            "endMs": 26955,
+            "timestampMs": null,
+            "confidence": 0.988453,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " del",
+            "startMs": 26955,
+            "endMs": 27173,
+            "timestampMs": null,
+            "confidence": 0.932177,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " mundo",
+            "startMs": 27173,
+            "endMs": 27487,
+            "timestampMs": null,
+            "confidence": 0.995689,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " jurídico.",
+            "startMs": 27487,
+            "endMs": 27946,
+            "timestampMs": null,
+            "confidence": 0.983644,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Ahora,",
+            "startMs": 28482,
+            "endMs": 28750,
+            "timestampMs": null,
+            "confidence": 0.956546,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " si",
+            "startMs": 29107,
+            "endMs": 29246,
+            "timestampMs": null,
+            "confidence": 0.989247,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " estás",
+            "startMs": 29246,
+            "endMs": 29504,
+            "timestampMs": null,
+            "confidence": 0.893107,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " pensando\"eso",
+            "startMs": 29504,
+            "endMs": 30000,
+            "timestampMs": null,
+            "confidence": 0.44551,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " es",
+            "startMs": 30268,
+            "endMs": 30416,
+            "timestampMs": null,
+            "confidence": 0.995019,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " problema",
+            "startMs": 30416,
+            "endMs": 30819,
+            "timestampMs": null,
+            "confidence": 0.911537,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " de",
+            "startMs": 30819,
+            "endMs": 30967,
+            "timestampMs": null,
+            "confidence": 0.986711,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " abogados\"",
+            "startMs": 30967,
+            "endMs": 31370,
+            "timestampMs": null,
+            "confidence": 0.494368,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " te",
+            "startMs": 31370,
+            "endMs": 31518,
+            "timestampMs": null,
+            "confidence": 0.959174,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tengo",
+            "startMs": 31786,
+            "endMs": 32088,
+            "timestampMs": null,
+            "confidence": 0.994188,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " una",
+            "startMs": 32088,
+            "endMs": 32296,
+            "timestampMs": null,
+            "confidence": 0.948996,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " mala",
+            "startMs": 32296,
+            "endMs": 32552,
+            "timestampMs": null,
+            "confidence": 0.998418,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " noticia.",
+            "startMs": 32552,
+            "endMs": 32946,
+            "timestampMs": null,
+            "confidence": 0.816497,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Si",
+            "startMs": 33482,
+            "endMs": 33647,
+            "timestampMs": null,
+            "confidence": 0.993256,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " escribes",
+            "startMs": 33647,
+            "endMs": 34096,
+            "timestampMs": null,
+            "confidence": 0.891211,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " código",
+            "startMs": 34096,
+            "endMs": 34451,
+            "timestampMs": null,
+            "confidence": 0.985603,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " es",
+            "startMs": 34451,
+            "endMs": 34617,
+            "timestampMs": null,
+            "confidence": 0.670171,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " el",
+            "startMs": 34617,
+            "endMs": 34782,
+            "timestampMs": null,
+            "confidence": 0.96331,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " método",
+            "startMs": 34782,
+            "endMs": 35137,
+            "timestampMs": null,
+            "confidence": 0.993597,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " de",
+            "startMs": 35137,
+            "endMs": 35302,
+            "timestampMs": null,
+            "confidence": 0.993419,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " una",
+            "startMs": 35302,
+            "endMs": 35514,
+            "timestampMs": null,
+            "confidence": 0.984592,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " librería",
+            "startMs": 35514,
+            "endMs": 35963,
+            "timestampMs": null,
+            "confidence": 0.993252,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 35963,
+            "endMs": 36177,
+            "timestampMs": null,
+            "confidence": 0.985274,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " no",
+            "startMs": 36177,
+            "endMs": 36342,
+            "timestampMs": null,
+            "confidence": 0.995393,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " existe,",
+            "startMs": 36342,
+            "endMs": 36696,
+            "timestampMs": null,
+            "confidence": 0.756818,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " con",
+            "startMs": 36964,
+            "endMs": 37154,
+            "timestampMs": null,
+            "confidence": 0.98171,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " una",
+            "startMs": 37154,
+            "endMs": 37344,
+            "timestampMs": null,
+            "confidence": 0.993013,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " firma",
+            "startMs": 37344,
+            "endMs": 37619,
+            "timestampMs": null,
+            "confidence": 0.986041,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " perfecta",
+            "startMs": 37619,
+            "endMs": 38020,
+            "timestampMs": null,
+            "confidence": 0.993034,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " y",
+            "startMs": 38020,
+            "endMs": 38125,
+            "timestampMs": null,
+            "confidence": 0.97397,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " sus",
+            "startMs": 38304,
+            "endMs": 38494,
+            "timestampMs": null,
+            "confidence": 0.985729,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " parámetros",
+            "startMs": 38494,
+            "endMs": 38979,
+            "timestampMs": null,
+            "confidence": 0.99736,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " razonables.",
+            "startMs": 38979,
+            "endMs": 39464,
+            "timestampMs": null,
+            "confidence": 0.958464,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Si",
+            "startMs": 39911,
+            "endMs": 40029,
+            "timestampMs": null,
+            "confidence": 0.821407,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " investigas",
+            "startMs": 40029,
+            "endMs": 40418,
+            "timestampMs": null,
+            "confidence": 0.990777,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " es",
+            "startMs": 40418,
+            "endMs": 40536,
+            "timestampMs": null,
+            "confidence": 0.698669,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " el",
+            "startMs": 40714,
+            "endMs": 40867,
+            "timestampMs": null,
+            "confidence": 0.984031,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " paper",
+            "startMs": 40867,
+            "endMs": 41150,
+            "timestampMs": null,
+            "confidence": 0.814567,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 41150,
+            "endMs": 41346,
+            "timestampMs": null,
+            "confidence": 0.992108,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " no",
+            "startMs": 41346,
+            "endMs": 41499,
+            "timestampMs": null,
+            "confidence": 0.982523,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " aparece",
+            "startMs": 41499,
+            "endMs": 41870,
+            "timestampMs": null,
+            "confidence": 0.990577,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " en",
+            "startMs": 41870,
+            "endMs": 42022,
+            "timestampMs": null,
+            "confidence": 0.955618,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ningún",
+            "startMs": 42022,
+            "endMs": 42349,
+            "timestampMs": null,
+            "confidence": 0.924555,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " lado,",
+            "startMs": 42349,
+            "endMs": 42589,
+            "timestampMs": null,
+            "confidence": 0.574035,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " es",
+            "startMs": 43036,
+            "endMs": 43204,
+            "timestampMs": null,
+            "confidence": 0.944999,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " el",
+            "startMs": 43204,
+            "endMs": 43371,
+            "timestampMs": null,
+            "confidence": 0.677926,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " mismo",
+            "startMs": 43371,
+            "endMs": 43684,
+            "timestampMs": null,
+            "confidence": 0.998422,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " mecanismo",
+            "startMs": 43684,
+            "endMs": 44188,
+            "timestampMs": null,
+            "confidence": 0.909209,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " cambiando",
+            "startMs": 44188,
+            "endMs": 44692,
+            "timestampMs": null,
+            "confidence": 0.75465,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " de",
+            "startMs": 44692,
+            "endMs": 44860,
+            "timestampMs": null,
+            "confidence": 0.985092,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " disfraz.",
+            "startMs": 44860,
+            "endMs": 45268,
+            "timestampMs": null,
+            "confidence": 0.950566,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Él",
+            "startMs": 45804,
+            "endMs": 45958,
+            "timestampMs": null,
+            "confidence": 0.797979,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " no",
+            "startMs": 45958,
+            "endMs": 46113,
+            "timestampMs": null,
+            "confidence": 0.996132,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " falló",
+            "startMs": 46113,
+            "endMs": 46401,
+            "timestampMs": null,
+            "confidence": 0.96066,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " por",
+            "startMs": 46401,
+            "endMs": 46599,
+            "timestampMs": null,
+            "confidence": 0.961628,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " utilizar",
+            "startMs": 46599,
+            "endMs": 47020,
+            "timestampMs": null,
+            "confidence": 0.887453,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " inteligencia",
+            "startMs": 47020,
+            "endMs": 47616,
+            "timestampMs": null,
+            "confidence": 0.784545,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " artificial.",
+            "startMs": 47616,
+            "endMs": 48125,
+            "timestampMs": null,
+            "confidence": 0.160499,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Falló",
+            "startMs": 48482,
+            "endMs": 48784,
+            "timestampMs": null,
+            "confidence": 0.951391,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " porque",
+            "startMs": 48784,
+            "endMs": 49132,
+            "timestampMs": null,
+            "confidence": 0.94509,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " creyó",
+            "startMs": 49132,
+            "endMs": 49434,
+            "timestampMs": null,
+            "confidence": 0.976813,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 49434,
+            "endMs": 49643,
+            "timestampMs": null,
+            "confidence": 0.989147,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " estaba",
+            "startMs": 49911,
+            "endMs": 50276,
+            "timestampMs": null,
+            "confidence": 0.89864,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " buscando",
+            "startMs": 50276,
+            "endMs": 50738,
+            "timestampMs": null,
+            "confidence": 0.989999,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " algo",
+            "startMs": 50738,
+            "endMs": 51006,
+            "timestampMs": null,
+            "confidence": 0.993689,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " confiable.",
+            "startMs": 51006,
+            "endMs": 51518,
+            "timestampMs": null,
+            "confidence": 0.975547,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Un",
+            "startMs": 52054,
+            "endMs": 52241,
+            "timestampMs": null,
+            "confidence": 0.683324,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " buscador",
+            "startMs": 52241,
+            "endMs": 52750,
+            "timestampMs": null,
+            "confidence": 0.992239,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " te",
+            "startMs": 52750,
+            "endMs": 52937,
+            "timestampMs": null,
+            "confidence": 0.972969,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " trae",
+            "startMs": 52937,
+            "endMs": 53232,
+            "timestampMs": null,
+            "confidence": 0.99131,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " lo",
+            "startMs": 53232,
+            "endMs": 53420,
+            "timestampMs": null,
+            "confidence": 0.990902,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 53420,
+            "endMs": 53661,
+            "timestampMs": null,
+            "confidence": 0.997204,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " existe,",
+            "startMs": 54018,
+            "endMs": 54401,
+            "timestampMs": null,
+            "confidence": 0.778376,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " esto",
+            "startMs": 54401,
+            "endMs": 54681,
+            "timestampMs": null,
+            "confidence": 0.981107,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " te",
+            "startMs": 54681,
+            "endMs": 54860,
+            "timestampMs": null,
+            "confidence": 0.967475,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " construye",
+            "startMs": 54860,
+            "endMs": 55396,
+            "timestampMs": null,
+            "confidence": 0.904856,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " lo",
+            "startMs": 55396,
+            "endMs": 55574,
+            "timestampMs": null,
+            "confidence": 0.982943,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 55574,
+            "endMs": 55804,
+            "timestampMs": null,
+            "confidence": 0.995235,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " suena",
+            "startMs": 56071,
+            "endMs": 56398,
+            "timestampMs": null,
+            "confidence": 0.989204,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " bien.",
+            "startMs": 56398,
+            "endMs": 56675,
+            "timestampMs": null,
+            "confidence": 0.625459,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Y",
+            "startMs": 56675,
+            "endMs": 56801,
+            "timestampMs": null,
+            "confidence": 0.782728,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " son",
+            "startMs": 56801,
+            "endMs": 57028,
+            "timestampMs": null,
+            "confidence": 0.977443,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " dos",
+            "startMs": 57028,
+            "endMs": 57254,
+            "timestampMs": null,
+            "confidence": 0.98858,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " cosas",
+            "startMs": 57254,
+            "endMs": 57581,
+            "timestampMs": null,
+            "confidence": 0.991762,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " completamente",
+            "startMs": 57581,
+            "endMs": 58311,
+            "timestampMs": null,
+            "confidence": 0.975633,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " distintas.",
+            "startMs": 58311,
+            "endMs": 58839,
+            "timestampMs": null,
+            "confidence": 0.955589,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Si",
+            "startMs": 59491,
+            "endMs": 59637,
+            "timestampMs": null,
+            "confidence": 0.73224,
+            "parte": "cierre"
+          },
+          {
+            "text": " quieres",
+            "startMs": 59637,
+            "endMs": 59988,
+            "timestampMs": null,
+            "confidence": 0.975091,
+            "parte": "cierre"
+          },
+          {
+            "text": " entender",
+            "startMs": 59988,
+            "endMs": 60382,
+            "timestampMs": null,
+            "confidence": 0.852446,
+            "parte": "cierre"
+          },
+          {
+            "text": " mejor",
+            "startMs": 60382,
+            "endMs": 60652,
+            "timestampMs": null,
+            "confidence": 0.912043,
+            "parte": "cierre"
+          },
+          {
+            "text": " cómo",
+            "startMs": 60830,
+            "endMs": 61063,
+            "timestampMs": null,
+            "confidence": 0.90059,
+            "parte": "cierre"
+          },
+          {
+            "text": " funciona",
+            "startMs": 61063,
+            "endMs": 61467,
+            "timestampMs": null,
+            "confidence": 0.971119,
+            "parte": "cierre"
+          },
+          {
+            "text": " la",
+            "startMs": 61467,
+            "endMs": 61616,
+            "timestampMs": null,
+            "confidence": 0.959715,
+            "parte": "cierre"
+          },
+          {
+            "text": " Inteligencia",
+            "startMs": 61616,
+            "endMs": 62188,
+            "timestampMs": null,
+            "confidence": 0.678802,
+            "parte": "cierre"
+          },
+          {
+            "text": " Artificial,",
+            "startMs": 62188,
+            "endMs": 62677,
+            "timestampMs": null,
+            "confidence": 0.370631,
+            "parte": "cierre"
+          },
+          {
+            "text": " comenta",
+            "startMs": 62677,
+            "endMs": 63038,
+            "timestampMs": null,
+            "confidence": 0.760042,
+            "parte": "cierre"
+          },
+          {
+            "text": " clase",
+            "startMs": 63038,
+            "endMs": 63313,
+            "timestampMs": null,
+            "confidence": 0.573985,
+            "parte": "cierre"
+          },
+          {
+            "text": " y",
+            "startMs": 63313,
+            "endMs": 63420,
+            "timestampMs": null,
+            "confidence": 0.58971,
+            "parte": "cierre"
+          },
+          {
+            "text": " te",
+            "startMs": 63688,
+            "endMs": 63836,
+            "timestampMs": null,
+            "confidence": 0.767135,
+            "parte": "cierre"
+          },
+          {
+            "text": " daré",
+            "startMs": 63836,
+            "endMs": 64069,
+            "timestampMs": null,
+            "confidence": 0.965361,
+            "parte": "cierre"
+          },
+          {
+            "text": " acceso",
+            "startMs": 64069,
+            "endMs": 64387,
+            "timestampMs": null,
+            "confidence": 0.988286,
+            "parte": "cierre"
+          },
+          {
+            "text": " gratuito",
+            "startMs": 64387,
+            "endMs": 64789,
+            "timestampMs": null,
+            "confidence": 0.919932,
+            "parte": "cierre"
+          },
+          {
+            "text": " al",
+            "startMs": 64789,
+            "endMs": 64938,
+            "timestampMs": null,
+            "confidence": 0.971284,
+            "parte": "cierre"
+          },
+          {
+            "text": " webinar",
+            "startMs": 65116,
+            "endMs": 65449,
+            "timestampMs": null,
+            "confidence": 0.564913,
+            "parte": "cierre"
+          },
+          {
+            "text": " que",
+            "startMs": 65449,
+            "endMs": 65625,
+            "timestampMs": null,
+            "confidence": 0.924455,
+            "parte": "cierre"
+          },
+          {
+            "text": " estaré dictando",
+            "startMs": 65625,
+            "endMs": 66290,
+            "timestampMs": null,
+            "confidence": 0.887542,
+            "parte": "cierre"
+          },
+          {
+            "text": " sobre",
+            "startMs": 66290,
+            "endMs": 66545,
+            "timestampMs": null,
+            "confidence": 0.970319,
+            "parte": "cierre"
+          },
+          {
+            "text": " fundamentos",
+            "startMs": 66902,
+            "endMs": 67429,
+            "timestampMs": null,
+            "confidence": 0.654916,
+            "parte": "cierre"
+          },
+          {
+            "text": " de",
+            "startMs": 67429,
+            "endMs": 67576,
+            "timestampMs": null,
+            "confidence": 0.976313,
+            "parte": "cierre"
+          },
+          {
+            "text": " la",
+            "startMs": 67576,
+            "endMs": 67723,
+            "timestampMs": null,
+            "confidence": 0.948614,
+            "parte": "cierre"
+          },
+          {
+            "text": " Inteligencia",
+            "startMs": 67723,
+            "endMs": 68292,
+            "timestampMs": null,
+            "confidence": 0.902855,
+            "parte": "cierre"
+          },
+          {
+            "text": " Artificial.",
+            "startMs": 68292,
+            "endMs": 68777,
+            "timestampMs": null,
+            "confidence": 0.924881,
+            "parte": "cierre"
+          }
+        ],
+        "cuerpoInicioMs": 0,
+        "cuerpoRecorteMs": 0,
+        "cierreInicioMs": 59313,
+        "duracionMs": 69107
+      },
+      "trifuerza": {
+        "segmentos": [
+          {
+            "desde": 1.275,
+            "hasta": 27.475,
+            "archivo": "limpios/2026-10/copy_05024536-73E3-4AE5-ADCF-A5E8E15868CA.mp4",
+            "parte": "cuerpo",
+            "velocidad": 1.12
+          },
+          {
+            "desde": 27.675,
+            "hasta": 45.975,
+            "archivo": "limpios/2026-10/copy_05024536-73E3-4AE5-ADCF-A5E8E15868CA.mp4",
+            "parte": "cuerpo",
+            "velocidad": 1.12
+          },
+          {
+            "desde": 46.175,
+            "hasta": 68.105,
+            "archivo": "limpios/2026-10/copy_05024536-73E3-4AE5-ADCF-A5E8E15868CA.mp4",
+            "parte": "cuerpo",
+            "velocidad": 1.12
+          }
+        ],
+        "subtitulos": [
+          {
+            "text": " Seis",
+            "startMs": 179,
+            "endMs": 380,
+            "timestampMs": null,
+            "confidence": 0.344916,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " sentencias,",
+            "startMs": 380,
+            "endMs": 804,
+            "timestampMs": null,
+            "confidence": 0.822945,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " las",
+            "startMs": 1071,
+            "endMs": 1278,
+            "timestampMs": null,
+            "confidence": 0.972162,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " seis",
+            "startMs": 1278,
+            "endMs": 1530,
+            "timestampMs": null,
+            "confidence": 0.994198,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " falsas,",
+            "startMs": 1530,
+            "endMs": 1875,
+            "timestampMs": null,
+            "confidence": 0.42003,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " y",
+            "startMs": 2054,
+            "endMs": 2174,
+            "timestampMs": null,
+            "confidence": 0.958236,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " el",
+            "startMs": 2174,
+            "endMs": 2343,
+            "timestampMs": null,
+            "confidence": 0.964553,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " abogado",
+            "startMs": 2343,
+            "endMs": 2753,
+            "timestampMs": null,
+            "confidence": 0.98413,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " llevaba",
+            "startMs": 2753,
+            "endMs": 3162,
+            "timestampMs": null,
+            "confidence": 0.828927,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " 30",
+            "startMs": 3162,
+            "endMs": 3331,
+            "timestampMs": null,
+            "confidence": 0.690192,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " años",
+            "startMs": 3331,
+            "endMs": 3596,
+            "timestampMs": null,
+            "confidence": 0.998841,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ejerciendo.",
+            "startMs": 3596,
+            "endMs": 4151,
+            "timestampMs": null,
+            "confidence": 0.938186,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Nueva",
+            "startMs": 4151,
+            "endMs": 4464,
+            "timestampMs": null,
+            "confidence": 0.790552,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " York,",
+            "startMs": 5000,
+            "endMs": 5299,
+            "timestampMs": null,
+            "confidence": 0.779605,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " 2023.",
+            "startMs": 5299,
+            "endMs": 5598,
+            "timestampMs": null,
+            "confidence": 0.408492,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Un",
+            "startMs": 5598,
+            "endMs": 5788,
+            "timestampMs": null,
+            "confidence": 0.752012,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " abogado",
+            "startMs": 5788,
+            "endMs": 6250,
+            "timestampMs": null,
+            "confidence": 0.998357,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " presenta",
+            "startMs": 6696,
+            "endMs": 7188,
+            "timestampMs": null,
+            "confidence": 0.948598,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ante",
+            "startMs": 7188,
+            "endMs": 7471,
+            "timestampMs": null,
+            "confidence": 0.998079,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " un",
+            "startMs": 7471,
+            "endMs": 7653,
+            "timestampMs": null,
+            "confidence": 0.985058,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " juez",
+            "startMs": 7653,
+            "endMs": 7937,
+            "timestampMs": null,
+            "confidence": 0.953255,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " federal",
+            "startMs": 7937,
+            "endMs": 8377,
+            "timestampMs": null,
+            "confidence": 0.982122,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " seis",
+            "startMs": 8377,
+            "endMs": 8661,
+            "timestampMs": null,
+            "confidence": 0.93473,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " casos",
+            "startMs": 8839,
+            "endMs": 9196,
+            "timestampMs": null,
+            "confidence": 0.92761,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 9375,
+            "endMs": 9596,
+            "timestampMs": null,
+            "confidence": 0.974096,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " respaldan",
+            "startMs": 9596,
+            "endMs": 10114,
+            "timestampMs": null,
+            "confidence": 0.95418,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " su",
+            "startMs": 10114,
+            "endMs": 10287,
+            "timestampMs": null,
+            "confidence": 0.965289,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " argumento.",
+            "startMs": 10287,
+            "endMs": 10804,
+            "timestampMs": null,
+            "confidence": 0.914705,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " No",
+            "startMs": 11161,
+            "endMs": 11317,
+            "timestampMs": null,
+            "confidence": 0.698151,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " los",
+            "startMs": 11317,
+            "endMs": 11518,
+            "timestampMs": null,
+            "confidence": 0.977995,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " inventó",
+            "startMs": 11518,
+            "endMs": 11897,
+            "timestampMs": null,
+            "confidence": 0.984827,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " él,",
+            "startMs": 11897,
+            "endMs": 12054,
+            "timestampMs": null,
+            "confidence": 0.771535,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " se",
+            "startMs": 12232,
+            "endMs": 12399,
+            "timestampMs": null,
+            "confidence": 0.957695,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " los",
+            "startMs": 12399,
+            "endMs": 12613,
+            "timestampMs": null,
+            "confidence": 0.963005,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " dio",
+            "startMs": 12613,
+            "endMs": 12828,
+            "timestampMs": null,
+            "confidence": 0.944013,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ChatGPT,",
+            "startMs": 12828,
+            "endMs": 13304,
+            "timestampMs": null,
+            "confidence": 0.165733,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " con",
+            "startMs": 13571,
+            "endMs": 13809,
+            "timestampMs": null,
+            "confidence": 0.944532,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " nombres,",
+            "startMs": 13809,
+            "endMs": 14256,
+            "timestampMs": null,
+            "confidence": 0.809391,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " números",
+            "startMs": 14256,
+            "endMs": 14704,
+            "timestampMs": null,
+            "confidence": 0.980135,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " y",
+            "startMs": 14704,
+            "endMs": 14836,
+            "timestampMs": null,
+            "confidence": 0.95992,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " citas.",
+            "startMs": 14836,
+            "endMs": 15179,
+            "timestampMs": null,
+            "confidence": 0.922175,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Y",
+            "startMs": 15446,
+            "endMs": 15568,
+            "timestampMs": null,
+            "confidence": 0.974912,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ojo",
+            "startMs": 15568,
+            "endMs": 15787,
+            "timestampMs": null,
+            "confidence": 0.924844,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " porque",
+            "startMs": 15787,
+            "endMs": 16153,
+            "timestampMs": null,
+            "confidence": 0.652104,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " esto",
+            "startMs": 16153,
+            "endMs": 16421,
+            "timestampMs": null,
+            "confidence": 0.777477,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " es",
+            "startMs": 16421,
+            "endMs": 16591,
+            "timestampMs": null,
+            "confidence": 0.988248,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " lo",
+            "startMs": 16591,
+            "endMs": 16762,
+            "timestampMs": null,
+            "confidence": 0.981661,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " importante.",
+            "startMs": 16762,
+            "endMs": 17321,
+            "timestampMs": null,
+            "confidence": 0.640798,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Él",
+            "startMs": 17679,
+            "endMs": 17857,
+            "timestampMs": null,
+            "confidence": 0.471878,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " sí",
+            "startMs": 17857,
+            "endMs": 18036,
+            "timestampMs": null,
+            "confidence": 0.848695,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " desconfió,",
+            "startMs": 18036,
+            "endMs": 18571,
+            "timestampMs": null,
+            "confidence": 0.592734,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " le",
+            "startMs": 18839,
+            "endMs": 18997,
+            "timestampMs": null,
+            "confidence": 0.938865,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " preguntó",
+            "startMs": 18997,
+            "endMs": 19425,
+            "timestampMs": null,
+            "confidence": 0.966308,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " a",
+            "startMs": 19425,
+            "endMs": 19538,
+            "timestampMs": null,
+            "confidence": 0.975387,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " la",
+            "startMs": 19538,
+            "endMs": 19696,
+            "timestampMs": null,
+            "confidence": 0.92638,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " herramienta",
+            "startMs": 19696,
+            "endMs": 20259,
+            "timestampMs": null,
+            "confidence": 0.983436,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " si",
+            "startMs": 20259,
+            "endMs": 20417,
+            "timestampMs": null,
+            "confidence": 0.656708,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " los",
+            "startMs": 20417,
+            "endMs": 20620,
+            "timestampMs": null,
+            "confidence": 0.965624,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " casos",
+            "startMs": 20620,
+            "endMs": 20912,
+            "timestampMs": null,
+            "confidence": 0.972125,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " eran",
+            "startMs": 20912,
+            "endMs": 21161,
+            "timestampMs": null,
+            "confidence": 0.990554,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " reales",
+            "startMs": 21518,
+            "endMs": 21750,
+            "timestampMs": null,
+            "confidence": 0.957242,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " y",
+            "startMs": 21750,
+            "endMs": 21827,
+            "timestampMs": null,
+            "confidence": 0.491755,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " la",
+            "startMs": 21827,
+            "endMs": 21935,
+            "timestampMs": null,
+            "confidence": 0.795479,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " herramienta",
+            "startMs": 21935,
+            "endMs": 22321,
+            "timestampMs": null,
+            "confidence": 0.995902,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " le",
+            "startMs": 22500,
+            "endMs": 22629,
+            "timestampMs": null,
+            "confidence": 0.895026,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " dijo",
+            "startMs": 22629,
+            "endMs": 22831,
+            "timestampMs": null,
+            "confidence": 0.963913,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 22831,
+            "endMs": 22996,
+            "timestampMs": null,
+            "confidence": 0.9092,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " sí.",
+            "startMs": 22996,
+            "endMs": 23125,
+            "timestampMs": null,
+            "confidence": 0.93027,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Cinco",
+            "startMs": 23571,
+            "endMs": 23886,
+            "timestampMs": null,
+            "confidence": 0.155668,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " mil",
+            "startMs": 23886,
+            "endMs": 24104,
+            "timestampMs": null,
+            "confidence": 0.99523,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " dólares",
+            "startMs": 24104,
+            "endMs": 24514,
+            "timestampMs": null,
+            "confidence": 0.971817,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " de",
+            "startMs": 24514,
+            "endMs": 24683,
+            "timestampMs": null,
+            "confidence": 0.94598,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " sanción",
+            "startMs": 24683,
+            "endMs": 25095,
+            "timestampMs": null,
+            "confidence": 0.981736,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " y",
+            "startMs": 25095,
+            "endMs": 25215,
+            "timestampMs": null,
+            "confidence": 0.995524,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " su",
+            "startMs": 25215,
+            "endMs": 25384,
+            "timestampMs": null,
+            "confidence": 0.987328,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " nombre",
+            "startMs": 25384,
+            "endMs": 25746,
+            "timestampMs": null,
+            "confidence": 0.996991,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " en",
+            "startMs": 25746,
+            "endMs": 25916,
+            "timestampMs": null,
+            "confidence": 0.988783,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " todos",
+            "startMs": 25916,
+            "endMs": 26230,
+            "timestampMs": null,
+            "confidence": 0.962913,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " los",
+            "startMs": 26230,
+            "endMs": 26448,
+            "timestampMs": null,
+            "confidence": 0.994378,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " titulares",
+            "startMs": 26448,
+            "endMs": 26955,
+            "timestampMs": null,
+            "confidence": 0.988453,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " del",
+            "startMs": 26955,
+            "endMs": 27173,
+            "timestampMs": null,
+            "confidence": 0.932177,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " mundo",
+            "startMs": 27173,
+            "endMs": 27487,
+            "timestampMs": null,
+            "confidence": 0.995689,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " jurídico.",
+            "startMs": 27487,
+            "endMs": 27946,
+            "timestampMs": null,
+            "confidence": 0.983644,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Ahora,",
+            "startMs": 28482,
+            "endMs": 28750,
+            "timestampMs": null,
+            "confidence": 0.956546,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " si",
+            "startMs": 29107,
+            "endMs": 29246,
+            "timestampMs": null,
+            "confidence": 0.989247,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " estás",
+            "startMs": 29246,
+            "endMs": 29504,
+            "timestampMs": null,
+            "confidence": 0.893107,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " pensando\"eso",
+            "startMs": 29504,
+            "endMs": 30000,
+            "timestampMs": null,
+            "confidence": 0.44551,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " es",
+            "startMs": 30268,
+            "endMs": 30416,
+            "timestampMs": null,
+            "confidence": 0.995019,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " problema",
+            "startMs": 30416,
+            "endMs": 30819,
+            "timestampMs": null,
+            "confidence": 0.911537,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " de",
+            "startMs": 30819,
+            "endMs": 30967,
+            "timestampMs": null,
+            "confidence": 0.986711,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " abogados\"",
+            "startMs": 30967,
+            "endMs": 31370,
+            "timestampMs": null,
+            "confidence": 0.494368,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " te",
+            "startMs": 31370,
+            "endMs": 31518,
+            "timestampMs": null,
+            "confidence": 0.959174,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tengo",
+            "startMs": 31786,
+            "endMs": 32088,
+            "timestampMs": null,
+            "confidence": 0.994188,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " una",
+            "startMs": 32088,
+            "endMs": 32296,
+            "timestampMs": null,
+            "confidence": 0.948996,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " mala",
+            "startMs": 32296,
+            "endMs": 32552,
+            "timestampMs": null,
+            "confidence": 0.998418,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " noticia.",
+            "startMs": 32552,
+            "endMs": 32946,
+            "timestampMs": null,
+            "confidence": 0.816497,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Si",
+            "startMs": 33482,
+            "endMs": 33647,
+            "timestampMs": null,
+            "confidence": 0.993256,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " escribes",
+            "startMs": 33647,
+            "endMs": 34096,
+            "timestampMs": null,
+            "confidence": 0.891211,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " código",
+            "startMs": 34096,
+            "endMs": 34451,
+            "timestampMs": null,
+            "confidence": 0.985603,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " es",
+            "startMs": 34451,
+            "endMs": 34617,
+            "timestampMs": null,
+            "confidence": 0.670171,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " el",
+            "startMs": 34617,
+            "endMs": 34782,
+            "timestampMs": null,
+            "confidence": 0.96331,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " método",
+            "startMs": 34782,
+            "endMs": 35137,
+            "timestampMs": null,
+            "confidence": 0.993597,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " de",
+            "startMs": 35137,
+            "endMs": 35302,
+            "timestampMs": null,
+            "confidence": 0.993419,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " una",
+            "startMs": 35302,
+            "endMs": 35514,
+            "timestampMs": null,
+            "confidence": 0.984592,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " librería",
+            "startMs": 35514,
+            "endMs": 35963,
+            "timestampMs": null,
+            "confidence": 0.993252,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 35963,
+            "endMs": 36177,
+            "timestampMs": null,
+            "confidence": 0.985274,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " no",
+            "startMs": 36177,
+            "endMs": 36342,
+            "timestampMs": null,
+            "confidence": 0.995393,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " existe,",
+            "startMs": 36342,
+            "endMs": 36696,
+            "timestampMs": null,
+            "confidence": 0.756818,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " con",
+            "startMs": 36964,
+            "endMs": 37154,
+            "timestampMs": null,
+            "confidence": 0.98171,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " una",
+            "startMs": 37154,
+            "endMs": 37344,
+            "timestampMs": null,
+            "confidence": 0.993013,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " firma",
+            "startMs": 37344,
+            "endMs": 37619,
+            "timestampMs": null,
+            "confidence": 0.986041,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " perfecta",
+            "startMs": 37619,
+            "endMs": 38020,
+            "timestampMs": null,
+            "confidence": 0.993034,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " y",
+            "startMs": 38020,
+            "endMs": 38125,
+            "timestampMs": null,
+            "confidence": 0.97397,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " sus",
+            "startMs": 38304,
+            "endMs": 38494,
+            "timestampMs": null,
+            "confidence": 0.985729,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " parámetros",
+            "startMs": 38494,
+            "endMs": 38979,
+            "timestampMs": null,
+            "confidence": 0.99736,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " razonables.",
+            "startMs": 38979,
+            "endMs": 39464,
+            "timestampMs": null,
+            "confidence": 0.958464,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Si",
+            "startMs": 39911,
+            "endMs": 40029,
+            "timestampMs": null,
+            "confidence": 0.821407,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " investigas",
+            "startMs": 40029,
+            "endMs": 40418,
+            "timestampMs": null,
+            "confidence": 0.990777,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " es",
+            "startMs": 40418,
+            "endMs": 40536,
+            "timestampMs": null,
+            "confidence": 0.698669,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " el",
+            "startMs": 40714,
+            "endMs": 40867,
+            "timestampMs": null,
+            "confidence": 0.984031,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " paper",
+            "startMs": 40867,
+            "endMs": 41150,
+            "timestampMs": null,
+            "confidence": 0.814567,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 41150,
+            "endMs": 41346,
+            "timestampMs": null,
+            "confidence": 0.992108,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " no",
+            "startMs": 41346,
+            "endMs": 41499,
+            "timestampMs": null,
+            "confidence": 0.982523,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " aparece",
+            "startMs": 41499,
+            "endMs": 41870,
+            "timestampMs": null,
+            "confidence": 0.990577,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " en",
+            "startMs": 41870,
+            "endMs": 42022,
+            "timestampMs": null,
+            "confidence": 0.955618,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ningún",
+            "startMs": 42022,
+            "endMs": 42349,
+            "timestampMs": null,
+            "confidence": 0.924555,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " lado,",
+            "startMs": 42349,
+            "endMs": 42589,
+            "timestampMs": null,
+            "confidence": 0.574035,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " es",
+            "startMs": 43036,
+            "endMs": 43204,
+            "timestampMs": null,
+            "confidence": 0.944999,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " el",
+            "startMs": 43204,
+            "endMs": 43371,
+            "timestampMs": null,
+            "confidence": 0.677926,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " mismo",
+            "startMs": 43371,
+            "endMs": 43684,
+            "timestampMs": null,
+            "confidence": 0.998422,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " mecanismo",
+            "startMs": 43684,
+            "endMs": 44188,
+            "timestampMs": null,
+            "confidence": 0.909209,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " cambiando",
+            "startMs": 44188,
+            "endMs": 44692,
+            "timestampMs": null,
+            "confidence": 0.75465,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " de",
+            "startMs": 44692,
+            "endMs": 44860,
+            "timestampMs": null,
+            "confidence": 0.985092,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " disfraz.",
+            "startMs": 44860,
+            "endMs": 45268,
+            "timestampMs": null,
+            "confidence": 0.950566,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Él",
+            "startMs": 45804,
+            "endMs": 45958,
+            "timestampMs": null,
+            "confidence": 0.797979,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " no",
+            "startMs": 45958,
+            "endMs": 46113,
+            "timestampMs": null,
+            "confidence": 0.996132,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " falló",
+            "startMs": 46113,
+            "endMs": 46401,
+            "timestampMs": null,
+            "confidence": 0.96066,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " por",
+            "startMs": 46401,
+            "endMs": 46599,
+            "timestampMs": null,
+            "confidence": 0.961628,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " utilizar",
+            "startMs": 46599,
+            "endMs": 47020,
+            "timestampMs": null,
+            "confidence": 0.887453,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " inteligencia",
+            "startMs": 47020,
+            "endMs": 47616,
+            "timestampMs": null,
+            "confidence": 0.784545,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " artificial.",
+            "startMs": 47616,
+            "endMs": 48125,
+            "timestampMs": null,
+            "confidence": 0.160499,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Falló",
+            "startMs": 48482,
+            "endMs": 48784,
+            "timestampMs": null,
+            "confidence": 0.951391,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " porque",
+            "startMs": 48784,
+            "endMs": 49132,
+            "timestampMs": null,
+            "confidence": 0.94509,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " creyó",
+            "startMs": 49132,
+            "endMs": 49434,
+            "timestampMs": null,
+            "confidence": 0.976813,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 49434,
+            "endMs": 49643,
+            "timestampMs": null,
+            "confidence": 0.989147,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " estaba",
+            "startMs": 49911,
+            "endMs": 50276,
+            "timestampMs": null,
+            "confidence": 0.89864,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " buscando",
+            "startMs": 50276,
+            "endMs": 50738,
+            "timestampMs": null,
+            "confidence": 0.989999,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " algo",
+            "startMs": 50738,
+            "endMs": 51006,
+            "timestampMs": null,
+            "confidence": 0.993689,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " confiable.",
+            "startMs": 51006,
+            "endMs": 51518,
+            "timestampMs": null,
+            "confidence": 0.975547,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Un",
+            "startMs": 52054,
+            "endMs": 52241,
+            "timestampMs": null,
+            "confidence": 0.683324,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " buscador",
+            "startMs": 52241,
+            "endMs": 52750,
+            "timestampMs": null,
+            "confidence": 0.992239,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " te",
+            "startMs": 52750,
+            "endMs": 52937,
+            "timestampMs": null,
+            "confidence": 0.972969,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " trae",
+            "startMs": 52937,
+            "endMs": 53232,
+            "timestampMs": null,
+            "confidence": 0.99131,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " lo",
+            "startMs": 53232,
+            "endMs": 53420,
+            "timestampMs": null,
+            "confidence": 0.990902,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 53420,
+            "endMs": 53661,
+            "timestampMs": null,
+            "confidence": 0.997204,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " existe,",
+            "startMs": 54018,
+            "endMs": 54401,
+            "timestampMs": null,
+            "confidence": 0.778376,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " esto",
+            "startMs": 54401,
+            "endMs": 54681,
+            "timestampMs": null,
+            "confidence": 0.981107,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " te",
+            "startMs": 54681,
+            "endMs": 54860,
+            "timestampMs": null,
+            "confidence": 0.967475,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " construye",
+            "startMs": 54860,
+            "endMs": 55396,
+            "timestampMs": null,
+            "confidence": 0.904856,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " lo",
+            "startMs": 55396,
+            "endMs": 55574,
+            "timestampMs": null,
+            "confidence": 0.982943,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 55574,
+            "endMs": 55804,
+            "timestampMs": null,
+            "confidence": 0.995235,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " suena",
+            "startMs": 56071,
+            "endMs": 56398,
+            "timestampMs": null,
+            "confidence": 0.989204,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " bien.",
+            "startMs": 56398,
+            "endMs": 56675,
+            "timestampMs": null,
+            "confidence": 0.625459,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Y",
+            "startMs": 56675,
+            "endMs": 56801,
+            "timestampMs": null,
+            "confidence": 0.782728,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " son",
+            "startMs": 56801,
+            "endMs": 57028,
+            "timestampMs": null,
+            "confidence": 0.977443,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " dos",
+            "startMs": 57028,
+            "endMs": 57254,
+            "timestampMs": null,
+            "confidence": 0.98858,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " cosas",
+            "startMs": 57254,
+            "endMs": 57581,
+            "timestampMs": null,
+            "confidence": 0.991762,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " completamente",
+            "startMs": 57581,
+            "endMs": 58311,
+            "timestampMs": null,
+            "confidence": 0.975633,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " distintas.",
+            "startMs": 58311,
+            "endMs": 58839,
+            "timestampMs": null,
+            "confidence": 0.955589,
+            "parte": "cuerpo"
+          }
+        ],
+        "cuerpoInicioMs": 0,
+        "cuerpoRecorteMs": 0,
+        "cierreInicioMs": null,
+        "duracionMs": 59313
+      }
+    },
+    "cuerpoMs": 59313,
+    "descartadas": [],
+    "texto": [
+      "Seis sentencias, las seis falsas, y el abogado llevaba 30 años ejerciendo. Nueva York, 2023. Un abogado presenta ante un juez federal seis casos que respaldan su argumento. No los inventó él, se los dio chat GPT, con nombres, números y citas. Y ojo porque esto es lo importante. Él sí desconfió, le preguntó a la herramienta si los casos eran reales y la herramienta le dijo que sí. Cinco mil dólares de sanción y su nombre en todos los titulares del mundo jurídico. Ahora, si estás pensando\"eso es problema de abogados\" te tengo una mala noticia. Si escribes código es el método de una librería que no existe, con una firma perfecta y sus parámetros razonables. Si investigas es el paper que no aparece en ningún lado, es el mismo mecanismo cambiando de disfraz. Él no falló por utilizar inteligencia artificial. Falló porque creyó que estaba buscando algo confiable. Un buscador te trae lo que existe, esto te construye lo que suena bien. Y son dos cosas completamente distintas."
+    ],
+    "avisos": [
+      "trifuerza: sin cierre grabado disponible"
+    ]
+  },
+  "golpes": [
+    {
+      "en": "30 años",
+      "estilo": "golpe",
+      "texto": "30 años"
+    },
+    {
+      "en": "disfraz",
+      "estilo": "golpe",
+      "texto": "disfraz"
+    },
+    {
+      "en": "construye",
+      "estilo": "frase",
+      "texto": "Te construye lo que *suena bien*"
+    },
+    {
+      "en": "distintas",
+      "estilo": "golpe",
+      "texto": "Distintas"
+    }
+  ]
+}

@@ -1,0 +1,974 @@
+{
+  "plantilla": "Montaje",
+  "tipo": "cuerpo",
+  "sinCierre": true,
+  "lowerThird": "Abogado y desarrollador de software",
+  "correcciones": [
+    {
+      "de": "Banegas",
+      "a": "Vanegas"
+    },
+    {
+      "de": "TriFuerza",
+      "a": "Trifuerza"
+    },
+    {
+      "de": "contracto",
+      "a": "Contrappto"
+    },
+    {
+      "de": "Contrapto",
+      "a": "Contrappto"
+    },
+    {
+      "de": "cuentas de cobre",
+      "a": "cuentas de cobro"
+    },
+    {
+      "de": "cuentas de cobra",
+      "a": "cuentas de cobro"
+    },
+    {
+      "de": "Apasionadamente sin enojo de soledad",
+      "a": "Cien años de soledad"
+    },
+    {
+      "de": "Que belleza",
+      "a": "Qué belleza"
+    }
+  ],
+  "slug": "x03-realismo-magico",
+  "codigo": "X03",
+  "titulo": "Lo que hace mágico al realismo mágico",
+  "tono": "sobrio",
+  "cuentas": [
+    "juanda"
+  ],
+  "cuerpo": {
+    "archivo": "copy_3A133537-8A11-4059-B8CD-187B1C353C03.mov"
+  },
+  "resaltar": [
+    "mágico",
+    "imposibles",
+    "normal",
+    "Colombia",
+    "Gabo"
+  ],
+  "verificar": [
+    {
+      "dato": "Serie de Netflix basada en Cien años de soledad (2024)",
+      "estado": "pendiente"
+    }
+  ],
+  "generado": {
+    "beats": [
+      {
+        "tipo": "libro",
+        "en": "leer",
+        "hasta": "y después",
+        "titulo": "Cien años de soledad",
+        "autor": "Gabriel García Márquez",
+        "inicioMs": 913,
+        "finMs": 3365
+      },
+      {
+        "tipo": "tarjeta",
+        "en": "serie",
+        "hasta": "me pregunté",
+        "icono": "Tv",
+        "titulo": "Y la serie de *Netflix*",
+        "inicioMs": 5692,
+        "finMs": 6808
+      },
+      {
+        "tipo": "comparativa",
+        "en": "acontecimientos",
+        "hasta": "Esa es",
+        "columnas": [
+          "imposibles",
+          "normal"
+        ],
+        "izquierda": {
+          "titulo": "Lo imposible",
+          "items": [
+            "Acontecimientos que parecen imposibles"
+          ]
+        },
+        "derecha": {
+          "titulo": "Contado como *normal*",
+          "items": [
+            "Relatado como lo más normal del mundo"
+          ]
+        },
+        "inicioMs": 17079,
+        "finMs": 21429,
+        "columnasCuadros": [
+          47,
+          106
+        ]
+      },
+      {
+        "tipo": "tarjeta",
+        "en": "Colombia",
+        "hasta": "Gabo",
+        "icono": "MapPin",
+        "titulo": "La historia de Colombia, *en metáfora*",
+        "inicioMs": 24427,
+        "finMs": 31607
+      }
+    ],
+    "montajes": {
+      "juanda": {
+        "segmentos": [
+          {
+            "desde": 4.036,
+            "hasta": 9.936,
+            "archivo": "limpios/2026-10/copy_3A133537-8A11-4059-B8CD-187B1C353C03.mp4",
+            "parte": "cuerpo",
+            "velocidad": 1.12
+          },
+          {
+            "desde": 10.236,
+            "hasta": 13.436,
+            "archivo": "limpios/2026-10/copy_3A133537-8A11-4059-B8CD-187B1C353C03.mp4",
+            "parte": "cuerpo",
+            "velocidad": 1.12
+          },
+          {
+            "desde": 13.636,
+            "hasta": 36.736,
+            "archivo": "limpios/2026-10/copy_3A133537-8A11-4059-B8CD-187B1C353C03.mp4",
+            "parte": "cuerpo",
+            "velocidad": 1.12
+          },
+          {
+            "desde": 36.936,
+            "hasta": 42.606,
+            "archivo": "limpios/2026-10/copy_3A133537-8A11-4059-B8CD-187B1C353C03.mp4",
+            "parte": "cuerpo",
+            "velocidad": 1.12
+          }
+        ],
+        "subtitulos": [
+          {
+            "text": " Después",
+            "startMs": 179,
+            "endMs": 699,
+            "timestampMs": null,
+            "confidence": 0.279896,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " de",
+            "startMs": 699,
+            "endMs": 913,
+            "timestampMs": null,
+            "confidence": 0.988431,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " leer",
+            "startMs": 913,
+            "endMs": 1250,
+            "timestampMs": null,
+            "confidence": 0.973838,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Cien años de soledad",
+            "startMs": 1518,
+            "endMs": 3365,
+            "timestampMs": null,
+            "confidence": 0.331889,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " y",
+            "startMs": 3365,
+            "endMs": 3482,
+            "timestampMs": null,
+            "confidence": 0.702464,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " después",
+            "startMs": 3750,
+            "endMs": 4123,
+            "timestampMs": null,
+            "confidence": 0.836596,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " de",
+            "startMs": 4123,
+            "endMs": 4276,
+            "timestampMs": null,
+            "confidence": 0.943423,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ver",
+            "startMs": 4276,
+            "endMs": 4474,
+            "timestampMs": null,
+            "confidence": 0.922609,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " además",
+            "startMs": 4474,
+            "endMs": 4803,
+            "timestampMs": null,
+            "confidence": 0.602817,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " esa",
+            "startMs": 4803,
+            "endMs": 5000,
+            "timestampMs": null,
+            "confidence": 0.592654,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " gran",
+            "startMs": 5446,
+            "endMs": 5692,
+            "timestampMs": null,
+            "confidence": 0.966851,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " serie",
+            "startMs": 5692,
+            "endMs": 5982,
+            "timestampMs": null,
+            "confidence": 0.996075,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 5982,
+            "endMs": 6183,
+            "timestampMs": null,
+            "confidence": 0.967532,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " sacó",
+            "startMs": 6183,
+            "endMs": 6429,
+            "timestampMs": null,
+            "confidence": 0.919758,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Netflix",
+            "startMs": 6429,
+            "endMs": 6808,
+            "timestampMs": null,
+            "confidence": 0.818788,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " me",
+            "startMs": 6808,
+            "endMs": 6964,
+            "timestampMs": null,
+            "confidence": 0.564384,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " pregunté",
+            "startMs": 7232,
+            "endMs": 7553,
+            "timestampMs": null,
+            "confidence": 0.820425,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " y",
+            "startMs": 7553,
+            "endMs": 7637,
+            "timestampMs": null,
+            "confidence": 0.298163,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " bueno,",
+            "startMs": 7637,
+            "endMs": 7857,
+            "timestampMs": null,
+            "confidence": 0.383048,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ¿qué",
+            "startMs": 8304,
+            "endMs": 8554,
+            "timestampMs": null,
+            "confidence": 0.750989,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " es",
+            "startMs": 8554,
+            "endMs": 8750,
+            "timestampMs": null,
+            "confidence": 0.978887,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " lo",
+            "startMs": 9107,
+            "endMs": 9261,
+            "timestampMs": null,
+            "confidence": 0.992998,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 9261,
+            "endMs": 9458,
+            "timestampMs": null,
+            "confidence": 0.995053,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " hace",
+            "startMs": 9458,
+            "endMs": 9699,
+            "timestampMs": null,
+            "confidence": 0.971306,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 9699,
+            "endMs": 9896,
+            "timestampMs": null,
+            "confidence": 0.98314,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " el",
+            "startMs": 9896,
+            "endMs": 10049,
+            "timestampMs": null,
+            "confidence": 0.939003,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " realismo",
+            "startMs": 10049,
+            "endMs": 10466,
+            "timestampMs": null,
+            "confidence": 0.527658,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " mágico",
+            "startMs": 10466,
+            "endMs": 10795,
+            "timestampMs": null,
+            "confidence": 0.983706,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " sea",
+            "startMs": 10795,
+            "endMs": 10992,
+            "timestampMs": null,
+            "confidence": 0.991106,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tan",
+            "startMs": 10992,
+            "endMs": 11189,
+            "timestampMs": null,
+            "confidence": 0.99667,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " mágico?",
+            "startMs": 11189,
+            "endMs": 11518,
+            "timestampMs": null,
+            "confidence": 0.923111,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Lo",
+            "startMs": 12054,
+            "endMs": 12228,
+            "timestampMs": null,
+            "confidence": 0.649256,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 12228,
+            "endMs": 12453,
+            "timestampMs": null,
+            "confidence": 0.997995,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " lo",
+            "startMs": 12453,
+            "endMs": 12627,
+            "timestampMs": null,
+            "confidence": 0.98159,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " hace",
+            "startMs": 12627,
+            "endMs": 12901,
+            "timestampMs": null,
+            "confidence": 0.994865,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ver",
+            "startMs": 12901,
+            "endMs": 13125,
+            "timestampMs": null,
+            "confidence": 0.995551,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " así",
+            "startMs": 13571,
+            "endMs": 13764,
+            "timestampMs": null,
+            "confidence": 0.984324,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " es",
+            "startMs": 13764,
+            "endMs": 13914,
+            "timestampMs": null,
+            "confidence": 0.871876,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 13914,
+            "endMs": 14107,
+            "timestampMs": null,
+            "confidence": 0.992085,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Gabo",
+            "startMs": 14375,
+            "endMs": 14621,
+            "timestampMs": null,
+            "confidence": 0.799077,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " logra",
+            "startMs": 14621,
+            "endMs": 14911,
+            "timestampMs": null,
+            "confidence": 0.958336,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " en",
+            "startMs": 15268,
+            "endMs": 15455,
+            "timestampMs": null,
+            "confidence": 0.799734,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " un",
+            "startMs": 15455,
+            "endMs": 15643,
+            "timestampMs": null,
+            "confidence": 0.955766,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " mismo",
+            "startMs": 15643,
+            "endMs": 15991,
+            "timestampMs": null,
+            "confidence": 0.970536,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " mundo",
+            "startMs": 15991,
+            "endMs": 16339,
+            "timestampMs": null,
+            "confidence": 0.993741,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " crear",
+            "startMs": 16786,
+            "endMs": 17079,
+            "timestampMs": null,
+            "confidence": 0.921978,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " acontecimientos",
+            "startMs": 17079,
+            "endMs": 17823,
+            "timestampMs": null,
+            "confidence": 0.97244,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 17823,
+            "endMs": 18026,
+            "timestampMs": null,
+            "confidence": 0.979406,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " parecen",
+            "startMs": 18026,
+            "endMs": 18410,
+            "timestampMs": null,
+            "confidence": 0.994469,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " imposibles",
+            "startMs": 18410,
+            "endMs": 18929,
+            "timestampMs": null,
+            "confidence": 0.975422,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " y",
+            "startMs": 19196,
+            "endMs": 19304,
+            "timestampMs": null,
+            "confidence": 0.985673,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " relatarlos",
+            "startMs": 19304,
+            "endMs": 19795,
+            "timestampMs": null,
+            "confidence": 0.734111,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " como",
+            "startMs": 19795,
+            "endMs": 20029,
+            "timestampMs": null,
+            "confidence": 0.98702,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " lo",
+            "startMs": 20029,
+            "endMs": 20179,
+            "timestampMs": null,
+            "confidence": 0.987408,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " más",
+            "startMs": 20179,
+            "endMs": 20371,
+            "timestampMs": null,
+            "confidence": 0.992301,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " normal",
+            "startMs": 20371,
+            "endMs": 20691,
+            "timestampMs": null,
+            "confidence": 0.987193,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " del",
+            "startMs": 20691,
+            "endMs": 20883,
+            "timestampMs": null,
+            "confidence": 0.974152,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " mundo.",
+            "startMs": 20883,
+            "endMs": 21161,
+            "timestampMs": null,
+            "confidence": 0.474502,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Esa",
+            "startMs": 21429,
+            "endMs": 21612,
+            "timestampMs": null,
+            "confidence": 0.916366,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " es",
+            "startMs": 21612,
+            "endMs": 21754,
+            "timestampMs": null,
+            "confidence": 0.995311,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " la",
+            "startMs": 21754,
+            "endMs": 21896,
+            "timestampMs": null,
+            "confidence": 0.993377,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " clave",
+            "startMs": 21896,
+            "endMs": 22161,
+            "timestampMs": null,
+            "confidence": 0.997468,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " del",
+            "startMs": 22161,
+            "endMs": 22344,
+            "timestampMs": null,
+            "confidence": 0.891868,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " realismo",
+            "startMs": 22344,
+            "endMs": 22730,
+            "timestampMs": null,
+            "confidence": 0.982594,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " mágico.",
+            "startMs": 22730,
+            "endMs": 23036,
+            "timestampMs": null,
+            "confidence": 0.481974,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Qué belleza",
+            "startMs": 23304,
+            "endMs": 23877,
+            "timestampMs": null,
+            "confidence": 0.719907,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 23877,
+            "endMs": 24075,
+            "timestampMs": null,
+            "confidence": 0.979914,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " acá",
+            "startMs": 24075,
+            "endMs": 24273,
+            "timestampMs": null,
+            "confidence": 0.971958,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " en",
+            "startMs": 24273,
+            "endMs": 24427,
+            "timestampMs": null,
+            "confidence": 0.981328,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Colombia",
+            "startMs": 24427,
+            "endMs": 24846,
+            "timestampMs": null,
+            "confidence": 0.992447,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " un",
+            "startMs": 24846,
+            "endMs": 25000,
+            "timestampMs": null,
+            "confidence": 0.42341,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " autor",
+            "startMs": 25446,
+            "endMs": 25758,
+            "timestampMs": null,
+            "confidence": 0.995716,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " haya",
+            "startMs": 25758,
+            "endMs": 26022,
+            "timestampMs": null,
+            "confidence": 0.949113,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " creado",
+            "startMs": 26022,
+            "endMs": 26382,
+            "timestampMs": null,
+            "confidence": 0.998167,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " una",
+            "startMs": 26382,
+            "endMs": 26598,
+            "timestampMs": null,
+            "confidence": 0.958881,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " historia",
+            "startMs": 26598,
+            "endMs": 27054,
+            "timestampMs": null,
+            "confidence": 0.989432,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 27321,
+            "endMs": 27522,
+            "timestampMs": null,
+            "confidence": 0.999298,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " describa",
+            "startMs": 27522,
+            "endMs": 27946,
+            "timestampMs": null,
+            "confidence": 0.822394,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " también",
+            "startMs": 27946,
+            "endMs": 28326,
+            "timestampMs": null,
+            "confidence": 0.518429,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " de",
+            "startMs": 28326,
+            "endMs": 28482,
+            "timestampMs": null,
+            "confidence": 0.865118,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " forma",
+            "startMs": 28929,
+            "endMs": 29228,
+            "timestampMs": null,
+            "confidence": 0.993517,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tan",
+            "startMs": 29228,
+            "endMs": 29435,
+            "timestampMs": null,
+            "confidence": 0.983363,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " metafórica",
+            "startMs": 29435,
+            "endMs": 29964,
+            "timestampMs": null,
+            "confidence": 0.959344,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " la",
+            "startMs": 29964,
+            "endMs": 30125,
+            "timestampMs": null,
+            "confidence": 0.976496,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " historia",
+            "startMs": 30125,
+            "endMs": 30562,
+            "timestampMs": null,
+            "confidence": 0.993178,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " de",
+            "startMs": 30562,
+            "endMs": 30723,
+            "timestampMs": null,
+            "confidence": 0.993036,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Colombia.",
+            "startMs": 30723,
+            "endMs": 31161,
+            "timestampMs": null,
+            "confidence": 0.884094,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Gabo,",
+            "startMs": 31607,
+            "endMs": 31964,
+            "timestampMs": null,
+            "confidence": 0.517903,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " para",
+            "startMs": 32232,
+            "endMs": 32431,
+            "timestampMs": null,
+            "confidence": 0.974723,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " siempre",
+            "startMs": 32431,
+            "endMs": 32739,
+            "timestampMs": null,
+            "confidence": 0.99725,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " en",
+            "startMs": 32739,
+            "endMs": 32866,
+            "timestampMs": null,
+            "confidence": 0.993756,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " nuestra",
+            "startMs": 32866,
+            "endMs": 33174,
+            "timestampMs": null,
+            "confidence": 0.986583,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " memoria.",
+            "startMs": 33174,
+            "endMs": 33482,
+            "timestampMs": null,
+            "confidence": 0.947959,
+            "parte": "cuerpo"
+          }
+        ],
+        "cuerpoInicioMs": 0,
+        "cuerpoRecorteMs": 0,
+        "cierreInicioMs": null,
+        "duracionMs": 33812
+      }
+    },
+    "cuerpoMs": 33812,
+    "descartadas": [],
+    "texto": [
+      "Después de leer Apasionadamente sin enojo de soledad y después de ver además esa gran serie que sacó Netflix me pregunté y bueno, ¿qué es lo que hace que el realismo mágico sea tan mágico? Lo que lo hace ver así es que Gabo logra en un mismo mundo crear acontecimientos que parecen imposibles y relatarlos como lo más normal del mundo. Esa es la clave del realismo mágico. Qué belleza que acá en Colombia un autor haya creado una historia que describa también de forma tan metafórica la historia de Colombia. Gabo, para siempre en nuestra memoria."
+    ],
+    "avisos": []
+  },
+  "beats": [
+    {
+      "tipo": "libro",
+      "en": "leer",
+      "hasta": "y después",
+      "titulo": "Cien años de soledad",
+      "autor": "Gabriel García Márquez"
+    },
+    {
+      "tipo": "tarjeta",
+      "en": "serie",
+      "hasta": "me pregunté",
+      "icono": "Tv",
+      "titulo": "Y la serie de *Netflix*"
+    },
+    {
+      "tipo": "comparativa",
+      "en": "acontecimientos",
+      "hasta": "Esa es",
+      "columnas": [
+        "imposibles",
+        "normal"
+      ],
+      "izquierda": {
+        "titulo": "Lo imposible",
+        "items": [
+          "Acontecimientos que parecen imposibles"
+        ]
+      },
+      "derecha": {
+        "titulo": "Contado como *normal*",
+        "items": [
+          "Relatado como lo más normal del mundo"
+        ]
+      }
+    },
+    {
+      "tipo": "tarjeta",
+      "en": "Colombia",
+      "hasta": "Gabo",
+      "icono": "MapPin",
+      "titulo": "La historia de Colombia, *en metáfora*"
+    }
+  ],
+  "golpes": [
+    {
+      "en": "mágico",
+      "estilo": "serif"
+    },
+    {
+      "en": "clave",
+      "estilo": "golpe"
+    },
+    {
+      "en": "memoria",
+      "estilo": "serif"
+    }
+  ],
+  "variantes": {
+    "juanda": {
+      "cta": null
+    }
+  }
+}

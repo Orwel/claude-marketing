@@ -38,5 +38,20 @@
     "texto": "juanda.trifuerza",
     "web": "@juanda.trifuerza"
   },
-  "fondoEstilo": "grano"
+  "fondoEstilo": "grano",
+  "montaje": {
+    "grado": "contrast(1.06) saturate(1.06) sepia(0.05)",
+    "densidad": 2,
+    "subtitulos": {
+      "instagram": true,
+      "linkedin": true,
+      "tamano": 70
+    },
+    "cta": "Comenta CLASE",
+    "tono": "energico",
+    "logo": {
+      "src": "marcas/trifuerza/logo-horizontal-claro.png",
+      "alto": 58
+    }
+  }
 }

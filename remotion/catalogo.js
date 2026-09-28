@@ -1,7 +1,8 @@
 import contrappto from '../marcas/contrappto.json';
 import juanda from '../marcas/juanda.json';
+import trifuerza from '../marcas/trifuerza.json';
 
-export const MARCAS = { contrappto, juanda };
+export const MARCAS = { contrappto, juanda, trifuerza };
 
 /**
  * Todas las piezas de piezas/AAAA-MM/*.json, sin registrarlas a mano:

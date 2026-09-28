@@ -5,6 +5,25 @@ description: Produce un video (o carrusel) de marketing con el estudio Remotion 
 
 # Producir una pieza
 
+**Siempre que se edite metraje grabado de Juan David, leer primero [ESTANDAR.md](ESTANDAR.md)**: las
+reglas duras (nunca cortar lo que dice, desfase de audio, efectos sin agudos, música presente) y cómo
+darle dinamismo al texto con criterio propio.
+
+## Videos grabados del mes (plantilla Montaje)
+
+1. Copiar los crudos de Drive a `trabajo/<mes>/00-crudo` (robocopy; Drive bajo demanda es lento).
+2. Transcribir y armar: `npm run armar -- AAAA-MM [slug]` (limpia audio/imagen, corta, alinea
+   subtítulos, resuelve beats y encuadres). Revisar los avisos (`⚠`).
+3. **Leer la transcripción real** de cada pieza (`generado.texto`) y escribir en la pieza sus
+   `golpes`, ajustar `beats`, `resaltar` y `correcciones` según lo que dijo, no el guion.
+4. `npm run revisar -- AAAA-MM`: cada palabra dicha tiene que salir en pantalla (render.js lo exige).
+   Luego cuadros clave con `remotion still` (ver ESTANDAR §7).
+5. Renderizar: `npm run montaje -- AAAA-MM <slug> --cuenta=juanda --red=instagram [--rehacer]`,
+   o todo el mes en orden de prioridad con `npm run cola -- AAAA-MM [--rehacer]` (cada video llega a
+   Drive apenas termina). Para retocar a mano: `npm run estudio` (localhost:3000).
+
+## Piezas generadas (Animado, Vertical, DemoApp, Clase, Carrusel)
+
 1. **Entender el pedido.** Cuenta(s), objetivo, duración, guion de 6 líneas (gancho, quién soy, dato,
    ejemplo, qué hacer hoy, CTA), qué se ve, energía, voz, qué evitar. Si falta el guion o la cuenta,
    preguntar; lo demás se decide con `marcas/` y `docs/TONO.md`.

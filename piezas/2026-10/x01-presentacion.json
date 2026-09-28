@@ -1,0 +1,516 @@
+{
+  "plantilla": "Montaje",
+  "tipo": "cuerpo",
+  "sinCierre": true,
+  "correcciones": [
+    {
+      "de": "Banegas",
+      "a": "Vanegas"
+    },
+    {
+      "de": "TriFuerza",
+      "a": "Trifuerza"
+    },
+    {
+      "de": "contracto",
+      "a": "Contrappto"
+    },
+    {
+      "de": "Contrapto",
+      "a": "Contrappto"
+    },
+    {
+      "de": "cuentas de cobre",
+      "a": "cuentas de cobro"
+    },
+    {
+      "de": "cuentas de cobra",
+      "a": "cuentas de cobro"
+    }
+  ],
+  "slug": "x01-presentacion",
+  "codigo": "X01",
+  "titulo": "Quién soy",
+  "tono": "sobrio",
+  "cuentas": [
+    "juanda"
+  ],
+  "cuerpo": {
+    "archivo": "copy_564FA69F-9F5C-427E-B496-7FA5F72AFA4E.mov"
+  },
+  "resaltar": [
+    "abogado",
+    "desarrollador",
+    "Trifuerza",
+    "Contrappto"
+  ],
+  "verificar": [
+    {
+      "dato": "Contrappto: \"la primera aplicación de contratos digitales en el mundo\"",
+      "estado": "pendiente"
+    }
+  ],
+  "generado": {
+    "beats": [
+      {
+        "tipo": "escena",
+        "escena": "pasos",
+        "en": "abogado",
+        "hasta": "que es",
+        "ventana": "Juan David Vanegas",
+        "items": [
+          {
+            "texto": "Abogado",
+            "icono": "Scale",
+            "en": "abogado"
+          },
+          {
+            "texto": "Desarrollador",
+            "icono": "Code",
+            "en": "desarrollador"
+          },
+          {
+            "texto": "Creador",
+            "icono": "Sparkles",
+            "en": "creador"
+          }
+        ],
+        "inicioMs": 1518,
+        "finMs": 4554,
+        "itemsCuadros": [
+          7,
+          18,
+          66
+        ]
+      },
+      {
+        "tipo": "escena",
+        "escena": "pasos",
+        "en": "tecnología",
+        "hasta": "y de",
+        "ventana": "La Trifuerza",
+        "items": [
+          {
+            "texto": "Tecnología",
+            "icono": "Cpu",
+            "en": "tecnología"
+          },
+          {
+            "texto": "Diseño",
+            "icono": "Palette",
+            "en": "diseño"
+          },
+          {
+            "texto": "Derecho",
+            "icono": "Scale",
+            "en": "derecho"
+          }
+        ],
+        "inicioMs": 5792,
+        "finMs": 7411,
+        "itemsCuadros": [
+          7,
+          23,
+          36
+        ]
+      },
+      {
+        "tipo": "escena",
+        "escena": "app",
+        "en": "Contrappto",
+        "hasta": "Disfrútala",
+        "fondo3d": true,
+        "app": {
+          "archivo": "app/2026-10/contrappto.mp4",
+          "desde": 0,
+          "velocidad": 1,
+          "tapar": []
+        },
+        "titulo": "Contrappto",
+        "items": [
+          {
+            "texto": "Contratos digitales",
+            "icono": "FileCheck",
+            "en": "contratos"
+          }
+        ],
+        "inicioMs": 7671,
+        "finMs": 11518,
+        "itemsCuadros": [
+          65
+        ]
+      }
+    ],
+    "montajes": {
+      "juanda": {
+        "segmentos": [
+          {
+            "desde": 1.9,
+            "hasta": 15.8,
+            "archivo": "limpios/2026-10/copy_564FA69F-9F5C-427E-B496-7FA5F72AFA4E.mp4",
+            "parte": "cuerpo",
+            "velocidad": 1.12
+          }
+        ],
+        "subtitulos": [
+          {
+            "text": " Soy",
+            "startMs": 179,
+            "endMs": 371,
+            "timestampMs": null,
+            "confidence": 0.831324,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Juan",
+            "startMs": 371,
+            "endMs": 607,
+            "timestampMs": null,
+            "confidence": 0.981848,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " David",
+            "startMs": 607,
+            "endMs": 886,
+            "timestampMs": null,
+            "confidence": 0.983729,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Vanegas,",
+            "startMs": 886,
+            "endMs": 1250,
+            "timestampMs": null,
+            "confidence": 0.680125,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " abogado,",
+            "startMs": 1518,
+            "endMs": 1897,
+            "timestampMs": null,
+            "confidence": 0.743225,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " desarrollador",
+            "startMs": 1897,
+            "endMs": 2545,
+            "timestampMs": null,
+            "confidence": 0.99275,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " de",
+            "startMs": 2545,
+            "endMs": 2701,
+            "timestampMs": null,
+            "confidence": 0.960794,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " software,",
+            "startMs": 2701,
+            "endMs": 3125,
+            "timestampMs": null,
+            "confidence": 0.871058,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " creador",
+            "startMs": 3482,
+            "endMs": 3820,
+            "timestampMs": null,
+            "confidence": 0.94316,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " de",
+            "startMs": 3820,
+            "endMs": 3958,
+            "timestampMs": null,
+            "confidence": 0.990288,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Trifuerza,",
+            "startMs": 3958,
+            "endMs": 4375,
+            "timestampMs": null,
+            "confidence": 0.35146,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 4554,
+            "endMs": 4756,
+            "timestampMs": null,
+            "confidence": 0.782753,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " es",
+            "startMs": 4756,
+            "endMs": 4913,
+            "timestampMs": null,
+            "confidence": 0.991115,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " la",
+            "startMs": 4913,
+            "endMs": 5071,
+            "timestampMs": null,
+            "confidence": 0.994643,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " combinación",
+            "startMs": 5071,
+            "endMs": 5634,
+            "timestampMs": null,
+            "confidence": 0.978177,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " de",
+            "startMs": 5634,
+            "endMs": 5792,
+            "timestampMs": null,
+            "confidence": 0.99121,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tecnología,",
+            "startMs": 5792,
+            "endMs": 6310,
+            "timestampMs": null,
+            "confidence": 0.975284,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " diseño",
+            "startMs": 6310,
+            "endMs": 6647,
+            "timestampMs": null,
+            "confidence": 0.972648,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " y",
+            "startMs": 6647,
+            "endMs": 6760,
+            "timestampMs": null,
+            "confidence": 0.891803,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " derecho,",
+            "startMs": 6760,
+            "endMs": 7143,
+            "timestampMs": null,
+            "confidence": 0.558087,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " y",
+            "startMs": 7411,
+            "endMs": 7519,
+            "timestampMs": null,
+            "confidence": 0.97596,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " de",
+            "startMs": 7519,
+            "endMs": 7671,
+            "timestampMs": null,
+            "confidence": 0.975191,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Contrappto,",
+            "startMs": 7671,
+            "endMs": 8125,
+            "timestampMs": null,
+            "confidence": 0.43717,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " la",
+            "startMs": 8304,
+            "endMs": 8471,
+            "timestampMs": null,
+            "confidence": 0.96051,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " primera",
+            "startMs": 8471,
+            "endMs": 8879,
+            "timestampMs": null,
+            "confidence": 0.986639,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " aplicación",
+            "startMs": 8879,
+            "endMs": 9429,
+            "timestampMs": null,
+            "confidence": 0.981792,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " de",
+            "startMs": 9429,
+            "endMs": 9597,
+            "timestampMs": null,
+            "confidence": 0.995524,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " contratos",
+            "startMs": 9597,
+            "endMs": 10100,
+            "timestampMs": null,
+            "confidence": 0.928716,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " digitales",
+            "startMs": 10100,
+            "endMs": 10604,
+            "timestampMs": null,
+            "confidence": 0.983423,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " en",
+            "startMs": 10604,
+            "endMs": 10771,
+            "timestampMs": null,
+            "confidence": 0.974185,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " el",
+            "startMs": 10771,
+            "endMs": 10938,
+            "timestampMs": null,
+            "confidence": 0.993908,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " mundo.",
+            "startMs": 10938,
+            "endMs": 11250,
+            "timestampMs": null,
+            "confidence": 0.910429,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ¡Disfrútala!",
+            "startMs": 11518,
+            "endMs": 12143,
+            "timestampMs": null,
+            "confidence": 0.592821,
+            "parte": "cuerpo"
+          }
+        ],
+        "cuerpoInicioMs": 0,
+        "cuerpoRecorteMs": 0,
+        "cierreInicioMs": null,
+        "duracionMs": 12411
+      }
+    },
+    "cuerpoMs": 12411,
+    "descartadas": [],
+    "texto": [
+      "Soy Juan David Banegas, abogado, desarrollador de software, creador de TriFuerza, que es la combinación de tecnología, diseño y derecho, y de contracto, la primera aplicación de contratos digitales en el mundo. ¡Disfrútala!"
+    ],
+    "avisos": []
+  },
+  "beats": [
+    {
+      "tipo": "escena",
+      "escena": "pasos",
+      "en": "abogado",
+      "hasta": "que es",
+      "ventana": "Juan David Vanegas",
+      "items": [
+        {
+          "texto": "Abogado",
+          "icono": "Scale",
+          "en": "abogado"
+        },
+        {
+          "texto": "Desarrollador",
+          "icono": "Code",
+          "en": "desarrollador"
+        },
+        {
+          "texto": "Creador",
+          "icono": "Sparkles",
+          "en": "creador"
+        }
+      ]
+    },
+    {
+      "tipo": "escena",
+      "escena": "pasos",
+      "en": "tecnología",
+      "hasta": "y de",
+      "ventana": "La Trifuerza",
+      "items": [
+        {
+          "texto": "Tecnología",
+          "icono": "Cpu",
+          "en": "tecnología"
+        },
+        {
+          "texto": "Diseño",
+          "icono": "Palette",
+          "en": "diseño"
+        },
+        {
+          "texto": "Derecho",
+          "icono": "Scale",
+          "en": "derecho"
+        }
+      ]
+    },
+    {
+      "tipo": "escena",
+      "escena": "app",
+      "en": "Contrappto",
+      "hasta": "Disfrútala",
+      "fondo3d": true,
+      "app": {
+        "archivo": "app/2026-10/contrappto.mp4",
+        "desde": 0,
+        "velocidad": 1,
+        "tapar": []
+      },
+      "titulo": "Contrappto",
+      "items": [
+        {
+          "texto": "Contratos digitales",
+          "icono": "FileCheck",
+          "en": "contratos"
+        }
+      ]
+    }
+  ],
+  "golpes": [
+    {
+      "en": "Disfrútala",
+      "estilo": "pastilla"
+    }
+  ],
+  "variantes": {
+    "juanda": {
+      "cta": null
+    }
+  }
+}

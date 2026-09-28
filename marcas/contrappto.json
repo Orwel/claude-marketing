@@ -39,5 +39,24 @@
     "texto": "contrappto",
     "web": "contrappto.com"
   },
-  "fondoEstilo": "rejilla"
+  "fondoEstilo": "rejilla",
+  "montaje": {
+    "grado": "contrast(1.07) saturate(0.88) brightness(0.97) hue-rotate(-4deg)",
+    "densidad": 1,
+    "subtitulos": {
+      "instagram": true,
+      "linkedin": true,
+      "tamano": 60
+    },
+    "cta": "Agenda una demo",
+    "tono": "tension",
+    "marcaDeAgua": "marcas/contrappto/icono.png",
+    "_subtitulos": "Activados el 28-sep-2026: toda palabra dicha sale en pantalla (ESTANDAR §4); las piezas de octubre ya entregadas salieron sin subtitulos."
+  },
+  "web": {
+    "titulo": "Contrappto",
+    "acentoTexto": "#85B7EB",
+    "elevado": "#17354A",
+    "_fuente": "contrappto/src/app/globals.css (tokens ink/slate/elevated/sky/mist) — 28-sep-2026"
+  }
 }

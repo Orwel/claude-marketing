@@ -1,0 +1,836 @@
+{
+  "plantilla": "Montaje",
+  "tipo": "cuerpo",
+  "sinCierre": true,
+  "lowerThird": "Abogado y desarrollador de software",
+  "correcciones": [
+    {
+      "de": "Banegas",
+      "a": "Vanegas"
+    },
+    {
+      "de": "TriFuerza",
+      "a": "Trifuerza"
+    },
+    {
+      "de": "contracto",
+      "a": "Contrappto"
+    },
+    {
+      "de": "Contrapto",
+      "a": "Contrappto"
+    },
+    {
+      "de": "cuentas de cobre",
+      "a": "cuentas de cobro"
+    },
+    {
+      "de": "cuentas de cobra",
+      "a": "cuentas de cobro"
+    }
+  ],
+  "slug": "ctp-cobros",
+  "codigo": "CTP_COB",
+  "titulo": "Tu contrato cobra solo",
+  "tono": "tension",
+  "cuentas": [
+    "contrappto"
+  ],
+  "cuerpo": {
+    "archivo": "copy_D6FD74B1-5D54-4768-9CDC-10237B3C5289.mov"
+  },
+  "resaltar": [
+    "alertas",
+    "proyecto",
+    "revolución",
+    "pagar",
+    "automáticamente"
+  ],
+  "verificar": [
+    {
+      "dato": "Contrappto: alertas, vencimientos, tareas, hechos y documentos adjuntos por contrato; cobro automático al cliente",
+      "estado": "pendiente"
+    }
+  ],
+  "generado": {
+    "beats": [
+      {
+        "tipo": "escena",
+        "escena": "app",
+        "en": "alertas",
+        "hasta": "escríbeme",
+        "app": {
+          "archivo": "app/2026-10/contrappto.mp4",
+          "desde": 16,
+          "velocidad": 0.7,
+          "tapar": [
+            {
+              "x": 0.1,
+              "y": 0.146,
+              "w": 0.87,
+              "h": 0.044,
+              "texto": "Contrato de arriendo vacacional"
+            }
+          ]
+        },
+        "titulo": "El contrato como *proyecto*",
+        "items": [
+          {
+            "texto": "Alertas y vencimientos",
+            "icono": "Bell",
+            "en": "alertas"
+          },
+          {
+            "texto": "Tareas y hechos",
+            "icono": "ListChecks",
+            "en": "tareas"
+          },
+          {
+            "texto": "Documentos adjuntos",
+            "icono": "Paperclip",
+            "en": "documentos"
+          }
+        ],
+        "inicioMs": 2012,
+        "finMs": 10714,
+        "itemsCuadros": [
+          7,
+          51,
+          102
+        ]
+      },
+      {
+        "tipo": "escena",
+        "escena": "versus",
+        "en": "correo",
+        "hasta": "",
+        "dura": 6,
+        "columnas": [
+          "correo",
+          "sistema"
+        ],
+        "antes": {
+          "titulo": "\"Oiga, tiene que pagar\"",
+          "detalle": "Perseguir a cada cliente por correo.",
+          "chips": [
+            "Manual",
+            "Incómodo"
+          ],
+          "icono": "Mail"
+        },
+        "despues": {
+          "titulo": "Cobro automático",
+          "detalle": "El sistema le recuerda el pago por ti.",
+          "chips": [
+            "Automático",
+            "Sin fricción"
+          ],
+          "icono": "BellRing"
+        },
+        "inicioMs": 20245,
+        "finMs": 26245,
+        "columnasCuadros": [
+          7,
+          98
+        ]
+      }
+    ],
+    "montajes": {
+      "contrappto": {
+        "segmentos": [
+          {
+            "desde": 1.599,
+            "hasta": 30.129,
+            "archivo": "limpios/2026-10/copy_D6FD74B1-5D54-4768-9CDC-10237B3C5289.mp4",
+            "parte": "cuerpo",
+            "velocidad": 1.12
+          }
+        ],
+        "subtitulos": [
+          {
+            "text": " Si",
+            "startMs": 179,
+            "endMs": 343,
+            "timestampMs": null,
+            "confidence": 0.60206,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " quieres",
+            "startMs": 343,
+            "endMs": 743,
+            "timestampMs": null,
+            "confidence": 0.938892,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 743,
+            "endMs": 954,
+            "timestampMs": null,
+            "confidence": 0.960838,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tus",
+            "startMs": 954,
+            "endMs": 1165,
+            "timestampMs": null,
+            "confidence": 0.967951,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " contratos",
+            "startMs": 1165,
+            "endMs": 1659,
+            "timestampMs": null,
+            "confidence": 0.959146,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tengan",
+            "startMs": 1659,
+            "endMs": 2012,
+            "timestampMs": null,
+            "confidence": 0.990369,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " alertas,",
+            "startMs": 2012,
+            "endMs": 2411,
+            "timestampMs": null,
+            "confidence": 0.949723,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " vencimientos,",
+            "startMs": 2589,
+            "endMs": 3304,
+            "timestampMs": null,
+            "confidence": 0.806315,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tareas,",
+            "startMs": 3482,
+            "endMs": 3929,
+            "timestampMs": null,
+            "confidence": 0.93781,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " hechos,",
+            "startMs": 4286,
+            "endMs": 4643,
+            "timestampMs": null,
+            "confidence": 0.821251,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " documentos",
+            "startMs": 5179,
+            "endMs": 5621,
+            "timestampMs": null,
+            "confidence": 0.870347,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " adjuntos",
+            "startMs": 5621,
+            "endMs": 5988,
+            "timestampMs": null,
+            "confidence": 0.746951,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 5988,
+            "endMs": 6161,
+            "timestampMs": null,
+            "confidence": 0.993369,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " se",
+            "startMs": 6339,
+            "endMs": 6496,
+            "timestampMs": null,
+            "confidence": 0.980834,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " le",
+            "startMs": 6496,
+            "endMs": 6652,
+            "timestampMs": null,
+            "confidence": 0.5956,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " trate",
+            "startMs": 6652,
+            "endMs": 6942,
+            "timestampMs": null,
+            "confidence": 0.876132,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " como",
+            "startMs": 6942,
+            "endMs": 7188,
+            "timestampMs": null,
+            "confidence": 0.97532,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " un",
+            "startMs": 7188,
+            "endMs": 7344,
+            "timestampMs": null,
+            "confidence": 0.968694,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " proyecto",
+            "startMs": 7344,
+            "endMs": 7768,
+            "timestampMs": null,
+            "confidence": 0.997647,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 7946,
+            "endMs": 8140,
+            "timestampMs": null,
+            "confidence": 0.31927,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " los",
+            "startMs": 8140,
+            "endMs": 8333,
+            "timestampMs": null,
+            "confidence": 0.897775,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " puedas",
+            "startMs": 8333,
+            "endMs": 8655,
+            "timestampMs": null,
+            "confidence": 0.942477,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " visualizar",
+            "startMs": 8655,
+            "endMs": 9150,
+            "timestampMs": null,
+            "confidence": 0.988012,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " con",
+            "startMs": 9150,
+            "endMs": 9344,
+            "timestampMs": null,
+            "confidence": 0.916518,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " un",
+            "startMs": 9344,
+            "endMs": 9494,
+            "timestampMs": null,
+            "confidence": 0.968106,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " contrato",
+            "startMs": 9494,
+            "endMs": 9903,
+            "timestampMs": null,
+            "confidence": 0.991983,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " digital,",
+            "startMs": 9903,
+            "endMs": 10268,
+            "timestampMs": null,
+            "confidence": 0.815356,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " escríbeme",
+            "startMs": 10714,
+            "endMs": 11112,
+            "timestampMs": null,
+            "confidence": 0.514962,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " y",
+            "startMs": 11112,
+            "endMs": 11207,
+            "timestampMs": null,
+            "confidence": 0.99774,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " te",
+            "startMs": 11207,
+            "endMs": 11339,
+            "timestampMs": null,
+            "confidence": 0.975606,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " doy",
+            "startMs": 11696,
+            "endMs": 11887,
+            "timestampMs": null,
+            "confidence": 0.986963,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " la",
+            "startMs": 11887,
+            "endMs": 12034,
+            "timestampMs": null,
+            "confidence": 0.994021,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " bienvenida",
+            "startMs": 12034,
+            "endMs": 12519,
+            "timestampMs": null,
+            "confidence": 0.996341,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " al",
+            "startMs": 12519,
+            "endMs": 12666,
+            "timestampMs": null,
+            "confidence": 0.974423,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " nuevo",
+            "startMs": 12666,
+            "endMs": 12940,
+            "timestampMs": null,
+            "confidence": 0.986527,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " mundo",
+            "startMs": 12940,
+            "endMs": 13214,
+            "timestampMs": null,
+            "confidence": 0.998704,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " y",
+            "startMs": 13214,
+            "endMs": 13320,
+            "timestampMs": null,
+            "confidence": 0.956207,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " la",
+            "startMs": 13320,
+            "endMs": 13467,
+            "timestampMs": null,
+            "confidence": 0.936517,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " revolución",
+            "startMs": 13467,
+            "endMs": 13952,
+            "timestampMs": null,
+            "confidence": 0.97819,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " de",
+            "startMs": 13952,
+            "endMs": 14100,
+            "timestampMs": null,
+            "confidence": 0.98195,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " los",
+            "startMs": 14100,
+            "endMs": 14289,
+            "timestampMs": null,
+            "confidence": 0.985902,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " contratos",
+            "startMs": 14289,
+            "endMs": 14732,
+            "timestampMs": null,
+            "confidence": 0.98871,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " digitales",
+            "startMs": 15000,
+            "endMs": 15387,
+            "timestampMs": null,
+            "confidence": 0.975861,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 15387,
+            "endMs": 15553,
+            "timestampMs": null,
+            "confidence": 0.916567,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " apenas",
+            "startMs": 15553,
+            "endMs": 15829,
+            "timestampMs": null,
+            "confidence": 0.98688,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " se",
+            "startMs": 15829,
+            "endMs": 15958,
+            "timestampMs": null,
+            "confidence": 0.502893,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " está",
+            "startMs": 15958,
+            "endMs": 16161,
+            "timestampMs": null,
+            "confidence": 0.883995,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " comenzando.",
+            "startMs": 16339,
+            "endMs": 16843,
+            "timestampMs": null,
+            "confidence": 0.806303,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " Te",
+            "startMs": 16843,
+            "endMs": 16996,
+            "timestampMs": null,
+            "confidence": 0.97191,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " permitirán",
+            "startMs": 16996,
+            "endMs": 17500,
+            "timestampMs": null,
+            "confidence": 0.983052,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 17946,
+            "endMs": 18128,
+            "timestampMs": null,
+            "confidence": 0.988489,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " no",
+            "startMs": 18128,
+            "endMs": 18268,
+            "timestampMs": null,
+            "confidence": 0.995266,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " le",
+            "startMs": 18268,
+            "endMs": 18409,
+            "timestampMs": null,
+            "confidence": 0.940082,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " vuelvas",
+            "startMs": 18409,
+            "endMs": 18750,
+            "timestampMs": null,
+            "confidence": 0.954123,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " a",
+            "startMs": 19196,
+            "endMs": 19304,
+            "timestampMs": null,
+            "confidence": 0.997417,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tener",
+            "startMs": 19304,
+            "endMs": 19581,
+            "timestampMs": null,
+            "confidence": 0.960816,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 19581,
+            "endMs": 19774,
+            "timestampMs": null,
+            "confidence": 0.997417,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " enviar",
+            "startMs": 19774,
+            "endMs": 20095,
+            "timestampMs": null,
+            "confidence": 0.993335,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " un",
+            "startMs": 20095,
+            "endMs": 20245,
+            "timestampMs": null,
+            "confidence": 0.957589,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " correo",
+            "startMs": 20245,
+            "endMs": 20565,
+            "timestampMs": null,
+            "confidence": 0.998936,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " a",
+            "startMs": 20565,
+            "endMs": 20672,
+            "timestampMs": null,
+            "confidence": 0.991386,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ningún",
+            "startMs": 20672,
+            "endMs": 20993,
+            "timestampMs": null,
+            "confidence": 0.972661,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " cliente",
+            "startMs": 20993,
+            "endMs": 21356,
+            "timestampMs": null,
+            "confidence": 0.997708,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " diciéndole\"Oiga,",
+            "startMs": 21356,
+            "endMs": 22020,
+            "timestampMs": null,
+            "confidence": 0.340376,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " tiene",
+            "startMs": 22020,
+            "endMs": 22297,
+            "timestampMs": null,
+            "confidence": 0.859685,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " que",
+            "startMs": 22297,
+            "endMs": 22490,
+            "timestampMs": null,
+            "confidence": 0.99822,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " pagar\",",
+            "startMs": 22490,
+            "endMs": 22768,
+            "timestampMs": null,
+            "confidence": 0.455507,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " un",
+            "startMs": 23125,
+            "endMs": 23283,
+            "timestampMs": null,
+            "confidence": 0.935069,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " sistema",
+            "startMs": 23283,
+            "endMs": 23667,
+            "timestampMs": null,
+            "confidence": 0.991605,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " automáticamente",
+            "startMs": 23667,
+            "endMs": 24412,
+            "timestampMs": null,
+            "confidence": 0.908363,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " lo",
+            "startMs": 24412,
+            "endMs": 24570,
+            "timestampMs": null,
+            "confidence": 0.975221,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " hará",
+            "startMs": 24570,
+            "endMs": 24818,
+            "timestampMs": null,
+            "confidence": 0.992138,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " por",
+            "startMs": 24818,
+            "endMs": 25021,
+            "timestampMs": null,
+            "confidence": 0.973361,
+            "parte": "cuerpo"
+          },
+          {
+            "text": " ti.",
+            "startMs": 25021,
+            "endMs": 25179,
+            "timestampMs": null,
+            "confidence": 0.941151,
+            "parte": "cuerpo"
+          }
+        ],
+        "cuerpoInicioMs": 0,
+        "cuerpoRecorteMs": 0,
+        "cierreInicioMs": null,
+        "duracionMs": 25473
+      }
+    },
+    "cuerpoMs": 25473,
+    "descartadas": [],
+    "texto": [
+      "Si quieres que tus contratos tengan alertas, vencimientos, tareas, hechos, documentos adjuntos que se le trate como un proyecto que los puedas visualizar con un contrato digital, escríbeme y te doy la bienvenida al nuevo mundo y la revolución de los contratos digitales que apenas se está comenzando. Te permitirán que no le vuelvas a tener que enviar un correo a ningún cliente diciéndole\"Oiga, tiene que pagar\", un sistema automáticamente lo hará por ti."
+    ],
+    "avisos": []
+  },
+  "beats": [
+    {
+      "tipo": "escena",
+      "escena": "app",
+      "en": "alertas",
+      "hasta": "escríbeme",
+      "app": {
+        "archivo": "app/2026-10/contrappto.mp4",
+        "desde": 16,
+        "velocidad": 0.7,
+        "tapar": [
+          {
+            "x": 0.1,
+            "y": 0.146,
+            "w": 0.87,
+            "h": 0.044,
+            "texto": "Contrato de arriendo vacacional"
+          }
+        ]
+      },
+      "titulo": "El contrato como *proyecto*",
+      "items": [
+        {
+          "texto": "Alertas y vencimientos",
+          "icono": "Bell",
+          "en": "alertas"
+        },
+        {
+          "texto": "Tareas y hechos",
+          "icono": "ListChecks",
+          "en": "tareas"
+        },
+        {
+          "texto": "Documentos adjuntos",
+          "icono": "Paperclip",
+          "en": "documentos"
+        }
+      ]
+    },
+    {
+      "tipo": "escena",
+      "escena": "versus",
+      "en": "correo",
+      "hasta": "",
+      "dura": 6,
+      "columnas": [
+        "correo",
+        "sistema"
+      ],
+      "antes": {
+        "titulo": "\"Oiga, tiene que pagar\"",
+        "detalle": "Perseguir a cada cliente por correo.",
+        "chips": [
+          "Manual",
+          "Incómodo"
+        ],
+        "icono": "Mail"
+      },
+      "despues": {
+        "titulo": "Cobro automático",
+        "detalle": "El sistema le recuerda el pago por ti.",
+        "chips": [
+          "Automático",
+          "Sin fricción"
+        ],
+        "icono": "BellRing"
+      }
+    }
+  ],
+  "golpes": [
+    {
+      "en": "revolución",
+      "estilo": "contorno"
+    }
+  ],
+  "variantes": {
+    "contrappto": {
+      "cta": "Escríbeme"
+    }
+  }
+}
