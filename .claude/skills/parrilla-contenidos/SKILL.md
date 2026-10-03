@@ -47,6 +47,8 @@ Al terminar, comprueba que ninguna combinación (pieza, red) aparezca dos veces 
 
 ## Al reorganizar
 
+- **Mueve lo mínimo.** Toca solo lo que el usuario pidió y lo que eso desplace. «Dos reels por semana»
+  es un piso, no un tope: si el mes trae mucho contenido, se sube más por semana; no se saca nada.
 - Si mueves una pieza, ponle una nota (`n`) que diga de dónde viene.
 - Deja en el bloque «Antes de publicar» del artefacto qué salió de la parrilla y por qué.
 - Antes de republicar, revisa la sintaxis del script con `node --check`.
