@@ -39,8 +39,9 @@ Al terminar, comprueba que ninguna combinación (pieza, red) aparezca dos veces 
 - Los reels de juanda.trifuerza son lo principal de la estrategia.
 - Hay dos por semana: uno **abre la semana** (lunes a las 12:00; el martes si el lunes es festivo) y
   otro **la cierra** (sábado a las 12:00).
-- Si hay más reels que espacios, el tercero va el jueves a las 12:00. Lo que no quepa y no tenga que ver
-  con la campaña del mes pasa al mes siguiente; no se amontona.
+- Si hay más reels que espacios, el tercero va el jueves a las 12:00.
+- **Todo lo planeado para el mes sale en ese mes.** Nunca pases piezas al mes siguiente: cada mes ya
+  tiene sus propios planes. Si no caben, usa el jueves o reacomoda dentro del mismo mes.
 - Un reel que sale después de la clase o el evento no puede llevar el CTA de inscribirse («Comenta
   CLASE»): hay que cambiarlo.
 
