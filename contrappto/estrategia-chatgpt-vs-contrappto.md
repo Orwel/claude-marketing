@@ -19,6 +19,29 @@ Frases candidatas (para probar en hooks y anuncios):
 - "Un contrato no es un texto: es un compromiso con fechas, pagos y consecuencias."
 - "¿Tu contrato lo revisó un abogado o un autocompletado?"
 
+### 1.1 El enemigo real no es ChatGPT: es la informalidad
+
+El competidor más grande de Contrappto no es una IA, es **"tranquilo, entre nosotros no necesitamos papeles"**. En Colombia (y en Latam) muchísimos acuerdos se hacen de palabra, por WhatsApp o con un apretón de manos: el arriendo con el conocido, la plata que se le presta al primo, el negocio con el amigo, el carro que se vende "y después hacemos el traspaso".
+
+Mensaje madre:
+- **"Firmar no es desconfiar. Es cuidar la relación."**
+- "Los contratos no se hacen para cuando todo va bien, sino para cuando algo sale mal."
+- "La palabra se la lleva el viento. Y la memoria también."
+- "Sin contrato no hay acuerdo: hay dos versiones de la historia."
+- "Formalizar ya no es caro ni engorroso: es un link y tu cara." (firma biométrica desde el celular)
+
+Por qué la gente no firma (objeciones a derribar en el contenido):
+
+| Objeción | Respuesta |
+|---|---|
+| "Es mi amigo / mi familia, me da pena pedirle un contrato." | El contrato protege la amistad: deja claro qué esperaba cada uno antes de que haya pelea. |
+| "Eso es muy caro, toca ir donde un abogado." | En Contrappto el flujo ya lo verificó un abogado; cuesta menos que una cena. |
+| "Es muy engorroso, notaría, papeles, firmas." | Se firma desde el celular, con biometría, en minutos. |
+| "Para algo tan pequeño no vale la pena." | Las peleas más feas suelen ser por montos "pequeños" que nadie dejó por escrito. |
+| "Si me incumple, igual no voy a demandar." | Un contrato claro evita llegar a eso: la mayoría paga cuando hay un documento firmado y una alerta que le recuerda. |
+
+> Ojo: si usamos cifras de informalidad (contratos verbales, conflictos, demandas), sacarlas de fuentes verificables antes de publicarlas.
+
 ---
 
 ## 2. Los tres argumentos (pilares)
@@ -118,6 +141,43 @@ Estructura de cada pieza: **situación → qué puede salir mal (y qué se le es
 
 ---
 
+## 4bis. Historias desde el dolor
+
+El contenido que más conecta no explica cláusulas: **cuenta lo que se siente perder plata, un amigo o la paz por no haber firmado**. Cada caso de uso de la sección 4 debe tener al menos una historia así, contada en primera persona.
+
+Estructura de cada historia (30-60 s):
+1. **El momento de confianza:** "Era mi mejor amigo / era mi tía / el señor se veía muy serio."
+2. **El "no necesitamos papeles":** el acuerdo de palabra o por WhatsApp.
+3. **El golpe:** lo que salió mal, con un detalle concreto (fecha, monto, mensaje).
+4. **El costo real:** la plata, pero sobre todo la relación rota, el estrés, el tiempo, el abogado que costó más que la deuda.
+5. **El giro:** "Si hubiéramos firmado esto (2 minutos), hoy seguiríamos siendo amigos."
+6. **CTA suave:** "No esperes a que te pase. Formalízalo hoy en Contrappto."
+
+Banco de historias (situaciones típicas para guionizar):
+
+| Contrato | El dolor |
+|---|---|
+| Colaboración entre amigos | "Montamos el emprendimiento 50/50. Cuando empezó a vender, mi socio dijo que la idea era suya y se quedó con la marca y los clientes." |
+| Curso / coproducción | "Grabé todo el curso con otro profe. Él lo subió a su plataforma, lo vendió y nunca supe cuánto se vendió." |
+| Prestación de servicios | "Entregué el proyecto completo y el cliente me dijo: 'no era lo que pedí'. Tres meses trabajando gratis." |
+| Arriendo | "El inquilino dejó de pagar en el mes cuatro. No tenía codeudor ni contrato firmado. Un año para sacarlo." |
+| Airbnb / temporada | "Me dañaron el apartamento y no sabía ni el nombre real del huésped." |
+| Venta de carro | "Vendí el carro de palabra. Seis meses después me llegaron fotomultas a mi nombre y un comparendo de un choque." |
+| Préstamo | "Le presté dos millones a mi primo 'para el mes entrante'. Ya van dos años y en las navidades ni nos hablamos." |
+| Promesa de compraventa | "Di las arras para la casa, el vendedor se arrepintió y no había nada firmado que dijera qué pasaba con mi plata." |
+| Comisión / referidos | "Le traje el cliente más grande que tuvo y cuando cerró el negocio me dijo 'yo nunca te prometí nada'." |
+
+Formatos para contar el dolor:
+- **"Me pasó a mí":** testimonios reales de la comunidad (pedirlos en comentarios: "¿Qué te ha pasado por no firmar?"). Es el formato más poderoso y además genera contenido infinito.
+- **Dramatizaciones cortas:** sketch de 2 personajes ("el que confía" y "el que incumple"), con remate de Contrappto.
+- **"El chat que lo prueba todo":** recrear el WhatsApp del acuerdo de palabra y mostrar cómo no alcanza.
+- **"Lo que costó no firmar":** cuenta en pantalla (deuda + abogado + tiempo + relación) vs. "lo que costaba firmar".
+- **Antes / después:** la misma historia en dos versiones: sin contrato (todo sale mal) y con Contrappto (llega la alerta, todo claro, siguen siendo amigos).
+
+Tono: empatía, no miedo barato. Nada de burlarse de quien confió; el mensaje es "confiar está bien, formalizar es cuidar esa confianza". Si una historia es dramatizada, decirlo; si es real, pedir permiso y anonimizar.
+
+---
+
 ## 5. Ofertas y funnel
 
 1. **Gancho gratuito:** "Sube tu contrato de ChatGPT y fírmalo gratis" (o primer contrato gratis). Baja la fricción porque la persona ya tiene el contrato hecho.
@@ -150,4 +210,6 @@ Cada página: explicación corta + errores comunes de la IA + CTA "créalo con u
 - [ ] Recopilar y verificar casos reales de alucinaciones de IA en lo jurídico (fuentes).
 - [ ] Definir la oferta de "sube tu contrato de ChatGPT" (gratis / límite / precio).
 - [ ] Armar el calendario: 1 caso de uso por semana + 1 "Le pedí a ChatGPT…" + respuestas a comentarios.
+- [ ] Abrir convocatoria "¿Qué te ha pasado por no firmar?" para recolectar historias reales.
+- [ ] Guionizar las primeras 5 historias de dolor (préstamo, carro, socio, arriendo, freelancer).
 - [ ] Alinear el mensaje sobre IA: dónde sí usamos IA (lectura/extracción) y dónde no (generación del contrato).
