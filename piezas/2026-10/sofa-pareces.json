@@ -1,0 +1,2607 @@
+{
+  "plantilla": "Arcade",
+  "serie": "SOFA 2026 · BOGOTÁ",
+  "nivel": "SOFA 2026",
+  "cuentas": [
+    "juanda"
+  ],
+  "velocidad": 1.08,
+  "motivo": "espejo",
+  "lados": {
+    "jd": "izquierda",
+    "p2": "derecha"
+  },
+  "nombres": {
+    "jd": {
+      "nombre": "JUAN DAVID"
+    }
+  },
+  "correcciones": [
+    {
+      "de": "sofá",
+      "a": "SOFA"
+    },
+    {
+      "de": "le pregunte",
+      "a": "le pregunté"
+    },
+    {
+      "de": "Le pregunte",
+      "a": "Le pregunté"
+    },
+    {
+      "de": "Cosplayers",
+      "a": "cosplayers"
+    },
+    {
+      "de": "quien demandaría",
+      "a": "quién demandaría"
+    },
+    {
+      "de": "artas",
+      "a": "hartas"
+    },
+    {
+      "de": "hace todo son",
+      "a": "excepto"
+    },
+    {
+      "de": "gingos",
+      "a": "Sung Jinwoo"
+    },
+    {
+      "de": "Chimico Toga",
+      "a": "Himiko Toga"
+    },
+    {
+      "de": "Magiro Academia",
+      "a": "My Hero Academia"
+    },
+    {
+      "de": "Von Leinton",
+      "a": "Von Lycaon"
+    },
+    {
+      "de": "Sunless On Zero",
+      "a": "Zenless Zone Zero"
+    },
+    {
+      "de": "Aurora del League",
+      "a": "Aurora de League"
+    },
+    {
+      "de": "Mavica",
+      "a": "Mavuika"
+    },
+    {
+      "de": "satura",
+      "a": "La Vasija Pura"
+    },
+    {
+      "de": "te parece es a",
+      "a": "te pareces a"
+    },
+    {
+      "de": "estás tú buena",
+      "a": "está muy buena"
+    },
+    {
+      "de": "En como el fue",
+      "a": "En cómo él fue"
+    },
+    {
+      "de": "indique",
+      "a": "indie"
+    },
+    {
+      "de": "Jägger",
+      "a": "Jaeger"
+    },
+    {
+      "de": "Jäger",
+      "a": "Jaeger"
+    },
+    {
+      "de": "capitano",
+      "a": "Capitano"
+    },
+    {
+      "de": "herfría",
+      "a": "le hizo"
+    },
+    {
+      "de": "Drugs del futuro",
+      "a": "Trunks del futuro"
+    },
+    {
+      "de": "Sayajin",
+      "a": "saiyajin"
+    },
+    {
+      "de": "María",
+      "a": "mijo"
+    },
+    {
+      "de": "platico",
+      "a": "platica"
+    },
+    {
+      "de": "si está allí",
+      "a": "si es saiyajin"
+    },
+    {
+      "de": "respaunear",
+      "a": "respawnear"
+    },
+    {
+      "de": "Respawn",
+      "a": "respawn"
+    },
+    {
+      "de": "cagunes",
+      "a": "kagunes"
+    },
+    {
+      "de": "Maca",
+      "a": "Maka"
+    },
+    {
+      "de": "SoulHitter",
+      "a": "Soul Eater"
+    },
+    {
+      "de": "El jefe maestro",
+      "a": "el Jefe Maestro"
+    },
+    {
+      "de": "Te letra... transportarme",
+      "a": "¿Teletransportarme?"
+    },
+    {
+      "de": "maquillero",
+      "a": "Androide 17"
+    },
+    {
+      "de": "ardestruir",
+      "a": "destruir"
+    },
+    {
+      "de": "Joaquin Club",
+      "a": "Jockey Club"
+    },
+    {
+      "de": "Frey",
+      "a": "Fray"
+    },
+    {
+      "de": "Vélula",
+      "a": "Bélula"
+    },
+    {
+      "de": "Séfira",
+      "a": "Céfira"
+    },
+    {
+      "de": "bótalo",
+      "a": "vótalo"
+    },
+    {
+      "de": "alteratura",
+      "a": "literatura"
+    },
+    {
+      "de": "de mito",
+      "a": "de Mito"
+    },
+    {
+      "de": "Esto es mito",
+      "a": "Esto es Mito"
+    },
+    {
+      "de": "perracos espantos",
+      "a": "Berracos Espantos"
+    },
+    {
+      "de": "Bogofighters",
+      "a": "Bogo Fighters"
+    },
+    {
+      "de": "cráteras",
+      "a": "criaturas"
+    },
+    {
+      "de": "podren",
+      "a": "cobren"
+    },
+    {
+      "de": "viene a secta",
+      "a": "hay una secta"
+    },
+    {
+      "de": "de acuerdos el la guardiente",
+      "a": "de acuerdo, el aguardiente"
+    },
+    {
+      "de": "agua mendita",
+      "a": "agua bendita"
+    },
+    {
+      "de": "desarrollos colombianos",
+      "a": "desarrolladores colombianos"
+    },
+    {
+      "de": "colombia",
+      "a": "Colombia"
+    },
+    {
+      "de": "Es está",
+      "a": "Está"
+    }
+  ],
+  "variantes": {
+    "juanda": {
+      "cta": "Comenta en qué te pareces",
+      "copy": ""
+    }
+  },
+  "slug": "sofa-pareces",
+  "codigo": "SOFA02",
+  "titulo": "¿En qué te pareces a tu personaje?",
+  "niveles": 4,
+  "escenas": [
+    {
+      "tipo": "titulo",
+      "segundos": 3.4,
+      "alto": 360,
+      "parte": "PARTE 1"
+    },
+    {
+      "tipo": "clip",
+      "archivo": "DJI_20261012_142706_423_video.mp4",
+      "desde": 1.3,
+      "hasta": 10.3,
+      "golpes": [
+        {
+          "en": "identidad",
+          "texto": "IDENTIDAD",
+          "estilo": "pastilla"
+        },
+        {
+          "en": "respondieron",
+          "texto": "¿QUÉ NOS RESPONDIERON?",
+          "estilo": "golpe"
+        }
+      ],
+      "fx": [
+        {
+          "tipo": "estrellas",
+          "en": "cosplayers",
+          "dura": 3,
+          "quien": null,
+          "lado": "centro"
+        }
+      ],
+      "personaje": {
+        "nombre": "Juan David",
+        "clase": "Legal engineer · Trifuerza",
+        "etiqueta": "PLAYER 1 READY",
+        "mundo": "Profesor universitario · desarrollador de videojuegos",
+        "color": "#F26B1D",
+        "stats": [
+          {
+            "n": "DERECHO",
+            "v": 1
+          },
+          {
+            "n": "CÓDIGO",
+            "v": 1
+          },
+          {
+            "n": "VARITA",
+            "v": 0.8
+          }
+        ]
+      },
+      "ficha": true,
+      "fichaEn": 0.3,
+      "retrato": {
+        "fijo": "trabajo/2026-10-sofa/retratos-fuente/juan-david.png"
+      },
+      "foco": {
+        "jd": {
+          "x": 0.5,
+          "y": 0.36,
+          "escala": 1.12
+        }
+      },
+      "lados": {
+        "jd": "centro"
+      },
+      "fichaDura": 2.6,
+      "_avisos": []
+    },
+    {
+      "tipo": "clip",
+      "archivo": "DJI_20261012_132337_574_video.mp4",
+      "desde": 3.6,
+      "hasta": 13.1,
+      "golpes": [
+        {
+          "en": "fuerza",
+          "texto": "A LA FUERZA",
+          "estilo": "golpe"
+        },
+        {
+          "en": "perseverancia",
+          "texto": "+100 XP · PERSEVERANCIA",
+          "estilo": "xp"
+        },
+        {
+          "en": "soledad",
+          "texto": "SOLEDAD",
+          "estilo": "daño"
+        }
+      ],
+      "fx": [
+        {
+          "tipo": "aura",
+          "en": "elegido",
+          "dura": 2.5,
+          "quien": "p2",
+          "color": "#9FE3FF"
+        },
+        {
+          "tipo": "corte",
+          "en": "perseverancia",
+          "dura": 1.2,
+          "quien": "p2",
+          "color": "#F4EFE6"
+        },
+        {
+          "tipo": "nieve",
+          "en": "soledad",
+          "dura": 2.2,
+          "quien": "p2",
+          "color": "#9FE3FF"
+        }
+      ],
+      "personaje": {
+        "nombre": "Hollow Knight",
+        "clase": "La Vasija Pura · Hallownest",
+        "tema": "hielo",
+        "color": "#9FE3FF",
+        "mundo": "Cosplay · SOFA 2026",
+        "stats": [
+          {
+            "n": "COSPLAY",
+            "v": 1
+          },
+          {
+            "n": "ALMA",
+            "v": 0.9
+          },
+          {
+            "n": "SOLEDAD",
+            "v": 1
+          }
+        ],
+        "resumen": "Elegido a la fuerza, perseverancia y soledad"
+      },
+      "ficha": true,
+      "fichaEn": 0.3,
+      "retrato": {
+        "t": 8,
+        "x": 0.1545,
+        "y": 0.2814,
+        "w": 0.361,
+        "h": 0.2301
+      },
+      "turnos": [
+        {
+          "desde": 3.5,
+          "quien": "jd"
+        },
+        {
+          "desde": 5.15,
+          "quien": "p2",
+          "fijo": true
+        }
+      ],
+      "foco": {
+        "jd": {
+          "x": 0.5,
+          "y": 0.42,
+          "escala": 1.4
+        },
+        "p2": {
+          "x": 0.3,
+          "y": 0.42,
+          "escala": 1.45
+        }
+      },
+      "lados": {
+        "jd": "derecha",
+        "p2": "izquierda"
+      },
+      "omitir": [
+        "satura"
+      ],
+      "finDuro": 13.15,
+      "anclas": [
+        [
+          "En como el fue elegido a la fuerza y es como",
+          5.2,
+          8.4
+        ],
+        [
+          "la perseverancia que él tiene",
+          8.5,
+          10.6
+        ],
+        [
+          "y la soledad que también tiene",
+          10.7,
+          13
+        ],
+        [
+          "Hollow Knight es un videojuego indie muy interesante juegalo",
+          13.4,
+          18
+        ]
+      ],
+      "_avisos": []
+    },
+    {
+      "tipo": "nivel",
+      "numero": 2,
+      "nombre": "Bosque vastaya",
+      "estilo": "seleccion",
+      "segundos": 2
+    },
+    {
+      "tipo": "clip",
+      "archivo": "DJI_20261012_134941_112_video.mp4",
+      "desde": 1.6,
+      "hasta": 8.8,
+      "golpes": [],
+      "fx": [
+        {
+          "tipo": "luciernagas",
+          "en": "Aurora",
+          "dura": 3,
+          "quien": "p2",
+          "color": "#B388FF"
+        },
+        {
+          "tipo": "aura",
+          "en": "cuesta",
+          "dura": 2.4,
+          "quien": "p2",
+          "color": "#B388FF"
+        }
+      ],
+      "personaje": {
+        "nombre": "Aurora",
+        "clase": "Vastaya · League of Legends",
+        "tema": "bosque",
+        "color": "#B388FF",
+        "mundo": "Cosplay · SOFA 2026",
+        "stats": [
+          {
+            "n": "COSPLAY",
+            "v": 1
+          },
+          {
+            "n": "MAGIA",
+            "v": 0.9
+          },
+          {
+            "n": "SOCIAL",
+            "v": 0.2
+          }
+        ],
+        "resumen": "Le cuesta hablar con las personas"
+      },
+      "ficha": true,
+      "fichaEn": 0.3,
+      "retrato": {
+        "t": 6,
+        "x": 0.6458,
+        "y": 0.2855,
+        "w": 0.2094,
+        "h": 0.1335
+      },
+      "turnos": [
+        {
+          "desde": 1.6,
+          "quien": "jd"
+        },
+        {
+          "desde": 2.2,
+          "quien": "p2",
+          "fijo": true
+        },
+        {
+          "desde": 4.4,
+          "quien": "jd",
+          "fijo": true
+        },
+        {
+          "desde": 6,
+          "quien": "p2",
+          "fijo": true
+        }
+      ],
+      "foco": {
+        "jd": {
+          "x": 0.45,
+          "y": 0.4,
+          "escala": 1.3
+        },
+        "p2": {
+          "x": 0.72,
+          "y": 0.38,
+          "escala": 1.4
+        }
+      },
+      "lados": {
+        "jd": "centro",
+        "p2": "derecha"
+      },
+      "finDuro": 8.95,
+      "anclas": [
+        [
+          "Y en qué te pareces a tu personaje",
+          4.5,
+          5.95
+        ],
+        [
+          "Que me cuesta hablar con las personas",
+          6.05,
+          8.6
+        ],
+        [
+          "Hoy estamos",
+          9.25,
+          10.9
+        ],
+        [
+          "con Von Leinton de Sunless On Zero",
+          11,
+          12.85
+        ],
+        [
+          "Y en qué te pareces a tu personaje",
+          12.9,
+          15.15
+        ],
+        [
+          "En el respeto hacia los demás",
+          15.25,
+          16.95
+        ],
+        [
+          "Bien pa bueno mil gracias Ahora",
+          17.75,
+          19.6
+        ]
+      ],
+      "_avisos": []
+    },
+    {
+      "tipo": "clip",
+      "archivo": "DJI_20261012_134941_112_video.mp4",
+      "desde": 9,
+      "hasta": 17,
+      "golpes": [],
+      "fx": [
+        {
+          "tipo": "bits",
+          "en": "Zero",
+          "dura": 2.5,
+          "quien": "p2"
+        },
+        {
+          "tipo": "aura",
+          "en": "respeto",
+          "dura": 2.6,
+          "quien": "p2",
+          "color": "#F2C85B"
+        }
+      ],
+      "personaje": {
+        "nombre": "Von Lycaon",
+        "clase": "Mayordomo · Zenless Zone Zero",
+        "tema": "digital",
+        "color": "#F2C85B",
+        "mundo": "Cosplay · SOFA 2026",
+        "stats": [
+          {
+            "n": "COSPLAY",
+            "v": 1
+          },
+          {
+            "n": "RESPETO",
+            "v": 1
+          },
+          {
+            "n": "ELEGANCIA",
+            "v": 0.9
+          }
+        ],
+        "resumen": "El respeto hacia los demás"
+      },
+      "ficha": true,
+      "fichaEn": 0.3,
+      "retrato": {
+        "t": 16.6,
+        "x": 0.0815,
+        "y": 0.2941,
+        "w": 0.247,
+        "h": 0.1575
+      },
+      "turnos": [
+        {
+          "desde": 9,
+          "quien": "jd",
+          "fijo": true
+        },
+        {
+          "desde": 15.2,
+          "quien": "p2",
+          "fijo": true
+        }
+      ],
+      "foco": {
+        "jd": {
+          "x": 0.45,
+          "y": 0.4,
+          "escala": 1.3
+        },
+        "p2": {
+          "x": 0.2,
+          "y": 0.4,
+          "escala": 1.4
+        }
+      },
+      "lados": {
+        "jd": "centro",
+        "p2": "izquierda"
+      },
+      "inicioDuro": 9,
+      "finDuro": 17.3,
+      "anclas": [
+        [
+          "Y en qué te pareces a tu personaje",
+          4.5,
+          5.95
+        ],
+        [
+          "Que me cuesta hablar con las personas",
+          6.05,
+          8.6
+        ],
+        [
+          "Hoy estamos",
+          9.25,
+          10.9
+        ],
+        [
+          "con Von Leinton de Sunless On Zero",
+          11,
+          12.85
+        ],
+        [
+          "Y en qué te pareces a tu personaje",
+          12.9,
+          15.15
+        ],
+        [
+          "En el respeto hacia los demás",
+          15.25,
+          16.95
+        ],
+        [
+          "Bien pa bueno mil gracias Ahora",
+          17.75,
+          19.6
+        ]
+      ],
+      "_avisos": []
+    },
+    {
+      "tipo": "nivel",
+      "numero": 3,
+      "nombre": "Doble calabozo",
+      "estilo": "jefe",
+      "segundos": 2
+    },
+    {
+      "tipo": "clip",
+      "archivo": "DJI_20261012_135402_734_video.mp4",
+      "desde": 1,
+      "hasta": 9.6,
+      "golpes": [
+        {
+          "en": "macabra",
+          "texto": "RISA MACABRA",
+          "estilo": "daño"
+        }
+      ],
+      "fx": [
+        {
+          "tipo": "niebla",
+          "en": "Christian",
+          "dura": 3,
+          "quien": "p2"
+        },
+        {
+          "tipo": "relampago",
+          "en": "risa",
+          "dura": 1.6,
+          "quien": "p2",
+          "color": "#B8B4A8"
+        }
+      ],
+      "personaje": {
+        "nombre": "Estatua de Dios",
+        "clase": "Jefe del doble calabozo · Solo Leveling",
+        "tema": "terror",
+        "color": "#B8B4A8",
+        "mundo": "Cosplay · SOFA 2026",
+        "stats": [
+          {
+            "n": "COSPLAY",
+            "v": 1
+          },
+          {
+            "n": "TERROR",
+            "v": 0.9
+          },
+          {
+            "n": "RISA",
+            "v": 1
+          }
+        ],
+        "resumen": "La risa macabra"
+      },
+      "ficha": true,
+      "fichaEn": 0.3,
+      "retrato": {
+        "t": 6,
+        "x": 0.4614,
+        "y": 0.3373,
+        "w": 0.2411,
+        "h": 0.1537
+      },
+      "turnos": [
+        {
+          "desde": 1,
+          "quien": "jd"
+        },
+        {
+          "desde": 2.3,
+          "quien": "p2",
+          "fijo": true
+        },
+        {
+          "desde": 3.4,
+          "quien": "jd"
+        },
+        {
+          "desde": 5.9,
+          "quien": "p2",
+          "fijo": true
+        },
+        {
+          "desde": 8.2,
+          "quien": "jd",
+          "fijo": true
+        }
+      ],
+      "foco": {
+        "jd": {
+          "x": 0.35,
+          "y": 0.4,
+          "escala": 1.3
+        },
+        "p2": {
+          "x": 0.62,
+          "y": 0.38,
+          "escala": 1.4
+        }
+      },
+      "_avisos": []
+    },
+    {
+      "tipo": "cierre",
+      "archivo": "DJI_20261012_151315_536_video.mp4",
+      "desde": 0.9,
+      "hasta": 5.6,
+      "golpes": [
+        {
+          "en": "pareces",
+          "texto": "¿Y TÚ?",
+          "estilo": "pastilla"
+        }
+      ],
+      "fx": [],
+      "foco": {
+        "jd": {
+          "x": 0.5,
+          "y": 0.36,
+          "escala": 1.12
+        }
+      },
+      "lados": {
+        "jd": "centro"
+      },
+      "cta": "COMENTA EN QUÉ TE PARECES",
+      "_avisos": []
+    }
+  ],
+  "verificar": [
+    {
+      "dato": "Hollow Knight («La Vasija Pura», oído «La base satura»), Aurora (LoL), Von Lycaon (Zenless Zone Zero): por confirmar. La estatua gris es la Estatua de Dios de Solo Leveling (Juan David, 13-oct)",
+      "estado": "pendiente"
+    }
+  ],
+  "generado": {
+    "escenas": [
+      {
+        "tipo": "titulo",
+        "segundos": 3.4,
+        "alto": 360,
+        "parte": "PARTE 1",
+        "inicio": 0,
+        "cuadros": 102
+      },
+      {
+        "tipo": "clip",
+        "archivo": "DJI_20261012_142706_423_video.mp4",
+        "desde": 1.3,
+        "hasta": 10.3,
+        "golpes": [
+          {
+            "en": "identidad",
+            "texto": "IDENTIDAD",
+            "estilo": "pastilla"
+          },
+          {
+            "en": "respondieron",
+            "texto": "¿QUÉ NOS RESPONDIERON?",
+            "estilo": "golpe"
+          }
+        ],
+        "fx": [
+          {
+            "tipo": "estrellas",
+            "en": "cosplayers",
+            "dura": 3,
+            "quien": null,
+            "lado": "centro"
+          }
+        ],
+        "personaje": {
+          "nombre": "Juan David",
+          "clase": "Legal engineer · Trifuerza",
+          "etiqueta": "PLAYER 1 READY",
+          "mundo": "Profesor universitario · desarrollador de videojuegos",
+          "color": "#F26B1D",
+          "stats": [
+            {
+              "n": "DERECHO",
+              "v": 1
+            },
+            {
+              "n": "CÓDIGO",
+              "v": 1
+            },
+            {
+              "n": "VARITA",
+              "v": 0.8
+            }
+          ]
+        },
+        "ficha": true,
+        "fichaEn": 0.3,
+        "retrato": {
+          "fijo": "trabajo/2026-10-sofa/retratos-fuente/juan-david.png"
+        },
+        "foco": {
+          "jd": {
+            "x": 0.5,
+            "y": 0.36,
+            "escala": 1.12
+          }
+        },
+        "lados": {
+          "jd": "centro"
+        },
+        "fichaDura": 2.6,
+        "inicio": 102,
+        "cuadros": 269,
+        "cola": 0,
+        "tramos": [
+          {
+            "archivo": "sofa/DJI_20261012_142706_423_video.mp4",
+            "desde": 1.1,
+            "hasta": 10.8,
+            "velocidad": 1.08,
+            "inicio": 0,
+            "cuadros": 269
+          }
+        ],
+        "subtitulos": [
+          {
+            "text": " En",
+            "startMs": 185,
+            "endMs": 437,
+            "timestampMs": null,
+            "confidence": 0.386585,
+            "quien": "jd"
+          },
+          {
+            "text": " SOFA,",
+            "startMs": 437,
+            "endMs": 833,
+            "timestampMs": null,
+            "confidence": 0.17626,
+            "quien": "jd"
+          },
+          {
+            "text": " el",
+            "startMs": 1019,
+            "endMs": 1156,
+            "timestampMs": null,
+            "confidence": 0.935265,
+            "quien": "jd"
+          },
+          {
+            "text": " tema",
+            "startMs": 1156,
+            "endMs": 1373,
+            "timestampMs": null,
+            "confidence": 0.993686,
+            "quien": "jd"
+          },
+          {
+            "text": " de",
+            "startMs": 1373,
+            "endMs": 1510,
+            "timestampMs": null,
+            "confidence": 0.95271,
+            "quien": "jd"
+          },
+          {
+            "text": " este",
+            "startMs": 1510,
+            "endMs": 1727,
+            "timestampMs": null,
+            "confidence": 0.972184,
+            "quien": "jd"
+          },
+          {
+            "text": " año",
+            "startMs": 1727,
+            "endMs": 1904,
+            "timestampMs": null,
+            "confidence": 0.979307,
+            "quien": "jd"
+          },
+          {
+            "text": " es",
+            "startMs": 1904,
+            "endMs": 2042,
+            "timestampMs": null,
+            "confidence": 0.955179,
+            "quien": "jd"
+          },
+          {
+            "text": " la",
+            "startMs": 2042,
+            "endMs": 2180,
+            "timestampMs": null,
+            "confidence": 0.971434,
+            "quien": "jd"
+          },
+          {
+            "text": " identidad.",
+            "startMs": 2180,
+            "endMs": 2593,
+            "timestampMs": null,
+            "confidence": 0.923891,
+            "quien": "jd"
+          },
+          {
+            "text": " Por",
+            "startMs": 2870,
+            "endMs": 3052,
+            "timestampMs": null,
+            "confidence": 0.519927,
+            "quien": "jd"
+          },
+          {
+            "text": " eso",
+            "startMs": 3052,
+            "endMs": 3233,
+            "timestampMs": null,
+            "confidence": 0.979611,
+            "quien": "jd"
+          },
+          {
+            "text": " le",
+            "startMs": 3233,
+            "endMs": 3375,
+            "timestampMs": null,
+            "confidence": 0.946698,
+            "quien": "jd"
+          },
+          {
+            "text": " preguntamos",
+            "startMs": 3375,
+            "endMs": 3879,
+            "timestampMs": null,
+            "confidence": 0.977008,
+            "quien": "jd"
+          },
+          {
+            "text": " a",
+            "startMs": 3879,
+            "endMs": 3980,
+            "timestampMs": null,
+            "confidence": 0.920672,
+            "quien": "jd"
+          },
+          {
+            "text": " diferentes",
+            "startMs": 3980,
+            "endMs": 4444,
+            "timestampMs": null,
+            "confidence": 0.937703,
+            "quien": "jd"
+          },
+          {
+            "text": " cosplayers",
+            "startMs": 4444,
+            "endMs": 4907,
+            "timestampMs": null,
+            "confidence": 0.635765,
+            "quien": "jd"
+          },
+          {
+            "text": " en",
+            "startMs": 5093,
+            "endMs": 5244,
+            "timestampMs": null,
+            "confidence": 0.941745,
+            "quien": "jd"
+          },
+          {
+            "text": " qué",
+            "startMs": 5244,
+            "endMs": 5438,
+            "timestampMs": null,
+            "confidence": 0.702945,
+            "quien": "jd"
+          },
+          {
+            "text": " se",
+            "startMs": 5438,
+            "endMs": 5589,
+            "timestampMs": null,
+            "confidence": 0.990643,
+            "quien": "jd"
+          },
+          {
+            "text": " parecen",
+            "startMs": 5589,
+            "endMs": 5956,
+            "timestampMs": null,
+            "confidence": 0.946617,
+            "quien": "jd"
+          },
+          {
+            "text": " a",
+            "startMs": 5956,
+            "endMs": 6063,
+            "timestampMs": null,
+            "confidence": 0.94659,
+            "quien": "jd"
+          },
+          {
+            "text": " su",
+            "startMs": 6063,
+            "endMs": 6214,
+            "timestampMs": null,
+            "confidence": 0.995133,
+            "quien": "jd"
+          },
+          {
+            "text": " personaje.",
+            "startMs": 6214,
+            "endMs": 6667,
+            "timestampMs": null,
+            "confidence": 0.995108,
+            "quien": "jd"
+          },
+          {
+            "text": " Vamos",
+            "startMs": 6852,
+            "endMs": 7086,
+            "timestampMs": null,
+            "confidence": 0.830157,
+            "quien": "jd"
+          },
+          {
+            "text": " a",
+            "startMs": 7086,
+            "endMs": 7176,
+            "timestampMs": null,
+            "confidence": 0.994723,
+            "quien": "jd"
+          },
+          {
+            "text": " ver",
+            "startMs": 7176,
+            "endMs": 7338,
+            "timestampMs": null,
+            "confidence": 0.998803,
+            "quien": "jd"
+          },
+          {
+            "text": " qué",
+            "startMs": 7338,
+            "endMs": 7500,
+            "timestampMs": null,
+            "confidence": 0.667227,
+            "quien": "jd"
+          },
+          {
+            "text": " nos",
+            "startMs": 7500,
+            "endMs": 7662,
+            "timestampMs": null,
+            "confidence": 0.746544,
+            "quien": "jd"
+          },
+          {
+            "text": " respondieron.",
+            "startMs": 7662,
+            "endMs": 8148,
+            "timestampMs": null,
+            "confidence": 0.985706,
+            "quien": "jd"
+          }
+        ],
+        "texto": "En SOFA, el tema de este año es la identidad. Por eso le preguntamos a diferentes cosplayers en qué se parecen a su personaje. Vamos a ver qué nos respondieron.",
+        "retratoPng": "sofa/retratos/sofa-pareces-1-84f84381.png"
+      },
+      {
+        "tipo": "clip",
+        "archivo": "DJI_20261012_132337_574_video.mp4",
+        "desde": 3.6,
+        "hasta": 13.1,
+        "golpes": [
+          {
+            "en": "fuerza",
+            "texto": "A LA FUERZA",
+            "estilo": "golpe"
+          },
+          {
+            "en": "perseverancia",
+            "texto": "+100 XP · PERSEVERANCIA",
+            "estilo": "xp"
+          },
+          {
+            "en": "soledad",
+            "texto": "SOLEDAD",
+            "estilo": "daño"
+          }
+        ],
+        "fx": [
+          {
+            "tipo": "aura",
+            "en": "elegido",
+            "dura": 2.5,
+            "quien": "p2",
+            "color": "#9FE3FF"
+          },
+          {
+            "tipo": "corte",
+            "en": "perseverancia",
+            "dura": 1.2,
+            "quien": "p2",
+            "color": "#F4EFE6"
+          },
+          {
+            "tipo": "nieve",
+            "en": "soledad",
+            "dura": 2.2,
+            "quien": "p2",
+            "color": "#9FE3FF"
+          }
+        ],
+        "personaje": {
+          "nombre": "Hollow Knight",
+          "clase": "La Vasija Pura · Hallownest",
+          "tema": "hielo",
+          "color": "#9FE3FF",
+          "mundo": "Cosplay · SOFA 2026",
+          "stats": [
+            {
+              "n": "COSPLAY",
+              "v": 1
+            },
+            {
+              "n": "ALMA",
+              "v": 0.9
+            },
+            {
+              "n": "SOLEDAD",
+              "v": 1
+            }
+          ],
+          "resumen": "Elegido a la fuerza, perseverancia y soledad"
+        },
+        "ficha": true,
+        "fichaEn": 0.3,
+        "retrato": {
+          "t": 8,
+          "x": 0.1545,
+          "y": 0.2814,
+          "w": 0.361,
+          "h": 0.2301
+        },
+        "turnos": [
+          {
+            "desde": 3.5,
+            "quien": "jd"
+          },
+          {
+            "desde": 5.15,
+            "quien": "p2",
+            "fijo": true
+          }
+        ],
+        "foco": {
+          "jd": {
+            "x": 0.5,
+            "y": 0.42,
+            "escala": 1.4
+          },
+          "p2": {
+            "x": 0.3,
+            "y": 0.42,
+            "escala": 1.45
+          }
+        },
+        "lados": {
+          "jd": "derecha",
+          "p2": "izquierda"
+        },
+        "omitir": [
+          "satura"
+        ],
+        "finDuro": 13.15,
+        "anclas": [
+          [
+            "En como el fue elegido a la fuerza y es como",
+            5.2,
+            8.4
+          ],
+          [
+            "la perseverancia que él tiene",
+            8.5,
+            10.6
+          ],
+          [
+            "y la soledad que también tiene",
+            10.7,
+            13
+          ],
+          [
+            "Hollow Knight es un videojuego indie muy interesante juegalo",
+            13.4,
+            18
+          ]
+        ],
+        "inicio": 371,
+        "cuadros": 288,
+        "cola": 21,
+        "tramos": [
+          {
+            "archivo": "sofa/DJI_20261012_132337_574_video.mp4",
+            "desde": 3.526,
+            "hasta": 13.15,
+            "velocidad": 1.08,
+            "inicio": 0,
+            "cuadros": 267
+          }
+        ],
+        "subtitulos": [
+          {
+            "text": " Y",
+            "startMs": 185,
+            "endMs": 255,
+            "timestampMs": null,
+            "confidence": 0.541856,
+            "quien": "jd"
+          },
+          {
+            "text": " en",
+            "startMs": 255,
+            "endMs": 352,
+            "timestampMs": null,
+            "confidence": 0.879818,
+            "quien": "jd"
+          },
+          {
+            "text": " que",
+            "startMs": 352,
+            "endMs": 478,
+            "timestampMs": null,
+            "confidence": 0.828403,
+            "quien": "jd"
+          },
+          {
+            "text": " te",
+            "startMs": 478,
+            "endMs": 575,
+            "timestampMs": null,
+            "confidence": 0.991872,
+            "quien": "jd"
+          },
+          {
+            "text": " pareces",
+            "startMs": 575,
+            "endMs": 812,
+            "timestampMs": null,
+            "confidence": 0.866845,
+            "quien": "jd"
+          },
+          {
+            "text": " a",
+            "startMs": 812,
+            "endMs": 881,
+            "timestampMs": null,
+            "confidence": 0.968666,
+            "quien": "jd"
+          },
+          {
+            "text": " tu",
+            "startMs": 881,
+            "endMs": 980,
+            "timestampMs": null,
+            "confidence": 0.992203,
+            "quien": "jd"
+          },
+          {
+            "text": " personaje?",
+            "startMs": 980,
+            "endMs": 1272,
+            "timestampMs": null,
+            "confidence": 0.985522,
+            "quien": "jd"
+          },
+          {
+            "text": " En cómo él fue",
+            "startMs": 1550,
+            "endMs": 2508,
+            "timestampMs": null,
+            "confidence": 0.686663,
+            "quien": "p2"
+          },
+          {
+            "text": " elegido",
+            "startMs": 2508,
+            "endMs": 3119,
+            "timestampMs": null,
+            "confidence": 0.963501,
+            "quien": "p2"
+          },
+          {
+            "text": " a",
+            "startMs": 3119,
+            "endMs": 3206,
+            "timestampMs": null,
+            "confidence": 0.965922,
+            "quien": "p2"
+          },
+          {
+            "text": " la",
+            "startMs": 3206,
+            "endMs": 3380,
+            "timestampMs": null,
+            "confidence": 0.971643,
+            "quien": "p2"
+          },
+          {
+            "text": " fuerza",
+            "startMs": 3380,
+            "endMs": 3903,
+            "timestampMs": null,
+            "confidence": 0.972702,
+            "quien": "p2"
+          },
+          {
+            "text": " y",
+            "startMs": 3903,
+            "endMs": 3990,
+            "timestampMs": null,
+            "confidence": 0.539797,
+            "quien": "p2"
+          },
+          {
+            "text": " es",
+            "startMs": 3990,
+            "endMs": 4165,
+            "timestampMs": null,
+            "confidence": 0.775143,
+            "quien": "p2"
+          },
+          {
+            "text": " como",
+            "startMs": 4165,
+            "endMs": 4513,
+            "timestampMs": null,
+            "confidence": 0.95572,
+            "quien": "p2"
+          },
+          {
+            "text": " la",
+            "startMs": 4606,
+            "endMs": 4761,
+            "timestampMs": null,
+            "confidence": 0.679037,
+            "quien": "p2"
+          },
+          {
+            "text": " perseverancia",
+            "startMs": 4761,
+            "endMs": 5772,
+            "timestampMs": null,
+            "confidence": 0.911112,
+            "quien": "p2"
+          },
+          {
+            "text": " que",
+            "startMs": 5772,
+            "endMs": 6006,
+            "timestampMs": null,
+            "confidence": 0.980395,
+            "quien": "p2"
+          },
+          {
+            "text": " él",
+            "startMs": 6006,
+            "endMs": 6161,
+            "timestampMs": null,
+            "confidence": 0.534299,
+            "quien": "p2"
+          },
+          {
+            "text": " tiene",
+            "startMs": 6161,
+            "endMs": 6550,
+            "timestampMs": null,
+            "confidence": 0.987909,
+            "quien": "p2"
+          },
+          {
+            "text": " y",
+            "startMs": 6643,
+            "endMs": 6728,
+            "timestampMs": null,
+            "confidence": 0.699156,
+            "quien": "p2"
+          },
+          {
+            "text": " la",
+            "startMs": 6728,
+            "endMs": 6898,
+            "timestampMs": null,
+            "confidence": 0.976528,
+            "quien": "p2"
+          },
+          {
+            "text": " soledad",
+            "startMs": 6898,
+            "endMs": 7494,
+            "timestampMs": null,
+            "confidence": 0.882408,
+            "quien": "p2"
+          },
+          {
+            "text": " que",
+            "startMs": 7494,
+            "endMs": 7750,
+            "timestampMs": null,
+            "confidence": 0.961454,
+            "quien": "p2"
+          },
+          {
+            "text": " también",
+            "startMs": 7750,
+            "endMs": 8346,
+            "timestampMs": null,
+            "confidence": 0.902636,
+            "quien": "p2"
+          },
+          {
+            "text": " tiene",
+            "startMs": 8346,
+            "endMs": 8772,
+            "timestampMs": null,
+            "confidence": 0.990526,
+            "quien": "p2"
+          }
+        ],
+        "texto": "Y en que te pareces a tu personaje? En como el fue elegido a la fuerza y es como la perseverancia que él tiene y la soledad que también tiene",
+        "retratoPng": "sofa/retratos/sofa-pareces-2-766b6571.png"
+      },
+      {
+        "tipo": "nivel",
+        "numero": 2,
+        "nombre": "Bosque vastaya",
+        "estilo": "seleccion",
+        "segundos": 2,
+        "inicio": 659,
+        "cuadros": 60
+      },
+      {
+        "tipo": "clip",
+        "archivo": "DJI_20261012_134941_112_video.mp4",
+        "desde": 1.6,
+        "hasta": 8.8,
+        "golpes": [],
+        "fx": [
+          {
+            "tipo": "luciernagas",
+            "en": "Aurora",
+            "dura": 3,
+            "quien": "p2",
+            "color": "#B388FF"
+          },
+          {
+            "tipo": "aura",
+            "en": "cuesta",
+            "dura": 2.4,
+            "quien": "p2",
+            "color": "#B388FF"
+          }
+        ],
+        "personaje": {
+          "nombre": "Aurora",
+          "clase": "Vastaya · League of Legends",
+          "tema": "bosque",
+          "color": "#B388FF",
+          "mundo": "Cosplay · SOFA 2026",
+          "stats": [
+            {
+              "n": "COSPLAY",
+              "v": 1
+            },
+            {
+              "n": "MAGIA",
+              "v": 0.9
+            },
+            {
+              "n": "SOCIAL",
+              "v": 0.2
+            }
+          ],
+          "resumen": "Le cuesta hablar con las personas"
+        },
+        "ficha": true,
+        "fichaEn": 0.3,
+        "retrato": {
+          "t": 6,
+          "x": 0.6458,
+          "y": 0.2855,
+          "w": 0.2094,
+          "h": 0.1335
+        },
+        "turnos": [
+          {
+            "desde": 1.6,
+            "quien": "jd"
+          },
+          {
+            "desde": 2.2,
+            "quien": "p2",
+            "fijo": true
+          },
+          {
+            "desde": 4.4,
+            "quien": "jd",
+            "fijo": true
+          },
+          {
+            "desde": 6,
+            "quien": "p2",
+            "fijo": true
+          }
+        ],
+        "foco": {
+          "jd": {
+            "x": 0.45,
+            "y": 0.4,
+            "escala": 1.3
+          },
+          "p2": {
+            "x": 0.72,
+            "y": 0.38,
+            "escala": 1.4
+          }
+        },
+        "lados": {
+          "jd": "centro",
+          "p2": "derecha"
+        },
+        "finDuro": 8.95,
+        "anclas": [
+          [
+            "Y en qué te pareces a tu personaje",
+            4.5,
+            5.95
+          ],
+          [
+            "Que me cuesta hablar con las personas",
+            6.05,
+            8.6
+          ],
+          [
+            "Hoy estamos",
+            9.25,
+            10.9
+          ],
+          [
+            "con Von Leinton de Sunless On Zero",
+            11,
+            12.85
+          ],
+          [
+            "Y en qué te pareces a tu personaje",
+            12.9,
+            15.15
+          ],
+          [
+            "En el respeto hacia los demás",
+            15.25,
+            16.95
+          ],
+          [
+            "Bien pa bueno mil gracias Ahora",
+            17.75,
+            19.6
+          ]
+        ],
+        "inicio": 719,
+        "cuadros": 225,
+        "cola": 15,
+        "tramos": [
+          {
+            "archivo": "sofa/DJI_20261012_134941_112_video.mp4",
+            "desde": 1.4,
+            "hasta": 8.95,
+            "velocidad": 1.08,
+            "inicio": 0,
+            "cuadros": 210
+          }
+        ],
+        "subtitulos": [
+          {
+            "text": " Hoy",
+            "startMs": 185,
+            "endMs": 335,
+            "timestampMs": null,
+            "confidence": 0.998403,
+            "quien": "jd"
+          },
+          {
+            "text": " estamos",
+            "startMs": 335,
+            "endMs": 619,
+            "timestampMs": null,
+            "confidence": 1,
+            "quien": "jd"
+          },
+          {
+            "text": " con",
+            "startMs": 619,
+            "endMs": 769,
+            "timestampMs": null,
+            "confidence": 1,
+            "quien": "jd"
+          },
+          {
+            "text": " Aurora de League",
+            "startMs": 769,
+            "endMs": 1991,
+            "timestampMs": null,
+            "confidence": 0.975334,
+            "quien": "p2"
+          },
+          {
+            "text": " of",
+            "startMs": 1991,
+            "endMs": 2112,
+            "timestampMs": null,
+            "confidence": 0.999992,
+            "quien": "p2"
+          },
+          {
+            "text": " Legends.",
+            "startMs": 2112,
+            "endMs": 2407,
+            "timestampMs": null,
+            "confidence": 1,
+            "quien": "p2"
+          },
+          {
+            "text": " ¿Y",
+            "startMs": 2870,
+            "endMs": 2920,
+            "timestampMs": null,
+            "confidence": 0.961859,
+            "quien": "jd"
+          },
+          {
+            "text": " en",
+            "startMs": 2920,
+            "endMs": 3019,
+            "timestampMs": null,
+            "confidence": 1,
+            "quien": "jd"
+          },
+          {
+            "text": " qué",
+            "startMs": 3019,
+            "endMs": 3169,
+            "timestampMs": null,
+            "confidence": 0.968302,
+            "quien": "jd"
+          },
+          {
+            "text": " te",
+            "startMs": 3169,
+            "endMs": 3269,
+            "timestampMs": null,
+            "confidence": 1,
+            "quien": "jd"
+          },
+          {
+            "text": " pareces",
+            "startMs": 3269,
+            "endMs": 3617,
+            "timestampMs": null,
+            "confidence": 0.999992,
+            "quien": "jd"
+          },
+          {
+            "text": " a",
+            "startMs": 3617,
+            "endMs": 3666,
+            "timestampMs": null,
+            "confidence": 1,
+            "quien": "jd"
+          },
+          {
+            "text": " tu",
+            "startMs": 3666,
+            "endMs": 3766,
+            "timestampMs": null,
+            "confidence": 1,
+            "quien": "jd"
+          },
+          {
+            "text": " personaje?",
+            "startMs": 3766,
+            "endMs": 4213,
+            "timestampMs": null,
+            "confidence": 1,
+            "quien": "jd"
+          },
+          {
+            "text": " Que",
+            "startMs": 4306,
+            "endMs": 4534,
+            "timestampMs": null,
+            "confidence": 0.999996,
+            "quien": "p2"
+          },
+          {
+            "text": " me",
+            "startMs": 4534,
+            "endMs": 4686,
+            "timestampMs": null,
+            "confidence": 0.999985,
+            "quien": "p2"
+          },
+          {
+            "text": " cuesta",
+            "startMs": 4686,
+            "endMs": 5144,
+            "timestampMs": null,
+            "confidence": 0.999996,
+            "quien": "p2"
+          },
+          {
+            "text": " hablar",
+            "startMs": 5144,
+            "endMs": 5600,
+            "timestampMs": null,
+            "confidence": 1,
+            "quien": "p2"
+          },
+          {
+            "text": " con",
+            "startMs": 5600,
+            "endMs": 5829,
+            "timestampMs": null,
+            "confidence": 1,
+            "quien": "p2"
+          },
+          {
+            "text": " las",
+            "startMs": 5829,
+            "endMs": 6057,
+            "timestampMs": null,
+            "confidence": 1,
+            "quien": "p2"
+          },
+          {
+            "text": " personas.",
+            "startMs": 6057,
+            "endMs": 6667,
+            "timestampMs": null,
+            "confidence": 1,
+            "quien": "p2"
+          }
+        ],
+        "texto": "Hoy estamos con Aurora del League of Legends. ¿Y en qué te pareces a tu personaje? Que me cuesta hablar con las personas.",
+        "retratoPng": "sofa/retratos/sofa-pareces-3-4209f52a.png"
+      },
+      {
+        "tipo": "clip",
+        "archivo": "DJI_20261012_134941_112_video.mp4",
+        "desde": 9,
+        "hasta": 17,
+        "golpes": [],
+        "fx": [
+          {
+            "tipo": "bits",
+            "en": "Zero",
+            "dura": 2.5,
+            "quien": "p2"
+          },
+          {
+            "tipo": "aura",
+            "en": "respeto",
+            "dura": 2.6,
+            "quien": "p2",
+            "color": "#F2C85B"
+          }
+        ],
+        "personaje": {
+          "nombre": "Von Lycaon",
+          "clase": "Mayordomo · Zenless Zone Zero",
+          "tema": "digital",
+          "color": "#F2C85B",
+          "mundo": "Cosplay · SOFA 2026",
+          "stats": [
+            {
+              "n": "COSPLAY",
+              "v": 1
+            },
+            {
+              "n": "RESPETO",
+              "v": 1
+            },
+            {
+              "n": "ELEGANCIA",
+              "v": 0.9
+            }
+          ],
+          "resumen": "El respeto hacia los demás"
+        },
+        "ficha": true,
+        "fichaEn": 0.3,
+        "retrato": {
+          "t": 16.6,
+          "x": 0.0815,
+          "y": 0.2941,
+          "w": 0.247,
+          "h": 0.1575
+        },
+        "turnos": [
+          {
+            "desde": 9,
+            "quien": "jd",
+            "fijo": true
+          },
+          {
+            "desde": 15.2,
+            "quien": "p2",
+            "fijo": true
+          }
+        ],
+        "foco": {
+          "jd": {
+            "x": 0.45,
+            "y": 0.4,
+            "escala": 1.3
+          },
+          "p2": {
+            "x": 0.2,
+            "y": 0.4,
+            "escala": 1.4
+          }
+        },
+        "lados": {
+          "jd": "centro",
+          "p2": "izquierda"
+        },
+        "inicioDuro": 9,
+        "finDuro": 17.3,
+        "anclas": [
+          [
+            "Y en qué te pareces a tu personaje",
+            4.5,
+            5.95
+          ],
+          [
+            "Que me cuesta hablar con las personas",
+            6.05,
+            8.6
+          ],
+          [
+            "Hoy estamos",
+            9.25,
+            10.9
+          ],
+          [
+            "con Von Leinton de Sunless On Zero",
+            11,
+            12.85
+          ],
+          [
+            "Y en qué te pareces a tu personaje",
+            12.9,
+            15.15
+          ],
+          [
+            "En el respeto hacia los demás",
+            15.25,
+            16.95
+          ],
+          [
+            "Bien pa bueno mil gracias Ahora",
+            17.75,
+            19.6
+          ]
+        ],
+        "inicio": 944,
+        "cuadros": 246,
+        "cola": 15,
+        "tramos": [
+          {
+            "archivo": "sofa/DJI_20261012_134941_112_video.mp4",
+            "desde": 9,
+            "hasta": 17.3,
+            "velocidad": 1.08,
+            "inicio": 0,
+            "cuadros": 231
+          }
+        ],
+        "subtitulos": [
+          {
+            "text": " Hoy",
+            "startMs": 231,
+            "endMs": 690,
+            "timestampMs": null,
+            "confidence": 0.984147,
+            "quien": "jd"
+          },
+          {
+            "text": " estamos",
+            "startMs": 690,
+            "endMs": 1759,
+            "timestampMs": null,
+            "confidence": 1,
+            "quien": "jd"
+          },
+          {
+            "text": " con",
+            "startMs": 1852,
+            "endMs": 2035,
+            "timestampMs": null,
+            "confidence": 1,
+            "quien": "jd"
+          },
+          {
+            "text": " Von Lycaon",
+            "startMs": 2035,
+            "endMs": 2647,
+            "timestampMs": null,
+            "confidence": 0.979589,
+            "quien": "jd"
+          },
+          {
+            "text": " de",
+            "startMs": 2647,
+            "endMs": 2769,
+            "timestampMs": null,
+            "confidence": 0.994689,
+            "quien": "jd"
+          },
+          {
+            "text": " Zenless Zone Zero.",
+            "startMs": 2769,
+            "endMs": 3565,
+            "timestampMs": null,
+            "confidence": 0.297583,
+            "quien": "jd"
+          },
+          {
+            "text": " ¿Y",
+            "startMs": 3611,
+            "endMs": 3688,
+            "timestampMs": null,
+            "confidence": 0.999992,
+            "quien": "jd"
+          },
+          {
+            "text": " en",
+            "startMs": 3688,
+            "endMs": 3843,
+            "timestampMs": null,
+            "confidence": 1,
+            "quien": "jd"
+          },
+          {
+            "text": " qué",
+            "startMs": 3843,
+            "endMs": 4074,
+            "timestampMs": null,
+            "confidence": 1,
+            "quien": "jd"
+          },
+          {
+            "text": " te",
+            "startMs": 4074,
+            "endMs": 4229,
+            "timestampMs": null,
+            "confidence": 1,
+            "quien": "jd"
+          },
+          {
+            "text": " pareces",
+            "startMs": 4229,
+            "endMs": 4769,
+            "timestampMs": null,
+            "confidence": 1,
+            "quien": "jd"
+          },
+          {
+            "text": " a",
+            "startMs": 4769,
+            "endMs": 4845,
+            "timestampMs": null,
+            "confidence": 1,
+            "quien": "jd"
+          },
+          {
+            "text": " tu",
+            "startMs": 4845,
+            "endMs": 5000,
+            "timestampMs": null,
+            "confidence": 1,
+            "quien": "jd"
+          },
+          {
+            "text": " personaje?",
+            "startMs": 5000,
+            "endMs": 5694,
+            "timestampMs": null,
+            "confidence": 1,
+            "quien": "jd"
+          },
+          {
+            "text": " En",
+            "startMs": 5787,
+            "endMs": 5919,
+            "timestampMs": null,
+            "confidence": 1,
+            "quien": "p2"
+          },
+          {
+            "text": " el",
+            "startMs": 5919,
+            "endMs": 6049,
+            "timestampMs": null,
+            "confidence": 1,
+            "quien": "p2"
+          },
+          {
+            "text": " respeto",
+            "startMs": 6049,
+            "endMs": 6508,
+            "timestampMs": null,
+            "confidence": 1,
+            "quien": "p2"
+          },
+          {
+            "text": " hacia",
+            "startMs": 6508,
+            "endMs": 6836,
+            "timestampMs": null,
+            "confidence": 1,
+            "quien": "p2"
+          },
+          {
+            "text": " los",
+            "startMs": 6836,
+            "endMs": 7033,
+            "timestampMs": null,
+            "confidence": 1,
+            "quien": "p2"
+          },
+          {
+            "text": " demás.",
+            "startMs": 7033,
+            "endMs": 7361,
+            "timestampMs": null,
+            "confidence": 1,
+            "quien": "p2"
+          }
+        ],
+        "texto": "Hoy estamos con Von Leinton de Sunless On Zero. ¿Y en qué te pareces a tu personaje? En el respeto hacia los demás.",
+        "retratoPng": "sofa/retratos/sofa-pareces-4-392dbd52.png"
+      },
+      {
+        "tipo": "nivel",
+        "numero": 3,
+        "nombre": "Doble calabozo",
+        "estilo": "jefe",
+        "segundos": 2,
+        "inicio": 1190,
+        "cuadros": 60
+      },
+      {
+        "tipo": "clip",
+        "archivo": "DJI_20261012_135402_734_video.mp4",
+        "desde": 1,
+        "hasta": 9.6,
+        "golpes": [
+          {
+            "en": "macabra",
+            "texto": "RISA MACABRA",
+            "estilo": "daño"
+          }
+        ],
+        "fx": [
+          {
+            "tipo": "niebla",
+            "en": "Christian",
+            "dura": 3,
+            "quien": "p2"
+          },
+          {
+            "tipo": "relampago",
+            "en": "risa",
+            "dura": 1.6,
+            "quien": "p2",
+            "color": "#B8B4A8"
+          }
+        ],
+        "personaje": {
+          "nombre": "Estatua de Dios",
+          "clase": "Jefe del doble calabozo · Solo Leveling",
+          "tema": "terror",
+          "color": "#B8B4A8",
+          "mundo": "Cosplay · SOFA 2026",
+          "stats": [
+            {
+              "n": "COSPLAY",
+              "v": 1
+            },
+            {
+              "n": "TERROR",
+              "v": 0.9
+            },
+            {
+              "n": "RISA",
+              "v": 1
+            }
+          ],
+          "resumen": "La risa macabra"
+        },
+        "ficha": true,
+        "fichaEn": 0.3,
+        "retrato": {
+          "t": 6,
+          "x": 0.4614,
+          "y": 0.3373,
+          "w": 0.2411,
+          "h": 0.1537
+        },
+        "turnos": [
+          {
+            "desde": 1,
+            "quien": "jd"
+          },
+          {
+            "desde": 2.3,
+            "quien": "p2",
+            "fijo": true
+          },
+          {
+            "desde": 3.4,
+            "quien": "jd"
+          },
+          {
+            "desde": 5.9,
+            "quien": "p2",
+            "fijo": true
+          },
+          {
+            "desde": 8.2,
+            "quien": "jd",
+            "fijo": true
+          }
+        ],
+        "foco": {
+          "jd": {
+            "x": 0.35,
+            "y": 0.4,
+            "escala": 1.3
+          },
+          "p2": {
+            "x": 0.62,
+            "y": 0.38,
+            "escala": 1.4
+          }
+        },
+        "inicio": 1250,
+        "cuadros": 264,
+        "cola": 8,
+        "tramos": [
+          {
+            "archivo": "sofa/DJI_20261012_135402_734_video.mp4",
+            "desde": 0.8,
+            "hasta": 7.2,
+            "velocidad": 1.08,
+            "inicio": 0,
+            "cuadros": 178
+          },
+          {
+            "archivo": "sofa/DJI_20261012_135402_734_video.mp4",
+            "desde": 7.7,
+            "hasta": 10.5,
+            "velocidad": 1.08,
+            "inicio": 178,
+            "cuadros": 78
+          }
+        ],
+        "subtitulos": [
+          {
+            "text": " hoy",
+            "startMs": 185,
+            "endMs": 399,
+            "timestampMs": null,
+            "confidence": 0.11981,
+            "quien": "jd"
+          },
+          {
+            "text": " estamos",
+            "startMs": 399,
+            "endMs": 805,
+            "timestampMs": null,
+            "confidence": 0.990301,
+            "quien": "jd"
+          },
+          {
+            "text": " con",
+            "startMs": 805,
+            "endMs": 1019,
+            "timestampMs": null,
+            "confidence": 0.96862,
+            "quien": "jd"
+          },
+          {
+            "text": " Christian",
+            "startMs": 1389,
+            "endMs": 1759,
+            "timestampMs": null,
+            "confidence": 0.161597,
+            "quien": "p2"
+          },
+          {
+            "text": " y",
+            "startMs": 2407,
+            "endMs": 2519,
+            "timestampMs": null,
+            "confidence": 0.643803,
+            "quien": "jd"
+          },
+          {
+            "text": " en",
+            "startMs": 2519,
+            "endMs": 2676,
+            "timestampMs": null,
+            "confidence": 0.665492,
+            "quien": "jd"
+          },
+          {
+            "text": " qué",
+            "startMs": 2676,
+            "endMs": 2878,
+            "timestampMs": null,
+            "confidence": 0.637124,
+            "quien": "jd"
+          },
+          {
+            "text": " te pareces a",
+            "startMs": 2878,
+            "endMs": 3640,
+            "timestampMs": null,
+            "confidence": 0.972335,
+            "quien": "jd"
+          },
+          {
+            "text": " tu",
+            "startMs": 3640,
+            "endMs": 3796,
+            "timestampMs": null,
+            "confidence": 0.964481,
+            "quien": "jd"
+          },
+          {
+            "text": " personaje",
+            "startMs": 4352,
+            "endMs": 4752,
+            "timestampMs": null,
+            "confidence": 0.949063,
+            "quien": "jd"
+          },
+          {
+            "text": " yo",
+            "startMs": 4752,
+            "endMs": 4885,
+            "timestampMs": null,
+            "confidence": 0.362036,
+            "quien": "p2"
+          },
+          {
+            "text": " diría",
+            "startMs": 4885,
+            "endMs": 5133,
+            "timestampMs": null,
+            "confidence": 0.768486,
+            "quien": "p2"
+          },
+          {
+            "text": " que",
+            "startMs": 5133,
+            "endMs": 5305,
+            "timestampMs": null,
+            "confidence": 0.859037,
+            "quien": "p2"
+          },
+          {
+            "text": " la",
+            "startMs": 5305,
+            "endMs": 5439,
+            "timestampMs": null,
+            "confidence": 0.75709,
+            "quien": "p2"
+          },
+          {
+            "text": " risa",
+            "startMs": 5439,
+            "endMs": 5648,
+            "timestampMs": null,
+            "confidence": 0.602881,
+            "quien": "p2"
+          },
+          {
+            "text": " macabra",
+            "startMs": 6111,
+            "endMs": 6417,
+            "timestampMs": null,
+            "confidence": 0.436543,
+            "quien": "p2"
+          },
+          {
+            "text": " está muy buena",
+            "startMs": 6417,
+            "endMs": 7010,
+            "timestampMs": null,
+            "confidence": 0.156339,
+            "quien": "jd"
+          },
+          {
+            "text": " muchas",
+            "startMs": 7010,
+            "endMs": 7280,
+            "timestampMs": null,
+            "confidence": 0.976395,
+            "quien": "jd"
+          },
+          {
+            "text": " gracias",
+            "startMs": 7280,
+            "endMs": 7585,
+            "timestampMs": null,
+            "confidence": 0.997834,
+            "quien": "jd"
+          },
+          {
+            "text": " Christian",
+            "startMs": 7585,
+            "endMs": 7963,
+            "timestampMs": null,
+            "confidence": 0.239705,
+            "quien": "jd"
+          }
+        ],
+        "texto": "hoy estamos con Christian y en qué te parece es a tu personaje yo diría que la risa macabra estás tú buena muchas gracias Christian",
+        "retratoPng": "sofa/retratos/sofa-pareces-5-1f2f00c2.png"
+      },
+      {
+        "tipo": "cierre",
+        "archivo": "DJI_20261012_151315_536_video.mp4",
+        "desde": 0.9,
+        "hasta": 5.6,
+        "golpes": [
+          {
+            "en": "pareces",
+            "texto": "¿Y TÚ?",
+            "estilo": "pastilla"
+          }
+        ],
+        "fx": [],
+        "foco": {
+          "jd": {
+            "x": 0.5,
+            "y": 0.36,
+            "escala": 1.12
+          }
+        },
+        "lados": {
+          "jd": "centro"
+        },
+        "cta": "COMENTA EN QUÉ TE PARECES",
+        "inicio": 1514,
+        "cuadros": 156,
+        "cola": 3,
+        "tramos": [
+          {
+            "archivo": "sofa/DJI_20261012_151315_536_video.mp4",
+            "desde": 0.7,
+            "hasta": 6.2,
+            "velocidad": 1.08,
+            "inicio": 0,
+            "cuadros": 153
+          }
+        ],
+        "subtitulos": [
+          {
+            "text": " y",
+            "startMs": 185,
+            "endMs": 331,
+            "timestampMs": null,
+            "confidence": 0.269145,
+            "quien": "jd"
+          },
+          {
+            "text": " tú",
+            "startMs": 331,
+            "endMs": 536,
+            "timestampMs": null,
+            "confidence": 0.66257,
+            "quien": "jd"
+          },
+          {
+            "text": " en",
+            "startMs": 536,
+            "endMs": 741,
+            "timestampMs": null,
+            "confidence": 0.61135,
+            "quien": "jd"
+          },
+          {
+            "text": " qué",
+            "startMs": 1204,
+            "endMs": 1431,
+            "timestampMs": null,
+            "confidence": 0.803449,
+            "quien": "jd"
+          },
+          {
+            "text": " te",
+            "startMs": 1431,
+            "endMs": 1607,
+            "timestampMs": null,
+            "confidence": 0.998329,
+            "quien": "jd"
+          },
+          {
+            "text": " pareces",
+            "startMs": 1607,
+            "endMs": 2037,
+            "timestampMs": null,
+            "confidence": 0.685536,
+            "quien": "jd"
+          },
+          {
+            "text": " a",
+            "startMs": 2037,
+            "endMs": 2163,
+            "timestampMs": null,
+            "confidence": 0.994127,
+            "quien": "jd"
+          },
+          {
+            "text": " tu",
+            "startMs": 2163,
+            "endMs": 2340,
+            "timestampMs": null,
+            "confidence": 0.98619,
+            "quien": "jd"
+          },
+          {
+            "text": " personaje",
+            "startMs": 2340,
+            "endMs": 2870,
+            "timestampMs": null,
+            "confidence": 0.965861,
+            "quien": "jd"
+          },
+          {
+            "text": " déjanoslo",
+            "startMs": 3056,
+            "endMs": 3468,
+            "timestampMs": null,
+            "confidence": 0.556272,
+            "quien": "jd"
+          },
+          {
+            "text": " saber",
+            "startMs": 3468,
+            "endMs": 3723,
+            "timestampMs": null,
+            "confidence": 0.997628,
+            "quien": "jd"
+          },
+          {
+            "text": " en",
+            "startMs": 3723,
+            "endMs": 3861,
+            "timestampMs": null,
+            "confidence": 0.993847,
+            "quien": "jd"
+          },
+          {
+            "text": " comentarios",
+            "startMs": 3861,
+            "endMs": 4352,
+            "timestampMs": null,
+            "confidence": 0.926052,
+            "quien": "jd"
+          }
+        ],
+        "texto": "y tú en qué te pareces a tu personaje déjanoslo saber en comentarios"
+      },
+      {
+        "tipo": "final",
+        "inicio": 1670,
+        "cuadros": 72
+      }
+    ],
+    "total": 1742,
+    "avisos": []
+  }
+}

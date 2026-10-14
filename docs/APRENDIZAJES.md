@@ -3,6 +3,330 @@
 Bitácora viva: lo que falló, cómo se resolvió y lo que le gusta o no a Juan David.
 Se lee al empezar cada sesión (lo pide `CLAUDE.md`). Lo más nuevo, arriba.
 
+## 2026-10-13 (noche) · SOFA06: Maka con el texto corrido
+
+- **Whisper corrio una escena entera ~1 s** (IMG_4875): puso "Bueno, hay varias que me gustaría" encima de la
+  pregunta de Juan David, asi que el texto salia sin que Maka hablara y el corte de silencios se comia la frase
+  real (12,8-14,6 s, que para el sin palabras era silencio); y apilo "porque soy muy… me pierdo muy fácil" en
+  0,1 s, antes del `hasta`, que cortaba antes de decirlo. El corte de inicio caia encima de su "…de Soul Eater".
+- **Arreglo: `anclas`** en la escena (`[frase, desde, hasta]`, segundos del original medidos con astats a 40 ms
+  sobre el proxy): `armar.js` reparte las palabras de esa frase por letras en el rango y reordena. Para saber que
+  se dice en cada tramo sirve transcribir ventanas cortas con `tr-tmp.mjs` (sus tiempos internos no son fiables:
+  la primera palabra siempre sale en 0) y ubicarlas con la energia. Una ventana de 2 s colgo whisper.cpp
+  (`taskkill /IM main.exe`): mejor ventanas de 4 s o mas.
+- **SOFA06 partido en dos (13-oct, tarde):** con cinco personajes quedaba en 86 s y a Juan David le parecio largo.
+  Parte 1 (SOFA06, `sofa-mecanica`) abre con Freezer + Revan + Angemon (poderes); parte 2 (SOFA07,
+  `sofa-mecanica-2`) abre con Maka + el duo (moverse por el mundo). Las escenas se movieron tal cual; solo cambian
+  las cortinillas. Gusto: ~1 min por video, y con 4-5 personajes mejor partir que alargar.
+- **Intros por parte (13-oct, noche):** a Juan David le gustaron las intros contextuales de SOFA06/07 (combate por
+  turnos; mapa con niebla y teletransporte) y pidio lo mismo para SOFA02 (espejo de identidad: el reflejo cambia
+  de traje por cada rasgo dicho hasta "¡ERES TÚ!"). Toda parte lleva "PARTE N" dentro del recuadro del titulo
+  (`titulo(parte=...)`), no en la serie: SOFA02/03, 06/07, 08, 10/11. SOFA01 ya estaba publicado y no se toco.
+- **Nombres de franquicia mal oidos (SOFA08, Trunks):** la correccion "maquillero" → "Androide 17" estaba mal: dice
+  "Maki Gero" (el Dr. Gero del doblaje latino), y "hacer" era "a Cell". Si una correccion de nombre propio no sale de
+  lo que se oye, preguntar a Juan David antes de ponerla; las de una sola escena van en `correcciones` del clip.
+- **"Perdieron definicion" (13-oct, noche):** el iPhone graba 4K (45 Mbps) y `armar.js` bajaba todo a proxies
+  1080×1920; el zoom al que habla (1,2–1,45×) ampliaba esos 1080 (~750 px reales), con tres codificaciones encima
+  (Remotion en JPEG calidad 80 por defecto + CRF 14 ultrafast, final CRF 18). Arreglo: proxies a la resolucion
+  nativa (iPhone 2160×3840, DJI 1080×1920; un proxy viejo de otra resolucion se rehace solo), Remotion con
+  `--jpeg-quality=100 --crf=10 --x264-preset=veryfast` y final CRF 16 `slow`. La salida sigue en 1080×1920 (el tope de
+  Instagram). Un cuadro 4K tarda en extraerse: los `still` de prueba necesitan `--timeout=180000`. El DJI se grabo a
+  1080: recomendar grabarlo en 4K. SOFA03–13 se rehicieron; SOFA01/02 ya estaban publicados y pautados.
+- **Musica, como quedo (14-oct):** tras la orquesta, se probaron 8 variantes de chiptune con "perrengue" (chip.js) en
+  un muestrario de 1:50; Juan David: "lo del principio suena triste… suena punzante… te pones muy creativo, este
+  metodo no nos funciono… muestrame solo una cancion corta de 10 s y hazlo mas rapido". Se probo el original a
+  152 BPM, y luego (aun "muy rapida y no varia tanto") el original a 140 BPM con capas por secciones de 2
+  compases: "uff esa es". Gusto: lo que ya aprobo se acelera o se ajusta, no se reinventa; muestras de 10 s, una a la vez.
+- **Plano medio (14-oct):** acercar las tomas abiertas de SOFA03-13 midiendo la cara con caras.py: Maka (iPhone 4K)
+  de 1,3/1,38 a 1,6/1,65x; intros y cierres DJI de Juan David de 1,12 a 1,3x. Las tomas del iPhone de Freezer,
+  Kaneki y el Rosario ya estaban cerca (cara ~0,12).
+- **Orquesta sintetizada: descartada (14-oct).** Para quitar "el mismo tuntun" del chiptune se sintetizaron violin,
+  saxo y piano por sintesis aditiva (`src/audio/orquesta.js`, ya borrado; muestrario en `trabajo/2026-10-sofa/muestrario-musica.mp3`).
+  Juan David: "suena increiblemente horrible… el sonido de antes estaba mucho mejor". Alcanzaron a salir SOFA03 y
+  SOFA04 con ella antes de detener la tanda. Leccion: instrumentos acusticos no se fabrican desde codigo; pedir
+  "perrengue" es energia (ritmo sincopado, bajo que salta, capas que entran), no mas instrumentos. Mostrar un
+  muestrario ANTES de lanzar renders con un sonido nuevo.
+- **Disco lleno con proxies 4K:** el render copiaba TODOS los proxies a `trabajo/publico-sofa` y el bundle los volvia a
+  copiar (~5 GB cada uno) y los brutos CRF 10 quedaban en `render/`. Ahora la carpeta publica lleva solo los proxies de
+  las piezas que se renderizan y el bruto se borra apenas sale el final.
+- **Varias sesiones renderizando a la vez:** otras sesiones encadenaban `npm run sofa` y comparten
+  `trabajo/paquete-sofa`; el primer render de SOFA06 fallo ("Failed to fetch ... proxy") con otro corriendo. Antes
+  de lanzar, revisar procesos (`Get-CimInstance Win32_Process` con `sofa/render.js`) y esperar a que la cola lleve
+  unos minutos quieta.
+- **Señal de alarma:** varias palabras con el mismo segundo en el spec (`[20.5] porque [20.5] soy [20.5] muy...`)
+  = Whisper perdio el hilo ahi; medir antes de escribir `desde`/`hasta`.
+
+## 2026-10-13 (tarde) · SOFA09: "He desarrollado" y "explicándolo" cortados
+
+- **Arranque:** el spec ponia "costa." en 4,8 y "He" en 4,9; en realidad hay risas de 3,1 a 4,4 y el "He" va de
+  4,45 a 4,69. El primer intento (4,74) se equivoco: el hueco de 4,73 en astats era el **cierre de la "d"** de
+  "desarrollado", no una pausa, y salio renderizado igual de cortado. Whisper sobre un recorte suelto **se traga
+  la primera palabra corta** (da "desarrollado" empiece donde empiece), asi que no sirve para medir un arranque.
+  Lo que si sirve: pasarle el audio con contexto (desde 2 s antes) y **silenciar todo lo anterior al corte
+  candidato**; si sigue oyendo "He desarrollado", el corte es bueno (4,43 si, 4,74 no). Nuevo `inicioDuro` en
+  `armar.js`, espejo de `finDuro`; con el, `desde` va al mismo punto, un `ancla` pone la primera frase en su
+  rango real (el texto iba 0,4 s tarde) y `omitir` saca lo que quede antes ("monstruos", "en la costa").
+  Ojo: `Arcade.jsx` sube el volumen de cada tramo en 2 cuadros; el corte va un hueco antes de la primera silaba
+  (aqui 4,38, no 4,43) para que la rampa no la suavice.
+- **Final:** Whisper comprimio "comenta video y haremos un video explicándolo" en 26,8–28,6; la voz real va hasta
+  29,93 (Whisper con `-ml 1` sobre el recorte + astats). El corte en 28,86 dejaba el texto en pantalla sin el audio.
+  Arreglo: `anclas` con el rango medido, `finDuro=30.4` (feria sin voz hasta 30,5) y `omitir` para "¿Casi?" y
+  "Tenemos que irse ya" (otra persona). Con el ancla, "¿Casi?" queda intercalado: cada frase de `omitir` va aparte.
+- **Una palabra mal oida cambia el `vez` de un golpe:** dice "este videojuego" (no "este video"); al corregirlo,
+  COMENTA VIDEO paso de `vez=2` a la primera aparicion.
+- **Sesiones en paralelo:** otra sesion edito `conceptos.py`/`armar.js` mientras tanto (cambio `tiempos` por
+  `anclas` y se llevo el `omitir`). Releer la pieza justo antes de armar, y no correr `conceptos.py`/`sofa-armar`
+  completos mientras otras piezas se renderizan: se usa la via de una sola pieza.
+
+## 2026-10-13 (noche) · SOFA13: retrato de Bogo Fighters y metaforas de juego de peleas
+
+- **Retrato que parte la cara:** el recorte automatico de Bogo Fighters (`R(...)` a 10 s) dejaba media cara en la
+  ficha y en la cortinilla vs. Juan David mando la imagen: va como `RETRATO_BOGO = {"fijo": ".../bogo-fighters.png"}`
+  (mismo mecanismo que su retrato). Cuando el no queda conforme con un recorte, imagen fija y listo.
+- **"El puño parece una arepa":** un objeto suelto no lee como metafora. En un video de un juego de peleas, la
+  metafora es la **interfaz del genero**: efectos nuevos en `Efectos.jsx` (sin tocar `puño`, que usan otros videos):
+  `pelea` (barras de vida, reloj, ROUND 1 → FIGHT!, `escenario`), `seleccion` (SELECT YOUR FIGHTER con siluetas "?":
+  los personajes del juego no se inventan), `invocacion` (circulo de runas y tres ASSIST! a los lados) y `perfecto`.
+  Todos arriba (330–660) o en las orillas: la cara y la zona de texto quedan libres.
+- **Pastilla larga se sale del marco:** "LA CIUDAD DE BOGOTÁ" en estilo `pastilla` desbordaba (el tamaño de letra no
+  descuenta el relleno de la pastilla). Con mas de ~14 caracteres, usar `golpe`/`xp` o acortar a la palabra clave.
+- **Tres `npm run sofa` a la vez:** `tasklist` no muestra la linea de comando y no vi que otras sesiones estaban
+  renderizando (sofa-pareces-2, sofa-mecanica); mi `--cuadrosAuto` borro y rehizo `trabajo/paquete-sofa` en medio.
+  Antes de lanzar, mirar `Get-CimInstance Win32_Process` filtrando `render.js`. Para revisar cuadros mientras otro
+  renderiza: bundle aparte (`remotion bundle ... --out-dir=trabajo/paquete-sofaNN --public-dir=trabajo/publico-sofa`)
+  y `remotion still` desde ahi; el render final espera a que no quede ningun `render.js`.
+
+## 2026-10-13 (noche) · SOFA03: "en la firmeza" no salia
+
+- **Dos golpes a menos de 0,8 s se pisan:** DUREZA (47,8 s) y FIRMEZA (48,5 s) en la respuesta de Mavuika. `golpesDe`
+  descarta el segundo si entra antes de que el primero cumpla 0,8 s tras su clave y su clave ya paso; como la escena
+  termina 0,7 s despues, "en la firmeza" no salia ni en golpe ni en caja. Arreglo: un solo golpe con la frase entera
+  ("EN LA DUREZA, EN LA FIRMEZA"). Si dos golpes caen tan cerca, juntarlos en uno.
+- **Correccion puntual = solo esa pieza** (Juan David: "lo mas rapido y que no dañemos las otras"):
+  `python -I trabajo/2026-10-sofa/conceptos.py <slug>` reescribe solo esa pieza; luego `npm run sofa-armar -- <slug>`,
+  `revisar.mjs <slug>` y `npm run sofa -- <slug>`. Sin argumento sigue reescribiendo todas (y entonces si va el
+  `sofa-armar` completo). Nunca correrlo con el slug de una pieza que se esta renderizando: le borra el `generado`.
+- **Renders cruzados entre sesiones:** varias sesiones lanzaban `npm run sofa` a la vez; comparten `trabajo/paquete-sofa`
+  y `publico-sofa`, y el bundle de una borraba el paquete de otra a mitad de render (404 del proxy de Eren, luego EISDIR
+  en el reintento). `render.js` ahora toma un candado (`trabajo/sofa-render.lock`, con pid; uno muerto se limpia solo) y
+  el segundo espera su turno. Juan David: "todos los re renders se estan cruzando".
+- **Golpe largo pegado arriba del marco:** el flex de `MarcoPixel` va en el div externo y los hijos viven en uno
+  interno, asi que el golpe no se centra; con una frase de 27 letras el texto salia chico y arriba, con el marco vacio.
+  Arreglo sin mover los golpes aprobados: `lineas` opcional en el golpe (`G(..., lineas=["EN LA DUREZA,", "EN LA FIRMEZA"])`)
+  pinta la frase en renglones, mas grande y centrada; los golpes sin `lineas` quedan igual.
+
+## 2026-10-13 · SOFA: segunda vuelta (revision de Juan David de los 13 videos)
+
+- **Lo que no gusto de la primera tanda**, en sus palabras: textos "muy fugaces", caja y texto de enfasis "al
+  tiempo" o en sitios distintos ("el ojo queda perdido"), fotos de ficha "descuadradas y pixeladas", intros y
+  transiciones "genericas, el mismo concepto estilo minecraft medio feo con cero creatividad", el "halo de luz"
+  (rayos) sobre el en los cierres, el TIP en minusculas que nadie lee, nombres inventados para cosplays sin
+  identificar, y clips que arrancan o terminan cortados. Lo que si gusto: la intro del caballero voxel (SOFA02/03)
+  y el "cuadro de dialogo o golpe, nunca los dos".
+- **Zona de texto unica** (`ZONA_TEXTO` en `Capas.jsx`): el cuadro de dialogo y los golpes ocupan el mismo
+  rectangulo (1200–1470). El CTA del cierre subio a 420. Las chispas (icono + palabra al lado) se apagaron:
+  repetian una palabra del dialogo y saturaban.
+- **Legibilidad por regla, no a ojo** (`linea.js`): paginas de hasta 10 palabras / 2,4 s, ninguna dura menos de
+  0,9 s (se funden con la vecina de la misma persona), la ultima de cada escena se queda 0,9 s mas; si el crudo
+  no tiene ese aire, `armar.js` deja una **cola congelada** (`cola`, ultimo cuadro quieto con empuje lento, sin
+  audio). Los golpes duran al menos 1,5 s, llevan hasta 10 vecinas antes y 6 despues (pausas de hasta 0,9 s no
+  cortan la frase), cada palabra pertenece a un solo golpe (la clave de uno nunca es vecina de otro) y si dos
+  se encimán el segundo espera a que salga el primero. `revisar.mjs` ahora marca fugaz todo lo que dure < 500 ms.
+- **El corte de inicio** pisaba la primera silaba ("He desarrollado" del Rosario): el limite de inicio puede
+  entrar 50 ms en la cola de la palabra anterior y el tramo arranca 0,15 s antes de la primera palabra.
+- **Retratos por deteccion de caras** (`trabajo/2026-10-sofa/caras.py` con OpenCV 4, `pip install
+  "opencv-python-headless<5"`; la 5.0 ya no trae `CascadeClassifier`): por cada (clip, segundo) guarda las caras
+  en `caras.json` y una hoja con cuadricula en `caras/`; `conceptos.py` elige la cara mas cercana al `foco` de
+  esa persona y, para mascaras y cascos (Freezer, Hollow Knight, Von Lycaon, Capitano, Revan, Angemon,
+  Operador), una caja manual leida de la hoja. Retrato a 64 px y 20 colores (44/14 era una mancha). Revisar
+  siempre `retratos-hoja.png` antes de renderizar.
+- **Intros por tema** (`remotion/arcade/Intros.jsx`, pixel art 2D con divs): protesto (juicio), tesoro (lluvia
+  de monedas y cofre: "monedas regadas que representen riqueza"), plataformas (el caballero del Claustro
+  saltando), torneo (llaves y trofeo), tienda de RPG, cartuchos a la consola y maquina arcade. Se conservan
+  martillo (SOFA01), personaje (SOFA02/03), moneda (SOFA04) y la cinematica del juego (SOFA09). Sin TIP.
+- **Cortinillas de nivel** (`remotion/arcade/Cortinillas.jsx`), una distinta por escena y contextual al que
+  viene: vs (pelea), seleccion de personaje (con los retratos de la pieza), encuentro ("¡X salvaje apareció!"),
+  mundo2d ("NIVEL N" + paisaje pixel del mundo), jefe (franjas rojas y barra de vida, para villanos), resultado
+  (STAGE CLEAR con el `resumen` de la respuesta anterior) y mision (registro de misiones). El mapa voxel queda
+  solo como respaldo sin `estilo`.
+- **Personajes sin identificar** van con `anonimo: true`: sin ficha y la pestaña del dialogo dice PLAYER N
+  (el duo del plataformeo). Un nombre mal puesto es peor que ninguno.
+- **Cambios de contenido:** Leo → Cha Hae-in (Solo Leveling), "a todos los cazadores excepto Sung Jinwoo";
+  el Operador va como "Fuerzas especiales · Call of Duty" por las gafas de vision nocturna de cuatro tubos
+  (pendiente de confirmar); Von Lycaon y Zenless los dice Juan David (turno corregido) y se corta antes del
+  "mil gracias"; en mecanicas queda **un solo video** (SOFA06: Revan, duo, Angemon, Maka, Freezer; SOFA07 se
+  retira a `_reemplazados`) sin el Jefe Maestro (toma mala) ni el Sombrero de paja; SOFA05 en orden Freezer,
+  Kaneki y Rize, Trunks; SOFA12 sin el b-roll que partia a Nicolas; el kagune (calamar) se quito.
+- **Duracion:** el minuto es orientativo; "maximo por ahi 1:20, no sacrificar calidad por tiempo". SOFA06 queda
+  en ~82 s a 1,1×.
+- **Segunda pasada (misma tarde):** golpe y dialogo en un marco oscuro que crece con el texto (el texto blanco suelto
+  sobre la feria no se leia y se salia del campo); `finDuro` (corte medido con astats cuando Whisper ubica mal la
+  palabra siguiente: "el descanso eterno") y `omitir` (frases que Whisper pego al tramo pero no se dicen: "puede
+  usar su don", "La Vasija Pura"); retrato fijo de Juan David (`fijo` en `retrato`) con la imagen que el mismo
+  eligio, solo donde el recorte automatico no gusto. SOFA01 abre con la Trifuerza (el martillo "parece un pollo"); por lo mismo el intro `protesto` (SOFA08)
+  quedo sin el `MARTILLO2D`: sala de juicio y globo "¡PROTESTO!" solos. Ningun martillo en pixel art;
+  la estatua gris de SOFA02 es la Estatua de Dios (Solo Leveling), cortinilla de jefe. Un cambio en `conceptos.py`
+  reescribe TODAS las piezas sin `generado`: siempre `npm run sofa-armar` completo despues, o el render de las otras
+  falla con "sin armar". Y nunca dos `npm run sofa` a la vez: comparten `trabajo/paquete-sofa`.
+- **SOFA04, Capitano (tercera pasada):** el `finDuro` de 39,75 seguia comiendose "eterno". La medicion anterior
+  confio en que el "¿Cuál es" de Whisper (39,7) era la pregunta siguiente; el astats con ventanas de 30 ms muestra
+  voz continua hasta 40,07 y luego 2 s de feria (-34 dB): ese "¿Cuál es" es la cola de "eterno" y la pregunta real
+  de Juan David arranca a 42,11 (-7 dB, voz de micro). Al medir un corte, buscar **donde vuelve a hablar alguien
+  de verdad** (el siguiente pico fuerte), no donde Whisper dice que empieza la palabra siguiente. Ahora `finDuro=40.2`.
+
+## 2026-10-13 (tarde) · SOFA02: el spec "verificado" iba 2 s por delante del audio
+
+- **Sintoma** (Juan David): en Hollow Knight el texto decia "soledad" mientras el audio decia "perseverancia"; en
+  Aurora/Von Lycaon el texto se adelantaba a la voz, la presentacion de Von Lycaon salia con la voz de Aurora y el
+  corte se comia la respuesta "en el respeto hacia los demás".
+- **Causa:** no era el render (correlacion audio del MP4 vs proxy: 0,04 s). Era la alineacion de `voz.js`: con el
+  ruido de la feria los "tramos de voz" por energia no separan las voces suaves (mascara, entrevistada lejos del
+  microfono) y `alinearAVoz` comprimio las frases 1,5–3 s antes. El spec heredo el error, y con el los `desde`/`hasta`.
+  La transcripcion cruda de Whisper estaba mas cerca de la verdad que el spec.
+- **Como se mide de verdad:** transcribir ventanas cortas del proxy (1,5–2,5 s, con `apad`) y ver con que palabra
+  empieza o termina cada una; astats solo sirve para la voz fuerte de Juan David. Cada ventana tarda ~2 min en CPU:
+  pocas y bien elegidas. Para revisar un render, transcribir el MP4 final y comparar con lo que dice la pieza.
+- **Arreglo:** `anclas` [frase, desde, hasta] en la escena (armar.js) ahora elige la aparicion mas cercana al rango
+  (la pregunta "¿Y en qué te pareces…?" se repite en el mismo crudo). Hay que **anclar el clip entero**, no solo el
+  tramo: una frase sin anclar se queda en su tiempo comprimido y se cuela en el tramo vecino ("Hoy estamos con Von" al
+  final de Aurora, "mil gracias" en medio de Von Lycaon). Las dos escenas de un mismo crudo comparten la lista.
+
+## 2026-10-12 · SOFA: plantilla Arcade (videojuego)
+
+- **Pedido:** editar las entrevistas del SOFA "muy videojuego, pixel art, con three.js, zoom al que habla,
+  superpoderes según el personaje, metáfora visual, sin pasar de 1 min, conservando marca y logo".
+  Primer video de prueba: `sofa-demanda` (¿A quién demandaría tu personaje?) en `Octubre/SOFA/Edited`.
+- **Whisper medium no cabe:** con 1,2 GB de RAM libre (Opera, ChatGPT, Drive) tardaba 15 min por clip de
+  45 s. El modelo `small` transcribe 54 clips en ~1 h y para elegir tramos alcanza; nombres propios y
+  franquicias se corrigen a mano (`correcciones`). Si una pieza final necesita más precisión, se
+  retranscribe solo ese clip con `medium` de noche.
+- **El DJI no desfasa el audio** (start_time 0); los .MOV del iPhone sí (~0,7 s). `armar.js` lo mide por clip.
+- **Dos corridas de whisper a la vez** (una vieja que no murió al matar `main.exe`) se pisan y duplican
+  el trabajo: matar el `node` padre, no el `main.exe`.
+- **Rangos de un clip se eligen con tiempos anclados a la voz** (`ver.mjs`), no con los crudos de Whisper:
+  filtrar por tiempos crudos perdía la primera palabra ("Le pregunté").
+- **`remotion bundle` copia `public/` entero** (3 GB con los limpios del mes) y no sigue junctions
+  (EPERM al crear symlinks). Solución: carpeta pública liviana `trabajo/publico-sofa` con copias
+  (`--public-dir`), 110 MB.
+- **Gameplay por DevTools:** con `--headless=new` el canvas del Claustro rinde ~1 cuadro/s y el
+  screencast a 1920×1080 ~7 fps. Con ventana en kiosko y screencast a mitad de resolución: ~54 fps; el
+  pixel art se amplía ×2 con vecino más cercano sin pérdida. Las flechas no mueven al personaje desde el
+  panel del navegador de Claude (keydown sin hold), sí con `Input.dispatchKeyEvent` rawKeyDown/keyUp.
+- **three.js en el render sin GPU** funciona (`--gl=angle`): ~11 s por still de 1080×1920 incluyendo
+  arranque; escenas de cubos sin sombras ni posprocesado.
+- **Fuentes pixel** (Press Start 2P, Silkscreen, VT323; OFL) en `public/fuentes` como .ttf; `fuentes.js`
+  acepta `formato: 'truetype'`.
+- **Cambio de estrategia (12-oct, noche):** "identifica el problema de raíz". La raíz era producir antes de
+  verificar. Ahora: spec por clip (`npm run sofa-spec`, palabras con segundo real y huecos de silencio) →
+  pieza conceptual escrita contra ese spec (`trabajo/2026-10-sofa/conceptos.py`) → armar con avisos de
+  cortes en medio de voz → cuadros automáticos (`--cuadrosAuto`) y hoja de retratos → render. Detalle en
+  la skill `producir-pieza` ("El sistema").
+- **Revisión obligatoria:** `trabajo/2026-10-sofa/revisar.mjs` (la corre `npm run sofa` antes de renderizar):
+  cada palabra sale una vez, ninguna caja dura menos de 250 ms y la caja nunca convive con un golpe.
+- **Doble alineación:** `planificarCorte` volvía a repartir por letras las palabras ya alineadas; ahora recibe
+  `voz: []`. Y al mover el inicio del primer tramo, el texto se corre lo mismo (si no, iba detrás de la boca).
+- **Golpe sin caja:** "no es caja vacía, es que no aparece la caja". Cuando hay golpe, la frase completa
+  vive en el golpe (clave grande, vecinas pequeñas que entran cuando se dicen) y la caja de diálogo no
+  sale; lo dicho durante el golpe que no es del golpe aparece en la caja apenas termina.
+- **Variedad contextual:** mundos voxel por tema del personaje (`Mundos.jsx`) para niveles e intros,
+  cuatro barridos que se alternan, cinemática del juego real en la carga del Rosario, y efectos por lo que
+  se dice (`Efectos.jsx`). Juanda.trifuerza y Trifuerza.co se editan igual (solo cambia el contenido);
+  Contrappto lleva su marca pero el mismo nivel de edición.
+- **Un anchor numérico rompe todo:** `cuadroDe` recibía `hasta: 5` (número) de un efecto y, como la raíz
+  carga todas las piezas, ningún still de ninguna pieza salía. `limpia` ahora castea a string y los
+  parámetros numéricos de un efecto no se llaman `en`/`hasta`.
+- **Lip sync en clips de feria (12-oct, 2.ª vuelta):** el umbral de voz con tope en -30 dB tomaba el ruido
+  de la feria como voz (un solo tramo de 36 s) y las palabras se repartían a ojo: el texto del diálogo iba
+  hasta 1 s corrido de la boca. Arreglo en `src/sofa/voz.js` (sin tope, piso + 8 dB) y `afinarConDtw` en
+  `armar.js`: dentro de un tramo largo mandan los tiempos finos de whisper.cpp (`timestampMs`, DTW) como
+  anclas. Juan David lo nota de inmediato: revisar siempre con `ver.mjs` que cada palabra caiga en su segundo.
+- **Cortes entre frases:** el tramo arranca después de que termina la última palabra excluida y termina antes
+  de la primera que no entra (`limiteInicio`/`limiteFin`). Antes se colaba la cola de la frase anterior
+  ("…Uribe") o el arranque de la siguiente.
+- **"Aparece doble":** el texto de un golpe que son palabras dichas ("EN LO LOCA") las quita del diálogo; un
+  texto propio ("$3.000.000 AL MES") no toca el diálogo. Antes el golpe con texto propio quitaba palabras y el
+  diálogo salía cortado.
+- **Retratos de ficha:** el nombre lleva una huella del clip y del recorte (al mover una escena no se reutiliza
+  el retrato de otra persona). Las coordenadas se sacan de un cuadro del **proxy** con cuadrícula
+  (`scale=360:640,drawgrid=w=36:h=64`), nunca a ojo del crudo: la cámara se mueve y a otro segundo la cara
+  está en otro sitio. Revisar la hoja de retratos antes de renderizar.
+- **Jugadores en orden:** PLAYER 1 (Juan David, con ficha en la intro), 2, 3… en orden de aparición.
+- **Pantalla de carga contextual:** motivo 3D por tema (`motivo`: trifuerza, moneda, mundo, personaje
+  voxel del Claustro, martillo) o la cinemática del juego real (`motivo: "juego"` + `juegoFondo`), barra
+  CARGANDO y un `tip` por pieza. Juan David: "en vez de un three.js que nada que ver, una cinemática del
+  videojuego". Su ficha: "legal engineer, profesor universitario, desarrollador de videojuegos", nunca
+  "hizo el videojuego del Rosario".
+- **Cuentas:** ¿Cuánto cobraría? pasó de Contrappto a Trifuerza.co (SOFA04/05-TF; los -CTP viejos están en
+  `Edited/_reemplazados`); el concurso de la página web es de Trifuerza.co (SOFA10/11); el resto, juanda.trifuerza. Eren (Attack on Titan) sí va,
+  menos su respuesta de a quién demandaría (persona real).
+- **Gusto por confirmar con Juan David:** estilo RPG del diálogo (VT323 vs. Inter: se dejó Inter 700 por
+  legibilidad), densidad de efectos, si quiere el CRT, y qué hacer con la respuesta "Álvaro Uribe"
+  (persona real: quedó fuera y en `verificar[]`).
+
+## 2026-10-03 · brochures de Contrappto y Trifuerza Legal (PDF + video)
+
+- **PDF desde HTML sin dependencias:** `brochures/<nombre>.html` (A4 con `@page`, una `<section>` por página)
+  y `npm run brochure` lo imprime con el Chrome/Edge del equipo en headless; sale a `trabajo/brochures` y se
+  copia a `<Mes>/Edited/Brochures`. Para revisar, captura alta con Chrome + `crop` de ffmpeg por página
+  (el visor de PDF del host no renderiza y la vista previa del navegador no carga fuentes ni logos locales).
+- **Contenido de cada brochure:** Contrappto sale de `contrappto/docs/BUSINESS/modelo-de-planes.md` (no tiene
+  canvas en el FigJam de Trifuerza: "tiene su propio tablero"); Trifuerza Legal, del BMC del FigJam. Los
+  precios de Legal son **propuestos** en el canvas: todo en `brochures/verificar.json`.
+- **Bug del kit corregido:** `fontFamily: x.mono ? t.mono : undefined` después de `...fuente()` borraba la
+  fuente y los detalles de Tabla/Avisos salían en serif. Ahora solo se pone la mono cuando aplica.
+- **El kit web se ve chico a pantalla completa:** está hecho para paneles de Montaje (textos de 17-25 px).
+  La plantilla Brochure lo dibuja más pequeño y lo escala (1,4 vertical, 1,15 horizontal; `kit.escala`).
+- Una pieza puede pedir varios `formatos`; el primero conserva el id `<slug>--<cuenta>`.
+- **Modelo de Legal (decisión de Juan David):** un solo plan base, Firma, $249.000 al mes **por firma de
+  abogados**, hasta 200 procesos; se crece con add-ons de usuarios y procesos. Solo y Firma+ del BMC quedan
+  fuera (el FigJam ya está actualizado). "Firmas" a secas confundía firma electrónica con firma de abogados:
+  escribir siempre "firmas electrónicas".
+- **`npm run render` murió a los 28 s esperando las fuentes:** la config no alcanza ese delayRender. Ahora
+  render.js pasa `--timeout=120000 --gl=angle --concurrency=6` y reintenta con 3, igual que montaje.
+
+## 2026-09-30 · portada del carrusel en el cuadro 0
+
+- **Instagram toma el primer cuadro como portada** y el carrusel arrancaba vacío (todo entra con
+  animación). Ahora la lámina 1 muestra en el cuadro 0 la lámina ya armada (`Freeze` del último cuadro).
+
+## 2026-09-29 (noche) · portadas y disco lleno
+
+- **Disco lleno (ENOSPC):** cada `remotion render/still remotion/index.js` deja en %TEMP% un paquete de
+  ~3,5 GB (copia public/ con los crudos) y nunca lo borra: había 153 GB en ~400 carpetas `remotion-*`.
+  Se borraron. Los scripts nuevos empaquetan una vez en `trabajo/paquete-*` y lo borran al terminar.
+  **Si el disco se llena: borrar %TEMP%
+emotion-* cuando no haya renders corriendo.**
+- **Portadas de reels ya publicados:** no hay videos viejos; las miniaturas públicas (360×640) traen
+  textos que se enciman. Pidió ilustración nueva "como la del evento" y **título centrado**: metáfora
+  animada + título al centro (`piezas/2026-10/portadas/anteriores-juanda.json`).
+- **Los copys se leen en el celular**, no en un .md de Drive: van en la página del calendario con botón "Copiar".
+
+## 2026-09-29 (tarde) · demos de Contrappto en LinkedIn
+
+- **Textos encimados en 16:9:** el rótulo de nombre estaba en el mismo sitio que los subtítulos
+  (720, 880) y el titular se dibujaba debajo del gancho mientras este seguía en pantalla. Arreglo: el
+  rótulo va sobre el video (110, 868) y el titular baja mientras está el gancho y sube después.
+  **Gusto: "no se trata de que elimines las cosas sino que las reubiques".**
+- **No generar PNG de más:** no los pidió. LinkedIn admite un solo video por publicación; eso se le
+  dice, no se resuelve inventando entregables.
+
+## 2026-09-29 · carruseles y stories animados
+
+- **Pidió "mini-videos pensados tipo carrusel"** con metáforas visuales y texto, para los días sin
+  video y para las tres cuentas (juanda, Trifuerza.co: Academy, Legal y Technology; Contrappto), más
+  stories para mantener activa la comunidad. "La idea es estar publicando hartísimo."
+- **Publica él a mano** (Meta Business Suite y LinkedIn); todo sale del calendario. No quiere pagar Metricool.
+- **Radicados de mentira que no parezcan reales:** en las metáforas se usa "Rad. ••• / 20••", nunca
+  un número tipo T-214/2011 que podría ser una sentencia real señalada como inexistente.
+- Sin desenfoques ni grano en las láminas (ESTANDAR 1b): el rompecabezas "borroso" se hace con opacidad.
+- **La clase del 27 es para todo público, no solo para abogados** (lo aclaró él). Los copys del FigJam
+  todavía dicen "para abogados".
+- **Carrusel cuadrado (1:1)**, no 4:5. **En LinkedIn, el mismo formato que en Instagram**: lámina por
+  lámina, nunca un video con todas unidas. Como LinkedIn admite un solo video por post, allá va en PNG.
+- Le gustó el primer lote: "quedó súper bien hecho".
+- **Render colgado escribiendo directo en Drive (G:)**: una lámina se quedó 7 min sin avanzar. Ahora se
+  renderiza en `trabajo/carrusel-salida`, se copia a Drive, y cada render tiene tope de 3 min y un reintento.
+
 ## 2026-09-28 (noche) · Metricool
 
 - **Metricool no sube archivos locales:** `createScheduledPost` recibe URLs públicas y las
@@ -258,3 +582,116 @@ Videos: IMG_3770, IMG_3772 e IMG_3776 de octubre (iPhone). Salieron `la-ia-que-n
 - Red bloqueada: api.elevenlabs.io, api.pexels.com, huggingface.co, releases de GitHub, contrappto.com.
 - El conector de Drive solo baja archivos de hasta 10 MB: los videos grabados (60-106 MB, .MOV del
   iPhone) se editan en el PC de Juan David, con Claude Code local.
+
+**Analítica (29-sep-2026)**
+- Metricool es muy caro para Juan David: la analítica va gratis con la API de Meta (`npm run analitica`, guía en `docs/ANALITICA.md`).
+- Audiencia de juanda.trifuerza (Metricool, 29-sep): pico lun-vie a las 10:00 y segundo pico a las 18:00 (Bogotá); de 20:00 en adelante cae; fines de semana, la mitad. La parrilla de octubre pasó primero los reels y carruseles de 12:30 a 10:00, pero Juan David prefirió las 12:00 (30-sep): la ventaja de las 10:00 era ~10 % y no estaba probada con sus piezas. Su razón: en la mañana la gente está trabajando y se activa al almuerzo. Quedaron a las 12:00, y las stories de 19:00-20:00 a 18:00 (menos el 27-oct).
+- `online_followers` de Meta viene en hora del Pacífico: el script lo pasa a Bogotá. Si el pico no sale a las 10:00, revisar esa conversión antes que nada.
+- Señal temprana (5 reels): los de videojuegos llegan a más gente; los de opinión sobre IA llegan a menos, pero esa gente interactúa más. Pautar solo lo que supera la mediana en alcance y en compartidos + guardados, a las 72 h.
+
+**Parrilla solo con lo hecho (1-oct-2026)**
+- Juan David programa el mes entero de una vez: en la parrilla no entra nada que no exista ya en `Edited/`. El reel R1 («tres cosas falsas», montaje por hacer) se cambió por el carrusel c11 de juanda, que ya estaba renderizado. Antes de publicar la página, cruzar cada fila del calendario con su archivo en Drive; una pieza nueva entra al calendario solo cuando su MP4 ya está en Drive.
+- La página del calendario puede tener cambios que el JSON no tiene (ej. CTP_FUN/CTP_FAC cambiados de día en LinkedIn): comparar las dos antes de regenerar, para no deshacer lo que él movió.
+
+## 2026-10-04 · propuesta Los Libertadores en estilo brochure
+
+- **Propuestas comerciales también salen como brochure HTML** (`brochures/propuesta-libertadores.html`, estilo
+  Trifuerza Legal). Fuente de cifras: la última versión en Drive `07 Comercial/Propuestas Trifuerza 2023-/Propuestas enviadas`;
+  el PDF nuevo va a la raíz de `Propuestas Trifuerza 2023-` (no a Redes sociales). Pendientes en `verificar.json`.
+- **La app del consultorio (cj-full-app) pide login** y muestra nombres reales de partes: no se capturan pantallas,
+  se recrean en HTML con los tokens reales (verde #004F4A, lateral #18181B) y datos de mentira.
+- **cj-full-app no calcula desistimiento por inactividad**: solo detecta el texto "desistimiento tácito". Lo que se
+  muestre como semáforo de inactividad es alcance por construir, y así se rotula.
+- A Juan David le importa recalcar en las propuestas: uso desde el celular, pago único vs licencia genérica, y que
+  la herramienta es apoyo (no reemplaza la vigilancia del estudiante).
+- **Logo de Trifuerza sobre fondo oscuro (4-oct-2026)**: Juan David quiere las letras blancas puras. El
+  `logo-horizontal-claro.png` anterior (Mesa de trabajo 6) tenía las letras azuladas; ahora es "Mesa de trabajo 6
+  copia 3" recortada con `ffmpeg -vf alphaextract,bbox`. Vale para brochures y para videos.
+- **Propuestas de Trifuerza en PDF**: el motivo visual de la portada es la constelación de nodos de trifuerza.co
+  (no triángulos). Está en SVG con semilla fija dentro del HTML para que salga vectorial. Siempre van el nombre
+  del cliente; la lista de obligaciones anuales NO va en la propuesta (es un entregable aparte de la SAS y vive en
+  el panel de la web), la advertencia de que no se asegura el registro de la marca y los costos de terceros como
+  referencia. El dominio es lo único que se necesita al inicio; Supabase solo cuando la web pase a e-commerce.
+- **Sacar imágenes de un PDF sin poppler**: Chrome headless no renderiza PDFs. Las imágenes se sacan del flujo
+  (FlateDecode CMYK → RGB con node → PNG con ffmpeg). Algunas vienen volteadas: revisarlas antes de usarlas.
+- **4-oct:** LegisOffice al final **no se nombra** (lo pidió y luego lo quitó); Blackboard sí, como comparación sana.
+  En Academy la plataforma solo transmite: las clases se graban con **OBS**. App en tiendas: **$6.000.000**; sin PWA.
+- **Links para revisar:** las propuestas se publican como Artifact desde una copia (scratchpad/publicar) con rutas
+  a `assets/`, sin comentario interno y con un visor que escala las hojas A4 al ancho de la pantalla.
+  Consultorio: https://claude.ai/artifact/BjxWctqrL1oHG7r1CfVFxw · Academy: https://claude.ai/artifact/4A3a8brQehrK3J4JUKFqpK
+- **Constelación de nodos = la de trifuerza.co** (script de `brochures/propuesta-sas-marca-web.html`, Dos Tierras):
+  conceptos de la propuesta escritos junto a los nodos y el cliente como nodo central, arriba a la derecha de la
+  portada; en el cierre, una franja tenue sin cliente. Cierre preferido: "¿Quieres saber más de nosotros?" +
+  botón "Conócenos en www.trifuerza.co ↗".
+- Quiere que las propuestas hablen también de **docentes y directores**, no solo de estudiantes; que digan que lo
+  hace **un equipo** (no "un abogado"); **firma electrónica**, nunca "digital"; y que la app en tiendas y una app de
+  toda la universidad aparezcan como **costo adicional / se cotiza**.
+- Propuesta Academy para universidades: sin precio, arranca con **diagnóstico inicial**; dos caminos (complemento o
+  LMS propio); monetizar vendiendo los cursos hacia afuera. Fuente: `brochures/propuesta-libertadores-academy.html`,
+  armada desde el CSS del brochure del consultorio con el acento de Academy #00C4CC.
+- **Formas de pago en propuestas de Trifuerza (4-oct-2026)**: Juan David no acepta mitad y mitad. Solo pago único:
+  todo junto con 10 % de descuento, o cada servicio por separado y pagado completo al iniciarlo. En la marca, el
+  análisis de expectativas se contrata y paga antes que el registro, y el registro solo si el cliente decide seguir.
+- **Skill `propuesta-servicios` + `npm run propuesta`** (4-oct): PDF, copia para publicar con `archivos.json`,
+  capturas con `--revisar` y copia a Drive. Drive reorganizado: `07 Comercial/Propuestas de servicios/`
+  (antes "Propuestas Trifuerza 2023-") con `Anteriores a 2026-1/`, `2026-2/` y `Guias/`. Registro en `docs/PROPUESTAS.md`.
+  La constelación vive en `brochures/kit/constelacion.js` (paletas trifuerza, legal, academy).
+- **Propuestas solo en PDF, nunca Artifact ni web** (4-oct, confidencialidad y derechos de autor). Los links
+  publicados ese día quedaron obsoletos.
+- **PDF en el celular:** `filter: blur()` sale rasterizado y tosco, y el texto con `background-clip: text` deja
+  rayas con la forma de su caja (pasó en la portada de Dos Tierras). Brillos con `radial-gradient` y título
+  sólido al imprimir. Se revisa con pypdfium2 (el motor de Android y Drive). Chrome sin ventana no baja de
+  504 px de ancho: no sirve para simular un celular de 390.
+- **PDF limpio (4-oct, 2.ª vuelta):** los "cubos" que veía en el celular eran sombras con desenfoque,
+  degradados con transparencia y la rejilla que Chrome vuelve imágenes rectangulares; la constelación salía
+  borrosa por sus opacidades. `brochures/kit/pdf-limpio.js` aplana todo antes de imprimir (fondo en canvas
+  2x, colores opacos mezclados, SVG sin opacidad). Dos Tierras pasó de 129 máscaras de transparencia a 1.
+  Logos de marcas: cuadros blancos iguales, logo contenido; nunca un fondo por logo.
+- **Nitidez del texto en el PDF:** Inter y Fraunces variables salían como Type3 (glifos dibujados). Se instanciaron
+  pesos fijos con fontTools en `public/fuentes/estaticas/` y se cargan con `brochures/kit/fuentes.css`: ahora
+  entran como fuente real (Type0). Los emojis de los mockups eran las últimas máscaras de transparencia
+  (fuente de color con degradados): se cambiaron por puntos de color. Resultado: 0 máscaras en las tres propuestas.
+- **Rótulo por línea de servicio:** la del consultorio es software → TECHNOLOGY, no LEGAL. Enlace a
+  www.trifuerza.co en el pie de todas las páginas. Constelación minimalista (18 nodos en portada, 9 en el
+  cierre, sin nodos encimados ni palabras que choquen) y las tres propuestas cargan `kit/constelacion.js`.
+- **Sin detalles de implementación en propuestas** (Next.js, Supabase, Vercel, React...): a lo sumo PostgreSQL y
+  JavaScript. Cajas de color con letra negra. Error corregido en `pdf-limpio.js`: al aplanar SVG ignoraba la
+  transparencia propia de los colores rgba (las cajas del flujo quedaban con color pleno y texto ilegible) y
+  convertía en sólido el degradado del semáforo; ahora respeta el alfa y conserva los degradados fuera de la constelación.
+- **Propuestas en video (5-oct):** plantilla Brochure con música por negocio (`musica`: institucional,
+  optimista, calido) y copia a `Propuestas de servicios/<semestre>` vía `pieza.drive`. Formatos según
+  cliente: Libertadores solo horizontal, Dos Tierras solo vertical. La escena `pasos` en vertical necesita
+  `alto` ≥ 460 (con 300 se cortan los círculos; en horizontal el alto es fijo). La firma de video lleva la
+  línea del servicio (`marca.firma.linea`), igual que el logo de los PDF.
+- **Dos Tierras en video, 2.ª versión (5-oct):** Juan David pidió marca y web en capítulos separados, más
+  explicativo que de precios, storytelling y metáforas. Nueva escena `metafora` en Brochure.jsx (usa las
+  metáforas de Carrusel); 14 escenas, 81 s, sin tabla de planes. En vertical la metáfora va casi a sangre
+  (ancho de pantalla - 80 px). Lo mismo se puede aplicar a los videos de Libertadores si lo pide.
+- **Videos de Libertadores con historia y metáforas (5-oct):** consultorio 84,5 s y Academy 67,6 s, ambos horizontales.
+  Metáforas útiles para este tipo de propuesta: reloj (plazos, "una sola vez"), balanza (arrendar vs. ser dueño),
+  tablero (monitoreo), alarma (avisos), semáforo (urgencia), candado (seguridad), rompecabezas completo (el criterio
+  humano completa la plataforma), vivo y burbujas (clases en vivo), boleto (venta de cursos), pasos (metodología).
+  Evitar `chat` cuando la respuesta es afirmativa: la metáfora marca la respuesta con una X roja (está hecha para
+  desmentir). `espejismo` trae textos de radicados: no sirve fuera de lo jurídico. En `boleto`, textos cortos de
+  talón y sello (COMPRAR/OFICIAL) para que no se encimen.
+- **Acuerdo de socios incluido en la SAS (5-oct):** Dos Tierras tiene 3 socios que quieren variar utilidades según el
+  aporte. Se vende como "claridad del negocio" y va dentro de los $3.500.000: clases de acciones en los estatutos
+  (derechos permanentes) + acuerdo de socios (lo que cambia: medición del aporte, salida de un socio). El alcance se
+  cuida con "una sesión de análisis con los tres socios"; los contratos socio-sociedad y el modelo tributario
+  (dividendos vs. honorarios) quedarían como adicional si los piden. El trabajo variable se paga mejor como
+  honorarios o bono que como dividendo (más flexible, otra tributación: confirmar con contador).
+- **Gusto en guiones de reels (5-oct):** a Juan David le gustan cortos, con gancho en la primera línea y sin
+  relleno (modelo: N01 «La pantalla de carga prohibida»). Un gancho cotidiano que todos recuerdan (el dinosaurio
+  de Chrome sin internet) antes del dato legal funciona mejor que abrir con el dato. En calle, nada de preguntas
+  que confronten a la persona («¿tu cosplay es tuyo?»): preguntas de juego con el fandom («¿a quién demandaría tu
+  personaje?») y lo legal solo en el remate del estudio, sobre el personaje. Autorización de imagen: basta el «sí»
+  en cámara al final de la entrevista; nada de formularios firmados.
+- **Certificado real de Trifuerza Academy en los videos (6-oct):** Juan David pasó su certificado de ponente
+  (panel noche a la izquierda con logo, duración/fecha/modalidad; hoja clara con «TRIFUERZA ACADEMY», título en
+  Sora, nombre en Fraunces, curso con barra naranja, firma, QR y «Verificable en www.trifuerza.co/academy/verificar»)
+  y pidió meterlo en los videos. Se copió tal cual en `remotion/componentes/Certificado.jsx` (a 1154×815, escalado),
+  con textos y colores en `marcas/juanda.json` → `montaje.certificado` (versión de asistente para la clase del 27,
+  nombre «Tu nombre aquí» que se escribe letra a letra). Lo usan la outro «Comenta CLASE» (certificado arriba, CTA
+  como cinta sobre su borde, sello «Gratis y con certificado») y el beat `certificado` (X02, en «únete a mi clase»).
+  No reemplaza la metáfora `certificado`: esa la usa la propuesta de una universidad con sus propios sellos.
+  El brillo animado va solo sobre la hoja clara: encima del panel oscuro quedaba como una mancha.

@@ -3,8 +3,14 @@ import { Composition, Folder, staticFile } from 'remotion';
 import { MARCAS, PIEZAS, idComposicion } from './catalogo.js';
 import { formatoDe, lineaMontaje } from './montaje/linea.js';
 import { Animado } from './plantillas/Animado.jsx';
+import { Brochure } from './plantillas/Brochure.jsx';
+import { Carrusel } from './plantillas/Carrusel.jsx';
+import { Portada, PortadaAnterior } from './plantillas/Portada.jsx';
 import { Montaje } from './plantillas/Montaje.jsx';
 import { Vertical } from './plantillas/Vertical.jsx';
+import { LabArcade } from './arcade/Lab.jsx';
+import { Arcade } from './plantillas/Arcade.jsx';
+import { lineaArcade } from './arcade/linea.js';
 import { aplicarVoz, duracionDe, duracionPieza, FORMATOS } from './util.js';
 
 /**
@@ -23,7 +29,7 @@ async function conVoz({ props }) {
 }
 
 const FPS = 30;
-const PLANTILLAS = { Animado, Vertical };
+const PLANTILLAS = { Animado, Vertical, Brochure };
 
 /**
  * Una composicion por cada pieza × cuenta. Se agrupan por mes en el Studio,
@@ -33,26 +39,46 @@ export const Root = () => {
   const meses = [...new Set(PIEZAS.map((p) => p.mes))].sort();
   return (
     <>
+      <Folder name="lab">
+        {['trifuerza', 'moneda', 'mundo'].map((escena) => (
+          <Composition key={escena} id={`lab-arcade-${escena}`} component={LabArcade} fps={FPS} width={1080} height={1920} durationInFrames={90} defaultProps={{ marca: MARCAS.juanda, escena }} />
+        ))}
+      </Folder>
       {meses.map((mes) => (
         <Folder key={mes} name={mes}>
           {PIEZAS.filter((p) => p.mes === mes).flatMap((pieza) => {
-            if (pieza.plantilla === 'Montaje') return composicionesMontaje(pieza);
+            if (pieza.plantilla === 'Montaje') return [...composicionesMontaje(pieza), ...composicionesPortada(pieza)];
+            if (pieza.plantilla === 'Arcade') return composicionesArcade(pieza);
+            if (pieza.plantilla === 'Carrusel') return composicionesCarrusel(pieza);
+            if (pieza.plantilla === 'PortadasAnteriores')
+              return pieza.reels.map((x) => (
+                <Composition key={x.id} id={`anterior--${x.id.replace(/_/g, '-')}`} component={PortadaAnterior} fps={FPS} width={1080} height={1920} durationInFrames={160}
+                  defaultProps={{ marca: MARCAS[pieza.cuentas[0]], metafora: x.metafora, datos: x.datos, titulo: x.titulo }} />
+              ));
             const Plantilla = PLANTILLAS[pieza.plantilla];
             if (!Plantilla) return [];
-            const { ancho, alto } = FORMATOS[pieza.formato ?? 'vertical'];
-            return pieza.cuentas.map((cuenta) => (
-              <Composition
-                key={idComposicion(pieza, cuenta)}
-                id={idComposicion(pieza, cuenta)}
-                component={Plantilla}
-                fps={FPS}
-                width={ancho}
-                height={alto}
-                durationInFrames={duracionDe(pieza, FPS, cuenta)}
-                defaultProps={{ pieza, marca: MARCAS[cuenta], voz: null }}
-                calculateMetadata={conVoz}
-              />
-            ));
+            // `formatos` (p. ej. ["vertical", "horizontal"]): el primero es <slug>--<cuenta> y los demas
+            // llevan el formato al final, asi las piezas de un solo formato conservan su id de siempre.
+            const formatos = pieza.formatos ?? [pieza.formato ?? 'vertical'];
+            return pieza.cuentas.flatMap((cuenta) =>
+              formatos.map((formato, k) => {
+                const { ancho, alto } = FORMATOS[formato];
+                const id = k === 0 ? idComposicion(pieza, cuenta) : `${idComposicion(pieza, cuenta)}--${formato}`;
+                return (
+                  <Composition
+                    key={id}
+                    id={id}
+                    component={Plantilla}
+                    fps={FPS}
+                    width={ancho}
+                    height={alto}
+                    durationInFrames={duracionDe(pieza, FPS, cuenta)}
+                    defaultProps={{ pieza, marca: MARCAS[cuenta], voz: null }}
+                    calculateMetadata={conVoz}
+                  />
+                );
+              })
+            );
           })}
         </Folder>
       ))}
@@ -85,4 +111,55 @@ function composicionesMontaje(pieza) {
       );
     })
   );
+}
+
+/**
+ * Carrusel y stories: una composicion por lamina y cuenta (<slug>--<cuenta>--01),
+ * porque Instagram arma el carrusel con un archivo por lamina.
+ */
+function composicionesCarrusel(pieza) {
+  const { ancho, alto } = FORMATOS[pieza.formato ?? 'cuadrado'];
+  const cuadros = Math.round((pieza.segundos ?? 6) * FPS);
+  return pieza.cuentas.flatMap((cuenta) =>
+    pieza.laminas.map((_, i) => {
+      const id = `${pieza.slug}--${cuenta}--${String(i + 1).padStart(2, '0')}`;
+      return (
+        <Composition key={id} id={id} component={Carrusel} fps={FPS} width={ancho} height={alto} durationInFrames={cuadros}
+          defaultProps={{ pieza, marca: MARCAS[cuenta], indice: i }} />
+      );
+    })
+  );
+}
+
+/**
+ * Portadas: una imagen por cuenta y red (<slug>--<cuenta>--portada-ig|li). El cuadro sale del tramo
+ * de cuerpo mas largo (a un tercio, o en `variantes.<cuenta>.portadaSegundo`), del video limpio: sin
+ * subtitulos ni graficos encima. Titulo: portada > gancho > titulo de la pieza.
+ */
+function composicionesPortada(pieza) {
+  if (!pieza.generado) return [];
+  return pieza.cuentas.flatMap((cuenta) => {
+    const v = pieza.variantes?.[cuenta] ?? {};
+    const tramos = (pieza.generado.montajes?.[cuenta]?.segmentos ?? []).filter((t) => t.parte === 'cuerpo');
+    if (!tramos.length) return [];
+    const tramo = tramos.reduce((a, b) => (b.hasta - b.desde > a.hasta - a.desde ? b : a));
+    const segundo = v.portadaSegundo ?? tramo.desde + (tramo.hasta - tramo.desde) / 3;
+    return ['instagram', 'linkedin'].map((red) => {
+      const f = formatoDe(cuenta, red);
+      const id = `${pieza.slug}--${cuenta}--portada-${f.sufijo}`;
+      return (
+        <Composition key={id} id={id} component={Portada} fps={FPS} width={f.ancho} height={f.alto} durationInFrames={1}
+          defaultProps={{ pieza, marca: MARCAS[cuenta], titulo: v.portada ?? v.gancho ?? pieza.titulo, cuadro: { archivo: tramo.archivo, cuadro: Math.round((v.portadaSegundo ?? segundo) * FPS), ancho: f.ancho, alto: f.alto } }} />
+      );
+    });
+  });
+}
+
+/** Arcade (SOFA): una composicion vertical por cuenta (<slug>--<cuenta>). Sin armar (npm run sofa-armar) no aparece. */
+function composicionesArcade(pieza) {
+  if (!pieza.generado) return [];
+  return pieza.cuentas.map((cuenta) => {
+    const id = `${pieza.slug}--${cuenta}`;
+    return <Composition key={id} id={id} component={Arcade} fps={FPS} width={1080} height={1920} durationInFrames={lineaArcade(pieza).total} defaultProps={{ pieza, marca: MARCAS[cuenta] }} />;
+  });
 }

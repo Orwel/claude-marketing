@@ -1,0 +1,2647 @@
+{
+  "plantilla": "Arcade",
+  "serie": "SOFA 2026 · INDIES COLOMBIANOS",
+  "nivel": "SOFA 2026",
+  "cuentas": [
+    "juanda"
+  ],
+  "velocidad": 1.08,
+  "motivo": "arcade",
+  "lados": {
+    "jd": "izquierda",
+    "p2": "derecha"
+  },
+  "nombres": {
+    "jd": {
+      "nombre": "JUAN DAVID"
+    }
+  },
+  "correcciones": [
+    {
+      "de": "sofá",
+      "a": "SOFA"
+    },
+    {
+      "de": "le pregunte",
+      "a": "le pregunté"
+    },
+    {
+      "de": "Le pregunte",
+      "a": "Le pregunté"
+    },
+    {
+      "de": "Cosplayers",
+      "a": "cosplayers"
+    },
+    {
+      "de": "quien demandaría",
+      "a": "quién demandaría"
+    },
+    {
+      "de": "artas",
+      "a": "hartas"
+    },
+    {
+      "de": "hace todo son",
+      "a": "excepto"
+    },
+    {
+      "de": "gingos",
+      "a": "Sung Jinwoo"
+    },
+    {
+      "de": "Chimico Toga",
+      "a": "Himiko Toga"
+    },
+    {
+      "de": "Magiro Academia",
+      "a": "My Hero Academia"
+    },
+    {
+      "de": "Von Leinton",
+      "a": "Von Lycaon"
+    },
+    {
+      "de": "Sunless On Zero",
+      "a": "Zenless Zone Zero"
+    },
+    {
+      "de": "Aurora del League",
+      "a": "Aurora de League"
+    },
+    {
+      "de": "Mavica",
+      "a": "Mavuika"
+    },
+    {
+      "de": "satura",
+      "a": "La Vasija Pura"
+    },
+    {
+      "de": "te parece es a",
+      "a": "te pareces a"
+    },
+    {
+      "de": "estás tú buena",
+      "a": "está muy buena"
+    },
+    {
+      "de": "En como el fue",
+      "a": "En cómo él fue"
+    },
+    {
+      "de": "indique",
+      "a": "indie"
+    },
+    {
+      "de": "Jägger",
+      "a": "Jaeger"
+    },
+    {
+      "de": "Jäger",
+      "a": "Jaeger"
+    },
+    {
+      "de": "capitano",
+      "a": "Capitano"
+    },
+    {
+      "de": "herfría",
+      "a": "le hizo"
+    },
+    {
+      "de": "Drugs del futuro",
+      "a": "Trunks del futuro"
+    },
+    {
+      "de": "Sayajin",
+      "a": "saiyajin"
+    },
+    {
+      "de": "María",
+      "a": "mijo"
+    },
+    {
+      "de": "platico",
+      "a": "platica"
+    },
+    {
+      "de": "si está allí",
+      "a": "si es saiyajin"
+    },
+    {
+      "de": "respaunear",
+      "a": "respawnear"
+    },
+    {
+      "de": "Respawn",
+      "a": "respawn"
+    },
+    {
+      "de": "cagunes",
+      "a": "kagunes"
+    },
+    {
+      "de": "Maca",
+      "a": "Maka"
+    },
+    {
+      "de": "SoulHitter",
+      "a": "Soul Eater"
+    },
+    {
+      "de": "El jefe maestro",
+      "a": "el Jefe Maestro"
+    },
+    {
+      "de": "Te letra... transportarme",
+      "a": "¿Teletransportarme?"
+    },
+    {
+      "de": "maquillero",
+      "a": "Maki Gero"
+    },
+    {
+      "de": "ardestruir",
+      "a": "destruir"
+    },
+    {
+      "de": "Joaquin Club",
+      "a": "Jockey Club"
+    },
+    {
+      "de": "Frey",
+      "a": "Fray"
+    },
+    {
+      "de": "Vélula",
+      "a": "Bélula"
+    },
+    {
+      "de": "Séfira",
+      "a": "Céfira"
+    },
+    {
+      "de": "bótalo",
+      "a": "vótalo"
+    },
+    {
+      "de": "alteratura",
+      "a": "literatura"
+    },
+    {
+      "de": "de mito",
+      "a": "de Mito"
+    },
+    {
+      "de": "Esto es mito",
+      "a": "Esto es Mito"
+    },
+    {
+      "de": "perracos espantos",
+      "a": "Berracos Espantos"
+    },
+    {
+      "de": "Bogofighters",
+      "a": "Bogo Fighters"
+    },
+    {
+      "de": "cráteras",
+      "a": "criaturas"
+    },
+    {
+      "de": "podren",
+      "a": "cobren"
+    },
+    {
+      "de": "viene a secta",
+      "a": "hay una secta"
+    },
+    {
+      "de": "de acuerdos el la guardiente",
+      "a": "de acuerdo, el aguardiente"
+    },
+    {
+      "de": "agua mendita",
+      "a": "agua bendita"
+    },
+    {
+      "de": "desarrollos colombianos",
+      "a": "desarrolladores colombianos"
+    },
+    {
+      "de": "colombia",
+      "a": "Colombia"
+    },
+    {
+      "de": "Es está",
+      "a": "Está"
+    }
+  ],
+  "variantes": {
+    "juanda": {
+      "cta": "Juega colombiano",
+      "copy": ""
+    }
+  },
+  "intro": {
+    "juegos": [
+      "BERRACOS ESPANTOS",
+      "BOGO FIGHTERS"
+    ],
+    "marquesina": "INDIES COLOMBIANOS"
+  },
+  "slug": "sofa-indies-2",
+  "codigo": "SOFA13",
+  "titulo": "Berracos Espantos y Bogo Fighters: indies colombianos",
+  "niveles": 3,
+  "escenas": [
+    {
+      "tipo": "titulo",
+      "segundos": 3.4,
+      "alto": 300,
+      "texto": "Indies colombianos en el SOFA · Parte 2",
+      "serie": "SOFA 2026 · INDIES COLOMBIANOS"
+    },
+    {
+      "tipo": "clip",
+      "archivo": "DJI_20261012_152216_589_video.mp4",
+      "desde": 1.4,
+      "hasta": 5.6,
+      "golpes": [
+        {
+          "en": "colombianos",
+          "texto": "DESARROLLADORES COLOMBIANOS",
+          "estilo": "pastilla"
+        }
+      ],
+      "fx": [
+        {
+          "tipo": "estrellas",
+          "en": "videojuegos",
+          "dura": 3,
+          "quien": null,
+          "lado": "centro",
+          "color": "#F2C85B"
+        }
+      ],
+      "personaje": {
+        "nombre": "Juan David",
+        "clase": "Legal engineer · Trifuerza",
+        "etiqueta": "PLAYER 1 READY",
+        "mundo": "Profesor universitario · desarrollador de videojuegos",
+        "color": "#F26B1D",
+        "stats": [
+          {
+            "n": "DERECHO",
+            "v": 1
+          },
+          {
+            "n": "CÓDIGO",
+            "v": 1
+          },
+          {
+            "n": "VARITA",
+            "v": 0.8
+          }
+        ]
+      },
+      "ficha": true,
+      "fichaEn": 0.3,
+      "retrato": {
+        "t": 4,
+        "x": 0.1303,
+        "y": 0.3516,
+        "w": 0.1653,
+        "h": 0.1054
+      },
+      "foco": {
+        "jd": {
+          "x": 0.3,
+          "y": 0.4,
+          "escala": 1.3
+        }
+      },
+      "lados": {
+        "jd": "izquierda"
+      },
+      "fichaDura": 2.2,
+      "_avisos": []
+    },
+    {
+      "tipo": "clip",
+      "archivo": "DJI_20261012_152216_589_video.mp4",
+      "desde": 5.8,
+      "hasta": 19.2,
+      "golpes": [
+        {
+          "en": "machetazos",
+          "texto": "A MACHETAZOS",
+          "estilo": "daño"
+        },
+        {
+          "en": "aguardiente",
+          "texto": "CON AGUARDIENTE",
+          "estilo": "xp"
+        },
+        {
+          "en": "bendita",
+          "texto": "AGUA BENDITA",
+          "estilo": "pastilla"
+        }
+      ],
+      "fx": [
+        {
+          "tipo": "corte",
+          "en": "machetazos",
+          "dura": 1.3,
+          "quien": "p2",
+          "color": "#E8323C"
+        },
+        {
+          "tipo": "combo",
+          "en": "mitos",
+          "dura": 2,
+          "quien": "p2",
+          "max": 4
+        },
+        {
+          "tipo": "vida",
+          "en": "revives",
+          "dura": 2.4,
+          "quien": "p2",
+          "modo": "cura"
+        },
+        {
+          "tipo": "aura",
+          "en": "bendita",
+          "dura": 2,
+          "quien": "p2",
+          "color": "#9FE3FF"
+        }
+      ],
+      "personaje": {
+        "nombre": "Berracos Espantos",
+        "clase": "Machetazos con mitos y leyendas",
+        "tema": "bosque",
+        "color": "#E8323C",
+        "mundo": "Videojuego colombiano",
+        "stats": [
+          {
+            "n": "MACHETE",
+            "v": 1
+          },
+          {
+            "n": "AGUARDIENTE",
+            "v": 1
+          },
+          {
+            "n": "AGUA BENDITA",
+            "v": 0.9
+          }
+        ],
+        "resumen": "Machetazos con mitos y leyendas"
+      },
+      "ficha": true,
+      "fichaEn": 0.3,
+      "retrato": {
+        "t": 11.6,
+        "x": 0.3568,
+        "y": 0.3624,
+        "w": 0.1355,
+        "h": 0.0864
+      },
+      "turnos": [
+        {
+          "desde": 5.8,
+          "quien": "jd"
+        },
+        {
+          "desde": 8.2,
+          "quien": "p2",
+          "fijo": true
+        }
+      ],
+      "foco": {
+        "jd": {
+          "x": 0.3,
+          "y": 0.42,
+          "escala": 1.3
+        },
+        "p2": {
+          "x": 0.42,
+          "y": 0.42,
+          "escala": 1.4
+        }
+      },
+      "lados": {
+        "jd": "izquierda",
+        "p2": "derecha"
+      },
+      "_avisos": []
+    },
+    {
+      "tipo": "clip",
+      "archivo": "DJI_20261012_152216_589_video.mp4",
+      "desde": 20,
+      "hasta": 29.9,
+      "golpes": [
+        {
+          "en": "aguardiente",
+          "texto": "EL AGUARDIENTE",
+          "estilo": "xp"
+        }
+      ],
+      "fx": [
+        {
+          "tipo": "estrellas",
+          "en": "reviva",
+          "dura": 2,
+          "quien": "p2",
+          "color": "#F2C85B"
+        }
+      ],
+      "personaje": {
+        "nombre": "Berracos Espantos",
+        "clase": "Machetazos con mitos y leyendas",
+        "tema": "bosque",
+        "color": "#E8323C",
+        "mundo": "Videojuego colombiano",
+        "stats": []
+      },
+      "turnos": [
+        {
+          "desde": 20,
+          "quien": "jd"
+        },
+        {
+          "desde": 24.1,
+          "quien": "p2",
+          "fijo": true
+        },
+        {
+          "desde": 28.6,
+          "quien": "jd",
+          "fijo": true
+        },
+        {
+          "desde": 29.2,
+          "quien": "p2",
+          "fijo": true
+        }
+      ],
+      "foco": {
+        "jd": {
+          "x": 0.3,
+          "y": 0.42,
+          "escala": 1.3
+        },
+        "p2": {
+          "x": 0.42,
+          "y": 0.42,
+          "escala": 1.4
+        }
+      },
+      "lados": {
+        "jd": "izquierda",
+        "p2": "derecha"
+      },
+      "_avisos": []
+    },
+    {
+      "tipo": "nivel",
+      "numero": 2,
+      "nombre": "Bogotá",
+      "estilo": "vs",
+      "segundos": 2
+    },
+    {
+      "tipo": "clip",
+      "archivo": "DJI_20261012_151723_832_video.mp4",
+      "desde": 0.8,
+      "hasta": 14.1,
+      "golpes": [
+        {
+          "en": "Bogotá",
+          "texto": "BOGOTÁ",
+          "estilo": "pastilla"
+        },
+        {
+          "en": "sátira",
+          "texto": "LA SÁTIRA",
+          "estilo": "golpe"
+        }
+      ],
+      "fx": [
+        {
+          "tipo": "pelea",
+          "en": "peleas",
+          "dura": 3,
+          "quien": "p2",
+          "nombres": [
+            "BOGO FIGHTERS",
+            "JUAN DAVID"
+          ],
+          "escenario": "BOGOTÁ"
+        },
+        {
+          "tipo": "lluvia",
+          "en": "Bogotá",
+          "dura": 3,
+          "quien": "p2"
+        },
+        {
+          "tipo": "seleccion",
+          "en": "representar",
+          "dura": 3.2,
+          "quien": "p2"
+        }
+      ],
+      "personaje": {
+        "nombre": "Bogo Fighters",
+        "clase": "Peleas con sátira bogotana",
+        "tema": "ciudad",
+        "color": "#F26B1D",
+        "mundo": "Videojuego colombiano",
+        "stats": [
+          {
+            "n": "PELEA",
+            "v": 1
+          },
+          {
+            "n": "SÁTIRA",
+            "v": 1
+          },
+          {
+            "n": "PARCEROS",
+            "v": 1
+          }
+        ],
+        "resumen": "Peleas con sátira bogotana"
+      },
+      "ficha": true,
+      "fichaEn": 0.3,
+      "retrato": {
+        "fijo": "trabajo/2026-10-sofa/retratos-fuente/bogo-fighters.png"
+      },
+      "turnos": [
+        {
+          "desde": 0.8,
+          "quien": "jd"
+        },
+        {
+          "desde": 2.3,
+          "quien": "p2"
+        },
+        {
+          "desde": 3.5,
+          "quien": "jd"
+        },
+        {
+          "desde": 5.6,
+          "quien": "p2"
+        }
+      ],
+      "foco": {
+        "jd": {
+          "x": 0.68,
+          "y": 0.4,
+          "escala": 1.3
+        },
+        "p2": {
+          "x": 0.5,
+          "y": 0.4,
+          "escala": 1.4
+        }
+      },
+      "lados": {
+        "jd": "derecha",
+        "p2": "izquierda"
+      },
+      "_avisos": []
+    },
+    {
+      "tipo": "cierre",
+      "archivo": "DJI_20261012_151723_832_video.mp4",
+      "desde": 14.3,
+      "hasta": 31.1,
+      "golpes": [
+        {
+          "en": "parceros",
+          "texto": "LOS PARCEROS",
+          "estilo": "xp"
+        },
+        {
+          "en": "leyendas",
+          "texto": "LEYENDAS COLOMBIANAS",
+          "estilo": "pastilla"
+        }
+      ],
+      "fx": [
+        {
+          "tipo": "invocacion",
+          "en": "invocación",
+          "dura": 4.2,
+          "quien": "p2",
+          "color": "#F2C85B"
+        },
+        {
+          "tipo": "perfecto",
+          "en": "chévere",
+          "dura": 1.6,
+          "quien": "jd"
+        }
+      ],
+      "personaje": {
+        "nombre": "Bogo Fighters",
+        "clase": "Peleas con sátira bogotana",
+        "tema": "ciudad",
+        "color": "#F26B1D",
+        "mundo": "Videojuego colombiano",
+        "stats": []
+      },
+      "turnos": [
+        {
+          "desde": 14.3,
+          "quien": "jd"
+        },
+        {
+          "desde": 17,
+          "quien": "p2"
+        },
+        {
+          "desde": 27.1,
+          "quien": "jd",
+          "fijo": true
+        },
+        {
+          "desde": 29.9,
+          "quien": "p2",
+          "fijo": true
+        }
+      ],
+      "foco": {
+        "jd": {
+          "x": 0.68,
+          "y": 0.4,
+          "escala": 1.3
+        },
+        "p2": {
+          "x": 0.5,
+          "y": 0.4,
+          "escala": 1.4
+        }
+      },
+      "lados": {
+        "jd": "derecha",
+        "p2": "izquierda"
+      },
+      "cta": "JUEGA COLOMBIANO",
+      "_avisos": []
+    }
+  ],
+  "verificar": [
+    {
+      "dato": "Berracos Espantos: confirmado por el letrero del stand (13-oct-2026). Bogo Fighters: confirmar con el stand",
+      "estado": "pendiente"
+    }
+  ],
+  "generado": {
+    "escenas": [
+      {
+        "tipo": "titulo",
+        "segundos": 3.4,
+        "alto": 300,
+        "texto": "Indies colombianos en el SOFA · Parte 2",
+        "serie": "SOFA 2026 · INDIES COLOMBIANOS",
+        "inicio": 0,
+        "cuadros": 102
+      },
+      {
+        "tipo": "clip",
+        "archivo": "DJI_20261012_152216_589_video.mp4",
+        "desde": 1.4,
+        "hasta": 5.6,
+        "golpes": [
+          {
+            "en": "colombianos",
+            "texto": "DESARROLLADORES COLOMBIANOS",
+            "estilo": "pastilla"
+          }
+        ],
+        "fx": [
+          {
+            "tipo": "estrellas",
+            "en": "videojuegos",
+            "dura": 3,
+            "quien": null,
+            "lado": "centro",
+            "color": "#F2C85B"
+          }
+        ],
+        "personaje": {
+          "nombre": "Juan David",
+          "clase": "Legal engineer · Trifuerza",
+          "etiqueta": "PLAYER 1 READY",
+          "mundo": "Profesor universitario · desarrollador de videojuegos",
+          "color": "#F26B1D",
+          "stats": [
+            {
+              "n": "DERECHO",
+              "v": 1
+            },
+            {
+              "n": "CÓDIGO",
+              "v": 1
+            },
+            {
+              "n": "VARITA",
+              "v": 0.8
+            }
+          ]
+        },
+        "ficha": true,
+        "fichaEn": 0.3,
+        "retrato": {
+          "t": 4,
+          "x": 0.1303,
+          "y": 0.3516,
+          "w": 0.1653,
+          "h": 0.1054
+        },
+        "foco": {
+          "jd": {
+            "x": 0.3,
+            "y": 0.4,
+            "escala": 1.3
+          }
+        },
+        "lados": {
+          "jd": "izquierda"
+        },
+        "fichaDura": 2.2,
+        "inicio": 102,
+        "cuadros": 142,
+        "cola": 15,
+        "tramos": [
+          {
+            "archivo": "sofa/DJI_20261012_152216_589_video.mp4",
+            "desde": 1.2,
+            "hasta": 5.76,
+            "velocidad": 1.08,
+            "inicio": 0,
+            "cuadros": 127
+          }
+        ],
+        "subtitulos": [
+          {
+            "text": " estamos",
+            "startMs": 185,
+            "endMs": 444,
+            "timestampMs": null,
+            "confidence": 0.0495481,
+            "quien": "jd"
+          },
+          {
+            "text": " en",
+            "startMs": 444,
+            "endMs": 537,
+            "timestampMs": null,
+            "confidence": 0.979525,
+            "quien": "jd"
+          },
+          {
+            "text": " el",
+            "startMs": 537,
+            "endMs": 704,
+            "timestampMs": null,
+            "confidence": 0.993083,
+            "quien": "jd"
+          },
+          {
+            "text": " SOFA",
+            "startMs": 704,
+            "endMs": 981,
+            "timestampMs": null,
+            "confidence": 0.827574,
+            "quien": "jd"
+          },
+          {
+            "text": " entrevistando",
+            "startMs": 981,
+            "endMs": 1426,
+            "timestampMs": null,
+            "confidence": 0.936797,
+            "quien": "jd"
+          },
+          {
+            "text": " a",
+            "startMs": 1426,
+            "endMs": 1685,
+            "timestampMs": null,
+            "confidence": 0.918482,
+            "quien": "jd"
+          },
+          {
+            "text": " desarrolladores colombianos",
+            "startMs": 1685,
+            "endMs": 2500,
+            "timestampMs": null,
+            "confidence": 0.471925,
+            "quien": "jd"
+          },
+          {
+            "text": " de",
+            "startMs": 2500,
+            "endMs": 2648,
+            "timestampMs": null,
+            "confidence": 0.94774,
+            "quien": "jd"
+          },
+          {
+            "text": " videojuegos",
+            "startMs": 2648,
+            "endMs": 2963,
+            "timestampMs": null,
+            "confidence": 0.895233,
+            "quien": "jd"
+          },
+          {
+            "text": " y",
+            "startMs": 3148,
+            "endMs": 3241,
+            "timestampMs": null,
+            "confidence": 0.56629,
+            "quien": "jd"
+          },
+          {
+            "text": " hoy",
+            "startMs": 3241,
+            "endMs": 3407,
+            "timestampMs": null,
+            "confidence": 0.995262,
+            "quien": "jd"
+          },
+          {
+            "text": " estamos",
+            "startMs": 3407,
+            "endMs": 3722,
+            "timestampMs": null,
+            "confidence": 0.996082,
+            "quien": "jd"
+          },
+          {
+            "text": " con",
+            "startMs": 3722,
+            "endMs": 3889,
+            "timestampMs": null,
+            "confidence": 0.991858,
+            "quien": "jd"
+          }
+        ],
+        "texto": "estamos en el sofá entrevistando a desarrollos colombianos de videojuegos y hoy estamos con",
+        "retratoPng": "sofa/retratos/sofa-indies-2-1-37b95cf8.png"
+      },
+      {
+        "tipo": "clip",
+        "archivo": "DJI_20261012_152216_589_video.mp4",
+        "desde": 5.8,
+        "hasta": 19.2,
+        "golpes": [
+          {
+            "en": "machetazos",
+            "texto": "A MACHETAZOS",
+            "estilo": "daño"
+          },
+          {
+            "en": "aguardiente",
+            "texto": "CON AGUARDIENTE",
+            "estilo": "xp"
+          },
+          {
+            "en": "bendita",
+            "texto": "AGUA BENDITA",
+            "estilo": "pastilla"
+          }
+        ],
+        "fx": [
+          {
+            "tipo": "corte",
+            "en": "machetazos",
+            "dura": 1.3,
+            "quien": "p2",
+            "color": "#E8323C"
+          },
+          {
+            "tipo": "combo",
+            "en": "mitos",
+            "dura": 2,
+            "quien": "p2",
+            "max": 4
+          },
+          {
+            "tipo": "vida",
+            "en": "revives",
+            "dura": 2.4,
+            "quien": "p2",
+            "modo": "cura"
+          },
+          {
+            "tipo": "aura",
+            "en": "bendita",
+            "dura": 2,
+            "quien": "p2",
+            "color": "#9FE3FF"
+          }
+        ],
+        "personaje": {
+          "nombre": "Berracos Espantos",
+          "clase": "Machetazos con mitos y leyendas",
+          "tema": "bosque",
+          "color": "#E8323C",
+          "mundo": "Videojuego colombiano",
+          "stats": [
+            {
+              "n": "MACHETE",
+              "v": 1
+            },
+            {
+              "n": "AGUARDIENTE",
+              "v": 1
+            },
+            {
+              "n": "AGUA BENDITA",
+              "v": 0.9
+            }
+          ],
+          "resumen": "Machetazos con mitos y leyendas"
+        },
+        "ficha": true,
+        "fichaEn": 0.3,
+        "retrato": {
+          "t": 11.6,
+          "x": 0.3568,
+          "y": 0.3624,
+          "w": 0.1355,
+          "h": 0.0864
+        },
+        "turnos": [
+          {
+            "desde": 5.8,
+            "quien": "jd"
+          },
+          {
+            "desde": 8.2,
+            "quien": "p2",
+            "fijo": true
+          }
+        ],
+        "foco": {
+          "jd": {
+            "x": 0.3,
+            "y": 0.42,
+            "escala": 1.3
+          },
+          "p2": {
+            "x": 0.42,
+            "y": 0.42,
+            "escala": 1.4
+          }
+        },
+        "lados": {
+          "jd": "izquierda",
+          "p2": "derecha"
+        },
+        "inicio": 244,
+        "cuadros": 378,
+        "cola": 3,
+        "tramos": [
+          {
+            "archivo": "sofa/DJI_20261012_152216_589_video.mp4",
+            "desde": 5.6,
+            "hasta": 8.8,
+            "velocidad": 1.08,
+            "inicio": 0,
+            "cuadros": 89
+          },
+          {
+            "archivo": "sofa/DJI_20261012_152216_589_video.mp4",
+            "desde": 9.22,
+            "hasta": 14.4,
+            "velocidad": 1.08,
+            "inicio": 89,
+            "cuadros": 144
+          },
+          {
+            "archivo": "sofa/DJI_20261012_152216_589_video.mp4",
+            "desde": 14.7,
+            "hasta": 19.8,
+            "velocidad": 1.08,
+            "inicio": 233,
+            "cuadros": 142
+          }
+        ],
+        "subtitulos": [
+          {
+            "text": " Berracos Espantos",
+            "startMs": 185,
+            "endMs": 837,
+            "timestampMs": null,
+            "confidence": 0.35684,
+            "quien": "jd"
+          },
+          {
+            "text": " de",
+            "startMs": 837,
+            "endMs": 956,
+            "timestampMs": null,
+            "confidence": 0.813353,
+            "quien": "jd"
+          },
+          {
+            "text": " qué",
+            "startMs": 956,
+            "endMs": 1111,
+            "timestampMs": null,
+            "confidence": 0.673058,
+            "quien": "jd"
+          },
+          {
+            "text": " trata",
+            "startMs": 1574,
+            "endMs": 1832,
+            "timestampMs": null,
+            "confidence": 0.995513,
+            "quien": "jd"
+          },
+          {
+            "text": " tu",
+            "startMs": 1832,
+            "endMs": 1971,
+            "timestampMs": null,
+            "confidence": 0.947363,
+            "quien": "jd"
+          },
+          {
+            "text": " videojuego",
+            "startMs": 1971,
+            "endMs": 2427,
+            "timestampMs": null,
+            "confidence": 0.929094,
+            "quien": "jd"
+          },
+          {
+            "text": " bueno",
+            "startMs": 2427,
+            "endMs": 2685,
+            "timestampMs": null,
+            "confidence": 0.786487,
+            "quien": "p2"
+          },
+          {
+            "text": " Berracos Espantos",
+            "startMs": 3148,
+            "endMs": 3889,
+            "timestampMs": null,
+            "confidence": 0.976328,
+            "quien": "p2"
+          },
+          {
+            "text": " es",
+            "startMs": 3889,
+            "endMs": 4000,
+            "timestampMs": null,
+            "confidence": 0.991295,
+            "quien": "p2"
+          },
+          {
+            "text": " un",
+            "startMs": 4000,
+            "endMs": 4148,
+            "timestampMs": null,
+            "confidence": 0.998837,
+            "quien": "p2"
+          },
+          {
+            "text": " juego",
+            "startMs": 4148,
+            "endMs": 4389,
+            "timestampMs": null,
+            "confidence": 0.996786,
+            "quien": "p2"
+          },
+          {
+            "text": " donde",
+            "startMs": 4389,
+            "endMs": 4833,
+            "timestampMs": null,
+            "confidence": 0.980254,
+            "quien": "p2"
+          },
+          {
+            "text": " básicamente",
+            "startMs": 4833,
+            "endMs": 5111,
+            "timestampMs": null,
+            "confidence": 0.994351,
+            "quien": "p2"
+          },
+          {
+            "text": " te",
+            "startMs": 5111,
+            "endMs": 5241,
+            "timestampMs": null,
+            "confidence": 0.988932,
+            "quien": "p2"
+          },
+          {
+            "text": " agarras",
+            "startMs": 5241,
+            "endMs": 5519,
+            "timestampMs": null,
+            "confidence": 0.995765,
+            "quien": "p2"
+          },
+          {
+            "text": " a",
+            "startMs": 5519,
+            "endMs": 5667,
+            "timestampMs": null,
+            "confidence": 0.921688,
+            "quien": "p2"
+          },
+          {
+            "text": " machetazos",
+            "startMs": 5667,
+            "endMs": 6093,
+            "timestampMs": null,
+            "confidence": 0.981803,
+            "quien": "p2"
+          },
+          {
+            "text": " con",
+            "startMs": 6093,
+            "endMs": 6139,
+            "timestampMs": null,
+            "confidence": 0.929776,
+            "quien": "p2"
+          },
+          {
+            "text": " mitos",
+            "startMs": 6139,
+            "endMs": 6185,
+            "timestampMs": null,
+            "confidence": 0.928392,
+            "quien": "p2"
+          },
+          {
+            "text": " y",
+            "startMs": 6370,
+            "endMs": 6461,
+            "timestampMs": null,
+            "confidence": 0.983399,
+            "quien": "p2"
+          },
+          {
+            "text": " leyendas",
+            "startMs": 6461,
+            "endMs": 6807,
+            "timestampMs": null,
+            "confidence": 0.899422,
+            "quien": "p2"
+          },
+          {
+            "text": " de",
+            "startMs": 6807,
+            "endMs": 6935,
+            "timestampMs": null,
+            "confidence": 0.998902,
+            "quien": "p2"
+          },
+          {
+            "text": " Colombia",
+            "startMs": 6935,
+            "endMs": 7281,
+            "timestampMs": null,
+            "confidence": 0.88815,
+            "quien": "p2"
+          },
+          {
+            "text": " aquí",
+            "startMs": 7281,
+            "endMs": 7481,
+            "timestampMs": null,
+            "confidence": 0.854745,
+            "quien": "p2"
+          },
+          {
+            "text": " si",
+            "startMs": 7944,
+            "endMs": 7981,
+            "timestampMs": null,
+            "confidence": 0.907108,
+            "quien": "p2"
+          },
+          {
+            "text": " te",
+            "startMs": 7981,
+            "endMs": 8167,
+            "timestampMs": null,
+            "confidence": 0.993866,
+            "quien": "p2"
+          },
+          {
+            "text": " lastiman",
+            "startMs": 8167,
+            "endMs": 8537,
+            "timestampMs": null,
+            "confidence": 0.930259,
+            "quien": "p2"
+          },
+          {
+            "text": " te",
+            "startMs": 8537,
+            "endMs": 8685,
+            "timestampMs": null,
+            "confidence": 0.939157,
+            "quien": "p2"
+          },
+          {
+            "text": " revives",
+            "startMs": 8685,
+            "endMs": 8944,
+            "timestampMs": null,
+            "confidence": 0.868381,
+            "quien": "p2"
+          },
+          {
+            "text": " con",
+            "startMs": 8944,
+            "endMs": 9093,
+            "timestampMs": null,
+            "confidence": 0.941555,
+            "quien": "p2"
+          },
+          {
+            "text": " aguardiente",
+            "startMs": 9093,
+            "endMs": 9667,
+            "timestampMs": null,
+            "confidence": 0.743758,
+            "quien": "p2"
+          },
+          {
+            "text": " y",
+            "startMs": 9667,
+            "endMs": 9889,
+            "timestampMs": null,
+            "confidence": 0.982793,
+            "quien": "p2"
+          },
+          {
+            "text": " con",
+            "startMs": 9889,
+            "endMs": 10056,
+            "timestampMs": null,
+            "confidence": 0.990875,
+            "quien": "p2"
+          },
+          {
+            "text": " bombas",
+            "startMs": 10056,
+            "endMs": 10296,
+            "timestampMs": null,
+            "confidence": 0.511593,
+            "quien": "p2"
+          },
+          {
+            "text": " de",
+            "startMs": 10296,
+            "endMs": 10370,
+            "timestampMs": null,
+            "confidence": 0.669312,
+            "quien": "p2"
+          },
+          {
+            "text": " agua bendita",
+            "startMs": 10370,
+            "endMs": 10870,
+            "timestampMs": null,
+            "confidence": 0.978,
+            "quien": "p2"
+          },
+          {
+            "text": " te",
+            "startMs": 10870,
+            "endMs": 11037,
+            "timestampMs": null,
+            "confidence": 0.974561,
+            "quien": "p2"
+          },
+          {
+            "text": " puedes",
+            "startMs": 11037,
+            "endMs": 11333,
+            "timestampMs": null,
+            "confidence": 0.973264,
+            "quien": "p2"
+          },
+          {
+            "text": " defender",
+            "startMs": 11333,
+            "endMs": 11741,
+            "timestampMs": null,
+            "confidence": 0.996962,
+            "quien": "p2"
+          }
+        ],
+        "texto": "perracos espantos de qué trata tu videojuego bueno perracos espantos es un juego donde básicamente te agarras a machetazos con mitos y leyendas de colombia aquí si te lastiman te revives con aguardiente y con bombas de agua mendita te puedes defender",
+        "retratoPng": "sofa/retratos/sofa-indies-2-2-f832b8c.png"
+      },
+      {
+        "tipo": "clip",
+        "archivo": "DJI_20261012_152216_589_video.mp4",
+        "desde": 20,
+        "hasta": 29.9,
+        "golpes": [
+          {
+            "en": "aguardiente",
+            "texto": "EL AGUARDIENTE",
+            "estilo": "xp"
+          }
+        ],
+        "fx": [
+          {
+            "tipo": "estrellas",
+            "en": "reviva",
+            "dura": 2,
+            "quien": "p2",
+            "color": "#F2C85B"
+          }
+        ],
+        "personaje": {
+          "nombre": "Berracos Espantos",
+          "clase": "Machetazos con mitos y leyendas",
+          "tema": "bosque",
+          "color": "#E8323C",
+          "mundo": "Videojuego colombiano",
+          "stats": []
+        },
+        "turnos": [
+          {
+            "desde": 20,
+            "quien": "jd"
+          },
+          {
+            "desde": 24.1,
+            "quien": "p2",
+            "fijo": true
+          },
+          {
+            "desde": 28.6,
+            "quien": "jd",
+            "fijo": true
+          },
+          {
+            "desde": 29.2,
+            "quien": "p2",
+            "fijo": true
+          }
+        ],
+        "foco": {
+          "jd": {
+            "x": 0.3,
+            "y": 0.42,
+            "escala": 1.3
+          },
+          "p2": {
+            "x": 0.42,
+            "y": 0.42,
+            "escala": 1.4
+          }
+        },
+        "lados": {
+          "jd": "izquierda",
+          "p2": "derecha"
+        },
+        "inicio": 622,
+        "cuadros": 308,
+        "cola": 8,
+        "tramos": [
+          {
+            "archivo": "sofa/DJI_20261012_152216_589_video.mp4",
+            "desde": 19.8,
+            "hasta": 30.6,
+            "velocidad": 1.08,
+            "inicio": 0,
+            "cuadros": 300
+          }
+        ],
+        "subtitulos": [
+          {
+            "text": " también",
+            "startMs": 185,
+            "endMs": 259,
+            "timestampMs": null,
+            "confidence": 0.974338,
+            "quien": "jd"
+          },
+          {
+            "text": " está",
+            "startMs": 259,
+            "endMs": 463,
+            "timestampMs": null,
+            "confidence": 0.767942,
+            "quien": "jd"
+          },
+          {
+            "text": " muy",
+            "startMs": 463,
+            "endMs": 870,
+            "timestampMs": null,
+            "confidence": 0.997927,
+            "quien": "jd"
+          },
+          {
+            "text": " interesante",
+            "startMs": 870,
+            "endMs": 1407,
+            "timestampMs": null,
+            "confidence": 0.980079,
+            "quien": "jd"
+          },
+          {
+            "text": " y",
+            "startMs": 1407,
+            "endMs": 1667,
+            "timestampMs": null,
+            "confidence": 0.946442,
+            "quien": "jd"
+          },
+          {
+            "text": " qué",
+            "startMs": 1667,
+            "endMs": 1833,
+            "timestampMs": null,
+            "confidence": 0.779767,
+            "quien": "jd"
+          },
+          {
+            "text": " mecánica",
+            "startMs": 1833,
+            "endMs": 2333,
+            "timestampMs": null,
+            "confidence": 0.814574,
+            "quien": "jd"
+          },
+          {
+            "text": " del",
+            "startMs": 2333,
+            "endMs": 2463,
+            "timestampMs": null,
+            "confidence": 0.870844,
+            "quien": "jd"
+          },
+          {
+            "text": " videojuego",
+            "startMs": 2463,
+            "endMs": 2963,
+            "timestampMs": null,
+            "confidence": 0.99086,
+            "quien": "jd"
+          },
+          {
+            "text": " traerías",
+            "startMs": 2963,
+            "endMs": 3426,
+            "timestampMs": null,
+            "confidence": 0.982958,
+            "quien": "jd"
+          },
+          {
+            "text": " a",
+            "startMs": 3426,
+            "endMs": 3500,
+            "timestampMs": null,
+            "confidence": 0.983899,
+            "quien": "jd"
+          },
+          {
+            "text": " la",
+            "startMs": 3500,
+            "endMs": 3630,
+            "timestampMs": null,
+            "confidence": 0.997638,
+            "quien": "jd"
+          },
+          {
+            "text": " vida",
+            "startMs": 3630,
+            "endMs": 3889,
+            "timestampMs": null,
+            "confidence": 0.994253,
+            "quien": "jd"
+          },
+          {
+            "text": " real",
+            "startMs": 3889,
+            "endMs": 3935,
+            "timestampMs": null,
+            "confidence": 0.979391,
+            "quien": "jd"
+          },
+          {
+            "text": " creo",
+            "startMs": 3935,
+            "endMs": 3981,
+            "timestampMs": null,
+            "confidence": 0.768991,
+            "quien": "p2"
+          },
+          {
+            "text": " que",
+            "startMs": 4593,
+            "endMs": 4815,
+            "timestampMs": null,
+            "confidence": 0.999535,
+            "quien": "p2"
+          },
+          {
+            "text": " como",
+            "startMs": 4815,
+            "endMs": 5056,
+            "timestampMs": null,
+            "confidence": 0.980726,
+            "quien": "p2"
+          },
+          {
+            "text": " todos",
+            "startMs": 5056,
+            "endMs": 5352,
+            "timestampMs": null,
+            "confidence": 0.990641,
+            "quien": "p2"
+          },
+          {
+            "text": " estamos",
+            "startMs": 5352,
+            "endMs": 5519,
+            "timestampMs": null,
+            "confidence": 0.970973,
+            "quien": "p2"
+          },
+          {
+            "text": " de acuerdo, el aguardiente",
+            "startMs": 5519,
+            "endMs": 6685,
+            "timestampMs": null,
+            "confidence": 0.994107,
+            "quien": "p2"
+          },
+          {
+            "text": " para",
+            "startMs": 6685,
+            "endMs": 6796,
+            "timestampMs": null,
+            "confidence": 0.854701,
+            "quien": "p2"
+          },
+          {
+            "text": " que",
+            "startMs": 6796,
+            "endMs": 6907,
+            "timestampMs": null,
+            "confidence": 0.974122,
+            "quien": "p2"
+          },
+          {
+            "text": " no",
+            "startMs": 6907,
+            "endMs": 7130,
+            "timestampMs": null,
+            "confidence": 0.791541,
+            "quien": "p2"
+          },
+          {
+            "text": " reviva.",
+            "startMs": 7130,
+            "endMs": 8148,
+            "timestampMs": null,
+            "confidence": 0.482906,
+            "quien": "p2"
+          },
+          {
+            "text": " ¡Esa",
+            "startMs": 8148,
+            "endMs": 8315,
+            "timestampMs": null,
+            "confidence": 0.0784137,
+            "quien": "jd"
+          },
+          {
+            "text": " está",
+            "startMs": 8315,
+            "endMs": 8556,
+            "timestampMs": null,
+            "confidence": 0.943765,
+            "quien": "jd"
+          },
+          {
+            "text": " muy",
+            "startMs": 8556,
+            "endMs": 8704,
+            "timestampMs": null,
+            "confidence": 0.996172,
+            "quien": "jd"
+          },
+          {
+            "text": " bueno!",
+            "startMs": 8704,
+            "endMs": 8731,
+            "timestampMs": null,
+            "confidence": 0.925161,
+            "quien": "p2"
+          },
+          {
+            "text": " ¡Gracias!",
+            "startMs": 8731,
+            "endMs": 8766,
+            "timestampMs": null,
+            "confidence": 0.396874,
+            "quien": "p2"
+          },
+          {
+            "text": " ¡Muchas",
+            "startMs": 8766,
+            "endMs": 8796,
+            "timestampMs": null,
+            "confidence": 0.801371,
+            "quien": "p2"
+          },
+          {
+            "text": " gracias!",
+            "startMs": 9167,
+            "endMs": 9444,
+            "timestampMs": null,
+            "confidence": 0.967147,
+            "quien": "p2"
+          }
+        ],
+        "texto": "también está muy interesante y qué mecánica del videojuego traerías a la vida real creo que como todos estamos de acuerdos el la guardiente para que no reviva. ¡Esa está muy bueno! ¡Gracias! ¡Muchas gracias!"
+      },
+      {
+        "tipo": "nivel",
+        "numero": 2,
+        "nombre": "Bogotá",
+        "estilo": "vs",
+        "segundos": 2,
+        "inicio": 930,
+        "cuadros": 60
+      },
+      {
+        "tipo": "clip",
+        "archivo": "DJI_20261012_151723_832_video.mp4",
+        "desde": 0.8,
+        "hasta": 14.1,
+        "golpes": [
+          {
+            "en": "Bogotá",
+            "texto": "BOGOTÁ",
+            "estilo": "pastilla"
+          },
+          {
+            "en": "sátira",
+            "texto": "LA SÁTIRA",
+            "estilo": "golpe"
+          }
+        ],
+        "fx": [
+          {
+            "tipo": "pelea",
+            "en": "peleas",
+            "dura": 3,
+            "quien": "p2",
+            "nombres": [
+              "BOGO FIGHTERS",
+              "JUAN DAVID"
+            ],
+            "escenario": "BOGOTÁ"
+          },
+          {
+            "tipo": "lluvia",
+            "en": "Bogotá",
+            "dura": 3,
+            "quien": "p2"
+          },
+          {
+            "tipo": "seleccion",
+            "en": "representar",
+            "dura": 3.2,
+            "quien": "p2"
+          }
+        ],
+        "personaje": {
+          "nombre": "Bogo Fighters",
+          "clase": "Peleas con sátira bogotana",
+          "tema": "ciudad",
+          "color": "#F26B1D",
+          "mundo": "Videojuego colombiano",
+          "stats": [
+            {
+              "n": "PELEA",
+              "v": 1
+            },
+            {
+              "n": "SÁTIRA",
+              "v": 1
+            },
+            {
+              "n": "PARCEROS",
+              "v": 1
+            }
+          ],
+          "resumen": "Peleas con sátira bogotana"
+        },
+        "ficha": true,
+        "fichaEn": 0.3,
+        "retrato": {
+          "fijo": "trabajo/2026-10-sofa/retratos-fuente/bogo-fighters.png"
+        },
+        "turnos": [
+          {
+            "desde": 0.8,
+            "quien": "jd"
+          },
+          {
+            "desde": 2.3,
+            "quien": "p2"
+          },
+          {
+            "desde": 3.5,
+            "quien": "jd"
+          },
+          {
+            "desde": 5.6,
+            "quien": "p2"
+          }
+        ],
+        "foco": {
+          "jd": {
+            "x": 0.68,
+            "y": 0.4,
+            "escala": 1.3
+          },
+          "p2": {
+            "x": 0.5,
+            "y": 0.4,
+            "escala": 1.4
+          }
+        },
+        "lados": {
+          "jd": "derecha",
+          "p2": "izquierda"
+        },
+        "inicio": 990,
+        "cuadros": 394,
+        "cola": 21,
+        "tramos": [
+          {
+            "archivo": "sofa/DJI_20261012_151723_832_video.mp4",
+            "desde": 0.6,
+            "hasta": 3.1,
+            "velocidad": 1.08,
+            "inicio": 0,
+            "cuadros": 69
+          },
+          {
+            "archivo": "sofa/DJI_20261012_151723_832_video.mp4",
+            "desde": 3.3,
+            "hasta": 14.26,
+            "velocidad": 1.08,
+            "inicio": 69,
+            "cuadros": 304
+          }
+        ],
+        "subtitulos": [
+          {
+            "text": " Hoy",
+            "startMs": 185,
+            "endMs": 399,
+            "timestampMs": null,
+            "confidence": 0.562656,
+            "quien": "jd"
+          },
+          {
+            "text": " estamos",
+            "startMs": 399,
+            "endMs": 805,
+            "timestampMs": null,
+            "confidence": 0.984741,
+            "quien": "jd"
+          },
+          {
+            "text": " con",
+            "startMs": 805,
+            "endMs": 1019,
+            "timestampMs": null,
+            "confidence": 0.993451,
+            "quien": "jd"
+          },
+          {
+            "text": " Bogo Fighters.",
+            "startMs": 1574,
+            "endMs": 2037,
+            "timestampMs": null,
+            "confidence": 0.130998,
+            "quien": "p2"
+          },
+          {
+            "text": " Cuéntanos",
+            "startMs": 2500,
+            "endMs": 2946,
+            "timestampMs": null,
+            "confidence": 0.620877,
+            "quien": "jd"
+          },
+          {
+            "text": " de",
+            "startMs": 2946,
+            "endMs": 3095,
+            "timestampMs": null,
+            "confidence": 0.951078,
+            "quien": "jd"
+          },
+          {
+            "text": " qué",
+            "startMs": 3095,
+            "endMs": 3287,
+            "timestampMs": null,
+            "confidence": 0.635456,
+            "quien": "jd"
+          },
+          {
+            "text": " trata",
+            "startMs": 3287,
+            "endMs": 3564,
+            "timestampMs": null,
+            "confidence": 0.989227,
+            "quien": "jd"
+          },
+          {
+            "text": " tu",
+            "startMs": 3564,
+            "endMs": 3712,
+            "timestampMs": null,
+            "confidence": 0.968064,
+            "quien": "jd"
+          },
+          {
+            "text": " negocio.",
+            "startMs": 3712,
+            "endMs": 4074,
+            "timestampMs": null,
+            "confidence": 0.966284,
+            "quien": "jd"
+          },
+          {
+            "text": " Bogo Fighters",
+            "startMs": 4611,
+            "endMs": 5056,
+            "timestampMs": null,
+            "confidence": 0.947196,
+            "quien": "p2"
+          },
+          {
+            "text": " es",
+            "startMs": 5056,
+            "endMs": 5148,
+            "timestampMs": null,
+            "confidence": 0.967693,
+            "quien": "p2"
+          },
+          {
+            "text": " un",
+            "startMs": 5148,
+            "endMs": 5315,
+            "timestampMs": null,
+            "confidence": 0.992941,
+            "quien": "p2"
+          },
+          {
+            "text": " videojuego",
+            "startMs": 5315,
+            "endMs": 5685,
+            "timestampMs": null,
+            "confidence": 0.959371,
+            "quien": "p2"
+          },
+          {
+            "text": " de",
+            "startMs": 5685,
+            "endMs": 5796,
+            "timestampMs": null,
+            "confidence": 0.8699,
+            "quien": "p2"
+          },
+          {
+            "text": " peleas",
+            "startMs": 5796,
+            "endMs": 6093,
+            "timestampMs": null,
+            "confidence": 0.994319,
+            "quien": "p2"
+          },
+          {
+            "text": " enfocadas",
+            "startMs": 6093,
+            "endMs": 6389,
+            "timestampMs": null,
+            "confidence": 0.929207,
+            "quien": "p2"
+          },
+          {
+            "text": " en",
+            "startMs": 6389,
+            "endMs": 6463,
+            "timestampMs": null,
+            "confidence": 0.95954,
+            "quien": "p2"
+          },
+          {
+            "text": " la",
+            "startMs": 6463,
+            "endMs": 6611,
+            "timestampMs": null,
+            "confidence": 0.852928,
+            "quien": "p2"
+          },
+          {
+            "text": " ciudad",
+            "startMs": 6611,
+            "endMs": 6833,
+            "timestampMs": null,
+            "confidence": 0.968095,
+            "quien": "p2"
+          },
+          {
+            "text": " de",
+            "startMs": 6833,
+            "endMs": 6963,
+            "timestampMs": null,
+            "confidence": 0.97227,
+            "quien": "p2"
+          },
+          {
+            "text": " Bogotá",
+            "startMs": 6963,
+            "endMs": 7463,
+            "timestampMs": null,
+            "confidence": 0.987274,
+            "quien": "p2"
+          },
+          {
+            "text": " que",
+            "startMs": 7463,
+            "endMs": 7648,
+            "timestampMs": null,
+            "confidence": 0.739055,
+            "quien": "p2"
+          },
+          {
+            "text": " utiliza",
+            "startMs": 7648,
+            "endMs": 7944,
+            "timestampMs": null,
+            "confidence": 0.565233,
+            "quien": "p2"
+          },
+          {
+            "text": " la",
+            "startMs": 7944,
+            "endMs": 8426,
+            "timestampMs": null,
+            "confidence": 0.619224,
+            "quien": "p2"
+          },
+          {
+            "text": " sátira",
+            "startMs": 8611,
+            "endMs": 8778,
+            "timestampMs": null,
+            "confidence": 0.445142,
+            "quien": "p2"
+          },
+          {
+            "text": " para",
+            "startMs": 8778,
+            "endMs": 9093,
+            "timestampMs": null,
+            "confidence": 0.992063,
+            "quien": "p2"
+          },
+          {
+            "text": " representar",
+            "startMs": 9093,
+            "endMs": 9389,
+            "timestampMs": null,
+            "confidence": 0.989508,
+            "quien": "p2"
+          },
+          {
+            "text": " a",
+            "startMs": 9389,
+            "endMs": 9556,
+            "timestampMs": null,
+            "confidence": 0.527503,
+            "quien": "p2"
+          },
+          {
+            "text": " algunos",
+            "startMs": 9556,
+            "endMs": 9704,
+            "timestampMs": null,
+            "confidence": 0.526509,
+            "quien": "p2"
+          },
+          {
+            "text": " de",
+            "startMs": 9704,
+            "endMs": 10111,
+            "timestampMs": null,
+            "confidence": 0.953588,
+            "quien": "p2"
+          },
+          {
+            "text": " los",
+            "startMs": 10111,
+            "endMs": 11037,
+            "timestampMs": null,
+            "confidence": 0.99606,
+            "quien": "p2"
+          },
+          {
+            "text": " personajes",
+            "startMs": 11037,
+            "endMs": 11278,
+            "timestampMs": null,
+            "confidence": 0.994146,
+            "quien": "p2"
+          },
+          {
+            "text": " más",
+            "startMs": 11278,
+            "endMs": 11537,
+            "timestampMs": null,
+            "confidence": 0.990008,
+            "quien": "p2"
+          },
+          {
+            "text": " característicos",
+            "startMs": 11537,
+            "endMs": 11963,
+            "timestampMs": null,
+            "confidence": 0.688248,
+            "quien": "p2"
+          },
+          {
+            "text": " de",
+            "startMs": 11963,
+            "endMs": 12056,
+            "timestampMs": null,
+            "confidence": 0.992419,
+            "quien": "p2"
+          },
+          {
+            "text": " la",
+            "startMs": 12056,
+            "endMs": 12222,
+            "timestampMs": null,
+            "confidence": 0.994788,
+            "quien": "p2"
+          },
+          {
+            "text": " ciudad.",
+            "startMs": 12222,
+            "endMs": 12315,
+            "timestampMs": null,
+            "confidence": 0.965005,
+            "quien": "p2"
+          }
+        ],
+        "texto": "Hoy estamos con Bogofighters. Cuéntanos de qué trata tu negocio. Bogofighters es un videojuego de peleas enfocadas en la ciudad de Bogotá que utiliza la sátira para representar a algunos de los personajes más característicos de la ciudad.",
+        "retratoPng": "sofa/retratos/sofa-indies-2-4-1fc687d.png"
+      },
+      {
+        "tipo": "cierre",
+        "archivo": "DJI_20261012_151723_832_video.mp4",
+        "desde": 14.3,
+        "hasta": 31.1,
+        "golpes": [
+          {
+            "en": "parceros",
+            "texto": "LOS PARCEROS",
+            "estilo": "xp"
+          },
+          {
+            "en": "leyendas",
+            "texto": "LEYENDAS COLOMBIANAS",
+            "estilo": "pastilla"
+          }
+        ],
+        "fx": [
+          {
+            "tipo": "invocacion",
+            "en": "invocación",
+            "dura": 4.2,
+            "quien": "p2",
+            "color": "#F2C85B"
+          },
+          {
+            "tipo": "perfecto",
+            "en": "chévere",
+            "dura": 1.6,
+            "quien": "jd"
+          }
+        ],
+        "personaje": {
+          "nombre": "Bogo Fighters",
+          "clase": "Peleas con sátira bogotana",
+          "tema": "ciudad",
+          "color": "#F26B1D",
+          "mundo": "Videojuego colombiano",
+          "stats": []
+        },
+        "turnos": [
+          {
+            "desde": 14.3,
+            "quien": "jd"
+          },
+          {
+            "desde": 17,
+            "quien": "p2"
+          },
+          {
+            "desde": 27.1,
+            "quien": "jd",
+            "fijo": true
+          },
+          {
+            "desde": 29.9,
+            "quien": "p2",
+            "fijo": true
+          }
+        ],
+        "foco": {
+          "jd": {
+            "x": 0.68,
+            "y": 0.4,
+            "escala": 1.3
+          },
+          "p2": {
+            "x": 0.5,
+            "y": 0.4,
+            "escala": 1.4
+          }
+        },
+        "lados": {
+          "jd": "derecha",
+          "p2": "izquierda"
+        },
+        "cta": "JUEGA COLOMBIANO",
+        "inicio": 1384,
+        "cuadros": 428,
+        "cola": 3,
+        "tramos": [
+          {
+            "archivo": "sofa/DJI_20261012_151723_832_video.mp4",
+            "desde": 14.1,
+            "hasta": 18.7,
+            "velocidad": 1.08,
+            "inicio": 0,
+            "cuadros": 128
+          },
+          {
+            "archivo": "sofa/DJI_20261012_151723_832_video.mp4",
+            "desde": 20.32,
+            "hasta": 28.3,
+            "velocidad": 1.08,
+            "inicio": 128,
+            "cuadros": 222
+          },
+          {
+            "archivo": "sofa/DJI_20261012_151723_832_video.mp4",
+            "desde": 29,
+            "hasta": 31.7,
+            "velocidad": 1.08,
+            "inicio": 350,
+            "cuadros": 75
+          }
+        ],
+        "subtitulos": [
+          {
+            "text": " ¿Qué",
+            "startMs": 185,
+            "endMs": 305,
+            "timestampMs": null,
+            "confidence": 0.851444,
+            "quien": "jd"
+          },
+          {
+            "text": " mecánica",
+            "startMs": 305,
+            "endMs": 556,
+            "timestampMs": null,
+            "confidence": 0.933866,
+            "quien": "jd"
+          },
+          {
+            "text": " de",
+            "startMs": 741,
+            "endMs": 870,
+            "timestampMs": null,
+            "confidence": 0.770821,
+            "quien": "jd"
+          },
+          {
+            "text": " videojuego",
+            "startMs": 870,
+            "endMs": 1296,
+            "timestampMs": null,
+            "confidence": 0.984288,
+            "quien": "jd"
+          },
+          {
+            "text": " traerías",
+            "startMs": 1296,
+            "endMs": 1648,
+            "timestampMs": null,
+            "confidence": 0.980937,
+            "quien": "jd"
+          },
+          {
+            "text": " al",
+            "startMs": 1648,
+            "endMs": 1778,
+            "timestampMs": null,
+            "confidence": 0.995786,
+            "quien": "jd"
+          },
+          {
+            "text": " mundo",
+            "startMs": 1778,
+            "endMs": 2019,
+            "timestampMs": null,
+            "confidence": 0.994731,
+            "quien": "jd"
+          },
+          {
+            "text": " real?",
+            "startMs": 2019,
+            "endMs": 2222,
+            "timestampMs": null,
+            "confidence": 0.995575,
+            "quien": "jd"
+          },
+          {
+            "text": " En",
+            "startMs": 2685,
+            "endMs": 2831,
+            "timestampMs": null,
+            "confidence": 0.981972,
+            "quien": "p2"
+          },
+          {
+            "text": " el",
+            "startMs": 2831,
+            "endMs": 2978,
+            "timestampMs": null,
+            "confidence": 0.992403,
+            "quien": "p2"
+          },
+          {
+            "text": " caso",
+            "startMs": 2978,
+            "endMs": 3208,
+            "timestampMs": null,
+            "confidence": 0.998064,
+            "quien": "p2"
+          },
+          {
+            "text": " de",
+            "startMs": 3208,
+            "endMs": 3355,
+            "timestampMs": null,
+            "confidence": 0.822935,
+            "quien": "p2"
+          },
+          {
+            "text": " mi",
+            "startMs": 3355,
+            "endMs": 3501,
+            "timestampMs": null,
+            "confidence": 0.864553,
+            "quien": "p2"
+          },
+          {
+            "text": " videojuego,",
+            "startMs": 3501,
+            "endMs": 3981,
+            "timestampMs": null,
+            "confidence": 0.98911,
+            "quien": "p2"
+          },
+          {
+            "text": " la",
+            "startMs": 4444,
+            "endMs": 4519,
+            "timestampMs": null,
+            "confidence": 0.953761,
+            "quien": "p2"
+          },
+          {
+            "text": " invocación",
+            "startMs": 4519,
+            "endMs": 4889,
+            "timestampMs": null,
+            "confidence": 0.922455,
+            "quien": "p2"
+          },
+          {
+            "text": " de",
+            "startMs": 4889,
+            "endMs": 5000,
+            "timestampMs": null,
+            "confidence": 0.988885,
+            "quien": "p2"
+          },
+          {
+            "text": " los",
+            "startMs": 5000,
+            "endMs": 5204,
+            "timestampMs": null,
+            "confidence": 0.966326,
+            "quien": "p2"
+          },
+          {
+            "text": " parceros.",
+            "startMs": 5204,
+            "endMs": 5685,
+            "timestampMs": null,
+            "confidence": 0.964674,
+            "quien": "p2"
+          },
+          {
+            "text": " Los",
+            "startMs": 5685,
+            "endMs": 5889,
+            "timestampMs": null,
+            "confidence": 0.71839,
+            "quien": "p2"
+          },
+          {
+            "text": " parceros",
+            "startMs": 5889,
+            "endMs": 6278,
+            "timestampMs": null,
+            "confidence": 0.980187,
+            "quien": "p2"
+          },
+          {
+            "text": " son",
+            "startMs": 6278,
+            "endMs": 6407,
+            "timestampMs": null,
+            "confidence": 0.976949,
+            "quien": "p2"
+          },
+          {
+            "text": " leyendas",
+            "startMs": 6407,
+            "endMs": 6796,
+            "timestampMs": null,
+            "confidence": 0.901176,
+            "quien": "p2"
+          },
+          {
+            "text": " colombianas",
+            "startMs": 6796,
+            "endMs": 7278,
+            "timestampMs": null,
+            "confidence": 0.540815,
+            "quien": "p2"
+          },
+          {
+            "text": " que",
+            "startMs": 7278,
+            "endMs": 7407,
+            "timestampMs": null,
+            "confidence": 0.986199,
+            "quien": "p2"
+          },
+          {
+            "text": " ayudan",
+            "startMs": 7407,
+            "endMs": 7574,
+            "timestampMs": null,
+            "confidence": 0.917792,
+            "quien": "p2"
+          },
+          {
+            "text": " a",
+            "startMs": 7574,
+            "endMs": 7704,
+            "timestampMs": null,
+            "confidence": 0.9899,
+            "quien": "p2"
+          },
+          {
+            "text": " los",
+            "startMs": 7704,
+            "endMs": 8130,
+            "timestampMs": null,
+            "confidence": 0.992829,
+            "quien": "p2"
+          },
+          {
+            "text": " personajes",
+            "startMs": 8130,
+            "endMs": 8156,
+            "timestampMs": null,
+            "confidence": 0.997746,
+            "quien": "p2"
+          },
+          {
+            "text": " con",
+            "startMs": 8156,
+            "endMs": 8168,
+            "timestampMs": null,
+            "confidence": 0.975882,
+            "quien": "p2"
+          },
+          {
+            "text": " acciones",
+            "startMs": 8168,
+            "endMs": 8190,
+            "timestampMs": null,
+            "confidence": 0.994459,
+            "quien": "p2"
+          },
+          {
+            "text": " particulares",
+            "startMs": 8190,
+            "endMs": 8222,
+            "timestampMs": null,
+            "confidence": 0.995416,
+            "quien": "p2"
+          },
+          {
+            "text": " y",
+            "startMs": 8593,
+            "endMs": 8682,
+            "timestampMs": null,
+            "confidence": 0.644394,
+            "quien": "p2"
+          },
+          {
+            "text": " eso",
+            "startMs": 8682,
+            "endMs": 8844,
+            "timestampMs": null,
+            "confidence": 0.98704,
+            "quien": "p2"
+          },
+          {
+            "text": " sería",
+            "startMs": 8844,
+            "endMs": 9078,
+            "timestampMs": null,
+            "confidence": 0.984778,
+            "quien": "p2"
+          },
+          {
+            "text": " lo",
+            "startMs": 9078,
+            "endMs": 9204,
+            "timestampMs": null,
+            "confidence": 0.994751,
+            "quien": "p2"
+          },
+          {
+            "text": " que",
+            "startMs": 9204,
+            "endMs": 9365,
+            "timestampMs": null,
+            "confidence": 0.995414,
+            "quien": "p2"
+          },
+          {
+            "text": " yo",
+            "startMs": 9365,
+            "endMs": 9491,
+            "timestampMs": null,
+            "confidence": 0.956337,
+            "quien": "p2"
+          },
+          {
+            "text": " traería",
+            "startMs": 9491,
+            "endMs": 9796,
+            "timestampMs": null,
+            "confidence": 0.9774,
+            "quien": "p2"
+          },
+          {
+            "text": " al",
+            "startMs": 10167,
+            "endMs": 10298,
+            "timestampMs": null,
+            "confidence": 0.947708,
+            "quien": "p2"
+          },
+          {
+            "text": " mundo.",
+            "startMs": 10298,
+            "endMs": 10543,
+            "timestampMs": null,
+            "confidence": 0.979126,
+            "quien": "p2"
+          },
+          {
+            "text": " Está",
+            "startMs": 10543,
+            "endMs": 10881,
+            "timestampMs": null,
+            "confidence": 0.0915477,
+            "quien": "jd"
+          },
+          {
+            "text": " muy",
+            "startMs": 10881,
+            "endMs": 11051,
+            "timestampMs": null,
+            "confidence": 0.946337,
+            "quien": "jd"
+          },
+          {
+            "text": " chévere!",
+            "startMs": 11051,
+            "endMs": 11370,
+            "timestampMs": null,
+            "confidence": 0.672939,
+            "quien": "jd"
+          },
+          {
+            "text": " ¡Mil",
+            "startMs": 11833,
+            "endMs": 12047,
+            "timestampMs": null,
+            "confidence": 0.391976,
+            "quien": "jd"
+          },
+          {
+            "text": " gracias!",
+            "startMs": 12047,
+            "endMs": 12453,
+            "timestampMs": null,
+            "confidence": 0.902292,
+            "quien": "jd"
+          },
+          {
+            "text": " ¿Con",
+            "startMs": 12453,
+            "endMs": 12667,
+            "timestampMs": null,
+            "confidence": 0.173749,
+            "quien": "p2"
+          },
+          {
+            "text": " mucho",
+            "startMs": 12944,
+            "endMs": 13176,
+            "timestampMs": null,
+            "confidence": 0.981824,
+            "quien": "p2"
+          },
+          {
+            "text": " gusto?",
+            "startMs": 13176,
+            "endMs": 13407,
+            "timestampMs": null,
+            "confidence": 0.967096,
+            "quien": "p2"
+          }
+        ],
+        "texto": "¿Qué mecánica de videojuego traerías al mundo real? En el caso de mi videojuego, la invocación de los parceros. Los parceros son leyendas colombianas que ayudan a los personajes con acciones particulares y eso sería lo que yo traería al mundo. ¡Es está muy chévere! ¡Mil gracias! ¿Con mucho gusto?"
+      },
+      {
+        "tipo": "final",
+        "inicio": 1812,
+        "cuadros": 72
+      }
+    ],
+    "total": 1884,
+    "avisos": []
+  },
+  "bpm": 144,
+  "capas": true
+}

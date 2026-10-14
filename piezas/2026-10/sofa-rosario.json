@@ -1,0 +1,1066 @@
+{
+  "plantilla": "Arcade",
+  "serie": "SOFA 2026 · TRIFUERZA TECHNOLOGY",
+  "nivel": "SOFA 2026",
+  "cuentas": [
+    "juanda"
+  ],
+  "velocidad": 1.08,
+  "motivo": "juego",
+  "lados": {
+    "jd": "izquierda",
+    "p2": "derecha"
+  },
+  "nombres": {
+    "jd": {
+      "nombre": "JUAN DAVID"
+    }
+  },
+  "correcciones": [
+    {
+      "de": "sofá",
+      "a": "SOFA"
+    },
+    {
+      "de": "le pregunte",
+      "a": "le pregunté"
+    },
+    {
+      "de": "Le pregunte",
+      "a": "Le pregunté"
+    },
+    {
+      "de": "Cosplayers",
+      "a": "cosplayers"
+    },
+    {
+      "de": "quien demandaría",
+      "a": "quién demandaría"
+    },
+    {
+      "de": "artas",
+      "a": "hartas"
+    },
+    {
+      "de": "hace todo son",
+      "a": "excepto"
+    },
+    {
+      "de": "gingos",
+      "a": "Sung Jinwoo"
+    },
+    {
+      "de": "Chimico Toga",
+      "a": "Himiko Toga"
+    },
+    {
+      "de": "Magiro Academia",
+      "a": "My Hero Academia"
+    },
+    {
+      "de": "Von Leinton",
+      "a": "Von Lycaon"
+    },
+    {
+      "de": "Sunless On Zero",
+      "a": "Zenless Zone Zero"
+    },
+    {
+      "de": "Aurora del League",
+      "a": "Aurora de League"
+    },
+    {
+      "de": "Mavica",
+      "a": "Mavuika"
+    },
+    {
+      "de": "satura",
+      "a": "La Vasija Pura"
+    },
+    {
+      "de": "te parece es a",
+      "a": "te pareces a"
+    },
+    {
+      "de": "estás tú buena",
+      "a": "está muy buena"
+    },
+    {
+      "de": "En como el fue",
+      "a": "En cómo él fue"
+    },
+    {
+      "de": "indique",
+      "a": "indie"
+    },
+    {
+      "de": "Jägger",
+      "a": "Jaeger"
+    },
+    {
+      "de": "Jäger",
+      "a": "Jaeger"
+    },
+    {
+      "de": "capitano",
+      "a": "Capitano"
+    },
+    {
+      "de": "herfría",
+      "a": "le hizo"
+    },
+    {
+      "de": "Drugs del futuro",
+      "a": "Trunks del futuro"
+    },
+    {
+      "de": "Sayajin",
+      "a": "saiyajin"
+    },
+    {
+      "de": "María",
+      "a": "mijo"
+    },
+    {
+      "de": "platico",
+      "a": "platica"
+    },
+    {
+      "de": "si está allí",
+      "a": "si es saiyajin"
+    },
+    {
+      "de": "respaunear",
+      "a": "respawnear"
+    },
+    {
+      "de": "Respawn",
+      "a": "respawn"
+    },
+    {
+      "de": "cagunes",
+      "a": "kagunes"
+    },
+    {
+      "de": "Maca",
+      "a": "Maka"
+    },
+    {
+      "de": "SoulHitter",
+      "a": "Soul Eater"
+    },
+    {
+      "de": "El jefe maestro",
+      "a": "el Jefe Maestro"
+    },
+    {
+      "de": "Te letra... transportarme",
+      "a": "¿Teletransportarme?"
+    },
+    {
+      "de": "maquillero",
+      "a": "Maki Gero"
+    },
+    {
+      "de": "ardestruir",
+      "a": "destruir"
+    },
+    {
+      "de": "Joaquin Club",
+      "a": "Jockey Club"
+    },
+    {
+      "de": "Frey",
+      "a": "Fray"
+    },
+    {
+      "de": "Vélula",
+      "a": "Bélula"
+    },
+    {
+      "de": "Séfira",
+      "a": "Céfira"
+    },
+    {
+      "de": "bótalo",
+      "a": "vótalo"
+    },
+    {
+      "de": "alteratura",
+      "a": "literatura"
+    },
+    {
+      "de": "de mito",
+      "a": "de Mito"
+    },
+    {
+      "de": "Esto es mito",
+      "a": "Esto es Mito"
+    },
+    {
+      "de": "perracos espantos",
+      "a": "Berracos Espantos"
+    },
+    {
+      "de": "Bogofighters",
+      "a": "Bogo Fighters"
+    },
+    {
+      "de": "cráteras",
+      "a": "criaturas"
+    },
+    {
+      "de": "podren",
+      "a": "cobren"
+    },
+    {
+      "de": "viene a secta",
+      "a": "hay una secta"
+    },
+    {
+      "de": "de acuerdos el la guardiente",
+      "a": "de acuerdo, el aguardiente"
+    },
+    {
+      "de": "agua mendita",
+      "a": "agua bendita"
+    },
+    {
+      "de": "desarrollos colombianos",
+      "a": "desarrolladores colombianos"
+    },
+    {
+      "de": "colombia",
+      "a": "Colombia"
+    },
+    {
+      "de": "Es está",
+      "a": "Está"
+    }
+  ],
+  "variantes": {
+    "juanda": {
+      "cta": "Comenta VIDEO",
+      "copy": ""
+    }
+  },
+  "slug": "sofa-rosario",
+  "codigo": "SOFA09",
+  "titulo": "Hicimos un videojuego para la Universidad del Rosario",
+  "niveles": 4,
+  "juegoFondo": {
+    "archivo": "broll/2026-10/sofa/claustro-caballero-1080x1920.mp4",
+    "desdeS": 6
+  },
+  "escenas": [
+    {
+      "tipo": "titulo",
+      "segundos": 3.4,
+      "alto": 300
+    },
+    {
+      "tipo": "cierre",
+      "archivo": "IMG_4882.MOV",
+      "desde": 4.38,
+      "hasta": 29.95,
+      "golpes": [
+        {
+          "en": "Rosario",
+          "texto": "UNIVERSIDAD DEL ROSARIO",
+          "estilo": "pastilla"
+        },
+        {
+          "en": "escondida",
+          "texto": "BIBLIOTECA ESCONDIDA",
+          "estilo": "golpe"
+        },
+        {
+          "en": "video",
+          "texto": "COMENTA VIDEO",
+          "estilo": "xp"
+        }
+      ],
+      "fx": [
+        {
+          "tipo": "estrellas",
+          "en": "desarrollado",
+          "dura": 3,
+          "quien": null,
+          "lado": "centro"
+        }
+      ],
+      "personaje": {
+        "nombre": "Juan David",
+        "clase": "Desarrollador · Trifuerza Technology",
+        "etiqueta": "PLAYER 1 READY",
+        "mundo": "Profesor universitario · desarrollador de videojuegos",
+        "color": "#F26B1D",
+        "stats": [
+          {
+            "n": "DERECHO",
+            "v": 1
+          },
+          {
+            "n": "CÓDIGO",
+            "v": 1
+          },
+          {
+            "n": "VARITA",
+            "v": 0.8
+          }
+        ]
+      },
+      "ficha": true,
+      "fichaEn": 0.3,
+      "retrato": {
+        "fijo": "trabajo/2026-10-sofa/retratos-fuente/juan-david.png"
+      },
+      "foco": {
+        "jd": {
+          "x": 0.5,
+          "y": 0.34,
+          "escala": 1.15
+        }
+      },
+      "lados": {
+        "jd": "centro"
+      },
+      "fichaDura": 2.4,
+      "velocidad": 1.06,
+      "inicioDuro": 4.38,
+      "finDuro": 30.4,
+      "anclas": [
+        [
+          "He desarrollado el videojuego del claustro de la Universidad",
+          4.45,
+          7.9
+        ],
+        [
+          "comenta video y haremos un video explicándolo",
+          26.75,
+          29.93
+        ]
+      ],
+      "omitir": [
+        "monstruos",
+        "en la costa",
+        "Casi",
+        "Tenemos que irse ya"
+      ],
+      "correcciones": [
+        {
+          "de": "hice este video",
+          "a": "hice este videojuego"
+        }
+      ],
+      "juego": [
+        {
+          "archivo": "broll/2026-10/sofa/claustro-caballero-1080x1920.mp4",
+          "en": "claustro",
+          "hasta": "personajes",
+          "modo": "lleno",
+          "desdeS": 2,
+          "rotulo": "EL CLAUSTRO EN VIVO",
+          "sub": "trifuerza.co/juego-urosario"
+        },
+        {
+          "archivo": "broll/2026-10/sofa/claustro-hechicera-1080x1920.mp4",
+          "en": "personajes",
+          "hasta": "misterio",
+          "modo": "dividido",
+          "desdeS": 4,
+          "rotulo": "PERSONAJES NO JUGABLES",
+          "sub": "Caldas · Mutis · Camilo Torres"
+        },
+        {
+          "archivo": "broll/2026-10/sofa/claustro-caballero-1920x1080.mp4",
+          "en": "biblioteca",
+          "hasta": "Si",
+          "modo": "ventana",
+          "desdeS": 12,
+          "rotulo": "BIBLIOTECA ESCONDIDA",
+          "sub": "y el Jockey Club"
+        }
+      ],
+      "cta": "COMENTA VIDEO",
+      "_avisos": []
+    },
+    {
+      "tipo": "juego",
+      "archivo": "broll/2026-10/sofa/claustro-hechicera-1080x1920.mp4",
+      "desdeS": 16,
+      "segundos": 5,
+      "rotulo": "JUEGA EN TRIFUERZA.CO/JUEGO-UROSARIO",
+      "sub": "Multijugador en vivo · tu disfraz en pixel art",
+      "texto": "Entra con tu disfraz convertido en pixel art y recorre el Claustro con quien esté jugando."
+    }
+  ],
+  "verificar": [
+    {
+      "dato": "La Universidad del Rosario autorizó nombrarla (1-oct-2026)",
+      "estado": "verificado"
+    }
+  ],
+  "generado": {
+    "escenas": [
+      {
+        "tipo": "titulo",
+        "segundos": 3.4,
+        "alto": 300,
+        "inicio": 0,
+        "cuadros": 102
+      },
+      {
+        "tipo": "cierre",
+        "archivo": "IMG_4882.MOV",
+        "desde": 4.38,
+        "hasta": 29.95,
+        "golpes": [
+          {
+            "en": "Rosario",
+            "texto": "UNIVERSIDAD DEL ROSARIO",
+            "estilo": "pastilla"
+          },
+          {
+            "en": "escondida",
+            "texto": "BIBLIOTECA ESCONDIDA",
+            "estilo": "golpe"
+          },
+          {
+            "en": "video",
+            "texto": "COMENTA VIDEO",
+            "estilo": "xp"
+          }
+        ],
+        "fx": [
+          {
+            "tipo": "estrellas",
+            "en": "desarrollado",
+            "dura": 3,
+            "quien": null,
+            "lado": "centro"
+          }
+        ],
+        "personaje": {
+          "nombre": "Juan David",
+          "clase": "Desarrollador · Trifuerza Technology",
+          "etiqueta": "PLAYER 1 READY",
+          "mundo": "Profesor universitario · desarrollador de videojuegos",
+          "color": "#F26B1D",
+          "stats": [
+            {
+              "n": "DERECHO",
+              "v": 1
+            },
+            {
+              "n": "CÓDIGO",
+              "v": 1
+            },
+            {
+              "n": "VARITA",
+              "v": 0.8
+            }
+          ]
+        },
+        "ficha": true,
+        "fichaEn": 0.3,
+        "retrato": {
+          "fijo": "trabajo/2026-10-sofa/retratos-fuente/juan-david.png"
+        },
+        "foco": {
+          "jd": {
+            "x": 0.5,
+            "y": 0.34,
+            "escala": 1.15
+          }
+        },
+        "lados": {
+          "jd": "centro"
+        },
+        "fichaDura": 2.4,
+        "velocidad": 1.06,
+        "inicioDuro": 4.38,
+        "finDuro": 30.4,
+        "anclas": [
+          [
+            "He desarrollado el videojuego del claustro de la Universidad",
+            4.45,
+            7.9
+          ],
+          [
+            "comenta video y haremos un video explicándolo",
+            26.75,
+            29.93
+          ]
+        ],
+        "omitir": [
+          "monstruos",
+          "en la costa",
+          "Casi",
+          "Tenemos que irse ya"
+        ],
+        "correcciones": [
+          {
+            "de": "hice este video",
+            "a": "hice este videojuego"
+          }
+        ],
+        "juego": [
+          {
+            "archivo": "broll/2026-10/sofa/claustro-caballero-1080x1920.mp4",
+            "en": "claustro",
+            "hasta": "personajes",
+            "modo": "lleno",
+            "desdeS": 2,
+            "rotulo": "EL CLAUSTRO EN VIVO",
+            "sub": "trifuerza.co/juego-urosario"
+          },
+          {
+            "archivo": "broll/2026-10/sofa/claustro-hechicera-1080x1920.mp4",
+            "en": "personajes",
+            "hasta": "misterio",
+            "modo": "dividido",
+            "desdeS": 4,
+            "rotulo": "PERSONAJES NO JUGABLES",
+            "sub": "Caldas · Mutis · Camilo Torres"
+          },
+          {
+            "archivo": "broll/2026-10/sofa/claustro-caballero-1920x1080.mp4",
+            "en": "biblioteca",
+            "hasta": "Si",
+            "modo": "ventana",
+            "desdeS": 12,
+            "rotulo": "BIBLIOTECA ESCONDIDA",
+            "sub": "y el Jockey Club"
+          }
+        ],
+        "cta": "COMENTA VIDEO",
+        "inicio": 102,
+        "cuadros": 748,
+        "cola": 12,
+        "tramos": [
+          {
+            "archivo": "sofa/IMG_4882.mp4",
+            "desde": 4.38,
+            "hasta": 30.4,
+            "velocidad": 1.06,
+            "inicio": 0,
+            "cuadros": 736
+          }
+        ],
+        "subtitulos": [
+          {
+            "text": " He",
+            "startMs": 66,
+            "endMs": 192,
+            "timestampMs": null,
+            "confidence": 0.349213,
+            "quien": "jd"
+          },
+          {
+            "text": " desarrollado",
+            "startMs": 192,
+            "endMs": 942,
+            "timestampMs": null,
+            "confidence": 0.938443,
+            "quien": "jd"
+          },
+          {
+            "text": " el",
+            "startMs": 942,
+            "endMs": 1068,
+            "timestampMs": null,
+            "confidence": 0.93838,
+            "quien": "jd"
+          },
+          {
+            "text": " videojuego",
+            "startMs": 1068,
+            "endMs": 1693,
+            "timestampMs": null,
+            "confidence": 0.819928,
+            "quien": "jd"
+          },
+          {
+            "text": " del",
+            "startMs": 1693,
+            "endMs": 1881,
+            "timestampMs": null,
+            "confidence": 0.500264,
+            "quien": "jd"
+          },
+          {
+            "text": " claustro",
+            "startMs": 1881,
+            "endMs": 2382,
+            "timestampMs": null,
+            "confidence": 0.491213,
+            "quien": "jd"
+          },
+          {
+            "text": " de",
+            "startMs": 2382,
+            "endMs": 2507,
+            "timestampMs": null,
+            "confidence": 0.886786,
+            "quien": "jd"
+          },
+          {
+            "text": " la",
+            "startMs": 2507,
+            "endMs": 2632,
+            "timestampMs": null,
+            "confidence": 0.922969,
+            "quien": "jd"
+          },
+          {
+            "text": " Universidad",
+            "startMs": 2632,
+            "endMs": 3321,
+            "timestampMs": null,
+            "confidence": 0.538349,
+            "quien": "jd"
+          },
+          {
+            "text": " del",
+            "startMs": 3981,
+            "endMs": 4186,
+            "timestampMs": null,
+            "confidence": 0.765379,
+            "quien": "jd"
+          },
+          {
+            "text": " Rosario,",
+            "startMs": 4186,
+            "endMs": 4572,
+            "timestampMs": null,
+            "confidence": 0.973078,
+            "quien": "jd"
+          },
+          {
+            "text": " donde",
+            "startMs": 4572,
+            "endMs": 4867,
+            "timestampMs": null,
+            "confidence": 0.786109,
+            "quien": "jd"
+          },
+          {
+            "text": " puedes",
+            "startMs": 4867,
+            "endMs": 5208,
+            "timestampMs": null,
+            "confidence": 0.985618,
+            "quien": "jd"
+          },
+          {
+            "text": " encontrar",
+            "startMs": 5396,
+            "endMs": 5750,
+            "timestampMs": null,
+            "confidence": 0.98932,
+            "quien": "jd"
+          },
+          {
+            "text": " la",
+            "startMs": 5750,
+            "endMs": 5868,
+            "timestampMs": null,
+            "confidence": 0.798303,
+            "quien": "jd"
+          },
+          {
+            "text": " estatua",
+            "startMs": 6340,
+            "endMs": 6687,
+            "timestampMs": null,
+            "confidence": 0.303106,
+            "quien": "jd"
+          },
+          {
+            "text": " de",
+            "startMs": 6687,
+            "endMs": 6830,
+            "timestampMs": null,
+            "confidence": 0.542663,
+            "quien": "jd"
+          },
+          {
+            "text": " nuestro",
+            "startMs": 6830,
+            "endMs": 7177,
+            "timestampMs": null,
+            "confidence": 0.993331,
+            "quien": "jd"
+          },
+          {
+            "text": " fundador",
+            "startMs": 7177,
+            "endMs": 7566,
+            "timestampMs": null,
+            "confidence": 0.997501,
+            "quien": "jd"
+          },
+          {
+            "text": " Fray",
+            "startMs": 7943,
+            "endMs": 8174,
+            "timestampMs": null,
+            "confidence": 0.238419,
+            "quien": "jd"
+          },
+          {
+            "text": " Cristóbal",
+            "startMs": 8174,
+            "endMs": 8614,
+            "timestampMs": null,
+            "confidence": 0.85528,
+            "quien": "jd"
+          },
+          {
+            "text": " de",
+            "startMs": 8614,
+            "endMs": 8761,
+            "timestampMs": null,
+            "confidence": 0.975385,
+            "quien": "jd"
+          },
+          {
+            "text": " Torres,",
+            "startMs": 8761,
+            "endMs": 9075,
+            "timestampMs": null,
+            "confidence": 0.984829,
+            "quien": "jd"
+          },
+          {
+            "text": " personajes",
+            "startMs": 9642,
+            "endMs": 10173,
+            "timestampMs": null,
+            "confidence": 0.843999,
+            "quien": "jd"
+          },
+          {
+            "text": " no",
+            "startMs": 10173,
+            "endMs": 10335,
+            "timestampMs": null,
+            "confidence": 0.651884,
+            "quien": "jd"
+          },
+          {
+            "text": " jugables",
+            "startMs": 10335,
+            "endMs": 10774,
+            "timestampMs": null,
+            "confidence": 0.990682,
+            "quien": "jd"
+          },
+          {
+            "text": " como",
+            "startMs": 10962,
+            "endMs": 11242,
+            "timestampMs": null,
+            "confidence": 0.900146,
+            "quien": "jd"
+          },
+          {
+            "text": " Caldas,",
+            "startMs": 11242,
+            "endMs": 11623,
+            "timestampMs": null,
+            "confidence": 0.791083,
+            "quien": "jd"
+          },
+          {
+            "text": " como",
+            "startMs": 12189,
+            "endMs": 12492,
+            "timestampMs": null,
+            "confidence": 0.976165,
+            "quien": "jd"
+          },
+          {
+            "text": " Mutis,",
+            "startMs": 12492,
+            "endMs": 12849,
+            "timestampMs": null,
+            "confidence": 0.399444,
+            "quien": "jd"
+          },
+          {
+            "text": " como",
+            "startMs": 13038,
+            "endMs": 13265,
+            "timestampMs": null,
+            "confidence": 0.961891,
+            "quien": "jd"
+          },
+          {
+            "text": " Camilo",
+            "startMs": 13265,
+            "endMs": 13576,
+            "timestampMs": null,
+            "confidence": 0.986894,
+            "quien": "jd"
+          },
+          {
+            "text": " Torres,",
+            "startMs": 13576,
+            "endMs": 13887,
+            "timestampMs": null,
+            "confidence": 0.998551,
+            "quien": "jd"
+          },
+          {
+            "text": " tiene",
+            "startMs": 14453,
+            "endMs": 14706,
+            "timestampMs": null,
+            "confidence": 0.837167,
+            "quien": "jd"
+          },
+          {
+            "text": " un",
+            "startMs": 14706,
+            "endMs": 14842,
+            "timestampMs": null,
+            "confidence": 0.967589,
+            "quien": "jd"
+          },
+          {
+            "text": " misterio",
+            "startMs": 14842,
+            "endMs": 15211,
+            "timestampMs": null,
+            "confidence": 0.982339,
+            "quien": "jd"
+          },
+          {
+            "text": " y",
+            "startMs": 15211,
+            "endMs": 15308,
+            "timestampMs": null,
+            "confidence": 0.589356,
+            "quien": "jd"
+          },
+          {
+            "text": " una",
+            "startMs": 15308,
+            "endMs": 15484,
+            "timestampMs": null,
+            "confidence": 0.991641,
+            "quien": "jd"
+          },
+          {
+            "text": " biblioteca",
+            "startMs": 15484,
+            "endMs": 15931,
+            "timestampMs": null,
+            "confidence": 0.978105,
+            "quien": "jd"
+          },
+          {
+            "text": " escondida,",
+            "startMs": 15931,
+            "endMs": 16340,
+            "timestampMs": null,
+            "confidence": 0.942975,
+            "quien": "jd"
+          },
+          {
+            "text": " y",
+            "startMs": 16623,
+            "endMs": 16717,
+            "timestampMs": null,
+            "confidence": 0.95273,
+            "quien": "jd"
+          },
+          {
+            "text": " además",
+            "startMs": 16717,
+            "endMs": 17000,
+            "timestampMs": null,
+            "confidence": 0.861661,
+            "quien": "jd"
+          },
+          {
+            "text": " tienes",
+            "startMs": 17000,
+            "endMs": 17283,
+            "timestampMs": null,
+            "confidence": 0.767895,
+            "quien": "jd"
+          },
+          {
+            "text": " el",
+            "startMs": 17283,
+            "endMs": 17415,
+            "timestampMs": null,
+            "confidence": 0.75272,
+            "quien": "jd"
+          },
+          {
+            "text": " Jockey Club.",
+            "startMs": 17415,
+            "endMs": 17943,
+            "timestampMs": null,
+            "confidence": 0.153774,
+            "quien": "jd"
+          },
+          {
+            "text": " Si",
+            "startMs": 18509,
+            "endMs": 18698,
+            "timestampMs": null,
+            "confidence": 0.705111,
+            "quien": "jd"
+          },
+          {
+            "text": " quieres",
+            "startMs": 18698,
+            "endMs": 19000,
+            "timestampMs": null,
+            "confidence": 0.991796,
+            "quien": "jd"
+          },
+          {
+            "text": " conocer",
+            "startMs": 19000,
+            "endMs": 19208,
+            "timestampMs": null,
+            "confidence": 0.989046,
+            "quien": "jd"
+          },
+          {
+            "text": " un",
+            "startMs": 19208,
+            "endMs": 19340,
+            "timestampMs": null,
+            "confidence": 0.984741,
+            "quien": "jd"
+          },
+          {
+            "text": " poco",
+            "startMs": 19340,
+            "endMs": 19585,
+            "timestampMs": null,
+            "confidence": 0.998209,
+            "quien": "jd"
+          },
+          {
+            "text": " más",
+            "startMs": 19585,
+            "endMs": 19717,
+            "timestampMs": null,
+            "confidence": 0.990943,
+            "quien": "jd"
+          },
+          {
+            "text": " de",
+            "startMs": 19717,
+            "endMs": 19887,
+            "timestampMs": null,
+            "confidence": 0.960429,
+            "quien": "jd"
+          },
+          {
+            "text": " cómo",
+            "startMs": 19887,
+            "endMs": 20057,
+            "timestampMs": null,
+            "confidence": 0.894193,
+            "quien": "jd"
+          },
+          {
+            "text": " hice este videojuego,",
+            "startMs": 20057,
+            "endMs": 20868,
+            "timestampMs": null,
+            "confidence": 0.301755,
+            "quien": "jd"
+          },
+          {
+            "text": " comenta",
+            "startMs": 21104,
+            "endMs": 21642,
+            "timestampMs": null,
+            "confidence": 0.929432,
+            "quien": "jd"
+          },
+          {
+            "text": " video",
+            "startMs": 21642,
+            "endMs": 22026,
+            "timestampMs": null,
+            "confidence": 0.414703,
+            "quien": "jd"
+          },
+          {
+            "text": " y",
+            "startMs": 22026,
+            "endMs": 22104,
+            "timestampMs": null,
+            "confidence": 0.694731,
+            "quien": "jd"
+          },
+          {
+            "text": " haremos",
+            "startMs": 22104,
+            "endMs": 22642,
+            "timestampMs": null,
+            "confidence": 0.942824,
+            "quien": "jd"
+          },
+          {
+            "text": " un",
+            "startMs": 22642,
+            "endMs": 22796,
+            "timestampMs": null,
+            "confidence": 0.990161,
+            "quien": "jd"
+          },
+          {
+            "text": " video",
+            "startMs": 22796,
+            "endMs": 23181,
+            "timestampMs": null,
+            "confidence": 0.958457,
+            "quien": "jd"
+          },
+          {
+            "text": " explicándolo.",
+            "startMs": 23181,
+            "endMs": 24104,
+            "timestampMs": null,
+            "confidence": 0.984966,
+            "quien": "jd"
+          }
+        ],
+        "texto": "He desarrollado el videojuego del claustro de la Universidad del Rosario, donde puedes encontrar la estatua de nuestro fundador Frey Cristóbal de Torres, personajes no jugables como Caldas, como Mutis, como Camilo Torres, tiene un misterio y una biblioteca escondida, y además tienes el Joaquin Club. Si quieres conocer un poco más de cómo hice este video, comenta video y haremos un video explicándolo.",
+        "retratoPng": "sofa/retratos/sofa-rosario-1-8e8a5f56.png"
+      },
+      {
+        "tipo": "juego",
+        "archivo": "broll/2026-10/sofa/claustro-hechicera-1080x1920.mp4",
+        "desdeS": 16,
+        "segundos": 5,
+        "rotulo": "JUEGA EN TRIFUERZA.CO/JUEGO-UROSARIO",
+        "sub": "Multijugador en vivo · tu disfraz en pixel art",
+        "texto": "Entra con tu disfraz convertido en pixel art y recorre el Claustro con quien esté jugando.",
+        "inicio": 850,
+        "cuadros": 150
+      },
+      {
+        "tipo": "final",
+        "inicio": 1000,
+        "cuadros": 72
+      }
+    ],
+    "total": 1072,
+    "avisos": []
+  },
+  "bpm": 132,
+  "capas": true
+}

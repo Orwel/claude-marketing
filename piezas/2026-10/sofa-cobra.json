@@ -1,0 +1,2099 @@
+{
+  "plantilla": "Arcade",
+  "serie": "SOFA 2026 · BOGOTÁ",
+  "nivel": "SOFA 2026",
+  "cuentas": [
+    "trifuerza"
+  ],
+  "velocidad": 1.08,
+  "motivo": "moneda",
+  "lados": {
+    "jd": "izquierda",
+    "p2": "derecha"
+  },
+  "nombres": {
+    "jd": {
+      "nombre": "JUAN DAVID"
+    }
+  },
+  "correcciones": [
+    {
+      "de": "sofá",
+      "a": "SOFA"
+    },
+    {
+      "de": "le pregunte",
+      "a": "le pregunté"
+    },
+    {
+      "de": "Le pregunte",
+      "a": "Le pregunté"
+    },
+    {
+      "de": "Cosplayers",
+      "a": "cosplayers"
+    },
+    {
+      "de": "quien demandaría",
+      "a": "quién demandaría"
+    },
+    {
+      "de": "artas",
+      "a": "hartas"
+    },
+    {
+      "de": "hace todo son",
+      "a": "excepto"
+    },
+    {
+      "de": "gingos",
+      "a": "Sung Jinwoo"
+    },
+    {
+      "de": "Chimico Toga",
+      "a": "Himiko Toga"
+    },
+    {
+      "de": "Magiro Academia",
+      "a": "My Hero Academia"
+    },
+    {
+      "de": "Von Leinton",
+      "a": "Von Lycaon"
+    },
+    {
+      "de": "Sunless On Zero",
+      "a": "Zenless Zone Zero"
+    },
+    {
+      "de": "Aurora del League",
+      "a": "Aurora de League"
+    },
+    {
+      "de": "Mavica",
+      "a": "Mavuika"
+    },
+    {
+      "de": "satura",
+      "a": "La Vasija Pura"
+    },
+    {
+      "de": "te parece es a",
+      "a": "te pareces a"
+    },
+    {
+      "de": "estás tú buena",
+      "a": "está muy buena"
+    },
+    {
+      "de": "En como el fue",
+      "a": "En cómo él fue"
+    },
+    {
+      "de": "indique",
+      "a": "indie"
+    },
+    {
+      "de": "Jägger",
+      "a": "Jaeger"
+    },
+    {
+      "de": "Jäger",
+      "a": "Jaeger"
+    },
+    {
+      "de": "capitano",
+      "a": "Capitano"
+    },
+    {
+      "de": "herfría",
+      "a": "le hizo"
+    },
+    {
+      "de": "Drugs del futuro",
+      "a": "Trunks del futuro"
+    },
+    {
+      "de": "Sayajin",
+      "a": "saiyajin"
+    },
+    {
+      "de": "María",
+      "a": "mijo"
+    },
+    {
+      "de": "platico",
+      "a": "platica"
+    },
+    {
+      "de": "si está allí",
+      "a": "si es saiyajin"
+    },
+    {
+      "de": "respaunear",
+      "a": "respawnear"
+    },
+    {
+      "de": "Respawn",
+      "a": "respawn"
+    },
+    {
+      "de": "cagunes",
+      "a": "kagunes"
+    },
+    {
+      "de": "Maca",
+      "a": "Maka"
+    },
+    {
+      "de": "SoulHitter",
+      "a": "Soul Eater"
+    },
+    {
+      "de": "El jefe maestro",
+      "a": "el Jefe Maestro"
+    },
+    {
+      "de": "Te letra... transportarme",
+      "a": "¿Teletransportarme?"
+    },
+    {
+      "de": "maquillero",
+      "a": "Maki Gero"
+    },
+    {
+      "de": "ardestruir",
+      "a": "destruir"
+    },
+    {
+      "de": "Joaquin Club",
+      "a": "Jockey Club"
+    },
+    {
+      "de": "Frey",
+      "a": "Fray"
+    },
+    {
+      "de": "Vélula",
+      "a": "Bélula"
+    },
+    {
+      "de": "Séfira",
+      "a": "Céfira"
+    },
+    {
+      "de": "bótalo",
+      "a": "vótalo"
+    },
+    {
+      "de": "alteratura",
+      "a": "literatura"
+    },
+    {
+      "de": "de mito",
+      "a": "de Mito"
+    },
+    {
+      "de": "Esto es mito",
+      "a": "Esto es Mito"
+    },
+    {
+      "de": "perracos espantos",
+      "a": "Berracos Espantos"
+    },
+    {
+      "de": "Bogofighters",
+      "a": "Bogo Fighters"
+    },
+    {
+      "de": "cráteras",
+      "a": "criaturas"
+    },
+    {
+      "de": "podren",
+      "a": "cobren"
+    },
+    {
+      "de": "viene a secta",
+      "a": "hay una secta"
+    },
+    {
+      "de": "de acuerdos el la guardiente",
+      "a": "de acuerdo, el aguardiente"
+    },
+    {
+      "de": "agua mendita",
+      "a": "agua bendita"
+    },
+    {
+      "de": "desarrollos colombianos",
+      "a": "desarrolladores colombianos"
+    },
+    {
+      "de": "colombia",
+      "a": "Colombia"
+    },
+    {
+      "de": "Es está",
+      "a": "Está"
+    }
+  ],
+  "variantes": {
+    "trifuerza": {
+      "cta": "Link en el perfil",
+      "copy": ""
+    }
+  },
+  "slug": "sofa-cobra",
+  "codigo": "SOFA04",
+  "titulo": "¿Cuánto cobraría tu personaje por su superpoder?",
+  "niveles": 4,
+  "escenas": [
+    {
+      "tipo": "titulo",
+      "segundos": 3.4,
+      "alto": 300
+    },
+    {
+      "tipo": "clip",
+      "archivo": "DJI_20261012_144737_376_video.mp4",
+      "desde": 1.4,
+      "hasta": 10.6,
+      "golpes": [
+        {
+          "en": "cobraría",
+          "texto": "CUÁNTO COBRARÍA",
+          "estilo": "pastilla"
+        },
+        {
+          "en": "esperábamos",
+          "texto": "NO LAS ESPERÁBAMOS",
+          "estilo": "daño"
+        }
+      ],
+      "fx": [
+        {
+          "tipo": "monedas",
+          "en": "superpoder",
+          "dura": 3,
+          "quien": null,
+          "lado": "centro"
+        }
+      ],
+      "foco": {
+        "jd": {
+          "x": 0.5,
+          "y": 0.42,
+          "escala": 1.3
+        }
+      },
+      "lados": {
+        "jd": "centro"
+      },
+      "_avisos": []
+    },
+    {
+      "tipo": "clip",
+      "archivo": "DJI_20261012_144207_374_video.mp4",
+      "desde": 5.4,
+      "hasta": 19.05,
+      "golpes": [
+        {
+          "en": "titanes",
+          "texto": "TODOS LOS TITANES",
+          "estilo": "daño"
+        },
+        {
+          "en": "millones",
+          "texto": "$3.000.000 AL MES",
+          "estilo": "xp"
+        }
+      ],
+      "fx": [
+        {
+          "tipo": "corte",
+          "en": "fuerte",
+          "dura": 1.3,
+          "quien": "p2",
+          "color": "#E8323C"
+        },
+        {
+          "tipo": "dinero",
+          "en": "3",
+          "dura": 2.6,
+          "quien": "p2"
+        }
+      ],
+      "personaje": {
+        "nombre": "Mikasa Ackerman",
+        "clase": "Legión de Reconocimiento · Attack on Titan",
+        "tema": "muro",
+        "color": "#E8323C",
+        "mundo": "Cosplay · SOFA 2026",
+        "stats": [
+          {
+            "n": "COSPLAY",
+            "v": 1
+          },
+          {
+            "n": "FUERZA",
+            "v": 1
+          },
+          {
+            "n": "TARIFA",
+            "v": 0.6
+          }
+        ],
+        "resumen": "$3.000.000 al mes"
+      },
+      "ficha": true,
+      "fichaEn": 0.3,
+      "retrato": {
+        "t": 10.4,
+        "x": 0.682,
+        "y": 0.3516,
+        "w": 0.1425,
+        "h": 0.0908
+      },
+      "turnos": [
+        {
+          "desde": 5.4,
+          "quien": "jd"
+        },
+        {
+          "desde": 8.1,
+          "quien": "p2"
+        },
+        {
+          "desde": 13.7,
+          "quien": "jd",
+          "fijo": true
+        },
+        {
+          "desde": 17.1,
+          "quien": "p2"
+        }
+      ],
+      "foco": {
+        "jd": {
+          "x": 0.5,
+          "y": 0.38,
+          "escala": 1.3
+        },
+        "p2": {
+          "x": 0.78,
+          "y": 0.37,
+          "escala": 1.4
+        }
+      },
+      "lados": {
+        "jd": "centro",
+        "p2": "derecha"
+      },
+      "_avisos": [
+        "fin en medio de voz (19.05 s): «…que 3 millones mensuales» | «Hoy…»"
+      ]
+    },
+    {
+      "tipo": "nivel",
+      "numero": 2,
+      "nombre": "Teyvat",
+      "estilo": "mundo2d",
+      "segundos": 2
+    },
+    {
+      "tipo": "clip",
+      "archivo": "DJI_20261012_145125_425_video.mp4",
+      "desde": 31.8,
+      "hasta": 39.6,
+      "golpes": [
+        {
+          "en": "eterno",
+          "texto": "EL DESCANSO ETERNO",
+          "estilo": "daño"
+        }
+      ],
+      "fx": [
+        {
+          "tipo": "nieve",
+          "en": "descanso",
+          "dura": 2.6,
+          "quien": "p2",
+          "color": "#9FE3FF"
+        },
+        {
+          "tipo": "relampago",
+          "en": "eterno",
+          "dura": 1.2,
+          "quien": "p2",
+          "color": "#9FE3FF"
+        }
+      ],
+      "personaje": {
+        "nombre": "Capitano",
+        "clase": "Heraldo Fatui · Genshin Impact",
+        "tema": "hielo",
+        "color": "#9FE3FF",
+        "mundo": "Cosplay · SOFA 2026",
+        "stats": [
+          {
+            "n": "COSPLAY",
+            "v": 1
+          },
+          {
+            "n": "CRYO",
+            "v": 1
+          },
+          {
+            "n": "TARIFA",
+            "v": 1
+          }
+        ],
+        "resumen": "El descanso eterno"
+      },
+      "ficha": true,
+      "fichaEn": 0.3,
+      "retrato": {
+        "t": 36.4,
+        "x": 0.5435,
+        "y": 0.2823,
+        "w": 0.323,
+        "h": 0.2059
+      },
+      "turnos": [
+        {
+          "desde": 31.8,
+          "quien": "jd"
+        },
+        {
+          "desde": 33.2,
+          "quien": "p2"
+        },
+        {
+          "desde": 35.1,
+          "quien": "jd"
+        },
+        {
+          "desde": 38,
+          "quien": "p2"
+        }
+      ],
+      "foco": {
+        "jd": {
+          "x": 0.45,
+          "y": 0.4,
+          "escala": 1.3
+        },
+        "p2": {
+          "x": 0.75,
+          "y": 0.36,
+          "escala": 1.35
+        }
+      },
+      "lados": {
+        "jd": "centro",
+        "p2": "derecha"
+      },
+      "finDuro": 40.2,
+      "_avisos": [
+        "fin en medio de voz (39.60 s): «…con el descanso eterno.» | «¿Cuál es…»"
+      ]
+    },
+    {
+      "tipo": "nivel",
+      "numero": 3,
+      "nombre": "Zona de terror",
+      "estilo": "jefe",
+      "segundos": 2
+    },
+    {
+      "tipo": "clip",
+      "archivo": "DJI_20261012_150638_062_video.mp4",
+      "desde": 13,
+      "hasta": 25.6,
+      "golpes": [
+        {
+          "en": "dólares",
+          "texto": "3 MIL DÓLARES",
+          "estilo": "xp",
+          "vez": 2
+        },
+        {
+          "en": "persona",
+          "texto": "POR PERSONA",
+          "estilo": "pastilla"
+        }
+      ],
+      "fx": [
+        {
+          "tipo": "dinero",
+          "en": "3",
+          "dura": 2.6,
+          "quien": "p2"
+        }
+      ],
+      "personaje": {
+        "nombre": "Himiko Toga",
+        "clase": "Villana · My Hero Academia",
+        "tema": "terror",
+        "color": "#F06292",
+        "mundo": "Cosplay · SOFA 2026",
+        "stats": [
+          {
+            "n": "COSPLAY",
+            "v": 1
+          },
+          {
+            "n": "CAOS",
+            "v": 1
+          },
+          {
+            "n": "CORDURA",
+            "v": 0.1
+          }
+        ],
+        "resumen": "3 mil dólares por persona"
+      },
+      "ficha": true,
+      "fichaEn": 0.3,
+      "retrato": {
+        "t": 8,
+        "x": 0.5215,
+        "y": 0.3626,
+        "w": 0.183,
+        "h": 0.1166
+      },
+      "turnos": [
+        {
+          "desde": 12.7,
+          "quien": "jd"
+        },
+        {
+          "desde": 21.3,
+          "quien": "p2",
+          "fijo": true
+        }
+      ],
+      "foco": {
+        "jd": {
+          "x": 0.35,
+          "y": 0.37,
+          "escala": 1.3
+        },
+        "p2": {
+          "x": 0.65,
+          "y": 0.4,
+          "escala": 1.4
+        }
+      },
+      "omitir": [
+        "puede usar su don"
+      ],
+      "_avisos": []
+    },
+    {
+      "tipo": "cierre",
+      "archivo": "DJI_20261012_151328_376_video.mp4",
+      "desde": 0.9,
+      "hasta": 5.8,
+      "golpes": [
+        {
+          "en": "superpoder",
+          "texto": "¿Y EL TUYO?",
+          "estilo": "pastilla"
+        }
+      ],
+      "fx": [
+        {
+          "tipo": "monedas",
+          "en": "tú",
+          "dura": 3,
+          "quien": null,
+          "lado": "centro"
+        }
+      ],
+      "foco": {
+        "jd": {
+          "x": 0.5,
+          "y": 0.36,
+          "escala": 1.12
+        }
+      },
+      "lados": {
+        "jd": "centro"
+      },
+      "cta": "COMENTA CUÁNTO COBRARÍAS",
+      "_avisos": []
+    }
+  ],
+  "verificar": [
+    {
+      "dato": "Mikasa, Capitano, Toga: por confirmar. Cifras tal cual las dicen",
+      "estado": "pendiente"
+    }
+  ],
+  "generado": {
+    "escenas": [
+      {
+        "tipo": "titulo",
+        "segundos": 3.4,
+        "alto": 300,
+        "inicio": 0,
+        "cuadros": 102
+      },
+      {
+        "tipo": "clip",
+        "archivo": "DJI_20261012_144737_376_video.mp4",
+        "desde": 1.4,
+        "hasta": 10.6,
+        "golpes": [
+          {
+            "en": "cobraría",
+            "texto": "CUÁNTO COBRARÍA",
+            "estilo": "pastilla"
+          },
+          {
+            "en": "esperábamos",
+            "texto": "NO LAS ESPERÁBAMOS",
+            "estilo": "daño"
+          }
+        ],
+        "fx": [
+          {
+            "tipo": "monedas",
+            "en": "superpoder",
+            "dura": 3,
+            "quien": null,
+            "lado": "centro"
+          }
+        ],
+        "foco": {
+          "jd": {
+            "x": 0.5,
+            "y": 0.42,
+            "escala": 1.3
+          }
+        },
+        "lados": {
+          "jd": "centro"
+        },
+        "inicio": 102,
+        "cuadros": 257,
+        "cola": 3,
+        "tramos": [
+          {
+            "archivo": "sofa/DJI_20261012_144737_376_video.mp4",
+            "desde": 1.2,
+            "hasta": 6.7,
+            "velocidad": 1.08,
+            "inicio": 0,
+            "cuadros": 153
+          },
+          {
+            "archivo": "sofa/DJI_20261012_144737_376_video.mp4",
+            "desde": 7.06,
+            "hasta": 10.701,
+            "velocidad": 1.08,
+            "inicio": 153,
+            "cuadros": 101
+          }
+        ],
+        "subtitulos": [
+          {
+            "text": " le pregunté",
+            "startMs": 185,
+            "endMs": 724,
+            "timestampMs": null,
+            "confidence": 0.158375,
+            "quien": "jd"
+          },
+          {
+            "text": " a",
+            "startMs": 724,
+            "endMs": 827,
+            "timestampMs": null,
+            "confidence": 0.974609,
+            "quien": "jd"
+          },
+          {
+            "text": " la",
+            "startMs": 827,
+            "endMs": 972,
+            "timestampMs": null,
+            "confidence": 0.997409,
+            "quien": "jd"
+          },
+          {
+            "text": " gente",
+            "startMs": 972,
+            "endMs": 1242,
+            "timestampMs": null,
+            "confidence": 0.989089,
+            "quien": "jd"
+          },
+          {
+            "text": " en",
+            "startMs": 1242,
+            "endMs": 1386,
+            "timestampMs": null,
+            "confidence": 0.956603,
+            "quien": "jd"
+          },
+          {
+            "text": " el",
+            "startMs": 1386,
+            "endMs": 1531,
+            "timestampMs": null,
+            "confidence": 0.992118,
+            "quien": "jd"
+          },
+          {
+            "text": " SOFA",
+            "startMs": 1531,
+            "endMs": 1759,
+            "timestampMs": null,
+            "confidence": 0.703238,
+            "quien": "jd"
+          },
+          {
+            "text": " cuánto",
+            "startMs": 2407,
+            "endMs": 2759,
+            "timestampMs": null,
+            "confidence": 0.48315,
+            "quien": "jd"
+          },
+          {
+            "text": " cobraría",
+            "startMs": 2759,
+            "endMs": 3278,
+            "timestampMs": null,
+            "confidence": 0.93676,
+            "quien": "jd"
+          },
+          {
+            "text": " su",
+            "startMs": 3278,
+            "endMs": 3722,
+            "timestampMs": null,
+            "confidence": 0.949793,
+            "quien": "jd"
+          },
+          {
+            "text": " personaje",
+            "startMs": 3722,
+            "endMs": 4000,
+            "timestampMs": null,
+            "confidence": 0.922955,
+            "quien": "jd"
+          },
+          {
+            "text": " por",
+            "startMs": 4000,
+            "endMs": 4148,
+            "timestampMs": null,
+            "confidence": 0.971919,
+            "quien": "jd"
+          },
+          {
+            "text": " su",
+            "startMs": 4148,
+            "endMs": 4426,
+            "timestampMs": null,
+            "confidence": 0.977702,
+            "quien": "jd"
+          },
+          {
+            "text": " superpoder",
+            "startMs": 4426,
+            "endMs": 4668,
+            "timestampMs": null,
+            "confidence": 0.667561,
+            "quien": "jd"
+          },
+          {
+            "text": " y",
+            "startMs": 4668,
+            "endMs": 4720,
+            "timestampMs": null,
+            "confidence": 0.422097,
+            "quien": "jd"
+          },
+          {
+            "text": " sus",
+            "startMs": 4720,
+            "endMs": 4815,
+            "timestampMs": null,
+            "confidence": 0.447888,
+            "quien": "jd"
+          },
+          {
+            "text": " respuestas",
+            "startMs": 5278,
+            "endMs": 5796,
+            "timestampMs": null,
+            "confidence": 0.982373,
+            "quien": "jd"
+          },
+          {
+            "text": " no",
+            "startMs": 5796,
+            "endMs": 5981,
+            "timestampMs": null,
+            "confidence": 0.921711,
+            "quien": "jd"
+          },
+          {
+            "text": " las",
+            "startMs": 5981,
+            "endMs": 6241,
+            "timestampMs": null,
+            "confidence": 0.929927,
+            "quien": "jd"
+          },
+          {
+            "text": " esperábamos,",
+            "startMs": 6241,
+            "endMs": 6833,
+            "timestampMs": null,
+            "confidence": 0.9976,
+            "quien": "jd"
+          },
+          {
+            "text": " vamos",
+            "startMs": 6833,
+            "endMs": 7019,
+            "timestampMs": null,
+            "confidence": 0.85515,
+            "quien": "jd"
+          },
+          {
+            "text": " a",
+            "startMs": 7019,
+            "endMs": 7130,
+            "timestampMs": null,
+            "confidence": 0.993487,
+            "quien": "jd"
+          },
+          {
+            "text": " ver",
+            "startMs": 7130,
+            "endMs": 7222,
+            "timestampMs": null,
+            "confidence": 0.998919,
+            "quien": "jd"
+          },
+          {
+            "text": " qué",
+            "startMs": 7222,
+            "endMs": 7352,
+            "timestampMs": null,
+            "confidence": 0.542686,
+            "quien": "jd"
+          },
+          {
+            "text": " nos",
+            "startMs": 7352,
+            "endMs": 7481,
+            "timestampMs": null,
+            "confidence": 0.991476,
+            "quien": "jd"
+          },
+          {
+            "text": " dijeron.",
+            "startMs": 7481,
+            "endMs": 7722,
+            "timestampMs": null,
+            "confidence": 0.974724,
+            "quien": "jd"
+          }
+        ],
+        "texto": "Le pregunté a la gente en el sofá cuánto cobraría su personaje por su superpoder y sus respuestas no las esperábamos, vamos a ver qué nos dijeron."
+      },
+      {
+        "tipo": "clip",
+        "archivo": "DJI_20261012_144207_374_video.mp4",
+        "desde": 5.4,
+        "hasta": 19.05,
+        "golpes": [
+          {
+            "en": "titanes",
+            "texto": "TODOS LOS TITANES",
+            "estilo": "daño"
+          },
+          {
+            "en": "millones",
+            "texto": "$3.000.000 AL MES",
+            "estilo": "xp"
+          }
+        ],
+        "fx": [
+          {
+            "tipo": "corte",
+            "en": "fuerte",
+            "dura": 1.3,
+            "quien": "p2",
+            "color": "#E8323C"
+          },
+          {
+            "tipo": "dinero",
+            "en": "3",
+            "dura": 2.6,
+            "quien": "p2"
+          }
+        ],
+        "personaje": {
+          "nombre": "Mikasa Ackerman",
+          "clase": "Legión de Reconocimiento · Attack on Titan",
+          "tema": "muro",
+          "color": "#E8323C",
+          "mundo": "Cosplay · SOFA 2026",
+          "stats": [
+            {
+              "n": "COSPLAY",
+              "v": 1
+            },
+            {
+              "n": "FUERZA",
+              "v": 1
+            },
+            {
+              "n": "TARIFA",
+              "v": 0.6
+            }
+          ],
+          "resumen": "$3.000.000 al mes"
+        },
+        "ficha": true,
+        "fichaEn": 0.3,
+        "retrato": {
+          "t": 10.4,
+          "x": 0.682,
+          "y": 0.3516,
+          "w": 0.1425,
+          "h": 0.0908
+        },
+        "turnos": [
+          {
+            "desde": 5.4,
+            "quien": "jd"
+          },
+          {
+            "desde": 8.1,
+            "quien": "p2"
+          },
+          {
+            "desde": 13.7,
+            "quien": "jd",
+            "fijo": true
+          },
+          {
+            "desde": 17.1,
+            "quien": "p2"
+          }
+        ],
+        "foco": {
+          "jd": {
+            "x": 0.5,
+            "y": 0.38,
+            "escala": 1.3
+          },
+          "p2": {
+            "x": 0.78,
+            "y": 0.37,
+            "escala": 1.4
+          }
+        },
+        "lados": {
+          "jd": "centro",
+          "p2": "derecha"
+        },
+        "inicio": 359,
+        "cuadros": 363,
+        "cola": 26,
+        "tramos": [
+          {
+            "archivo": "sofa/DJI_20261012_144207_374_video.mp4",
+            "desde": 5.2,
+            "hasta": 7.6,
+            "velocidad": 1.08,
+            "inicio": 0,
+            "cuadros": 67
+          },
+          {
+            "archivo": "sofa/DJI_20261012_144207_374_video.mp4",
+            "desde": 8.1,
+            "hasta": 12.1,
+            "velocidad": 1.08,
+            "inicio": 67,
+            "cuadros": 111
+          },
+          {
+            "archivo": "sofa/DJI_20261012_144207_374_video.mp4",
+            "desde": 13.4,
+            "hasta": 19.111,
+            "velocidad": 1.08,
+            "inicio": 178,
+            "cuadros": 159
+          }
+        ],
+        "subtitulos": [
+          {
+            "text": " ¿Qué",
+            "startMs": 185,
+            "endMs": 402,
+            "timestampMs": null,
+            "confidence": 0.723397,
+            "quien": "jd"
+          },
+          {
+            "text": " superpoder",
+            "startMs": 402,
+            "endMs": 956,
+            "timestampMs": null,
+            "confidence": 0.793789,
+            "quien": "jd"
+          },
+          {
+            "text": " tiene",
+            "startMs": 956,
+            "endMs": 1269,
+            "timestampMs": null,
+            "confidence": 0.985024,
+            "quien": "jd"
+          },
+          {
+            "text": " tu",
+            "startMs": 1269,
+            "endMs": 1438,
+            "timestampMs": null,
+            "confidence": 0.954185,
+            "quien": "jd"
+          },
+          {
+            "text": " personaje?",
+            "startMs": 1438,
+            "endMs": 1944,
+            "timestampMs": null,
+            "confidence": 0.993775,
+            "quien": "jd"
+          },
+          {
+            "text": " Yo",
+            "startMs": 2407,
+            "endMs": 2556,
+            "timestampMs": null,
+            "confidence": 0.961312,
+            "quien": "p2"
+          },
+          {
+            "text": " diría",
+            "startMs": 2556,
+            "endMs": 2889,
+            "timestampMs": null,
+            "confidence": 0.996993,
+            "quien": "p2"
+          },
+          {
+            "text": " que",
+            "startMs": 2889,
+            "endMs": 3119,
+            "timestampMs": null,
+            "confidence": 0.958764,
+            "quien": "p2"
+          },
+          {
+            "text": " es",
+            "startMs": 3119,
+            "endMs": 3296,
+            "timestampMs": null,
+            "confidence": 0.690029,
+            "quien": "p2"
+          },
+          {
+            "text": " super",
+            "startMs": 3296,
+            "endMs": 3611,
+            "timestampMs": null,
+            "confidence": 0.775436,
+            "quien": "p2"
+          },
+          {
+            "text": " fuerte,",
+            "startMs": 3611,
+            "endMs": 4074,
+            "timestampMs": null,
+            "confidence": 0.869817,
+            "quien": "p2"
+          },
+          {
+            "text": " ya",
+            "startMs": 4074,
+            "endMs": 4259,
+            "timestampMs": null,
+            "confidence": 0.856867,
+            "quien": "p2"
+          },
+          {
+            "text": " que",
+            "startMs": 4259,
+            "endMs": 4537,
+            "timestampMs": null,
+            "confidence": 0.985629,
+            "quien": "p2"
+          },
+          {
+            "text": " puede",
+            "startMs": 4537,
+            "endMs": 4926,
+            "timestampMs": null,
+            "confidence": 0.90134,
+            "quien": "p2"
+          },
+          {
+            "text": " asesinar",
+            "startMs": 4926,
+            "endMs": 5259,
+            "timestampMs": null,
+            "confidence": 0.557719,
+            "quien": "p2"
+          },
+          {
+            "text": " a",
+            "startMs": 5259,
+            "endMs": 5370,
+            "timestampMs": null,
+            "confidence": 0.907,
+            "quien": "p2"
+          },
+          {
+            "text": " todos",
+            "startMs": 5370,
+            "endMs": 5537,
+            "timestampMs": null,
+            "confidence": 0.511152,
+            "quien": "p2"
+          },
+          {
+            "text": " los",
+            "startMs": 5537,
+            "endMs": 5648,
+            "timestampMs": null,
+            "confidence": 0.964501,
+            "quien": "p2"
+          },
+          {
+            "text": " titanes",
+            "startMs": 6111,
+            "endMs": 6222,
+            "timestampMs": null,
+            "confidence": 0.735415,
+            "quien": "p2"
+          },
+          {
+            "text": " ¿Y",
+            "startMs": 6222,
+            "endMs": 6648,
+            "timestampMs": null,
+            "confidence": 0.716741,
+            "quien": "jd"
+          },
+          {
+            "text": " cuánto",
+            "startMs": 6648,
+            "endMs": 6944,
+            "timestampMs": null,
+            "confidence": 0.84034,
+            "quien": "jd"
+          },
+          {
+            "text": " cobraría",
+            "startMs": 6944,
+            "endMs": 7556,
+            "timestampMs": null,
+            "confidence": 0.964291,
+            "quien": "jd"
+          },
+          {
+            "text": " tu",
+            "startMs": 7556,
+            "endMs": 8000,
+            "timestampMs": null,
+            "confidence": 0.962215,
+            "quien": "jd"
+          },
+          {
+            "text": " personaje",
+            "startMs": 8000,
+            "endMs": 8241,
+            "timestampMs": null,
+            "confidence": 0.997204,
+            "quien": "jd"
+          },
+          {
+            "text": " por",
+            "startMs": 8241,
+            "endMs": 8370,
+            "timestampMs": null,
+            "confidence": 0.96179,
+            "quien": "jd"
+          },
+          {
+            "text": " ese",
+            "startMs": 8370,
+            "endMs": 8704,
+            "timestampMs": null,
+            "confidence": 0.948994,
+            "quien": "jd"
+          },
+          {
+            "text": " superpoder?",
+            "startMs": 8704,
+            "endMs": 8889,
+            "timestampMs": null,
+            "confidence": 0.979923,
+            "quien": "jd"
+          },
+          {
+            "text": " Yo",
+            "startMs": 9352,
+            "endMs": 9531,
+            "timestampMs": null,
+            "confidence": 0.992888,
+            "quien": "p2"
+          },
+          {
+            "text": " diría",
+            "startMs": 9531,
+            "endMs": 9865,
+            "timestampMs": null,
+            "confidence": 0.995976,
+            "quien": "p2"
+          },
+          {
+            "text": " que",
+            "startMs": 9865,
+            "endMs": 10096,
+            "timestampMs": null,
+            "confidence": 0.914939,
+            "quien": "p2"
+          },
+          {
+            "text": " 3",
+            "startMs": 10096,
+            "endMs": 10224,
+            "timestampMs": null,
+            "confidence": 0.656382,
+            "quien": "p2"
+          },
+          {
+            "text": " millones",
+            "startMs": 10224,
+            "endMs": 10712,
+            "timestampMs": null,
+            "confidence": 0.916388,
+            "quien": "p2"
+          },
+          {
+            "text": " mensuales",
+            "startMs": 10712,
+            "endMs": 11251,
+            "timestampMs": null,
+            "confidence": 0.915122,
+            "quien": "p2"
+          }
+        ],
+        "texto": "¿Qué superpoder tiene tu personaje? Yo diría que es super fuerte, ya que puede asesinar a todos los titanes ¿Y cuánto cobraría tu personaje por ese superpoder? Yo diría que 3 millones mensuales",
+        "retratoPng": "sofa/retratos/sofa-cobra-2-2489310b.png"
+      },
+      {
+        "tipo": "nivel",
+        "numero": 2,
+        "nombre": "Teyvat",
+        "estilo": "mundo2d",
+        "segundos": 2,
+        "inicio": 722,
+        "cuadros": 60
+      },
+      {
+        "tipo": "clip",
+        "archivo": "DJI_20261012_145125_425_video.mp4",
+        "desde": 31.8,
+        "hasta": 39.6,
+        "golpes": [
+          {
+            "en": "eterno",
+            "texto": "EL DESCANSO ETERNO",
+            "estilo": "daño"
+          }
+        ],
+        "fx": [
+          {
+            "tipo": "nieve",
+            "en": "descanso",
+            "dura": 2.6,
+            "quien": "p2",
+            "color": "#9FE3FF"
+          },
+          {
+            "tipo": "relampago",
+            "en": "eterno",
+            "dura": 1.2,
+            "quien": "p2",
+            "color": "#9FE3FF"
+          }
+        ],
+        "personaje": {
+          "nombre": "Capitano",
+          "clase": "Heraldo Fatui · Genshin Impact",
+          "tema": "hielo",
+          "color": "#9FE3FF",
+          "mundo": "Cosplay · SOFA 2026",
+          "stats": [
+            {
+              "n": "COSPLAY",
+              "v": 1
+            },
+            {
+              "n": "CRYO",
+              "v": 1
+            },
+            {
+              "n": "TARIFA",
+              "v": 1
+            }
+          ],
+          "resumen": "El descanso eterno"
+        },
+        "ficha": true,
+        "fichaEn": 0.3,
+        "retrato": {
+          "t": 36.4,
+          "x": 0.5435,
+          "y": 0.2823,
+          "w": 0.323,
+          "h": 0.2059
+        },
+        "turnos": [
+          {
+            "desde": 31.8,
+            "quien": "jd"
+          },
+          {
+            "desde": 33.2,
+            "quien": "p2"
+          },
+          {
+            "desde": 35.1,
+            "quien": "jd"
+          },
+          {
+            "desde": 38,
+            "quien": "p2"
+          }
+        ],
+        "foco": {
+          "jd": {
+            "x": 0.45,
+            "y": 0.4,
+            "escala": 1.3
+          },
+          "p2": {
+            "x": 0.75,
+            "y": 0.36,
+            "escala": 1.35
+          }
+        },
+        "lados": {
+          "jd": "centro",
+          "p2": "derecha"
+        },
+        "finDuro": 40.2,
+        "inicio": 782,
+        "cuadros": 249,
+        "cola": 10,
+        "tramos": [
+          {
+            "archivo": "sofa/DJI_20261012_145125_425_video.mp4",
+            "desde": 31.6,
+            "hasta": 40.2,
+            "velocidad": 1.08,
+            "inicio": 0,
+            "cuadros": 239
+          }
+        ],
+        "subtitulos": [
+          {
+            "text": " ¿Cuál",
+            "startMs": 185,
+            "endMs": 406,
+            "timestampMs": null,
+            "confidence": 0.923396,
+            "quien": "jd"
+          },
+          {
+            "text": " es",
+            "startMs": 406,
+            "endMs": 547,
+            "timestampMs": null,
+            "confidence": 0.996341,
+            "quien": "jd"
+          },
+          {
+            "text": " tu",
+            "startMs": 547,
+            "endMs": 688,
+            "timestampMs": null,
+            "confidence": 0.996291,
+            "quien": "jd"
+          },
+          {
+            "text": " personaje?",
+            "startMs": 688,
+            "endMs": 1111,
+            "timestampMs": null,
+            "confidence": 0.996962,
+            "quien": "jd"
+          },
+          {
+            "text": " Es",
+            "startMs": 1481,
+            "endMs": 1631,
+            "timestampMs": null,
+            "confidence": 0.973896,
+            "quien": "p2"
+          },
+          {
+            "text": " Capitano",
+            "startMs": 1631,
+            "endMs": 2037,
+            "timestampMs": null,
+            "confidence": 0.980733,
+            "quien": "p2"
+          },
+          {
+            "text": " de",
+            "startMs": 2037,
+            "endMs": 2187,
+            "timestampMs": null,
+            "confidence": 0.984249,
+            "quien": "p2"
+          },
+          {
+            "text": " Genshin",
+            "startMs": 2187,
+            "endMs": 2550,
+            "timestampMs": null,
+            "confidence": 0.998414,
+            "quien": "p2"
+          },
+          {
+            "text": " Impact.",
+            "startMs": 2550,
+            "endMs": 2870,
+            "timestampMs": null,
+            "confidence": 0.999504,
+            "quien": "p2"
+          },
+          {
+            "text": " ¿Cuánto",
+            "startMs": 3315,
+            "endMs": 3759,
+            "timestampMs": null,
+            "confidence": 0.986558,
+            "quien": "jd"
+          },
+          {
+            "text": " cobraría",
+            "startMs": 3759,
+            "endMs": 4130,
+            "timestampMs": null,
+            "confidence": 0.998268,
+            "quien": "jd"
+          },
+          {
+            "text": " tu",
+            "startMs": 4130,
+            "endMs": 4500,
+            "timestampMs": null,
+            "confidence": 0.985261,
+            "quien": "jd"
+          },
+          {
+            "text": " personaje",
+            "startMs": 4500,
+            "endMs": 4759,
+            "timestampMs": null,
+            "confidence": 0.996183,
+            "quien": "jd"
+          },
+          {
+            "text": " por",
+            "startMs": 4759,
+            "endMs": 4944,
+            "timestampMs": null,
+            "confidence": 0.990182,
+            "quien": "jd"
+          },
+          {
+            "text": " su",
+            "startMs": 4944,
+            "endMs": 5222,
+            "timestampMs": null,
+            "confidence": 0.996884,
+            "quien": "jd"
+          },
+          {
+            "text": " superpoder?",
+            "startMs": 5222,
+            "endMs": 5556,
+            "timestampMs": null,
+            "confidence": 0.988595,
+            "quien": "jd"
+          },
+          {
+            "text": " Cobraría",
+            "startMs": 5926,
+            "endMs": 6351,
+            "timestampMs": null,
+            "confidence": 0.30804,
+            "quien": "p2"
+          },
+          {
+            "text": " con",
+            "startMs": 6351,
+            "endMs": 6552,
+            "timestampMs": null,
+            "confidence": 0.846692,
+            "quien": "p2"
+          },
+          {
+            "text": " el",
+            "startMs": 6552,
+            "endMs": 6708,
+            "timestampMs": null,
+            "confidence": 0.994746,
+            "quien": "p2"
+          },
+          {
+            "text": " descanso",
+            "startMs": 6708,
+            "endMs": 7132,
+            "timestampMs": null,
+            "confidence": 0.986269,
+            "quien": "p2"
+          },
+          {
+            "text": " eterno.",
+            "startMs": 7132,
+            "endMs": 7469,
+            "timestampMs": null,
+            "confidence": 0.996318,
+            "quien": "p2"
+          }
+        ],
+        "texto": "¿Cuál es tu personaje? Es capitano de Genshin Impact. ¿Cuánto cobraría tu personaje por su superpoder? Cobraría con el descanso eterno.",
+        "retratoPng": "sofa/retratos/sofa-cobra-3-73d717b6.png"
+      },
+      {
+        "tipo": "nivel",
+        "numero": 3,
+        "nombre": "Zona de terror",
+        "estilo": "jefe",
+        "segundos": 2,
+        "inicio": 1031,
+        "cuadros": 60
+      },
+      {
+        "tipo": "clip",
+        "archivo": "DJI_20261012_150638_062_video.mp4",
+        "desde": 13,
+        "hasta": 25.6,
+        "golpes": [
+          {
+            "en": "dólares",
+            "texto": "3 MIL DÓLARES",
+            "estilo": "xp",
+            "vez": 2
+          },
+          {
+            "en": "persona",
+            "texto": "POR PERSONA",
+            "estilo": "pastilla"
+          }
+        ],
+        "fx": [
+          {
+            "tipo": "dinero",
+            "en": "3",
+            "dura": 2.6,
+            "quien": "p2"
+          }
+        ],
+        "personaje": {
+          "nombre": "Himiko Toga",
+          "clase": "Villana · My Hero Academia",
+          "tema": "terror",
+          "color": "#F06292",
+          "mundo": "Cosplay · SOFA 2026",
+          "stats": [
+            {
+              "n": "COSPLAY",
+              "v": 1
+            },
+            {
+              "n": "CAOS",
+              "v": 1
+            },
+            {
+              "n": "CORDURA",
+              "v": 0.1
+            }
+          ],
+          "resumen": "3 mil dólares por persona"
+        },
+        "ficha": true,
+        "fichaEn": 0.3,
+        "retrato": {
+          "t": 8,
+          "x": 0.5215,
+          "y": 0.3626,
+          "w": 0.183,
+          "h": 0.1166
+        },
+        "turnos": [
+          {
+            "desde": 12.7,
+            "quien": "jd"
+          },
+          {
+            "desde": 21.3,
+            "quien": "p2",
+            "fijo": true
+          }
+        ],
+        "foco": {
+          "jd": {
+            "x": 0.35,
+            "y": 0.37,
+            "escala": 1.3
+          },
+          "p2": {
+            "x": 0.65,
+            "y": 0.4,
+            "escala": 1.4
+          }
+        },
+        "omitir": [
+          "puede usar su don"
+        ],
+        "inicio": 1091,
+        "cuadros": 345,
+        "cola": 9,
+        "tramos": [
+          {
+            "archivo": "sofa/DJI_20261012_150638_062_video.mp4",
+            "desde": 12.78,
+            "hasta": 18.5,
+            "velocidad": 1.08,
+            "inicio": 0,
+            "cuadros": 159
+          },
+          {
+            "archivo": "sofa/DJI_20261012_150638_062_video.mp4",
+            "desde": 19.6,
+            "hasta": 25.96,
+            "velocidad": 1.08,
+            "inicio": 159,
+            "cuadros": 177
+          }
+        ],
+        "subtitulos": [
+          {
+            "text": " ¿Y",
+            "startMs": 185,
+            "endMs": 611,
+            "timestampMs": null,
+            "confidence": 0.770704,
+            "quien": "jd"
+          },
+          {
+            "text": " cuánto",
+            "startMs": 611,
+            "endMs": 889,
+            "timestampMs": null,
+            "confidence": 0.853989,
+            "quien": "jd"
+          },
+          {
+            "text": " cobraría",
+            "startMs": 889,
+            "endMs": 1278,
+            "timestampMs": null,
+            "confidence": 0.942831,
+            "quien": "jd"
+          },
+          {
+            "text": " tu",
+            "startMs": 1278,
+            "endMs": 1704,
+            "timestampMs": null,
+            "confidence": 0.979077,
+            "quien": "jd"
+          },
+          {
+            "text": " personaje",
+            "startMs": 1704,
+            "endMs": 1963,
+            "timestampMs": null,
+            "confidence": 0.99099,
+            "quien": "jd"
+          },
+          {
+            "text": " por",
+            "startMs": 1963,
+            "endMs": 2074,
+            "timestampMs": null,
+            "confidence": 0.945759,
+            "quien": "jd"
+          },
+          {
+            "text": " ese",
+            "startMs": 2074,
+            "endMs": 2981,
+            "timestampMs": null,
+            "confidence": 0.986639,
+            "quien": "jd"
+          },
+          {
+            "text": " superpoder",
+            "startMs": 3259,
+            "endMs": 3756,
+            "timestampMs": null,
+            "confidence": 0.977293,
+            "quien": "jd"
+          },
+          {
+            "text": " si",
+            "startMs": 3756,
+            "endMs": 3907,
+            "timestampMs": null,
+            "confidence": 0.648908,
+            "quien": "jd"
+          },
+          {
+            "text": " fuera",
+            "startMs": 4093,
+            "endMs": 4401,
+            "timestampMs": null,
+            "confidence": 0.984829,
+            "quien": "jd"
+          },
+          {
+            "text": " a",
+            "startMs": 4401,
+            "endMs": 4520,
+            "timestampMs": null,
+            "confidence": 0.958327,
+            "quien": "jd"
+          },
+          {
+            "text": " ofrecerlo",
+            "startMs": 4520,
+            "endMs": 5019,
+            "timestampMs": null,
+            "confidence": 0.993851,
+            "quien": "jd"
+          },
+          {
+            "text": " como",
+            "startMs": 5481,
+            "endMs": 5934,
+            "timestampMs": null,
+            "confidence": 0.889512,
+            "quien": "jd"
+          },
+          {
+            "text": " un",
+            "startMs": 5934,
+            "endMs": 6222,
+            "timestampMs": null,
+            "confidence": 0.955088,
+            "quien": "jd"
+          },
+          {
+            "text": " servicio?",
+            "startMs": 6407,
+            "endMs": 6883,
+            "timestampMs": null,
+            "confidence": 0.992439,
+            "quien": "jd"
+          },
+          {
+            "text": " En",
+            "startMs": 6883,
+            "endMs": 7058,
+            "timestampMs": null,
+            "confidence": 0.690656,
+            "quien": "p2"
+          },
+          {
+            "text": " dólares,",
+            "startMs": 7058,
+            "endMs": 7483,
+            "timestampMs": null,
+            "confidence": 0.956036,
+            "quien": "p2"
+          },
+          {
+            "text": " 3",
+            "startMs": 7483,
+            "endMs": 7608,
+            "timestampMs": null,
+            "confidence": 0.425067,
+            "quien": "p2"
+          },
+          {
+            "text": " mil",
+            "startMs": 7608,
+            "endMs": 7834,
+            "timestampMs": null,
+            "confidence": 0.85202,
+            "quien": "p2"
+          },
+          {
+            "text": " dólares,",
+            "startMs": 7834,
+            "endMs": 8259,
+            "timestampMs": null,
+            "confidence": 0.972993,
+            "quien": "p2"
+          },
+          {
+            "text": " o",
+            "startMs": 8444,
+            "endMs": 8610,
+            "timestampMs": null,
+            "confidence": 0.958426,
+            "quien": "p2"
+          },
+          {
+            "text": " sea,",
+            "startMs": 8610,
+            "endMs": 8907,
+            "timestampMs": null,
+            "confidence": 0.93472,
+            "quien": "p2"
+          },
+          {
+            "text": " o",
+            "startMs": 9463,
+            "endMs": 9609,
+            "timestampMs": null,
+            "confidence": 0.870522,
+            "quien": "p2"
+          },
+          {
+            "text": " 4",
+            "startMs": 9609,
+            "endMs": 9756,
+            "timestampMs": null,
+            "confidence": 0.796587,
+            "quien": "p2"
+          },
+          {
+            "text": " mil.",
+            "startMs": 9756,
+            "endMs": 10019,
+            "timestampMs": null,
+            "confidence": 0.931477,
+            "quien": "p2"
+          },
+          {
+            "text": " Por",
+            "startMs": 10204,
+            "endMs": 10364,
+            "timestampMs": null,
+            "confidence": 0.607016,
+            "quien": "p2"
+          },
+          {
+            "text": " persona.",
+            "startMs": 10364,
+            "endMs": 10667,
+            "timestampMs": null,
+            "confidence": 0.973853,
+            "quien": "p2"
+          }
+        ],
+        "texto": "¿Y cuánto cobraría tu personaje por ese superpoder si fuera a ofrecerlo como un servicio? En dólares, 3 mil dólares, o sea, o 4 mil. Por persona.",
+        "retratoPng": "sofa/retratos/sofa-cobra-4-b8655179.png"
+      },
+      {
+        "tipo": "cierre",
+        "archivo": "DJI_20261012_151328_376_video.mp4",
+        "desde": 0.9,
+        "hasta": 5.8,
+        "golpes": [
+          {
+            "en": "superpoder",
+            "texto": "¿Y EL TUYO?",
+            "estilo": "pastilla"
+          }
+        ],
+        "fx": [
+          {
+            "tipo": "monedas",
+            "en": "tú",
+            "dura": 3,
+            "quien": null,
+            "lado": "centro"
+          }
+        ],
+        "foco": {
+          "jd": {
+            "x": 0.5,
+            "y": 0.36,
+            "escala": 1.12
+          }
+        },
+        "lados": {
+          "jd": "centro"
+        },
+        "cta": "COMENTA CUÁNTO COBRARÍAS",
+        "inicio": 1436,
+        "cuadros": 161,
+        "cola": 3,
+        "tramos": [
+          {
+            "archivo": "sofa/DJI_20261012_151328_376_video.mp4",
+            "desde": 0.72,
+            "hasta": 6.4,
+            "velocidad": 1.08,
+            "inicio": 0,
+            "cuadros": 158
+          }
+        ],
+        "subtitulos": [
+          {
+            "text": " Y",
+            "startMs": 185,
+            "endMs": 370,
+            "timestampMs": null,
+            "confidence": 0.356687,
+            "quien": "jd"
+          },
+          {
+            "text": " tú,",
+            "startMs": 370,
+            "endMs": 741,
+            "timestampMs": null,
+            "confidence": 0.571553,
+            "quien": "jd"
+          },
+          {
+            "text": " ¿cuánto",
+            "startMs": 741,
+            "endMs": 1056,
+            "timestampMs": null,
+            "confidence": 0.598067,
+            "quien": "jd"
+          },
+          {
+            "text": " cobraría",
+            "startMs": 1056,
+            "endMs": 1463,
+            "timestampMs": null,
+            "confidence": 0.955929,
+            "quien": "jd"
+          },
+          {
+            "text": " tu",
+            "startMs": 1463,
+            "endMs": 1833,
+            "timestampMs": null,
+            "confidence": 0.94195,
+            "quien": "jd"
+          },
+          {
+            "text": " personaje",
+            "startMs": 1833,
+            "endMs": 2111,
+            "timestampMs": null,
+            "confidence": 0.987306,
+            "quien": "jd"
+          },
+          {
+            "text": " por",
+            "startMs": 2111,
+            "endMs": 2222,
+            "timestampMs": null,
+            "confidence": 0.922887,
+            "quien": "jd"
+          },
+          {
+            "text": " ese",
+            "startMs": 2222,
+            "endMs": 2481,
+            "timestampMs": null,
+            "confidence": 0.974747,
+            "quien": "jd"
+          },
+          {
+            "text": " superpoder?",
+            "startMs": 2481,
+            "endMs": 2852,
+            "timestampMs": null,
+            "confidence": 0.674429,
+            "quien": "jd"
+          },
+          {
+            "text": " Déjanoslo",
+            "startMs": 3222,
+            "endMs": 3634,
+            "timestampMs": null,
+            "confidence": 0.508755,
+            "quien": "jd"
+          },
+          {
+            "text": " saber",
+            "startMs": 3634,
+            "endMs": 3890,
+            "timestampMs": null,
+            "confidence": 0.996884,
+            "quien": "jd"
+          },
+          {
+            "text": " en",
+            "startMs": 3890,
+            "endMs": 4028,
+            "timestampMs": null,
+            "confidence": 0.99279,
+            "quien": "jd"
+          },
+          {
+            "text": " comentarios.",
+            "startMs": 4028,
+            "endMs": 4519,
+            "timestampMs": null,
+            "confidence": 0.977765,
+            "quien": "jd"
+          }
+        ],
+        "texto": "Y tú, ¿cuánto cobraría tu personaje por ese superpoder? Déjanoslo saber en comentarios."
+      },
+      {
+        "tipo": "final",
+        "inicio": 1597,
+        "cuadros": 72
+      }
+    ],
+    "total": 1669,
+    "avisos": [
+      "DJI_20261012_144207_374_video.mp4: fin en medio de voz (19.05 s): «…que 3 millones mensuales» | «Hoy…»",
+      "DJI_20261012_145125_425_video.mp4: fin en medio de voz (39.60 s): «…con el descanso eterno.» | «¿Cuál es…»"
+    ]
+  },
+  "bpm": 140,
+  "capas": true
+}

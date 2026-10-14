@@ -1,0 +1,2298 @@
+{
+  "plantilla": "Arcade",
+  "serie": "SOFA 2026 · BOGOTÁ",
+  "nivel": "SOFA 2026",
+  "cuentas": [
+    "juanda"
+  ],
+  "velocidad": 1.08,
+  "motivo": "protesto",
+  "lados": {
+    "jd": "izquierda",
+    "p2": "derecha"
+  },
+  "nombres": {
+    "jd": {
+      "nombre": "JUAN DAVID"
+    }
+  },
+  "correcciones": [
+    {
+      "de": "sofá",
+      "a": "SOFA"
+    },
+    {
+      "de": "le pregunte",
+      "a": "le pregunté"
+    },
+    {
+      "de": "Le pregunte",
+      "a": "Le pregunté"
+    },
+    {
+      "de": "Cosplayers",
+      "a": "cosplayers"
+    },
+    {
+      "de": "quien demandaría",
+      "a": "quién demandaría"
+    },
+    {
+      "de": "artas",
+      "a": "hartas"
+    },
+    {
+      "de": "hace todo son",
+      "a": "excepto"
+    },
+    {
+      "de": "gingos",
+      "a": "Sung Jinwoo"
+    },
+    {
+      "de": "Chimico Toga",
+      "a": "Himiko Toga"
+    },
+    {
+      "de": "Magiro Academia",
+      "a": "My Hero Academia"
+    },
+    {
+      "de": "Von Leinton",
+      "a": "Von Lycaon"
+    },
+    {
+      "de": "Sunless On Zero",
+      "a": "Zenless Zone Zero"
+    },
+    {
+      "de": "Aurora del League",
+      "a": "Aurora de League"
+    },
+    {
+      "de": "Mavica",
+      "a": "Mavuika"
+    },
+    {
+      "de": "satura",
+      "a": "La Vasija Pura"
+    },
+    {
+      "de": "te parece es a",
+      "a": "te pareces a"
+    },
+    {
+      "de": "estás tú buena",
+      "a": "está muy buena"
+    },
+    {
+      "de": "En como el fue",
+      "a": "En cómo él fue"
+    },
+    {
+      "de": "indique",
+      "a": "indie"
+    },
+    {
+      "de": "Jägger",
+      "a": "Jaeger"
+    },
+    {
+      "de": "Jäger",
+      "a": "Jaeger"
+    },
+    {
+      "de": "capitano",
+      "a": "Capitano"
+    },
+    {
+      "de": "herfría",
+      "a": "le hizo"
+    },
+    {
+      "de": "Drugs del futuro",
+      "a": "Trunks del futuro"
+    },
+    {
+      "de": "Sayajin",
+      "a": "saiyajin"
+    },
+    {
+      "de": "María",
+      "a": "mijo"
+    },
+    {
+      "de": "platico",
+      "a": "platica"
+    },
+    {
+      "de": "si está allí",
+      "a": "si es saiyajin"
+    },
+    {
+      "de": "respaunear",
+      "a": "respawnear"
+    },
+    {
+      "de": "Respawn",
+      "a": "respawn"
+    },
+    {
+      "de": "cagunes",
+      "a": "kagunes"
+    },
+    {
+      "de": "Maca",
+      "a": "Maka"
+    },
+    {
+      "de": "SoulHitter",
+      "a": "Soul Eater"
+    },
+    {
+      "de": "El jefe maestro",
+      "a": "el Jefe Maestro"
+    },
+    {
+      "de": "Te letra... transportarme",
+      "a": "¿Teletransportarme?"
+    },
+    {
+      "de": "maquillero",
+      "a": "Maki Gero"
+    },
+    {
+      "de": "ardestruir",
+      "a": "destruir"
+    },
+    {
+      "de": "Joaquin Club",
+      "a": "Jockey Club"
+    },
+    {
+      "de": "Frey",
+      "a": "Fray"
+    },
+    {
+      "de": "Vélula",
+      "a": "Bélula"
+    },
+    {
+      "de": "Séfira",
+      "a": "Céfira"
+    },
+    {
+      "de": "bótalo",
+      "a": "vótalo"
+    },
+    {
+      "de": "alteratura",
+      "a": "literatura"
+    },
+    {
+      "de": "de mito",
+      "a": "de Mito"
+    },
+    {
+      "de": "Esto es mito",
+      "a": "Esto es Mito"
+    },
+    {
+      "de": "perracos espantos",
+      "a": "Berracos Espantos"
+    },
+    {
+      "de": "Bogofighters",
+      "a": "Bogo Fighters"
+    },
+    {
+      "de": "cráteras",
+      "a": "criaturas"
+    },
+    {
+      "de": "podren",
+      "a": "cobren"
+    },
+    {
+      "de": "viene a secta",
+      "a": "hay una secta"
+    },
+    {
+      "de": "de acuerdos el la guardiente",
+      "a": "de acuerdo, el aguardiente"
+    },
+    {
+      "de": "agua mendita",
+      "a": "agua bendita"
+    },
+    {
+      "de": "desarrollos colombianos",
+      "a": "desarrolladores colombianos"
+    },
+    {
+      "de": "colombia",
+      "a": "Colombia"
+    },
+    {
+      "de": "Es está",
+      "a": "Está"
+    }
+  ],
+  "variantes": {
+    "juanda": {
+      "cta": "Comenta a quién demandarías",
+      "copy": ""
+    }
+  },
+  "slug": "sofa-demanda-2",
+  "codigo": "SOFA08",
+  "titulo": "¿A quién demandaría tu personaje? · Parte 2",
+  "niveles": 4,
+  "escenas": [
+    {
+      "tipo": "titulo",
+      "segundos": 3.4,
+      "alto": 360,
+      "texto": "¿A quién demandaría tu personaje?",
+      "parte": "PARTE 2"
+    },
+    {
+      "tipo": "clip",
+      "archivo": "DJI_20261012_142400_960_video.mp4",
+      "desde": 6.4,
+      "hasta": 13.2,
+      "golpes": [
+        {
+          "en": "sorprenderán",
+          "texto": "TE SORPRENDERÁN",
+          "estilo": "pastilla"
+        }
+      ],
+      "fx": [
+        {
+          "tipo": "estrellas",
+          "en": "demandaría",
+          "dura": 3,
+          "quien": null,
+          "lado": "centro"
+        }
+      ],
+      "foco": {
+        "jd": {
+          "x": 0.48,
+          "y": 0.35,
+          "escala": 1.3
+        }
+      },
+      "lados": {
+        "jd": "centro"
+      },
+      "_avisos": []
+    },
+    {
+      "tipo": "clip",
+      "archivo": "IMG_4876.MOV",
+      "desde": 11.2,
+      "hasta": 27.2,
+      "golpes": [
+        {
+          "en": "Toriyama",
+          "texto": "AKIRA TORIYAMA",
+          "estilo": "daño"
+        },
+        {
+          "en": "padre",
+          "texto": "MI PADRE",
+          "estilo": "golpe"
+        }
+      ],
+      "fx": [
+        {
+          "tipo": "relampago",
+          "en": "Toriyama",
+          "dura": 1.6,
+          "quien": "p2",
+          "color": "#B388FF"
+        },
+        {
+          "tipo": "aura",
+          "en": "padre",
+          "dura": 2,
+          "quien": "p2",
+          "color": "#B388FF"
+        }
+      ],
+      "personaje": {
+        "nombre": "Freezer",
+        "clase": "Emperador del universo 7 · Dragon Ball",
+        "tema": "espacio",
+        "color": "#B388FF",
+        "mundo": "Cosplay · SOFA 2026",
+        "stats": [
+          {
+            "n": "COSPLAY",
+            "v": 1
+          },
+          {
+            "n": "MALDAD",
+            "v": 1
+          },
+          {
+            "n": "PIEDAD",
+            "v": 0
+          }
+        ],
+        "resumen": "A Akira Toriyama"
+      },
+      "ficha": true,
+      "fichaEn": 0.3,
+      "retrato": {
+        "t": 20,
+        "x": 0.15,
+        "y": 0.4639,
+        "w": 0.3,
+        "h": 0.1913
+      },
+      "turnos": [
+        {
+          "desde": 11.2,
+          "quien": "jd"
+        },
+        {
+          "desde": 12.4,
+          "quien": "p2"
+        },
+        {
+          "desde": 14.7,
+          "quien": "jd"
+        },
+        {
+          "desde": 17.2,
+          "quien": "p2"
+        }
+      ],
+      "foco": {
+        "jd": {
+          "x": 0.62,
+          "y": 0.4,
+          "escala": 1.2
+        },
+        "p2": {
+          "x": 0.22,
+          "y": 0.36,
+          "escala": 1.25
+        }
+      },
+      "lados": {
+        "jd": "derecha",
+        "p2": "izquierda"
+      },
+      "_avisos": [
+        "fin en medio de voz (27.20 s): «…en la serie.» | «¿Y cuánto cobrarías por…»"
+      ]
+    },
+    {
+      "tipo": "nivel",
+      "numero": 2,
+      "nombre": "Tokio",
+      "estilo": "encuentro",
+      "segundos": 2
+    },
+    {
+      "tipo": "clip",
+      "archivo": "IMG_4880.MOV",
+      "desde": 5.1,
+      "hasta": 19.9,
+      "golpes": [
+        {
+          "en": "alimentos",
+          "texto": "DEMANDAR ALIMENTOS",
+          "estilo": "pastilla"
+        },
+        {
+          "en": "mató",
+          "texto": "FUE QUIEN ME MATÓ",
+          "estilo": "daño"
+        }
+      ],
+      "fx": [
+        {
+          "tipo": "aura",
+          "en": "Ghoul",
+          "dura": 2.5,
+          "quien": "p2",
+          "color": "#E8323C"
+        },
+        {
+          "tipo": "corte",
+          "en": "Kaneki",
+          "dura": 1.3,
+          "quien": "p2",
+          "color": "#E8323C",
+          "vez": 2
+        },
+        {
+          "tipo": "onda",
+          "en": "mató",
+          "dura": 1.3,
+          "quien": "p2",
+          "color": "#E8323C"
+        }
+      ],
+      "personaje": {
+        "nombre": "Kaneki y Rize",
+        "clase": "Ghouls · Tokyo Ghoul",
+        "tema": "terror",
+        "color": "#E8323C",
+        "mundo": "Cosplay · SOFA 2026",
+        "stats": [
+          {
+            "n": "COSPLAY",
+            "v": 1
+          },
+          {
+            "n": "KAGUNE",
+            "v": 1
+          },
+          {
+            "n": "CONFIANZA",
+            "v": 0
+          }
+        ],
+        "resumen": "Rize, por alimentos; Kaneki, por matarla"
+      },
+      "ficha": true,
+      "fichaEn": 0.3,
+      "retrato": {
+        "t": 20,
+        "x": 0.3368,
+        "y": 0.3514,
+        "w": 0.4236,
+        "h": 0.27
+      },
+      "turnos": [
+        {
+          "desde": 5.1,
+          "quien": "jd"
+        },
+        {
+          "desde": 6.6,
+          "quien": "p2"
+        },
+        {
+          "desde": 11.7,
+          "quien": "jd"
+        },
+        {
+          "desde": 13.7,
+          "quien": "p2",
+          "fijo": true
+        }
+      ],
+      "foco": {
+        "jd": {
+          "x": 0.25,
+          "y": 0.44,
+          "escala": 1.3
+        },
+        "p2": {
+          "x": 0.6,
+          "y": 0.42,
+          "escala": 1.3
+        }
+      },
+      "_avisos": []
+    },
+    {
+      "tipo": "nivel",
+      "numero": 3,
+      "nombre": "Futuro alterno",
+      "estilo": "vs",
+      "segundos": 2
+    },
+    {
+      "tipo": "clip",
+      "archivo": "DJI_20261012_162806_132_video.mp4",
+      "desde": 35.5,
+      "hasta": 48.9,
+      "golpes": [
+        {
+          "en": "autoridades",
+          "texto": "A LAS AUTORIDADES",
+          "estilo": "daño"
+        },
+        {
+          "en": "futuro",
+          "texto": "DESTRUIR EL FUTURO",
+          "estilo": "golpe"
+        }
+      ],
+      "fx": [
+        {
+          "tipo": "relampago",
+          "en": "autoridades",
+          "dura": 1.6,
+          "quien": "p2",
+          "color": "#F2C85B"
+        },
+        {
+          "tipo": "fuego",
+          "en": "futuro",
+          "dura": 2,
+          "quien": "p2",
+          "color": "#B388FF"
+        }
+      ],
+      "personaje": {
+        "nombre": "Trunks del futuro",
+        "clase": "Guerrero saiyajin · Dragon Ball",
+        "tema": "ciudad",
+        "color": "#B388FF",
+        "mundo": "Cosplay · SOFA 2026",
+        "stats": [
+          {
+            "n": "COSPLAY",
+            "v": 1
+          },
+          {
+            "n": "KI",
+            "v": 1
+          },
+          {
+            "n": "FUTURO",
+            "v": 0.2
+          }
+        ],
+        "resumen": "A las autoridades"
+      },
+      "ficha": true,
+      "fichaEn": 0.3,
+      "retrato": {
+        "t": 9.6,
+        "x": 0.5104,
+        "y": 0.3474,
+        "w": 0.2024,
+        "h": 0.129
+      },
+      "turnos": [
+        {
+          "desde": 35.5,
+          "quien": "p2"
+        },
+        {
+          "desde": 35.6,
+          "quien": "jd",
+          "fijo": true
+        },
+        {
+          "desde": 40.5,
+          "quien": "p2",
+          "fijo": true
+        }
+      ],
+      "foco": {
+        "jd": {
+          "x": 0.35,
+          "y": 0.4,
+          "escala": 1.3
+        },
+        "p2": {
+          "x": 0.65,
+          "y": 0.38,
+          "escala": 1.38
+        }
+      },
+      "correcciones": [
+        {
+          "de": "luego hacer y",
+          "a": "luego a Cell y"
+        }
+      ],
+      "_avisos": []
+    },
+    {
+      "tipo": "cierre",
+      "archivo": "DJI_20261012_151403_760_video.mp4",
+      "desde": 1,
+      "hasta": 5.3,
+      "golpes": [
+        {
+          "en": "demandaría",
+          "texto": "¿Y EL TUYO?",
+          "estilo": "pastilla"
+        }
+      ],
+      "fx": [],
+      "foco": {
+        "jd": {
+          "x": 0.44,
+          "y": 0.32,
+          "escala": 1.3
+        }
+      },
+      "lados": {
+        "jd": "centro"
+      },
+      "cta": "COMENTA A QUIÉN DEMANDARÍAS",
+      "_avisos": []
+    }
+  ],
+  "verificar": [
+    {
+      "dato": "Freezer, Kaneki y Rize, Trunks: nombres por confirmar. Freezer demanda a Akira Toriyama (autor fallecido): decisión de Juan David",
+      "estado": "pendiente"
+    }
+  ],
+  "generado": {
+    "escenas": [
+      {
+        "tipo": "titulo",
+        "segundos": 3.4,
+        "alto": 360,
+        "texto": "¿A quién demandaría tu personaje?",
+        "parte": "PARTE 2",
+        "inicio": 0,
+        "cuadros": 102
+      },
+      {
+        "tipo": "clip",
+        "archivo": "DJI_20261012_142400_960_video.mp4",
+        "desde": 6.4,
+        "hasta": 13.2,
+        "golpes": [
+          {
+            "en": "sorprenderán",
+            "texto": "TE SORPRENDERÁN",
+            "estilo": "pastilla"
+          }
+        ],
+        "fx": [
+          {
+            "tipo": "estrellas",
+            "en": "demandaría",
+            "dura": 3,
+            "quien": null,
+            "lado": "centro"
+          }
+        ],
+        "foco": {
+          "jd": {
+            "x": 0.48,
+            "y": 0.35,
+            "escala": 1.3
+          }
+        },
+        "lados": {
+          "jd": "centro"
+        },
+        "inicio": 102,
+        "cuadros": 208,
+        "cola": 3,
+        "tramos": [
+          {
+            "archivo": "sofa/DJI_20261012_142400_960_video.mp4",
+            "desde": 6.42,
+            "hasta": 13.8,
+            "velocidad": 1.08,
+            "inicio": 0,
+            "cuadros": 205
+          }
+        ],
+        "subtitulos": [
+          {
+            "text": " le pregunté",
+            "startMs": 185,
+            "endMs": 759,
+            "timestampMs": null,
+            "confidence": 0.190841,
+            "quien": "jd"
+          },
+          {
+            "text": " a",
+            "startMs": 759,
+            "endMs": 1093,
+            "timestampMs": null,
+            "confidence": 0.992886,
+            "quien": "jd"
+          },
+          {
+            "text": " cosplayers",
+            "startMs": 1093,
+            "endMs": 1611,
+            "timestampMs": null,
+            "confidence": 0.894903,
+            "quien": "jd"
+          },
+          {
+            "text": " en",
+            "startMs": 1611,
+            "endMs": 1722,
+            "timestampMs": null,
+            "confidence": 0.974708,
+            "quien": "jd"
+          },
+          {
+            "text": " el",
+            "startMs": 1722,
+            "endMs": 1889,
+            "timestampMs": null,
+            "confidence": 0.992057,
+            "quien": "jd"
+          },
+          {
+            "text": " SOFA",
+            "startMs": 1889,
+            "endMs": 2315,
+            "timestampMs": null,
+            "confidence": 0.942924,
+            "quien": "jd"
+          },
+          {
+            "text": " a",
+            "startMs": 2315,
+            "endMs": 2481,
+            "timestampMs": null,
+            "confidence": 0.618362,
+            "quien": "jd"
+          },
+          {
+            "text": " quién demandaría",
+            "startMs": 2481,
+            "endMs": 3259,
+            "timestampMs": null,
+            "confidence": 0.581268,
+            "quien": "jd"
+          },
+          {
+            "text": " su",
+            "startMs": 3259,
+            "endMs": 3667,
+            "timestampMs": null,
+            "confidence": 0.791666,
+            "quien": "jd"
+          },
+          {
+            "text": " personaje",
+            "startMs": 3667,
+            "endMs": 3756,
+            "timestampMs": null,
+            "confidence": 0.993117,
+            "quien": "jd"
+          },
+          {
+            "text": " y",
+            "startMs": 3756,
+            "endMs": 3778,
+            "timestampMs": null,
+            "confidence": 0.884733,
+            "quien": "jd"
+          },
+          {
+            "text": " seguro",
+            "startMs": 4056,
+            "endMs": 4410,
+            "timestampMs": null,
+            "confidence": 0.955762,
+            "quien": "jd"
+          },
+          {
+            "text": " sus",
+            "startMs": 4410,
+            "endMs": 4623,
+            "timestampMs": null,
+            "confidence": 0.957384,
+            "quien": "jd"
+          },
+          {
+            "text": " respuestas",
+            "startMs": 4623,
+            "endMs": 5167,
+            "timestampMs": null,
+            "confidence": 0.991681,
+            "quien": "jd"
+          },
+          {
+            "text": " te",
+            "startMs": 5352,
+            "endMs": 5505,
+            "timestampMs": null,
+            "confidence": 0.890515,
+            "quien": "jd"
+          },
+          {
+            "text": " sorprenderán.",
+            "startMs": 5505,
+            "endMs": 6093,
+            "timestampMs": null,
+            "confidence": 0.995431,
+            "quien": "jd"
+          }
+        ],
+        "texto": "le pregunte a Cosplayers en el sofá a quien demandaría su personaje y seguro sus respuestas te sorprenderán."
+      },
+      {
+        "tipo": "clip",
+        "archivo": "IMG_4876.MOV",
+        "desde": 11.2,
+        "hasta": 27.2,
+        "golpes": [
+          {
+            "en": "Toriyama",
+            "texto": "AKIRA TORIYAMA",
+            "estilo": "daño"
+          },
+          {
+            "en": "padre",
+            "texto": "MI PADRE",
+            "estilo": "golpe"
+          }
+        ],
+        "fx": [
+          {
+            "tipo": "relampago",
+            "en": "Toriyama",
+            "dura": 1.6,
+            "quien": "p2",
+            "color": "#B388FF"
+          },
+          {
+            "tipo": "aura",
+            "en": "padre",
+            "dura": 2,
+            "quien": "p2",
+            "color": "#B388FF"
+          }
+        ],
+        "personaje": {
+          "nombre": "Freezer",
+          "clase": "Emperador del universo 7 · Dragon Ball",
+          "tema": "espacio",
+          "color": "#B388FF",
+          "mundo": "Cosplay · SOFA 2026",
+          "stats": [
+            {
+              "n": "COSPLAY",
+              "v": 1
+            },
+            {
+              "n": "MALDAD",
+              "v": 1
+            },
+            {
+              "n": "PIEDAD",
+              "v": 0
+            }
+          ],
+          "resumen": "A Akira Toriyama"
+        },
+        "ficha": true,
+        "fichaEn": 0.3,
+        "retrato": {
+          "t": 20,
+          "x": 0.15,
+          "y": 0.4639,
+          "w": 0.3,
+          "h": 0.1913
+        },
+        "turnos": [
+          {
+            "desde": 11.2,
+            "quien": "jd"
+          },
+          {
+            "desde": 12.4,
+            "quien": "p2"
+          },
+          {
+            "desde": 14.7,
+            "quien": "jd"
+          },
+          {
+            "desde": 17.2,
+            "quien": "p2"
+          }
+        ],
+        "foco": {
+          "jd": {
+            "x": 0.62,
+            "y": 0.4,
+            "escala": 1.2
+          },
+          "p2": {
+            "x": 0.22,
+            "y": 0.36,
+            "escala": 1.25
+          }
+        },
+        "lados": {
+          "jd": "derecha",
+          "p2": "izquierda"
+        },
+        "inicio": 310,
+        "cuadros": 396,
+        "cola": 26,
+        "tramos": [
+          {
+            "archivo": "sofa/IMG_4876.mp4",
+            "desde": 11,
+            "hasta": 13.7,
+            "velocidad": 1.08,
+            "inicio": 0,
+            "cuadros": 75
+          },
+          {
+            "archivo": "sofa/IMG_4876.mp4",
+            "desde": 14.5,
+            "hasta": 16.4,
+            "velocidad": 1.08,
+            "inicio": 75,
+            "cuadros": 53
+          },
+          {
+            "archivo": "sofa/IMG_4876.mp4",
+            "desde": 17,
+            "hasta": 25,
+            "velocidad": 1.08,
+            "inicio": 128,
+            "cuadros": 222
+          },
+          {
+            "archivo": "sofa/IMG_4876.mp4",
+            "desde": 26.5,
+            "hasta": 27.215,
+            "velocidad": 1.08,
+            "inicio": 350,
+            "cuadros": 20
+          }
+        ],
+        "subtitulos": [
+          {
+            "text": " Hoy",
+            "startMs": 185,
+            "endMs": 376,
+            "timestampMs": null,
+            "confidence": 0.99281,
+            "quien": "jd"
+          },
+          {
+            "text": " estamos",
+            "startMs": 376,
+            "endMs": 735,
+            "timestampMs": null,
+            "confidence": 0.995866,
+            "quien": "jd"
+          },
+          {
+            "text": " con...",
+            "startMs": 735,
+            "endMs": 926,
+            "timestampMs": null,
+            "confidence": 0.997744,
+            "quien": "jd"
+          },
+          {
+            "text": " El",
+            "startMs": 1296,
+            "endMs": 1441,
+            "timestampMs": null,
+            "confidence": 0.938917,
+            "quien": "p2"
+          },
+          {
+            "text": " emperador",
+            "startMs": 1441,
+            "endMs": 1872,
+            "timestampMs": null,
+            "confidence": 0.931385,
+            "quien": "p2"
+          },
+          {
+            "text": " Freezer.",
+            "startMs": 1872,
+            "endMs": 2222,
+            "timestampMs": null,
+            "confidence": 0.983462,
+            "quien": "p2"
+          },
+          {
+            "text": " A",
+            "startMs": 2685,
+            "endMs": 2779,
+            "timestampMs": null,
+            "confidence": 0.714016,
+            "quien": "jd"
+          },
+          {
+            "text": " quién demandaría",
+            "startMs": 2779,
+            "endMs": 3456,
+            "timestampMs": null,
+            "confidence": 0.564879,
+            "quien": "jd"
+          },
+          {
+            "text": " tu",
+            "startMs": 3456,
+            "endMs": 3587,
+            "timestampMs": null,
+            "confidence": 0.84065,
+            "quien": "jd"
+          },
+          {
+            "text": " personaje?",
+            "startMs": 3587,
+            "endMs": 3981,
+            "timestampMs": null,
+            "confidence": 0.996544,
+            "quien": "jd"
+          },
+          {
+            "text": " A",
+            "startMs": 4444,
+            "endMs": 4624,
+            "timestampMs": null,
+            "confidence": 0.93539,
+            "quien": "p2"
+          },
+          {
+            "text": " quién demandaría",
+            "startMs": 4624,
+            "endMs": 5833,
+            "timestampMs": null,
+            "confidence": 0.899812,
+            "quien": "p2"
+          },
+          {
+            "text": " mi",
+            "startMs": 6204,
+            "endMs": 6412,
+            "timestampMs": null,
+            "confidence": 0.825399,
+            "quien": "p2"
+          },
+          {
+            "text": " personaje?",
+            "startMs": 6412,
+            "endMs": 7037,
+            "timestampMs": null,
+            "confidence": 0.995847,
+            "quien": "p2"
+          },
+          {
+            "text": " Yo",
+            "startMs": 7222,
+            "endMs": 7342,
+            "timestampMs": null,
+            "confidence": 0.979213,
+            "quien": "p2"
+          },
+          {
+            "text": " creería",
+            "startMs": 7342,
+            "endMs": 7632,
+            "timestampMs": null,
+            "confidence": 0.99236,
+            "quien": "p2"
+          },
+          {
+            "text": " que",
+            "startMs": 7632,
+            "endMs": 7786,
+            "timestampMs": null,
+            "confidence": 0.986318,
+            "quien": "p2"
+          },
+          {
+            "text": " Akira",
+            "startMs": 7786,
+            "endMs": 8008,
+            "timestampMs": null,
+            "confidence": 0.703673,
+            "quien": "p2"
+          },
+          {
+            "text": " Toriyama,",
+            "startMs": 8008,
+            "endMs": 8333,
+            "timestampMs": null,
+            "confidence": 0.838603,
+            "quien": "p2"
+          },
+          {
+            "text": " por",
+            "startMs": 8519,
+            "endMs": 8662,
+            "timestampMs": null,
+            "confidence": 0.561289,
+            "quien": "p2"
+          },
+          {
+            "text": " quien",
+            "startMs": 8662,
+            "endMs": 8869,
+            "timestampMs": null,
+            "confidence": 0.62832,
+            "quien": "p2"
+          },
+          {
+            "text": " le hizo",
+            "startMs": 8869,
+            "endMs": 9139,
+            "timestampMs": null,
+            "confidence": 0.362429,
+            "quien": "p2"
+          },
+          {
+            "text": " a",
+            "startMs": 9139,
+            "endMs": 9219,
+            "timestampMs": null,
+            "confidence": 0.375183,
+            "quien": "p2"
+          },
+          {
+            "text": " mi",
+            "startMs": 9219,
+            "endMs": 9331,
+            "timestampMs": null,
+            "confidence": 0.996246,
+            "quien": "p2"
+          },
+          {
+            "text": " padre.",
+            "startMs": 9331,
+            "endMs": 9537,
+            "timestampMs": null,
+            "confidence": 0.996759,
+            "quien": "p2"
+          },
+          {
+            "text": " Y",
+            "startMs": 9815,
+            "endMs": 9900,
+            "timestampMs": null,
+            "confidence": 0.949117,
+            "quien": "p2"
+          },
+          {
+            "text": " mi",
+            "startMs": 9900,
+            "endMs": 10019,
+            "timestampMs": null,
+            "confidence": 0.984053,
+            "quien": "p2"
+          },
+          {
+            "text": " padre",
+            "startMs": 10019,
+            "endMs": 10242,
+            "timestampMs": null,
+            "confidence": 0.998075,
+            "quien": "p2"
+          },
+          {
+            "text": " debió",
+            "startMs": 10242,
+            "endMs": 10463,
+            "timestampMs": null,
+            "confidence": 0.813933,
+            "quien": "p2"
+          },
+          {
+            "text": " estar",
+            "startMs": 10648,
+            "endMs": 10883,
+            "timestampMs": null,
+            "confidence": 0.989583,
+            "quien": "p2"
+          },
+          {
+            "text": " más",
+            "startMs": 10883,
+            "endMs": 11045,
+            "timestampMs": null,
+            "confidence": 0.983678,
+            "quien": "p2"
+          },
+          {
+            "text": " presente",
+            "startMs": 11045,
+            "endMs": 11389,
+            "timestampMs": null,
+            "confidence": 0.998426,
+            "quien": "p2"
+          },
+          {
+            "text": " en",
+            "startMs": 11852,
+            "endMs": 11985,
+            "timestampMs": null,
+            "confidence": 0.992006,
+            "quien": "p2"
+          },
+          {
+            "text": " la",
+            "startMs": 11985,
+            "endMs": 12119,
+            "timestampMs": null,
+            "confidence": 0.994928,
+            "quien": "p2"
+          },
+          {
+            "text": " serie.",
+            "startMs": 12119,
+            "endMs": 12366,
+            "timestampMs": null,
+            "confidence": 0.996312,
+            "quien": "p2"
+          }
+        ],
+        "texto": "Hoy estamos con... El emperador Freezer. A quién demandaría tu personaje? A quién demandaría mi personaje? Yo creería que Akira Toriyama, por quien herfría a mi padre. Y mi padre debió estar más presente en la serie.",
+        "retratoPng": "sofa/retratos/sofa-demanda-2-2-b72a88fc.png"
+      },
+      {
+        "tipo": "nivel",
+        "numero": 2,
+        "nombre": "Tokio",
+        "estilo": "encuentro",
+        "segundos": 2,
+        "inicio": 706,
+        "cuadros": 60
+      },
+      {
+        "tipo": "clip",
+        "archivo": "IMG_4880.MOV",
+        "desde": 5.1,
+        "hasta": 19.9,
+        "golpes": [
+          {
+            "en": "alimentos",
+            "texto": "DEMANDAR ALIMENTOS",
+            "estilo": "pastilla"
+          },
+          {
+            "en": "mató",
+            "texto": "FUE QUIEN ME MATÓ",
+            "estilo": "daño"
+          }
+        ],
+        "fx": [
+          {
+            "tipo": "aura",
+            "en": "Ghoul",
+            "dura": 2.5,
+            "quien": "p2",
+            "color": "#E8323C"
+          },
+          {
+            "tipo": "corte",
+            "en": "Kaneki",
+            "dura": 1.3,
+            "quien": "p2",
+            "color": "#E8323C",
+            "vez": 2
+          },
+          {
+            "tipo": "onda",
+            "en": "mató",
+            "dura": 1.3,
+            "quien": "p2",
+            "color": "#E8323C"
+          }
+        ],
+        "personaje": {
+          "nombre": "Kaneki y Rize",
+          "clase": "Ghouls · Tokyo Ghoul",
+          "tema": "terror",
+          "color": "#E8323C",
+          "mundo": "Cosplay · SOFA 2026",
+          "stats": [
+            {
+              "n": "COSPLAY",
+              "v": 1
+            },
+            {
+              "n": "KAGUNE",
+              "v": 1
+            },
+            {
+              "n": "CONFIANZA",
+              "v": 0
+            }
+          ],
+          "resumen": "Rize, por alimentos; Kaneki, por matarla"
+        },
+        "ficha": true,
+        "fichaEn": 0.3,
+        "retrato": {
+          "t": 20,
+          "x": 0.3368,
+          "y": 0.3514,
+          "w": 0.4236,
+          "h": 0.27
+        },
+        "turnos": [
+          {
+            "desde": 5.1,
+            "quien": "jd"
+          },
+          {
+            "desde": 6.6,
+            "quien": "p2"
+          },
+          {
+            "desde": 11.7,
+            "quien": "jd"
+          },
+          {
+            "desde": 13.7,
+            "quien": "p2",
+            "fijo": true
+          }
+        ],
+        "foco": {
+          "jd": {
+            "x": 0.25,
+            "y": 0.44,
+            "escala": 1.3
+          },
+          "p2": {
+            "x": 0.6,
+            "y": 0.42,
+            "escala": 1.3
+          }
+        },
+        "inicio": 766,
+        "cuadros": 397,
+        "cola": 8,
+        "tramos": [
+          {
+            "archivo": "sofa/IMG_4880.mp4",
+            "desde": 4.9,
+            "hasta": 8.4,
+            "velocidad": 1.08,
+            "inicio": 0,
+            "cuadros": 97
+          },
+          {
+            "archivo": "sofa/IMG_4880.mp4",
+            "desde": 9.1,
+            "hasta": 16.4,
+            "velocidad": 1.08,
+            "inicio": 97,
+            "cuadros": 203
+          },
+          {
+            "archivo": "sofa/IMG_4880.mp4",
+            "desde": 17.3,
+            "hasta": 20.5,
+            "velocidad": 1.08,
+            "inicio": 300,
+            "cuadros": 89
+          }
+        ],
+        "subtitulos": [
+          {
+            "text": " ¿Cómo",
+            "startMs": 185,
+            "endMs": 409,
+            "timestampMs": null,
+            "confidence": 0.120187,
+            "quien": "jd"
+          },
+          {
+            "text": " se",
+            "startMs": 409,
+            "endMs": 553,
+            "timestampMs": null,
+            "confidence": 0.896497,
+            "quien": "jd"
+          },
+          {
+            "text": " llama",
+            "startMs": 553,
+            "endMs": 818,
+            "timestampMs": null,
+            "confidence": 0.982474,
+            "quien": "jd"
+          },
+          {
+            "text": " tu",
+            "startMs": 818,
+            "endMs": 960,
+            "timestampMs": null,
+            "confidence": 0.935929,
+            "quien": "jd"
+          },
+          {
+            "text": " personaje?",
+            "startMs": 960,
+            "endMs": 1389,
+            "timestampMs": null,
+            "confidence": 0.97779,
+            "quien": "jd"
+          },
+          {
+            "text": " Hola,",
+            "startMs": 1574,
+            "endMs": 1833,
+            "timestampMs": null,
+            "confidence": 0.835496,
+            "quien": "p2"
+          },
+          {
+            "text": " hoy",
+            "startMs": 1833,
+            "endMs": 2044,
+            "timestampMs": null,
+            "confidence": 0.95713,
+            "quien": "p2"
+          },
+          {
+            "text": " venimos",
+            "startMs": 2044,
+            "endMs": 2445,
+            "timestampMs": null,
+            "confidence": 0.996069,
+            "quien": "p2"
+          },
+          {
+            "text": " de",
+            "startMs": 2445,
+            "endMs": 2610,
+            "timestampMs": null,
+            "confidence": 0.975487,
+            "quien": "p2"
+          },
+          {
+            "text": " Kaneki",
+            "startMs": 2610,
+            "endMs": 2963,
+            "timestampMs": null,
+            "confidence": 0.223112,
+            "quien": "p2"
+          },
+          {
+            "text": " y",
+            "startMs": 3426,
+            "endMs": 3567,
+            "timestampMs": null,
+            "confidence": 0.801993,
+            "quien": "p2"
+          },
+          {
+            "text": " de",
+            "startMs": 3567,
+            "endMs": 3764,
+            "timestampMs": null,
+            "confidence": 0.908214,
+            "quien": "p2"
+          },
+          {
+            "text": " Rize,",
+            "startMs": 3764,
+            "endMs": 4074,
+            "timestampMs": null,
+            "confidence": 0.616845,
+            "quien": "p2"
+          },
+          {
+            "text": " de",
+            "startMs": 4722,
+            "endMs": 4913,
+            "timestampMs": null,
+            "confidence": 0.898886,
+            "quien": "p2"
+          },
+          {
+            "text": " Tokyo",
+            "startMs": 4913,
+            "endMs": 5267,
+            "timestampMs": null,
+            "confidence": 0.520255,
+            "quien": "p2"
+          },
+          {
+            "text": " Ghoul.",
+            "startMs": 5267,
+            "endMs": 5621,
+            "timestampMs": null,
+            "confidence": 0.658713,
+            "quien": "p2"
+          },
+          {
+            "text": " ¿A",
+            "startMs": 5621,
+            "endMs": 5757,
+            "timestampMs": null,
+            "confidence": 0.823604,
+            "quien": "jd"
+          },
+          {
+            "text": " quién demandaría",
+            "startMs": 5757,
+            "endMs": 7130,
+            "timestampMs": null,
+            "confidence": 0.803501,
+            "quien": "jd"
+          },
+          {
+            "text": " tu",
+            "startMs": 7315,
+            "endMs": 7370,
+            "timestampMs": null,
+            "confidence": 0.93694,
+            "quien": "jd"
+          },
+          {
+            "text": " personaje?",
+            "startMs": 7370,
+            "endMs": 7537,
+            "timestampMs": null,
+            "confidence": 0.996556,
+            "quien": "jd"
+          },
+          {
+            "text": " A",
+            "startMs": 7537,
+            "endMs": 7981,
+            "timestampMs": null,
+            "confidence": 0.708799,
+            "quien": "p2"
+          },
+          {
+            "text": " Rize",
+            "startMs": 7981,
+            "endMs": 8370,
+            "timestampMs": null,
+            "confidence": 0.974586,
+            "quien": "p2"
+          },
+          {
+            "text": " porque",
+            "startMs": 8370,
+            "endMs": 8907,
+            "timestampMs": null,
+            "confidence": 0.679668,
+            "quien": "p2"
+          },
+          {
+            "text": " por",
+            "startMs": 8907,
+            "endMs": 9093,
+            "timestampMs": null,
+            "confidence": 0.463855,
+            "quien": "p2"
+          },
+          {
+            "text": " demandar",
+            "startMs": 9093,
+            "endMs": 9481,
+            "timestampMs": null,
+            "confidence": 0.992687,
+            "quien": "p2"
+          },
+          {
+            "text": " alimentos.",
+            "startMs": 9481,
+            "endMs": 9722,
+            "timestampMs": null,
+            "confidence": 0.894077,
+            "quien": "p2"
+          },
+          {
+            "text": " Yo",
+            "startMs": 10185,
+            "endMs": 10328,
+            "timestampMs": null,
+            "confidence": 0.865771,
+            "quien": "p2"
+          },
+          {
+            "text": " a",
+            "startMs": 10328,
+            "endMs": 10430,
+            "timestampMs": null,
+            "confidence": 0.953905,
+            "quien": "p2"
+          },
+          {
+            "text": " Kaneki",
+            "startMs": 10430,
+            "endMs": 10735,
+            "timestampMs": null,
+            "confidence": 0.98575,
+            "quien": "p2"
+          },
+          {
+            "text": " posiblemente",
+            "startMs": 10735,
+            "endMs": 11286,
+            "timestampMs": null,
+            "confidence": 0.842761,
+            "quien": "p2"
+          },
+          {
+            "text": " porque",
+            "startMs": 11286,
+            "endMs": 11592,
+            "timestampMs": null,
+            "confidence": 0.941521,
+            "quien": "p2"
+          },
+          {
+            "text": " fue",
+            "startMs": 11592,
+            "endMs": 11775,
+            "timestampMs": null,
+            "confidence": 0.963799,
+            "quien": "p2"
+          },
+          {
+            "text": " quien",
+            "startMs": 11775,
+            "endMs": 12041,
+            "timestampMs": null,
+            "confidence": 0.939565,
+            "quien": "p2"
+          },
+          {
+            "text": " me",
+            "startMs": 12041,
+            "endMs": 12183,
+            "timestampMs": null,
+            "confidence": 0.984846,
+            "quien": "p2"
+          },
+          {
+            "text": " mató.",
+            "startMs": 12183,
+            "endMs": 12407,
+            "timestampMs": null,
+            "confidence": 0.96172,
+            "quien": "p2"
+          }
+        ],
+        "texto": "¿Cómo se llama tu personaje? Hola, hoy venimos de Kaneki y de Rize, de Tokyo Ghoul. ¿A quién demandaría tu personaje? A Rize porque por demandar alimentos. Yo a Kaneki posiblemente porque fue quien me mató.",
+        "retratoPng": "sofa/retratos/sofa-demanda-2-3-c5868551.png"
+      },
+      {
+        "tipo": "nivel",
+        "numero": 3,
+        "nombre": "Futuro alterno",
+        "estilo": "vs",
+        "segundos": 2,
+        "inicio": 1163,
+        "cuadros": 60
+      },
+      {
+        "tipo": "clip",
+        "archivo": "DJI_20261012_162806_132_video.mp4",
+        "desde": 35.5,
+        "hasta": 48.9,
+        "golpes": [
+          {
+            "en": "autoridades",
+            "texto": "A LAS AUTORIDADES",
+            "estilo": "daño"
+          },
+          {
+            "en": "futuro",
+            "texto": "DESTRUIR EL FUTURO",
+            "estilo": "golpe"
+          }
+        ],
+        "fx": [
+          {
+            "tipo": "relampago",
+            "en": "autoridades",
+            "dura": 1.6,
+            "quien": "p2",
+            "color": "#F2C85B"
+          },
+          {
+            "tipo": "fuego",
+            "en": "futuro",
+            "dura": 2,
+            "quien": "p2",
+            "color": "#B388FF"
+          }
+        ],
+        "personaje": {
+          "nombre": "Trunks del futuro",
+          "clase": "Guerrero saiyajin · Dragon Ball",
+          "tema": "ciudad",
+          "color": "#B388FF",
+          "mundo": "Cosplay · SOFA 2026",
+          "stats": [
+            {
+              "n": "COSPLAY",
+              "v": 1
+            },
+            {
+              "n": "KI",
+              "v": 1
+            },
+            {
+              "n": "FUTURO",
+              "v": 0.2
+            }
+          ],
+          "resumen": "A las autoridades"
+        },
+        "ficha": true,
+        "fichaEn": 0.3,
+        "retrato": {
+          "t": 9.6,
+          "x": 0.5104,
+          "y": 0.3474,
+          "w": 0.2024,
+          "h": 0.129
+        },
+        "turnos": [
+          {
+            "desde": 35.5,
+            "quien": "p2"
+          },
+          {
+            "desde": 35.6,
+            "quien": "jd",
+            "fijo": true
+          },
+          {
+            "desde": 40.5,
+            "quien": "p2",
+            "fijo": true
+          }
+        ],
+        "foco": {
+          "jd": {
+            "x": 0.35,
+            "y": 0.4,
+            "escala": 1.3
+          },
+          "p2": {
+            "x": 0.65,
+            "y": 0.38,
+            "escala": 1.38
+          }
+        },
+        "correcciones": [
+          {
+            "de": "luego hacer y",
+            "a": "luego a Cell y"
+          }
+        ],
+        "inicio": 1223,
+        "cuadros": 402,
+        "cola": 8,
+        "tramos": [
+          {
+            "archivo": "sofa/DJI_20261012_162806_132_video.mp4",
+            "desde": 35.3,
+            "hasta": 49.5,
+            "velocidad": 1.08,
+            "inicio": 0,
+            "cuadros": 394
+          }
+        ],
+        "subtitulos": [
+          {
+            "text": " con",
+            "startMs": 185,
+            "endMs": 209,
+            "timestampMs": null,
+            "confidence": 0.996394,
+            "quien": "p2"
+          },
+          {
+            "text": " los",
+            "startMs": 209,
+            "endMs": 232,
+            "timestampMs": null,
+            "confidence": 0.979488,
+            "quien": "p2"
+          },
+          {
+            "text": " poderes,",
+            "startMs": 232,
+            "endMs": 278,
+            "timestampMs": null,
+            "confidence": 0.94955,
+            "quien": "jd"
+          },
+          {
+            "text": " ¿no?",
+            "startMs": 278,
+            "endMs": 296,
+            "timestampMs": null,
+            "confidence": 0.759672,
+            "quien": "jd"
+          },
+          {
+            "text": " Y",
+            "startMs": 296,
+            "endMs": 407,
+            "timestampMs": null,
+            "confidence": 0.910059,
+            "quien": "jd"
+          },
+          {
+            "text": " cuéntanos",
+            "startMs": 407,
+            "endMs": 852,
+            "timestampMs": null,
+            "confidence": 0.990176,
+            "quien": "jd"
+          },
+          {
+            "text": " una",
+            "startMs": 852,
+            "endMs": 1056,
+            "timestampMs": null,
+            "confidence": 0.946692,
+            "quien": "jd"
+          },
+          {
+            "text": " cosa,",
+            "startMs": 1056,
+            "endMs": 1333,
+            "timestampMs": null,
+            "confidence": 0.997033,
+            "quien": "jd"
+          },
+          {
+            "text": " si",
+            "startMs": 1333,
+            "endMs": 1463,
+            "timestampMs": null,
+            "confidence": 0.841908,
+            "quien": "jd"
+          },
+          {
+            "text": " tu",
+            "startMs": 1463,
+            "endMs": 1852,
+            "timestampMs": null,
+            "confidence": 0.99571,
+            "quien": "jd"
+          },
+          {
+            "text": " personaje",
+            "startMs": 1852,
+            "endMs": 2093,
+            "timestampMs": null,
+            "confidence": 0.998769,
+            "quien": "jd"
+          },
+          {
+            "text": " tuviera",
+            "startMs": 2093,
+            "endMs": 2444,
+            "timestampMs": null,
+            "confidence": 0.977435,
+            "quien": "jd"
+          },
+          {
+            "text": " que",
+            "startMs": 2444,
+            "endMs": 2648,
+            "timestampMs": null,
+            "confidence": 0.919381,
+            "quien": "jd"
+          },
+          {
+            "text": " demandar",
+            "startMs": 2648,
+            "endMs": 2852,
+            "timestampMs": null,
+            "confidence": 0.802014,
+            "quien": "jd"
+          },
+          {
+            "text": " a",
+            "startMs": 2852,
+            "endMs": 3056,
+            "timestampMs": null,
+            "confidence": 0.982883,
+            "quien": "jd"
+          },
+          {
+            "text": " alguien,",
+            "startMs": 3056,
+            "endMs": 4074,
+            "timestampMs": null,
+            "confidence": 0.999093,
+            "quien": "jd"
+          },
+          {
+            "text": " ¿a",
+            "startMs": 4630,
+            "endMs": 4650,
+            "timestampMs": null,
+            "confidence": 0.651175,
+            "quien": "jd"
+          },
+          {
+            "text": " quién demandaría?",
+            "startMs": 4650,
+            "endMs": 4796,
+            "timestampMs": null,
+            "confidence": 0.968374,
+            "quien": "jd"
+          },
+          {
+            "text": " Uff,",
+            "startMs": 4796,
+            "endMs": 5167,
+            "timestampMs": null,
+            "confidence": 0.923703,
+            "quien": "p2"
+          },
+          {
+            "text": " a",
+            "startMs": 5167,
+            "endMs": 5426,
+            "timestampMs": null,
+            "confidence": 0.401553,
+            "quien": "p2"
+          },
+          {
+            "text": " las",
+            "startMs": 5426,
+            "endMs": 5796,
+            "timestampMs": null,
+            "confidence": 0.734849,
+            "quien": "p2"
+          },
+          {
+            "text": " autoridades",
+            "startMs": 5796,
+            "endMs": 6519,
+            "timestampMs": null,
+            "confidence": 0.971369,
+            "quien": "p2"
+          },
+          {
+            "text": " por",
+            "startMs": 6519,
+            "endMs": 6667,
+            "timestampMs": null,
+            "confidence": 0.848349,
+            "quien": "p2"
+          },
+          {
+            "text": " no",
+            "startMs": 6667,
+            "endMs": 6815,
+            "timestampMs": null,
+            "confidence": 0.9953,
+            "quien": "p2"
+          },
+          {
+            "text": " detener",
+            "startMs": 6815,
+            "endMs": 7019,
+            "timestampMs": null,
+            "confidence": 0.540826,
+            "quien": "p2"
+          },
+          {
+            "text": " a",
+            "startMs": 7019,
+            "endMs": 7093,
+            "timestampMs": null,
+            "confidence": 0.486527,
+            "quien": "p2"
+          },
+          {
+            "text": " la",
+            "startMs": 7093,
+            "endMs": 7204,
+            "timestampMs": null,
+            "confidence": 0.920337,
+            "quien": "p2"
+          },
+          {
+            "text": " patrulla",
+            "startMs": 7204,
+            "endMs": 7556,
+            "timestampMs": null,
+            "confidence": 0.941025,
+            "quien": "p2"
+          },
+          {
+            "text": " roja",
+            "startMs": 7556,
+            "endMs": 7778,
+            "timestampMs": null,
+            "confidence": 0.980451,
+            "quien": "p2"
+          },
+          {
+            "text": " y",
+            "startMs": 8204,
+            "endMs": 8389,
+            "timestampMs": null,
+            "confidence": 0.610586,
+            "quien": "p2"
+          },
+          {
+            "text": " haber",
+            "startMs": 8389,
+            "endMs": 8630,
+            "timestampMs": null,
+            "confidence": 0.928709,
+            "quien": "p2"
+          },
+          {
+            "text": " generado",
+            "startMs": 8630,
+            "endMs": 9463,
+            "timestampMs": null,
+            "confidence": 0.992536,
+            "quien": "p2"
+          },
+          {
+            "text": " a",
+            "startMs": 9463,
+            "endMs": 9667,
+            "timestampMs": null,
+            "confidence": 0.604156,
+            "quien": "p2"
+          },
+          {
+            "text": " enemigos",
+            "startMs": 9667,
+            "endMs": 10000,
+            "timestampMs": null,
+            "confidence": 0.970654,
+            "quien": "p2"
+          },
+          {
+            "text": " como",
+            "startMs": 10000,
+            "endMs": 10148,
+            "timestampMs": null,
+            "confidence": 0.985056,
+            "quien": "p2"
+          },
+          {
+            "text": " Maki Gero",
+            "startMs": 10148,
+            "endMs": 10593,
+            "timestampMs": null,
+            "confidence": 0.988105,
+            "quien": "p2"
+          },
+          {
+            "text": " y",
+            "startMs": 10593,
+            "endMs": 10722,
+            "timestampMs": null,
+            "confidence": 0.741769,
+            "quien": "p2"
+          },
+          {
+            "text": " luego a Cell y",
+            "startMs": 10722,
+            "endMs": 11333,
+            "timestampMs": null,
+            "confidence": 0.986502,
+            "quien": "p2"
+          },
+          {
+            "text": " destruir",
+            "startMs": 11333,
+            "endMs": 11648,
+            "timestampMs": null,
+            "confidence": 0.375529,
+            "quien": "p2"
+          },
+          {
+            "text": " el",
+            "startMs": 11648,
+            "endMs": 11833,
+            "timestampMs": null,
+            "confidence": 0.84538,
+            "quien": "p2"
+          },
+          {
+            "text": " futuro,",
+            "startMs": 11833,
+            "endMs": 12093,
+            "timestampMs": null,
+            "confidence": 0.997094,
+            "quien": "p2"
+          },
+          {
+            "text": " maldito,",
+            "startMs": 12093,
+            "endMs": 12389,
+            "timestampMs": null,
+            "confidence": 0.872368,
+            "quien": "p2"
+          },
+          {
+            "text": " no",
+            "startMs": 12389,
+            "endMs": 12500,
+            "timestampMs": null,
+            "confidence": 0.648934,
+            "quien": "p2"
+          },
+          {
+            "text": " soy",
+            "startMs": 12500,
+            "endMs": 12500,
+            "timestampMs": null,
+            "confidence": 0.557613,
+            "quien": "p2"
+          },
+          {
+            "text": " yo.",
+            "startMs": 12500,
+            "endMs": 12532,
+            "timestampMs": null,
+            "confidence": 0.940008,
+            "quien": "p2"
+          },
+          {
+            "text": " Bueno,",
+            "startMs": 12532,
+            "endMs": 12593,
+            "timestampMs": null,
+            "confidence": 0.959992,
+            "quien": "p2"
+          }
+        ],
+        "texto": "con los poderes, ¿no? Y cuéntanos una cosa, si tu personaje tuviera que demandar a alguien, ¿a quién demandaría? Uff, a las autoridades por no detener a la patrulla roja y haber generado a enemigos como maquillero y luego hacer y ardestruir el futuro, maldito, no soy yo. Bueno,",
+        "retratoPng": "sofa/retratos/sofa-demanda-2-4-70f31a2e.png"
+      },
+      {
+        "tipo": "cierre",
+        "archivo": "DJI_20261012_151403_760_video.mp4",
+        "desde": 1,
+        "hasta": 5.3,
+        "golpes": [
+          {
+            "en": "demandaría",
+            "texto": "¿Y EL TUYO?",
+            "estilo": "pastilla"
+          }
+        ],
+        "fx": [],
+        "foco": {
+          "jd": {
+            "x": 0.44,
+            "y": 0.32,
+            "escala": 1.3
+          }
+        },
+        "lados": {
+          "jd": "centro"
+        },
+        "cta": "COMENTA A QUIÉN DEMANDARÍAS",
+        "inicio": 1625,
+        "cuadros": 128,
+        "cola": 4,
+        "tramos": [
+          {
+            "archivo": "sofa/DJI_20261012_151403_760_video.mp4",
+            "desde": 0.8,
+            "hasta": 5.269,
+            "velocidad": 1.08,
+            "inicio": 0,
+            "cuadros": 124
+          }
+        ],
+        "subtitulos": [
+          {
+            "text": " Y",
+            "startMs": 185,
+            "endMs": 307,
+            "timestampMs": null,
+            "confidence": 0.380062,
+            "quien": "jd"
+          },
+          {
+            "text": " tu",
+            "startMs": 307,
+            "endMs": 478,
+            "timestampMs": null,
+            "confidence": 0.700055,
+            "quien": "jd"
+          },
+          {
+            "text": " personaje",
+            "startMs": 478,
+            "endMs": 989,
+            "timestampMs": null,
+            "confidence": 0.996569,
+            "quien": "jd"
+          },
+          {
+            "text": " a",
+            "startMs": 989,
+            "endMs": 1111,
+            "timestampMs": null,
+            "confidence": 0.375263,
+            "quien": "jd"
+          },
+          {
+            "text": " quién demandaría,",
+            "startMs": 1296,
+            "endMs": 2130,
+            "timestampMs": null,
+            "confidence": 0.884674,
+            "quien": "jd"
+          },
+          {
+            "text": " déjanoslo",
+            "startMs": 2315,
+            "endMs": 2669,
+            "timestampMs": null,
+            "confidence": 0.688192,
+            "quien": "jd"
+          },
+          {
+            "text": " saber",
+            "startMs": 2669,
+            "endMs": 2887,
+            "timestampMs": null,
+            "confidence": 0.994128,
+            "quien": "jd"
+          },
+          {
+            "text": " en",
+            "startMs": 2887,
+            "endMs": 3005,
+            "timestampMs": null,
+            "confidence": 0.971691,
+            "quien": "jd"
+          },
+          {
+            "text": " comentarios.",
+            "startMs": 3005,
+            "endMs": 3426,
+            "timestampMs": null,
+            "confidence": 0.92744,
+            "quien": "jd"
+          }
+        ],
+        "texto": "Y tu personaje a quien demandaría, déjanoslo saber en comentarios."
+      },
+      {
+        "tipo": "final",
+        "inicio": 1753,
+        "cuadros": 72
+      }
+    ],
+    "total": 1825,
+    "avisos": [
+      "IMG_4876.MOV: fin en medio de voz (27.20 s): «…en la serie.» | «¿Y cuánto cobrarías por…»"
+    ]
+  },
+  "bpm": 136,
+  "capas": true
+}

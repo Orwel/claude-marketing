@@ -1,0 +1,1912 @@
+{
+  "plantilla": "Arcade",
+  "serie": "SOFA 2026 · INDIES COLOMBIANOS",
+  "nivel": "SOFA 2026",
+  "cuentas": [
+    "juanda"
+  ],
+  "velocidad": 1.08,
+  "motivo": "cartuchos",
+  "lados": {
+    "jd": "izquierda",
+    "p2": "derecha"
+  },
+  "nombres": {
+    "jd": {
+      "nombre": "JUAN DAVID"
+    }
+  },
+  "correcciones": [
+    {
+      "de": "sofá",
+      "a": "SOFA"
+    },
+    {
+      "de": "le pregunte",
+      "a": "le pregunté"
+    },
+    {
+      "de": "Le pregunte",
+      "a": "Le pregunté"
+    },
+    {
+      "de": "Cosplayers",
+      "a": "cosplayers"
+    },
+    {
+      "de": "quien demandaría",
+      "a": "quién demandaría"
+    },
+    {
+      "de": "artas",
+      "a": "hartas"
+    },
+    {
+      "de": "hace todo son",
+      "a": "excepto"
+    },
+    {
+      "de": "gingos",
+      "a": "Sung Jinwoo"
+    },
+    {
+      "de": "Chimico Toga",
+      "a": "Himiko Toga"
+    },
+    {
+      "de": "Magiro Academia",
+      "a": "My Hero Academia"
+    },
+    {
+      "de": "Von Leinton",
+      "a": "Von Lycaon"
+    },
+    {
+      "de": "Sunless On Zero",
+      "a": "Zenless Zone Zero"
+    },
+    {
+      "de": "Aurora del League",
+      "a": "Aurora de League"
+    },
+    {
+      "de": "Mavica",
+      "a": "Mavuika"
+    },
+    {
+      "de": "satura",
+      "a": "La Vasija Pura"
+    },
+    {
+      "de": "te parece es a",
+      "a": "te pareces a"
+    },
+    {
+      "de": "estás tú buena",
+      "a": "está muy buena"
+    },
+    {
+      "de": "En como el fue",
+      "a": "En cómo él fue"
+    },
+    {
+      "de": "indique",
+      "a": "indie"
+    },
+    {
+      "de": "Jägger",
+      "a": "Jaeger"
+    },
+    {
+      "de": "Jäger",
+      "a": "Jaeger"
+    },
+    {
+      "de": "capitano",
+      "a": "Capitano"
+    },
+    {
+      "de": "herfría",
+      "a": "le hizo"
+    },
+    {
+      "de": "Drugs del futuro",
+      "a": "Trunks del futuro"
+    },
+    {
+      "de": "Sayajin",
+      "a": "saiyajin"
+    },
+    {
+      "de": "María",
+      "a": "mijo"
+    },
+    {
+      "de": "platico",
+      "a": "platica"
+    },
+    {
+      "de": "si está allí",
+      "a": "si es saiyajin"
+    },
+    {
+      "de": "respaunear",
+      "a": "respawnear"
+    },
+    {
+      "de": "Respawn",
+      "a": "respawn"
+    },
+    {
+      "de": "cagunes",
+      "a": "kagunes"
+    },
+    {
+      "de": "Maca",
+      "a": "Maka"
+    },
+    {
+      "de": "SoulHitter",
+      "a": "Soul Eater"
+    },
+    {
+      "de": "El jefe maestro",
+      "a": "el Jefe Maestro"
+    },
+    {
+      "de": "Te letra... transportarme",
+      "a": "¿Teletransportarme?"
+    },
+    {
+      "de": "maquillero",
+      "a": "Maki Gero"
+    },
+    {
+      "de": "ardestruir",
+      "a": "destruir"
+    },
+    {
+      "de": "Joaquin Club",
+      "a": "Jockey Club"
+    },
+    {
+      "de": "Frey",
+      "a": "Fray"
+    },
+    {
+      "de": "Vélula",
+      "a": "Bélula"
+    },
+    {
+      "de": "Séfira",
+      "a": "Céfira"
+    },
+    {
+      "de": "bótalo",
+      "a": "vótalo"
+    },
+    {
+      "de": "alteratura",
+      "a": "literatura"
+    },
+    {
+      "de": "de mito",
+      "a": "de Mito"
+    },
+    {
+      "de": "Esto es mito",
+      "a": "Esto es Mito"
+    },
+    {
+      "de": "perracos espantos",
+      "a": "Berracos Espantos"
+    },
+    {
+      "de": "Bogofighters",
+      "a": "Bogo Fighters"
+    },
+    {
+      "de": "cráteras",
+      "a": "criaturas"
+    },
+    {
+      "de": "podren",
+      "a": "cobren"
+    },
+    {
+      "de": "viene a secta",
+      "a": "hay una secta"
+    },
+    {
+      "de": "de acuerdos el la guardiente",
+      "a": "de acuerdo, el aguardiente"
+    },
+    {
+      "de": "agua mendita",
+      "a": "agua bendita"
+    },
+    {
+      "de": "desarrollos colombianos",
+      "a": "desarrolladores colombianos"
+    },
+    {
+      "de": "colombia",
+      "a": "Colombia"
+    },
+    {
+      "de": "Es está",
+      "a": "Está"
+    }
+  ],
+  "variantes": {
+    "juanda": {
+      "cta": "Juega colombiano",
+      "copy": ""
+    }
+  },
+  "intro": {
+    "juegos": [
+      "BERRACOS ESPANTOS",
+      "BOGO FIGHTERS",
+      "MITO"
+    ]
+  },
+  "slug": "sofa-indies",
+  "codigo": "SOFA12",
+  "titulo": "Mito: el videojuego colombiano del Bogotazo",
+  "niveles": 3,
+  "escenas": [
+    {
+      "tipo": "titulo",
+      "segundos": 3.4,
+      "alto": 300
+    },
+    {
+      "tipo": "clip",
+      "archivo": "DJI_20261012_152000_958_video.mp4",
+      "desde": 1.2,
+      "hasta": 6.8,
+      "golpes": [
+        {
+          "en": "colombiano",
+          "texto": "DESARROLLO COLOMBIANO",
+          "estilo": "pastilla"
+        }
+      ],
+      "fx": [
+        {
+          "tipo": "estrellas",
+          "en": "videojuegos",
+          "dura": 3,
+          "quien": null,
+          "lado": "centro",
+          "color": "#F2C85B"
+        }
+      ],
+      "personaje": {
+        "nombre": "Juan David",
+        "clase": "Legal engineer · Trifuerza",
+        "etiqueta": "PLAYER 1 READY",
+        "mundo": "Profesor universitario · desarrollador de videojuegos",
+        "color": "#F26B1D",
+        "stats": [
+          {
+            "n": "DERECHO",
+            "v": 1
+          },
+          {
+            "n": "CÓDIGO",
+            "v": 1
+          },
+          {
+            "n": "VARITA",
+            "v": 0.8
+          }
+        ]
+      },
+      "ficha": true,
+      "fichaEn": 0.3,
+      "retrato": {
+        "t": 3.4,
+        "x": 0.5464,
+        "y": 0.362,
+        "w": 0.1987,
+        "h": 0.1267
+      },
+      "foco": {
+        "jd": {
+          "x": 0.62,
+          "y": 0.4,
+          "escala": 1.3
+        }
+      },
+      "lados": {
+        "jd": "derecha"
+      },
+      "fichaDura": 2.4,
+      "_avisos": []
+    },
+    {
+      "tipo": "clip",
+      "archivo": "DJI_20261012_152000_958_video.mp4",
+      "desde": 7,
+      "hasta": 36.3,
+      "golpes": [
+        {
+          "en": "mágico",
+          "texto": "REALISMO MÁGICO",
+          "estilo": "pastilla"
+        },
+        {
+          "en": "periodista",
+          "texto": "UNA PERIODISTA",
+          "estilo": "golpe"
+        },
+        {
+          "en": "Bogotazo",
+          "texto": "EL BOGOTAZO",
+          "estilo": "daño"
+        },
+        {
+          "en": "gigantes",
+          "texto": "RAÍCES GIGANTES",
+          "estilo": "golpe"
+        },
+        {
+          "en": "Dorado",
+          "texto": "EL DORADO",
+          "estilo": "xp"
+        }
+      ],
+      "fx": [
+        {
+          "tipo": "aura",
+          "en": "Mito",
+          "dura": 2.4,
+          "quien": "p2",
+          "color": "#9FE3FF",
+          "vez": 2
+        },
+        {
+          "tipo": "estrellas",
+          "en": "Colombia",
+          "dura": 2.4,
+          "quien": "p2",
+          "color": "#F2C85B"
+        },
+        {
+          "tipo": "relampago",
+          "en": "Bogotazo",
+          "dura": 1.4,
+          "quien": "p2",
+          "color": "#E8323C"
+        },
+        {
+          "tipo": "fuego",
+          "en": "destruyen",
+          "dura": 2,
+          "quien": "p2",
+          "color": "#58D35A"
+        },
+        {
+          "tipo": "aura",
+          "en": "Dorado",
+          "dura": 2.2,
+          "quien": "p2",
+          "color": "#F2C85B"
+        }
+      ],
+      "personaje": {
+        "nombre": "Nicolás Moros",
+        "clase": "Director de arte · Mito",
+        "tema": "ciudad",
+        "color": "#9FE3FF",
+        "mundo": "Videojuego colombiano",
+        "stats": [
+          {
+            "n": "ARTE",
+            "v": 1
+          },
+          {
+            "n": "REALISMO MÁGICO",
+            "v": 1
+          },
+          {
+            "n": "MISTERIO",
+            "v": 0.9
+          }
+        ]
+      },
+      "ficha": true,
+      "fichaEn": 0.3,
+      "retrato": {
+        "t": 20,
+        "x": 0.3593,
+        "y": 0.3861,
+        "w": 0.1602,
+        "h": 0.1021
+      },
+      "turnos": [
+        {
+          "desde": 7,
+          "quien": "p2"
+        },
+        {
+          "desde": 9.4,
+          "quien": "jd",
+          "fijo": true
+        },
+        {
+          "desde": 12.1,
+          "quien": "p2",
+          "fijo": true
+        },
+        {
+          "desde": 34.6,
+          "quien": "jd",
+          "fijo": true
+        }
+      ],
+      "foco": {
+        "jd": {
+          "x": 0.62,
+          "y": 0.42,
+          "escala": 1.3
+        },
+        "p2": {
+          "x": 0.35,
+          "y": 0.44,
+          "escala": 1.35
+        }
+      },
+      "_avisos": []
+    },
+    {
+      "tipo": "cierre",
+      "archivo": "DJI_20261012_152000_958_video.mp4",
+      "desde": 36.6,
+      "hasta": 43.2,
+      "golpes": [
+        {
+          "en": "nivel",
+          "texto": "SUBIR DE NIVEL",
+          "estilo": "xp"
+        }
+      ],
+      "fx": [
+        {
+          "tipo": "nivelUp",
+          "en": "subir",
+          "dura": 2.6,
+          "quien": "p2",
+          "texto": "LEVEL UP!",
+          "stats": [
+            [
+              "ARTE",
+              0.7,
+              1
+            ],
+            [
+              "LORE",
+              0.6,
+              1
+            ],
+            [
+              "WISHLIST",
+              0.2,
+              1
+            ]
+          ]
+        }
+      ],
+      "personaje": {
+        "nombre": "Nicolás Moros",
+        "clase": "Director de arte · Mito",
+        "tema": "ciudad",
+        "color": "#9FE3FF",
+        "mundo": "Videojuego colombiano",
+        "stats": []
+      },
+      "turnos": [
+        {
+          "desde": 36.5,
+          "quien": "jd"
+        },
+        {
+          "desde": 39.6,
+          "quien": "p2"
+        },
+        {
+          "desde": 41.9,
+          "quien": "jd"
+        }
+      ],
+      "foco": {
+        "jd": {
+          "x": 0.62,
+          "y": 0.42,
+          "escala": 1.3
+        },
+        "p2": {
+          "x": 0.35,
+          "y": 0.44,
+          "escala": 1.35
+        }
+      },
+      "cta": "MITO · AGRÉGALO A TU WISHLIST",
+      "_avisos": []
+    }
+  ],
+  "verificar": [
+    {
+      "dato": "Mito: director de arte Nicolás Moros, estudio Spectral Bird (leído en el stand); en desarrollo. Confirmar nombres",
+      "estado": "pendiente"
+    }
+  ],
+  "generado": {
+    "escenas": [
+      {
+        "tipo": "titulo",
+        "segundos": 3.4,
+        "alto": 300,
+        "inicio": 0,
+        "cuadros": 102
+      },
+      {
+        "tipo": "clip",
+        "archivo": "DJI_20261012_152000_958_video.mp4",
+        "desde": 1.2,
+        "hasta": 6.8,
+        "golpes": [
+          {
+            "en": "colombiano",
+            "texto": "DESARROLLO COLOMBIANO",
+            "estilo": "pastilla"
+          }
+        ],
+        "fx": [
+          {
+            "tipo": "estrellas",
+            "en": "videojuegos",
+            "dura": 3,
+            "quien": null,
+            "lado": "centro",
+            "color": "#F2C85B"
+          }
+        ],
+        "personaje": {
+          "nombre": "Juan David",
+          "clase": "Legal engineer · Trifuerza",
+          "etiqueta": "PLAYER 1 READY",
+          "mundo": "Profesor universitario · desarrollador de videojuegos",
+          "color": "#F26B1D",
+          "stats": [
+            {
+              "n": "DERECHO",
+              "v": 1
+            },
+            {
+              "n": "CÓDIGO",
+              "v": 1
+            },
+            {
+              "n": "VARITA",
+              "v": 0.8
+            }
+          ]
+        },
+        "ficha": true,
+        "fichaEn": 0.3,
+        "retrato": {
+          "t": 3.4,
+          "x": 0.5464,
+          "y": 0.362,
+          "w": 0.1987,
+          "h": 0.1267
+        },
+        "foco": {
+          "jd": {
+            "x": 0.62,
+            "y": 0.4,
+            "escala": 1.3
+          }
+        },
+        "lados": {
+          "jd": "derecha"
+        },
+        "fichaDura": 2.4,
+        "inicio": 102,
+        "cuadros": 180,
+        "cola": 15,
+        "tramos": [
+          {
+            "archivo": "sofa/DJI_20261012_152000_958_video.mp4",
+            "desde": 1.02,
+            "hasta": 6.96,
+            "velocidad": 1.08,
+            "inicio": 0,
+            "cuadros": 165
+          }
+        ],
+        "subtitulos": [
+          {
+            "text": " En",
+            "startMs": 185,
+            "endMs": 296,
+            "timestampMs": null,
+            "confidence": 0.530217,
+            "quien": "jd"
+          },
+          {
+            "text": " el",
+            "startMs": 296,
+            "endMs": 481,
+            "timestampMs": null,
+            "confidence": 0.982834,
+            "quien": "jd"
+          },
+          {
+            "text": " SOFA",
+            "startMs": 481,
+            "endMs": 778,
+            "timestampMs": null,
+            "confidence": 0.591851,
+            "quien": "jd"
+          },
+          {
+            "text": " hay",
+            "startMs": 778,
+            "endMs": 926,
+            "timestampMs": null,
+            "confidence": 0.90946,
+            "quien": "jd"
+          },
+          {
+            "text": " una",
+            "startMs": 926,
+            "endMs": 1111,
+            "timestampMs": null,
+            "confidence": 0.989395,
+            "quien": "jd"
+          },
+          {
+            "text": " sección",
+            "startMs": 1111,
+            "endMs": 1796,
+            "timestampMs": null,
+            "confidence": 0.985958,
+            "quien": "jd"
+          },
+          {
+            "text": " especializada",
+            "startMs": 1796,
+            "endMs": 2426,
+            "timestampMs": null,
+            "confidence": 0.955146,
+            "quien": "jd"
+          },
+          {
+            "text": " para",
+            "startMs": 2426,
+            "endMs": 2630,
+            "timestampMs": null,
+            "confidence": 0.933528,
+            "quien": "jd"
+          },
+          {
+            "text": " videojuegos",
+            "startMs": 2630,
+            "endMs": 3148,
+            "timestampMs": null,
+            "confidence": 0.864431,
+            "quien": "jd"
+          },
+          {
+            "text": " de",
+            "startMs": 3148,
+            "endMs": 3500,
+            "timestampMs": null,
+            "confidence": 0.918068,
+            "quien": "jd"
+          },
+          {
+            "text": " desarrollo",
+            "startMs": 3500,
+            "endMs": 3583,
+            "timestampMs": null,
+            "confidence": 0.962659,
+            "quien": "jd"
+          },
+          {
+            "text": " colombiano",
+            "startMs": 3583,
+            "endMs": 3667,
+            "timestampMs": null,
+            "confidence": 0.823164,
+            "quien": "jd"
+          },
+          {
+            "text": " y",
+            "startMs": 3667,
+            "endMs": 3685,
+            "timestampMs": null,
+            "confidence": 0.830932,
+            "quien": "jd"
+          },
+          {
+            "text": " latinoamericano",
+            "startMs": 3870,
+            "endMs": 4456,
+            "timestampMs": null,
+            "confidence": 0.731849,
+            "quien": "jd"
+          },
+          {
+            "text": " y",
+            "startMs": 4456,
+            "endMs": 4545,
+            "timestampMs": null,
+            "confidence": 0.690859,
+            "quien": "jd"
+          },
+          {
+            "text": " hoy",
+            "startMs": 4545,
+            "endMs": 4705,
+            "timestampMs": null,
+            "confidence": 0.990354,
+            "quien": "jd"
+          },
+          {
+            "text": " estamos",
+            "startMs": 4705,
+            "endMs": 5006,
+            "timestampMs": null,
+            "confidence": 0.988593,
+            "quien": "jd"
+          },
+          {
+            "text": " con...",
+            "startMs": 5006,
+            "endMs": 5167,
+            "timestampMs": null,
+            "confidence": 0.992227,
+            "quien": "jd"
+          }
+        ],
+        "texto": "En el sofá hay una sección especializada para videojuegos de desarrollo colombiano y latinoamericano y hoy estamos con...",
+        "retratoPng": "sofa/retratos/sofa-indies-1-926b5a48.png"
+      },
+      {
+        "tipo": "clip",
+        "archivo": "DJI_20261012_152000_958_video.mp4",
+        "desde": 7,
+        "hasta": 36.3,
+        "golpes": [
+          {
+            "en": "mágico",
+            "texto": "REALISMO MÁGICO",
+            "estilo": "pastilla"
+          },
+          {
+            "en": "periodista",
+            "texto": "UNA PERIODISTA",
+            "estilo": "golpe"
+          },
+          {
+            "en": "Bogotazo",
+            "texto": "EL BOGOTAZO",
+            "estilo": "daño"
+          },
+          {
+            "en": "gigantes",
+            "texto": "RAÍCES GIGANTES",
+            "estilo": "golpe"
+          },
+          {
+            "en": "Dorado",
+            "texto": "EL DORADO",
+            "estilo": "xp"
+          }
+        ],
+        "fx": [
+          {
+            "tipo": "aura",
+            "en": "Mito",
+            "dura": 2.4,
+            "quien": "p2",
+            "color": "#9FE3FF",
+            "vez": 2
+          },
+          {
+            "tipo": "estrellas",
+            "en": "Colombia",
+            "dura": 2.4,
+            "quien": "p2",
+            "color": "#F2C85B"
+          },
+          {
+            "tipo": "relampago",
+            "en": "Bogotazo",
+            "dura": 1.4,
+            "quien": "p2",
+            "color": "#E8323C"
+          },
+          {
+            "tipo": "fuego",
+            "en": "destruyen",
+            "dura": 2,
+            "quien": "p2",
+            "color": "#58D35A"
+          },
+          {
+            "tipo": "aura",
+            "en": "Dorado",
+            "dura": 2.2,
+            "quien": "p2",
+            "color": "#F2C85B"
+          }
+        ],
+        "personaje": {
+          "nombre": "Nicolás Moros",
+          "clase": "Director de arte · Mito",
+          "tema": "ciudad",
+          "color": "#9FE3FF",
+          "mundo": "Videojuego colombiano",
+          "stats": [
+            {
+              "n": "ARTE",
+              "v": 1
+            },
+            {
+              "n": "REALISMO MÁGICO",
+              "v": 1
+            },
+            {
+              "n": "MISTERIO",
+              "v": 0.9
+            }
+          ]
+        },
+        "ficha": true,
+        "fichaEn": 0.3,
+        "retrato": {
+          "t": 20,
+          "x": 0.3593,
+          "y": 0.3861,
+          "w": 0.1602,
+          "h": 0.1021
+        },
+        "turnos": [
+          {
+            "desde": 7,
+            "quien": "p2"
+          },
+          {
+            "desde": 9.4,
+            "quien": "jd",
+            "fijo": true
+          },
+          {
+            "desde": 12.1,
+            "quien": "p2",
+            "fijo": true
+          },
+          {
+            "desde": 34.6,
+            "quien": "jd",
+            "fijo": true
+          }
+        ],
+        "foco": {
+          "jd": {
+            "x": 0.62,
+            "y": 0.42,
+            "escala": 1.3
+          },
+          "p2": {
+            "x": 0.35,
+            "y": 0.44,
+            "escala": 1.35
+          }
+        },
+        "inicio": 282,
+        "cuadros": 806,
+        "cola": 18,
+        "tramos": [
+          {
+            "archivo": "sofa/DJI_20261012_152000_958_video.mp4",
+            "desde": 6.8,
+            "hasta": 10.5,
+            "velocidad": 1.08,
+            "inicio": 0,
+            "cuadros": 103
+          },
+          {
+            "archivo": "sofa/DJI_20261012_152000_958_video.mp4",
+            "desde": 10.9,
+            "hasta": 19.2,
+            "velocidad": 1.08,
+            "inicio": 103,
+            "cuadros": 231
+          },
+          {
+            "archivo": "sofa/DJI_20261012_152000_958_video.mp4",
+            "desde": 19.4,
+            "hasta": 23.3,
+            "velocidad": 1.08,
+            "inicio": 334,
+            "cuadros": 108
+          },
+          {
+            "archivo": "sofa/DJI_20261012_152000_958_video.mp4",
+            "desde": 23.7,
+            "hasta": 33.7,
+            "velocidad": 1.08,
+            "inicio": 442,
+            "cuadros": 278
+          },
+          {
+            "archivo": "sofa/DJI_20261012_152000_958_video.mp4",
+            "desde": 34.1,
+            "hasta": 36.56,
+            "velocidad": 1.08,
+            "inicio": 720,
+            "cuadros": 68
+          }
+        ],
+        "subtitulos": [
+          {
+            "text": " Soy",
+            "startMs": 185,
+            "endMs": 378,
+            "timestampMs": null,
+            "confidence": 0.855597,
+            "quien": "p2"
+          },
+          {
+            "text": " Nicolás",
+            "startMs": 378,
+            "endMs": 741,
+            "timestampMs": null,
+            "confidence": 0.548418,
+            "quien": "p2"
+          },
+          {
+            "text": " Moros,",
+            "startMs": 741,
+            "endMs": 1019,
+            "timestampMs": null,
+            "confidence": 0.896981,
+            "quien": "p2"
+          },
+          {
+            "text": " director",
+            "startMs": 1296,
+            "endMs": 1679,
+            "timestampMs": null,
+            "confidence": 0.922156,
+            "quien": "p2"
+          },
+          {
+            "text": " de",
+            "startMs": 1679,
+            "endMs": 1819,
+            "timestampMs": null,
+            "confidence": 0.963009,
+            "quien": "p2"
+          },
+          {
+            "text": " arte",
+            "startMs": 1819,
+            "endMs": 2041,
+            "timestampMs": null,
+            "confidence": 0.571096,
+            "quien": "p2"
+          },
+          {
+            "text": " de Mito.",
+            "startMs": 2041,
+            "endMs": 2404,
+            "timestampMs": null,
+            "confidence": 0.978756,
+            "quien": "p2"
+          },
+          {
+            "text": " Cuéntanos",
+            "startMs": 2404,
+            "endMs": 2826,
+            "timestampMs": null,
+            "confidence": 0.920858,
+            "quien": "jd"
+          },
+          {
+            "text": " de",
+            "startMs": 2826,
+            "endMs": 2967,
+            "timestampMs": null,
+            "confidence": 0.942439,
+            "quien": "jd"
+          },
+          {
+            "text": " qué",
+            "startMs": 2967,
+            "endMs": 3148,
+            "timestampMs": null,
+            "confidence": 0.518305,
+            "quien": "jd"
+          },
+          {
+            "text": " trata",
+            "startMs": 3611,
+            "endMs": 3879,
+            "timestampMs": null,
+            "confidence": 0.993006,
+            "quien": "jd"
+          },
+          {
+            "text": " tu",
+            "startMs": 3879,
+            "endMs": 4022,
+            "timestampMs": null,
+            "confidence": 0.980673,
+            "quien": "jd"
+          },
+          {
+            "text": " videojuego.",
+            "startMs": 4022,
+            "endMs": 4496,
+            "timestampMs": null,
+            "confidence": 0.991675,
+            "quien": "jd"
+          },
+          {
+            "text": " Esto es Mito,",
+            "startMs": 4496,
+            "endMs": 5093,
+            "timestampMs": null,
+            "confidence": 0.622577,
+            "quien": "p2"
+          },
+          {
+            "text": " un",
+            "startMs": 5556,
+            "endMs": 5671,
+            "timestampMs": null,
+            "confidence": 0.887221,
+            "quien": "p2"
+          },
+          {
+            "text": " videojuego",
+            "startMs": 5671,
+            "endMs": 6053,
+            "timestampMs": null,
+            "confidence": 0.981742,
+            "quien": "p2"
+          },
+          {
+            "text": " de",
+            "startMs": 6053,
+            "endMs": 6169,
+            "timestampMs": null,
+            "confidence": 0.991683,
+            "quien": "p2"
+          },
+          {
+            "text": " acción,",
+            "startMs": 6169,
+            "endMs": 6418,
+            "timestampMs": null,
+            "confidence": 0.941016,
+            "quien": "p2"
+          },
+          {
+            "text": " aventura",
+            "startMs": 6418,
+            "endMs": 6732,
+            "timestampMs": null,
+            "confidence": 0.988859,
+            "quien": "p2"
+          },
+          {
+            "text": " y",
+            "startMs": 6732,
+            "endMs": 6815,
+            "timestampMs": null,
+            "confidence": 0.965782,
+            "quien": "p2"
+          },
+          {
+            "text": " misterio",
+            "startMs": 6815,
+            "endMs": 7130,
+            "timestampMs": null,
+            "confidence": 0.993447,
+            "quien": "p2"
+          },
+          {
+            "text": " con",
+            "startMs": 7315,
+            "endMs": 7476,
+            "timestampMs": null,
+            "confidence": 0.552466,
+            "quien": "p2"
+          },
+          {
+            "text": " toques",
+            "startMs": 7476,
+            "endMs": 7744,
+            "timestampMs": null,
+            "confidence": 0.98009,
+            "quien": "p2"
+          },
+          {
+            "text": " de",
+            "startMs": 7744,
+            "endMs": 7869,
+            "timestampMs": null,
+            "confidence": 0.920397,
+            "quien": "p2"
+          },
+          {
+            "text": " realismo",
+            "startMs": 7869,
+            "endMs": 8209,
+            "timestampMs": null,
+            "confidence": 0.830345,
+            "quien": "p2"
+          },
+          {
+            "text": " mágico",
+            "startMs": 8209,
+            "endMs": 8478,
+            "timestampMs": null,
+            "confidence": 0.974567,
+            "quien": "p2"
+          },
+          {
+            "text": " ambientado",
+            "startMs": 8478,
+            "endMs": 8889,
+            "timestampMs": null,
+            "confidence": 0.834654,
+            "quien": "p2"
+          },
+          {
+            "text": " en",
+            "startMs": 9167,
+            "endMs": 9303,
+            "timestampMs": null,
+            "confidence": 0.994677,
+            "quien": "p2"
+          },
+          {
+            "text": " Colombia",
+            "startMs": 9303,
+            "endMs": 9671,
+            "timestampMs": null,
+            "confidence": 0.940067,
+            "quien": "p2"
+          },
+          {
+            "text": " en",
+            "startMs": 9671,
+            "endMs": 9807,
+            "timestampMs": null,
+            "confidence": 0.917008,
+            "quien": "p2"
+          },
+          {
+            "text": " los",
+            "startMs": 9807,
+            "endMs": 9982,
+            "timestampMs": null,
+            "confidence": 0.985015,
+            "quien": "p2"
+          },
+          {
+            "text": " años",
+            "startMs": 9982,
+            "endMs": 10195,
+            "timestampMs": null,
+            "confidence": 0.980946,
+            "quien": "p2"
+          },
+          {
+            "text": " 50s.",
+            "startMs": 10195,
+            "endMs": 10370,
+            "timestampMs": null,
+            "confidence": 0.926039,
+            "quien": "p2"
+          },
+          {
+            "text": " En",
+            "startMs": 10556,
+            "endMs": 10653,
+            "timestampMs": null,
+            "confidence": 0.976701,
+            "quien": "p2"
+          },
+          {
+            "text": " donde",
+            "startMs": 10653,
+            "endMs": 10833,
+            "timestampMs": null,
+            "confidence": 0.61545,
+            "quien": "p2"
+          },
+          {
+            "text": " juegas",
+            "startMs": 11296,
+            "endMs": 11574,
+            "timestampMs": null,
+            "confidence": 0.986372,
+            "quien": "p2"
+          },
+          {
+            "text": " como",
+            "startMs": 11574,
+            "endMs": 11796,
+            "timestampMs": null,
+            "confidence": 0.984376,
+            "quien": "p2"
+          },
+          {
+            "text": " Valeria",
+            "startMs": 11796,
+            "endMs": 12148,
+            "timestampMs": null,
+            "confidence": 0.879727,
+            "quien": "p2"
+          },
+          {
+            "text": " Garzón,",
+            "startMs": 12148,
+            "endMs": 12593,
+            "timestampMs": null,
+            "confidence": 0.962239,
+            "quien": "p2"
+          },
+          {
+            "text": " una",
+            "startMs": 12593,
+            "endMs": 12796,
+            "timestampMs": null,
+            "confidence": 0.778713,
+            "quien": "p2"
+          },
+          {
+            "text": " periodista",
+            "startMs": 12796,
+            "endMs": 13111,
+            "timestampMs": null,
+            "confidence": 0.434923,
+            "quien": "p2"
+          },
+          {
+            "text": " que",
+            "startMs": 13111,
+            "endMs": 13241,
+            "timestampMs": null,
+            "confidence": 0.975217,
+            "quien": "p2"
+          },
+          {
+            "text": " está",
+            "startMs": 13241,
+            "endMs": 13500,
+            "timestampMs": null,
+            "confidence": 0.951611,
+            "quien": "p2"
+          },
+          {
+            "text": " buscando",
+            "startMs": 13500,
+            "endMs": 13741,
+            "timestampMs": null,
+            "confidence": 0.987522,
+            "quien": "p2"
+          },
+          {
+            "text": " a",
+            "startMs": 13741,
+            "endMs": 13833,
+            "timestampMs": null,
+            "confidence": 0.96866,
+            "quien": "p2"
+          },
+          {
+            "text": " su",
+            "startMs": 13833,
+            "endMs": 14056,
+            "timestampMs": null,
+            "confidence": 0.992167,
+            "quien": "p2"
+          },
+          {
+            "text": " hermano",
+            "startMs": 14056,
+            "endMs": 14352,
+            "timestampMs": null,
+            "confidence": 0.989381,
+            "quien": "p2"
+          },
+          {
+            "text": " desaparecido.",
+            "startMs": 14352,
+            "endMs": 14444,
+            "timestampMs": null,
+            "confidence": 0.961579,
+            "quien": "p2"
+          },
+          {
+            "text": " En",
+            "startMs": 14907,
+            "endMs": 15043,
+            "timestampMs": null,
+            "confidence": 0.84265,
+            "quien": "p2"
+          },
+          {
+            "text": " este",
+            "startMs": 15043,
+            "endMs": 15255,
+            "timestampMs": null,
+            "confidence": 0.991605,
+            "quien": "p2"
+          },
+          {
+            "text": " mundo",
+            "startMs": 15255,
+            "endMs": 15506,
+            "timestampMs": null,
+            "confidence": 0.978338,
+            "quien": "p2"
+          },
+          {
+            "text": " sucede",
+            "startMs": 15506,
+            "endMs": 15794,
+            "timestampMs": null,
+            "confidence": 0.858713,
+            "quien": "p2"
+          },
+          {
+            "text": " el",
+            "startMs": 15794,
+            "endMs": 15930,
+            "timestampMs": null,
+            "confidence": 0.819253,
+            "quien": "p2"
+          },
+          {
+            "text": " Bogotazo,",
+            "startMs": 15930,
+            "endMs": 16296,
+            "timestampMs": null,
+            "confidence": 0.619386,
+            "quien": "p2"
+          },
+          {
+            "text": " pero",
+            "startMs": 16667,
+            "endMs": 16844,
+            "timestampMs": null,
+            "confidence": 0.790525,
+            "quien": "p2"
+          },
+          {
+            "text": " además",
+            "startMs": 16844,
+            "endMs": 17086,
+            "timestampMs": null,
+            "confidence": 0.967757,
+            "quien": "p2"
+          },
+          {
+            "text": " de",
+            "startMs": 17086,
+            "endMs": 17199,
+            "timestampMs": null,
+            "confidence": 0.938602,
+            "quien": "p2"
+          },
+          {
+            "text": " que",
+            "startMs": 17199,
+            "endMs": 17344,
+            "timestampMs": null,
+            "confidence": 0.952596,
+            "quien": "p2"
+          },
+          {
+            "text": " matan",
+            "startMs": 17344,
+            "endMs": 17555,
+            "timestampMs": null,
+            "confidence": 0.664758,
+            "quien": "p2"
+          },
+          {
+            "text": " a",
+            "startMs": 17555,
+            "endMs": 17635,
+            "timestampMs": null,
+            "confidence": 0.832912,
+            "quien": "p2"
+          },
+          {
+            "text": " Gaitán,",
+            "startMs": 17635,
+            "endMs": 17877,
+            "timestampMs": null,
+            "confidence": 0.478647,
+            "quien": "p2"
+          },
+          {
+            "text": " raíces",
+            "startMs": 17877,
+            "endMs": 18119,
+            "timestampMs": null,
+            "confidence": 0.724401,
+            "quien": "p2"
+          },
+          {
+            "text": " gigantes",
+            "startMs": 18119,
+            "endMs": 18426,
+            "timestampMs": null,
+            "confidence": 0.867464,
+            "quien": "p2"
+          },
+          {
+            "text": " emergen",
+            "startMs": 18611,
+            "endMs": 18873,
+            "timestampMs": null,
+            "confidence": 0.414562,
+            "quien": "p2"
+          },
+          {
+            "text": " y",
+            "startMs": 18873,
+            "endMs": 18951,
+            "timestampMs": null,
+            "confidence": 0.582916,
+            "quien": "p2"
+          },
+          {
+            "text": " destruyen",
+            "startMs": 18951,
+            "endMs": 19275,
+            "timestampMs": null,
+            "confidence": 0.963013,
+            "quien": "p2"
+          },
+          {
+            "text": " todo,",
+            "startMs": 19275,
+            "endMs": 19444,
+            "timestampMs": null,
+            "confidence": 0.972856,
+            "quien": "p2"
+          },
+          {
+            "text": " porque",
+            "startMs": 19630,
+            "endMs": 19878,
+            "timestampMs": null,
+            "confidence": 0.575385,
+            "quien": "p2"
+          },
+          {
+            "text": " hay una secta",
+            "startMs": 19878,
+            "endMs": 20603,
+            "timestampMs": null,
+            "confidence": 0.35393,
+            "quien": "p2"
+          },
+          {
+            "text": " que",
+            "startMs": 20603,
+            "endMs": 20765,
+            "timestampMs": null,
+            "confidence": 0.980583,
+            "quien": "p2"
+          },
+          {
+            "text": " está",
+            "startMs": 20765,
+            "endMs": 20963,
+            "timestampMs": null,
+            "confidence": 0.945761,
+            "quien": "p2"
+          },
+          {
+            "text": " detrás",
+            "startMs": 20963,
+            "endMs": 21233,
+            "timestampMs": null,
+            "confidence": 0.936801,
+            "quien": "p2"
+          },
+          {
+            "text": " del",
+            "startMs": 21233,
+            "endMs": 21396,
+            "timestampMs": null,
+            "confidence": 0.965768,
+            "quien": "p2"
+          },
+          {
+            "text": " Dorado,",
+            "startMs": 21396,
+            "endMs": 21667,
+            "timestampMs": null,
+            "confidence": 0.445867,
+            "quien": "p2"
+          },
+          {
+            "text": " haciendo",
+            "startMs": 22037,
+            "endMs": 22401,
+            "timestampMs": null,
+            "confidence": 0.948685,
+            "quien": "p2"
+          },
+          {
+            "text": " que",
+            "startMs": 22401,
+            "endMs": 22573,
+            "timestampMs": null,
+            "confidence": 0.76844,
+            "quien": "p2"
+          },
+          {
+            "text": " criaturas",
+            "startMs": 22573,
+            "endMs": 22937,
+            "timestampMs": null,
+            "confidence": 0.289302,
+            "quien": "p2"
+          },
+          {
+            "text": " mitológicas",
+            "startMs": 22937,
+            "endMs": 23417,
+            "timestampMs": null,
+            "confidence": 0.343439,
+            "quien": "p2"
+          },
+          {
+            "text": " cobren",
+            "startMs": 23417,
+            "endMs": 23704,
+            "timestampMs": null,
+            "confidence": 0.228483,
+            "quien": "p2"
+          },
+          {
+            "text": " vida.",
+            "startMs": 24167,
+            "endMs": 24406,
+            "timestampMs": null,
+            "confidence": 0.969594,
+            "quien": "p2"
+          },
+          {
+            "text": " Wow,",
+            "startMs": 24406,
+            "endMs": 24603,
+            "timestampMs": null,
+            "confidence": 0.381981,
+            "quien": "jd"
+          },
+          {
+            "text": " qué",
+            "startMs": 24603,
+            "endMs": 24798,
+            "timestampMs": null,
+            "confidence": 0.809398,
+            "quien": "jd"
+          },
+          {
+            "text": " talento,",
+            "startMs": 24798,
+            "endMs": 25169,
+            "timestampMs": null,
+            "confidence": 0.992981,
+            "quien": "jd"
+          },
+          {
+            "text": " muy",
+            "startMs": 25169,
+            "endMs": 25365,
+            "timestampMs": null,
+            "confidence": 0.963398,
+            "quien": "jd"
+          },
+          {
+            "text": " bueno,",
+            "startMs": 25365,
+            "endMs": 25648,
+            "timestampMs": null,
+            "confidence": 0.943563,
+            "quien": "jd"
+          },
+          {
+            "text": " gracias.",
+            "startMs": 25648,
+            "endMs": 26019,
+            "timestampMs": null,
+            "confidence": 0.988719,
+            "quien": "jd"
+          }
+        ],
+        "texto": "Soy Nicolás Moros, director de arte de mito. Cuéntanos de qué trata tu videojuego. Esto es mito, un videojuego de acción, aventura y misterio con toques de realismo mágico ambientado en Colombia en los años 50s. En donde juegas como Valeria Garzón, una periodista que está buscando a su hermano desaparecido. En este mundo sucede el Bogotazo, pero además de que matan a Gaitán, raíces gigantes emergen y destruyen todo, porque viene a secta que está detrás del Dorado, haciendo que cráteras mitológicas podren vida. Wow, qué talento, muy bueno, gracias.",
+        "retratoPng": "sofa/retratos/sofa-indies-2-279b4a1f.png"
+      },
+      {
+        "tipo": "cierre",
+        "archivo": "DJI_20261012_152000_958_video.mp4",
+        "desde": 36.6,
+        "hasta": 43.2,
+        "golpes": [
+          {
+            "en": "nivel",
+            "texto": "SUBIR DE NIVEL",
+            "estilo": "xp"
+          }
+        ],
+        "fx": [
+          {
+            "tipo": "nivelUp",
+            "en": "subir",
+            "dura": 2.6,
+            "quien": "p2",
+            "texto": "LEVEL UP!",
+            "stats": [
+              [
+                "ARTE",
+                0.7,
+                1
+              ],
+              [
+                "LORE",
+                0.6,
+                1
+              ],
+              [
+                "WISHLIST",
+                0.2,
+                1
+              ]
+            ]
+          }
+        ],
+        "personaje": {
+          "nombre": "Nicolás Moros",
+          "clase": "Director de arte · Mito",
+          "tema": "ciudad",
+          "color": "#9FE3FF",
+          "mundo": "Videojuego colombiano",
+          "stats": []
+        },
+        "turnos": [
+          {
+            "desde": 36.5,
+            "quien": "jd"
+          },
+          {
+            "desde": 39.6,
+            "quien": "p2"
+          },
+          {
+            "desde": 41.9,
+            "quien": "jd"
+          }
+        ],
+        "foco": {
+          "jd": {
+            "x": 0.62,
+            "y": 0.42,
+            "escala": 1.3
+          },
+          "p2": {
+            "x": 0.35,
+            "y": 0.44,
+            "escala": 1.35
+          }
+        },
+        "cta": "MITO · AGRÉGALO A TU WISHLIST",
+        "inicio": 1088,
+        "cuadros": 189,
+        "cola": 12,
+        "tramos": [
+          {
+            "archivo": "sofa/DJI_20261012_152000_958_video.mp4",
+            "desde": 36.4,
+            "hasta": 41,
+            "velocidad": 1.08,
+            "inicio": 0,
+            "cuadros": 128
+          },
+          {
+            "archivo": "sofa/DJI_20261012_152000_958_video.mp4",
+            "desde": 41.7,
+            "hasta": 43.46,
+            "velocidad": 1.08,
+            "inicio": 128,
+            "cuadros": 49
+          }
+        ],
+        "subtitulos": [
+          {
+            "text": " Y",
+            "startMs": 185,
+            "endMs": 315,
+            "timestampMs": null,
+            "confidence": 0.693407,
+            "quien": "jd"
+          },
+          {
+            "text": " qué",
+            "startMs": 315,
+            "endMs": 593,
+            "timestampMs": null,
+            "confidence": 0.769823,
+            "quien": "jd"
+          },
+          {
+            "text": " mecánica",
+            "startMs": 593,
+            "endMs": 1056,
+            "timestampMs": null,
+            "confidence": 0.951058,
+            "quien": "jd"
+          },
+          {
+            "text": " del",
+            "startMs": 1056,
+            "endMs": 1222,
+            "timestampMs": null,
+            "confidence": 0.96704,
+            "quien": "jd"
+          },
+          {
+            "text": " videojuego",
+            "startMs": 1222,
+            "endMs": 1667,
+            "timestampMs": null,
+            "confidence": 0.98622,
+            "quien": "jd"
+          },
+          {
+            "text": " traerías",
+            "startMs": 1667,
+            "endMs": 2000,
+            "timestampMs": null,
+            "confidence": 0.92316,
+            "quien": "jd"
+          },
+          {
+            "text": " a",
+            "startMs": 2000,
+            "endMs": 2074,
+            "timestampMs": null,
+            "confidence": 0.983063,
+            "quien": "jd"
+          },
+          {
+            "text": " la",
+            "startMs": 2074,
+            "endMs": 2204,
+            "timestampMs": null,
+            "confidence": 0.989487,
+            "quien": "jd"
+          },
+          {
+            "text": " vida",
+            "startMs": 2204,
+            "endMs": 2407,
+            "timestampMs": null,
+            "confidence": 0.983751,
+            "quien": "jd"
+          },
+          {
+            "text": " real.",
+            "startMs": 2407,
+            "endMs": 2500,
+            "timestampMs": null,
+            "confidence": 0.942599,
+            "quien": "jd"
+          },
+          {
+            "text": " Yo",
+            "startMs": 2963,
+            "endMs": 3078,
+            "timestampMs": null,
+            "confidence": 0.96477,
+            "quien": "p2"
+          },
+          {
+            "text": " diría",
+            "startMs": 3078,
+            "endMs": 3292,
+            "timestampMs": null,
+            "confidence": 0.886046,
+            "quien": "p2"
+          },
+          {
+            "text": " que",
+            "startMs": 3292,
+            "endMs": 3440,
+            "timestampMs": null,
+            "confidence": 0.968987,
+            "quien": "p2"
+          },
+          {
+            "text": " subir",
+            "startMs": 3440,
+            "endMs": 3653,
+            "timestampMs": null,
+            "confidence": 0.676179,
+            "quien": "p2"
+          },
+          {
+            "text": " de",
+            "startMs": 3653,
+            "endMs": 3768,
+            "timestampMs": null,
+            "confidence": 0.957187,
+            "quien": "p2"
+          },
+          {
+            "text": " nivel.",
+            "startMs": 3768,
+            "endMs": 3981,
+            "timestampMs": null,
+            "confidence": 0.996749,
+            "quien": "p2"
+          },
+          {
+            "text": " Super,",
+            "startMs": 4444,
+            "endMs": 4815,
+            "timestampMs": null,
+            "confidence": 0.491931,
+            "quien": "jd"
+          },
+          {
+            "text": " mil",
+            "startMs": 5000,
+            "endMs": 5160,
+            "timestampMs": null,
+            "confidence": 0.699565,
+            "quien": "jd"
+          },
+          {
+            "text": " gracias.",
+            "startMs": 5160,
+            "endMs": 5463,
+            "timestampMs": null,
+            "confidence": 0.989283,
+            "quien": "jd"
+          }
+        ],
+        "texto": "Y qué mecánica del videojuego traerías a la vida real. Yo diría que subir de nivel. Super, mil gracias."
+      },
+      {
+        "tipo": "final",
+        "inicio": 1277,
+        "cuadros": 72
+      }
+    ],
+    "total": 1349,
+    "avisos": []
+  },
+  "bpm": 132,
+  "capas": true
+}

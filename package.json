@@ -18,14 +18,35 @@
     "montaje": "node src/montaje/render.js",
     "pendientes": "node src/montaje/pendientes.js",
     "cola": "node src/montaje/cola.js",
-    "revisar": "node src/montaje/revisar.js"
+    "revisar": "node src/montaje/revisar.js",
+    "carrusel": "node src/carrusel/render.js",
+    "portadas": "node src/portadas/render.js",
+    "analitica": "node src/analitica/instagram.js",
+    "brochure": "node src/brochure/pdf.js",
+    "propuesta": "node src/propuestas/propuesta.js",
+    "sofa-armar": "node src/sofa/armar.js",
+    "sofa": "node src/sofa/render.js",
+    "sofa-spec": "node src/sofa/spec.js",
+    "gameplay": "node src/sofa/gameplay.js"
   },
   "dependencies": {
+    "@react-three/drei": "^10.7.9",
+    "@react-three/fiber": "^9.8.1",
+    "@remotion/captions": "4.0.504",
     "@remotion/cli": "4.0.504",
+    "@remotion/google-fonts": "4.0.504",
     "@remotion/install-whisper-cpp": "4.0.504",
+    "@remotion/light-leaks": "4.0.504",
+    "@remotion/lottie": "4.0.504",
+    "@remotion/motion-blur": "4.0.504",
+    "@remotion/player": "4.0.504",
+    "@remotion/shapes": "4.0.504",
+    "@remotion/three": "4.0.504",
+    "@remotion/transitions": "4.0.504",
     "lucide-react": "^1.48.0",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
-    "remotion": "4.0.504"
+    "remotion": "4.0.504",
+    "three": "^0.186.1"
   }
 }

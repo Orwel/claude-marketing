@@ -1,0 +1,1900 @@
+{
+  "plantilla": "Arcade",
+  "serie": "SOFA 2026 · BOGOTÁ",
+  "nivel": "SOFA 2026",
+  "cuentas": [
+    "juanda"
+  ],
+  "velocidad": 1.08,
+  "motivo": "trifuerza",
+  "lados": {
+    "jd": "izquierda",
+    "p2": "derecha"
+  },
+  "nombres": {
+    "jd": {
+      "nombre": "JUAN DAVID"
+    }
+  },
+  "correcciones": [
+    {
+      "de": "sofá",
+      "a": "SOFA"
+    },
+    {
+      "de": "le pregunte",
+      "a": "le pregunté"
+    },
+    {
+      "de": "Le pregunte",
+      "a": "Le pregunté"
+    },
+    {
+      "de": "Cosplayers",
+      "a": "cosplayers"
+    },
+    {
+      "de": "quien demandaría",
+      "a": "quién demandaría"
+    },
+    {
+      "de": "artas",
+      "a": "hartas"
+    },
+    {
+      "de": "hace todo son",
+      "a": "excepto"
+    },
+    {
+      "de": "gingos",
+      "a": "Sung Jinwoo"
+    },
+    {
+      "de": "Chimico Toga",
+      "a": "Himiko Toga"
+    },
+    {
+      "de": "Magiro Academia",
+      "a": "My Hero Academia"
+    },
+    {
+      "de": "Von Leinton",
+      "a": "Von Lycaon"
+    },
+    {
+      "de": "Sunless On Zero",
+      "a": "Zenless Zone Zero"
+    },
+    {
+      "de": "Aurora del League",
+      "a": "Aurora de League"
+    },
+    {
+      "de": "Mavica",
+      "a": "Mavuika"
+    },
+    {
+      "de": "satura",
+      "a": "La Vasija Pura"
+    },
+    {
+      "de": "te parece es a",
+      "a": "te pareces a"
+    },
+    {
+      "de": "estás tú buena",
+      "a": "está muy buena"
+    },
+    {
+      "de": "En como el fue",
+      "a": "En cómo él fue"
+    },
+    {
+      "de": "indique",
+      "a": "indie"
+    },
+    {
+      "de": "Jägger",
+      "a": "Jaeger"
+    },
+    {
+      "de": "Jäger",
+      "a": "Jaeger"
+    },
+    {
+      "de": "capitano",
+      "a": "Capitano"
+    },
+    {
+      "de": "herfría",
+      "a": "le hizo"
+    },
+    {
+      "de": "Drugs del futuro",
+      "a": "Trunks del futuro"
+    },
+    {
+      "de": "Sayajin",
+      "a": "saiyajin"
+    },
+    {
+      "de": "María",
+      "a": "mijo"
+    },
+    {
+      "de": "platico",
+      "a": "platica"
+    },
+    {
+      "de": "si está allí",
+      "a": "si es saiyajin"
+    },
+    {
+      "de": "respaunear",
+      "a": "respawnear"
+    },
+    {
+      "de": "Respawn",
+      "a": "respawn"
+    },
+    {
+      "de": "cagunes",
+      "a": "kagunes"
+    },
+    {
+      "de": "Maca",
+      "a": "Maka"
+    },
+    {
+      "de": "SoulHitter",
+      "a": "Soul Eater"
+    },
+    {
+      "de": "El jefe maestro",
+      "a": "el Jefe Maestro"
+    },
+    {
+      "de": "Te letra... transportarme",
+      "a": "¿Teletransportarme?"
+    },
+    {
+      "de": "maquillero",
+      "a": "Androide 17"
+    },
+    {
+      "de": "ardestruir",
+      "a": "destruir"
+    },
+    {
+      "de": "Joaquin Club",
+      "a": "Jockey Club"
+    },
+    {
+      "de": "Frey",
+      "a": "Fray"
+    },
+    {
+      "de": "Vélula",
+      "a": "Bélula"
+    },
+    {
+      "de": "Séfira",
+      "a": "Céfira"
+    },
+    {
+      "de": "bótalo",
+      "a": "vótalo"
+    },
+    {
+      "de": "alteratura",
+      "a": "literatura"
+    },
+    {
+      "de": "de mito",
+      "a": "de Mito"
+    },
+    {
+      "de": "Esto es mito",
+      "a": "Esto es Mito"
+    },
+    {
+      "de": "perracos espantos",
+      "a": "Berracos Espantos"
+    },
+    {
+      "de": "Bogofighters",
+      "a": "Bogo Fighters"
+    },
+    {
+      "de": "cráteras",
+      "a": "criaturas"
+    },
+    {
+      "de": "podren",
+      "a": "cobren"
+    },
+    {
+      "de": "viene a secta",
+      "a": "hay una secta"
+    },
+    {
+      "de": "de acuerdos el la guardiente",
+      "a": "de acuerdo, el aguardiente"
+    },
+    {
+      "de": "agua mendita",
+      "a": "agua bendita"
+    },
+    {
+      "de": "desarrollos colombianos",
+      "a": "desarrolladores colombianos"
+    },
+    {
+      "de": "colombia",
+      "a": "Colombia"
+    },
+    {
+      "de": "Es está",
+      "a": "Está"
+    }
+  ],
+  "variantes": {
+    "juanda": {
+      "cta": "Comenta a quién demandarías",
+      "copy": ""
+    }
+  },
+  "slug": "sofa-demanda",
+  "codigo": "SOFA01",
+  "titulo": "¿A quién demandaría tu personaje?",
+  "niveles": 4,
+  "escenas": [
+    {
+      "tipo": "titulo",
+      "segundos": 3.4,
+      "alto": 300
+    },
+    {
+      "tipo": "clip",
+      "archivo": "DJI_20261012_142400_960_video.mp4",
+      "desde": 6.4,
+      "hasta": 13.2,
+      "golpes": [
+        {
+          "en": "sorprenderán",
+          "texto": "TE SORPRENDERÁN",
+          "estilo": "pastilla"
+        }
+      ],
+      "fx": [
+        {
+          "tipo": "estrellas",
+          "en": "demandaría",
+          "dura": 3,
+          "quien": null,
+          "lado": "centro"
+        }
+      ],
+      "foco": {
+        "jd": {
+          "x": 0.5,
+          "y": 0.36,
+          "escala": 1.12
+        }
+      },
+      "lados": {
+        "jd": "centro"
+      },
+      "_avisos": []
+    },
+    {
+      "tipo": "clip",
+      "archivo": "DJI_20261012_135441_015_video.mp4",
+      "desde": 3.6,
+      "hasta": 12,
+      "golpes": [
+        {
+          "en": "excepto",
+          "texto": "EXCEPTO SUNG JINWOO",
+          "estilo": "daño"
+        },
+        {
+          "en": "demandas",
+          "texto": "HARTAS DEMANDAS",
+          "estilo": "xp"
+        }
+      ],
+      "fx": [
+        {
+          "tipo": "corte",
+          "en": "cazadores",
+          "dura": 1.2,
+          "quien": "p2",
+          "color": "#E8323C"
+        },
+        {
+          "tipo": "relampago",
+          "en": "excepto",
+          "dura": 1.4,
+          "quien": "p2",
+          "color": "#E8323C"
+        },
+        {
+          "tipo": "aura",
+          "en": "abogados",
+          "dura": 2.2,
+          "quien": "jd",
+          "color": "#F26B1D"
+        }
+      ],
+      "personaje": {
+        "nombre": "Cha Hae-in",
+        "clase": "Cazadora rango S · Solo Leveling",
+        "tema": "mazmorra",
+        "color": "#E8323C",
+        "mundo": "Cosplay · SOFA 2026",
+        "stats": [
+          {
+            "n": "COSPLAY",
+            "v": 1
+          },
+          {
+            "n": "ESPADA",
+            "v": 0.9
+          },
+          {
+            "n": "LORE",
+            "v": 0.7
+          }
+        ],
+        "resumen": "A todos los cazadores, excepto Sung Jinwoo"
+      },
+      "ficha": true,
+      "fichaEn": 0.3,
+      "retrato": {
+        "t": 6,
+        "x": 0.5543,
+        "y": 0.3471,
+        "w": 0.2164,
+        "h": 0.138
+      },
+      "turnos": [
+        {
+          "desde": 3.6,
+          "quien": "jd"
+        },
+        {
+          "desde": 5.6,
+          "quien": "p2"
+        },
+        {
+          "desde": 9.3,
+          "quien": "jd",
+          "fijo": true
+        }
+      ],
+      "foco": {
+        "jd": {
+          "x": 0.47,
+          "y": 0.42,
+          "escala": 1.3
+        },
+        "p2": {
+          "x": 0.66,
+          "y": 0.43,
+          "escala": 1.38
+        }
+      },
+      "_avisos": []
+    },
+    {
+      "tipo": "nivel",
+      "numero": 2,
+      "nombre": "Pabellón 3",
+      "estilo": "mundo2d",
+      "segundos": 2
+    },
+    {
+      "tipo": "clip",
+      "archivo": "DJI_20261012_141732_578_video.mp4",
+      "desde": 7.6,
+      "hasta": 14.6,
+      "golpes": [
+        {
+          "en": "minera",
+          "texto": "EMPRESA MINERA",
+          "estilo": "daño"
+        }
+      ],
+      "fx": [
+        {
+          "tipo": "onda",
+          "en": "minera",
+          "dura": 1.2,
+          "quien": "p2",
+          "color": "#58D35A"
+        },
+        {
+          "tipo": "levitar",
+          "en": "grandes",
+          "dura": 1.6,
+          "quien": null
+        }
+      ],
+      "personaje": {
+        "nombre": "Operador",
+        "clase": "Fuerzas especiales · Call of Duty",
+        "tema": "ciudad",
+        "color": "#58D35A",
+        "mundo": "Operador táctico · visión nocturna",
+        "stats": [
+          {
+            "n": "COSPLAY",
+            "v": 0.9
+          },
+          {
+            "n": "ALTURA",
+            "v": 1
+          },
+          {
+            "n": "SIGILO",
+            "v": 0.6
+          }
+        ],
+        "resumen": "A una empresa minera"
+      },
+      "ficha": true,
+      "fichaEn": 0.3,
+      "retrato": {
+        "t": 10.4,
+        "x": 0.4815,
+        "y": 0.3091,
+        "w": 0.247,
+        "h": 0.1575
+      },
+      "turnos": [
+        {
+          "desde": 7.6,
+          "quien": "jd"
+        },
+        {
+          "desde": 10.5,
+          "quien": "p2"
+        },
+        {
+          "desde": 11.6,
+          "quien": "jd",
+          "fijo": true
+        }
+      ],
+      "foco": {
+        "jd": {
+          "x": 0.38,
+          "y": 0.42,
+          "escala": 1.3
+        },
+        "p2": {
+          "x": 0.6,
+          "y": 0.41,
+          "escala": 1.38
+        }
+      },
+      "_avisos": []
+    },
+    {
+      "tipo": "nivel",
+      "numero": 3,
+      "nombre": "Heroes Zone",
+      "estilo": "jefe",
+      "segundos": 2
+    },
+    {
+      "tipo": "clip",
+      "archivo": "DJI_20261012_150608_167_video.mp4",
+      "desde": 15.5,
+      "hasta": 25.6,
+      "golpes": [
+        {
+          "en": "demandada",
+          "texto": "ELLA ES LA DEMANDADA",
+          "estilo": "pastilla"
+        },
+        {
+          "en": "villana",
+          "texto": "UNA VILLANA",
+          "estilo": "daño"
+        }
+      ],
+      "fx": [
+        {
+          "tipo": "relampago",
+          "en": "demandada",
+          "dura": 1.4,
+          "quien": "p2",
+          "color": "#F06292"
+        },
+        {
+          "tipo": "aura",
+          "en": "villana",
+          "dura": 2,
+          "quien": "p2",
+          "color": "#F06292"
+        }
+      ],
+      "personaje": {
+        "nombre": "Himiko Toga",
+        "clase": "Villana · My Hero Academia",
+        "tema": "terror",
+        "color": "#F06292",
+        "mundo": "Cosplay · SOFA 2026",
+        "stats": [
+          {
+            "n": "COSPLAY",
+            "v": 1
+          },
+          {
+            "n": "CAOS",
+            "v": 1
+          },
+          {
+            "n": "CORDURA",
+            "v": 0.1
+          }
+        ],
+        "resumen": "Ella es la demandada"
+      },
+      "ficha": true,
+      "fichaEn": 0.3,
+      "retrato": {
+        "t": 20.6,
+        "x": 0.5059,
+        "y": 0.3527,
+        "w": 0.1864,
+        "h": 0.1188
+      },
+      "turnos": [
+        {
+          "desde": 15.5,
+          "quien": "jd"
+        },
+        {
+          "desde": 18.9,
+          "quien": "p2"
+        },
+        {
+          "desde": 22.5,
+          "quien": "jd"
+        },
+        {
+          "desde": 24.1,
+          "quien": "p2",
+          "fijo": true
+        },
+        {
+          "desde": 25.5,
+          "quien": "jd",
+          "fijo": true
+        }
+      ],
+      "foco": {
+        "jd": {
+          "x": 0.35,
+          "y": 0.4,
+          "escala": 1.28
+        },
+        "p2": {
+          "x": 0.7,
+          "y": 0.42,
+          "escala": 1.38
+        }
+      },
+      "_avisos": []
+    },
+    {
+      "tipo": "cierre",
+      "archivo": "DJI_20261012_142516_966_video.mp4",
+      "desde": 1.4,
+      "hasta": 8.4,
+      "golpes": [
+        {
+          "en": "fantasía",
+          "texto": "MUNDOS DE FANTASÍA",
+          "estilo": "pastilla"
+        }
+      ],
+      "fx": [],
+      "foco": {
+        "jd": {
+          "x": 0.5,
+          "y": 0.36,
+          "escala": 1.12
+        }
+      },
+      "lados": {
+        "jd": "centro"
+      },
+      "cta": "COMENTA A QUIÉN DEMANDARÍAS",
+      "_avisos": []
+    }
+  ],
+  "verificar": [
+    {
+      "dato": "Cha Hae-in (Solo Leveling): identificacion de Juan David (13-oct); ella dice «a todos los cazadores de este mundo, excepto Sung Jinwoo»",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Operador tactico: en la ficha va «Fuerzas especiales · Call of Duty» por el equipo (gafas de vision nocturna de cuatro tubos, estilo Modern Warfare); si Juan David sabe la franquicia real, se cambia",
+      "estado": "pendiente"
+    }
+  ],
+  "generado": {
+    "escenas": [
+      {
+        "tipo": "titulo",
+        "segundos": 3.4,
+        "alto": 300,
+        "inicio": 0,
+        "cuadros": 102
+      },
+      {
+        "tipo": "clip",
+        "archivo": "DJI_20261012_142400_960_video.mp4",
+        "desde": 6.4,
+        "hasta": 13.2,
+        "golpes": [
+          {
+            "en": "sorprenderán",
+            "texto": "TE SORPRENDERÁN",
+            "estilo": "pastilla"
+          }
+        ],
+        "fx": [
+          {
+            "tipo": "estrellas",
+            "en": "demandaría",
+            "dura": 3,
+            "quien": null,
+            "lado": "centro"
+          }
+        ],
+        "foco": {
+          "jd": {
+            "x": 0.5,
+            "y": 0.36,
+            "escala": 1.12
+          }
+        },
+        "lados": {
+          "jd": "centro"
+        },
+        "inicio": 102,
+        "cuadros": 208,
+        "cola": 3,
+        "tramos": [
+          {
+            "archivo": "sofa/DJI_20261012_142400_960_video.mp4",
+            "desde": 6.42,
+            "hasta": 13.8,
+            "velocidad": 1.08,
+            "inicio": 0,
+            "cuadros": 205
+          }
+        ],
+        "subtitulos": [
+          {
+            "text": " le pregunté",
+            "startMs": 185,
+            "endMs": 759,
+            "timestampMs": null,
+            "confidence": 0.190841,
+            "quien": "jd"
+          },
+          {
+            "text": " a",
+            "startMs": 759,
+            "endMs": 1093,
+            "timestampMs": null,
+            "confidence": 0.992886,
+            "quien": "jd"
+          },
+          {
+            "text": " cosplayers",
+            "startMs": 1093,
+            "endMs": 1611,
+            "timestampMs": null,
+            "confidence": 0.894903,
+            "quien": "jd"
+          },
+          {
+            "text": " en",
+            "startMs": 1611,
+            "endMs": 1722,
+            "timestampMs": null,
+            "confidence": 0.974708,
+            "quien": "jd"
+          },
+          {
+            "text": " el",
+            "startMs": 1722,
+            "endMs": 1889,
+            "timestampMs": null,
+            "confidence": 0.992057,
+            "quien": "jd"
+          },
+          {
+            "text": " SOFA",
+            "startMs": 1889,
+            "endMs": 2315,
+            "timestampMs": null,
+            "confidence": 0.942924,
+            "quien": "jd"
+          },
+          {
+            "text": " a",
+            "startMs": 2315,
+            "endMs": 2481,
+            "timestampMs": null,
+            "confidence": 0.618362,
+            "quien": "jd"
+          },
+          {
+            "text": " quién demandaría",
+            "startMs": 2481,
+            "endMs": 3259,
+            "timestampMs": null,
+            "confidence": 0.581268,
+            "quien": "jd"
+          },
+          {
+            "text": " su",
+            "startMs": 3259,
+            "endMs": 3667,
+            "timestampMs": null,
+            "confidence": 0.791666,
+            "quien": "jd"
+          },
+          {
+            "text": " personaje",
+            "startMs": 3667,
+            "endMs": 3756,
+            "timestampMs": null,
+            "confidence": 0.993117,
+            "quien": "jd"
+          },
+          {
+            "text": " y",
+            "startMs": 3756,
+            "endMs": 3778,
+            "timestampMs": null,
+            "confidence": 0.884733,
+            "quien": "jd"
+          },
+          {
+            "text": " seguro",
+            "startMs": 4056,
+            "endMs": 4410,
+            "timestampMs": null,
+            "confidence": 0.955762,
+            "quien": "jd"
+          },
+          {
+            "text": " sus",
+            "startMs": 4410,
+            "endMs": 4623,
+            "timestampMs": null,
+            "confidence": 0.957384,
+            "quien": "jd"
+          },
+          {
+            "text": " respuestas",
+            "startMs": 4623,
+            "endMs": 5167,
+            "timestampMs": null,
+            "confidence": 0.991681,
+            "quien": "jd"
+          },
+          {
+            "text": " te",
+            "startMs": 5352,
+            "endMs": 5505,
+            "timestampMs": null,
+            "confidence": 0.890515,
+            "quien": "jd"
+          },
+          {
+            "text": " sorprenderán.",
+            "startMs": 5505,
+            "endMs": 6093,
+            "timestampMs": null,
+            "confidence": 0.995431,
+            "quien": "jd"
+          }
+        ],
+        "texto": "le pregunte a Cosplayers en el sofá a quien demandaría su personaje y seguro sus respuestas te sorprenderán."
+      },
+      {
+        "tipo": "clip",
+        "archivo": "DJI_20261012_135441_015_video.mp4",
+        "desde": 3.6,
+        "hasta": 12,
+        "golpes": [
+          {
+            "en": "excepto",
+            "texto": "EXCEPTO SUNG JINWOO",
+            "estilo": "daño"
+          },
+          {
+            "en": "demandas",
+            "texto": "HARTAS DEMANDAS",
+            "estilo": "xp"
+          }
+        ],
+        "fx": [
+          {
+            "tipo": "corte",
+            "en": "cazadores",
+            "dura": 1.2,
+            "quien": "p2",
+            "color": "#E8323C"
+          },
+          {
+            "tipo": "relampago",
+            "en": "excepto",
+            "dura": 1.4,
+            "quien": "p2",
+            "color": "#E8323C"
+          },
+          {
+            "tipo": "aura",
+            "en": "abogados",
+            "dura": 2.2,
+            "quien": "jd",
+            "color": "#F26B1D"
+          }
+        ],
+        "personaje": {
+          "nombre": "Cha Hae-in",
+          "clase": "Cazadora rango S · Solo Leveling",
+          "tema": "mazmorra",
+          "color": "#E8323C",
+          "mundo": "Cosplay · SOFA 2026",
+          "stats": [
+            {
+              "n": "COSPLAY",
+              "v": 1
+            },
+            {
+              "n": "ESPADA",
+              "v": 0.9
+            },
+            {
+              "n": "LORE",
+              "v": 0.7
+            }
+          ],
+          "resumen": "A todos los cazadores, excepto Sung Jinwoo"
+        },
+        "ficha": true,
+        "fichaEn": 0.3,
+        "retrato": {
+          "t": 6,
+          "x": 0.5543,
+          "y": 0.3471,
+          "w": 0.2164,
+          "h": 0.138
+        },
+        "turnos": [
+          {
+            "desde": 3.6,
+            "quien": "jd"
+          },
+          {
+            "desde": 5.6,
+            "quien": "p2"
+          },
+          {
+            "desde": 9.3,
+            "quien": "jd",
+            "fijo": true
+          }
+        ],
+        "foco": {
+          "jd": {
+            "x": 0.47,
+            "y": 0.42,
+            "escala": 1.3
+          },
+          "p2": {
+            "x": 0.66,
+            "y": 0.43,
+            "escala": 1.38
+          }
+        },
+        "inicio": 310,
+        "cuadros": 251,
+        "cola": 21,
+        "tramos": [
+          {
+            "archivo": "sofa/DJI_20261012_135441_015_video.mp4",
+            "desde": 3.4,
+            "hasta": 8.5,
+            "velocidad": 1.08,
+            "inicio": 0,
+            "cuadros": 142
+          },
+          {
+            "archivo": "sofa/DJI_20261012_135441_015_video.mp4",
+            "desde": 9,
+            "hasta": 12.16,
+            "velocidad": 1.08,
+            "inicio": 142,
+            "cuadros": 88
+          }
+        ],
+        "subtitulos": [
+          {
+            "text": " A",
+            "startMs": 185,
+            "endMs": 285,
+            "timestampMs": null,
+            "confidence": 0.489676,
+            "quien": "jd"
+          },
+          {
+            "text": " quién demandaría",
+            "startMs": 285,
+            "endMs": 1006,
+            "timestampMs": null,
+            "confidence": 0.746753,
+            "quien": "jd"
+          },
+          {
+            "text": " a",
+            "startMs": 1006,
+            "endMs": 1106,
+            "timestampMs": null,
+            "confidence": 0.229914,
+            "quien": "jd"
+          },
+          {
+            "text": " tu",
+            "startMs": 1106,
+            "endMs": 1246,
+            "timestampMs": null,
+            "confidence": 0.987946,
+            "quien": "jd"
+          },
+          {
+            "text": " personaje?",
+            "startMs": 1246,
+            "endMs": 1667,
+            "timestampMs": null,
+            "confidence": 0.989921,
+            "quien": "jd"
+          },
+          {
+            "text": " A",
+            "startMs": 2037,
+            "endMs": 2143,
+            "timestampMs": null,
+            "confidence": 0.675643,
+            "quien": "p2"
+          },
+          {
+            "text": " todos",
+            "startMs": 2143,
+            "endMs": 2416,
+            "timestampMs": null,
+            "confidence": 0.956499,
+            "quien": "p2"
+          },
+          {
+            "text": " los",
+            "startMs": 2416,
+            "endMs": 2606,
+            "timestampMs": null,
+            "confidence": 0.986543,
+            "quien": "p2"
+          },
+          {
+            "text": " cazadores",
+            "startMs": 2606,
+            "endMs": 3047,
+            "timestampMs": null,
+            "confidence": 0.810981,
+            "quien": "p2"
+          },
+          {
+            "text": " de",
+            "startMs": 3047,
+            "endMs": 3194,
+            "timestampMs": null,
+            "confidence": 0.761383,
+            "quien": "p2"
+          },
+          {
+            "text": " este",
+            "startMs": 3194,
+            "endMs": 3426,
+            "timestampMs": null,
+            "confidence": 0.507991,
+            "quien": "p2"
+          },
+          {
+            "text": " mundo",
+            "startMs": 3611,
+            "endMs": 3857,
+            "timestampMs": null,
+            "confidence": 0.990972,
+            "quien": "p2"
+          },
+          {
+            "text": " excepto",
+            "startMs": 3857,
+            "endMs": 4444,
+            "timestampMs": null,
+            "confidence": 0.031161,
+            "quien": "p2"
+          },
+          {
+            "text": " Sung Jinwoo.",
+            "startMs": 4907,
+            "endMs": 5000,
+            "timestampMs": null,
+            "confidence": 0.436511,
+            "quien": "p2"
+          },
+          {
+            "text": " Vean,",
+            "startMs": 5000,
+            "endMs": 5481,
+            "timestampMs": null,
+            "confidence": 0.872195,
+            "quien": "jd"
+          },
+          {
+            "text": " hay",
+            "startMs": 5481,
+            "endMs": 5944,
+            "timestampMs": null,
+            "confidence": 0.589125,
+            "quien": "jd"
+          },
+          {
+            "text": " hartas",
+            "startMs": 5944,
+            "endMs": 6315,
+            "timestampMs": null,
+            "confidence": 0.409596,
+            "quien": "jd"
+          },
+          {
+            "text": " demandas",
+            "startMs": 6315,
+            "endMs": 6704,
+            "timestampMs": null,
+            "confidence": 0.615348,
+            "quien": "jd"
+          },
+          {
+            "text": " para",
+            "startMs": 6704,
+            "endMs": 7037,
+            "timestampMs": null,
+            "confidence": 0.979847,
+            "quien": "jd"
+          },
+          {
+            "text": " los",
+            "startMs": 7037,
+            "endMs": 7222,
+            "timestampMs": null,
+            "confidence": 0.996959,
+            "quien": "jd"
+          },
+          {
+            "text": " abogados.",
+            "startMs": 7222,
+            "endMs": 7369,
+            "timestampMs": null,
+            "confidence": 0.971539,
+            "quien": "jd"
+          },
+          {
+            "text": " Gracias.",
+            "startMs": 7369,
+            "endMs": 7500,
+            "timestampMs": null,
+            "confidence": 0.930149,
+            "quien": "jd"
+          }
+        ],
+        "texto": "A quien demandaría a tu personaje? A todos los cazadores de este mundo hace todo son gingos. Vean, hay artas demandas para los abogados. Gracias.",
+        "retratoPng": "sofa/retratos/sofa-demanda-2-91b3e495.png"
+      },
+      {
+        "tipo": "nivel",
+        "numero": 2,
+        "nombre": "Pabellón 3",
+        "estilo": "mundo2d",
+        "segundos": 2,
+        "inicio": 561,
+        "cuadros": 60
+      },
+      {
+        "tipo": "clip",
+        "archivo": "DJI_20261012_141732_578_video.mp4",
+        "desde": 7.6,
+        "hasta": 14.6,
+        "golpes": [
+          {
+            "en": "minera",
+            "texto": "EMPRESA MINERA",
+            "estilo": "daño"
+          }
+        ],
+        "fx": [
+          {
+            "tipo": "onda",
+            "en": "minera",
+            "dura": 1.2,
+            "quien": "p2",
+            "color": "#58D35A"
+          },
+          {
+            "tipo": "levitar",
+            "en": "grandes",
+            "dura": 1.6,
+            "quien": null
+          }
+        ],
+        "personaje": {
+          "nombre": "Operador",
+          "clase": "Fuerzas especiales · Call of Duty",
+          "tema": "ciudad",
+          "color": "#58D35A",
+          "mundo": "Operador táctico · visión nocturna",
+          "stats": [
+            {
+              "n": "COSPLAY",
+              "v": 0.9
+            },
+            {
+              "n": "ALTURA",
+              "v": 1
+            },
+            {
+              "n": "SIGILO",
+              "v": 0.6
+            }
+          ],
+          "resumen": "A una empresa minera"
+        },
+        "ficha": true,
+        "fichaEn": 0.3,
+        "retrato": {
+          "t": 10.4,
+          "x": 0.4815,
+          "y": 0.3091,
+          "w": 0.247,
+          "h": 0.1575
+        },
+        "turnos": [
+          {
+            "desde": 7.6,
+            "quien": "jd"
+          },
+          {
+            "desde": 10.5,
+            "quien": "p2"
+          },
+          {
+            "desde": 11.6,
+            "quien": "jd",
+            "fijo": true
+          }
+        ],
+        "foco": {
+          "jd": {
+            "x": 0.38,
+            "y": 0.42,
+            "escala": 1.3
+          },
+          "p2": {
+            "x": 0.6,
+            "y": 0.41,
+            "escala": 1.38
+          }
+        },
+        "inicio": 621,
+        "cuadros": 214,
+        "cola": 8,
+        "tramos": [
+          {
+            "archivo": "sofa/DJI_20261012_141732_578_video.mp4",
+            "desde": 7.4,
+            "hasta": 12.1,
+            "velocidad": 1.08,
+            "inicio": 0,
+            "cuadros": 131
+          },
+          {
+            "archivo": "sofa/DJI_20261012_141732_578_video.mp4",
+            "desde": 12.6,
+            "hasta": 15.3,
+            "velocidad": 1.08,
+            "inicio": 131,
+            "cuadros": 75
+          }
+        ],
+        "subtitulos": [
+          {
+            "text": " ¿Y",
+            "startMs": 185,
+            "endMs": 302,
+            "timestampMs": null,
+            "confidence": 0.930092,
+            "quien": "jd"
+          },
+          {
+            "text": " cuéntanos",
+            "startMs": 302,
+            "endMs": 794,
+            "timestampMs": null,
+            "confidence": 0.92505,
+            "quien": "jd"
+          },
+          {
+            "text": " a",
+            "startMs": 794,
+            "endMs": 910,
+            "timestampMs": null,
+            "confidence": 0.951501,
+            "quien": "jd"
+          },
+          {
+            "text": " quién demandaría",
+            "startMs": 910,
+            "endMs": 1753,
+            "timestampMs": null,
+            "confidence": 0.961825,
+            "quien": "jd"
+          },
+          {
+            "text": " tu",
+            "startMs": 1753,
+            "endMs": 1916,
+            "timestampMs": null,
+            "confidence": 0.642423,
+            "quien": "jd"
+          },
+          {
+            "text": " personaje?",
+            "startMs": 1916,
+            "endMs": 2407,
+            "timestampMs": null,
+            "confidence": 0.991787,
+            "quien": "jd"
+          },
+          {
+            "text": " A",
+            "startMs": 2870,
+            "endMs": 2956,
+            "timestampMs": null,
+            "confidence": 0.864737,
+            "quien": "p2"
+          },
+          {
+            "text": " cualquier",
+            "startMs": 2956,
+            "endMs": 3311,
+            "timestampMs": null,
+            "confidence": 0.953412,
+            "quien": "p2"
+          },
+          {
+            "text": " empresa",
+            "startMs": 3311,
+            "endMs": 3599,
+            "timestampMs": null,
+            "confidence": 0.998946,
+            "quien": "p2"
+          },
+          {
+            "text": " minera.",
+            "startMs": 3599,
+            "endMs": 3854,
+            "timestampMs": null,
+            "confidence": 0.970231,
+            "quien": "p2"
+          },
+          {
+            "text": " Bueno,",
+            "startMs": 3854,
+            "endMs": 4074,
+            "timestampMs": null,
+            "confidence": 0.846527,
+            "quien": "jd"
+          },
+          {
+            "text": " grandes",
+            "startMs": 4537,
+            "endMs": 4873,
+            "timestampMs": null,
+            "confidence": 0.964352,
+            "quien": "jd"
+          },
+          {
+            "text": " respuestas,",
+            "startMs": 4873,
+            "endMs": 5328,
+            "timestampMs": null,
+            "confidence": 0.993849,
+            "quien": "jd"
+          },
+          {
+            "text": " muchas",
+            "startMs": 5328,
+            "endMs": 5624,
+            "timestampMs": null,
+            "confidence": 0.972507,
+            "quien": "jd"
+          },
+          {
+            "text": " gracias.",
+            "startMs": 5624,
+            "endMs": 5960,
+            "timestampMs": null,
+            "confidence": 0.99647,
+            "quien": "jd"
+          },
+          {
+            "text": " ¡Gracias!",
+            "startMs": 5960,
+            "endMs": 6296,
+            "timestampMs": null,
+            "confidence": 0.192627,
+            "quien": "jd"
+          }
+        ],
+        "texto": "¿Y cuéntanos a quién demandaría tu personaje? A cualquier empresa minera. Bueno, grandes respuestas, muchas gracias. ¡Gracias!",
+        "retratoPng": "sofa/retratos/sofa-demanda-3-21930665.png"
+      },
+      {
+        "tipo": "nivel",
+        "numero": 3,
+        "nombre": "Heroes Zone",
+        "estilo": "jefe",
+        "segundos": 2,
+        "inicio": 835,
+        "cuadros": 60
+      },
+      {
+        "tipo": "clip",
+        "archivo": "DJI_20261012_150608_167_video.mp4",
+        "desde": 15.5,
+        "hasta": 25.6,
+        "golpes": [
+          {
+            "en": "demandada",
+            "texto": "ELLA ES LA DEMANDADA",
+            "estilo": "pastilla"
+          },
+          {
+            "en": "villana",
+            "texto": "UNA VILLANA",
+            "estilo": "daño"
+          }
+        ],
+        "fx": [
+          {
+            "tipo": "relampago",
+            "en": "demandada",
+            "dura": 1.4,
+            "quien": "p2",
+            "color": "#F06292"
+          },
+          {
+            "tipo": "aura",
+            "en": "villana",
+            "dura": 2,
+            "quien": "p2",
+            "color": "#F06292"
+          }
+        ],
+        "personaje": {
+          "nombre": "Himiko Toga",
+          "clase": "Villana · My Hero Academia",
+          "tema": "terror",
+          "color": "#F06292",
+          "mundo": "Cosplay · SOFA 2026",
+          "stats": [
+            {
+              "n": "COSPLAY",
+              "v": 1
+            },
+            {
+              "n": "CAOS",
+              "v": 1
+            },
+            {
+              "n": "CORDURA",
+              "v": 0.1
+            }
+          ],
+          "resumen": "Ella es la demandada"
+        },
+        "ficha": true,
+        "fichaEn": 0.3,
+        "retrato": {
+          "t": 20.6,
+          "x": 0.5059,
+          "y": 0.3527,
+          "w": 0.1864,
+          "h": 0.1188
+        },
+        "turnos": [
+          {
+            "desde": 15.5,
+            "quien": "jd"
+          },
+          {
+            "desde": 18.9,
+            "quien": "p2"
+          },
+          {
+            "desde": 22.5,
+            "quien": "jd"
+          },
+          {
+            "desde": 24.1,
+            "quien": "p2",
+            "fijo": true
+          },
+          {
+            "desde": 25.5,
+            "quien": "jd",
+            "fijo": true
+          }
+        ],
+        "foco": {
+          "jd": {
+            "x": 0.35,
+            "y": 0.4,
+            "escala": 1.28
+          },
+          "p2": {
+            "x": 0.7,
+            "y": 0.42,
+            "escala": 1.38
+          }
+        },
+        "inicio": 895,
+        "cuadros": 274,
+        "cola": 8,
+        "tramos": [
+          {
+            "archivo": "sofa/DJI_20261012_150608_167_video.mp4",
+            "desde": 15.3,
+            "hasta": 18.3,
+            "velocidad": 1.08,
+            "inicio": 0,
+            "cuadros": 83
+          },
+          {
+            "archivo": "sofa/DJI_20261012_150608_167_video.mp4",
+            "desde": 18.7,
+            "hasta": 19.8,
+            "velocidad": 1.08,
+            "inicio": 83,
+            "cuadros": 31
+          },
+          {
+            "archivo": "sofa/DJI_20261012_150608_167_video.mp4",
+            "desde": 20.1,
+            "hasta": 21.7,
+            "velocidad": 1.08,
+            "inicio": 114,
+            "cuadros": 44
+          },
+          {
+            "archivo": "sofa/DJI_20261012_150608_167_video.mp4",
+            "desde": 22.32,
+            "hasta": 26.2,
+            "velocidad": 1.08,
+            "inicio": 158,
+            "cuadros": 108
+          }
+        ],
+        "subtitulos": [
+          {
+            "text": " -¿Tú",
+            "startMs": 185,
+            "endMs": 463,
+            "timestampMs": null,
+            "confidence": 0.956014,
+            "quien": "jd"
+          },
+          {
+            "text": " personaje",
+            "startMs": 1111,
+            "endMs": 1553,
+            "timestampMs": null,
+            "confidence": 0.989264,
+            "quien": "jd"
+          },
+          {
+            "text": " demandaría",
+            "startMs": 1553,
+            "endMs": 2037,
+            "timestampMs": null,
+            "confidence": 0.799148,
+            "quien": "jd"
+          },
+          {
+            "text": " a",
+            "startMs": 2037,
+            "endMs": 2143,
+            "timestampMs": null,
+            "confidence": 0.866472,
+            "quien": "jd"
+          },
+          {
+            "text": " alguien?",
+            "startMs": 2143,
+            "endMs": 2500,
+            "timestampMs": null,
+            "confidence": 0.998799,
+            "quien": "jd"
+          },
+          {
+            "text": " -Uy,",
+            "startMs": 2963,
+            "endMs": 3119,
+            "timestampMs": null,
+            "confidence": 0.939641,
+            "quien": "p2"
+          },
+          {
+            "text": " no",
+            "startMs": 3119,
+            "endMs": 3274,
+            "timestampMs": null,
+            "confidence": 0.99346,
+            "quien": "p2"
+          },
+          {
+            "text": " creo.",
+            "startMs": 3274,
+            "endMs": 3519,
+            "timestampMs": null,
+            "confidence": 0.923044,
+            "quien": "p2"
+          },
+          {
+            "text": " Ella",
+            "startMs": 3981,
+            "endMs": 4225,
+            "timestampMs": null,
+            "confidence": 0.467714,
+            "quien": "p2"
+          },
+          {
+            "text": " es",
+            "startMs": 4225,
+            "endMs": 4380,
+            "timestampMs": null,
+            "confidence": 0.987227,
+            "quien": "p2"
+          },
+          {
+            "text": " la",
+            "startMs": 4380,
+            "endMs": 4535,
+            "timestampMs": null,
+            "confidence": 0.99534,
+            "quien": "p2"
+          },
+          {
+            "text": " demandada.",
+            "startMs": 4535,
+            "endMs": 5000,
+            "timestampMs": null,
+            "confidence": 0.934866,
+            "quien": "p2"
+          },
+          {
+            "text": " -Ah,",
+            "startMs": 5463,
+            "endMs": 6111,
+            "timestampMs": null,
+            "confidence": 0.902777,
+            "quien": "jd"
+          },
+          {
+            "text": " ella",
+            "startMs": 6111,
+            "endMs": 6222,
+            "timestampMs": null,
+            "confidence": 0.900689,
+            "quien": "jd"
+          },
+          {
+            "text": " es",
+            "startMs": 6222,
+            "endMs": 6315,
+            "timestampMs": null,
+            "confidence": 0.993127,
+            "quien": "jd"
+          },
+          {
+            "text": " la",
+            "startMs": 6315,
+            "endMs": 6519,
+            "timestampMs": null,
+            "confidence": 0.99232,
+            "quien": "jd"
+          },
+          {
+            "text": " demandada.",
+            "startMs": 6519,
+            "endMs": 6926,
+            "timestampMs": null,
+            "confidence": 0.99918,
+            "quien": "jd"
+          },
+          {
+            "text": " -Eso",
+            "startMs": 6926,
+            "endMs": 7130,
+            "timestampMs": null,
+            "confidence": 0.986483,
+            "quien": "p2"
+          },
+          {
+            "text": " es",
+            "startMs": 7130,
+            "endMs": 7204,
+            "timestampMs": null,
+            "confidence": 0.947457,
+            "quien": "p2"
+          },
+          {
+            "text": " una",
+            "startMs": 7204,
+            "endMs": 7370,
+            "timestampMs": null,
+            "confidence": 0.258574,
+            "quien": "p2"
+          },
+          {
+            "text": " villana.",
+            "startMs": 7370,
+            "endMs": 8222,
+            "timestampMs": null,
+            "confidence": 0.787097,
+            "quien": "p2"
+          },
+          {
+            "text": " Ok,",
+            "startMs": 8222,
+            "endMs": 8255,
+            "timestampMs": null,
+            "confidence": 0.220434,
+            "quien": "jd"
+          },
+          {
+            "text": " bueno,",
+            "startMs": 8255,
+            "endMs": 8315,
+            "timestampMs": null,
+            "confidence": 0.309653,
+            "quien": "jd"
+          }
+        ],
+        "texto": "-¿Tú personaje demandaría a alguien? -Uy, no creo. Ella es la demandada. -Ah, ella es la demandada. -Eso es una villana. Ok, bueno,",
+        "retratoPng": "sofa/retratos/sofa-demanda-4-4a9fa7d.png"
+      },
+      {
+        "tipo": "cierre",
+        "archivo": "DJI_20261012_142516_966_video.mp4",
+        "desde": 1.4,
+        "hasta": 8.4,
+        "golpes": [
+          {
+            "en": "fantasía",
+            "texto": "MUNDOS DE FANTASÍA",
+            "estilo": "pastilla"
+          }
+        ],
+        "fx": [],
+        "foco": {
+          "jd": {
+            "x": 0.5,
+            "y": 0.36,
+            "escala": 1.12
+          }
+        },
+        "lados": {
+          "jd": "centro"
+        },
+        "cta": "COMENTA A QUIÉN DEMANDARÍAS",
+        "inicio": 1169,
+        "cuadros": 200,
+        "cola": 0,
+        "tramos": [
+          {
+            "archivo": "sofa/DJI_20261012_142516_966_video.mp4",
+            "desde": 1.4,
+            "hasta": 8.6,
+            "velocidad": 1.08,
+            "inicio": 0,
+            "cuadros": 200
+          }
+        ],
+        "subtitulos": [
+          {
+            "text": " El",
+            "startMs": 185,
+            "endMs": 537,
+            "timestampMs": null,
+            "confidence": 0.560616,
+            "quien": "jd"
+          },
+          {
+            "text": " derecho",
+            "startMs": 537,
+            "endMs": 1000,
+            "timestampMs": null,
+            "confidence": 0.812155,
+            "quien": "jd"
+          },
+          {
+            "text": " también",
+            "startMs": 1000,
+            "endMs": 1278,
+            "timestampMs": null,
+            "confidence": 0.977267,
+            "quien": "jd"
+          },
+          {
+            "text": " aplica",
+            "startMs": 1278,
+            "endMs": 1463,
+            "timestampMs": null,
+            "confidence": 0.691062,
+            "quien": "jd"
+          },
+          {
+            "text": " en",
+            "startMs": 1463,
+            "endMs": 1611,
+            "timestampMs": null,
+            "confidence": 0.953297,
+            "quien": "jd"
+          },
+          {
+            "text": " los",
+            "startMs": 1611,
+            "endMs": 1796,
+            "timestampMs": null,
+            "confidence": 0.962639,
+            "quien": "jd"
+          },
+          {
+            "text": " mundos",
+            "startMs": 1796,
+            "endMs": 2019,
+            "timestampMs": null,
+            "confidence": 0.915698,
+            "quien": "jd"
+          },
+          {
+            "text": " de",
+            "startMs": 2019,
+            "endMs": 2315,
+            "timestampMs": null,
+            "confidence": 0.987035,
+            "quien": "jd"
+          },
+          {
+            "text": " fantasía",
+            "startMs": 2315,
+            "endMs": 2407,
+            "timestampMs": null,
+            "confidence": 0.938674,
+            "quien": "jd"
+          },
+          {
+            "text": " y",
+            "startMs": 3000,
+            "endMs": 3130,
+            "timestampMs": null,
+            "confidence": 0.258993,
+            "quien": "jd"
+          },
+          {
+            "text": " cuéntanos",
+            "startMs": 3130,
+            "endMs": 3630,
+            "timestampMs": null,
+            "confidence": 0.869459,
+            "quien": "jd"
+          },
+          {
+            "text": " tú",
+            "startMs": 3630,
+            "endMs": 3778,
+            "timestampMs": null,
+            "confidence": 0.701229,
+            "quien": "jd"
+          },
+          {
+            "text": " a",
+            "startMs": 3778,
+            "endMs": 3870,
+            "timestampMs": null,
+            "confidence": 0.877405,
+            "quien": "jd"
+          },
+          {
+            "text": " quién",
+            "startMs": 3870,
+            "endMs": 4204,
+            "timestampMs": null,
+            "confidence": 0.697511,
+            "quien": "jd"
+          },
+          {
+            "text": " demandarías,",
+            "startMs": 4204,
+            "endMs": 4796,
+            "timestampMs": null,
+            "confidence": 0.902548,
+            "quien": "jd"
+          },
+          {
+            "text": " déjanoslo",
+            "startMs": 4796,
+            "endMs": 5241,
+            "timestampMs": null,
+            "confidence": 0.9326,
+            "quien": "jd"
+          },
+          {
+            "text": " saber",
+            "startMs": 5241,
+            "endMs": 5481,
+            "timestampMs": null,
+            "confidence": 0.995621,
+            "quien": "jd"
+          },
+          {
+            "text": " en",
+            "startMs": 5481,
+            "endMs": 5741,
+            "timestampMs": null,
+            "confidence": 0.981366,
+            "quien": "jd"
+          },
+          {
+            "text": " comentarios.",
+            "startMs": 5741,
+            "endMs": 5833,
+            "timestampMs": null,
+            "confidence": 0.891941,
+            "quien": "jd"
+          }
+        ],
+        "texto": "El derecho también aplica en los mundos de fantasía y cuéntanos tú a quién demandarías, déjanoslo saber en comentarios."
+      },
+      {
+        "tipo": "final",
+        "inicio": 1369,
+        "cuadros": 72
+      }
+    ],
+    "total": 1441,
+    "avisos": []
+  }
+}

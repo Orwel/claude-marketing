@@ -71,6 +71,10 @@ haga sentir**. Herramientas disponibles en la plantilla Montaje (y equivalentes 
 | Una serie o tema recurrente | etiqueta de serie (`variantes.<cuenta>.etiqueta`), **solo en la pieza que la pida**: no es una etiqueta fija para todos los videos |
 
 Criterios:
+- **Nada se encima, y lo que choca se reubica, no se quita** (29-sep-2026). En 16:9 (Contrappto en
+  LinkedIn) el rótulo de nombre va sobre la tarjeta del video, y el titular espera debajo del gancho y
+  sube cuando este sale. Al tocar la geometría (`DISENOS` en `Montaje.jsx`), revisar cuadros de los tres
+  formatos en el segundo 2 (gancho) y el 4 (rótulo).
 - **Llenar sin tapar:** algo pasa cada 2–4 s, pero la cara nunca queda tapada y nunca hay dos cosas
   compitiendo en el mismo sitio (golpes, chispas, paneles y rótulo de nombre se esquivan solos).
 - **Variar:** no dos golpes seguidos del mismo estilo; cambiar tipografía, escala y lado.
@@ -123,7 +127,7 @@ genéricas: el método, ajustado a cada video** (28-sep-2026). El kit tiene el l
 - **Logo de Trifuerza** en los videos de juanda y trifuerza, arriba a la izquierda durante el cuerpo:
   archivos oficiales del Drive (`Redes sociales/Assets/Logos/Trifuerza`), copiados a
   `public/marcas/trifuerza/` y recortados solo en su margen transparente.
-  - Sobre video o fondo oscuro: `logo-horizontal-claro.png` (ícono nítido, letras claras), sobre una
+  - Sobre video o fondo oscuro: `logo-horizontal-claro.png` (ícono a color, letras blancas puras; desde el 4-oct-2026 es "Mesa de trabajo 6 copia 3" de Drive: la versión anterior tenía las letras azuladas y a Juan David no le gustó), sobre una
     pastilla oscura translúcida que le da contraste y espacio de protección.
   - Sobre fondo blanco: `logo-horizontal-oscuro.png` (letras navy). Desde el 28-sep-2026 Trifuerza va
     en **navy**, no en blanco (no le gustó el blanco); lo entregado antes no se toca.
@@ -169,3 +173,49 @@ Errores que ya pasaron y se revisan siempre:
 2. Al final del audio, la última palabra completa (`astats` sobre los últimos 3 s).
 3. Agudos de la pista (> 5 kHz) por debajo de -35 dB si no hay voz: si hay picos, es un efecto duro.
 4. Lo que se aprenda de sus comentarios va a `docs/APRENDIZAJES.md` y, si es general, a este archivo.
+
+## 8. Carruseles y stories animados
+
+Lo pidió el 29-sep-2026 ("pequeños videos con movimiento, pero más tipo post"; "quedó súper bien hecho").
+
+- **Un carrusel es un video cortado en partes, no un video entero.** Cada lámina es su propio MP4, en
+  Instagram y en LinkedIn. Nunca unir las láminas en un solo video. LinkedIn admite un video por post:
+  allá va el mismo carrusel en imágenes (PNG del último cuadro de cada lámina).
+- **El cuadro 0 es la portada:** Instagram toma el primer cuadro del primer video del carrusel como
+  portada. En la lámina 1 ese cuadro muestra la lámina ya armada (`<Freeze>` del último cuadro) y desde
+  el cuadro 1 corre la animación. Lo mismo vale para cualquier video: nunca arrancar en vacío.
+- **Formato cuadrado 1:1 (1080×1080)** para carruseles; stories 9:16 con zonas seguras (220 px arriba,
+  380 abajo).
+- **Metáfora visual + texto corto por lámina.** La metáfora carga el sentido antes de leer (documentos
+  que se desvanecen = alucinación; candado y barras negras = anonimizar; balanza = transforma bien,
+  recuerda mal). Una idea por lámina; título de 2 líneas como mucho.
+- **La lámina termina quieta pero viva** (latidos, brillos): en Instagram el video de carrusel se repite
+  en bucle. Entradas con la curva de los sitios, sin desenfoque ni grano (§1b).
+- **Primera lámina con "Desliza →", la última con el CTA** (un solo CTA por cuenta). Las del medio,
+  puntos de progreso.
+- **Datos de mentira que no parezcan reales:** radicados "Rad. ••• / 20••", procesos "0457" marcados
+  como ejemplo en `verificar[]`. Nunca un número de sentencia real presentado como inexistente.
+- **Público de la clase del 27: todo público**, no solo abogados. Nada de "para abogados" ni preguntas
+  de litigante en las piezas de la clase.
+- **Cada producto con su mundo:** Trifuerza Legal en dorado #C9A227 sobre casi negro (`pieza.colores`);
+  Contrappto con tono de producto y cierre "demo de 20 minutos", nunca "comenta CLASE"; Technology
+  con cierre "agenda un diagnóstico". Afirmaciones de producto del canvas → `verificar[]`.
+- **Stories para mantener la comunidad activa:** cuenta regresiva, encuestas, caja de preguntas, "en
+  vivo", gracias. Las de encuesta/preguntas son el fondo; el sticker lo pone él.
+
+## 9. Portadas (feed de una sola serie)
+
+Pedido del 29-sep-2026: "que le demos a todo la misma portada". El feed se lee como una serie:
+- **Foto limpia** de la grabación (sin subtítulos ni gráficos), cara centrada; degradado de la marca
+  abajo; firma de la cuenta arriba (`Firma` sobre pastilla oscura).
+- **Título grande** con la tipografía de la cuenta (juanda: Fraunces), 1–3 líneas, palabra clave en
+  el acento; barra de acento encima. Nada de textos pequeños, stickers ni colores ajenos a la marca.
+- **Reel 9:16:** firma y título dentro de la franja 3:4 (240–1680 px), que es lo que muestra la
+  cuadrícula del perfil. LinkedIn 4:5 con la foto completa; Contrappto 16:9 con la foto en tarjeta a
+  la izquierda y el título a la derecha.
+- **Reels ya publicados** sin video original (`piezas/<mes>/portadas/anteriores-<cuenta>.json`): la
+  miniatura vieja trae textos que se enciman, así que va una **ilustración nueva** (metáfora de
+  `remotion/metaforas`, como en los carruseles del evento) con el **título centrado** y la misma firma.
+  Salen a `Edited/Portadas anteriores/NN-<id>.jpg`, en el orden del perfil. Instagram deja cambiar la
+  portada de un reel publicado.
+

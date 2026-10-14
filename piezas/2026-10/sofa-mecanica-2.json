@@ -1,0 +1,2065 @@
+{
+  "plantilla": "Arcade",
+  "serie": "SOFA 2026 · BOGOTÁ",
+  "nivel": "SOFA 2026",
+  "cuentas": [
+    "juanda"
+  ],
+  "velocidad": 1.1,
+  "motivo": "mapa",
+  "lados": {
+    "jd": "izquierda",
+    "p2": "derecha"
+  },
+  "nombres": {
+    "jd": {
+      "nombre": "JUAN DAVID"
+    }
+  },
+  "correcciones": [
+    {
+      "de": "sofá",
+      "a": "SOFA"
+    },
+    {
+      "de": "le pregunte",
+      "a": "le pregunté"
+    },
+    {
+      "de": "Le pregunte",
+      "a": "Le pregunté"
+    },
+    {
+      "de": "Cosplayers",
+      "a": "cosplayers"
+    },
+    {
+      "de": "quien demandaría",
+      "a": "quién demandaría"
+    },
+    {
+      "de": "artas",
+      "a": "hartas"
+    },
+    {
+      "de": "hace todo son",
+      "a": "excepto"
+    },
+    {
+      "de": "gingos",
+      "a": "Sung Jinwoo"
+    },
+    {
+      "de": "Chimico Toga",
+      "a": "Himiko Toga"
+    },
+    {
+      "de": "Magiro Academia",
+      "a": "My Hero Academia"
+    },
+    {
+      "de": "Von Leinton",
+      "a": "Von Lycaon"
+    },
+    {
+      "de": "Sunless On Zero",
+      "a": "Zenless Zone Zero"
+    },
+    {
+      "de": "Aurora del League",
+      "a": "Aurora de League"
+    },
+    {
+      "de": "Mavica",
+      "a": "Mavuika"
+    },
+    {
+      "de": "satura",
+      "a": "La Vasija Pura"
+    },
+    {
+      "de": "te parece es a",
+      "a": "te pareces a"
+    },
+    {
+      "de": "estás tú buena",
+      "a": "está muy buena"
+    },
+    {
+      "de": "En como el fue",
+      "a": "En cómo él fue"
+    },
+    {
+      "de": "indique",
+      "a": "indie"
+    },
+    {
+      "de": "Jägger",
+      "a": "Jaeger"
+    },
+    {
+      "de": "Jäger",
+      "a": "Jaeger"
+    },
+    {
+      "de": "capitano",
+      "a": "Capitano"
+    },
+    {
+      "de": "herfría",
+      "a": "le hizo"
+    },
+    {
+      "de": "Drugs del futuro",
+      "a": "Trunks del futuro"
+    },
+    {
+      "de": "Sayajin",
+      "a": "saiyajin"
+    },
+    {
+      "de": "María",
+      "a": "mijo"
+    },
+    {
+      "de": "platico",
+      "a": "platica"
+    },
+    {
+      "de": "si está allí",
+      "a": "si es saiyajin"
+    },
+    {
+      "de": "respaunear",
+      "a": "respawnear"
+    },
+    {
+      "de": "Respawn",
+      "a": "respawn"
+    },
+    {
+      "de": "cagunes",
+      "a": "kagunes"
+    },
+    {
+      "de": "Maca",
+      "a": "Maka"
+    },
+    {
+      "de": "SoulHitter",
+      "a": "Soul Eater"
+    },
+    {
+      "de": "El jefe maestro",
+      "a": "el Jefe Maestro"
+    },
+    {
+      "de": "Te letra... transportarme",
+      "a": "¿Teletransportarme?"
+    },
+    {
+      "de": "maquillero",
+      "a": "Maki Gero"
+    },
+    {
+      "de": "ardestruir",
+      "a": "destruir"
+    },
+    {
+      "de": "Joaquin Club",
+      "a": "Jockey Club"
+    },
+    {
+      "de": "Frey",
+      "a": "Fray"
+    },
+    {
+      "de": "Vélula",
+      "a": "Bélula"
+    },
+    {
+      "de": "Séfira",
+      "a": "Céfira"
+    },
+    {
+      "de": "bótalo",
+      "a": "vótalo"
+    },
+    {
+      "de": "alteratura",
+      "a": "literatura"
+    },
+    {
+      "de": "de mito",
+      "a": "de Mito"
+    },
+    {
+      "de": "Esto es mito",
+      "a": "Esto es Mito"
+    },
+    {
+      "de": "perracos espantos",
+      "a": "Berracos Espantos"
+    },
+    {
+      "de": "Bogofighters",
+      "a": "Bogo Fighters"
+    },
+    {
+      "de": "cráteras",
+      "a": "criaturas"
+    },
+    {
+      "de": "podren",
+      "a": "cobren"
+    },
+    {
+      "de": "viene a secta",
+      "a": "hay una secta"
+    },
+    {
+      "de": "de acuerdos el la guardiente",
+      "a": "de acuerdo, el aguardiente"
+    },
+    {
+      "de": "agua mendita",
+      "a": "agua bendita"
+    },
+    {
+      "de": "desarrollos colombianos",
+      "a": "desarrolladores colombianos"
+    },
+    {
+      "de": "colombia",
+      "a": "Colombia"
+    },
+    {
+      "de": "Es está",
+      "a": "Está"
+    }
+  ],
+  "variantes": {
+    "juanda": {
+      "cta": "Comenta tu mecánica",
+      "copy": ""
+    }
+  },
+  "slug": "sofa-mecanica-2",
+  "codigo": "SOFA07",
+  "titulo": "¿Qué mecánica de videojuego traerías a la vida real? · Parte 2",
+  "niveles": 3,
+  "escenas": [
+    {
+      "tipo": "titulo",
+      "segundos": 3.4,
+      "alto": 360,
+      "texto": "¿Qué mecánica de videojuego traerías a la vida real?",
+      "parte": "PARTE 2"
+    },
+    {
+      "tipo": "clip",
+      "archivo": "DJI_20261012_144625_616_video.mp4",
+      "desde": 1.2,
+      "hasta": 14.2,
+      "golpes": [
+        {
+          "en": "mecánica",
+          "texto": "QUÉ MECÁNICA",
+          "estilo": "pastilla"
+        },
+        {
+          "en": "patentadas",
+          "texto": "PATENTADAS",
+          "estilo": "daño"
+        }
+      ],
+      "fx": [
+        {
+          "tipo": "estrellas",
+          "en": "videojuego",
+          "dura": 2.5,
+          "quien": null,
+          "lado": "centro"
+        },
+        {
+          "tipo": "relampago",
+          "en": "patentadas",
+          "dura": 1.4,
+          "quien": null,
+          "lado": "centro",
+          "color": "#F26B1D"
+        }
+      ],
+      "foco": {
+        "jd": {
+          "x": 0.46,
+          "y": 0.4,
+          "escala": 1.3
+        }
+      },
+      "lados": {
+        "jd": "centro"
+      },
+      "juego": [
+        {
+          "archivo": "broll/2026-10/sofa/claustro-caballero-1080x1920.mp4",
+          "en": "gustaría",
+          "hasta": "respuestas",
+          "modo": "ventana",
+          "desdeS": 6,
+          "rotulo": "MECÁNICAS DE VIDEOJUEGO",
+          "sub": "El Claustro en vivo · trifuerza.co"
+        }
+      ],
+      "_avisos": []
+    },
+    {
+      "tipo": "clip",
+      "archivo": "IMG_4875.MOV",
+      "desde": 7.45,
+      "hasta": 24.07,
+      "golpes": [
+        {
+          "en": "mapa",
+          "texto": "MAPA",
+          "estilo": "pastilla"
+        },
+        {
+          "en": "pierdo",
+          "texto": "ME PIERDO",
+          "estilo": "daño"
+        }
+      ],
+      "fx": [
+        {
+          "tipo": "mapa",
+          "en": "mapa",
+          "dura": 4,
+          "quien": "p2"
+        },
+        {
+          "tipo": "teletransporte",
+          "en": "botón",
+          "dura": 1.4,
+          "quien": null
+        }
+      ],
+      "personaje": {
+        "nombre": "Maka Albarn",
+        "clase": "Técnica de guadaña · Soul Eater",
+        "tema": "terror",
+        "color": "#58D35A",
+        "mundo": "Cosplay · SOFA 2026",
+        "stats": [
+          {
+            "n": "COSPLAY",
+            "v": 1
+          },
+          {
+            "n": "ORIENTACIÓN",
+            "v": 0.1
+          },
+          {
+            "n": "MAPA",
+            "v": 1
+          }
+        ],
+        "resumen": "Ver todo el mapa con un botón"
+      },
+      "ficha": true,
+      "fichaEn": 0.3,
+      "retrato": {
+        "t": 60,
+        "x": 0.2298,
+        "y": 0.3932,
+        "w": 0.1987,
+        "h": 0.1267
+      },
+      "turnos": [
+        {
+          "desde": 7.5,
+          "quien": "jd"
+        },
+        {
+          "desde": 12.8,
+          "quien": "p2"
+        }
+      ],
+      "foco": {
+        "jd": {
+          "x": 0.67,
+          "y": 0.4,
+          "escala": 1.6
+        },
+        "p2": {
+          "x": 0.37,
+          "y": 0.44,
+          "escala": 1.65
+        }
+      },
+      "lados": {
+        "jd": "derecha",
+        "p2": "izquierda"
+      },
+      "finDuro": 24.07,
+      "anclas": [
+        [
+          "soy Maca de SoulHitter.",
+          5.45,
+          6.65
+        ],
+        [
+          "¿Y cuéntanos",
+          7.5,
+          8.05
+        ],
+        [
+          "qué mecánica de",
+          8.2,
+          9.35
+        ],
+        [
+          "videojuego traerías a la vida real?",
+          9.9,
+          11.8
+        ],
+        [
+          "Bueno, hay varias que me gustaría,",
+          12.82,
+          14.62
+        ],
+        [
+          "las cosas,",
+          20.3,
+          20.64
+        ],
+        [
+          "porque",
+          21.02,
+          21.42
+        ],
+        [
+          "soy muy...",
+          21.86,
+          22.6
+        ],
+        [
+          "me pierdo muy fácil,",
+          22.65,
+          24.06
+        ],
+        [
+          "entonces acá el celular es un lugar peligroso,",
+          24.1,
+          25.9
+        ]
+      ],
+      "juego": [
+        {
+          "archivo": "broll/2026-10/sofa/claustro-caballero-1920x1080.mp4",
+          "en": "dónde",
+          "hasta": "pierdo",
+          "modo": "ventana",
+          "desdeS": 10,
+          "rotulo": "MAPA · EL CLAUSTRO",
+          "sub": "trifuerza.co/juego-urosario"
+        }
+      ],
+      "_avisos": []
+    },
+    {
+      "tipo": "nivel",
+      "numero": 2,
+      "nombre": "Entrada principal",
+      "estilo": "mundo2d",
+      "segundos": 2,
+      "mundo": "ciudad"
+    },
+    {
+      "tipo": "clip",
+      "archivo": "DJI_20261012_150400_698_video.mp4",
+      "desde": 26.2,
+      "hasta": 37.6,
+      "golpes": [
+        {
+          "en": "teletransportarme",
+          "texto": "TELETRANSPORTARME",
+          "estilo": "golpe"
+        },
+        {
+          "en": "plataformeo",
+          "texto": "EL PLATAFORMEO",
+          "estilo": "pastilla",
+          "vez": 2
+        },
+        {
+          "en": "libertad",
+          "texto": "LIBERTAD",
+          "estilo": "xp"
+        }
+      ],
+      "fx": [
+        {
+          "tipo": "teletransporte",
+          "en": "teletransportarme",
+          "dura": 1.6,
+          "quien": null
+        },
+        {
+          "tipo": "plataformas",
+          "en": "plataformeo",
+          "dura": 3,
+          "quien": "p2"
+        },
+        {
+          "tipo": "dobleSalto",
+          "en": "poderte",
+          "dura": 1.6,
+          "quien": null
+        }
+      ],
+      "personaje": {
+        "nombre": "Dúo cosplay",
+        "clase": "Cosplayers",
+        "tema": "ciudad",
+        "color": "#B388FF",
+        "mundo": "Cosplay · SOFA 2026",
+        "stats": [],
+        "resumen": "Teletransportarse y el plataformeo",
+        "anonimo": true
+      },
+      "turnos": [
+        {
+          "desde": 26.2,
+          "quien": "jd"
+        },
+        {
+          "desde": 28.9,
+          "quien": "p2",
+          "fijo": true
+        }
+      ],
+      "foco": {
+        "jd": {
+          "x": 0.25,
+          "y": 0.36,
+          "escala": 1.3
+        },
+        "p2": {
+          "x": 0.65,
+          "y": 0.36,
+          "escala": 1.3
+        }
+      },
+      "_avisos": []
+    },
+    {
+      "tipo": "cierre",
+      "archivo": "DJI_20261012_151303_085_video.mp4",
+      "desde": 1.4,
+      "hasta": 6.8,
+      "golpes": [
+        {
+          "en": "real",
+          "texto": "¿Y TÚ CUÁL?",
+          "estilo": "pastilla"
+        }
+      ],
+      "fx": [],
+      "foco": {
+        "jd": {
+          "x": 0.47,
+          "y": 0.39,
+          "escala": 1.3
+        }
+      },
+      "lados": {
+        "jd": "centro"
+      },
+      "cta": "COMENTA TU MECÁNICA",
+      "_avisos": []
+    }
+  ],
+  "verificar": [
+    {
+      "dato": "«Muchas mecánicas estuvieron patentadas» lo dice Juan David; en pantalla no se afirma cuál. Maka Albarn (oído «Maca de SoulHitter») por confirmar",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "El dúo del plataformeo no se identifico: va sin ficha, como PLAYER 3",
+      "estado": "pendiente"
+    }
+  ],
+  "generado": {
+    "escenas": [
+      {
+        "tipo": "titulo",
+        "segundos": 3.4,
+        "alto": 360,
+        "texto": "¿Qué mecánica de videojuego traerías a la vida real?",
+        "parte": "PARTE 2",
+        "inicio": 0,
+        "cuadros": 102
+      },
+      {
+        "tipo": "clip",
+        "archivo": "DJI_20261012_144625_616_video.mp4",
+        "desde": 1.2,
+        "hasta": 14.2,
+        "golpes": [
+          {
+            "en": "mecánica",
+            "texto": "QUÉ MECÁNICA",
+            "estilo": "pastilla"
+          },
+          {
+            "en": "patentadas",
+            "texto": "PATENTADAS",
+            "estilo": "daño"
+          }
+        ],
+        "fx": [
+          {
+            "tipo": "estrellas",
+            "en": "videojuego",
+            "dura": 2.5,
+            "quien": null,
+            "lado": "centro"
+          },
+          {
+            "tipo": "relampago",
+            "en": "patentadas",
+            "dura": 1.4,
+            "quien": null,
+            "lado": "centro",
+            "color": "#F26B1D"
+          }
+        ],
+        "foco": {
+          "jd": {
+            "x": 0.46,
+            "y": 0.4,
+            "escala": 1.3
+          }
+        },
+        "lados": {
+          "jd": "centro"
+        },
+        "juego": [
+          {
+            "archivo": "broll/2026-10/sofa/claustro-caballero-1080x1920.mp4",
+            "en": "gustaría",
+            "hasta": "respuestas",
+            "modo": "ventana",
+            "desdeS": 6,
+            "rotulo": "MECÁNICAS DE VIDEOJUEGO",
+            "sub": "El Claustro en vivo · trifuerza.co"
+          }
+        ],
+        "inicio": 102,
+        "cuadros": 380,
+        "cola": 3,
+        "tramos": [
+          {
+            "archivo": "sofa/DJI_20261012_144625_616_video.mp4",
+            "desde": 0.96,
+            "hasta": 14.8,
+            "velocidad": 1.1,
+            "inicio": 0,
+            "cuadros": 377
+          }
+        ],
+        "subtitulos": [
+          {
+            "text": " le pregunté",
+            "startMs": 182,
+            "endMs": 709,
+            "timestampMs": null,
+            "confidence": 0.413459,
+            "quien": "jd"
+          },
+          {
+            "text": " a",
+            "startMs": 709,
+            "endMs": 800,
+            "timestampMs": null,
+            "confidence": 0.96472,
+            "quien": "jd"
+          },
+          {
+            "text": " la",
+            "startMs": 800,
+            "endMs": 1000,
+            "timestampMs": null,
+            "confidence": 0.997459,
+            "quien": "jd"
+          },
+          {
+            "text": " gente",
+            "startMs": 1000,
+            "endMs": 1145,
+            "timestampMs": null,
+            "confidence": 0.997037,
+            "quien": "jd"
+          },
+          {
+            "text": " en",
+            "startMs": 1145,
+            "endMs": 1218,
+            "timestampMs": null,
+            "confidence": 0.972928,
+            "quien": "jd"
+          },
+          {
+            "text": " el",
+            "startMs": 1218,
+            "endMs": 1364,
+            "timestampMs": null,
+            "confidence": 0.996423,
+            "quien": "jd"
+          },
+          {
+            "text": " SOFA",
+            "startMs": 1364,
+            "endMs": 1727,
+            "timestampMs": null,
+            "confidence": 0.698943,
+            "quien": "jd"
+          },
+          {
+            "text": " qué",
+            "startMs": 1727,
+            "endMs": 1945,
+            "timestampMs": null,
+            "confidence": 0.699657,
+            "quien": "jd"
+          },
+          {
+            "text": " mecánica",
+            "startMs": 1945,
+            "endMs": 2364,
+            "timestampMs": null,
+            "confidence": 0.640113,
+            "quien": "jd"
+          },
+          {
+            "text": " de",
+            "startMs": 2364,
+            "endMs": 2527,
+            "timestampMs": null,
+            "confidence": 0.806241,
+            "quien": "jd"
+          },
+          {
+            "text": " videojuego",
+            "startMs": 2527,
+            "endMs": 3073,
+            "timestampMs": null,
+            "confidence": 0.853129,
+            "quien": "jd"
+          },
+          {
+            "text": " le",
+            "startMs": 3073,
+            "endMs": 3273,
+            "timestampMs": null,
+            "confidence": 0.788956,
+            "quien": "jd"
+          },
+          {
+            "text": " gustaría",
+            "startMs": 3273,
+            "endMs": 3582,
+            "timestampMs": null,
+            "confidence": 0.963191,
+            "quien": "jd"
+          },
+          {
+            "text": " tener",
+            "startMs": 3582,
+            "endMs": 3782,
+            "timestampMs": null,
+            "confidence": 0.996968,
+            "quien": "jd"
+          },
+          {
+            "text": " en",
+            "startMs": 3782,
+            "endMs": 4218,
+            "timestampMs": null,
+            "confidence": 0.995421,
+            "quien": "jd"
+          },
+          {
+            "text": " vida",
+            "startMs": 4582,
+            "endMs": 4645,
+            "timestampMs": null,
+            "confidence": 0.960944,
+            "quien": "jd"
+          },
+          {
+            "text": " real",
+            "startMs": 4645,
+            "endMs": 4709,
+            "timestampMs": null,
+            "confidence": 0.99798,
+            "quien": "jd"
+          },
+          {
+            "text": " y",
+            "startMs": 4709,
+            "endMs": 4836,
+            "timestampMs": null,
+            "confidence": 0.941909,
+            "quien": "jd"
+          },
+          {
+            "text": " sus",
+            "startMs": 4836,
+            "endMs": 5036,
+            "timestampMs": null,
+            "confidence": 0.978573,
+            "quien": "jd"
+          },
+          {
+            "text": " respuestas",
+            "startMs": 5036,
+            "endMs": 5873,
+            "timestampMs": null,
+            "confidence": 0.994203,
+            "quien": "jd"
+          },
+          {
+            "text": " no",
+            "startMs": 5873,
+            "endMs": 6091,
+            "timestampMs": null,
+            "confidence": 0.937915,
+            "quien": "jd"
+          },
+          {
+            "text": " las",
+            "startMs": 6091,
+            "endMs": 6309,
+            "timestampMs": null,
+            "confidence": 0.975811,
+            "quien": "jd"
+          },
+          {
+            "text": " esperábamos",
+            "startMs": 6309,
+            "endMs": 7291,
+            "timestampMs": null,
+            "confidence": 0.986698,
+            "quien": "jd"
+          },
+          {
+            "text": " muchas",
+            "startMs": 7291,
+            "endMs": 7473,
+            "timestampMs": null,
+            "confidence": 0.360646,
+            "quien": "jd"
+          },
+          {
+            "text": " de",
+            "startMs": 7473,
+            "endMs": 7618,
+            "timestampMs": null,
+            "confidence": 0.974961,
+            "quien": "jd"
+          },
+          {
+            "text": " ellas",
+            "startMs": 7618,
+            "endMs": 7873,
+            "timestampMs": null,
+            "confidence": 0.98478,
+            "quien": "jd"
+          },
+          {
+            "text": " incluso",
+            "startMs": 7873,
+            "endMs": 8109,
+            "timestampMs": null,
+            "confidence": 0.868497,
+            "quien": "jd"
+          },
+          {
+            "text": " de",
+            "startMs": 8109,
+            "endMs": 8418,
+            "timestampMs": null,
+            "confidence": 0.9972,
+            "quien": "jd"
+          },
+          {
+            "text": " pronto",
+            "startMs": 8418,
+            "endMs": 8582,
+            "timestampMs": null,
+            "confidence": 0.998083,
+            "quien": "jd"
+          },
+          {
+            "text": " estuvieron",
+            "startMs": 8855,
+            "endMs": 9385,
+            "timestampMs": null,
+            "confidence": 0.986114,
+            "quien": "jd"
+          },
+          {
+            "text": " patentadas",
+            "startMs": 9385,
+            "endMs": 9914,
+            "timestampMs": null,
+            "confidence": 0.881168,
+            "quien": "jd"
+          },
+          {
+            "text": " en",
+            "startMs": 9914,
+            "endMs": 10075,
+            "timestampMs": null,
+            "confidence": 0.99798,
+            "quien": "jd"
+          },
+          {
+            "text": " el",
+            "startMs": 10075,
+            "endMs": 10236,
+            "timestampMs": null,
+            "confidence": 0.999241,
+            "quien": "jd"
+          },
+          {
+            "text": " pasado",
+            "startMs": 10236,
+            "endMs": 10582,
+            "timestampMs": null,
+            "confidence": 0.999085,
+            "quien": "jd"
+          },
+          {
+            "text": " vamos",
+            "startMs": 10855,
+            "endMs": 11218,
+            "timestampMs": null,
+            "confidence": 0.567356,
+            "quien": "jd"
+          },
+          {
+            "text": " a",
+            "startMs": 11400,
+            "endMs": 11526,
+            "timestampMs": null,
+            "confidence": 0.994402,
+            "quien": "jd"
+          },
+          {
+            "text": " verlo",
+            "startMs": 11526,
+            "endMs": 11855,
+            "timestampMs": null,
+            "confidence": 0.979012,
+            "quien": "jd"
+          }
+        ],
+        "texto": "le pregunté a la gente en el sofá qué mecánica de videojuego le gustaría tener en vida real y sus respuestas no las esperábamos muchas de ellas incluso de pronto estuvieron patentadas en el pasado vamos a verlo"
+      },
+      {
+        "tipo": "clip",
+        "archivo": "IMG_4875.MOV",
+        "desde": 7.45,
+        "hasta": 24.07,
+        "golpes": [
+          {
+            "en": "mapa",
+            "texto": "MAPA",
+            "estilo": "pastilla"
+          },
+          {
+            "en": "pierdo",
+            "texto": "ME PIERDO",
+            "estilo": "daño"
+          }
+        ],
+        "fx": [
+          {
+            "tipo": "mapa",
+            "en": "mapa",
+            "dura": 4,
+            "quien": "p2"
+          },
+          {
+            "tipo": "teletransporte",
+            "en": "botón",
+            "dura": 1.4,
+            "quien": null
+          }
+        ],
+        "personaje": {
+          "nombre": "Maka Albarn",
+          "clase": "Técnica de guadaña · Soul Eater",
+          "tema": "terror",
+          "color": "#58D35A",
+          "mundo": "Cosplay · SOFA 2026",
+          "stats": [
+            {
+              "n": "COSPLAY",
+              "v": 1
+            },
+            {
+              "n": "ORIENTACIÓN",
+              "v": 0.1
+            },
+            {
+              "n": "MAPA",
+              "v": 1
+            }
+          ],
+          "resumen": "Ver todo el mapa con un botón"
+        },
+        "ficha": true,
+        "fichaEn": 0.3,
+        "retrato": {
+          "t": 60,
+          "x": 0.2298,
+          "y": 0.3932,
+          "w": 0.1987,
+          "h": 0.1267
+        },
+        "turnos": [
+          {
+            "desde": 7.5,
+            "quien": "jd"
+          },
+          {
+            "desde": 12.8,
+            "quien": "p2"
+          }
+        ],
+        "foco": {
+          "jd": {
+            "x": 0.67,
+            "y": 0.4,
+            "escala": 1.6
+          },
+          "p2": {
+            "x": 0.37,
+            "y": 0.44,
+            "escala": 1.65
+          }
+        },
+        "lados": {
+          "jd": "derecha",
+          "p2": "izquierda"
+        },
+        "finDuro": 24.07,
+        "anclas": [
+          [
+            "soy Maca de SoulHitter.",
+            5.45,
+            6.65
+          ],
+          [
+            "¿Y cuéntanos",
+            7.5,
+            8.05
+          ],
+          [
+            "qué mecánica de",
+            8.2,
+            9.35
+          ],
+          [
+            "videojuego traerías a la vida real?",
+            9.9,
+            11.8
+          ],
+          [
+            "Bueno, hay varias que me gustaría,",
+            12.82,
+            14.62
+          ],
+          [
+            "las cosas,",
+            20.3,
+            20.64
+          ],
+          [
+            "porque",
+            21.02,
+            21.42
+          ],
+          [
+            "soy muy...",
+            21.86,
+            22.6
+          ],
+          [
+            "me pierdo muy fácil,",
+            22.65,
+            24.06
+          ],
+          [
+            "entonces acá el celular es un lugar peligroso,",
+            24.1,
+            25.9
+          ]
+        ],
+        "juego": [
+          {
+            "archivo": "broll/2026-10/sofa/claustro-caballero-1920x1080.mp4",
+            "en": "dónde",
+            "hasta": "pierdo",
+            "modo": "ventana",
+            "desdeS": 10,
+            "rotulo": "MAPA · EL CLAUSTRO",
+            "sub": "trifuerza.co/juego-urosario"
+          }
+        ],
+        "inicio": 482,
+        "cuadros": 467,
+        "cola": 24,
+        "tramos": [
+          {
+            "archivo": "sofa/IMG_4875.mp4",
+            "desde": 7.3,
+            "hasta": 12.1,
+            "velocidad": 1.1,
+            "inicio": 0,
+            "cuadros": 131
+          },
+          {
+            "archivo": "sofa/IMG_4875.mp4",
+            "desde": 12.62,
+            "hasta": 24.07,
+            "velocidad": 1.1,
+            "inicio": 131,
+            "cuadros": 312
+          }
+        ],
+        "subtitulos": [
+          {
+            "text": " ¿Y",
+            "startMs": 182,
+            "endMs": 232,
+            "timestampMs": null,
+            "confidence": 0.634079,
+            "quien": "jd"
+          },
+          {
+            "text": " cuéntanos",
+            "startMs": 232,
+            "endMs": 682,
+            "timestampMs": null,
+            "confidence": 0.900833,
+            "quien": "jd"
+          },
+          {
+            "text": " qué",
+            "startMs": 818,
+            "endMs": 1059,
+            "timestampMs": null,
+            "confidence": 0.850071,
+            "quien": "jd"
+          },
+          {
+            "text": " mecánica",
+            "startMs": 1059,
+            "endMs": 1703,
+            "timestampMs": null,
+            "confidence": 0.968082,
+            "quien": "jd"
+          },
+          {
+            "text": " de",
+            "startMs": 1703,
+            "endMs": 1864,
+            "timestampMs": null,
+            "confidence": 0.39389,
+            "quien": "jd"
+          },
+          {
+            "text": " videojuego",
+            "startMs": 2364,
+            "endMs": 2959,
+            "timestampMs": null,
+            "confidence": 0.934716,
+            "quien": "jd"
+          },
+          {
+            "text": " traerías",
+            "startMs": 2959,
+            "endMs": 3435,
+            "timestampMs": null,
+            "confidence": 0.916393,
+            "quien": "jd"
+          },
+          {
+            "text": " a",
+            "startMs": 3435,
+            "endMs": 3495,
+            "timestampMs": null,
+            "confidence": 0.978487,
+            "quien": "jd"
+          },
+          {
+            "text": " la",
+            "startMs": 3495,
+            "endMs": 3615,
+            "timestampMs": null,
+            "confidence": 0.990476,
+            "quien": "jd"
+          },
+          {
+            "text": " vida",
+            "startMs": 3615,
+            "endMs": 3853,
+            "timestampMs": null,
+            "confidence": 0.980918,
+            "quien": "jd"
+          },
+          {
+            "text": " real?",
+            "startMs": 3853,
+            "endMs": 4091,
+            "timestampMs": null,
+            "confidence": 0.944305,
+            "quien": "jd"
+          },
+          {
+            "text": " Bueno,",
+            "startMs": 4545,
+            "endMs": 4848,
+            "timestampMs": null,
+            "confidence": 0.674184,
+            "quien": "p2"
+          },
+          {
+            "text": " hay",
+            "startMs": 4848,
+            "endMs": 5030,
+            "timestampMs": null,
+            "confidence": 0.883268,
+            "quien": "p2"
+          },
+          {
+            "text": " varias",
+            "startMs": 5030,
+            "endMs": 5394,
+            "timestampMs": null,
+            "confidence": 0.982053,
+            "quien": "p2"
+          },
+          {
+            "text": " que",
+            "startMs": 5394,
+            "endMs": 5575,
+            "timestampMs": null,
+            "confidence": 0.986184,
+            "quien": "p2"
+          },
+          {
+            "text": " me",
+            "startMs": 5575,
+            "endMs": 5697,
+            "timestampMs": null,
+            "confidence": 0.993877,
+            "quien": "p2"
+          },
+          {
+            "text": " gustaría,",
+            "startMs": 5697,
+            "endMs": 6182,
+            "timestampMs": null,
+            "confidence": 0.954179,
+            "quien": "p2"
+          },
+          {
+            "text": " pero",
+            "startMs": 6382,
+            "endMs": 6709,
+            "timestampMs": null,
+            "confidence": 0.982971,
+            "quien": "p2"
+          },
+          {
+            "text": " una",
+            "startMs": 6709,
+            "endMs": 7073,
+            "timestampMs": null,
+            "confidence": 0.923595,
+            "quien": "p2"
+          },
+          {
+            "text": " personalmente",
+            "startMs": 7073,
+            "endMs": 7455,
+            "timestampMs": null,
+            "confidence": 0.583758,
+            "quien": "p2"
+          },
+          {
+            "text": " para",
+            "startMs": 7455,
+            "endMs": 7655,
+            "timestampMs": null,
+            "confidence": 0.954698,
+            "quien": "p2"
+          },
+          {
+            "text": " mí,",
+            "startMs": 7655,
+            "endMs": 7800,
+            "timestampMs": null,
+            "confidence": 0.823994,
+            "quien": "p2"
+          },
+          {
+            "text": " que",
+            "startMs": 7800,
+            "endMs": 7927,
+            "timestampMs": null,
+            "confidence": 0.858688,
+            "quien": "p2"
+          },
+          {
+            "text": " la",
+            "startMs": 7927,
+            "endMs": 8055,
+            "timestampMs": null,
+            "confidence": 0.500191,
+            "quien": "p2"
+          },
+          {
+            "text": " del",
+            "startMs": 8055,
+            "endMs": 8327,
+            "timestampMs": null,
+            "confidence": 0.947296,
+            "quien": "p2"
+          },
+          {
+            "text": " mapa,",
+            "startMs": 8327,
+            "endMs": 8727,
+            "timestampMs": null,
+            "confidence": 0.993174,
+            "quien": "p2"
+          },
+          {
+            "text": " de",
+            "startMs": 8727,
+            "endMs": 8964,
+            "timestampMs": null,
+            "confidence": 0.803785,
+            "quien": "p2"
+          },
+          {
+            "text": " poder",
+            "startMs": 8964,
+            "endMs": 9164,
+            "timestampMs": null,
+            "confidence": 0.984389,
+            "quien": "p2"
+          },
+          {
+            "text": " recibir",
+            "startMs": 9164,
+            "endMs": 9436,
+            "timestampMs": null,
+            "confidence": 0.615124,
+            "quien": "p2"
+          },
+          {
+            "text": " un",
+            "startMs": 9436,
+            "endMs": 9600,
+            "timestampMs": null,
+            "confidence": 0.845385,
+            "quien": "p2"
+          },
+          {
+            "text": " botón",
+            "startMs": 9600,
+            "endMs": 9818,
+            "timestampMs": null,
+            "confidence": 0.995887,
+            "quien": "p2"
+          },
+          {
+            "text": " y",
+            "startMs": 9818,
+            "endMs": 9945,
+            "timestampMs": null,
+            "confidence": 0.836166,
+            "quien": "p2"
+          },
+          {
+            "text": " ya",
+            "startMs": 9945,
+            "endMs": 10127,
+            "timestampMs": null,
+            "confidence": 0.991643,
+            "quien": "p2"
+          },
+          {
+            "text": " puedes",
+            "startMs": 10127,
+            "endMs": 10327,
+            "timestampMs": null,
+            "confidence": 0.961641,
+            "quien": "p2"
+          },
+          {
+            "text": " ver",
+            "startMs": 10327,
+            "endMs": 10491,
+            "timestampMs": null,
+            "confidence": 0.996324,
+            "quien": "p2"
+          },
+          {
+            "text": " todo",
+            "startMs": 10491,
+            "endMs": 10582,
+            "timestampMs": null,
+            "confidence": 0.943275,
+            "quien": "p2"
+          },
+          {
+            "text": " el",
+            "startMs": 10582,
+            "endMs": 10800,
+            "timestampMs": null,
+            "confidence": 0.995023,
+            "quien": "p2"
+          },
+          {
+            "text": " mapa",
+            "startMs": 10800,
+            "endMs": 10982,
+            "timestampMs": null,
+            "confidence": 0.997904,
+            "quien": "p2"
+          },
+          {
+            "text": " y",
+            "startMs": 10982,
+            "endMs": 11091,
+            "timestampMs": null,
+            "confidence": 0.872159,
+            "quien": "p2"
+          },
+          {
+            "text": " dónde",
+            "startMs": 11091,
+            "endMs": 11236,
+            "timestampMs": null,
+            "confidence": 0.636028,
+            "quien": "p2"
+          },
+          {
+            "text": " están",
+            "startMs": 11236,
+            "endMs": 11382,
+            "timestampMs": null,
+            "confidence": 0.977679,
+            "quien": "p2"
+          },
+          {
+            "text": " las",
+            "startMs": 11345,
+            "endMs": 11462,
+            "timestampMs": null,
+            "confidence": 0.993286,
+            "quien": "p2"
+          },
+          {
+            "text": " cosas,",
+            "startMs": 11462,
+            "endMs": 11655,
+            "timestampMs": null,
+            "confidence": 0.998742,
+            "quien": "p2"
+          },
+          {
+            "text": " porque",
+            "startMs": 12000,
+            "endMs": 12364,
+            "timestampMs": null,
+            "confidence": 0.978088,
+            "quien": "p2"
+          },
+          {
+            "text": " soy",
+            "startMs": 12764,
+            "endMs": 13100,
+            "timestampMs": null,
+            "confidence": 0.742946,
+            "quien": "p2"
+          },
+          {
+            "text": " muy...",
+            "startMs": 13100,
+            "endMs": 13436,
+            "timestampMs": null,
+            "confidence": 0.994905,
+            "quien": "p2"
+          },
+          {
+            "text": " me",
+            "startMs": 13482,
+            "endMs": 13642,
+            "timestampMs": null,
+            "confidence": 0.657282,
+            "quien": "p2"
+          },
+          {
+            "text": " pierdo",
+            "startMs": 13642,
+            "endMs": 14123,
+            "timestampMs": null,
+            "confidence": 0.67464,
+            "quien": "p2"
+          },
+          {
+            "text": " muy",
+            "startMs": 14123,
+            "endMs": 14363,
+            "timestampMs": null,
+            "confidence": 0.975067,
+            "quien": "p2"
+          },
+          {
+            "text": " fácil,",
+            "startMs": 14363,
+            "endMs": 14764,
+            "timestampMs": null,
+            "confidence": 0.996381,
+            "quien": "p2"
+          }
+        ],
+        "texto": "¿Y cuéntanos qué mecánica de videojuego traerías a la vida real? Bueno, hay varias que me gustaría, pero una personalmente para mí, que la del mapa, de poder recibir un botón y ya puedes ver todo el mapa y dónde están las cosas, porque soy muy... me pierdo muy fácil,",
+        "retratoPng": "sofa/retratos/sofa-mecanica-2-2-8b53f9b1.png"
+      },
+      {
+        "tipo": "nivel",
+        "numero": 2,
+        "nombre": "Entrada principal",
+        "estilo": "mundo2d",
+        "segundos": 2,
+        "mundo": "ciudad",
+        "inicio": 949,
+        "cuadros": 60
+      },
+      {
+        "tipo": "clip",
+        "archivo": "DJI_20261012_150400_698_video.mp4",
+        "desde": 26.2,
+        "hasta": 37.6,
+        "golpes": [
+          {
+            "en": "teletransportarme",
+            "texto": "TELETRANSPORTARME",
+            "estilo": "golpe"
+          },
+          {
+            "en": "plataformeo",
+            "texto": "EL PLATAFORMEO",
+            "estilo": "pastilla",
+            "vez": 2
+          },
+          {
+            "en": "libertad",
+            "texto": "LIBERTAD",
+            "estilo": "xp"
+          }
+        ],
+        "fx": [
+          {
+            "tipo": "teletransporte",
+            "en": "teletransportarme",
+            "dura": 1.6,
+            "quien": null
+          },
+          {
+            "tipo": "plataformas",
+            "en": "plataformeo",
+            "dura": 3,
+            "quien": "p2"
+          },
+          {
+            "tipo": "dobleSalto",
+            "en": "poderte",
+            "dura": 1.6,
+            "quien": null
+          }
+        ],
+        "personaje": {
+          "nombre": "Dúo cosplay",
+          "clase": "Cosplayers",
+          "tema": "ciudad",
+          "color": "#B388FF",
+          "mundo": "Cosplay · SOFA 2026",
+          "stats": [],
+          "resumen": "Teletransportarse y el plataformeo",
+          "anonimo": true
+        },
+        "turnos": [
+          {
+            "desde": 26.2,
+            "quien": "jd"
+          },
+          {
+            "desde": 28.9,
+            "quien": "p2",
+            "fijo": true
+          }
+        ],
+        "foco": {
+          "jd": {
+            "x": 0.25,
+            "y": 0.36,
+            "escala": 1.3
+          },
+          "p2": {
+            "x": 0.65,
+            "y": 0.36,
+            "escala": 1.3
+          }
+        },
+        "inicio": 1009,
+        "cuadros": 290,
+        "cola": 0,
+        "tramos": [
+          {
+            "archivo": "sofa/DJI_20261012_150400_698_video.mp4",
+            "desde": 26,
+            "hasta": 32.3,
+            "velocidad": 1.1,
+            "inicio": 0,
+            "cuadros": 172
+          },
+          {
+            "archivo": "sofa/DJI_20261012_150400_698_video.mp4",
+            "desde": 33.1,
+            "hasta": 34.6,
+            "velocidad": 1.1,
+            "inicio": 172,
+            "cuadros": 41
+          },
+          {
+            "archivo": "sofa/DJI_20261012_150400_698_video.mp4",
+            "desde": 35.36,
+            "hasta": 38.2,
+            "velocidad": 1.1,
+            "inicio": 213,
+            "cuadros": 77
+          }
+        ],
+        "subtitulos": [
+          {
+            "text": " ¿Qué",
+            "startMs": 182,
+            "endMs": 436,
+            "timestampMs": null,
+            "confidence": 0.439131,
+            "quien": "jd"
+          },
+          {
+            "text": " mecánica",
+            "startMs": 436,
+            "endMs": 909,
+            "timestampMs": null,
+            "confidence": 0.313876,
+            "quien": "jd"
+          },
+          {
+            "text": " de",
+            "startMs": 909,
+            "endMs": 1055,
+            "timestampMs": null,
+            "confidence": 0.99709,
+            "quien": "jd"
+          },
+          {
+            "text": " videojuego",
+            "startMs": 1055,
+            "endMs": 1564,
+            "timestampMs": null,
+            "confidence": 0.990514,
+            "quien": "jd"
+          },
+          {
+            "text": " traerías",
+            "startMs": 1564,
+            "endMs": 2000,
+            "timestampMs": null,
+            "confidence": 0.99693,
+            "quien": "jd"
+          },
+          {
+            "text": " a",
+            "startMs": 2000,
+            "endMs": 2073,
+            "timestampMs": null,
+            "confidence": 0.997664,
+            "quien": "jd"
+          },
+          {
+            "text": " la",
+            "startMs": 2073,
+            "endMs": 2255,
+            "timestampMs": null,
+            "confidence": 0.999321,
+            "quien": "jd"
+          },
+          {
+            "text": " vida",
+            "startMs": 2255,
+            "endMs": 2545,
+            "timestampMs": null,
+            "confidence": 0.998986,
+            "quien": "jd"
+          },
+          {
+            "text": " real?",
+            "startMs": 2545,
+            "endMs": 2595,
+            "timestampMs": null,
+            "confidence": 0.992229,
+            "quien": "jd"
+          },
+          {
+            "text": " Uff,",
+            "startMs": 2595,
+            "endMs": 2636,
+            "timestampMs": null,
+            "confidence": 0.314171,
+            "quien": "p2"
+          },
+          {
+            "text": " teletransportarme,",
+            "startMs": 3091,
+            "endMs": 3815,
+            "timestampMs": null,
+            "confidence": 0.541871,
+            "quien": "p2"
+          },
+          {
+            "text": " sería",
+            "startMs": 3815,
+            "endMs": 4070,
+            "timestampMs": null,
+            "confidence": 0.99594,
+            "quien": "p2"
+          },
+          {
+            "text": " genial.",
+            "startMs": 4070,
+            "endMs": 4364,
+            "timestampMs": null,
+            "confidence": 0.997942,
+            "quien": "p2"
+          },
+          {
+            "text": " Yo",
+            "startMs": 4818,
+            "endMs": 4949,
+            "timestampMs": null,
+            "confidence": 0.976159,
+            "quien": "p2"
+          },
+          {
+            "text": " creo",
+            "startMs": 4949,
+            "endMs": 5155,
+            "timestampMs": null,
+            "confidence": 0.998555,
+            "quien": "p2"
+          },
+          {
+            "text": " que",
+            "startMs": 5155,
+            "endMs": 5324,
+            "timestampMs": null,
+            "confidence": 0.994143,
+            "quien": "p2"
+          },
+          {
+            "text": " el",
+            "startMs": 5324,
+            "endMs": 5455,
+            "timestampMs": null,
+            "confidence": 0.994901,
+            "quien": "p2"
+          },
+          {
+            "text": " plataformeo,",
+            "startMs": 5909,
+            "endMs": 6308,
+            "timestampMs": null,
+            "confidence": 0.943779,
+            "quien": "p2"
+          },
+          {
+            "text": " el",
+            "startMs": 6308,
+            "endMs": 6419,
+            "timestampMs": null,
+            "confidence": 0.965305,
+            "quien": "p2"
+          },
+          {
+            "text": " plataformeo,",
+            "startMs": 6419,
+            "endMs": 6818,
+            "timestampMs": null,
+            "confidence": 0.925233,
+            "quien": "p2"
+          },
+          {
+            "text": " poderte",
+            "startMs": 7273,
+            "endMs": 7564,
+            "timestampMs": null,
+            "confidence": 0.680415,
+            "quien": "p2"
+          },
+          {
+            "text": " mover",
+            "startMs": 7564,
+            "endMs": 7745,
+            "timestampMs": null,
+            "confidence": 0.98447,
+            "quien": "p2"
+          },
+          {
+            "text": " con",
+            "startMs": 7745,
+            "endMs": 7891,
+            "timestampMs": null,
+            "confidence": 0.933319,
+            "quien": "p2"
+          },
+          {
+            "text": " esa",
+            "startMs": 7891,
+            "endMs": 8036,
+            "timestampMs": null,
+            "confidence": 0.978065,
+            "quien": "p2"
+          },
+          {
+            "text": " libertad",
+            "startMs": 8036,
+            "endMs": 8418,
+            "timestampMs": null,
+            "confidence": 0.968062,
+            "quien": "p2"
+          },
+          {
+            "text": " sería",
+            "startMs": 8418,
+            "endMs": 8636,
+            "timestampMs": null,
+            "confidence": 0.413172,
+            "quien": "p2"
+          },
+          {
+            "text": " increíble.",
+            "startMs": 8636,
+            "endMs": 8855,
+            "timestampMs": null,
+            "confidence": 0.969527,
+            "quien": "p2"
+          }
+        ],
+        "texto": "¿Qué mecánica de videojuego traerías a la vida real? Uff, teletransportarme, sería genial. Yo creo que el plataformeo, el plataformeo, poderte mover con esa libertad sería increíble."
+      },
+      {
+        "tipo": "cierre",
+        "archivo": "DJI_20261012_151303_085_video.mp4",
+        "desde": 1.4,
+        "hasta": 6.8,
+        "golpes": [
+          {
+            "en": "real",
+            "texto": "¿Y TÚ CUÁL?",
+            "estilo": "pastilla"
+          }
+        ],
+        "fx": [],
+        "foco": {
+          "jd": {
+            "x": 0.47,
+            "y": 0.39,
+            "escala": 1.3
+          }
+        },
+        "lados": {
+          "jd": "centro"
+        },
+        "cta": "COMENTA TU MECÁNICA",
+        "inicio": 1299,
+        "cuadros": 165,
+        "cola": 3,
+        "tramos": [
+          {
+            "archivo": "sofa/DJI_20261012_151303_085_video.mp4",
+            "desde": 1.2,
+            "hasta": 2.2,
+            "velocidad": 1.1,
+            "inicio": 0,
+            "cuadros": 27
+          },
+          {
+            "archivo": "sofa/DJI_20261012_151303_085_video.mp4",
+            "desde": 2.44,
+            "hasta": 7.4,
+            "velocidad": 1.1,
+            "inicio": 27,
+            "cuadros": 135
+          }
+        ],
+        "subtitulos": [
+          {
+            "text": " y",
+            "startMs": 182,
+            "endMs": 290,
+            "timestampMs": null,
+            "confidence": 0.212757,
+            "quien": "jd"
+          },
+          {
+            "text": " tú",
+            "startMs": 290,
+            "endMs": 442,
+            "timestampMs": null,
+            "confidence": 0.610921,
+            "quien": "jd"
+          },
+          {
+            "text": " qué",
+            "startMs": 442,
+            "endMs": 636,
+            "timestampMs": null,
+            "confidence": 0.753156,
+            "quien": "jd"
+          },
+          {
+            "text": " mecánica",
+            "startMs": 1091,
+            "endMs": 1527,
+            "timestampMs": null,
+            "confidence": 0.900158,
+            "quien": "jd"
+          },
+          {
+            "text": " de",
+            "startMs": 1527,
+            "endMs": 1691,
+            "timestampMs": null,
+            "confidence": 0.786573,
+            "quien": "jd"
+          },
+          {
+            "text": " videojuego",
+            "startMs": 1691,
+            "endMs": 2145,
+            "timestampMs": null,
+            "confidence": 0.819402,
+            "quien": "jd"
+          },
+          {
+            "text": " traerías",
+            "startMs": 2145,
+            "endMs": 2527,
+            "timestampMs": null,
+            "confidence": 0.831174,
+            "quien": "jd"
+          },
+          {
+            "text": " a",
+            "startMs": 2527,
+            "endMs": 2600,
+            "timestampMs": null,
+            "confidence": 0.969255,
+            "quien": "jd"
+          },
+          {
+            "text": " la",
+            "startMs": 2600,
+            "endMs": 2745,
+            "timestampMs": null,
+            "confidence": 0.993371,
+            "quien": "jd"
+          },
+          {
+            "text": " vida",
+            "startMs": 2745,
+            "endMs": 3055,
+            "timestampMs": null,
+            "confidence": 0.969082,
+            "quien": "jd"
+          },
+          {
+            "text": " real",
+            "startMs": 3055,
+            "endMs": 3145,
+            "timestampMs": null,
+            "confidence": 0.993479,
+            "quien": "jd"
+          },
+          {
+            "text": " déjanoslo",
+            "startMs": 3418,
+            "endMs": 3823,
+            "timestampMs": null,
+            "confidence": 0.348812,
+            "quien": "jd"
+          },
+          {
+            "text": " saber",
+            "startMs": 3823,
+            "endMs": 4074,
+            "timestampMs": null,
+            "confidence": 0.996806,
+            "quien": "jd"
+          },
+          {
+            "text": " en",
+            "startMs": 4074,
+            "endMs": 4209,
+            "timestampMs": null,
+            "confidence": 0.930838,
+            "quien": "jd"
+          },
+          {
+            "text": " comentarios",
+            "startMs": 4209,
+            "endMs": 4691,
+            "timestampMs": null,
+            "confidence": 0.750717,
+            "quien": "jd"
+          }
+        ],
+        "texto": "y tú qué mecánica de videojuego traerías a la vida real déjanoslo saber en comentarios"
+      },
+      {
+        "tipo": "final",
+        "inicio": 1464,
+        "cuadros": 72
+      }
+    ],
+    "total": 1536,
+    "avisos": []
+  },
+  "bpm": 132,
+  "capas": true
+}

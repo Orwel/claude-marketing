@@ -1,0 +1,2302 @@
+{
+  "plantilla": "Arcade",
+  "serie": "SOFA 2026 · BOGOTÁ",
+  "nivel": "SOFA 2026",
+  "cuentas": [
+    "juanda"
+  ],
+  "velocidad": 1.1,
+  "motivo": "poderes",
+  "lados": {
+    "jd": "izquierda",
+    "p2": "derecha"
+  },
+  "nombres": {
+    "jd": {
+      "nombre": "JUAN DAVID"
+    }
+  },
+  "correcciones": [
+    {
+      "de": "sofá",
+      "a": "SOFA"
+    },
+    {
+      "de": "le pregunte",
+      "a": "le pregunté"
+    },
+    {
+      "de": "Le pregunte",
+      "a": "Le pregunté"
+    },
+    {
+      "de": "Cosplayers",
+      "a": "cosplayers"
+    },
+    {
+      "de": "quien demandaría",
+      "a": "quién demandaría"
+    },
+    {
+      "de": "artas",
+      "a": "hartas"
+    },
+    {
+      "de": "hace todo son",
+      "a": "excepto"
+    },
+    {
+      "de": "gingos",
+      "a": "Sung Jinwoo"
+    },
+    {
+      "de": "Chimico Toga",
+      "a": "Himiko Toga"
+    },
+    {
+      "de": "Magiro Academia",
+      "a": "My Hero Academia"
+    },
+    {
+      "de": "Von Leinton",
+      "a": "Von Lycaon"
+    },
+    {
+      "de": "Sunless On Zero",
+      "a": "Zenless Zone Zero"
+    },
+    {
+      "de": "Aurora del League",
+      "a": "Aurora de League"
+    },
+    {
+      "de": "Mavica",
+      "a": "Mavuika"
+    },
+    {
+      "de": "satura",
+      "a": "La Vasija Pura"
+    },
+    {
+      "de": "te parece es a",
+      "a": "te pareces a"
+    },
+    {
+      "de": "estás tú buena",
+      "a": "está muy buena"
+    },
+    {
+      "de": "En como el fue",
+      "a": "En cómo él fue"
+    },
+    {
+      "de": "indique",
+      "a": "indie"
+    },
+    {
+      "de": "Jägger",
+      "a": "Jaeger"
+    },
+    {
+      "de": "Jäger",
+      "a": "Jaeger"
+    },
+    {
+      "de": "capitano",
+      "a": "Capitano"
+    },
+    {
+      "de": "herfría",
+      "a": "le hizo"
+    },
+    {
+      "de": "Drugs del futuro",
+      "a": "Trunks del futuro"
+    },
+    {
+      "de": "Sayajin",
+      "a": "saiyajin"
+    },
+    {
+      "de": "María",
+      "a": "mijo"
+    },
+    {
+      "de": "platico",
+      "a": "platica"
+    },
+    {
+      "de": "si está allí",
+      "a": "si es saiyajin"
+    },
+    {
+      "de": "respaunear",
+      "a": "respawnear"
+    },
+    {
+      "de": "Respawn",
+      "a": "respawn"
+    },
+    {
+      "de": "cagunes",
+      "a": "kagunes"
+    },
+    {
+      "de": "Maca",
+      "a": "Maka"
+    },
+    {
+      "de": "SoulHitter",
+      "a": "Soul Eater"
+    },
+    {
+      "de": "El jefe maestro",
+      "a": "el Jefe Maestro"
+    },
+    {
+      "de": "Te letra... transportarme",
+      "a": "¿Teletransportarme?"
+    },
+    {
+      "de": "maquillero",
+      "a": "Maki Gero"
+    },
+    {
+      "de": "ardestruir",
+      "a": "destruir"
+    },
+    {
+      "de": "Joaquin Club",
+      "a": "Jockey Club"
+    },
+    {
+      "de": "Frey",
+      "a": "Fray"
+    },
+    {
+      "de": "Vélula",
+      "a": "Bélula"
+    },
+    {
+      "de": "Séfira",
+      "a": "Céfira"
+    },
+    {
+      "de": "bótalo",
+      "a": "vótalo"
+    },
+    {
+      "de": "alteratura",
+      "a": "literatura"
+    },
+    {
+      "de": "de mito",
+      "a": "de Mito"
+    },
+    {
+      "de": "Esto es mito",
+      "a": "Esto es Mito"
+    },
+    {
+      "de": "perracos espantos",
+      "a": "Berracos Espantos"
+    },
+    {
+      "de": "Bogofighters",
+      "a": "Bogo Fighters"
+    },
+    {
+      "de": "cráteras",
+      "a": "criaturas"
+    },
+    {
+      "de": "podren",
+      "a": "cobren"
+    },
+    {
+      "de": "viene a secta",
+      "a": "hay una secta"
+    },
+    {
+      "de": "de acuerdos el la guardiente",
+      "a": "de acuerdo, el aguardiente"
+    },
+    {
+      "de": "agua mendita",
+      "a": "agua bendita"
+    },
+    {
+      "de": "desarrollos colombianos",
+      "a": "desarrolladores colombianos"
+    },
+    {
+      "de": "colombia",
+      "a": "Colombia"
+    },
+    {
+      "de": "Es está",
+      "a": "Está"
+    }
+  ],
+  "variantes": {
+    "juanda": {
+      "cta": "Comenta tu mecánica",
+      "copy": ""
+    }
+  },
+  "slug": "sofa-mecanica",
+  "codigo": "SOFA06",
+  "titulo": "¿Qué mecánica de videojuego traerías a la vida real?",
+  "niveles": 4,
+  "escenas": [
+    {
+      "tipo": "titulo",
+      "segundos": 3.4,
+      "alto": 360,
+      "parte": "PARTE 1"
+    },
+    {
+      "tipo": "clip",
+      "archivo": "DJI_20261012_144625_616_video.mp4",
+      "desde": 1.2,
+      "hasta": 14.2,
+      "golpes": [
+        {
+          "en": "mecánica",
+          "texto": "QUÉ MECÁNICA",
+          "estilo": "pastilla"
+        },
+        {
+          "en": "patentadas",
+          "texto": "PATENTADAS",
+          "estilo": "daño"
+        }
+      ],
+      "fx": [
+        {
+          "tipo": "estrellas",
+          "en": "videojuego",
+          "dura": 2.5,
+          "quien": null,
+          "lado": "centro"
+        },
+        {
+          "tipo": "relampago",
+          "en": "patentadas",
+          "dura": 1.4,
+          "quien": null,
+          "lado": "centro",
+          "color": "#F26B1D"
+        }
+      ],
+      "foco": {
+        "jd": {
+          "x": 0.46,
+          "y": 0.4,
+          "escala": 1.3
+        }
+      },
+      "lados": {
+        "jd": "centro"
+      },
+      "juego": [
+        {
+          "archivo": "broll/2026-10/sofa/claustro-caballero-1080x1920.mp4",
+          "en": "gustaría",
+          "hasta": "respuestas",
+          "modo": "ventana",
+          "desdeS": 6,
+          "rotulo": "MECÁNICAS DE VIDEOJUEGO",
+          "sub": "El Claustro en vivo · trifuerza.co"
+        }
+      ],
+      "_avisos": []
+    },
+    {
+      "tipo": "clip",
+      "archivo": "IMG_4876.MOV",
+      "desde": 38.6,
+      "hasta": 48.5,
+      "golpes": [
+        {
+          "en": "respawnear",
+          "texto": "RESPAWNEAR",
+          "estilo": "xp"
+        },
+        {
+          "en": "volver",
+          "texto": "VOLVER A LA VIDA",
+          "estilo": "pastilla"
+        }
+      ],
+      "fx": [
+        {
+          "tipo": "respawn",
+          "en": "respawnear",
+          "dura": 2.4,
+          "quien": null
+        },
+        {
+          "tipo": "vida",
+          "en": "volver",
+          "dura": 2.4,
+          "quien": "p2",
+          "modo": "cura"
+        },
+        {
+          "tipo": "estrellas",
+          "en": "cosa",
+          "dura": 2,
+          "quien": "p2"
+        }
+      ],
+      "personaje": {
+        "nombre": "Freezer",
+        "clase": "Emperador del universo 7 · Dragon Ball",
+        "tema": "espacio",
+        "color": "#B388FF",
+        "mundo": "Cosplay · SOFA 2026",
+        "stats": [
+          {
+            "n": "COSPLAY",
+            "v": 1
+          },
+          {
+            "n": "MALDAD",
+            "v": 1
+          },
+          {
+            "n": "RESPAWN",
+            "v": 1
+          }
+        ],
+        "resumen": "Respawnear"
+      },
+      "ficha": true,
+      "fichaEn": 0.3,
+      "retrato": {
+        "t": 20,
+        "x": 0.15,
+        "y": 0.4639,
+        "w": 0.3,
+        "h": 0.1913
+      },
+      "turnos": [
+        {
+          "desde": 38.5,
+          "quien": "jd"
+        },
+        {
+          "desde": 42.4,
+          "quien": "p2"
+        },
+        {
+          "desde": 47.4,
+          "quien": "jd"
+        }
+      ],
+      "foco": {
+        "jd": {
+          "x": 0.62,
+          "y": 0.4,
+          "escala": 1.2
+        },
+        "p2": {
+          "x": 0.22,
+          "y": 0.36,
+          "escala": 1.25
+        }
+      },
+      "lados": {
+        "jd": "derecha",
+        "p2": "izquierda"
+      },
+      "_avisos": []
+    },
+    {
+      "tipo": "nivel",
+      "numero": 2,
+      "nombre": "Lado oscuro",
+      "estilo": "vs",
+      "segundos": 2
+    },
+    {
+      "tipo": "clip",
+      "archivo": "DJI_20261012_145857_873_video.mp4",
+      "desde": 16.9,
+      "hasta": 25.6,
+      "golpes": [
+        {
+          "en": "turnos",
+          "texto": "COMBATES POR TURNOS",
+          "estilo": "pastilla"
+        }
+      ],
+      "fx": [
+        {
+          "tipo": "turnos",
+          "en": "combates",
+          "dura": 3.2,
+          "quien": "p2"
+        },
+        {
+          "tipo": "corte",
+          "en": "turnos",
+          "dura": 1.2,
+          "quien": "p2",
+          "color": "#E8323C"
+        }
+      ],
+      "personaje": {
+        "nombre": "Darth Revan",
+        "clase": "Señor Sith · Star Wars",
+        "tema": "mazmorra",
+        "color": "#E8323C",
+        "mundo": "Cosplay · SOFA 2026",
+        "stats": [
+          {
+            "n": "COSPLAY",
+            "v": 1
+          },
+          {
+            "n": "LADO OSCURO",
+            "v": 1
+          },
+          {
+            "n": "PACIENCIA",
+            "v": 0.9
+          }
+        ],
+        "resumen": "Combates por turnos"
+      },
+      "ficha": true,
+      "fichaEn": 0.3,
+      "retrato": {
+        "t": 20,
+        "x": 0.118,
+        "y": 0.4828,
+        "w": 0.304,
+        "h": 0.1938
+      },
+      "turnos": [
+        {
+          "desde": 16.9,
+          "quien": "jd"
+        },
+        {
+          "desde": 20.2,
+          "quien": "p2"
+        },
+        {
+          "desde": 24.4,
+          "quien": "jd"
+        }
+      ],
+      "foco": {
+        "jd": {
+          "x": 0.6,
+          "y": 0.4,
+          "escala": 1.25
+        },
+        "p2": {
+          "x": 0.28,
+          "y": 0.42,
+          "escala": 1.3
+        }
+      },
+      "lados": {
+        "jd": "derecha",
+        "p2": "izquierda"
+      },
+      "_avisos": []
+    },
+    {
+      "tipo": "nivel",
+      "numero": 3,
+      "nombre": "Mundo digital",
+      "estilo": "encuentro",
+      "segundos": 2
+    },
+    {
+      "tipo": "clip",
+      "archivo": "DJI_20261012_151010_513_video.mp4",
+      "desde": 15.5,
+      "hasta": 28.3,
+      "golpes": [
+        {
+          "en": "Clones",
+          "texto": "CLONES",
+          "estilo": "golpe"
+        },
+        {
+          "en": "descansar",
+          "texto": "Y YO PODER DESCANSAR",
+          "estilo": "xp"
+        }
+      ],
+      "fx": [
+        {
+          "tipo": "clones",
+          "en": "clonarme",
+          "dura": 2.6,
+          "quien": null
+        },
+        {
+          "tipo": "nivelUp",
+          "en": "descansar",
+          "dura": 2.4,
+          "quien": "p2",
+          "texto": "LEVEL UP!",
+          "stats": [
+            [
+              "DESCANSO",
+              0.2,
+              1
+            ],
+            [
+              "LABORES",
+              0.9,
+              0.3
+            ],
+            [
+              "CLONES",
+              0,
+              1
+            ]
+          ]
+        }
+      ],
+      "personaje": {
+        "nombre": "Angemon",
+        "clase": "Digimon · Mundo digital",
+        "tema": "digital",
+        "color": "#F2C85B",
+        "mundo": "Cosplay · SOFA 2026",
+        "stats": [
+          {
+            "n": "COSPLAY",
+            "v": 1
+          },
+          {
+            "n": "ALAS",
+            "v": 1
+          },
+          {
+            "n": "CLONES",
+            "v": 0.9
+          }
+        ],
+        "resumen": "Clones para poder descansar"
+      },
+      "ficha": true,
+      "fichaEn": 0.3,
+      "retrato": {
+        "t": 33.6,
+        "x": 0.4315,
+        "y": 0.3341,
+        "w": 0.247,
+        "h": 0.1575
+      },
+      "turnos": [
+        {
+          "desde": 15.5,
+          "quien": "jd"
+        },
+        {
+          "desde": 18.6,
+          "quien": "p2"
+        }
+      ],
+      "foco": {
+        "jd": {
+          "x": 0.35,
+          "y": 0.38,
+          "escala": 1.3
+        },
+        "p2": {
+          "x": 0.62,
+          "y": 0.36,
+          "escala": 1.38
+        }
+      },
+      "_avisos": []
+    },
+    {
+      "tipo": "cierre",
+      "archivo": "DJI_20261012_151303_085_video.mp4",
+      "desde": 1.4,
+      "hasta": 6.8,
+      "golpes": [
+        {
+          "en": "real",
+          "texto": "¿Y TÚ CUÁL?",
+          "estilo": "pastilla"
+        }
+      ],
+      "fx": [],
+      "foco": {
+        "jd": {
+          "x": 0.47,
+          "y": 0.39,
+          "escala": 1.3
+        }
+      },
+      "lados": {
+        "jd": "centro"
+      },
+      "cta": "COMENTA TU MECÁNICA",
+      "_avisos": []
+    }
+  ],
+  "verificar": [
+    {
+      "dato": "«Muchas mecánicas estuvieron patentadas» lo dice Juan David; en pantalla no se afirma cuál. Darth Revan identificado por el cosplay; Angemon, Freezer por confirmar",
+      "estado": "pendiente"
+    }
+  ],
+  "generado": {
+    "escenas": [
+      {
+        "tipo": "titulo",
+        "segundos": 3.4,
+        "alto": 360,
+        "parte": "PARTE 1",
+        "inicio": 0,
+        "cuadros": 102
+      },
+      {
+        "tipo": "clip",
+        "archivo": "DJI_20261012_144625_616_video.mp4",
+        "desde": 1.2,
+        "hasta": 14.2,
+        "golpes": [
+          {
+            "en": "mecánica",
+            "texto": "QUÉ MECÁNICA",
+            "estilo": "pastilla"
+          },
+          {
+            "en": "patentadas",
+            "texto": "PATENTADAS",
+            "estilo": "daño"
+          }
+        ],
+        "fx": [
+          {
+            "tipo": "estrellas",
+            "en": "videojuego",
+            "dura": 2.5,
+            "quien": null,
+            "lado": "centro"
+          },
+          {
+            "tipo": "relampago",
+            "en": "patentadas",
+            "dura": 1.4,
+            "quien": null,
+            "lado": "centro",
+            "color": "#F26B1D"
+          }
+        ],
+        "foco": {
+          "jd": {
+            "x": 0.46,
+            "y": 0.4,
+            "escala": 1.3
+          }
+        },
+        "lados": {
+          "jd": "centro"
+        },
+        "juego": [
+          {
+            "archivo": "broll/2026-10/sofa/claustro-caballero-1080x1920.mp4",
+            "en": "gustaría",
+            "hasta": "respuestas",
+            "modo": "ventana",
+            "desdeS": 6,
+            "rotulo": "MECÁNICAS DE VIDEOJUEGO",
+            "sub": "El Claustro en vivo · trifuerza.co"
+          }
+        ],
+        "inicio": 102,
+        "cuadros": 380,
+        "cola": 3,
+        "tramos": [
+          {
+            "archivo": "sofa/DJI_20261012_144625_616_video.mp4",
+            "desde": 0.96,
+            "hasta": 14.8,
+            "velocidad": 1.1,
+            "inicio": 0,
+            "cuadros": 377
+          }
+        ],
+        "subtitulos": [
+          {
+            "text": " le pregunté",
+            "startMs": 182,
+            "endMs": 709,
+            "timestampMs": null,
+            "confidence": 0.413459,
+            "quien": "jd"
+          },
+          {
+            "text": " a",
+            "startMs": 709,
+            "endMs": 800,
+            "timestampMs": null,
+            "confidence": 0.96472,
+            "quien": "jd"
+          },
+          {
+            "text": " la",
+            "startMs": 800,
+            "endMs": 1000,
+            "timestampMs": null,
+            "confidence": 0.997459,
+            "quien": "jd"
+          },
+          {
+            "text": " gente",
+            "startMs": 1000,
+            "endMs": 1145,
+            "timestampMs": null,
+            "confidence": 0.997037,
+            "quien": "jd"
+          },
+          {
+            "text": " en",
+            "startMs": 1145,
+            "endMs": 1218,
+            "timestampMs": null,
+            "confidence": 0.972928,
+            "quien": "jd"
+          },
+          {
+            "text": " el",
+            "startMs": 1218,
+            "endMs": 1364,
+            "timestampMs": null,
+            "confidence": 0.996423,
+            "quien": "jd"
+          },
+          {
+            "text": " SOFA",
+            "startMs": 1364,
+            "endMs": 1727,
+            "timestampMs": null,
+            "confidence": 0.698943,
+            "quien": "jd"
+          },
+          {
+            "text": " qué",
+            "startMs": 1727,
+            "endMs": 1945,
+            "timestampMs": null,
+            "confidence": 0.699657,
+            "quien": "jd"
+          },
+          {
+            "text": " mecánica",
+            "startMs": 1945,
+            "endMs": 2364,
+            "timestampMs": null,
+            "confidence": 0.640113,
+            "quien": "jd"
+          },
+          {
+            "text": " de",
+            "startMs": 2364,
+            "endMs": 2527,
+            "timestampMs": null,
+            "confidence": 0.806241,
+            "quien": "jd"
+          },
+          {
+            "text": " videojuego",
+            "startMs": 2527,
+            "endMs": 3073,
+            "timestampMs": null,
+            "confidence": 0.853129,
+            "quien": "jd"
+          },
+          {
+            "text": " le",
+            "startMs": 3073,
+            "endMs": 3273,
+            "timestampMs": null,
+            "confidence": 0.788956,
+            "quien": "jd"
+          },
+          {
+            "text": " gustaría",
+            "startMs": 3273,
+            "endMs": 3582,
+            "timestampMs": null,
+            "confidence": 0.963191,
+            "quien": "jd"
+          },
+          {
+            "text": " tener",
+            "startMs": 3582,
+            "endMs": 3782,
+            "timestampMs": null,
+            "confidence": 0.996968,
+            "quien": "jd"
+          },
+          {
+            "text": " en",
+            "startMs": 3782,
+            "endMs": 4218,
+            "timestampMs": null,
+            "confidence": 0.995421,
+            "quien": "jd"
+          },
+          {
+            "text": " vida",
+            "startMs": 4582,
+            "endMs": 4645,
+            "timestampMs": null,
+            "confidence": 0.960944,
+            "quien": "jd"
+          },
+          {
+            "text": " real",
+            "startMs": 4645,
+            "endMs": 4709,
+            "timestampMs": null,
+            "confidence": 0.99798,
+            "quien": "jd"
+          },
+          {
+            "text": " y",
+            "startMs": 4709,
+            "endMs": 4836,
+            "timestampMs": null,
+            "confidence": 0.941909,
+            "quien": "jd"
+          },
+          {
+            "text": " sus",
+            "startMs": 4836,
+            "endMs": 5036,
+            "timestampMs": null,
+            "confidence": 0.978573,
+            "quien": "jd"
+          },
+          {
+            "text": " respuestas",
+            "startMs": 5036,
+            "endMs": 5873,
+            "timestampMs": null,
+            "confidence": 0.994203,
+            "quien": "jd"
+          },
+          {
+            "text": " no",
+            "startMs": 5873,
+            "endMs": 6091,
+            "timestampMs": null,
+            "confidence": 0.937915,
+            "quien": "jd"
+          },
+          {
+            "text": " las",
+            "startMs": 6091,
+            "endMs": 6309,
+            "timestampMs": null,
+            "confidence": 0.975811,
+            "quien": "jd"
+          },
+          {
+            "text": " esperábamos",
+            "startMs": 6309,
+            "endMs": 7291,
+            "timestampMs": null,
+            "confidence": 0.986698,
+            "quien": "jd"
+          },
+          {
+            "text": " muchas",
+            "startMs": 7291,
+            "endMs": 7473,
+            "timestampMs": null,
+            "confidence": 0.360646,
+            "quien": "jd"
+          },
+          {
+            "text": " de",
+            "startMs": 7473,
+            "endMs": 7618,
+            "timestampMs": null,
+            "confidence": 0.974961,
+            "quien": "jd"
+          },
+          {
+            "text": " ellas",
+            "startMs": 7618,
+            "endMs": 7873,
+            "timestampMs": null,
+            "confidence": 0.98478,
+            "quien": "jd"
+          },
+          {
+            "text": " incluso",
+            "startMs": 7873,
+            "endMs": 8109,
+            "timestampMs": null,
+            "confidence": 0.868497,
+            "quien": "jd"
+          },
+          {
+            "text": " de",
+            "startMs": 8109,
+            "endMs": 8418,
+            "timestampMs": null,
+            "confidence": 0.9972,
+            "quien": "jd"
+          },
+          {
+            "text": " pronto",
+            "startMs": 8418,
+            "endMs": 8582,
+            "timestampMs": null,
+            "confidence": 0.998083,
+            "quien": "jd"
+          },
+          {
+            "text": " estuvieron",
+            "startMs": 8855,
+            "endMs": 9385,
+            "timestampMs": null,
+            "confidence": 0.986114,
+            "quien": "jd"
+          },
+          {
+            "text": " patentadas",
+            "startMs": 9385,
+            "endMs": 9914,
+            "timestampMs": null,
+            "confidence": 0.881168,
+            "quien": "jd"
+          },
+          {
+            "text": " en",
+            "startMs": 9914,
+            "endMs": 10075,
+            "timestampMs": null,
+            "confidence": 0.99798,
+            "quien": "jd"
+          },
+          {
+            "text": " el",
+            "startMs": 10075,
+            "endMs": 10236,
+            "timestampMs": null,
+            "confidence": 0.999241,
+            "quien": "jd"
+          },
+          {
+            "text": " pasado",
+            "startMs": 10236,
+            "endMs": 10582,
+            "timestampMs": null,
+            "confidence": 0.999085,
+            "quien": "jd"
+          },
+          {
+            "text": " vamos",
+            "startMs": 10855,
+            "endMs": 11218,
+            "timestampMs": null,
+            "confidence": 0.567356,
+            "quien": "jd"
+          },
+          {
+            "text": " a",
+            "startMs": 11400,
+            "endMs": 11526,
+            "timestampMs": null,
+            "confidence": 0.994402,
+            "quien": "jd"
+          },
+          {
+            "text": " verlo",
+            "startMs": 11526,
+            "endMs": 11855,
+            "timestampMs": null,
+            "confidence": 0.979012,
+            "quien": "jd"
+          }
+        ],
+        "texto": "le pregunté a la gente en el sofá qué mecánica de videojuego le gustaría tener en vida real y sus respuestas no las esperábamos muchas de ellas incluso de pronto estuvieron patentadas en el pasado vamos a verlo"
+      },
+      {
+        "tipo": "clip",
+        "archivo": "IMG_4876.MOV",
+        "desde": 38.6,
+        "hasta": 48.5,
+        "golpes": [
+          {
+            "en": "respawnear",
+            "texto": "RESPAWNEAR",
+            "estilo": "xp"
+          },
+          {
+            "en": "volver",
+            "texto": "VOLVER A LA VIDA",
+            "estilo": "pastilla"
+          }
+        ],
+        "fx": [
+          {
+            "tipo": "respawn",
+            "en": "respawnear",
+            "dura": 2.4,
+            "quien": null
+          },
+          {
+            "tipo": "vida",
+            "en": "volver",
+            "dura": 2.4,
+            "quien": "p2",
+            "modo": "cura"
+          },
+          {
+            "tipo": "estrellas",
+            "en": "cosa",
+            "dura": 2,
+            "quien": "p2"
+          }
+        ],
+        "personaje": {
+          "nombre": "Freezer",
+          "clase": "Emperador del universo 7 · Dragon Ball",
+          "tema": "espacio",
+          "color": "#B388FF",
+          "mundo": "Cosplay · SOFA 2026",
+          "stats": [
+            {
+              "n": "COSPLAY",
+              "v": 1
+            },
+            {
+              "n": "MALDAD",
+              "v": 1
+            },
+            {
+              "n": "RESPAWN",
+              "v": 1
+            }
+          ],
+          "resumen": "Respawnear"
+        },
+        "ficha": true,
+        "fichaEn": 0.3,
+        "retrato": {
+          "t": 20,
+          "x": 0.15,
+          "y": 0.4639,
+          "w": 0.3,
+          "h": 0.1913
+        },
+        "turnos": [
+          {
+            "desde": 38.5,
+            "quien": "jd"
+          },
+          {
+            "desde": 42.4,
+            "quien": "p2"
+          },
+          {
+            "desde": 47.4,
+            "quien": "jd"
+          }
+        ],
+        "foco": {
+          "jd": {
+            "x": 0.62,
+            "y": 0.4,
+            "escala": 1.2
+          },
+          "p2": {
+            "x": 0.22,
+            "y": 0.36,
+            "escala": 1.25
+          }
+        },
+        "lados": {
+          "jd": "derecha",
+          "p2": "izquierda"
+        },
+        "inicio": 482,
+        "cuadros": 275,
+        "cola": 3,
+        "tramos": [
+          {
+            "archivo": "sofa/IMG_4876.mp4",
+            "desde": 38.42,
+            "hasta": 46.5,
+            "velocidad": 1.1,
+            "inicio": 0,
+            "cuadros": 220
+          },
+          {
+            "archivo": "sofa/IMG_4876.mp4",
+            "desde": 47.2,
+            "hasta": 49.1,
+            "velocidad": 1.1,
+            "inicio": 220,
+            "cuadros": 52
+          }
+        ],
+        "subtitulos": [
+          {
+            "text": " ¿Habría",
+            "startMs": 182,
+            "endMs": 582,
+            "timestampMs": null,
+            "confidence": 0.887573,
+            "quien": "jd"
+          },
+          {
+            "text": " alguna",
+            "startMs": 582,
+            "endMs": 800,
+            "timestampMs": null,
+            "confidence": 0.988602,
+            "quien": "jd"
+          },
+          {
+            "text": " mecánica",
+            "startMs": 800,
+            "endMs": 1200,
+            "timestampMs": null,
+            "confidence": 0.911391,
+            "quien": "jd"
+          },
+          {
+            "text": " de",
+            "startMs": 1200,
+            "endMs": 1364,
+            "timestampMs": null,
+            "confidence": 0.963817,
+            "quien": "jd"
+          },
+          {
+            "text": " algún",
+            "startMs": 1364,
+            "endMs": 1527,
+            "timestampMs": null,
+            "confidence": 0.969666,
+            "quien": "jd"
+          },
+          {
+            "text": " videojuego",
+            "startMs": 1527,
+            "endMs": 1945,
+            "timestampMs": null,
+            "confidence": 0.97773,
+            "quien": "jd"
+          },
+          {
+            "text": " que",
+            "startMs": 1945,
+            "endMs": 2127,
+            "timestampMs": null,
+            "confidence": 0.947428,
+            "quien": "jd"
+          },
+          {
+            "text": " traerías",
+            "startMs": 2127,
+            "endMs": 2436,
+            "timestampMs": null,
+            "confidence": 0.992339,
+            "quien": "jd"
+          },
+          {
+            "text": " a",
+            "startMs": 2436,
+            "endMs": 2527,
+            "timestampMs": null,
+            "confidence": 0.985872,
+            "quien": "jd"
+          },
+          {
+            "text": " la",
+            "startMs": 2527,
+            "endMs": 2673,
+            "timestampMs": null,
+            "confidence": 0.987031,
+            "quien": "jd"
+          },
+          {
+            "text": " vida",
+            "startMs": 2673,
+            "endMs": 2891,
+            "timestampMs": null,
+            "confidence": 0.987061,
+            "quien": "jd"
+          },
+          {
+            "text": " real?",
+            "startMs": 2891,
+            "endMs": 2982,
+            "timestampMs": null,
+            "confidence": 0.992256,
+            "quien": "jd"
+          },
+          {
+            "text": " Yo",
+            "startMs": 3618,
+            "endMs": 3752,
+            "timestampMs": null,
+            "confidence": 0.990282,
+            "quien": "p2"
+          },
+          {
+            "text": " traería",
+            "startMs": 3752,
+            "endMs": 4077,
+            "timestampMs": null,
+            "confidence": 0.99103,
+            "quien": "p2"
+          },
+          {
+            "text": " la",
+            "startMs": 4077,
+            "endMs": 4212,
+            "timestampMs": null,
+            "confidence": 0.883666,
+            "quien": "p2"
+          },
+          {
+            "text": " de",
+            "startMs": 4212,
+            "endMs": 4345,
+            "timestampMs": null,
+            "confidence": 0.847334,
+            "quien": "p2"
+          },
+          {
+            "text": " respawnear,",
+            "startMs": 4527,
+            "endMs": 4982,
+            "timestampMs": null,
+            "confidence": 0.947863,
+            "quien": "p2"
+          },
+          {
+            "text": " porque",
+            "startMs": 5255,
+            "endMs": 5522,
+            "timestampMs": null,
+            "confidence": 0.887837,
+            "quien": "p2"
+          },
+          {
+            "text": " cualquier",
+            "startMs": 5522,
+            "endMs": 5896,
+            "timestampMs": null,
+            "confidence": 0.983599,
+            "quien": "p2"
+          },
+          {
+            "text": " cosa",
+            "startMs": 5896,
+            "endMs": 6093,
+            "timestampMs": null,
+            "confidence": 0.998136,
+            "quien": "p2"
+          },
+          {
+            "text": " podemos",
+            "startMs": 6093,
+            "endMs": 6395,
+            "timestampMs": null,
+            "confidence": 0.821693,
+            "quien": "p2"
+          },
+          {
+            "text": " volver",
+            "startMs": 6395,
+            "endMs": 6663,
+            "timestampMs": null,
+            "confidence": 0.99587,
+            "quien": "p2"
+          },
+          {
+            "text": " a",
+            "startMs": 6663,
+            "endMs": 6752,
+            "timestampMs": null,
+            "confidence": 0.99755,
+            "quien": "p2"
+          },
+          {
+            "text": " la",
+            "startMs": 6752,
+            "endMs": 6876,
+            "timestampMs": null,
+            "confidence": 0.99671,
+            "quien": "p2"
+          },
+          {
+            "text": " vida.",
+            "startMs": 6876,
+            "endMs": 7073,
+            "timestampMs": null,
+            "confidence": 0.999363,
+            "quien": "p2"
+          },
+          {
+            "text": " Bueno,",
+            "startMs": 7527,
+            "endMs": 7764,
+            "timestampMs": null,
+            "confidence": 0.968006,
+            "quien": "jd"
+          },
+          {
+            "text": " muchas",
+            "startMs": 7764,
+            "endMs": 8036,
+            "timestampMs": null,
+            "confidence": 0.988186,
+            "quien": "jd"
+          },
+          {
+            "text": " gracias.",
+            "startMs": 8036,
+            "endMs": 8345,
+            "timestampMs": null,
+            "confidence": 0.998498,
+            "quien": "jd"
+          }
+        ],
+        "texto": "¿Habría alguna mecánica de algún videojuego que traerías a la vida real? Yo traería la de respaunear, porque cualquier cosa podemos volver a la vida. Bueno, muchas gracias.",
+        "retratoPng": "sofa/retratos/sofa-mecanica-2-b72a88fc.png"
+      },
+      {
+        "tipo": "nivel",
+        "numero": 2,
+        "nombre": "Lado oscuro",
+        "estilo": "vs",
+        "segundos": 2,
+        "inicio": 757,
+        "cuadros": 60
+      },
+      {
+        "tipo": "clip",
+        "archivo": "DJI_20261012_145857_873_video.mp4",
+        "desde": 16.9,
+        "hasta": 25.6,
+        "golpes": [
+          {
+            "en": "turnos",
+            "texto": "COMBATES POR TURNOS",
+            "estilo": "pastilla"
+          }
+        ],
+        "fx": [
+          {
+            "tipo": "turnos",
+            "en": "combates",
+            "dura": 3.2,
+            "quien": "p2"
+          },
+          {
+            "tipo": "corte",
+            "en": "turnos",
+            "dura": 1.2,
+            "quien": "p2",
+            "color": "#E8323C"
+          }
+        ],
+        "personaje": {
+          "nombre": "Darth Revan",
+          "clase": "Señor Sith · Star Wars",
+          "tema": "mazmorra",
+          "color": "#E8323C",
+          "mundo": "Cosplay · SOFA 2026",
+          "stats": [
+            {
+              "n": "COSPLAY",
+              "v": 1
+            },
+            {
+              "n": "LADO OSCURO",
+              "v": 1
+            },
+            {
+              "n": "PACIENCIA",
+              "v": 0.9
+            }
+          ],
+          "resumen": "Combates por turnos"
+        },
+        "ficha": true,
+        "fichaEn": 0.3,
+        "retrato": {
+          "t": 20,
+          "x": 0.118,
+          "y": 0.4828,
+          "w": 0.304,
+          "h": 0.1938
+        },
+        "turnos": [
+          {
+            "desde": 16.9,
+            "quien": "jd"
+          },
+          {
+            "desde": 20.2,
+            "quien": "p2"
+          },
+          {
+            "desde": 24.4,
+            "quien": "jd"
+          }
+        ],
+        "foco": {
+          "jd": {
+            "x": 0.6,
+            "y": 0.4,
+            "escala": 1.25
+          },
+          "p2": {
+            "x": 0.28,
+            "y": 0.42,
+            "escala": 1.3
+          }
+        },
+        "lados": {
+          "jd": "derecha",
+          "p2": "izquierda"
+        },
+        "inicio": 817,
+        "cuadros": 254,
+        "cola": 8,
+        "tramos": [
+          {
+            "archivo": "sofa/DJI_20261012_145857_873_video.mp4",
+            "desde": 16.7,
+            "hasta": 23.7,
+            "velocidad": 1.1,
+            "inicio": 0,
+            "cuadros": 191
+          },
+          {
+            "archivo": "sofa/DJI_20261012_145857_873_video.mp4",
+            "desde": 24.2,
+            "hasta": 26.2,
+            "velocidad": 1.1,
+            "inicio": 191,
+            "cuadros": 55
+          }
+        ],
+        "subtitulos": [
+          {
+            "text": " ¿Qué",
+            "startMs": 182,
+            "endMs": 473,
+            "timestampMs": null,
+            "confidence": 0.42132,
+            "quien": "jd"
+          },
+          {
+            "text": " mecánica",
+            "startMs": 473,
+            "endMs": 909,
+            "timestampMs": null,
+            "confidence": 0.989706,
+            "quien": "jd"
+          },
+          {
+            "text": " de",
+            "startMs": 909,
+            "endMs": 1073,
+            "timestampMs": null,
+            "confidence": 0.986352,
+            "quien": "jd"
+          },
+          {
+            "text": " videojuego",
+            "startMs": 1073,
+            "endMs": 1655,
+            "timestampMs": null,
+            "confidence": 0.988116,
+            "quien": "jd"
+          },
+          {
+            "text": " traerías",
+            "startMs": 1655,
+            "endMs": 2055,
+            "timestampMs": null,
+            "confidence": 0.996782,
+            "quien": "jd"
+          },
+          {
+            "text": " a",
+            "startMs": 2055,
+            "endMs": 2127,
+            "timestampMs": null,
+            "confidence": 0.995046,
+            "quien": "jd"
+          },
+          {
+            "text": " la",
+            "startMs": 2127,
+            "endMs": 2291,
+            "timestampMs": null,
+            "confidence": 0.998612,
+            "quien": "jd"
+          },
+          {
+            "text": " vida",
+            "startMs": 2291,
+            "endMs": 2545,
+            "timestampMs": null,
+            "confidence": 0.998708,
+            "quien": "jd"
+          },
+          {
+            "text": " real?",
+            "startMs": 2545,
+            "endMs": 2636,
+            "timestampMs": null,
+            "confidence": 0.980034,
+            "quien": "jd"
+          },
+          {
+            "text": " Te",
+            "startMs": 3182,
+            "endMs": 3341,
+            "timestampMs": null,
+            "confidence": 0.900613,
+            "quien": "p2"
+          },
+          {
+            "text": " diría",
+            "startMs": 3341,
+            "endMs": 3636,
+            "timestampMs": null,
+            "confidence": 0.997139,
+            "quien": "p2"
+          },
+          {
+            "text": " a",
+            "startMs": 4182,
+            "endMs": 4295,
+            "timestampMs": null,
+            "confidence": 0.726631,
+            "quien": "p2"
+          },
+          {
+            "text": " la",
+            "startMs": 4295,
+            "endMs": 4455,
+            "timestampMs": null,
+            "confidence": 0.994643,
+            "quien": "p2"
+          },
+          {
+            "text": " vida",
+            "startMs": 4455,
+            "endMs": 4705,
+            "timestampMs": null,
+            "confidence": 0.998235,
+            "quien": "p2"
+          },
+          {
+            "text": " vea",
+            "startMs": 4705,
+            "endMs": 4909,
+            "timestampMs": null,
+            "confidence": 0.101201,
+            "quien": "p2"
+          },
+          {
+            "text": " los",
+            "startMs": 4909,
+            "endMs": 5114,
+            "timestampMs": null,
+            "confidence": 0.963097,
+            "quien": "p2"
+          },
+          {
+            "text": " combates",
+            "startMs": 5114,
+            "endMs": 5545,
+            "timestampMs": null,
+            "confidence": 0.980204,
+            "quien": "p2"
+          },
+          {
+            "text": " por",
+            "startMs": 5545,
+            "endMs": 5750,
+            "timestampMs": null,
+            "confidence": 0.995182,
+            "quien": "p2"
+          },
+          {
+            "text": " turnos.",
+            "startMs": 5750,
+            "endMs": 6091,
+            "timestampMs": null,
+            "confidence": 0.984566,
+            "quien": "p2"
+          },
+          {
+            "text": " Perfecto,",
+            "startMs": 6545,
+            "endMs": 6952,
+            "timestampMs": null,
+            "confidence": 0.846176,
+            "quien": "jd"
+          },
+          {
+            "text": " muchas",
+            "startMs": 6952,
+            "endMs": 7273,
+            "timestampMs": null,
+            "confidence": 0.9775,
+            "quien": "jd"
+          },
+          {
+            "text": " gracias.",
+            "startMs": 7273,
+            "endMs": 7636,
+            "timestampMs": null,
+            "confidence": 0.997135,
+            "quien": "jd"
+          }
+        ],
+        "texto": "¿Qué mecánica de videojuego traerías a la vida real? Te diría a la vida vea los combates por turnos. Perfecto, muchas gracias.",
+        "retratoPng": "sofa/retratos/sofa-mecanica-3-736e08ea.png"
+      },
+      {
+        "tipo": "nivel",
+        "numero": 3,
+        "nombre": "Mundo digital",
+        "estilo": "encuentro",
+        "segundos": 2,
+        "inicio": 1071,
+        "cuadros": 60
+      },
+      {
+        "tipo": "clip",
+        "archivo": "DJI_20261012_151010_513_video.mp4",
+        "desde": 15.5,
+        "hasta": 28.3,
+        "golpes": [
+          {
+            "en": "Clones",
+            "texto": "CLONES",
+            "estilo": "golpe"
+          },
+          {
+            "en": "descansar",
+            "texto": "Y YO PODER DESCANSAR",
+            "estilo": "xp"
+          }
+        ],
+        "fx": [
+          {
+            "tipo": "clones",
+            "en": "clonarme",
+            "dura": 2.6,
+            "quien": null
+          },
+          {
+            "tipo": "nivelUp",
+            "en": "descansar",
+            "dura": 2.4,
+            "quien": "p2",
+            "texto": "LEVEL UP!",
+            "stats": [
+              [
+                "DESCANSO",
+                0.2,
+                1
+              ],
+              [
+                "LABORES",
+                0.9,
+                0.3
+              ],
+              [
+                "CLONES",
+                0,
+                1
+              ]
+            ]
+          }
+        ],
+        "personaje": {
+          "nombre": "Angemon",
+          "clase": "Digimon · Mundo digital",
+          "tema": "digital",
+          "color": "#F2C85B",
+          "mundo": "Cosplay · SOFA 2026",
+          "stats": [
+            {
+              "n": "COSPLAY",
+              "v": 1
+            },
+            {
+              "n": "ALAS",
+              "v": 1
+            },
+            {
+              "n": "CLONES",
+              "v": 0.9
+            }
+          ],
+          "resumen": "Clones para poder descansar"
+        },
+        "ficha": true,
+        "fichaEn": 0.3,
+        "retrato": {
+          "t": 33.6,
+          "x": 0.4315,
+          "y": 0.3341,
+          "w": 0.247,
+          "h": 0.1575
+        },
+        "turnos": [
+          {
+            "desde": 15.5,
+            "quien": "jd"
+          },
+          {
+            "desde": 18.6,
+            "quien": "p2"
+          }
+        ],
+        "foco": {
+          "jd": {
+            "x": 0.35,
+            "y": 0.38,
+            "escala": 1.3
+          },
+          "p2": {
+            "x": 0.62,
+            "y": 0.36,
+            "escala": 1.38
+          }
+        },
+        "inicio": 1131,
+        "cuadros": 353,
+        "cola": 3,
+        "tramos": [
+          {
+            "archivo": "sofa/DJI_20261012_151010_513_video.mp4",
+            "desde": 15.3,
+            "hasta": 23.7,
+            "velocidad": 1.1,
+            "inicio": 0,
+            "cuadros": 229
+          },
+          {
+            "archivo": "sofa/DJI_20261012_151010_513_video.mp4",
+            "desde": 23.9,
+            "hasta": 25.4,
+            "velocidad": 1.1,
+            "inicio": 229,
+            "cuadros": 41
+          },
+          {
+            "archivo": "sofa/DJI_20261012_151010_513_video.mp4",
+            "desde": 25.98,
+            "hasta": 28.9,
+            "velocidad": 1.1,
+            "inicio": 270,
+            "cuadros": 80
+          }
+        ],
+        "subtitulos": [
+          {
+            "text": " ¿qué",
+            "startMs": 182,
+            "endMs": 491,
+            "timestampMs": null,
+            "confidence": 0.939865,
+            "quien": "jd"
+          },
+          {
+            "text": " mecánica",
+            "startMs": 491,
+            "endMs": 891,
+            "timestampMs": null,
+            "confidence": 0.989498,
+            "quien": "jd"
+          },
+          {
+            "text": " de",
+            "startMs": 891,
+            "endMs": 1073,
+            "timestampMs": null,
+            "confidence": 0.953581,
+            "quien": "jd"
+          },
+          {
+            "text": " videojuego",
+            "startMs": 1073,
+            "endMs": 1618,
+            "timestampMs": null,
+            "confidence": 0.909478,
+            "quien": "jd"
+          },
+          {
+            "text": " traerías",
+            "startMs": 1618,
+            "endMs": 2036,
+            "timestampMs": null,
+            "confidence": 0.837224,
+            "quien": "jd"
+          },
+          {
+            "text": " a",
+            "startMs": 2036,
+            "endMs": 2091,
+            "timestampMs": null,
+            "confidence": 0.994507,
+            "quien": "jd"
+          },
+          {
+            "text": " la",
+            "startMs": 2091,
+            "endMs": 2236,
+            "timestampMs": null,
+            "confidence": 0.983708,
+            "quien": "jd"
+          },
+          {
+            "text": " vida",
+            "startMs": 2236,
+            "endMs": 2455,
+            "timestampMs": null,
+            "confidence": 0.977187,
+            "quien": "jd"
+          },
+          {
+            "text": " real?",
+            "startMs": 2455,
+            "endMs": 2545,
+            "timestampMs": null,
+            "confidence": 0.983074,
+            "quien": "jd"
+          },
+          {
+            "text": " Bueno,",
+            "startMs": 3127,
+            "endMs": 3309,
+            "timestampMs": null,
+            "confidence": 0.909707,
+            "quien": "p2"
+          },
+          {
+            "text": " la",
+            "startMs": 3309,
+            "endMs": 3418,
+            "timestampMs": null,
+            "confidence": 0.845048,
+            "quien": "p2"
+          },
+          {
+            "text": " que",
+            "startMs": 3418,
+            "endMs": 3545,
+            "timestampMs": null,
+            "confidence": 0.998441,
+            "quien": "p2"
+          },
+          {
+            "text": " me",
+            "startMs": 3545,
+            "endMs": 3873,
+            "timestampMs": null,
+            "confidence": 0.99705,
+            "quien": "p2"
+          },
+          {
+            "text": " gustaría",
+            "startMs": 3873,
+            "endMs": 4364,
+            "timestampMs": null,
+            "confidence": 0.981351,
+            "quien": "p2"
+          },
+          {
+            "text": " sería",
+            "startMs": 4364,
+            "endMs": 4873,
+            "timestampMs": null,
+            "confidence": 0.754619,
+            "quien": "p2"
+          },
+          {
+            "text": " la",
+            "startMs": 4873,
+            "endMs": 5018,
+            "timestampMs": null,
+            "confidence": 0.912224,
+            "quien": "p2"
+          },
+          {
+            "text": " de",
+            "startMs": 5018,
+            "endMs": 5200,
+            "timestampMs": null,
+            "confidence": 0.993835,
+            "quien": "p2"
+          },
+          {
+            "text": " Clones,",
+            "startMs": 5200,
+            "endMs": 5455,
+            "timestampMs": null,
+            "confidence": 0.237789,
+            "quien": "p2"
+          },
+          {
+            "text": " clonarme",
+            "startMs": 5909,
+            "endMs": 6370,
+            "timestampMs": null,
+            "confidence": 0.741509,
+            "quien": "p2"
+          },
+          {
+            "text": " a",
+            "startMs": 6370,
+            "endMs": 6491,
+            "timestampMs": null,
+            "confidence": 0.991997,
+            "quien": "p2"
+          },
+          {
+            "text": " mí",
+            "startMs": 6491,
+            "endMs": 6661,
+            "timestampMs": null,
+            "confidence": 0.969736,
+            "quien": "p2"
+          },
+          {
+            "text": " y...",
+            "startMs": 6661,
+            "endMs": 6782,
+            "timestampMs": null,
+            "confidence": 0.606079,
+            "quien": "p2"
+          },
+          {
+            "text": " para",
+            "startMs": 6782,
+            "endMs": 7048,
+            "timestampMs": null,
+            "confidence": 0.793389,
+            "quien": "p2"
+          },
+          {
+            "text": " poder",
+            "startMs": 7048,
+            "endMs": 7364,
+            "timestampMs": null,
+            "confidence": 0.994816,
+            "quien": "p2"
+          },
+          {
+            "text": " mandar",
+            "startMs": 7818,
+            "endMs": 8168,
+            "timestampMs": null,
+            "confidence": 0.634604,
+            "quien": "p2"
+          },
+          {
+            "text": " los",
+            "startMs": 8168,
+            "endMs": 8377,
+            "timestampMs": null,
+            "confidence": 0.647916,
+            "quien": "p2"
+          },
+          {
+            "text": " clones",
+            "startMs": 8377,
+            "endMs": 8727,
+            "timestampMs": null,
+            "confidence": 0.865416,
+            "quien": "p2"
+          },
+          {
+            "text": " en",
+            "startMs": 9182,
+            "endMs": 9291,
+            "timestampMs": null,
+            "confidence": 0.565677,
+            "quien": "p2"
+          },
+          {
+            "text": " mis",
+            "startMs": 9291,
+            "endMs": 9509,
+            "timestampMs": null,
+            "confidence": 0.995298,
+            "quien": "p2"
+          },
+          {
+            "text": " labores",
+            "startMs": 9509,
+            "endMs": 9982,
+            "timestampMs": null,
+            "confidence": 0.964479,
+            "quien": "p2"
+          },
+          {
+            "text": " y",
+            "startMs": 9982,
+            "endMs": 10073,
+            "timestampMs": null,
+            "confidence": 0.755192,
+            "quien": "p2"
+          },
+          {
+            "text": " yo",
+            "startMs": 10073,
+            "endMs": 10291,
+            "timestampMs": null,
+            "confidence": 0.987101,
+            "quien": "p2"
+          },
+          {
+            "text": " poder",
+            "startMs": 10291,
+            "endMs": 10491,
+            "timestampMs": null,
+            "confidence": 0.967368,
+            "quien": "p2"
+          },
+          {
+            "text": " descansar.",
+            "startMs": 10491,
+            "endMs": 10695,
+            "timestampMs": null,
+            "confidence": 0.991991,
+            "quien": "p2"
+          },
+          {
+            "text": " O",
+            "startMs": 10695,
+            "endMs": 10743,
+            "timestampMs": null,
+            "confidence": 0.55221,
+            "quien": "p2"
+          },
+          {
+            "text": " ayudarme.",
+            "startMs": 10743,
+            "endMs": 10927,
+            "timestampMs": null,
+            "confidence": 0.976008,
+            "quien": "p2"
+          }
+        ],
+        "texto": "¿qué mecánica de videojuego traerías a la vida real? Bueno, la que me gustaría sería la de Clones, clonarme a mí y... para poder mandar los clones en mis labores y yo poder descansar. O ayudarme.",
+        "retratoPng": "sofa/retratos/sofa-mecanica-4-fc39b6b4.png"
+      },
+      {
+        "tipo": "cierre",
+        "archivo": "DJI_20261012_151303_085_video.mp4",
+        "desde": 1.4,
+        "hasta": 6.8,
+        "golpes": [
+          {
+            "en": "real",
+            "texto": "¿Y TÚ CUÁL?",
+            "estilo": "pastilla"
+          }
+        ],
+        "fx": [],
+        "foco": {
+          "jd": {
+            "x": 0.47,
+            "y": 0.39,
+            "escala": 1.3
+          }
+        },
+        "lados": {
+          "jd": "centro"
+        },
+        "cta": "COMENTA TU MECÁNICA",
+        "inicio": 1484,
+        "cuadros": 165,
+        "cola": 3,
+        "tramos": [
+          {
+            "archivo": "sofa/DJI_20261012_151303_085_video.mp4",
+            "desde": 1.2,
+            "hasta": 2.2,
+            "velocidad": 1.1,
+            "inicio": 0,
+            "cuadros": 27
+          },
+          {
+            "archivo": "sofa/DJI_20261012_151303_085_video.mp4",
+            "desde": 2.44,
+            "hasta": 7.4,
+            "velocidad": 1.1,
+            "inicio": 27,
+            "cuadros": 135
+          }
+        ],
+        "subtitulos": [
+          {
+            "text": " y",
+            "startMs": 182,
+            "endMs": 290,
+            "timestampMs": null,
+            "confidence": 0.212757,
+            "quien": "jd"
+          },
+          {
+            "text": " tú",
+            "startMs": 290,
+            "endMs": 442,
+            "timestampMs": null,
+            "confidence": 0.610921,
+            "quien": "jd"
+          },
+          {
+            "text": " qué",
+            "startMs": 442,
+            "endMs": 636,
+            "timestampMs": null,
+            "confidence": 0.753156,
+            "quien": "jd"
+          },
+          {
+            "text": " mecánica",
+            "startMs": 1091,
+            "endMs": 1527,
+            "timestampMs": null,
+            "confidence": 0.900158,
+            "quien": "jd"
+          },
+          {
+            "text": " de",
+            "startMs": 1527,
+            "endMs": 1691,
+            "timestampMs": null,
+            "confidence": 0.786573,
+            "quien": "jd"
+          },
+          {
+            "text": " videojuego",
+            "startMs": 1691,
+            "endMs": 2145,
+            "timestampMs": null,
+            "confidence": 0.819402,
+            "quien": "jd"
+          },
+          {
+            "text": " traerías",
+            "startMs": 2145,
+            "endMs": 2527,
+            "timestampMs": null,
+            "confidence": 0.831174,
+            "quien": "jd"
+          },
+          {
+            "text": " a",
+            "startMs": 2527,
+            "endMs": 2600,
+            "timestampMs": null,
+            "confidence": 0.969255,
+            "quien": "jd"
+          },
+          {
+            "text": " la",
+            "startMs": 2600,
+            "endMs": 2745,
+            "timestampMs": null,
+            "confidence": 0.993371,
+            "quien": "jd"
+          },
+          {
+            "text": " vida",
+            "startMs": 2745,
+            "endMs": 3055,
+            "timestampMs": null,
+            "confidence": 0.969082,
+            "quien": "jd"
+          },
+          {
+            "text": " real",
+            "startMs": 3055,
+            "endMs": 3145,
+            "timestampMs": null,
+            "confidence": 0.993479,
+            "quien": "jd"
+          },
+          {
+            "text": " déjanoslo",
+            "startMs": 3418,
+            "endMs": 3823,
+            "timestampMs": null,
+            "confidence": 0.348812,
+            "quien": "jd"
+          },
+          {
+            "text": " saber",
+            "startMs": 3823,
+            "endMs": 4074,
+            "timestampMs": null,
+            "confidence": 0.996806,
+            "quien": "jd"
+          },
+          {
+            "text": " en",
+            "startMs": 4074,
+            "endMs": 4209,
+            "timestampMs": null,
+            "confidence": 0.930838,
+            "quien": "jd"
+          },
+          {
+            "text": " comentarios",
+            "startMs": 4209,
+            "endMs": 4691,
+            "timestampMs": null,
+            "confidence": 0.750717,
+            "quien": "jd"
+          }
+        ],
+        "texto": "y tú qué mecánica de videojuego traerías a la vida real déjanoslo saber en comentarios"
+      },
+      {
+        "tipo": "final",
+        "inicio": 1649,
+        "cuadros": 72
+      }
+    ],
+    "total": 1721,
+    "avisos": []
+  },
+  "bpm": 140,
+  "capas": true,
+  "orden": [
+    0,
+    1,
+    2,
+    3
+  ]
+}
