@@ -1,7 +1,8 @@
 import { writeFileSync } from 'node:fs';
 
 /**
- * Subtítulos de una clase en ASS (los quema ffmpeg con libass).
+ * Subtítulos de una clase: en ASS (los quema ffmpeg con libass) y en WebVTT (closed captions del
+ * reproductor de la app, que se prenden y se apagan). Ambos salen de las mismas líneas.
  *
  * Van en UNA línea, en la franja de abajo de la pantalla compartida (la grabación de LiveKit la
  * deja vacía): así no tapan nada de lo que el profesor muestra. Una línea de hasta ~70
@@ -11,7 +12,7 @@ import { writeFileSync } from 'node:fs';
  * prefiriendo cortar después de una coma. `clase.subtitulos.correcciones` arregla palabras que
  * Whisper escribe mal ({"Banegas": "Vanegas"}); se aplican sobre la palabra suelta y sobre frases.
  */
-export function generarAss({ clase, transcripcion, desde, hasta, aSalida, salida }) {
+export function lineasDe({ clase, transcripcion, desde, hasta }) {
   const cfg = clase.subtitulos ?? {};
   const MAX = cfg.maxCaracteres ?? 68;
   const MAXSEG = cfg.maxSegundos ?? 5;
@@ -46,7 +47,26 @@ export function generarAss({ clase, transcripcion, desde, hasta, aSalida, salida
     if (/[.?!…]$/.test(w.p) && cur.map((x) => x.p).join(' ').length > 18) cerrar();
   }
   cerrar();
+  return lineas;
+}
 
+/** Inicio, fin (segundos del MP4 final) y texto corregido de cada línea. */
+function cuesDe({ clase, transcripcion, desde, hasta, aSalida }) {
+  const lineas = lineasDe({ clase, transcripcion, desde, hasta });
+  const corr = Object.entries(clase.subtitulos?.correcciones ?? {});
+  const corregir = (txt) => corr.reduce((t, [mal, bien]) => t.replace(new RegExp(`(?<![\\p{L}])${mal.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?![\\p{L}])`, 'gu'), bien), txt);
+  return lineas.map((l, i) => {
+    const ini = aSalida(l[0].ini);
+    const sig = lineas[i + 1] ? aSalida(lineas[i + 1][0].ini) : Infinity;
+    // Se queda un poco más que la última palabra (lectura), sin pisar la línea siguiente.
+    const fin = Math.min(aSalida(l[l.length - 1].fin) + 0.35, sig - 0.02);
+    const txt = corregir(l.map((x) => x.p).join(' ')).replace(/\s+/g, ' ').trim();
+    return { ini, fin, txt };
+  });
+}
+
+export function generarAss({ clase, transcripcion, desde, hasta, aSalida, salida }) {
+  const cfg = clase.subtitulos ?? {};
   const T = clase.tema;
   const fmt = (s) => {
     s = Math.max(0, s);
@@ -73,16 +93,24 @@ Style: Clase,Inter SemiBold,${cfg.tamano ?? 34},${color(T.tinta)},${color(T.acen
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 `;
-  const corr = Object.entries(cfg.correcciones ?? {});
-  const corregir = (txt) => corr.reduce((t, [mal, bien]) => t.replace(new RegExp(`(?<![\\p{L}])${mal.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?![\\p{L}])`, 'gu'), bien), txt);
-  const ev = lineas.map((l, i) => {
-    const ini = aSalida(l[0].ini);
-    const sig = lineas[i + 1] ? aSalida(lineas[i + 1][0].ini) : Infinity;
-    // Se queda un poco más que la última palabra (lectura), sin pisar la línea siguiente.
-    const fin = Math.min(aSalida(l[l.length - 1].fin) + 0.35, sig - 0.02);
-    const txt = corregir(l.map((x) => x.p).join(' ')).replace(/\s+/g, ' ').trim();
-    return `Dialogue: 0,${fmt(ini)},${fmt(fin)},Clase,,0,0,0,,${txt}`;
-  });
+  const ev = cuesDe({ clase, transcripcion, desde, hasta, aSalida }).map(
+    (c) => `Dialogue: 0,${fmt(c.ini)},${fmt(c.fin)},Clase,,0,0,0,,${c.txt}`
+  );
   writeFileSync(salida, '﻿' + cab + ev.join('\n') + '\n', 'utf8');
+  return ev.length;
+}
+
+/** Los mismos subtítulos en WebVTT: la app los muestra como closed captions de la grabación. */
+export function generarVtt({ clase, transcripcion, desde, hasta, aSalida, salida }) {
+  const fmt = (s) => {
+    s = Math.max(0, s);
+    const h = Math.floor(s / 3600);
+    const m = Math.floor((s % 3600) / 60);
+    return `${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}:${(s % 60).toFixed(3).padStart(6, '0')}`;
+  };
+  const ev = cuesDe({ clase, transcripcion, desde, hasta, aSalida }).map(
+    (c, i) => `${i + 1}\n${fmt(c.ini)} --> ${fmt(c.fin)}\n${c.txt}`
+  );
+  writeFileSync(salida, 'WEBVTT\n\n' + ev.join('\n\n') + '\n', 'utf8');
   return ev.length;
 }

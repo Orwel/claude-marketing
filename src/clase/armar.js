@@ -26,6 +26,7 @@ import { RAIZ } from '../config.js';
 import { remotion } from '../remotion-cli.js';
 import { SEG_CAMBIO, ventanasAnimadas } from '../../remotion/clase/tiempo.js';
 import { generarAss } from './subtitulos.js';
+import { escribirCapitulos } from './capitulos.js';
 
 const args = process.argv.slice(2);
 const slug = args.find((a) => !a.startsWith('--'));
@@ -120,6 +121,9 @@ const ass = path.join(T, 'subtitulos.ass');
 const transcripcion = JSON.parse(readFileSync(path.join(DIR, '01-audio', 'transcripcion.json'), 'utf8'));
 const nSubs = generarAss({ clase, transcripcion, desde: A, hasta: A + largo, aSalida: (ta) => aSalida(ta + desfaseEn(ta)), salida: ass });
 console.log(`  ${nSubs} líneas`);
+// Capítulos del timeline y closed captions (.vtt) para el reproductor de la app.
+const cc = escribirCapitulos({ clase, transcripcion, desfaseEn, desde: A, hasta: A + largo, aSalida, final });
+console.log(`  ${cc.capitulos} capítulos y ${cc.subtitulos} subtítulos .vtt junto al MP4`);
 
 // ---------- 6. final ----------
 console.log('\n6/6 final (ffmpeg)…');
@@ -249,7 +253,9 @@ function componerFinal() {
   const assEsc = ass.replace(/\\/g, '/').replace(':', '\\:');
   // Los subtítulos se queman sobre el cuerpo SIN intro: el ASS se escribió con tiempos de salida,
   // así que se le resta la intro al quemarlos aquí (setpts del cuerpo empieza en 0).
-  f.push(`[${ult}]setpts=PTS+${I}/TB,subtitles='${assEsc}':fontsdir='${fuentes}',setpts=PTS-${I}/TB,format=yuv420p[cuerpo]`);
+  // `subtitulos.quemar: false` los deja solo como closed captions (.vtt) en el reproductor.
+  if (clase.subtitulos?.quemar === false) f.push(`[${ult}]format=yuv420p[cuerpo]`);
+  else f.push(`[${ult}]setpts=PTS+${I}/TB,subtitles='${assEsc}':fontsdir='${fuentes}',setpts=PTS-${I}/TB,format=yuv420p[cuerpo]`);
   f.push(`[2:a]aformat=sample_rates=48000:channel_layouts=stereo[acuerpo]`);
   const segs = [];
   if (LOGO) {
