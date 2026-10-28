@@ -772,3 +772,25 @@ Videos: IMG_3770, IMG_3772 e IMG_3776 de octubre (iPhone). Salieron `la-ia-que-n
 - **Cambio de precio (28-oct, $89.000 → $49.000):** basta cambiar `precio` en `venta` de la ficha, re-empaquetar en otro
   --out-dir (`paquete-49000`) y volver a renderizar solo lo que lo muestra: tráiler (escena precio), venta v2 (presenta y
   precio) y láminas 2 y 6 del carrusel. Duraciones iguales: la música no se regenera. Entregas viejas en `anterior-89000/`.
+
+## 28-oct-2026 · Tráiler en forma de viaje (Viaje.jsx + Globo.jsx)
+- **Gusto de Juan David:** no quiere el caso de los abogados de Nueva York en el tráiler; quiere el estilo de sus clases con
+  mundo animado (el avión que recorre el planeta y en cada parada el tema en grande, como la presentación y Vuelo de
+  Divisas), fragmentos reales de la clase y **el precio al final**, no al principio: primero convencer, después $89.000
+  tachado y «Precio de lanzamiento $49.000» con la ruta de compra. Esto reemplaza el «precio anticipado» de arriba.
+- El planeta es el de la presentación (`vuelo.html`) portado a react-three-fiber. Todo sale del número de cuadro: el avión
+  orbita con theta = t·0,5, los vuelos van de órbita a órbita con el rumbo fundido al despegar y al llegar, y la cámara
+  mezcla vista y encuadre de la escena anterior en 0,8 s. Nada de lerp acumulado ni requestAnimationFrame.
+- Los letreros del planeta se pintan en un canvas: esperar `cargarFuentes()` (fuentes.js) con delayRender antes de armar la
+  escena, o salen con la fuente del sistema.
+- Crudo → v1: `v1 = crudo + 1,6 + desfase del tramo` (`sincronia.tramos`). Comprobado con faster-whisper sobre cada corte.
+- El logo de la intro rompía OffthreadVideo («No frame found at position»), primero con `playbackRate` sobre el original de
+  24 fps y después incluso acelerado con ffmpeg a 30 fps sin B-frames. Solución: acelerarlo con ffmpeg, pasarlo a JPG
+  cuadro a cuadro (`trailer/logo/0001.jpg…`) con su sonido en WAV aparte, y mostrarlo con `<Img>` según el cuadro.
+  Lo mismo pasó con los clips de la clase (que en el tráiler anterior sí funcionaban): con ~600 MB de RAM libre el
+  compositor pierde cuadros. Momento (Trailer.jsx) acepta `cuadros` + `n` + `sonido` para ir con JPG en vez de video.
+- Con poca RAM libre (otras sesiones armando la clase y builds de Next) el render con --concurrency=3 cerró el navegador
+  («Target closed»): para el planeta 3D usar --concurrency=2.
+- `remotion still` con three.js tarda 2–4 min por cuadro (arranca el navegador y arma el planeta cada vez): pocas tomas.
+- `python -I` ignora PYTHONIOENCODING: en Windows la entrada y la salida estándar quedan en cp1252 y los saltos de línea
+  salen como CRLF. Nunca reescribir un JSON por la salida estándar; abrir el archivo con `encoding='utf8'` y `newline='\n'`.

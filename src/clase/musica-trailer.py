@@ -5,7 +5,7 @@ cayendo exactos en los cortes del tráiler. Bombo y bajo en negras, hi-hat en co
 de acordes, un golpe en cada corte, una subida antes del precio y un remate al final.
 El volumen de la música frente a la voz lo maneja Remotion; aquí sale a nivel completo.
 
-Uso: python -I src/clase/musica-trailer.py clases/<slug>.json salida.wav [escenas|historia|carrusel]
+Uso: python -I src/clase/musica-trailer.py clases/<slug>.json salida.wav [escenas|historia|viaje|carrusel]
 (carrusel: una pista corta sin cortes, la misma para todas las láminas)
 """
 import json
@@ -19,6 +19,8 @@ clase = json.load(open(sys.argv[1], encoding='utf8'))
 venta = clase['venta']
 lista = sys.argv[3] if len(sys.argv) > 3 else 'escenas'
 escenas = venta[lista] if lista != 'carrusel' else [{'tipo': 'lamina', 'dura': 5.5}, {'tipo': 'precio', 'dura': 1.5}]
+# El logo de la intro trae su propio sonido: la pista arranca cuando termina (Viaje.jsx la pone ahí).
+escenas = [e for e in escenas if e['tipo'] != 'logo']
 cortes = np.cumsum([0] + [e['dura'] for e in escenas])
 total = float(cortes[-1]) + 1.5
 n = int(total * TASA)

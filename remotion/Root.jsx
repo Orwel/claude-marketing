@@ -14,6 +14,7 @@ import { lineaArcade } from './arcade/linea.js';
 import { Marco } from './clase/Marco.jsx';
 import { Cartel, Cierre, Intro } from './clase/Piezas.jsx';
 import { ComentarioSuelto, ComentariosCompuesto, Trailer, duracionTrailer } from './clase/Trailer.jsx';
+import { Viaje, cuadrosViaje } from './clase/Viaje.jsx';
 import { aplicarVoz, duracionDe, duracionPieza, FORMATOS } from './util.js';
 
 /**
@@ -193,6 +194,11 @@ function composicionesClase() {
       ...(clase.venta ? [
         <Composition key={`${id}--trailer-16x9`} id={`${id}--trailer-16x9`} component={Trailer} {...base} durationInFrames={duracionTrailer(clase, 'escenas')} defaultProps={{ clase }} />,
         <Composition key={`${id}--trailer-9x16`} id={`${id}--trailer-9x16`} component={Trailer} fps={FPS} width={1080} height={1920} durationInFrames={duracionTrailer(clase, 'escenas')} defaultProps={{ clase }} />,
+        // Tráiler en forma de viaje (venta.viaje): el avión recorre el planeta y en cada parada habla el profesor.
+        ...(clase.venta.viaje ? [
+          <Composition key={`${id}--viaje-16x9`} id={`${id}--viaje-16x9`} component={Viaje} {...base} durationInFrames={cuadrosViaje(clase)} defaultProps={{ clase }} />,
+          <Composition key={`${id}--viaje-9x16`} id={`${id}--viaje-9x16`} component={Viaje} fps={FPS} width={1080} height={1920} durationInFrames={cuadrosViaje(clase)} defaultProps={{ clase }} />,
+        ] : []),
         <Composition key={`${id}--venta-9x16`} id={`${id}--venta-9x16`} component={Trailer} fps={FPS} width={1080} height={1920} durationInFrames={duracionTrailer(clase, 'historia')} defaultProps={{ clase, lista: 'historia', musica: 'trailer/musica-historia.wav' }} />,
         <Composition key={`${id}--venta-16x9`} id={`${id}--venta-16x9`} component={Trailer} {...base} durationInFrames={duracionTrailer(clase, 'historia')} defaultProps={{ clase, lista: 'historia', musica: 'trailer/musica-historia.wav' }} />,
         // Carrusel de posts animados (4:5): una composición por lámina, todas con la misma pista corta.

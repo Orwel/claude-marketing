@@ -19,7 +19,7 @@ const RES = { stiffness: 240, damping: 24 };
 const FPS = 30;
 const CHAT = { fondo: '#111827', borde: '#1f2937', nombre: '#d1d5db', hora: '#6b7280', texto: '#e5e7eb' };
 
-const Mono = ({ children, style }) => (
+export const Mono = ({ children, style }) => (
   <span style={{ fontFamily: `'JetBrains Mono'`, fontWeight: 600, letterSpacing: '0.16em', textTransform: 'uppercase', ...style }}>{children}</span>
 );
 
@@ -52,7 +52,7 @@ const Estrellas = ({ T, semilla = 's' }) => {
 };
 
 /** Fondo de todo el tráiler: azul de la presentación, estrellas que derivan y un brillo naranja que respira. */
-const Fondo = ({ T }) => {
+export const Fondo = ({ T }) => {
   const frame = useCurrentFrame();
   const { width: W, height: H } = useVideoConfig();
   const x = W * (0.5 + 0.3 * Math.sin(frame / 90));
@@ -65,7 +65,7 @@ const Fondo = ({ T }) => {
   );
 };
 
-const Kicker = ({ T, children, a = 1, style }) => (
+export const Kicker = ({ T, children, a = 1, style }) => (
   <div style={{ display: 'inline-flex', alignItems: 'center', gap: 12, background: `${T.fondo}e6`, border: `1.5px solid ${T.acento}`, borderRadius: 999, padding: '10px 22px',
     opacity: a, transform: `translateY(${(1 - a) * 12}px)`, ...style }}>
     <div style={{ width: 10, height: 10, borderRadius: 5, background: T.acento }} />
@@ -74,7 +74,7 @@ const Kicker = ({ T, children, a = 1, style }) => (
 );
 
 /** Frase que aparece palabra por palabra al ritmo en que el profesor la dice (voz = [ini, fin] en s). */
-const Frase = ({ T, texto, resalta = [], voz, tamano, alinear = 'center' }) => {
+export const Frase = ({ T, texto, resalta = [], voz, tamano, alinear = 'center' }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const palabras = texto.split(' ');
@@ -95,7 +95,7 @@ const Frase = ({ T, texto, resalta = [], voz, tamano, alinear = 'center' }) => {
 };
 
 /** Un clip de la v1: la pantalla compartida en una tarjeta y la cámara del profesor en un círculo. */
-const Momento = ({ clase, e }) => {
+export const Momento = ({ clase, e }) => {
   const frame = useCurrentFrame();
   const { width: W, height: H, durationInFrames } = useVideoConfig();
   const T = clase.tema;
@@ -117,17 +117,22 @@ const Momento = ({ clase, e }) => {
   const k = d / lado;
   const fc = ent(8);
   const src = staticFile(e.clip);
+  // Con `cuadros` el clip va como JPG cuadro a cuadro y su sonido aparte (Viaje.jsx): con poca RAM libre el
+  // compositor de OffthreadVideo perdía cuadros («No frame found at position») y tumbaba el render.
+  const Medio = e.cuadros
+    ? ({ style }) => <Img src={staticFile(`${e.cuadros}/${String(Math.min(frame + 1, e.n)).padStart(4, '0')}.jpg`)} style={style} />
+    : ({ style, muted }) => <OffthreadVideo src={src} muted={muted} style={style} />;
   return (
     <AbsoluteFill>
       <div style={{ position: 'absolute', left: izq, top: arriba, width: ancho, height: alto, borderRadius: vert ? 0 : 26, overflow: 'hidden', border: vert ? 'none' : `2px solid ${T.linea}`,
         boxShadow: `0 40px 90px #000a, 0 0 0 1px ${T.acento}22`, opacity: a, transform: `scale(${0.9 + 0.1 * a})` }}>
         <div style={{ position: 'absolute', inset: 0, transform: `scale(${zoom})`, transformOrigin: '60% 40%' }}>
-          <OffthreadVideo src={src} style={{ position: 'absolute', width: 1920 * s, height: 1080 * s, left: -px * s, top: -py * s, maxWidth: 'none' }} />
+          <Medio style={{ position: 'absolute', width: 1920 * s, height: 1080 * s, left: -px * s, top: -py * s, maxWidth: 'none' }} />
         </div>
       </div>
       <div style={{ position: 'absolute', left: vert ? 50 : 130, top: vert ? arriba + alto - d * 0.55 : arriba + alto - d - 10, width: d, height: d, borderRadius: '50%', overflow: 'hidden',
         border: `5px solid ${T.acento}`, boxShadow: '0 20px 50px #000b', opacity: fc, transform: `scale(${0.6 + 0.4 * fc})`, background: T.fondo2 }}>
-        <OffthreadVideo src={src} muted style={{ position: 'absolute', width: 1920 * k, height: 1080 * k, left: -(cx + (cw - lado) / 2) * k, top: -(cy + (chh - lado) / 2) * k, maxWidth: 'none' }} />
+        <Medio muted style={{ position: 'absolute', width: 1920 * k, height: 1080 * k, left: -(cx + (cw - lado) / 2) * k, top: -(cy + (chh - lado) / 2) * k, maxWidth: 'none' }} />
       </div>
       <div style={{ position: 'absolute', left: 0, right: 0, top: vert ? 270 : 40, display: 'flex', justifyContent: vert ? 'center' : 'flex-start', paddingLeft: vert ? 0 : izq + 30 }}>
         <Kicker T={T} a={ent(4)}>{e.kicker}</Kicker>
@@ -135,6 +140,7 @@ const Momento = ({ clase, e }) => {
       <div style={{ position: 'absolute', left: vert ? 60 : 120, right: vert ? 60 : 120, top: vert ? arriba + alto + 230 : arriba + alto + 44 }}>
         <Frase T={T} texto={e.cita} resalta={e.resalta} voz={e.voz} tamano={vert ? 96 : 64} />
       </div>
+      {e.sonido && <Audio src={staticFile(e.sonido)} />}
       {vert && <Img src={staticFile(clase.logo)} style={{ position: 'absolute', left: (W - 300) / 2, width: 300, bottom: 110, opacity: 0.85 }} />}
     </AbsoluteFill>
   );
@@ -255,7 +261,7 @@ const Comentarios = ({ clase, e }) => {
   );
 };
 
-const Incluye = ({ clase, e }) => {
+export const Incluye = ({ clase, e }) => {
   const { width: W, height: H } = useVideoConfig();
   const T = clase.tema;
   const ent = useEntrada();
@@ -319,7 +325,7 @@ const Precio = ({ clase, e }) => {
 };
 
 /** Una afirmación en grande, línea por línea: ganchos y giros de la historia. */
-const Texto = ({ clase, e }) => {
+export const Texto = ({ clase, e }) => {
   const frame = useCurrentFrame();
   const { width: W, height: H } = useVideoConfig();
   const T = clase.tema;
@@ -382,7 +388,7 @@ const Presenta = ({ clase, e }) => {
 const ESCENAS = { momento: Momento, titulo: Titulo, conceptos: Conceptos, comentarios: Comentarios, incluye: Incluye, precio: Precio, texto: Texto, presenta: Presenta };
 
 /** Barrido naranja que tapa cada corte: da ritmo y esconde el salto entre clips. */
-const Barrido = ({ T }) => {
+export const Barrido = ({ T }) => {
   const frame = useCurrentFrame();
   const { width: W, height: H } = useVideoConfig();
   const x = interpolate(frame, [0, 10], [-1.3, 1.3]);

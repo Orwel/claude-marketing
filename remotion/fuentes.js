@@ -24,7 +24,8 @@ const ARCHIVOS = {
 };
 
 let carga = null;
-function cargarTodas() {
+/** También la usa el planeta del tráiler (Globo.jsx), que pinta letreros en un canvas. */
+export function cargarFuentes() {
   // Una sola carga por pestaña aunque varias composiciones monten el hook.
   carga ??= Promise.all(
     Object.entries(ARCHIVOS).map(async ([familia, { archivo, pesos, formato = 'woff2' }]) => {
@@ -43,7 +44,7 @@ function cargarTodas() {
 export function useFuentes() {
   const [espera] = useState(() => delayRender('Cargando fuentes de marca'));
   useEffect(() => {
-    cargarTodas()
+    cargarFuentes()
       .then(() => continueRender(espera))
       .catch((error) => cancelRender(error));
   }, [espera]);
