@@ -758,3 +758,6 @@ Videos: IMG_3770, IMG_3772 e IMG_3776 de octubre (iPhone). Salieron `la-ia-que-n
 - Difuminado: barra de chats de Claude con NCC contra recortes (inmune a diálogos atenuados), títulos de la galería con
   plantilla del ícono; cursor devuelto nítido con umbral 0,85 (0,72 confundía letras).
 - Juan David pidió renderizar todo de una sin muestra cuando se fue a dormir: la muestra previa es opcional si él lo dice.
+- Le gustó mucho la v1 (28-oct) y la dejó así: marco con banda de paradas + itinerario con avión, fichas cuando nombra
+  cada concepto, comentarios del chat al agradecerlos, subtítulos de una línea abajo. Es la referencia para las próximas
+  clases grabadas. Se publicó a la venta (89.000 COP) desde la sesión de tri-app; esta sesión no ve esa base.
