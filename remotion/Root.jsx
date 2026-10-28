@@ -11,6 +11,8 @@ import { Vertical } from './plantillas/Vertical.jsx';
 import { LabArcade } from './arcade/Lab.jsx';
 import { Arcade } from './plantillas/Arcade.jsx';
 import { lineaArcade } from './arcade/linea.js';
+import { Marco } from './clase/Marco.jsx';
+import { Cartel, Cierre, Intro } from './clase/Piezas.jsx';
 import { aplicarVoz, duracionDe, duracionPieza, FORMATOS } from './util.js';
 
 /**
@@ -44,6 +46,7 @@ export const Root = () => {
           <Composition key={escena} id={`lab-arcade-${escena}`} component={LabArcade} fps={FPS} width={1080} height={1920} durationInFrames={90} defaultProps={{ marca: MARCAS.juanda, escena }} />
         ))}
       </Folder>
+      <Folder name="clases">{composicionesClase()}</Folder>
       {meses.map((mes) => (
         <Folder key={mes} name={mes}>
           {PIEZAS.filter((p) => p.mes === mes).flatMap((pieza) => {
@@ -161,5 +164,30 @@ function composicionesArcade(pieza) {
   return pieza.cuentas.map((cuenta) => {
     const id = `${pieza.slug}--${cuenta}`;
     return <Composition key={id} id={id} component={Arcade} fps={FPS} width={1080} height={1920} durationInFrames={lineaArcade(pieza).total} defaultProps={{ pieza, marca: MARCAS[cuenta] }} />;
+  });
+}
+
+/**
+ * Clases grabadas (clases/<slug>.json, skill editar-clase-grabada). El video de la clase no pasa
+ * por Remotion: son 90 minutos y renderizarlos cuadro a cuadro tomaría horas sin GPU. Remotion
+ * hace solo las capas (marco, cartel, intro, cierre) y src/clase/armar.js las une con ffmpeg.
+ * El marco recibe en --props `tiempos` (un segundo del crudo por cuadro) o `desde` + `dura`.
+ */
+const CLASES = (() => {
+  const ctx = import.meta.webpackContext('../clases', { recursive: false, regExp: /\.json$/ });
+  return ctx.keys().map((k) => ctx(k));
+})();
+
+function composicionesClase() {
+  return CLASES.flatMap((clase) => {
+    const base = { fps: FPS, width: 1920, height: 1080 };
+    const id = `clase--${clase.slug}`;
+    return [
+      <Composition key={`${id}--marco`} id={`${id}--marco`} component={Marco} {...base} durationInFrames={FPS * 10} defaultProps={{ clase, desde: clase.inicio.seg }}
+        calculateMetadata={({ props }) => ({ durationInFrames: props.tiempos?.length ?? Math.max(1, Math.round((props.dura ?? 10) * FPS)) })} />,
+      <Composition key={`${id}--cartel`} id={`${id}--cartel`} component={Cartel} {...base} durationInFrames={Math.round(clase.cartel.dura * FPS)} defaultProps={{ clase }} />,
+      <Composition key={`${id}--intro`} id={`${id}--intro`} component={Intro} {...base} durationInFrames={Math.round(clase.intro.dura * FPS)} defaultProps={{ clase }} />,
+      <Composition key={`${id}--cierre`} id={`${id}--cierre`} component={Cierre} {...base} durationInFrames={Math.round(clase.cierre.dura * FPS)} defaultProps={{ clase }} />,
+    ];
   });
 }

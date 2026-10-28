@@ -1,0 +1,720 @@
+{
+  "slug": "fundamentos-de-ia",
+  "titulo": "Fundamentos de IA",
+  "version": 1,
+  "_fuente": "Clase en vivo del 27-oct-2026 (7:06 p. m., Bogotá), evento f93c76aa-3c4a-48b0-b011-54f35998d24e. Grabación RoomComposite de LiveKit, layout speaker, 1080p a 15 fps. Presentación: trifuerza.co/academy/experiencias/2026-2/fundamentos-de-ia/vuelo-por-la-inteligencia-artificial/ver. Todo tiempo en segundos del crudo.",
+  "fuente": {
+    "archivo": "fundamentos-de-ia-2026-10-27-1906.mp4",
+    "vps": "/srv/grabaciones/fundamentos-de-ia-2026-10-27-1906.mp4",
+    "fps": 15,
+    "descartados": [
+      "fundamentos-de-ia-2026-10-27-1857.mp4 (93 s de prueba: solo cámara y sin audio, -91 dB)"
+    ]
+  },
+  "inicio": {
+    "seg": 2.9,
+    "frase": "Entonces bueno, para quienes acaban de llegar, buenas noches a todos"
+  },
+  "fin": {
+    "seg": 5651
+  },
+  "marco": {
+    "camara": [
+      0,
+      0,
+      320,
+      200
+    ],
+    "pantalla": [
+      320,
+      90,
+      1600,
+      900
+    ]
+  },
+  "logo": "marcas/trifuerza/logo-horizontal-claro.png",
+  "tema": {
+    "_fuente": "Variables CSS de la presentación de esa noche (vuelo-por-la-inteligencia-artificial.html): --navy-900, --navy-700, --ink, --dim, --faint, --orange, --cyan, --line.",
+    "fondo": "#080C24",
+    "fondo2": "#161C42",
+    "tinta": "#EAF0FF",
+    "tenue": "#A9B4DA",
+    "apagado": "#6E79A6",
+    "acento": "#FF6B2C",
+    "cian": "#4DD3E8",
+    "linea": "#2F3A6E"
+  },
+  "intro": {
+    "dura": 4.5,
+    "antetitulo": "Trifuerza Academy · clase en vivo",
+    "titulo": "Fundamentos de IA",
+    "bajada": "Un vuelo por la historia de la inteligencia artificial, lo que pasa por dentro de un modelo y cómo ponerlo a trabajar contigo.",
+    "chips": [
+      "Vuelo TF-001",
+      "27 oct 2026",
+      "Bogotá"
+    ]
+  },
+  "cartel": {
+    "en": 4,
+    "dura": 8,
+    "nombre": "Juan David Vanegas",
+    "lineas": [
+      "Profesor universitario de Tecnología y Derecho",
+      "Desarrollador de software y abogado"
+    ]
+  },
+  "cierre": {
+    "dura": 6,
+    "antetitulo": "Fin del vuelo TF-001",
+    "titulo": "Gracias por volar con nosotros",
+    "texto": "Fundamentos de IA · clase en vivo del 27 de octubre de 2026",
+    "web": "trifuerza.co/academy"
+  },
+  "vuelo": {
+    "antetitulo": "Vuelo TF-001 · itinerario",
+    "titulo": "Fundamentos de IA"
+  },
+  "paradas": [
+    {
+      "codigo": "BOG",
+      "ciudad": "Embarque",
+      "anio": "hoy",
+      "desde": 2.9,
+      "etiqueta": "Embarque · El Dorado",
+      "titulo": "Fundamentos de IA: el vuelo de hoy"
+    },
+    {
+      "codigo": "MAN",
+      "ciudad": "Manchester",
+      "anio": "1948",
+      "desde": 768,
+      "etiqueta": "Parada 01 · Manchester",
+      "titulo": "La máquina y Turing"
+    },
+    {
+      "codigo": "HAN",
+      "ciudad": "Hanover",
+      "anio": "1956",
+      "desde": 1110,
+      "etiqueta": "Parada 02 · Hanover",
+      "titulo": "Nace el nombre «inteligencia artificial»"
+    },
+    {
+      "codigo": "TOR",
+      "ciudad": "Toronto",
+      "anio": "2012",
+      "desde": 1263,
+      "etiqueta": "Parada 03 · Toronto",
+      "titulo": "Las redes aprenden mirando ejemplos"
+    },
+    {
+      "codigo": "SV",
+      "ciudad": "Silicon Valley",
+      "anio": "2017",
+      "desde": 1409,
+      "etiqueta": "Parada 04 · Silicon Valley",
+      "titulo": "El modelo por dentro"
+    },
+    {
+      "codigo": "SFO",
+      "ciudad": "San Francisco",
+      "anio": "2022",
+      "desde": 1828,
+      "etiqueta": "Parada 05 · San Francisco",
+      "titulo": "La IA llega a todos"
+    },
+    {
+      "codigo": "NYC",
+      "ciudad": "Nueva York",
+      "anio": "2023",
+      "desde": 2001,
+      "etiqueta": "Parada 06 · Nueva York",
+      "titulo": "Por qué falla"
+    },
+    {
+      "codigo": "ATL",
+      "ciudad": "Crucero",
+      "anio": "hoy",
+      "desde": 2185,
+      "etiqueta": "Parada 07 · Sobre el Atlántico",
+      "titulo": "Configura tu cabina: de chat a copiloto"
+    },
+    {
+      "codigo": "BRU",
+      "ciudad": "Bruselas",
+      "anio": "2024",
+      "desde": 4679,
+      "etiqueta": "Parada 08 · Bruselas",
+      "titulo": "Reglas de vuelo: regular por riesgo"
+    },
+    {
+      "codigo": "BOG",
+      "ciudad": "Bogotá",
+      "anio": "hoy",
+      "desde": 4770,
+      "etiqueta": "Aterrizaje · Bogotá",
+      "titulo": "Cinco ideas para llevarte"
+    }
+  ],
+  "fichas": [
+    {
+      "en": 265,
+      "dura": 10,
+      "icono": "Puzzle",
+      "antetitulo": "Concepto · token",
+      "titulo": "Token",
+      "texto": "La unidad mínima de información de un modelo: una sílaba, una palabra, un concepto o un texto entero."
+    },
+    {
+      "en": 548,
+      "dura": 12,
+      "icono": "Dices",
+      "antetitulo": "Concepto · probabilístico",
+      "titulo": "La IA es probabilística",
+      "puntos": [
+        "Determinista: las reglas ya están fijas, como guardar un comentario",
+        "Probabilístico: decide por probabilidades, como el algoritmo de tu feed"
+      ]
+    },
+    {
+      "en": 605,
+      "dura": 10,
+      "icono": "ListOrdered",
+      "antetitulo": "Concepto · algoritmo",
+      "titulo": "Algoritmo",
+      "texto": "Una secuencia de pasos ordenados que dice cómo llegar a un resultado."
+    },
+    {
+      "en": 642,
+      "dura": 11,
+      "icono": "Server",
+      "antetitulo": "Concepto · la nube",
+      "titulo": "La nube es un servidor",
+      "texto": "Te conectas por wifi, antenas y cables submarinos a un computador que está en otro país."
+    },
+    {
+      "en": 800,
+      "dura": 11,
+      "icono": "Binary",
+      "antetitulo": "Manchester · 1948",
+      "titulo": "Ceros y unos",
+      "texto": "Por dentro hay millones de interruptores, los transistores, prendidos o apagados. Un programa es una lista de instrucciones exactas."
+    },
+    {
+      "en": 846,
+      "dura": 12,
+      "icono": "MessagesSquare",
+      "antetitulo": "Turing · 1950",
+      "titulo": "El juego de la imitación",
+      "texto": "Si un juez no distingue por escrito a la persona de la máquina, ¿importa si la máquina piensa?"
+    },
+    {
+      "en": 1153,
+      "dura": 12,
+      "icono": "ListChecks",
+      "antetitulo": "Hanover · 1956",
+      "titulo": "Una IA hecha de reglas",
+      "texto": "Expertos dictándole reglas a un programa: «si hay fiebre y tos, es gripa». Siempre hay casos que se salen."
+    },
+    {
+      "en": 1249,
+      "dura": 11,
+      "icono": "Snowflake",
+      "antetitulo": "Años 70 y finales de los 80",
+      "titulo": "Los inviernos de la IA",
+      "texto": "El mundo real tiene más casos de los que alguien alcanza a escribir. Las promesas no se cumplieron y se fue la plata."
+    },
+    {
+      "en": 1287,
+      "dura": 12,
+      "icono": "Network",
+      "antetitulo": "Toronto · 2012",
+      "titulo": "Red neuronal",
+      "texto": "Capas de puntos conectados. Cada conexión tiene un peso; cuando se equivoca, los pesos se ajustan."
+    },
+    {
+      "en": 1417,
+      "dura": 13,
+      "icono": "Scale",
+      "antetitulo": "La llave de la clase",
+      "titulo": "Un programa obedece, un modelo predice",
+      "puntos": [
+        "Programa: siempre responde lo mismo; si no sabe, da error",
+        "Modelo: la respuesta varía; si no sabe, responde algo que suena bien"
+      ]
+    },
+    {
+      "en": 1645,
+      "dura": 13,
+      "icono": "Type",
+      "antetitulo": "Cómo responde",
+      "titulo": "Token por token",
+      "puntos": [
+        "El texto se corta en tokens y cada uno se vuelve números",
+        "Cada token mira a los demás para entender el contexto",
+        "Calcula el más probable, lo escribe y repite"
+      ]
+    },
+    {
+      "en": 1845,
+      "dura": 10,
+      "icono": "MessageSquare",
+      "antetitulo": "San Francisco · 30 nov 2022",
+      "titulo": "ChatGPT abre al público",
+      "texto": "La tecnología no era nueva: lo nuevo fue una caja de texto que cualquiera podía usar."
+    },
+    {
+      "en": 1872,
+      "dura": 10,
+      "icono": "Car",
+      "antetitulo": "Modelo y producto",
+      "titulo": "El modelo es el motor",
+      "texto": "ChatGPT o Claude son el carro completo. Por eso productos con motores parecidos se sienten tan distintos."
+    },
+    {
+      "en": 1902,
+      "dura": 11,
+      "icono": "Swords",
+      "antetitulo": "Mala práctica",
+      "titulo": "No pongas a pelear dos IA",
+      "texto": "Fueron entrenadas distinto: entras en un bucle buscando errores donde ni siquiera los hay."
+    },
+    {
+      "en": 2015,
+      "dura": 12,
+      "icono": "FileX",
+      "antetitulo": "Nueva York · 2023",
+      "titulo": "Seis sentencias que nunca existieron",
+      "texto": "Citaron fallos inventados por ChatGPT. El juez los multó: el error no fue usar la IA, fue no verificar."
+    },
+    {
+      "en": 2076,
+      "dura": 13,
+      "icono": "CircleQuestionMark",
+      "antetitulo": "Por qué alucina",
+      "titulo": "La IA no sabe que no sabe",
+      "puntos": [
+        "Escribe la continuación más probable, no busca en un archivo",
+        "Aprendió hasta cierta fecha",
+        "Decir «no sé» le cuesta más que inventar"
+      ]
+    },
+    {
+      "en": 2133,
+      "dura": 14,
+      "icono": "ShieldCheck",
+      "antetitulo": "Cómo protegerte",
+      "titulo": "La ventana de contexto",
+      "puntos": [
+        "Dale la fuente y pídele que cite la página",
+        "Abre un chat nuevo si la conversación ya es muy larga",
+        "Verifica todo lo que vaya con tu firma"
+      ]
+    },
+    {
+      "en": 2259,
+      "dura": 10,
+      "icono": "FolderKanban",
+      "antetitulo": "Configura tu cabina",
+      "titulo": "Proyectos",
+      "texto": "Le dan memoria a la IA: cuanto más contexto le das, mejor responde."
+    },
+    {
+      "en": 2290,
+      "dura": 10,
+      "icono": "AppWindow",
+      "antetitulo": "Configura tu cabina",
+      "titulo": "Artefactos",
+      "texto": "Mini aplicaciones rápidas de hacer con IA: un liquidador laboral, una presentación, hasta un juego."
+    },
+    {
+      "en": 2440,
+      "dura": 13,
+      "icono": "Repeat",
+      "antetitulo": "Así se hizo el liquidador",
+      "titulo": "Iterar",
+      "puntos": [
+        "Primero indagar: qué se necesita para liquidar en Colombia",
+        "Luego pedir la aplicación",
+        "Corregir: unas tres iteraciones después quedó"
+      ]
+    },
+    {
+      "en": 3049,
+      "dura": 10,
+      "icono": "Scissors",
+      "antetitulo": "Primer consejo",
+      "titulo": "Desmenúcelo en partes pequeñas",
+      "texto": "Un problema complejo se vuelve más fácil en porciones chiquitas."
+    },
+    {
+      "en": 3100,
+      "dura": 10,
+      "icono": "Globe",
+      "antetitulo": "Extensión de Chrome",
+      "titulo": "La IA en tu navegador",
+      "texto": "Se conecta con Claude y hace clics como si fueras tú."
+    },
+    {
+      "en": 3195,
+      "dura": 11,
+      "icono": "Lock",
+      "antetitulo": "Privacidad",
+      "titulo": "Que no entrene con tus datos",
+      "texto": "Configura Claude o ChatGPT para no compartir tu información y, si hace falta, anonimiza el documento antes."
+    },
+    {
+      "en": 3308,
+      "dura": 12,
+      "icono": "Plug",
+      "antetitulo": "Configura tu cabina",
+      "titulo": "Conectores",
+      "texto": "El poder de la IA está en cómo la conectas con otras aplicaciones: Drive, Calendar, Notion, Figma, GitHub."
+    },
+    {
+      "en": 3494,
+      "dura": 12,
+      "icono": "Zap",
+      "antetitulo": "Configura tu cabina",
+      "titulo": "Skills",
+      "texto": "Habilidades que le das a la IA. Si te gustó cómo hizo algo, guarda ese método en un skill."
+    },
+    {
+      "en": 3642,
+      "dura": 11,
+      "icono": "Package",
+      "antetitulo": "Configura tu cabina",
+      "titulo": "Plugins",
+      "texto": "Un conjunto de skills y conectores. Puedes crear el tuyo y adaptarlo a lo que necesitas."
+    },
+    {
+      "en": 3800,
+      "dura": 10,
+      "icono": "Bot",
+      "antetitulo": "Concepto · agente",
+      "titulo": "Un agente es un chat",
+      "texto": "Un chat de IA al que le vas pidiendo cosas, como cuando llamas a un agente comercial."
+    },
+    {
+      "en": 4258,
+      "dura": 12,
+      "icono": "HardHat",
+      "antetitulo": "Elige el modelo",
+      "titulo": "Arquitecto y obrero",
+      "puntos": [
+        "Planifica con el modelo más capaz",
+        "Ejecuta lo operativo con uno más económico"
+      ]
+    },
+    {
+      "en": 4401,
+      "dura": 10,
+      "icono": "FlaskConical",
+      "antetitulo": "Consejo",
+      "titulo": "Cacharreen",
+      "texto": "Ensayo y error, sin miedo a romper nada: con tus cosas guardadas en varios sitios."
+    },
+    {
+      "en": 4597,
+      "dura": 11,
+      "icono": "Terminal",
+      "antetitulo": "Claude Code",
+      "titulo": "Un agente que trabaja en tus carpetas",
+      "texto": "Planea, usa herramientas, revisa lo que hizo y corrige, con tu permiso en cada paso."
+    },
+    {
+      "en": 4690,
+      "dura": 15,
+      "icono": "Landmark",
+      "antetitulo": "Bruselas · 2024",
+      "titulo": "Regular por riesgo",
+      "puntos": [
+        "Prohibido: puntuar socialmente a las personas",
+        "Alto riesgo: contratar, dar crédito, justicia",
+        "Transparencia: decir que hablas con una IA",
+        "Riesgo mínimo: libre"
+      ]
+    },
+    {
+      "en": 4716,
+      "dura": 14,
+      "icono": "Scale",
+      "antetitulo": "Colombia",
+      "titulo": "Sin ley de IA, pero con reglas",
+      "puntos": [
+        "Ley 1581 de 2012: datos personales",
+        "Sentencia T-323 de 2024: la IA apoya al juez, no lo reemplaza"
+      ]
+    },
+    {
+      "en": 4776,
+      "dura": 23,
+      "icono": "Sparkles",
+      "antetitulo": "Aterrizaje",
+      "titulo": "Cinco ideas",
+      "puntos": [
+        "De reglas a patrones aprendidos",
+        "Predice, no consulta la verdad",
+        "Dale la fuente y verifica",
+        "Proyectos, conectores y skills",
+        "La firma es tuya"
+      ]
+    },
+    {
+      "en": 4801,
+      "dura": 10,
+      "icono": "ClipboardCheck",
+      "antetitulo": "Tarea de la semana",
+      "titulo": "Crea un proyecto",
+      "texto": "Para algo que hagas en la semana, en Claude o en Claude Code."
+    },
+    {
+      "en": 4975,
+      "dura": 10,
+      "icono": "Award",
+      "antetitulo": "Al terminar la clase",
+      "titulo": "Tu certificado",
+      "texto": "Se genera automáticamente y queda en la plataforma, en la sección de certificados."
+    }
+  ],
+  "comentarios": [
+    {
+      "en": 5036,
+      "dura": 10,
+      "autor": "Manuel Alejandro M.",
+      "texto": "Excelente clase, maravilloso profesor, se nota el conocimiento amplio que tiene en estos temas"
+    },
+    {
+      "en": 5047,
+      "dura": 9,
+      "autor": "Alejandro B.",
+      "texto": "Muchas gracias muy agradable y bueno el tema"
+    },
+    {
+      "en": 5057,
+      "dura": 8,
+      "autor": "Sharon Á.",
+      "texto": "Excelente tema"
+    }
+  ],
+  "sincronia": {
+    "_metodo": "src/clase/desfase.py: flujo óptico de la boca contra la energía de la voz. Muestreo cada 5 min (ventanas de 90 s) y confirmación con ventanas de 150 s en 20-32 y 70-83 min. Los cortes caen en pausas del habla. Lecturas descartadas: min 36 (+1,35 s, vuelo del avión) y min 91 (+1,09 s, habla un asistente). El tramo 2010-2864 es el de menor confianza (lecturas de -0,29 y -1,21).",
+    "tramos": [
+      {
+        "desde": 0,
+        "hasta": 767.4,
+        "desfase": -0.35
+      },
+      {
+        "desde": 767.4,
+        "hasta": 1103.4,
+        "desfase": -0.52
+      },
+      {
+        "desde": 1103.4,
+        "hasta": 2010.4,
+        "desfase": -0.84
+      },
+      {
+        "desde": 2010.4,
+        "hasta": 2864.1,
+        "desfase": -0.6
+      },
+      {
+        "desde": 2864.1,
+        "hasta": 4103.8,
+        "desfase": -0.12
+      },
+      {
+        "desde": 4103.8,
+        "hasta": 100000,
+        "desfase": -0.28
+      }
+    ]
+  },
+  "subtitulos": {
+    "tamano": 34,
+    "correcciones": {
+      "Banegas": "Vanegas",
+      "Cloth": "Claude",
+      "Clock": "Claude",
+      "CloudCode": "Claude Code",
+      "CloudChat": "Claude Chat",
+      "Cloud Code": "Claude Code",
+      "Goebbels": "Gödel",
+      "Sonet": "Sonnet",
+      "Yama": "Llama",
+      "inteligencia oficial": "inteligencia artificial",
+      "Diceño": "Diseño",
+      "pron mágico": "prompt mágico",
+      "Juan de Trifuerza": "Juanda Trifuerza",
+      "los contadores": "los conectores",
+      "animizar": "anonimizar",
+      "estrías": "maestrías",
+      "baja de vida": "hoja de vida",
+      "una ida": "una IA",
+      "otra idea": "otra IA",
+      "ambas ideas": "ambas IA",
+      "gracias a la guía": "gracias a la IA",
+      "le da a la guía": "le da a la IA",
+      "un poquito la guía": "un poquito la IA",
+      "mandamos a la idea": "mandamos a la IA",
+      "Les feliz noche": "Les deseo feliz noche"
+    },
+    "omitir": [
+      {
+        "desde": 1206.5,
+        "hasta": 1212.3,
+        "motivo": "Alucinación de Whisper (Claude, ChatGPT y MPT repetido)"
+      }
+    ]
+  },
+  "detectores": [
+    {
+      "tipo": "region",
+      "motivo": "Barra de chats recientes de Claude (normal, atenuada por un diálogo o en Claude Code)",
+      "desde": 2160,
+      "hasta": 4700,
+      "region": [
+        326,
+        300,
+        336,
+        615
+      ],
+      "refs": [
+        "refs/barra-2490.png",
+        "refs/barra-2235.png",
+        "refs/barra-3900.png"
+      ],
+      "umbral": 0.5,
+      "zona": [
+        326,
+        290,
+        338,
+        628
+      ]
+    },
+    {
+      "tipo": "plantilla",
+      "motivo": "Títulos de la galería de artefactos (nombres de proyectos y de clientes)",
+      "desde": 2160,
+      "hasta": 4700,
+      "plantilla": "refs/icono-artefacto.png",
+      "busca": [
+        320,
+        90,
+        1600,
+        870
+      ],
+      "umbral": 0.85,
+      "rel": [
+        38,
+        -4,
+        196,
+        40
+      ]
+    }
+  ],
+  "difuminado": [
+    {
+      "desde": 2869,
+      "hasta": 2887,
+      "zonas": [
+        [
+          320,
+          90,
+          980,
+          500
+        ]
+      ],
+      "motivo": "Explorador de archivos al subir el contrato (nombres de archivos)"
+    },
+    {
+      "desde": 2894,
+      "hasta": 2901,
+      "zonas": [
+        [
+          320,
+          90,
+          980,
+          500
+        ]
+      ],
+      "motivo": "Explorador de archivos, segunda vez"
+    },
+    {
+      "desde": 2885,
+      "hasta": 2904,
+      "zonas": [
+        [
+          820,
+          478,
+          600,
+          190
+        ]
+      ],
+      "motivo": "Contrato real pegado en el Archipiélago: partes, cédula, matrícula y nombre del archivo"
+    },
+    {
+      "desde": 2885,
+      "hasta": 2952,
+      "zonas": [
+        [
+          330,
+          158,
+          600,
+          44
+        ]
+      ],
+      "motivo": "Nombre del contrato real en la barra del juego"
+    },
+    {
+      "desde": 2902,
+      "hasta": 2952,
+      "zonas": [
+        [
+          860,
+          150,
+          640,
+          570
+        ],
+        [
+          800,
+          730,
+          660,
+          190
+        ]
+      ],
+      "motivo": "Cláusulas del contrato real (nombres de las partes, montos) en las islas"
+    },
+    {
+      "desde": 4924,
+      "hasta": 4979,
+      "zonas": [
+        [
+          1488,
+          90,
+          340,
+          900
+        ]
+      ],
+      "motivo": "Chat de la sala en vivo con nombres de asistentes"
+    }
+  ],
+  "evento": {
+    "id": "f93c76aa-3c4a-48b0-b011-54f35998d24e",
+    "slug": "fundamentos-de-ia",
+    "titulo": "Fundamentos de IA",
+    "crudas": [
+      "fundamentos-de-ia-2026-10-27-1906.mp4",
+      "fundamentos-de-ia-2026-10-27-1857.mp4"
+    ]
+  },
+  "verificar": [
+    "Ley 1581 de 2012 (datos personales, Colombia)",
+    "Sentencia T-323 de 2024 de la Corte Constitucional",
+    "Reglamento de IA de la Unión Europea, 2024",
+    "Caso de Nueva York 2023: sentencias inventadas por ChatGPT y multa del juez"
+  ]
+}

@@ -13,14 +13,22 @@ const ARCHIVOS = {
   Sora: { archivo: 'fuentes/Sora.woff2', pesos: '100 800' },
   Fraunces: { archivo: 'fuentes/Fraunces.woff2', pesos: '100 900' },
   Inter: { archivo: 'fuentes/Inter.woff2', pesos: '100 900' },
+  // Las de las presentaciones de clase de trifuerza.co (plantilla Clase): el video se ve como la clase.
+  'Space Grotesk': { archivo: 'fuentes/SpaceGrotesk.woff2', pesos: '300 700' },
+  'JetBrains Mono': { archivo: 'fuentes/JetBrainsMono.woff2', pesos: '100 800' },
+  // Fuentes pixel (OFL, Google Fonts) para la plantilla Arcade (SOFA, oct-2026): titulos y HUD.
+  'Press Start 2P': { archivo: 'fuentes/PressStart2P.ttf', pesos: '400', formato: 'truetype' },
+  Silkscreen: { archivo: 'fuentes/Silkscreen.ttf', pesos: '400', formato: 'truetype' },
+  'Silkscreen Bold': { archivo: 'fuentes/Silkscreen-Bold.ttf', pesos: '700', formato: 'truetype' },
+  VT323: { archivo: 'fuentes/VT323.ttf', pesos: '400', formato: 'truetype' },
 };
 
 let carga = null;
 function cargarTodas() {
   // Una sola carga por pestaña aunque varias composiciones monten el hook.
   carga ??= Promise.all(
-    Object.entries(ARCHIVOS).map(async ([familia, { archivo, pesos }]) => {
-      const cara = new FontFace(familia, `url(${staticFile(archivo)}) format('woff2')`, { weight: pesos });
+    Object.entries(ARCHIVOS).map(async ([familia, { archivo, pesos, formato = 'woff2' }]) => {
+      const cara = new FontFace(familia, `url(${staticFile(archivo)}) format('${formato}')`, { weight: pesos });
       document.fonts.add(await cara.load());
     })
   );

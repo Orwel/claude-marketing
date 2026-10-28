@@ -27,7 +27,9 @@
     "sofa-armar": "node src/sofa/armar.js",
     "sofa": "node src/sofa/render.js",
     "sofa-spec": "node src/sofa/spec.js",
-    "gameplay": "node src/sofa/gameplay.js"
+    "gameplay": "node src/sofa/gameplay.js",
+    "clase": "node src/clase/armar.js",
+    "clase-subir": "node src/clase/subir.js"
   },
   "dependencies": {
     "@react-three/drei": "^10.7.9",

@@ -3,6 +3,32 @@
 Bitácora viva: lo que falló, cómo se resolvió y lo que le gusta o no a Juan David.
 Se lee al empezar cada sesión (lo pide `CLAUDE.md`). Lo más nuevo, arriba.
 
+## 2026-10-19 · SOFA10: Bélula ganó, fuera el concurso
+
+- **Cambio de estrategia:** la página web ya tiene ganador (Bélula). SOFA10 dejó de pedir votos: salen el
+  "¿quieres que se gane una página web gratis? Vótalo", el cierre de la votación (151344) y Lucía (otra
+  concursante). Lo cortado lo cubren la música, los barridos y una cortinilla "misión". SOFA11 todavía cierra
+  con la votación (`cierre_web` en `conceptos.py`).
+- **Locuciones grabadas aparte** (Drive, nombre con número: "Bodega Arboleda 7" = intro, "10" = outro): llegan
+  por el conector de Drive (G: no las tenía sincronizadas). `voz: { archivo, en }` en el `titulo` o en
+  `pieza.final` (`src/sofa/armar.js` → `conVoz`): la escena dura lo que la voz, sus palabras salen en el diálogo
+  con el nombre de Juan David y la música se recoge igual que bajo la voz del metraje. Palabras en
+  `public/sofa/voces/<nombre>.json`; Whisper pone la primera en 0 s, así que se reescalan al tramo con voz
+  medido con silencedetect. Volumen: medir en estéreo (en mono ebur128 da 3 dB menos) y llevar a −16 LUFS.
+- **Intro `torneo` con `ganador`:** una sola tarjeta dorada unida al trofeo, sin los demás participantes.
+- **Música celta en 8 bits: descartada** ("suena muy pixelada"; `musicaCelta` queda en `src/audio/arcade.js`).
+  Pidió una canción celta real y libre de derechos: "Celtic Impulse" de Kevin MacLeod (incompetech.com, CC BY 4.0,
+  crédito obligatorio en el copy), en `trabajo/musica-libre/`. Con `pieza.cancion` la pista Arcade lleva solo
+  efectos; la canción se mezcla con ffmpeg (sidechaincompress con la voz como llave, ratio 2,5): queda ~−20 dB
+  sola y ~−26 bajo la voz. Para música "bonita" de otros videos: bibliotecas reales con licencia verificada
+  (Incompetech, Pixabay Music), nunca síntesis de instrumentos acústicos ni 8 bits si no es un video arcade.
+- **Cambiar solo la música sin re-renderizar:** copiar la pista nueva a `trabajo/paquete-sofa/public/audio/arcade/`,
+  `remotion render <paquete> <id> x.wav --codec=wav` con los mismos `--gl=angle --offthreadvideo-cache…` del render
+  (sin ellos falla "No frame found") y montar con ffmpeg (`-c:v copy` + loudnorm). ~2 min en vez de ~20.
+- **La "Í" mayúscula no existe en la fuente pixel** (salía "ESCR±BENOS"): CTAs en pixel sin esa tilde.
+- **Drive para escritorio fallando** ("recursos insuficientes", error 1450): el render queda en
+  `trabajo/2026-10-sofa/render/` y se reintenta la copia aparte.
+
 ## 2026-10-13 (noche) · SOFA06: Maka con el texto corrido
 
 - **Whisper corrio una escena entera ~1 s** (IMG_4875): puso "Bueno, hay varias que me gustaría" encima de la
@@ -695,3 +721,40 @@ Videos: IMG_3770, IMG_3772 e IMG_3776 de octubre (iPhone). Salieron `la-ia-que-n
   como cinta sobre su borde, sello «Gratis y con certificado») y el beat `certificado` (X02, en «únete a mi clase»).
   No reemplaza la metáfora `certificado`: esa la usa la propuesta de una universidad con sus propios sellos.
   El brillo animado va solo sobre la hoja clara: encima del panel oscuro quedaba como una mancha.
+
+## 2026-10-15 · resúmenes de clase en PDF (propiedad intelectual)
+
+- **Resúmenes de clase = estilo propuesta Academy** (fondo `#050B16`, turquesa/naranja), pero con hoja de estilos
+  compartida `brochures/kit/resumen.css` (cajas "clave" turquesa, "ojo" naranja, "ejemplo" punteada; tablas; frases).
+  Fuentes: `brochures/resumen-pi-derecho-autor.html` y `brochures/resumen-pi-propiedad-industrial.html`.
+  Se imprimen con `npm run propuesta -- <nombre> --sin-drive` (sin `--sin-drive` irían a la carpeta de propuestas, que no es su lugar).
+- Densidad que funciona en A4: texto 11,3–11,9 px. Páginas con aire abajo se llenan con bloques útiles
+  (preguntas de examen, "practica: ¿se puede registrar?", recomendaciones), no con letra más grande.
+- Contenido jurídico: marco Colombia + Comunidad Andina (Decisiones 351 y 486) con tratados; datos dudosos
+  y casos reales en `brochures/verificar.json`. En bash, un heredoc con Python que lleva comillas simples
+  triples falló; mejor escribir el script en el scratchpad y ejecutarlo.
+- **Dónde van los resúmenes (15-oct):** los de Trifuerza Academy (PI, corporativo) a `G:/Mi unidad/Docencia/Trifuerza Academy/Resúmenes de clase/`;
+  los de la U. del Rosario a `Docencia/U Rosario/Derecho y Tecnología/Periodos/<periodo>/Presentaciones y contenido/<n> corte/Contenidos/`.
+  Siempre con autor "Juan David Vanegas Roldán". En PI pidió también copyright de EE. UU., tratados y CAN, originalidad vs. nivel
+  inventivo, contenido en redes (remitir a T&C de la plataforma), contratos derivados e IA.
+- **Resúmenes de Los Libertadores (15-oct):** van a la carpeta de contenidos del corte de cada materia, p. ej.
+  `U Libertadores/Contratos civiles y mercantiles/2 corte/contenidos/` y `Humanidades Digitales/2026-2/Contenidos/2 corte/`.
+  Fuente: los HTML de contenido de cada sesión (mejor que las presentaciones). Todos con logo Trifuerza Academy, autor y pie de trifuerza.co.
+  La flecha ↗ en negrita sale como fuente Type3: dejarla fuera del <b>.
+
+## 20-oct-2026 · Post de arriendo del local de Cielocanto (fotos fijas)
+- Para posts de fotos reales, Juan David no quiere fotos cortadas a media lámina con un degradado que las corta ni encuadres
+  que partan puertas o marcos. Si la foto no va a pantalla completa, va **enmarcada** (borde redondeado, como el mosaico) para
+  que todo el carrusel sea coherente. Se armó en HTML con Chrome headless (`trabajo/cielocanto-local/`), no en Remotion.
+- Usar siempre las fotos más recientes que él mande: la web puede tener fotos viejas (la cocina tenía otro piso).
+
+## 27/28-oct-2026 · Clase grabada «Fundamentos de IA» (skill editar-clase-grabada)
+- Una clase de 94 min no se renderiza entera en Remotion: método híbrido (ffmpeg/Python para la grabación, Remotion
+  solo para el marco y las capas, tramos quietos como un solo cuadro). Ver `.claude/skills/editar-clase-grabada/`.
+- Hugging Face falla por certificado desde Python en este equipo: bajar el modelo con curl y usar ruta local.
+- El desfase audio/imagen de LiveKit **deriva** (−0,35 → −0,84 → ~0 → −0,28 s): se corrige por tramos cortados en pausas.
+  La medición por diferencia de píxeles no sirve; la de flujo óptico de la boca sí (correlación baja pero consistente).
+- Los cortes de audio del vivo (silencio digital de paquetes perdidos) no se recuperan; decírselo a Juan David.
+- Difuminado: barra de chats de Claude con NCC contra recortes (inmune a diálogos atenuados), títulos de la galería con
+  plantilla del ícono; cursor devuelto nítido con umbral 0,85 (0,72 confundía letras).
+- Juan David pidió renderizar todo de una sin muestra cuando se fue a dormir: la muestra previa es opcional si él lo dice.
