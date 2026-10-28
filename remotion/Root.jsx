@@ -13,6 +13,7 @@ import { Arcade } from './plantillas/Arcade.jsx';
 import { lineaArcade } from './arcade/linea.js';
 import { Marco } from './clase/Marco.jsx';
 import { Cartel, Cierre, Intro } from './clase/Piezas.jsx';
+import { ComentarioSuelto, ComentariosCompuesto, Trailer, duracionTrailer } from './clase/Trailer.jsx';
 import { aplicarVoz, duracionDe, duracionPieza, FORMATOS } from './util.js';
 
 /**
@@ -188,6 +189,20 @@ function composicionesClase() {
       <Composition key={`${id}--cartel`} id={`${id}--cartel`} component={Cartel} {...base} durationInFrames={Math.round(clase.cartel.dura * FPS)} defaultProps={{ clase }} />,
       <Composition key={`${id}--intro`} id={`${id}--intro`} component={Intro} {...base} durationInFrames={Math.round(clase.intro.dura * FPS)} defaultProps={{ clase }} />,
       <Composition key={`${id}--cierre`} id={`${id}--cierre`} component={Cierre} {...base} durationInFrames={Math.round(clase.cierre.dura * FPS)} defaultProps={{ clase }} />,
+      // Venta (clase.venta): tráiler en los dos formatos, cada comentario suelto y los mejores juntos.
+      ...(clase.venta ? [
+        <Composition key={`${id}--trailer-16x9`} id={`${id}--trailer-16x9`} component={Trailer} {...base} durationInFrames={duracionTrailer(clase, 'escenas')} defaultProps={{ clase }} />,
+        <Composition key={`${id}--trailer-9x16`} id={`${id}--trailer-9x16`} component={Trailer} fps={FPS} width={1080} height={1920} durationInFrames={duracionTrailer(clase, 'escenas')} defaultProps={{ clase }} />,
+        <Composition key={`${id}--venta-9x16`} id={`${id}--venta-9x16`} component={Trailer} fps={FPS} width={1080} height={1920} durationInFrames={duracionTrailer(clase, 'historia')} defaultProps={{ clase, lista: 'historia', musica: 'trailer/musica-historia.wav' }} />,
+        <Composition key={`${id}--venta-16x9`} id={`${id}--venta-16x9`} component={Trailer} {...base} durationInFrames={duracionTrailer(clase, 'historia')} defaultProps={{ clase, lista: 'historia', musica: 'trailer/musica-historia.wav' }} />,
+        // Carrusel de posts animados (4:5): una composición por lámina, todas con la misma pista corta.
+        ...(clase.venta.carrusel ?? []).map((_, i) => (
+          <Composition key={`${id}--carrusel-${i + 1}`} id={`${id}--carrusel-${i + 1}`} component={Trailer} fps={FPS} width={1080} height={1350} durationInFrames={duracionTrailer(clase, `carrusel.${i}`)}
+            defaultProps={{ clase, lista: `carrusel.${i}`, musica: 'trailer/musica-carrusel.wav' }} />
+        )),
+        <Composition key={`${id}--comentario`} id={`${id}--comentario`} component={ComentarioSuelto} fps={FPS} width={800} height={400} durationInFrames={1} defaultProps={{ clase, id: clase.venta.comentarios[0].id }} />,
+        <Composition key={`${id}--comentarios`} id={`${id}--comentarios`} component={ComentariosCompuesto} fps={FPS} width={1600} height={900} durationInFrames={1} defaultProps={{ clase }} />,
+      ] : []),
     ];
   });
 }

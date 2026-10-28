@@ -761,3 +761,11 @@ Videos: IMG_3770, IMG_3772 e IMG_3776 de octubre (iPhone). Salieron `la-ia-que-n
 - Le gustó mucho la v1 (28-oct) y la dejó así: marco con banda de paradas + itinerario con avión, fichas cuando nombra
   cada concepto, comentarios del chat al agradecerlos, subtítulos de una línea abajo. Es la referencia para las próximas
   clases grabadas. Se publicó a la venta (89.000 COP) desde la sesión de tri-app; esta sesión no ve esa base.
+
+## 28-oct-2026 · Tráiler y piezas de venta de una clase grabada (Trailer.jsx)
+- Clips cortados con `-ss` de la v1 rompían OffthreadVideo («No frame found at position…»): recortar con
+  `-vf fps=30,setpts=PTS-STARTPTS -bf 0 -g 15` y `asetpts=PTS-STARTPTS`. Render con `--concurrency=3 --timeout=120000`
+  (con la concurrencia por defecto el proxy de video se cae: «Request closed», timeouts de delayRender).
+- No re-empaquetar (bundle) en la carpeta que un render en curso está usando: otro --out-dir.
+- Para Instagram el CTA que pide Juan David es «Comenta CURSO y te envío el link» (comentario → DM), no solo la web.
+- Venta: precio anticipado en los primeros ~15 s, «quédate hasta el final» con 3 ideas numeradas, prueba social y cierre con precio.

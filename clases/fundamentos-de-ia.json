@@ -716,5 +716,484 @@
     "Sentencia T-323 de 2024 de la Corte Constitucional",
     "Reglamento de IA de la Unión Europea, 2024",
     "Caso de Nueva York 2023: sentencias inventadas por ChatGPT y multa del juez"
-  ]
+  ],
+  "venta": {
+    "_fuente": "Encargo de la sesión de tri-app (28-oct-2026): tráiler de venta. Clips sacados de salida/fundamentos-de-ia-completa-v1.mp4 (en = segundo de la v1). Comentarios: textos reales del chat del 27-oct; la sala ya cerró, así que las burbujas se recrean con el estilo de LiveChat.tsx.",
+    "bpm": 118,
+    "escenas": [
+      {
+        "tipo": "momento",
+        "dura": 4.25,
+        "clip": "trailer/programa.mp4",
+        "en": 1425.25,
+        "kicker": "La llave de toda la clase",
+        "cita": "Un programa obedece. Un modelo predice.",
+        "resalta": [
+          "predice."
+        ],
+        "voz": [
+          0.38,
+          3.9
+        ]
+      },
+      {
+        "tipo": "titulo",
+        "dura": 3.6,
+        "antetitulo": "Clase grabada · Trifuerza Academy",
+        "titulo": "Fundamentos de IA",
+        "bajada": "Entiende cómo funciona la IA por dentro y ponla a trabajar contigo.",
+        "chips": [
+          "1 h 34 min",
+          "Con Juan David Vanegas"
+        ]
+      },
+      {
+        "tipo": "momento",
+        "dura": 5,
+        "clip": "trailer/motor.mp4",
+        "en": 1885.05,
+        "kicker": "Modelo y producto",
+        "cita": "El modelo es el motor. ChatGPT o Claude son el carro completo.",
+        "resalta": [
+          "motor."
+        ],
+        "voz": [
+          0.35,
+          4.57
+        ]
+      },
+      {
+        "tipo": "momento",
+        "dura": 4.1,
+        "clip": "trailer/verificar.mp4",
+        "en": 2048.95,
+        "kicker": "Por qué la IA se inventa cosas",
+        "cita": "El error no fue usar la IA. Fue no verificar.",
+        "resalta": [
+          "verificar."
+        ],
+        "voz": [
+          0.35,
+          3.95
+        ]
+      },
+      {
+        "tipo": "momento",
+        "dura": 2.8,
+        "clip": "trailer/cacharreen.mp4",
+        "en": 4402.35,
+        "kicker": "El consejo final",
+        "cita": "Cacharreen. Ensayo y error.",
+        "resalta": [
+          "Cacharreen."
+        ],
+        "voz": [
+          0.32,
+          2.64
+        ]
+      },
+      {
+        "tipo": "conceptos",
+        "dura": 2.6,
+        "kicker": "En una sola clase",
+        "palabras": [
+          "Tokens",
+          "Turing",
+          "Redes neuronales",
+          "Transformers",
+          "Alucinaciones",
+          "Proyectos",
+          "Artefactos",
+          "Conectores",
+          "Skills",
+          "Agentes",
+          "Claude Code",
+          "Regulación"
+        ]
+      },
+      {
+        "tipo": "comentarios",
+        "dura": 8,
+        "kicker": "Chat de la clase en vivo · 27 oct 2026",
+        "titulo": "Lo que dijeron los asistentes",
+        "ids": [
+          "manuel",
+          "alejandro",
+          "sharon",
+          "william"
+        ]
+      },
+      {
+        "tipo": "incluye",
+        "dura": 6,
+        "kicker": "Qué te llevas",
+        "titulo": "1 clase",
+        "subtitulo": "1 h 34 min",
+        "items": [
+          {
+            "icono": "Clapperboard",
+            "texto": "Video editado con subtítulos"
+          },
+          {
+            "icono": "FileDown",
+            "texto": "Guía descargable"
+          },
+          {
+            "icono": "MonitorPlay",
+            "texto": "Presentación interactiva"
+          },
+          {
+            "icono": "ListChecks",
+            "texto": "Quiz"
+          },
+          {
+            "icono": "Award",
+            "texto": "Certificado"
+          }
+        ]
+      },
+      {
+        "tipo": "precio",
+        "dura": 7,
+        "kicker": "Precio de lanzamiento",
+        "precio": "$89.000",
+        "moneda": "COP",
+        "cta": "Compra la clase en trifuerza.co/academy"
+      }
+    ],
+    "comentarios": [
+      {
+        "id": "manuel",
+        "autor": "Manuel Alejandro M.",
+        "hora": "8:40 p. m.",
+        "texto": "Excelente clase, maravilloso profesor, se nota el conocimiento amplio que tiene en estos temas"
+      },
+      {
+        "id": "alejandro",
+        "autor": "Alejandro B.",
+        "hora": "8:31 p. m.",
+        "texto": "Muchas gracias muy agradable y bueno el tema"
+      },
+      {
+        "id": "sharon",
+        "autor": "Sharon Á.",
+        "hora": "8:36 p. m.",
+        "texto": "Excelente tema"
+      },
+      {
+        "id": "alejandro-saludo",
+        "autor": "Alejandro B.",
+        "hora": "7:08 p. m.",
+        "texto": "Buenas noches, saludos desde Soacha, Soy estudiante de análisis y desarrollo de software del SENA y estudiante de física de la U-Distrital, apasionado por la tecnología"
+      },
+      {
+        "id": "john",
+        "autor": "John F.",
+        "hora": "7:05 p. m.",
+        "texto": "Hola, buenas noches desde bogota soy estudiante de Derecho !!"
+      },
+      {
+        "id": "william",
+        "autor": "William V.",
+        "hora": "8:40 p. m.",
+        "texto": "Muchas gracias!"
+      }
+    ],
+    "compuesto": [
+      "manuel",
+      "alejandro",
+      "sharon"
+    ],
+    "verificar": [
+      "Precio de lanzamiento 89.000 COP y lo que incluye (video, guía, presentación, quiz, certificado): dato de la sesión de tri-app"
+    ],
+    "historia": [
+      {
+        "tipo": "texto",
+        "dura": 3.2,
+        "lineas": [
+          "Usas IA todos los días.",
+          "¿Sabes qué pasa por dentro?"
+        ],
+        "resalta": [
+          "dentro?"
+        ]
+      },
+      {
+        "tipo": "texto",
+        "dura": 3.8,
+        "kicker": "Nueva York · 2023",
+        "lineas": [
+          "Unos abogados citaron",
+          "seis sentencias",
+          "que nunca existieron."
+        ],
+        "resalta": [
+          "nunca",
+          "existieron."
+        ]
+      },
+      {
+        "tipo": "momento",
+        "dura": 4.1,
+        "clip": "trailer/verificar.mp4",
+        "en": 2048.95,
+        "kicker": "Por qué la IA se inventa cosas",
+        "cita": "El error no fue usar la IA. Fue no verificar.",
+        "resalta": [
+          "verificar."
+        ],
+        "voz": [
+          0.35,
+          3.95
+        ]
+      },
+      {
+        "tipo": "presenta",
+        "dura": 5,
+        "antetitulo": "Clase pregrabada · Trifuerza Academy",
+        "titulo": "Fundamentos de IA",
+        "precio": "$89.000 COP",
+        "duracion": "1 h 34 min",
+        "nombre": "Juan David Vanegas",
+        "perfil": "Profesor universitario de Tecnología y Derecho · Desarrollador de software y abogado"
+      },
+      {
+        "tipo": "texto",
+        "dura": 3,
+        "kicker": "Quédate hasta el final",
+        "lineas": [
+          "Te muestro 3 ideas de la clase.",
+          "La tercera cambia cómo usas la IA."
+        ],
+        "resalta": [
+          "3",
+          "tercera"
+        ]
+      },
+      {
+        "tipo": "momento",
+        "dura": 4.25,
+        "clip": "trailer/programa.mp4",
+        "en": 1425.25,
+        "kicker": "Idea 1 · La llave de toda la clase",
+        "cita": "Un programa obedece. Un modelo predice.",
+        "resalta": [
+          "predice."
+        ],
+        "voz": [
+          0.38,
+          3.9
+        ]
+      },
+      {
+        "tipo": "momento",
+        "dura": 5,
+        "clip": "trailer/motor.mp4",
+        "en": 1885.05,
+        "kicker": "Idea 2 · Modelo y producto",
+        "cita": "El modelo es el motor. ChatGPT o Claude son el carro completo.",
+        "resalta": [
+          "motor."
+        ],
+        "voz": [
+          0.35,
+          4.57
+        ]
+      },
+      {
+        "tipo": "momento",
+        "dura": 2.8,
+        "clip": "trailer/cacharreen.mp4",
+        "en": 4402.35,
+        "kicker": "Idea 3 · Pierde el miedo",
+        "cita": "Cacharreen. Ensayo y error.",
+        "resalta": [
+          "Cacharreen."
+        ],
+        "voz": [
+          0.32,
+          2.64
+        ]
+      },
+      {
+        "tipo": "conceptos",
+        "dura": 2.6,
+        "kicker": "Y eso es solo el comienzo",
+        "palabras": [
+          "Tokens",
+          "Turing",
+          "Redes neuronales",
+          "Transformers",
+          "Alucinaciones",
+          "Proyectos",
+          "Artefactos",
+          "Conectores",
+          "Skills",
+          "Agentes",
+          "Claude Code",
+          "Regulación"
+        ]
+      },
+      {
+        "tipo": "texto",
+        "dura": 3.2,
+        "kicker": "Es para ti si",
+        "lineas": [
+          "Eres abogado, estudiante",
+          "o emprendedor",
+          "y ya usas IA."
+        ],
+        "resalta": [
+          "ya",
+          "usas",
+          "IA."
+        ]
+      },
+      {
+        "tipo": "comentarios",
+        "dura": 7,
+        "kicker": "Chat de la clase en vivo · 27 oct 2026",
+        "titulo": "Lo que dijeron los asistentes",
+        "ids": [
+          "manuel",
+          "alejandro",
+          "sharon",
+          "william"
+        ]
+      },
+      {
+        "tipo": "incluye",
+        "dura": 5.5,
+        "kicker": "Clase pregrabada · qué te llevas",
+        "titulo": "1 clase",
+        "subtitulo": "1 h 34 min",
+        "items": [
+          {
+            "icono": "Clapperboard",
+            "texto": "Video editado con subtítulos"
+          },
+          {
+            "icono": "FileDown",
+            "texto": "Guía descargable"
+          },
+          {
+            "icono": "MonitorPlay",
+            "texto": "Presentación interactiva"
+          },
+          {
+            "icono": "ListChecks",
+            "texto": "Quiz"
+          },
+          {
+            "icono": "Award",
+            "texto": "Certificado"
+          }
+        ]
+      },
+      {
+        "tipo": "precio",
+        "dura": 6.5,
+        "kicker": "Precio de lanzamiento",
+        "precio": "$89.000",
+        "moneda": "COP",
+        "cta": "Comenta CURSO y te envío el link",
+        "cta2": "o cómprala en trifuerza.co/academy"
+      }
+    ],
+    "carrusel": [
+      {
+        "tipo": "texto",
+        "dura": 6,
+        "kicker": "Clase pregrabada · Fundamentos de IA",
+        "lineas": [
+          "Usas IA todos los días.",
+          "¿Sabes qué pasa por dentro?"
+        ],
+        "resalta": [
+          "dentro?"
+        ],
+        "desliza": true
+      },
+      {
+        "tipo": "presenta",
+        "dura": 6,
+        "antetitulo": "Clase pregrabada · Trifuerza Academy",
+        "titulo": "Fundamentos de IA",
+        "precio": "$89.000 COP",
+        "duracion": "1 h 34 min",
+        "nombre": "Juan David Vanegas",
+        "perfil": "Profesor universitario de Tecnología y Derecho · Desarrollador de software y abogado"
+      },
+      {
+        "tipo": "conceptos",
+        "dura": 5,
+        "kicker": "Lo que vas a entender",
+        "palabras": [
+          "Tokens",
+          "Turing",
+          "Redes neuronales",
+          "Transformers",
+          "Alucinaciones",
+          "Proyectos",
+          "Artefactos",
+          "Conectores",
+          "Skills",
+          "Agentes",
+          "Claude Code",
+          "Regulación"
+        ]
+      },
+      {
+        "tipo": "comentarios",
+        "dura": 7,
+        "kicker": "Chat de la clase en vivo · 27 oct 2026",
+        "titulo": "Lo que dijeron los asistentes",
+        "ids": [
+          "manuel",
+          "alejandro",
+          "sharon",
+          "william"
+        ]
+      },
+      {
+        "tipo": "incluye",
+        "dura": 6,
+        "kicker": "Clase pregrabada · qué te llevas",
+        "titulo": "1 clase",
+        "subtitulo": "1 h 34 min",
+        "items": [
+          {
+            "icono": "Clapperboard",
+            "texto": "Video editado con subtítulos"
+          },
+          {
+            "icono": "FileDown",
+            "texto": "Guía descargable"
+          },
+          {
+            "icono": "MonitorPlay",
+            "texto": "Presentación interactiva"
+          },
+          {
+            "icono": "ListChecks",
+            "texto": "Quiz"
+          },
+          {
+            "icono": "Award",
+            "texto": "Certificado"
+          }
+        ]
+      },
+      {
+        "tipo": "precio",
+        "dura": 6,
+        "kicker": "Precio de lanzamiento",
+        "precio": "$89.000",
+        "moneda": "COP",
+        "cta": "Comenta CURSO y te envío el link",
+        "cta2": "o cómprala en trifuerza.co/academy"
+      }
+    ]
+  }
 }
