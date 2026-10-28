@@ -157,6 +157,204 @@
       "titulo": "Cinco ideas para llevarte"
     }
   ],
+  "_capitulos": "Capítulos del timeline del reproductor (Mis clases). en = segundo del crudo; src/clase/capitulos.js los pasa al MP4 final junto con los subtítulos .vtt.",
+  "capitulos": [
+    {
+      "en": 2.9,
+      "seccion": "Embarque · Bogotá",
+      "titulo": "Bienvenida: quién soy y qué es Trifuerza"
+    },
+    {
+      "en": 120,
+      "seccion": "Embarque · Bogotá",
+      "titulo": "Una clase en 3D y el lenguaje hecho números"
+    },
+    {
+      "en": 265,
+      "seccion": "Embarque · Bogotá",
+      "titulo": "Token: la unidad mínima de la IA"
+    },
+    {
+      "en": 436,
+      "seccion": "Embarque · Bogotá",
+      "titulo": "El plan de vuelo y por qué la IA no te reemplaza"
+    },
+    {
+      "en": 538,
+      "seccion": "Embarque · Bogotá",
+      "titulo": "La IA es probabilística (y qué es un algoritmo)"
+    },
+    {
+      "en": 620,
+      "seccion": "Embarque · Bogotá",
+      "titulo": "La nube es un servidor: los centros de datos"
+    },
+    {
+      "en": 734,
+      "seccion": "Parada 01 · Manchester 1948",
+      "titulo": "Manchester: la máquina que guarda su programa"
+    },
+    {
+      "en": 820,
+      "seccion": "Parada 01 · Manchester 1948",
+      "titulo": "Turing y el juego de la imitación"
+    },
+    {
+      "en": 947,
+      "seccion": "Parada 01 · Manchester 1948",
+      "titulo": "Cómo funciona un computador por dentro"
+    },
+    {
+      "en": 1110,
+      "seccion": "Parada 02 · Hanover 1956",
+      "titulo": "Nace la IA: reglas escritas por expertos y sus inviernos"
+    },
+    {
+      "en": 1263,
+      "seccion": "Parada 03 · Toronto 2012",
+      "titulo": "Redes neuronales: aprender mirando ejemplos"
+    },
+    {
+      "en": 1409,
+      "seccion": "Parada 04 · Silicon Valley 2017",
+      "titulo": "Un programa obedece, un modelo predice"
+    },
+    {
+      "en": 1613,
+      "seccion": "Parada 04 · Silicon Valley 2017",
+      "titulo": "Token por token: así responde un modelo"
+    },
+    {
+      "en": 1828,
+      "seccion": "Parada 05 · San Francisco 2022",
+      "titulo": "ChatGPT abre al público: el modelo es el motor"
+    },
+    {
+      "en": 1900,
+      "seccion": "Parada 05 · San Francisco 2022",
+      "titulo": "Mala práctica: no pongas a pelear dos IA"
+    },
+    {
+      "en": 2001,
+      "seccion": "Parada 06 · Nueva York 2023",
+      "titulo": "Seis sentencias que nunca existieron"
+    },
+    {
+      "en": 2071,
+      "seccion": "Parada 06 · Nueva York 2023",
+      "titulo": "Por qué alucina y la ventana de contexto"
+    },
+    {
+      "en": 2185,
+      "seccion": "Parada 07 · Configura tu cabina",
+      "titulo": "Parte práctica: Claude, el chat y los proyectos"
+    },
+    {
+      "en": 2288,
+      "seccion": "Parada 07 · Configura tu cabina",
+      "titulo": "Artefactos: el liquidador laboral"
+    },
+    {
+      "en": 2439,
+      "seccion": "Parada 07 · Configura tu cabina",
+      "titulo": "Iterar: así se construyó el liquidador"
+    },
+    {
+      "en": 2497,
+      "seccion": "Parada 07 · Configura tu cabina",
+      "titulo": "Más artefactos: la IA potencia lo que ya sabes"
+    },
+    {
+      "en": 2612,
+      "seccion": "Parada 07 · Configura tu cabina",
+      "titulo": "Archipiélago jurídico y contrato en holograma"
+    },
+    {
+      "en": 2851,
+      "seccion": "Parada 07 · Configura tu cabina",
+      "titulo": "Demo: un contrato convertido en archipiélago"
+    },
+    {
+      "en": 2964,
+      "seccion": "Parada 07 · Configura tu cabina",
+      "titulo": "Primero la estrategia: divide el problema en partes"
+    },
+    {
+      "en": 3078,
+      "seccion": "Parada 07 · Configura tu cabina",
+      "titulo": "La IA en tu navegador: correos, Rama Judicial y Notion"
+    },
+    {
+      "en": 3187,
+      "seccion": "Parada 07 · Configura tu cabina",
+      "titulo": "Privacidad y anonimizador de documentos"
+    },
+    {
+      "en": 3305,
+      "seccion": "Parada 07 · Configura tu cabina",
+      "titulo": "Conectores"
+    },
+    {
+      "en": 3477,
+      "seccion": "Parada 07 · Configura tu cabina",
+      "titulo": "Skills"
+    },
+    {
+      "en": 3638,
+      "seccion": "Parada 07 · Configura tu cabina",
+      "titulo": "Plugins: el plugin jurídico"
+    },
+    {
+      "en": 3784,
+      "seccion": "Parada 07 · Configura tu cabina",
+      "titulo": "Agentes y Claude Code"
+    },
+    {
+      "en": 3953,
+      "seccion": "Parada 07 · Configura tu cabina",
+      "titulo": "Demo: rediseñar con Claude Code"
+    },
+    {
+      "en": 4133,
+      "seccion": "Parada 07 · Configura tu cabina",
+      "titulo": "Elige el modelo: arquitecto y obrero"
+    },
+    {
+      "en": 4374,
+      "seccion": "Parada 07 · Configura tu cabina",
+      "titulo": "Cacharreen: ensayo y error"
+    },
+    {
+      "en": 4594,
+      "seccion": "Parada 07 · Configura tu cabina",
+      "titulo": "Un agente en tus carpetas, según tu oficio"
+    },
+    {
+      "en": 4679,
+      "seccion": "Parada 08 · Bruselas 2024",
+      "titulo": "Regulación: Europa por riesgo y las reglas en Colombia"
+    },
+    {
+      "en": 4769,
+      "seccion": "Aterrizaje · Bogotá",
+      "titulo": "Cinco ideas para llevarte y la tarea de la semana"
+    },
+    {
+      "en": 4825,
+      "seccion": "Aterrizaje · Bogotá",
+      "titulo": "Encuesta, certificado y comunidad"
+    },
+    {
+      "en": 5030,
+      "seccion": "Aterrizaje · Bogotá",
+      "titulo": "Preguntas del público"
+    },
+    {
+      "en": 5525,
+      "seccion": "Aterrizaje · Bogotá",
+      "titulo": "Despedida"
+    }
+  ],
   "fichas": [
     {
       "en": 265,
@@ -856,7 +1054,7 @@
         "tipo": "precio",
         "dura": 7,
         "kicker": "Precio de lanzamiento",
-        "precio": "$89.000",
+        "precio": "$49.000",
         "moneda": "COP",
         "cta": "Compra la clase en trifuerza.co/academy"
       }
@@ -905,7 +1103,7 @@
       "sharon"
     ],
     "verificar": [
-      "Precio de lanzamiento 89.000 COP y lo que incluye (video, guía, presentación, quiz, certificado): dato de la sesión de tri-app"
+      "Precio de lanzamiento 49.000 COP (bajó de 89.000 el 28-oct-2026) y lo que incluye (video, guía, presentación, quiz, certificado): dato de la sesión de tri-app"
     ],
     "historia": [
       {
@@ -953,7 +1151,7 @@
         "dura": 5,
         "antetitulo": "Clase pregrabada · Trifuerza Academy",
         "titulo": "Fundamentos de IA",
-        "precio": "$89.000 COP",
+        "precio": "$49.000 COP",
         "duracion": "1 h 34 min",
         "nombre": "Juan David Vanegas",
         "perfil": "Profesor universitario de Tecnología y Derecho · Desarrollador de software y abogado"
@@ -1095,7 +1293,7 @@
         "tipo": "precio",
         "dura": 6.5,
         "kicker": "Precio de lanzamiento",
-        "precio": "$89.000",
+        "precio": "$49.000",
         "moneda": "COP",
         "cta": "Comenta CURSO y te envío el link",
         "cta2": "o cómprala en trifuerza.co/academy"
@@ -1120,7 +1318,7 @@
         "dura": 6,
         "antetitulo": "Clase pregrabada · Trifuerza Academy",
         "titulo": "Fundamentos de IA",
-        "precio": "$89.000 COP",
+        "precio": "$49.000 COP",
         "duracion": "1 h 34 min",
         "nombre": "Juan David Vanegas",
         "perfil": "Profesor universitario de Tecnología y Derecho · Desarrollador de software y abogado"
@@ -1189,7 +1387,7 @@
         "tipo": "precio",
         "dura": 6,
         "kicker": "Precio de lanzamiento",
-        "precio": "$89.000",
+        "precio": "$49.000",
         "moneda": "COP",
         "cta": "Comenta CURSO y te envío el link",
         "cta2": "o cómprala en trifuerza.co/academy"

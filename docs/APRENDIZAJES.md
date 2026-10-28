@@ -769,3 +769,6 @@ Videos: IMG_3770, IMG_3772 e IMG_3776 de octubre (iPhone). Salieron `la-ia-que-n
 - No re-empaquetar (bundle) en la carpeta que un render en curso está usando: otro --out-dir.
 - Para Instagram el CTA que pide Juan David es «Comenta CURSO y te envío el link» (comentario → DM), no solo la web.
 - Venta: precio anticipado en los primeros ~15 s, «quédate hasta el final» con 3 ideas numeradas, prueba social y cierre con precio.
+- **Cambio de precio (28-oct, $89.000 → $49.000):** basta cambiar `precio` en `venta` de la ficha, re-empaquetar en otro
+  --out-dir (`paquete-49000`) y volver a renderizar solo lo que lo muestra: tráiler (escena precio), venta v2 (presenta y
+  precio) y láminas 2 y 6 del carrusel. Duraciones iguales: la música no se regenera. Entregas viejas en `anterior-89000/`.
