@@ -54,7 +54,13 @@ const SALIDA = path.join(DIR, 'salida');
 mkdirSync(SALIDA, { recursive: true });
 const final = path.join(SALIDA, `${slug}-${nombre}-${V}.mp4`);
 
-const I = conIntro ? clase.intro.dura : 0; // la intro corre el cuerpo hacia adelante
+// Intro estándar de todas las clases: el logo de Trifuerza animado (Veo, sin la estrella de Gemini;
+// ver src/clase/quitar-marca.py). Va antes de la intro con el título. `introLogo: false` la quita.
+const LOGO = conIntro && clase.introLogo !== false
+  ? path.join(RAIZ, clase.introLogo?.archivo ?? 'public/intros/trifuerza-logo.mp4')
+  : null;
+const L = LOGO ? q(clase.introLogo?.dura ?? duracionDe(LOGO)) : 0;
+const I = (conIntro ? clase.intro.dura : 0) + L; // logo + intro corren el cuerpo hacia adelante
 const C = conCierre ? clase.cierre.dura : 0;
 const largo = q(B - A);
 // segundo del crudo (video) → segundo del MP4 final
@@ -246,6 +252,15 @@ function componerFinal() {
   f.push(`[${ult}]setpts=PTS+${I}/TB,subtitles='${assEsc}':fontsdir='${fuentes}',setpts=PTS-${I}/TB,format=yuv420p[cuerpo]`);
   f.push(`[2:a]aformat=sample_rates=48000:channel_layouts=stereo[acuerpo]`);
   const segs = [];
+  if (LOGO) {
+    // El logo sale de Veo a 1280x720 y 24 fps: se lleva a 1080p30 y se funde a negro al final,
+    // porque termina en fondo gris claro y la intro del título es azul oscuro.
+    ent.push('-i', LOGO);
+    f.push(`[${n}:v]trim=duration=${L},setpts=PTS-STARTPTS,scale=1920:1080:flags=lanczos,setsar=1,fps=${FPS},fade=t=out:st=${(L - 0.4).toFixed(2)}:d=0.4,format=yuv420p[vl]`,
+      `anullsrc=r=48000:cl=stereo,atrim=duration=${L}[al]`);
+    segs.push('[vl][al]');
+    n++;
+  }
   if (conIntro) {
     ent.push('-i', capas.intro);
     f.push(`[${n}:v]fps=${FPS},format=yuv420p[vi]`, `${campana(clase.intro.dura)}[ai]`);

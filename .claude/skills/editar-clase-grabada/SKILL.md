@@ -1,6 +1,6 @@
 ---
 name: editar-clase-grabada
-description: Edita una clase grabada de Trifuerza Academy (en vivo por LiveKit o pregrabada) para venderla o publicarla en la plataforma — transcribe, elige el punto de inicio, difumina chats y datos personales, sincroniza imagen y sonido, pone subtítulos en español, el cartel del profesor y motion graphics del tema, renderiza y sube al VPS. Usar cuando se pida "edita la clase grabada", "edita la grabación de <clase>", "deja lista la repetición", "sube la clase editada", "corrige el desfase de la grabación", "difumina los chats de la clase". NO usar para piezas de redes (reels, carruseles, stories): para eso está producir-pieza.
+description: Edita una clase grabada de Trifuerza Academy (en vivo por LiveKit o pregrabada) para venderla o publicarla en la plataforma — transcribe, elige el punto de inicio, difumina chats y datos personales, sincroniza imagen y sonido, pone el intro del logo de Trifuerza, subtítulos en español, el cartel del profesor y motion graphics del tema, renderiza y sube al VPS. Usar cuando se pida "edita la clase grabada", "edita la grabación de <clase>", "edita el video del curso", "deja lista la repetición", "sube la clase editada", "corrige el desfase de la grabación", "difumina los chats de la clase", "ponle el intro de Trifuerza", "quita la marca de Gemini del video". NO usar para piezas de redes (reels, carruseles, stories): para eso está producir-pieza.
 ---
 
 # Editar una clase grabada
@@ -15,6 +15,30 @@ captura. El método es híbrido:
 
 Primera clase hecha así: «Fundamentos de IA», 27-oct-2026 (`clases/fundamentos-de-ia.json`). Úsala de modelo.
 
+**Todo el taller vive en `C:\Users\User\Documents\Proyectos\claude-mk`.** Este skill está instalado
+para todo Claude (`~/.claude/skills/editar-clase-grabada`), así que te pueden llamar desde cualquier
+carpeta: entra a claude-mk antes de correr cualquier comando. Las rutas relativas de abajo son de ese repo.
+Si cambias este archivo, copia el mismo texto en `~/.claude/skills/editar-clase-grabada/SKILL.md` y en
+`claude-mk/.claude/skills/editar-clase-grabada/SKILL.md` para que no se separen.
+
+## Intro estándar: el logo de Trifuerza
+
+Todo video de curso o clase grabada arranca con el logo de Trifuerza animado: el hexágono que gira,
+**sin el nombre** (la versión con «TRIFUERZA» quedó descartada y se borró). Después viene la intro con
+el título de la clase.
+
+- El archivo está en `public/intros/trifuerza-logo.mp4` (claude-mk). Hay una copia en
+  `~/.claude/skills/editar-clase-grabada/assets/intro-trifuerza.mp4` para usarla fuera del taller.
+- Original: Gemini (Veo), `Downloads/Anima_este_logo_de_la_forma_ma.mp4`, 1280×720 a 24 fps, ~10 s.
+  Tiene copia en `trabajo/intro-trifuerza/original-sin-nombre.mp4`.
+- Traía la estrella de 4 puntas de Gemini abajo a la derecha. Se quitó con
+  `python -I src/clase/quitar-marca.py entrada.mp4 salida.mp4 --caja x,y,ancho,alto --cuadro-limpio 7.5`,
+  que hace inpainting (OpenCV Telea) con una máscara sacada de un cuadro de fondo liso. Sirve para
+  cualquier otro video de Veo con la misma marca. Nunca entregues un video con la estrella.
+- `armar.js` lo pone solo cuando la salida empieza en `inicio`: lo lleva a 1080p30 y lo funde a negro
+  en 0,4 s, porque termina en gris claro y la intro del título es azul oscuro. En `clases/<slug>.json`,
+  `"introLogo": false` lo quita, y `"introLogo": {"archivo": "...", "dura": 6}` cambia el archivo o lo corta.
+
 ## Dónde vive cada cosa
 
 | Qué | Dónde |
@@ -24,6 +48,7 @@ Primera clase hecha así: «Fundamentos de IA», 27-oct-2026 (`clases/fundamento
 | Recortes de referencia de los detectores (traen datos privados) | `trabajo/clases/<slug>/refs/`. **Nunca en el repo** |
 | Scripts | `src/clase/`: `transcribir.py`, `desfase.py`, `hojas.py`, `base.py`, `armar.js`, `subtitulos.js`, `subir.js` |
 | Plantilla Remotion | `remotion/clase/`: `Marco.jsx`, `Piezas.jsx` (Intro, Cartel, Cierre), `tiempo.js` |
+| Intro del logo | `public/intros/trifuerza-logo.mp4` (ver «Intro estándar») |
 | Grabaciones en vivo | VPS `live.trifuerza.co`, carpeta **`/srv/grabaciones`** (no `/opt/livekit`). Llave `~/.ssh/trifuerza_vps` |
 | Respaldo | Drive `Proyectos/Trifuerza (Triforce Boosters SAS)/09 Contenido y redes/Grabaciones en vivo`. El timer del VPS copia cada 10 min |
 | Base de datos | Supabase de Trifuerza, tabla `live_event_recordings`. Este repo **no** tiene ese MCP: el SQL lo corre la sesión de tri-app2 |
