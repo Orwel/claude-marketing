@@ -229,6 +229,17 @@ function composicionesClase() {
             <Composition key={`${id}--${nombre}-16x9`} id={`${id}--${nombre}-16x9`} component={Viaje} {...base} durationInFrames={cuadrosViaje(clase, lista)} defaultProps={{ clase, lista, musica: `trailer/musica-${nombre}.wav` }} />,
             <Composition key={`${id}--${nombre}-9x16`} id={`${id}--${nombre}-9x16`} component={Viaje} fps={FPS} width={1080} height={1920} durationInFrames={cuadrosViaje(clase, lista)} defaultProps={{ clase, lista, musica: `trailer/musica-${nombre}.wav` }} />,
           ]),
+        // Versiones en dólares para pauta en toda Latinoamérica (29-oct): mismas escenas y pista, precio en USD aproximado.
+        ...[['viaje2USD', 'viaje-v2-usd', 'viaje-v2'], ['viajePrecio2USD', 'viaje-precio-v2-usd', 'viaje-precio-v2'], ['promoGanchoUSD', 'promo-gancho-usd', 'promo-gancho'], ['promoPrecioUSD', 'promo-precio-usd', 'promo-precio']]
+          .filter(([lista]) => clase.venta[lista])
+          .flatMap(([lista, nombre, pista]) => [
+            <Composition key={`${id}--${nombre}-16x9`} id={`${id}--${nombre}-16x9`} component={Viaje} {...base} durationInFrames={cuadrosViaje(clase, lista)} defaultProps={{ clase, lista, musica: `trailer/musica-${pista}.wav`, sello: clase.venta.insigniaUSD }} />,
+            <Composition key={`${id}--${nombre}-9x16`} id={`${id}--${nombre}-9x16`} component={Viaje} fps={FPS} width={1080} height={1920} durationInFrames={cuadrosViaje(clase, lista)} defaultProps={{ clase, lista, musica: `trailer/musica-${pista}.wav`, sello: clase.venta.insigniaUSD }} />,
+          ]),
+        ...(clase.venta.carruselViaje8USD ? [
+          <Composition key={`${id}--carrusel-viaje-8-usd`} id={`${id}--carrusel-viaje-8-usd`} component={Viaje} fps={FPS} width={1080} height={1350} durationInFrames={cuadrosViaje(clase, 'carruselViaje8USD')}
+            defaultProps={{ clase, lista: 'carruselViaje8USD', musica: 'trailer/musica-lamina.wav' }} />,
+        ] : []),
         // Carrusel de posts (4:5) al estilo del viaje: una composición por lámina (venta.carruselViaje).
         ...(clase.venta.carruselViaje ?? []).map((_, i) => (
           <Composition key={`${id}--carrusel-viaje-${i + 1}`} id={`${id}--carrusel-viaje-${i + 1}`} component={Viaje} fps={FPS} width={1080} height={1350} durationInFrames={cuadrosViaje(clase, `carruselViaje.${i}`)}

@@ -225,7 +225,8 @@ const Capa = ({ clase, e, de }) => {
   throw new Error(`Escena desconocida en venta.viaje: ${e.tipo}`);
 };
 
-export const Viaje = ({ clase, lista = 'viaje', musica = 'trailer/musica-viaje.wav' }) => {
+// `sello`: el del precio (por defecto venta.insignia; las versiones en dólares pasan venta.insigniaUSD).
+export const Viaje = ({ clase, lista = 'viaje', musica = 'trailer/musica-viaje.wav', sello = clase.venta.insignia }) => {
   useFuentes();
   const frame = useCurrentFrame();
   const T = clase.tema;
@@ -245,7 +246,7 @@ export const Viaje = ({ clase, lista = 'viaje', musica = 'trailer/musica-viaje.w
   const sal = interpolate(frame, [t - 10, t], [1, 0], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' });
   // Barrido solo donde cambia la capa (clip ↔ planeta); entre paradas la transición es el vuelo.
   const precios = tramos.filter((r) => r.e.tipo === 'precio');
-  const insignia = clase.venta.insignia && precios.length > 1 ? { desde: precios[0].desde + precios[0].dura, hasta: precios[precios.length - 1].desde } : null;
+  const insignia = sello && precios.length > 1 ? { desde: precios[0].desde + precios[0].dura, hasta: precios[precios.length - 1].desde } : null;
   const conBarrido = tramos.slice(1).filter((r, i) => r.e.tipo !== 'parada' && tramos[i].e.tipo !== 'logo');
   return (
     <AbsoluteFill style={{ background: T.fondo, opacity: sal }}>
@@ -262,7 +263,7 @@ export const Viaje = ({ clase, lista = 'viaje', musica = 'trailer/musica-viaje.w
       ))}
       {insignia && (
         <Sequence from={insignia.desde} durationInFrames={insignia.hasta - insignia.desde}>
-          <Insignia T={T} i={clase.venta.insignia} />
+          <Insignia T={T} i={sello} />
         </Sequence>
       )}
       {musica && (
