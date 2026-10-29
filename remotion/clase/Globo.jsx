@@ -250,7 +250,8 @@ function construir(mapa, ruta) {
  */
 export function tramosGlobo(escenas, fps) {
   let t = 0;
-  let previa = null;
+  // `desde` en la primera escena: de qué parada viene el avión (cada lámina del carrusel sigue el viaje).
+  let previa = escenas[0]?.desde ?? null;
   const ruta = [];
   const tramos = escenas.map((e) => {
     const desde = t;

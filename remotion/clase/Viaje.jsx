@@ -2,7 +2,7 @@ import React from 'react';
 import { AbsoluteFill, Audio, Img, Sequence, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig } from 'remotion';
 import { useFuentes } from '../fuentes.js';
 import { Globo, kmEntre } from './Globo.jsx';
-import { Barrido, Kicker, Momento, Mono, Texto } from './Trailer.jsx';
+import { Barrido, Comentarios, Kicker, Momento, Mono, Texto } from './Trailer.jsx';
 
 /**
  * Tráiler de venta en forma de viaje (clases/<slug>.json → venta.viaje): el avión de la clase recorre
@@ -14,7 +14,12 @@ import { Barrido, Kicker, Momento, Mono, Texto } from './Trailer.jsx';
  */
 const FPS = 30;
 const RES = { stiffness: 240, damping: 24 };
-export const cuadrosViaje = (clase, lista = 'viaje') => clase.venta[lista].reduce((s, e) => s + Math.round(e.dura * FPS), 0);
+/** `lista`: 'viaje', 'viajePrecio' o una lámina del carrusel ('carruselViaje.2'). */
+export const escenasViaje = (clase, lista = 'viaje') => {
+  const [k, i] = lista.split('.');
+  return i === undefined ? clase.venta[k] : [clase.venta[k][Number(i)]];
+};
+export const cuadrosViaje = (clase, lista = 'viaje') => escenasViaje(clase, lista).reduce((s, e) => s + Math.round(e.dura * FPS), 0);
 
 const useEntrada = () => {
   const frame = useCurrentFrame();
@@ -84,11 +89,13 @@ const Parada = ({ clase, e, de }) => {
   const T = clase.tema;
   const vert = H > W;
   const mapa = clase.venta.mapa;
-  const vuelo = Math.round((e.vuelo ?? 1.2) * fps);
-  const u = Math.min(1, frame / vuelo);
-  const A = mapa[de];
+  // Sin vuelo (la parada es la misma ciudad, como el embarque en Bogotá): el tema aparece de una vez y sin ruta.
+  const vuela = de && de !== e.parada;
+  const vuelo = vuela ? Math.round((e.vuelo ?? 1.2) * fps) : 0;
+  const u = vuela ? Math.min(1, frame / vuelo) : 1;
+  const A = mapa[de ?? e.parada];
   const B = mapa[e.parada];
-  const hud = interpolate(frame, [0, 6, vuelo + 2, vuelo + 10], [0, 1, 1, 0], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' });
+  const hud = vuela ? interpolate(frame, [0, 6, vuelo + 2, vuelo + 10], [0, 1, 1, 0], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' }) : 0;
   const llega = (d, c = { stiffness: 260, damping: 20 }) => spring({ frame: frame - vuelo + 4 - d, fps, config: c });
   const palabras = e.titulo.split(' ');
   return (
@@ -120,6 +127,13 @@ const Parada = ({ clase, e, de }) => {
                 return <span key={i} style={{ display: 'inline-block', opacity: a, transform: `translateY(${(1 - a) * 30}px)`, color: e.resalta?.includes(p) ? T.acento : T.tinta }}>{p}</span>;
               })}
             </div>
+            {e.nota && (
+              // Con fondo propio: la nota cae encima del planeta y sin él no se lee.
+              <div style={{ display: 'inline-block', fontFamily: `'Inter'`, fontWeight: 600, fontSize: vert ? 42 : 36, lineHeight: 1.3, color: T.tinta, marginTop: 30, padding: '18px 28px',
+                background: `${T.fondo}e6`, border: `1.5px solid ${T.linea}`, borderRadius: 22, opacity: llega(14), transform: `translateY(${(1 - llega(14)) * 16}px)` }}>
+                {e.nota.split(' ').map((p, i) => <span key={i} style={{ color: e.resaltaNota?.includes(p) ? T.acento : T.tinta }}>{p} </span>)}
+              </div>
+            )}
             {e.chips && (
               <div style={{ marginTop: 34, display: 'flex', gap: 14, flexWrap: 'wrap', justifyContent: vert ? 'center' : 'flex-start', maxWidth: vert ? 'none' : 900 }}>
                 {e.chips.map((c, i) => {
@@ -152,7 +166,8 @@ const PrecioLanzamiento = ({ clase, e }) => {
   const anchoRuta = vert ? 960 : 1500;
   const tamRuta = e.ruta ? Math.min(vert ? 44 : 46, anchoRuta / (e.ruta.length * 0.62)) : 0;
   return (
-    <AbsoluteFill style={{ alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: vert ? 50 : 100 }}>
+    // En 4:5 (lámina del carrusel) todo el bloque se reduce para que quepa sin cambiar el diseño.
+    <AbsoluteFill style={{ alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: vert ? 50 : 100, transform: `scale(${vert && H / W < 1.5 ? 0.8 : 1})` }}>
       <Kicker T={T} a={ent(0)}>{e.kicker}</Kicker>
       <div style={{ marginTop: vert ? 60 : 36, opacity: ent(4), position: 'relative', display: 'inline-block' }}>
         <span style={{ fontFamily: `'Space Grotesk'`, fontWeight: 700, fontSize: vert ? 120 : 110, letterSpacing: '-0.03em', color: T.tenue }}>{e.antes}</span>
@@ -204,6 +219,7 @@ const Capa = ({ clase, e, de }) => {
   if (e.tipo === 'parada') return <Parada clase={clase} e={e} de={de} />;
   if (e.tipo === 'despegue') return <Despegue clase={clase} e={e} />;
   if (e.tipo === 'momento') return (<><Velo T={T} fuerza={0.72} /><Momento clase={clase} e={e} /></>);
+  if (e.tipo === 'comentarios') return (<><Velo T={T} fuerza={0.62} /><Comentarios clase={clase} e={e} /></>);
   if (e.tipo === 'texto') return (<><Velo T={T} fuerza={0.62} entra={4} /><Texto clase={clase} e={e} /></>);
   if (e.tipo === 'precio') return (<><Velo T={T} fuerza={0.7} entra={14} /><PrecioLanzamiento clase={clase} e={e} /></>);
   throw new Error(`Escena desconocida en venta.viaje: ${e.tipo}`);
@@ -213,9 +229,9 @@ export const Viaje = ({ clase, lista = 'viaje', musica = 'trailer/musica-viaje.w
   useFuentes();
   const frame = useCurrentFrame();
   const T = clase.tema;
-  const escenas = clase.venta[lista];
+  const escenas = escenasViaje(clase, lista);
   let t = 0;
-  let previa = null;
+  let previa = escenas[0]?.desde ?? null;
   const tramos = escenas.map((e) => {
     const r = { e, desde: t, dura: Math.round(e.dura * FPS), de: previa };
     t += r.dura;

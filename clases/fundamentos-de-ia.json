@@ -2099,6 +2099,1263 @@
         "ruta": "trifuerza.co/academy/clases/fundamentos-de-ia",
         "incluye": "1 h 34 min · Video editado con subtítulos · Guía · Presentación interactiva · Quiz · Certificado"
       }
+    ],
+    "_carruselViaje": "Carrusel de posts animados (4:5) al estilo del viaje, 28-oct-2026: una lámina por escena; `desde` hace que el avión siga la ruta de una lámina a la siguiente. Pista: musica-trailer.py … lamina. Composiciones --carrusel-viaje-1 … -7.",
+    "carruselViaje": [
+      {
+        "tipo": "texto",
+        "dura": 7.0,
+        "parada": "BOG",
+        "vista": "lejos",
+        "centro": [
+          22,
+          -62
+        ],
+        "kicker": "Clase grabada · Fundamentos de IA",
+        "lineas": [
+          "¿La IA te va",
+          "a reemplazar?",
+          "Súbete a este vuelo."
+        ],
+        "resalta": [
+          "reemplazar?",
+          "vuelo."
+        ],
+        "desliza": true
+      },
+      {
+        "tipo": "parada",
+        "dura": 7.0,
+        "vuelo": 0,
+        "desde": "BOG",
+        "parada": "BOG",
+        "etiqueta": "Embarque · Bogotá",
+        "titulo": "El lenguaje hecho números",
+        "resalta": [
+          "números"
+        ],
+        "nota": "La genialidad de la IA fue entender que el lenguaje humano puede representarse como si fuera matemáticas.",
+        "resaltaNota": [
+          "matemáticas."
+        ],
+        "offV": [
+          0,
+          -0.24
+        ]
+      },
+      {
+        "tipo": "parada",
+        "dura": 7.0,
+        "vuelo": 1.4,
+        "desde": "BOG",
+        "parada": "MAN",
+        "etiqueta": "Parada 01 · Manchester",
+        "titulo": "La máquina y Turing",
+        "resalta": [
+          "Turing"
+        ],
+        "offV": [
+          0,
+          -0.24
+        ],
+        "grande": "1948",
+        "nota": "¿Pueden pensar las máquinas? Turing cambió la pregunta por un juego.",
+        "resaltaNota": [
+          "juego."
+        ]
+      },
+      {
+        "tipo": "parada",
+        "dura": 7.0,
+        "vuelo": 1.4,
+        "desde": "MAN",
+        "parada": "SV",
+        "etiqueta": "Parada 04 · Silicon Valley",
+        "titulo": "El modelo por dentro",
+        "resalta": [
+          "dentro"
+        ],
+        "offV": [
+          0,
+          -0.24
+        ],
+        "grande": "2017",
+        "nota": "Un programa obedece. Un modelo predice: por eso a veces se inventa cosas.",
+        "resaltaNota": [
+          "predice:"
+        ]
+      },
+      {
+        "tipo": "parada",
+        "dura": 7.0,
+        "vuelo": 1.4,
+        "desde": "SV",
+        "parada": "SFO",
+        "etiqueta": "Parada 05 · San Francisco",
+        "titulo": "La IA llega a todos",
+        "resalta": [
+          "todos"
+        ],
+        "offV": [
+          0,
+          -0.24
+        ],
+        "grande": "2022",
+        "nota": "El modelo es el motor; ChatGPT o Claude son el carro completo.",
+        "resaltaNota": [
+          "motor;"
+        ]
+      },
+      {
+        "tipo": "parada",
+        "dura": 7.0,
+        "vuelo": 1.4,
+        "desde": "SFO",
+        "parada": "ATL",
+        "etiqueta": "Parada 07 · Sobre el Atlántico",
+        "titulo": "Configura tu cabina: de chat a copiloto",
+        "resalta": [
+          "copiloto"
+        ],
+        "offV": [
+          0,
+          -0.24
+        ],
+        "chips": [
+          "Proyectos",
+          "Artefactos",
+          "Conectores",
+          "Skills",
+          "Plugins",
+          "Claude Code"
+        ]
+      },
+      {
+        "tipo": "comentarios",
+        "dura": 7.0,
+        "vuelo": 1.4,
+        "desde": "ATL",
+        "parada": "BOG",
+        "kicker": "Chat de la clase en vivo · 27 oct 2026",
+        "titulo": "Lo que dijeron los asistentes",
+        "ids": [
+          "manuel",
+          "alejandro",
+          "sharon",
+          "william"
+        ]
+      },
+      {
+        "tipo": "precio",
+        "dura": 7.0,
+        "desde": "BOG",
+        "parada": "BOG",
+        "vista": "lejos",
+        "centro": [
+          22,
+          -62
+        ],
+        "kicker": "Clase grabada · Fundamentos de IA",
+        "antes": "$89.000",
+        "etiqueta": "Precio de lanzamiento",
+        "precio": "$49.000",
+        "moneda": "COP",
+        "cta": "Comenta CURSO y te envío el link",
+        "ruta": "o cómprala en trifuerza.co/academy/clases/fundamentos-de-ia",
+        "incluye": "1 h 34 min · Video con subtítulos · Guía · Presentación interactiva · Quiz · Certificado"
+      }
+    ],
+    "_v2": "Guion aprobado el 28-oct-2026 (noche): comentarios positivos en todo, el lenguaje hecho números, Claude y la presentación hecha con IA; fragmentos del video remontado v4. viaje2 y viajePrecio2 = tráileres (página, YouTube); promoGancho y promoPrecio = promos cortos para Instagram con «Comenta CURSO».",
+    "viaje2": [
+      {
+        "tipo": "logo",
+        "dura": 4.2,
+        "parada": "BOG",
+        "vista": "lejos",
+        "centro": [
+          22,
+          -62
+        ],
+        "_archivo": "public/intros/trifuerza-logo.mp4 de 0,6 s a 7,3 s, acelerado 1,6× a 30 fps con ffmpeg y pasado a JPG cuadro a cuadro (trailer/logo/0001.jpg…) más su sonido en WAV: como video, OffthreadVideo fallaba con «No frame found at position».",
+        "cuadros": "trailer/logo",
+        "n": 127,
+        "sonido": "trailer/logo-rapido.wav"
+      },
+      {
+        "tipo": "texto",
+        "dura": 2.1,
+        "parada": "BOG",
+        "vista": "lejos",
+        "centro": [
+          22,
+          -62
+        ],
+        "lineas": [
+          "¿La IA te va",
+          "a reemplazar?"
+        ],
+        "resalta": [
+          "reemplazar?"
+        ]
+      },
+      {
+        "tipo": "momento",
+        "dura": 6.32,
+        "parada": "BOG",
+        "crudo": [
+          508.18,
+          514.5
+        ],
+        "clip": "trailer/v4/reemplazar.mp4",
+        "cuadros": "trailer/v4/reemplazar",
+        "sonido": "trailer/v4/reemplazar.wav",
+        "kicker": "Clase en vivo · 27 oct 2026",
+        "cita": "No es la IA. Es alguien que entendió esto mucho antes que tú.",
+        "resalta": [
+          "antes",
+          "que",
+          "tú."
+        ]
+      },
+      {
+        "tipo": "despegue",
+        "dura": 3.0,
+        "parada": "BOG",
+        "off": [
+          -0.22,
+          0
+        ],
+        "offV": [
+          0,
+          -0.2
+        ],
+        "antetitulo": "Vuelo TF-001 · Clase grabada",
+        "titulo": "Fundamentos de IA",
+        "bajada": "Un vuelo por la historia de la IA, lo que pasa por dentro de un modelo y cómo ponerlo a trabajar contigo.",
+        "chips": [
+          "1 h 34 min",
+          "Con Juan David Vanegas"
+        ]
+      },
+      {
+        "tipo": "parada",
+        "dura": 2.2,
+        "vuelo": 0,
+        "parada": "BOG",
+        "etiqueta": "Embarque · Bogotá",
+        "titulo": "El lenguaje hecho números",
+        "resalta": [
+          "números"
+        ],
+        "off": [
+          -0.22,
+          0
+        ],
+        "offV": [
+          0,
+          -0.2
+        ]
+      },
+      {
+        "tipo": "momento",
+        "dura": 9.75,
+        "parada": "BOG",
+        "crudo": [
+          183.2,
+          192.95
+        ],
+        "clip": "trailer/v4/lenguaje-a.mp4",
+        "cuadros": "trailer/v4/lenguaje-a",
+        "sonido": "trailer/v4/lenguaje-a.wav",
+        "kicker": "La genialidad de la IA",
+        "cita": "La genialidad fue entender que el lenguaje humano, con el que hablamos y nos comunicamos…",
+        "resalta": [
+          "genialidad",
+          "lenguaje"
+        ]
+      },
+      {
+        "tipo": "momento",
+        "dura": 2.03,
+        "parada": "BOG",
+        "crudo": [
+          197.72,
+          199.75
+        ],
+        "clip": "trailer/v4/lenguaje-b.mp4",
+        "cuadros": "trailer/v4/lenguaje-b",
+        "sonido": "trailer/v4/lenguaje-b.wav",
+        "kicker": "La genialidad de la IA",
+        "cita": "…puede ser representado como si fuera matemáticas.",
+        "resalta": [
+          "matemáticas."
+        ]
+      },
+      {
+        "tipo": "parada",
+        "dura": 2.7,
+        "vuelo": 1.4,
+        "parada": "MAN",
+        "etiqueta": "Parada 01 · Manchester",
+        "titulo": "La máquina y Turing",
+        "resalta": [
+          "Turing"
+        ],
+        "off": [
+          -0.22,
+          0
+        ],
+        "offV": [
+          0,
+          -0.2
+        ],
+        "grande": "1948"
+      },
+      {
+        "tipo": "momento",
+        "dura": 4.85,
+        "parada": "MAN",
+        "crudo": [
+          840.15,
+          845.0
+        ],
+        "clip": "trailer/v4/turing.mp4",
+        "cuadros": "trailer/v4/turing",
+        "sonido": "trailer/v4/turing.wav",
+        "kicker": "Turing · 1950",
+        "cita": "¿Pueden pensar las máquinas? Y la cambió por un juego.",
+        "resalta": [
+          "juego."
+        ]
+      },
+      {
+        "tipo": "parada",
+        "dura": 2.8,
+        "vuelo": 1.6,
+        "parada": "SV",
+        "etiqueta": "Parada 04 · Silicon Valley",
+        "titulo": "El modelo por dentro",
+        "resalta": [
+          "dentro"
+        ],
+        "off": [
+          -0.22,
+          0
+        ],
+        "offV": [
+          0,
+          -0.2
+        ],
+        "grande": "2017"
+      },
+      {
+        "tipo": "momento",
+        "dura": 3.65,
+        "parada": "SV",
+        "crudo": [
+          1424.5,
+          1428.15
+        ],
+        "clip": "trailer/v4/programa.mp4",
+        "cuadros": "trailer/v4/programa",
+        "sonido": "trailer/v4/programa.wav",
+        "kicker": "La llave de toda la clase",
+        "cita": "Un programa obedece. Un modelo predice.",
+        "resalta": [
+          "predice."
+        ]
+      },
+      {
+        "tipo": "parada",
+        "dura": 2.4,
+        "vuelo": 0.9,
+        "parada": "SFO",
+        "etiqueta": "Parada 05 · San Francisco",
+        "titulo": "La IA llega a todos",
+        "resalta": [
+          "todos"
+        ],
+        "off": [
+          -0.22,
+          0
+        ],
+        "offV": [
+          0,
+          -0.2
+        ],
+        "grande": "2022"
+      },
+      {
+        "tipo": "momento",
+        "dura": 4.35,
+        "parada": "SFO",
+        "crudo": [
+          1884.6,
+          1888.95
+        ],
+        "clip": "trailer/v4/motor.mp4",
+        "cuadros": "trailer/v4/motor",
+        "sonido": "trailer/v4/motor.wav",
+        "kicker": "Modelo y producto",
+        "cita": "El modelo es el motor. ChatGPT o Claude son el carro completo.",
+        "resalta": [
+          "motor."
+        ]
+      },
+      {
+        "tipo": "momento",
+        "dura": 5.3,
+        "parada": "SFO",
+        "crudo": [
+          1971.65,
+          1976.95
+        ],
+        "clip": "trailer/v4/claude.mp4",
+        "cuadros": "trailer/v4/claude",
+        "sonido": "trailer/v4/claude.wav",
+        "kicker": "Por qué Claude",
+        "cita": "Claude es más como: «oiga, espere, eso no tiene tanto sentido, pare un momentico».",
+        "resalta": [
+          "Claude",
+          "momentico»."
+        ]
+      },
+      {
+        "tipo": "parada",
+        "dura": 2.8,
+        "vuelo": 1.4,
+        "parada": "ATL",
+        "etiqueta": "Parada 07 · Sobre el Atlántico",
+        "titulo": "Configura tu cabina: de chat a copiloto",
+        "resalta": [
+          "copiloto"
+        ],
+        "off": [
+          -0.22,
+          0
+        ],
+        "offV": [
+          0,
+          -0.2
+        ],
+        "chips": [
+          "Proyectos",
+          "Artefactos",
+          "Conectores",
+          "Skills",
+          "Plugins",
+          "Claude Code"
+        ]
+      },
+      {
+        "tipo": "momento",
+        "dura": 5.9,
+        "parada": "ATL",
+        "crudo": [
+          3309.9,
+          3315.8
+        ],
+        "clip": "trailer/v4/conectar.mp4",
+        "cuadros": "trailer/v4/conectar",
+        "sonido": "trailer/v4/conectar.wav",
+        "kicker": "La parte práctica",
+        "cita": "El gran poder de la IA es cómo tú la conectas con otras aplicaciones.",
+        "resalta": [
+          "conectas"
+        ]
+      },
+      {
+        "tipo": "momento",
+        "dura": 7.65,
+        "parada": "ATL",
+        "crudo": [
+          154.3,
+          161.95
+        ],
+        "clip": "trailer/v4/presentacion.mp4",
+        "cuadros": "trailer/v4/presentacion",
+        "sonido": "trailer/v4/presentacion.wav",
+        "kicker": "Esta clase",
+        "cita": "Una presentación hecha con inteligencia artificial. Hace unos años nos hubiera parecido impensable.",
+        "resalta": [
+          "impensable."
+        ]
+      },
+      {
+        "tipo": "parada",
+        "dura": 2.6,
+        "vuelo": 1.5,
+        "parada": "BOG",
+        "etiqueta": "Aterrizaje · Bogotá",
+        "titulo": "Cinco ideas para llevarte",
+        "resalta": [
+          "Cinco"
+        ],
+        "off": [
+          -0.22,
+          0
+        ],
+        "offV": [
+          0,
+          -0.2
+        ]
+      },
+      {
+        "tipo": "momento",
+        "dura": 2.55,
+        "parada": "BOG",
+        "crudo": [
+          4401.2,
+          4403.75
+        ],
+        "clip": "trailer/v4/cacharreen.mp4",
+        "cuadros": "trailer/v4/cacharreen",
+        "sonido": "trailer/v4/cacharreen.wav",
+        "kicker": "El consejo final",
+        "cita": "Cacharreen. Ensayo y error.",
+        "resalta": [
+          "Cacharreen."
+        ]
+      },
+      {
+        "tipo": "comentarios",
+        "dura": 6.0,
+        "parada": "BOG",
+        "kicker": "Chat de la clase en vivo · 27 oct 2026",
+        "titulo": "Lo que dijeron los asistentes",
+        "ids": [
+          "manuel",
+          "alejandro",
+          "sharon",
+          "william"
+        ]
+      },
+      {
+        "tipo": "precio",
+        "dura": 7.5,
+        "parada": "BOG",
+        "vista": "lejos",
+        "centro": [
+          32,
+          -60
+        ],
+        "kicker": "Clase grabada · Fundamentos de IA",
+        "antes": "$89.000",
+        "etiqueta": "Precio de lanzamiento",
+        "precio": "$49.000",
+        "moneda": "COP",
+        "cta": "Compra la clase",
+        "ruta": "trifuerza.co/academy/clases/fundamentos-de-ia",
+        "incluye": "1 h 34 min · Video editado con subtítulos · Guía · Presentación interactiva · Quiz · Certificado"
+      }
+    ],
+    "viajePrecio2": [
+      {
+        "tipo": "logo",
+        "dura": 4.2,
+        "parada": "BOG",
+        "vista": "lejos",
+        "centro": [
+          22,
+          -62
+        ],
+        "_archivo": "public/intros/trifuerza-logo.mp4 de 0,6 s a 7,3 s, acelerado 1,6× a 30 fps con ffmpeg y pasado a JPG cuadro a cuadro (trailer/logo/0001.jpg…) más su sonido en WAV: como video, OffthreadVideo fallaba con «No frame found at position».",
+        "cuadros": "trailer/logo",
+        "n": 127,
+        "sonido": "trailer/logo-rapido.wav"
+      },
+      {
+        "tipo": "precio",
+        "dura": 4.2,
+        "parada": "BOG",
+        "vista": "lejos",
+        "centro": [
+          22,
+          -62
+        ],
+        "kicker": "Clase grabada · Fundamentos de IA",
+        "antes": "$89.000",
+        "etiqueta": "Precio de lanzamiento",
+        "precio": "$49.000",
+        "moneda": "COP",
+        "incluye": "1 h 34 min de clase · mira lo que te llevas ↓"
+      },
+      {
+        "tipo": "texto",
+        "dura": 2.1,
+        "parada": "BOG",
+        "vista": "lejos",
+        "centro": [
+          22,
+          -62
+        ],
+        "lineas": [
+          "¿La IA te va",
+          "a reemplazar?"
+        ],
+        "resalta": [
+          "reemplazar?"
+        ]
+      },
+      {
+        "tipo": "momento",
+        "dura": 6.32,
+        "parada": "BOG",
+        "crudo": [
+          508.18,
+          514.5
+        ],
+        "clip": "trailer/v4/reemplazar.mp4",
+        "cuadros": "trailer/v4/reemplazar",
+        "sonido": "trailer/v4/reemplazar.wav",
+        "kicker": "Clase en vivo · 27 oct 2026",
+        "cita": "No es la IA. Es alguien que entendió esto mucho antes que tú.",
+        "resalta": [
+          "antes",
+          "que",
+          "tú."
+        ]
+      },
+      {
+        "tipo": "despegue",
+        "dura": 3.0,
+        "parada": "BOG",
+        "off": [
+          -0.22,
+          0
+        ],
+        "offV": [
+          0,
+          -0.2
+        ],
+        "antetitulo": "Vuelo TF-001 · Clase grabada",
+        "titulo": "Fundamentos de IA",
+        "bajada": "Un vuelo por la historia de la IA, lo que pasa por dentro de un modelo y cómo ponerlo a trabajar contigo.",
+        "chips": [
+          "1 h 34 min",
+          "Con Juan David Vanegas"
+        ]
+      },
+      {
+        "tipo": "parada",
+        "dura": 2.2,
+        "vuelo": 0,
+        "parada": "BOG",
+        "etiqueta": "Embarque · Bogotá",
+        "titulo": "El lenguaje hecho números",
+        "resalta": [
+          "números"
+        ],
+        "off": [
+          -0.22,
+          0
+        ],
+        "offV": [
+          0,
+          -0.2
+        ]
+      },
+      {
+        "tipo": "momento",
+        "dura": 9.75,
+        "parada": "BOG",
+        "crudo": [
+          183.2,
+          192.95
+        ],
+        "clip": "trailer/v4/lenguaje-a.mp4",
+        "cuadros": "trailer/v4/lenguaje-a",
+        "sonido": "trailer/v4/lenguaje-a.wav",
+        "kicker": "La genialidad de la IA",
+        "cita": "La genialidad fue entender que el lenguaje humano, con el que hablamos y nos comunicamos…",
+        "resalta": [
+          "genialidad",
+          "lenguaje"
+        ]
+      },
+      {
+        "tipo": "momento",
+        "dura": 2.03,
+        "parada": "BOG",
+        "crudo": [
+          197.72,
+          199.75
+        ],
+        "clip": "trailer/v4/lenguaje-b.mp4",
+        "cuadros": "trailer/v4/lenguaje-b",
+        "sonido": "trailer/v4/lenguaje-b.wav",
+        "kicker": "La genialidad de la IA",
+        "cita": "…puede ser representado como si fuera matemáticas.",
+        "resalta": [
+          "matemáticas."
+        ]
+      },
+      {
+        "tipo": "parada",
+        "dura": 2.7,
+        "vuelo": 1.4,
+        "parada": "MAN",
+        "etiqueta": "Parada 01 · Manchester",
+        "titulo": "La máquina y Turing",
+        "resalta": [
+          "Turing"
+        ],
+        "off": [
+          -0.22,
+          0
+        ],
+        "offV": [
+          0,
+          -0.2
+        ],
+        "grande": "1948"
+      },
+      {
+        "tipo": "momento",
+        "dura": 4.85,
+        "parada": "MAN",
+        "crudo": [
+          840.15,
+          845.0
+        ],
+        "clip": "trailer/v4/turing.mp4",
+        "cuadros": "trailer/v4/turing",
+        "sonido": "trailer/v4/turing.wav",
+        "kicker": "Turing · 1950",
+        "cita": "¿Pueden pensar las máquinas? Y la cambió por un juego.",
+        "resalta": [
+          "juego."
+        ]
+      },
+      {
+        "tipo": "parada",
+        "dura": 2.8,
+        "vuelo": 1.6,
+        "parada": "SV",
+        "etiqueta": "Parada 04 · Silicon Valley",
+        "titulo": "El modelo por dentro",
+        "resalta": [
+          "dentro"
+        ],
+        "off": [
+          -0.22,
+          0
+        ],
+        "offV": [
+          0,
+          -0.2
+        ],
+        "grande": "2017"
+      },
+      {
+        "tipo": "momento",
+        "dura": 3.65,
+        "parada": "SV",
+        "crudo": [
+          1424.5,
+          1428.15
+        ],
+        "clip": "trailer/v4/programa.mp4",
+        "cuadros": "trailer/v4/programa",
+        "sonido": "trailer/v4/programa.wav",
+        "kicker": "La llave de toda la clase",
+        "cita": "Un programa obedece. Un modelo predice.",
+        "resalta": [
+          "predice."
+        ]
+      },
+      {
+        "tipo": "parada",
+        "dura": 2.4,
+        "vuelo": 0.9,
+        "parada": "SFO",
+        "etiqueta": "Parada 05 · San Francisco",
+        "titulo": "La IA llega a todos",
+        "resalta": [
+          "todos"
+        ],
+        "off": [
+          -0.22,
+          0
+        ],
+        "offV": [
+          0,
+          -0.2
+        ],
+        "grande": "2022"
+      },
+      {
+        "tipo": "momento",
+        "dura": 4.35,
+        "parada": "SFO",
+        "crudo": [
+          1884.6,
+          1888.95
+        ],
+        "clip": "trailer/v4/motor.mp4",
+        "cuadros": "trailer/v4/motor",
+        "sonido": "trailer/v4/motor.wav",
+        "kicker": "Modelo y producto",
+        "cita": "El modelo es el motor. ChatGPT o Claude son el carro completo.",
+        "resalta": [
+          "motor."
+        ]
+      },
+      {
+        "tipo": "momento",
+        "dura": 5.3,
+        "parada": "SFO",
+        "crudo": [
+          1971.65,
+          1976.95
+        ],
+        "clip": "trailer/v4/claude.mp4",
+        "cuadros": "trailer/v4/claude",
+        "sonido": "trailer/v4/claude.wav",
+        "kicker": "Por qué Claude",
+        "cita": "Claude es más como: «oiga, espere, eso no tiene tanto sentido, pare un momentico».",
+        "resalta": [
+          "Claude",
+          "momentico»."
+        ]
+      },
+      {
+        "tipo": "parada",
+        "dura": 2.8,
+        "vuelo": 1.4,
+        "parada": "ATL",
+        "etiqueta": "Parada 07 · Sobre el Atlántico",
+        "titulo": "Configura tu cabina: de chat a copiloto",
+        "resalta": [
+          "copiloto"
+        ],
+        "off": [
+          -0.22,
+          0
+        ],
+        "offV": [
+          0,
+          -0.2
+        ],
+        "chips": [
+          "Proyectos",
+          "Artefactos",
+          "Conectores",
+          "Skills",
+          "Plugins",
+          "Claude Code"
+        ]
+      },
+      {
+        "tipo": "momento",
+        "dura": 5.9,
+        "parada": "ATL",
+        "crudo": [
+          3309.9,
+          3315.8
+        ],
+        "clip": "trailer/v4/conectar.mp4",
+        "cuadros": "trailer/v4/conectar",
+        "sonido": "trailer/v4/conectar.wav",
+        "kicker": "La parte práctica",
+        "cita": "El gran poder de la IA es cómo tú la conectas con otras aplicaciones.",
+        "resalta": [
+          "conectas"
+        ]
+      },
+      {
+        "tipo": "momento",
+        "dura": 7.65,
+        "parada": "ATL",
+        "crudo": [
+          154.3,
+          161.95
+        ],
+        "clip": "trailer/v4/presentacion.mp4",
+        "cuadros": "trailer/v4/presentacion",
+        "sonido": "trailer/v4/presentacion.wav",
+        "kicker": "Esta clase",
+        "cita": "Una presentación hecha con inteligencia artificial. Hace unos años nos hubiera parecido impensable.",
+        "resalta": [
+          "impensable."
+        ]
+      },
+      {
+        "tipo": "parada",
+        "dura": 2.6,
+        "vuelo": 1.5,
+        "parada": "BOG",
+        "etiqueta": "Aterrizaje · Bogotá",
+        "titulo": "Cinco ideas para llevarte",
+        "resalta": [
+          "Cinco"
+        ],
+        "off": [
+          -0.22,
+          0
+        ],
+        "offV": [
+          0,
+          -0.2
+        ]
+      },
+      {
+        "tipo": "momento",
+        "dura": 2.55,
+        "parada": "BOG",
+        "crudo": [
+          4401.2,
+          4403.75
+        ],
+        "clip": "trailer/v4/cacharreen.mp4",
+        "cuadros": "trailer/v4/cacharreen",
+        "sonido": "trailer/v4/cacharreen.wav",
+        "kicker": "El consejo final",
+        "cita": "Cacharreen. Ensayo y error.",
+        "resalta": [
+          "Cacharreen."
+        ]
+      },
+      {
+        "tipo": "comentarios",
+        "dura": 6.0,
+        "parada": "BOG",
+        "kicker": "Chat de la clase en vivo · 27 oct 2026",
+        "titulo": "Lo que dijeron los asistentes",
+        "ids": [
+          "manuel",
+          "alejandro",
+          "sharon",
+          "william"
+        ]
+      },
+      {
+        "tipo": "precio",
+        "dura": 7.5,
+        "parada": "BOG",
+        "vista": "lejos",
+        "centro": [
+          32,
+          -60
+        ],
+        "kicker": "Clase grabada · Fundamentos de IA",
+        "antes": "$89.000",
+        "etiqueta": "Precio de lanzamiento",
+        "precio": "$49.000",
+        "moneda": "COP",
+        "cta": "Compra la clase",
+        "ruta": "trifuerza.co/academy/clases/fundamentos-de-ia",
+        "incluye": "1 h 34 min · Video editado con subtítulos · Guía · Presentación interactiva · Quiz · Certificado"
+      }
+    ],
+    "promoGancho": [
+      {
+        "tipo": "texto",
+        "dura": 2.1,
+        "parada": "BOG",
+        "vista": "lejos",
+        "centro": [
+          22,
+          -62
+        ],
+        "lineas": [
+          "¿La IA te va",
+          "a reemplazar?"
+        ],
+        "resalta": [
+          "reemplazar?"
+        ]
+      },
+      {
+        "tipo": "momento",
+        "dura": 6.32,
+        "parada": "BOG",
+        "crudo": [
+          508.18,
+          514.5
+        ],
+        "clip": "trailer/v4/reemplazar.mp4",
+        "cuadros": "trailer/v4/reemplazar",
+        "sonido": "trailer/v4/reemplazar.wav",
+        "kicker": "Clase en vivo · 27 oct 2026",
+        "cita": "No es la IA. Es alguien que entendió esto mucho antes que tú.",
+        "resalta": [
+          "antes",
+          "que",
+          "tú."
+        ]
+      },
+      {
+        "tipo": "parada",
+        "dura": 2.2,
+        "vuelo": 0,
+        "parada": "BOG",
+        "etiqueta": "Embarque · Bogotá",
+        "titulo": "El lenguaje hecho números",
+        "resalta": [
+          "números"
+        ],
+        "off": [
+          -0.22,
+          0
+        ],
+        "offV": [
+          0,
+          -0.2
+        ]
+      },
+      {
+        "tipo": "momento",
+        "dura": 2.03,
+        "parada": "BOG",
+        "crudo": [
+          197.72,
+          199.75
+        ],
+        "clip": "trailer/v4/lenguaje-b.mp4",
+        "cuadros": "trailer/v4/lenguaje-b",
+        "sonido": "trailer/v4/lenguaje-b.wav",
+        "kicker": "La genialidad de la IA",
+        "cita": "El lenguaje humano puede ser representado como si fuera matemáticas.",
+        "resalta": [
+          "matemáticas."
+        ]
+      },
+      {
+        "tipo": "parada",
+        "dura": 2.8,
+        "vuelo": 1.4,
+        "parada": "ATL",
+        "etiqueta": "Parada 07 · Sobre el Atlántico",
+        "titulo": "Configura tu cabina: de chat a copiloto",
+        "resalta": [
+          "copiloto"
+        ],
+        "off": [
+          -0.22,
+          0
+        ],
+        "offV": [
+          0,
+          -0.2
+        ],
+        "chips": [
+          "Proyectos",
+          "Artefactos",
+          "Conectores",
+          "Skills",
+          "Plugins",
+          "Claude Code"
+        ]
+      },
+      {
+        "tipo": "momento",
+        "dura": 7.65,
+        "parada": "ATL",
+        "crudo": [
+          154.3,
+          161.95
+        ],
+        "clip": "trailer/v4/presentacion.mp4",
+        "cuadros": "trailer/v4/presentacion",
+        "sonido": "trailer/v4/presentacion.wav",
+        "kicker": "Esta clase",
+        "cita": "Una presentación hecha con inteligencia artificial. Hace unos años nos hubiera parecido impensable.",
+        "resalta": [
+          "impensable."
+        ]
+      },
+      {
+        "tipo": "comentarios",
+        "dura": 5.5,
+        "parada": "BOG",
+        "kicker": "Chat de la clase en vivo · 27 oct 2026",
+        "titulo": "Lo que dijeron los asistentes",
+        "ids": [
+          "manuel",
+          "alejandro",
+          "sharon",
+          "william"
+        ]
+      },
+      {
+        "tipo": "precio",
+        "dura": 7.0,
+        "parada": "BOG",
+        "vista": "lejos",
+        "centro": [
+          32,
+          -60
+        ],
+        "kicker": "Clase grabada · Fundamentos de IA",
+        "antes": "$89.000",
+        "etiqueta": "Precio de lanzamiento",
+        "precio": "$49.000",
+        "moneda": "COP",
+        "cta": "Comenta CURSO y te envío el link",
+        "ruta": "o cómprala en trifuerza.co/academy/clases/fundamentos-de-ia",
+        "incluye": "1 h 34 min · Video editado con subtítulos · Guía · Presentación interactiva · Quiz · Certificado"
+      }
+    ],
+    "promoPrecio": [
+      {
+        "tipo": "precio",
+        "dura": 4.0,
+        "parada": "BOG",
+        "vista": "lejos",
+        "centro": [
+          22,
+          -62
+        ],
+        "kicker": "Clase grabada · Fundamentos de IA",
+        "antes": "$89.000",
+        "etiqueta": "Precio de lanzamiento",
+        "precio": "$49.000",
+        "moneda": "COP",
+        "incluye": "1 h 34 min de clase · mira lo que te llevas ↓"
+      },
+      {
+        "tipo": "parada",
+        "dura": 2.2,
+        "vuelo": 0,
+        "parada": "BOG",
+        "etiqueta": "Embarque · Bogotá",
+        "titulo": "El lenguaje hecho números",
+        "resalta": [
+          "números"
+        ],
+        "off": [
+          -0.22,
+          0
+        ],
+        "offV": [
+          0,
+          -0.2
+        ]
+      },
+      {
+        "tipo": "momento",
+        "dura": 2.03,
+        "parada": "BOG",
+        "crudo": [
+          197.72,
+          199.75
+        ],
+        "clip": "trailer/v4/lenguaje-b.mp4",
+        "cuadros": "trailer/v4/lenguaje-b",
+        "sonido": "trailer/v4/lenguaje-b.wav",
+        "kicker": "La genialidad de la IA",
+        "cita": "El lenguaje humano puede ser representado como si fuera matemáticas.",
+        "resalta": [
+          "matemáticas."
+        ]
+      },
+      {
+        "tipo": "parada",
+        "dura": 2.8,
+        "vuelo": 1.4,
+        "parada": "SV",
+        "etiqueta": "Parada 04 · Silicon Valley",
+        "titulo": "El modelo por dentro",
+        "resalta": [
+          "dentro"
+        ],
+        "off": [
+          -0.22,
+          0
+        ],
+        "offV": [
+          0,
+          -0.2
+        ],
+        "grande": "2017"
+      },
+      {
+        "tipo": "momento",
+        "dura": 3.65,
+        "parada": "SV",
+        "crudo": [
+          1424.5,
+          1428.15
+        ],
+        "clip": "trailer/v4/programa.mp4",
+        "cuadros": "trailer/v4/programa",
+        "sonido": "trailer/v4/programa.wav",
+        "kicker": "La llave de toda la clase",
+        "cita": "Un programa obedece. Un modelo predice.",
+        "resalta": [
+          "predice."
+        ]
+      },
+      {
+        "tipo": "parada",
+        "dura": 2.4,
+        "vuelo": 0.9,
+        "parada": "SFO",
+        "etiqueta": "Parada 05 · San Francisco",
+        "titulo": "La IA llega a todos",
+        "resalta": [
+          "todos"
+        ],
+        "off": [
+          -0.22,
+          0
+        ],
+        "offV": [
+          0,
+          -0.2
+        ],
+        "grande": "2022"
+      },
+      {
+        "tipo": "momento",
+        "dura": 5.3,
+        "parada": "SFO",
+        "crudo": [
+          1971.65,
+          1976.95
+        ],
+        "clip": "trailer/v4/claude.mp4",
+        "cuadros": "trailer/v4/claude",
+        "sonido": "trailer/v4/claude.wav",
+        "kicker": "Por qué Claude",
+        "cita": "Claude es más como: «oiga, espere, eso no tiene tanto sentido, pare un momentico».",
+        "resalta": [
+          "Claude",
+          "momentico»."
+        ]
+      },
+      {
+        "tipo": "comentarios",
+        "dura": 5.5,
+        "parada": "BOG",
+        "kicker": "Chat de la clase en vivo · 27 oct 2026",
+        "titulo": "Lo que dijeron los asistentes",
+        "ids": [
+          "manuel",
+          "alejandro",
+          "sharon",
+          "william"
+        ]
+      },
+      {
+        "tipo": "precio",
+        "dura": 7.0,
+        "parada": "BOG",
+        "vista": "lejos",
+        "centro": [
+          32,
+          -60
+        ],
+        "kicker": "Clase grabada · Fundamentos de IA",
+        "antes": "$89.000",
+        "etiqueta": "Precio de lanzamiento",
+        "precio": "$49.000",
+        "moneda": "COP",
+        "cta": "Comenta CURSO y te envío el link",
+        "ruta": "o cómprala en trifuerza.co/academy/clases/fundamentos-de-ia",
+        "incluye": "1 h 34 min · Video editado con subtítulos · Guía · Presentación interactiva · Quiz · Certificado"
+      }
     ]
   }
 }

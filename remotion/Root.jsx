@@ -204,6 +204,18 @@ function composicionesClase() {
           <Composition key={`${id}--viaje-precio-16x9`} id={`${id}--viaje-precio-16x9`} component={Viaje} {...base} durationInFrames={cuadrosViaje(clase, 'viajePrecio')} defaultProps={{ clase, lista: 'viajePrecio', musica: 'trailer/musica-viaje-precio.wav' }} />,
           <Composition key={`${id}--viaje-precio-9x16`} id={`${id}--viaje-precio-9x16`} component={Viaje} fps={FPS} width={1080} height={1920} durationInFrames={cuadrosViaje(clase, 'viajePrecio')} defaultProps={{ clase, lista: 'viajePrecio', musica: 'trailer/musica-viaje-precio.wav' }} />,
         ] : []),
+        // Guion v2 (28-oct, noche): dos tráileres y dos promos cortos, cada uno en 16:9 y 9:16, con su propia pista.
+        ...[['viaje2', 'viaje-v2'], ['viajePrecio2', 'viaje-precio-v2'], ['promoGancho', 'promo-gancho'], ['promoPrecio', 'promo-precio']]
+          .filter(([lista]) => clase.venta[lista])
+          .flatMap(([lista, nombre]) => [
+            <Composition key={`${id}--${nombre}-16x9`} id={`${id}--${nombre}-16x9`} component={Viaje} {...base} durationInFrames={cuadrosViaje(clase, lista)} defaultProps={{ clase, lista, musica: `trailer/musica-${nombre}.wav` }} />,
+            <Composition key={`${id}--${nombre}-9x16`} id={`${id}--${nombre}-9x16`} component={Viaje} fps={FPS} width={1080} height={1920} durationInFrames={cuadrosViaje(clase, lista)} defaultProps={{ clase, lista, musica: `trailer/musica-${nombre}.wav` }} />,
+          ]),
+        // Carrusel de posts (4:5) al estilo del viaje: una composición por lámina (venta.carruselViaje).
+        ...(clase.venta.carruselViaje ?? []).map((_, i) => (
+          <Composition key={`${id}--carrusel-viaje-${i + 1}`} id={`${id}--carrusel-viaje-${i + 1}`} component={Viaje} fps={FPS} width={1080} height={1350} durationInFrames={cuadrosViaje(clase, `carruselViaje.${i}`)}
+            defaultProps={{ clase, lista: `carruselViaje.${i}`, musica: 'trailer/musica-lamina.wav' }} />
+        )),
         <Composition key={`${id}--venta-9x16`} id={`${id}--venta-9x16`} component={Trailer} fps={FPS} width={1080} height={1920} durationInFrames={duracionTrailer(clase, 'historia')} defaultProps={{ clase, lista: 'historia', musica: 'trailer/musica-historia.wav' }} />,
         <Composition key={`${id}--venta-16x9`} id={`${id}--venta-16x9`} component={Trailer} {...base} durationInFrames={duracionTrailer(clase, 'historia')} defaultProps={{ clase, lista: 'historia', musica: 'trailer/musica-historia.wav' }} />,
         // Carrusel de posts animados (4:5): una composición por lámina, todas con la misma pista corta.

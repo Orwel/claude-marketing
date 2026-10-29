@@ -5,8 +5,9 @@ cayendo exactos en los cortes del tráiler. Bombo y bajo en negras, hi-hat en co
 de acordes, un golpe en cada corte, una subida antes del precio y un remate al final.
 El volumen de la música frente a la voz lo maneja Remotion; aquí sale a nivel completo.
 
-Uso: python -I src/clase/musica-trailer.py clases/<slug>.json salida.wav [escenas|historia|viaje|carrusel]
-(carrusel: una pista corta sin cortes, la misma para todas las láminas)
+Uso: python -I src/clase/musica-trailer.py clases/<slug>.json salida.wav [escenas|historia|viaje|carrusel|lamina]
+(carrusel: una pista corta sin cortes, la misma para todas las láminas; lamina: 7 s sin precio, con la
+campanita de aeropuerto al 1,3 s, para las láminas del carrusel del viaje)
 """
 import json
 import sys
@@ -18,7 +19,8 @@ TASA = 48000
 clase = json.load(open(sys.argv[1], encoding='utf8'))
 venta = clase['venta']
 lista = sys.argv[3] if len(sys.argv) > 3 else 'escenas'
-escenas = venta[lista] if lista != 'carrusel' else [{'tipo': 'lamina', 'dura': 5.5}, {'tipo': 'precio', 'dura': 1.5}]
+ESPECIALES = {'carrusel': [{'tipo': 'lamina', 'dura': 5.5}, {'tipo': 'precio', 'dura': 1.5}], 'lamina': [{'tipo': 'lamina', 'dura': 7.0}]}
+escenas = ESPECIALES.get(lista) or venta[lista]
 # El logo de la intro trae su propio sonido: la pista arranca cuando termina (Viaje.jsx la pone ahí).
 escenas = [e for e in escenas if e['tipo'] != 'logo']
 cortes = np.cumsum([0] + [e['dura'] for e in escenas])
@@ -112,7 +114,8 @@ ACORDES = [[57, 60, 64], [53, 57, 60], [48, 52, 55], [55, 59, 62]]
 BAJOS = [45, 41, 48, 43]
 hz = lambda m: 440 * 2 ** ((m - 69) / 12)
 
-precio = float(cortes[[i for i, e in enumerate(escenas) if e['tipo'] == 'precio'][-1]])
+con_precio = [i for i, e in enumerate(escenas) if e['tipo'] == 'precio']
+precio = float(cortes[con_precio[-1]]) if con_precio else None
 beats = int(total / pulso)
 for b in range(beats):
     ini = b * pulso
@@ -120,7 +123,7 @@ for b in range(beats):
         break
     compas = (b // 4) % 4
     # Antes del precio la batería se calla un compás para que la subida respire.
-    silencio = precio - 4 * pulso <= ini < precio
+    silencio = precio is not None and precio - 4 * pulso <= ini < precio
     if not silencio:
         sumar(ini, bombo(1.0 if b % 4 == 0 else 0.8))
         if b % 2 == 1:
@@ -138,8 +141,12 @@ for i, c in enumerate(cortes[1:-1], start=1):
     # En el viaje, cada llegada a una parada suena como el aviso de un aeropuerto.
     if escenas[i]['tipo'] == 'parada':
         sumar(float(c) + escenas[i].get('vuelo', 1.2) - 0.1, campanita(), pan=0.1)
-sumar(precio - 4 * pulso, subida(4 * pulso))
-sumar(precio, golpe() * 1.3)
+if precio is not None:
+    sumar(precio - 4 * pulso, subida(4 * pulso))
+    sumar(precio, golpe() * 1.3)
+if lista == 'lamina':
+    sumar(0.0, golpe() * 0.8)
+    sumar(1.3, campanita(), pan=0.1)
 # Remate: acorde abierto que se apaga después del último cuadro.
 for k, m in enumerate([57, 64, 69, 72]):
     sumar(float(cortes[-1]) - 1.0, nota(hz(m), 2.5, 'sierra', 0.06, ataque=0.02, caida=1.4), pan=(k - 1.5) * 0.4)

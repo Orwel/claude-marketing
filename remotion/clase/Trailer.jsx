@@ -229,7 +229,7 @@ export const Burbuja = ({ c, tam = 30, ancho, style }) => (
   </div>
 );
 
-const Comentarios = ({ clase, e }) => {
+export const Comentarios = ({ clase, e }) => {
   const frame = useCurrentFrame();
   const { width: W, height: H } = useVideoConfig();
   const T = clase.tema;
