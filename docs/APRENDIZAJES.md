@@ -794,3 +794,9 @@ Videos: IMG_3770, IMG_3772 e IMG_3776 de octubre (iPhone). Salieron `la-ia-que-n
 - `remotion still` con three.js tarda 2–4 min por cuadro (arranca el navegador y arma el planeta cada vez): pocas tomas.
 - `python -I` ignora PYTHONIOENCODING: en Windows la entrada y la salida estándar quedan en cp1252 y los saltos de línea
   salen como CRLF. Nunca reescribir un JSON por la salida estándar; abrir el archivo con `encoding='utf8'` y `newline='\n'`.
+- **Sonido de las transiciones:** a Juan David el golpe con ruido blanco le sonaba «rastrero, a interferencia». musica-trailer.py
+  ahora hace un boom limpio (seno que cae, sin ruido), una subida tonal antes del precio y, en el viaje, una campanita de
+  aeropuerto (ding-dong Mi5→Do5) al llegar a cada parada. Para cambiar solo el audio de un video ya hecho: render con
+  `--codec=wav` (~5 min) y montarlo con ffmpeg sobre el MP4, sin volver a renderizar la imagen.
+- Le gustó mucho el viaje (publicado como trailer-16x9-v3). Pidió además una variante que abra con el precio
+  (`venta.viajePrecio` + `venta.insignia`, el sello del precio durante todo el vuelo).

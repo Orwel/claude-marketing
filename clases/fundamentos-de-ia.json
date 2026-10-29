@@ -1778,6 +1778,327 @@
         "ruta": "trifuerza.co/academy/clases/fundamentos-de-ia",
         "incluye": "1 h 34 min · Video editado con subtítulos · Guía · Presentación interactiva · Quiz · Certificado"
       }
+    ],
+    "_viajePrecio": "Variante del viaje pedida el 28-oct-2026: «que haga énfasis en el precio desde el inicio». Abre con $89.000 tachado y $49.000, lleva el sello del precio (venta.insignia) durante todo el vuelo y cierra con el mismo precio y la ruta. Sin Toronto para no alargarlo. Composiciones --viaje-precio-16x9 y --viaje-precio-9x16.",
+    "insignia": {
+      "detalle": "Precio de lanzamiento",
+      "antes": "$89.000",
+      "precio": "$49.000"
+    },
+    "viajePrecio": [
+      {
+        "tipo": "logo",
+        "dura": 4.2,
+        "parada": "BOG",
+        "vista": "lejos",
+        "centro": [
+          22,
+          -62
+        ],
+        "_archivo": "public/intros/trifuerza-logo.mp4 de 0,6 s a 7,3 s, acelerado 1,6× a 30 fps con ffmpeg y pasado a JPG cuadro a cuadro (trailer/logo/0001.jpg…) más su sonido en WAV: como video, OffthreadVideo fallaba con «No frame found at position».",
+        "cuadros": "trailer/logo",
+        "n": 127,
+        "sonido": "trailer/logo-rapido.wav"
+      },
+      {
+        "tipo": "precio",
+        "dura": 4.4,
+        "parada": "BOG",
+        "vista": "lejos",
+        "centro": [
+          22,
+          -62
+        ],
+        "kicker": "Clase grabada · Fundamentos de IA",
+        "antes": "$89.000",
+        "etiqueta": "Precio de lanzamiento",
+        "precio": "$49.000",
+        "moneda": "COP",
+        "incluye": "1 h 34 min de clase · mira lo que te llevas ↓"
+      },
+      {
+        "tipo": "texto",
+        "dura": 2.3,
+        "parada": "BOG",
+        "vista": "lejos",
+        "centro": [
+          22,
+          -62
+        ],
+        "lineas": [
+          "¿La IA te va",
+          "a reemplazar?"
+        ],
+        "resalta": [
+          "reemplazar?"
+        ]
+      },
+      {
+        "tipo": "momento",
+        "dura": 6.4,
+        "parada": "BOG",
+        "clip": "trailer/reemplazar.mp4",
+        "en": 509.43,
+        "kicker": "Clase en vivo · 27 oct 2026",
+        "cita": "No es la IA. Es alguien que entendió esto mucho antes que tú.",
+        "resalta": [
+          "antes",
+          "que",
+          "tú."
+        ],
+        "voz": [
+          0.0,
+          6.28
+        ],
+        "vista": "lejos",
+        "centro": [
+          22,
+          -62
+        ],
+        "cuadros": "trailer/cuadros/reemplazar",
+        "n": 191,
+        "sonido": "trailer/cuadros/reemplazar.wav"
+      },
+      {
+        "tipo": "despegue",
+        "dura": 3.6,
+        "parada": "BOG",
+        "off": [
+          -0.22,
+          0
+        ],
+        "offV": [
+          0,
+          -0.2
+        ],
+        "antetitulo": "Vuelo TF-001 · Clase grabada",
+        "titulo": "Fundamentos de IA",
+        "bajada": "Un vuelo por la historia de la IA, lo que pasa por dentro de un modelo y cómo ponerlo a trabajar contigo.",
+        "chips": [
+          "Precio de lanzamiento $49.000",
+          "1 h 34 min",
+          "Con Juan David Vanegas"
+        ]
+      },
+      {
+        "tipo": "parada",
+        "dura": 2.7,
+        "vuelo": 1.4,
+        "parada": "MAN",
+        "etiqueta": "Parada 01 · Manchester",
+        "titulo": "La máquina y Turing",
+        "off": [
+          -0.22,
+          0
+        ],
+        "offV": [
+          0,
+          -0.2
+        ],
+        "grande": "1948",
+        "resalta": [
+          "Turing"
+        ]
+      },
+      {
+        "tipo": "momento",
+        "dura": 4.9,
+        "parada": "MAN",
+        "clip": "trailer/turing.mp4",
+        "en": 841.23,
+        "kicker": "Turing · 1950",
+        "cita": "¿Pueden pensar las máquinas? Y la cambió por un juego.",
+        "resalta": [
+          "juego."
+        ],
+        "voz": [
+          0.0,
+          4.72
+        ],
+        "cuadros": "trailer/cuadros/turing",
+        "n": 146,
+        "sonido": "trailer/cuadros/turing.wav"
+      },
+      {
+        "tipo": "parada",
+        "dura": 2.8,
+        "vuelo": 1.6,
+        "parada": "SV",
+        "etiqueta": "Parada 04 · Silicon Valley",
+        "titulo": "El modelo por dentro",
+        "off": [
+          -0.22,
+          0
+        ],
+        "offV": [
+          0,
+          -0.2
+        ],
+        "grande": "2017",
+        "resalta": [
+          "dentro"
+        ]
+      },
+      {
+        "tipo": "momento",
+        "dura": 4.25,
+        "parada": "SV",
+        "clip": "trailer/programa.mp4",
+        "en": 1425.25,
+        "kicker": "La llave de toda la clase",
+        "cita": "Un programa obedece. Un modelo predice.",
+        "resalta": [
+          "predice."
+        ],
+        "voz": [
+          0.38,
+          3.9
+        ],
+        "cuadros": "trailer/cuadros/programa",
+        "n": 128,
+        "sonido": "trailer/cuadros/programa.wav"
+      },
+      {
+        "tipo": "parada",
+        "dura": 2.4,
+        "vuelo": 0.9,
+        "parada": "SFO",
+        "etiqueta": "Parada 05 · San Francisco",
+        "titulo": "La IA llega a todos",
+        "off": [
+          -0.22,
+          0
+        ],
+        "offV": [
+          0,
+          -0.2
+        ],
+        "grande": "2022",
+        "resalta": [
+          "todos"
+        ]
+      },
+      {
+        "tipo": "momento",
+        "dura": 5.0,
+        "parada": "SFO",
+        "clip": "trailer/motor.mp4",
+        "en": 1885.05,
+        "kicker": "Modelo y producto",
+        "cita": "El modelo es el motor. ChatGPT o Claude son el carro completo.",
+        "resalta": [
+          "motor."
+        ],
+        "voz": [
+          0.35,
+          4.57
+        ],
+        "cuadros": "trailer/cuadros/motor",
+        "n": 150,
+        "sonido": "trailer/cuadros/motor.wav"
+      },
+      {
+        "tipo": "parada",
+        "dura": 3.2,
+        "vuelo": 1.4,
+        "parada": "ATL",
+        "etiqueta": "Parada 07 · Sobre el Atlántico",
+        "titulo": "Configura tu cabina: de chat a copiloto",
+        "off": [
+          -0.22,
+          0
+        ],
+        "offV": [
+          0,
+          -0.2
+        ],
+        "resalta": [
+          "copiloto"
+        ],
+        "chips": [
+          "Proyectos",
+          "Artefactos",
+          "Conectores",
+          "Skills",
+          "Plugins",
+          "Claude Code"
+        ]
+      },
+      {
+        "tipo": "momento",
+        "dura": 6.1,
+        "parada": "ATL",
+        "clip": "trailer/conectar.mp4",
+        "en": 3311.23,
+        "kicker": "La parte práctica",
+        "cita": "El gran poder de la IA es cómo tú la conectas con otras aplicaciones.",
+        "resalta": [
+          "conectas"
+        ],
+        "voz": [
+          0.0,
+          5.94
+        ],
+        "cuadros": "trailer/cuadros/conectar",
+        "n": 182,
+        "sonido": "trailer/cuadros/conectar.wav"
+      },
+      {
+        "tipo": "parada",
+        "dura": 2.7,
+        "vuelo": 1.5,
+        "parada": "BOG",
+        "etiqueta": "Aterrizaje · Bogotá",
+        "titulo": "Cinco ideas para llevarte",
+        "off": [
+          -0.22,
+          0
+        ],
+        "offV": [
+          0,
+          -0.2
+        ],
+        "resalta": [
+          "Cinco"
+        ]
+      },
+      {
+        "tipo": "momento",
+        "dura": 2.8,
+        "parada": "BOG",
+        "clip": "trailer/cacharreen.mp4",
+        "en": 4402.35,
+        "kicker": "El consejo final",
+        "cita": "Cacharreen. Ensayo y error.",
+        "resalta": [
+          "Cacharreen."
+        ],
+        "voz": [
+          0.32,
+          2.64
+        ],
+        "cuadros": "trailer/cuadros/cacharreen",
+        "n": 84,
+        "sonido": "trailer/cuadros/cacharreen.wav"
+      },
+      {
+        "tipo": "precio",
+        "dura": 8.0,
+        "parada": "BOG",
+        "vista": "lejos",
+        "centro": [
+          32,
+          -60
+        ],
+        "kicker": "Clase grabada · Fundamentos de IA",
+        "antes": "$89.000",
+        "etiqueta": "Precio de lanzamiento",
+        "precio": "$49.000",
+        "moneda": "COP",
+        "cta": "Compra la clase",
+        "ruta": "trifuerza.co/academy/clases/fundamentos-de-ia",
+        "incluye": "1 h 34 min · Video editado con subtítulos · Guía · Presentación interactiva · Quiz · Certificado"
+      }
     ]
   }
 }

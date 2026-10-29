@@ -14,7 +14,7 @@ import { Barrido, Kicker, Momento, Mono, Texto } from './Trailer.jsx';
  */
 const FPS = 30;
 const RES = { stiffness: 240, damping: 24 };
-export const cuadrosViaje = (clase) => clase.venta.viaje.reduce((s, e) => s + Math.round(e.dura * FPS), 0);
+export const cuadrosViaje = (clase, lista = 'viaje') => clase.venta[lista].reduce((s, e) => s + Math.round(e.dura * FPS), 0);
 
 const useEntrada = () => {
   const frame = useCurrentFrame();
@@ -150,7 +150,7 @@ const PrecioLanzamiento = ({ clase, e }) => {
   const pulso = frame > 60 ? 1 + 0.03 * Math.max(0, Math.sin((frame - 60) / 7)) : 1;
   // La ruta se escribe completa y en una línea: el tamaño se ajusta al ancho disponible.
   const anchoRuta = vert ? 960 : 1500;
-  const tamRuta = Math.min(vert ? 44 : 46, anchoRuta / (e.ruta.length * 0.62));
+  const tamRuta = e.ruta ? Math.min(vert ? 44 : 46, anchoRuta / (e.ruta.length * 0.62)) : 0;
   return (
     <AbsoluteFill style={{ alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: vert ? 50 : 100 }}>
       <Kicker T={T} a={ent(0)}>{e.kicker}</Kicker>
@@ -166,12 +166,34 @@ const PrecioLanzamiento = ({ clase, e }) => {
         <span style={{ fontFamily: `'Space Grotesk'`, fontWeight: 700, fontSize: vert ? 200 : 260, letterSpacing: '-0.045em', color: T.tinta, lineHeight: 1, textShadow: `0 0 ${70 * golpe}px ${T.acento}77` }}>{e.precio}</span>
         <span style={{ fontFamily: `'JetBrains Mono'`, fontWeight: 700, fontSize: vert ? 46 : 60, color: T.acento }}>{e.moneda}</span>
       </div>
-      <div style={{ marginTop: vert ? 70 : 40, background: T.acento, color: T.fondo, borderRadius: 999, padding: vert ? '26px 56px' : '22px 56px', fontFamily: `'Inter'`, fontWeight: 800,
-        fontSize: vert ? 50 : 44, boxShadow: `0 24px 60px ${T.acento}55`, opacity: ent(44), transform: `translateY(${(1 - ent(44)) * 30}px)` }}>{e.cta}</div>
-      <div style={{ marginTop: vert ? 30 : 22, fontFamily: `'JetBrains Mono'`, fontWeight: 600, fontSize: tamRuta, color: T.tinta, whiteSpace: 'nowrap', opacity: ent(50) }}>{e.ruta}</div>
+      {e.cta && <div style={{ marginTop: vert ? 70 : 40, background: T.acento, color: T.fondo, borderRadius: 999, padding: vert ? '26px 56px' : '22px 56px', fontFamily: `'Inter'`, fontWeight: 800,
+        fontSize: vert ? 50 : 44, boxShadow: `0 24px 60px ${T.acento}55`, opacity: ent(44), transform: `translateY(${(1 - ent(44)) * 30}px)` }}>{e.cta}</div>}
+      {e.ruta && <div style={{ marginTop: vert ? 30 : 22, fontFamily: `'JetBrains Mono'`, fontWeight: 600, fontSize: tamRuta, color: T.tinta, whiteSpace: 'nowrap', opacity: ent(50) }}>{e.ruta}</div>}
       {e.incluye && <div style={{ marginTop: vert ? 40 : 26, fontFamily: `'Inter'`, fontWeight: 500, fontSize: vert ? 32 : 28, color: T.tenue, maxWidth: vert ? 900 : 'none', lineHeight: 1.4, opacity: ent(56) }}>{e.incluye}</div>}
       <Img src={staticFile(clase.logo)} style={{ height: vert ? 72 : 60, marginTop: vert ? 70 : 40, opacity: ent(60) }} />
     </AbsoluteFill>
+  );
+};
+
+/**
+ * Sello del precio que acompaña todo el viaje (venta.insignia): en la versión que abre con el precio,
+ * quien llega a la mitad del video sigue viendo cuánto cuesta.
+ */
+const Insignia = ({ T, i }) => {
+  const frame = useCurrentFrame();
+  const { width: W, height: H, fps, durationInFrames } = useVideoConfig();
+  const vert = H > W;
+  const a = spring({ frame, fps, config: { stiffness: 260, damping: 18 } }) * interpolate(frame, [durationInFrames - 8, durationInFrames], [1, 0], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' });
+  const late = 1 + 0.04 * Math.max(0, Math.sin(frame / 12)) ** 8;
+  return (
+    <div style={{ position: 'absolute', right: vert ? 40 : 46, top: vert ? 70 : 26, transform: `rotate(-4deg) scale(${(0.6 + 0.4 * a) * late})`, transformOrigin: 'top right', opacity: a,
+      background: T.acento, borderRadius: 20, padding: vert ? '14px 24px' : '12px 22px', boxShadow: `0 16px 40px #000a, 0 0 0 3px ${T.fondo}`, textAlign: 'center' }}>
+      <div style={{ fontFamily: `'JetBrains Mono'`, fontWeight: 700, fontSize: vert ? 20 : 17, letterSpacing: '0.12em', textTransform: 'uppercase', color: T.fondo }}>{i.detalle}</div>
+      <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'center', gap: 12, marginTop: 2 }}>
+        <span style={{ fontFamily: `'Space Grotesk'`, fontWeight: 700, fontSize: vert ? 30 : 26, color: `${T.fondo}aa`, textDecoration: 'line-through', textDecorationThickness: 3 }}>{i.antes}</span>
+        <span style={{ fontFamily: `'Space Grotesk'`, fontWeight: 700, fontSize: vert ? 52 : 46, color: T.fondo, letterSpacing: '-0.02em' }}>{i.precio}</span>
+      </div>
+    </div>
   );
 };
 
@@ -187,11 +209,11 @@ const Capa = ({ clase, e, de }) => {
   throw new Error(`Escena desconocida en venta.viaje: ${e.tipo}`);
 };
 
-export const Viaje = ({ clase, musica = 'trailer/musica-viaje.wav' }) => {
+export const Viaje = ({ clase, lista = 'viaje', musica = 'trailer/musica-viaje.wav' }) => {
   useFuentes();
   const frame = useCurrentFrame();
   const T = clase.tema;
-  const escenas = clase.venta.viaje;
+  const escenas = clase.venta[lista];
   let t = 0;
   let previa = null;
   const tramos = escenas.map((e) => {
@@ -206,6 +228,8 @@ export const Viaje = ({ clase, musica = 'trailer/musica-viaje.wav' }) => {
   const volumen = (f) => (habla.some(([a, b]) => f >= a - 4 && f < b + 2) ? 0.18 : 0.7);
   const sal = interpolate(frame, [t - 10, t], [1, 0], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' });
   // Barrido solo donde cambia la capa (clip ↔ planeta); entre paradas la transición es el vuelo.
+  const precios = tramos.filter((r) => r.e.tipo === 'precio');
+  const insignia = clase.venta.insignia && precios.length > 1 ? { desde: precios[0].desde + precios[0].dura, hasta: precios[precios.length - 1].desde } : null;
   const conBarrido = tramos.slice(1).filter((r, i) => r.e.tipo !== 'parada' && tramos[i].e.tipo !== 'logo');
   return (
     <AbsoluteFill style={{ background: T.fondo, opacity: sal }}>
@@ -220,6 +244,11 @@ export const Viaje = ({ clase, musica = 'trailer/musica-viaje.wav' }) => {
           <Barrido T={T} />
         </Sequence>
       ))}
+      {insignia && (
+        <Sequence from={insignia.desde} durationInFrames={insignia.hasta - insignia.desde}>
+          <Insignia T={T} i={clase.venta.insignia} />
+        </Sequence>
+      )}
       {musica && (
         <Sequence from={inicioMusica}>
           <Audio src={staticFile(musica)} volume={volumen} />

@@ -77,19 +77,34 @@ def nota(frec, dura, onda='sierra', vol=0.2, ataque=0.01, caida=3.0):
 
 
 def golpe():
-    """Impacto de corte: bombo grave + ruido que se apaga."""
-    x = t(1.2)
-    frec = 38 + 70 * np.exp(-x * 12)
-    sub = np.sin(2 * np.pi * np.cumsum(frec) / TASA) * np.exp(-x * 3.2) * 0.8
-    ruido = rng.standard_normal(len(x)) * np.exp(-x * 9) * 0.18
-    return sub + ruido
+    """Impacto de corte: un boom limpio (seno grave que cae) con un golpe tonal encima. Sin ruido blanco:
+    a Juan David el ruido le sonaba a interferencia (28-oct-2026)."""
+    x = t(1.4)
+    frec = 42 + 95 * np.exp(-x * 10)
+    sub = np.sin(2 * np.pi * np.cumsum(frec) / TASA) * np.exp(-x * 2.6) * 0.85
+    cuerpo = np.sin(2 * np.pi * np.cumsum(110 + 160 * np.exp(-x * 30)) / TASA) * np.exp(-x * 14) * 0.35
+    return (sub + cuerpo) * np.minimum(1, x / 0.004)
+
+
+def campanita():
+    """Aviso de aeropuerto al llegar a una parada: dos notas de campana (ding-dong) que se apagan."""
+    sal = np.zeros(int(1.9 * TASA))
+    for ini, f0 in [(0.0, 659.25), (0.38, 523.25)]:  # Mi5 → Do5, como el aviso de los aeropuertos
+        x = t(1.5)
+        nota_c = sum(a * np.sin(2 * np.pi * f0 * k * x) * np.exp(-x * d) for k, a, d in [(1, 1.0, 2.6), (2, 0.45, 4.5), (3, 0.18, 7), (4.2, 0.1, 9)])
+        nota_c *= np.minimum(1, x / 0.006) * 0.16
+        a = int(ini * TASA)
+        sal[a:a + len(x)] += nota_c[: len(sal) - a]
+    return sal
 
 
 def subida(dura):
+    """Subida antes del precio: un tono que sube y crece, sin ruido."""
     x = t(dura)
-    ruido = rng.standard_normal(len(x)) * (x / dura) ** 2 * 0.22
-    tono = np.sin(2 * np.pi * np.cumsum(200 + 900 * (x / dura) ** 2) / TASA) * (x / dura) ** 2 * 0.12
-    return ruido + tono
+    u = x / dura
+    tono = np.sin(2 * np.pi * np.cumsum(180 + 720 * u ** 2) / TASA) * u ** 2 * 0.12
+    quinta = np.sin(2 * np.pi * np.cumsum((180 + 720 * u ** 2) * 1.5) / TASA) * u ** 3 * 0.06
+    return tono + quinta
 
 
 # La menor: Am – F – C – G, un acorde por compás.
@@ -118,8 +133,11 @@ for b in range(beats):
         for k, m in enumerate(ACORDES[compas]):
             sumar(ini, nota(hz(m), pulso * 4, 'sierra', 0.05, ataque=0.25, caida=0.5), pan=(k - 1) * 0.5)
 
-for c in cortes[1:-1]:
+for i, c in enumerate(cortes[1:-1], start=1):
     sumar(float(c) - 0.02, golpe())
+    # En el viaje, cada llegada a una parada suena como el aviso de un aeropuerto.
+    if escenas[i]['tipo'] == 'parada':
+        sumar(float(c) + escenas[i].get('vuelo', 1.2) - 0.1, campanita(), pan=0.1)
 sumar(precio - 4 * pulso, subida(4 * pulso))
 sumar(precio, golpe() * 1.3)
 # Remate: acorde abierto que se apaga después del último cuadro.

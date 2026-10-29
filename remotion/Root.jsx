@@ -199,6 +199,11 @@ function composicionesClase() {
           <Composition key={`${id}--viaje-16x9`} id={`${id}--viaje-16x9`} component={Viaje} {...base} durationInFrames={cuadrosViaje(clase)} defaultProps={{ clase }} />,
           <Composition key={`${id}--viaje-9x16`} id={`${id}--viaje-9x16`} component={Viaje} fps={FPS} width={1080} height={1920} durationInFrames={cuadrosViaje(clase)} defaultProps={{ clase }} />,
         ] : []),
+        // La misma idea abriendo con el precio (venta.viajePrecio) y el sello del precio durante el viaje.
+        ...(clase.venta.viajePrecio ? [
+          <Composition key={`${id}--viaje-precio-16x9`} id={`${id}--viaje-precio-16x9`} component={Viaje} {...base} durationInFrames={cuadrosViaje(clase, 'viajePrecio')} defaultProps={{ clase, lista: 'viajePrecio', musica: 'trailer/musica-viaje-precio.wav' }} />,
+          <Composition key={`${id}--viaje-precio-9x16`} id={`${id}--viaje-precio-9x16`} component={Viaje} fps={FPS} width={1080} height={1920} durationInFrames={cuadrosViaje(clase, 'viajePrecio')} defaultProps={{ clase, lista: 'viajePrecio', musica: 'trailer/musica-viaje-precio.wav' }} />,
+        ] : []),
         <Composition key={`${id}--venta-9x16`} id={`${id}--venta-9x16`} component={Trailer} fps={FPS} width={1080} height={1920} durationInFrames={duracionTrailer(clase, 'historia')} defaultProps={{ clase, lista: 'historia', musica: 'trailer/musica-historia.wav' }} />,
         <Composition key={`${id}--venta-16x9`} id={`${id}--venta-16x9`} component={Trailer} {...base} durationInFrames={duracionTrailer(clase, 'historia')} defaultProps={{ clase, lista: 'historia', musica: 'trailer/musica-historia.wav' }} />,
         // Carrusel de posts animados (4:5): una composición por lámina, todas con la misma pista corta.
