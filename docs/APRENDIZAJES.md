@@ -856,3 +856,12 @@ Videos: IMG_3770, IMG_3772 e IMG_3776 de octubre (iPhone). Salieron `la-ia-que-n
 - **Los modelos 3D de las escenas «ciudad» no están en git:** Contexto.jsx carga `juegos/barrio/*.glb` y
   `juegos/carros/*.glb` del public de la clase (`trabajo/clases/<slug>/public/juegos/`, ignorado). Se copiaron de
   tri-app2: `public/juegos/panaderia-tycoon/3d/{barrio,carros}`. En una máquina nueva, copiarlos antes de render-capas.
+
+- **Tráileres del video remontado (v4, 29 oct):** cortes-trailer.py corta del final con tiempo-final.js y whisper sobre el
+  clip ya cortado se come la última palabra si el corte cae justo encima («impensable», «matemáticas», «pare un momentico»).
+  Antes de fijar un `crudo`, transcribir con whisper una ventana más amplia del video final (word_timestamps) y poner el
+  fin 0,1 s después de la última palabra. El .vtt de la clase sirve para ubicar, no para cortar.
+- **Duración de la clase en piezas de venta:** cada remontaje cambia la duración (v2 94 min, v4 87 min) y lo publicado
+  lo cambia Juan David a mano. En tráileres y carruseles poner «hora y media de clase», no los minutos exactos.
+- **Storage class-media tiene tope de 50 MB:** el tráiler de 96 s a crf 20 pesa 51 MB; para la web, crf 23 preset slow
+  (34 MB). La copia para Drive/Instagram queda a crf 20.
