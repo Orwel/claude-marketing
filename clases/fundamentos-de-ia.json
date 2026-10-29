@@ -4707,7 +4707,7 @@
       },
       {
         "tipo": "momento",
-        "dura": 6.32,
+        "dura": 6.33,
         "parada": "BOG",
         "crudo": [
           508.18,
@@ -4722,7 +4722,13 @@
           "antes",
           "que",
           "tú."
-        ]
+        ],
+        "n": 190,
+        "voz": [
+          0.0,
+          6.12
+        ],
+        "en": 455.91
       },
       {
         "tipo": "despegue",
@@ -4765,7 +4771,7 @@
       },
       {
         "tipo": "momento",
-        "dura": 9.75,
+        "dura": 9.77,
         "parada": "BOG",
         "crudo": [
           183.2,
@@ -4779,15 +4785,21 @@
         "resalta": [
           "genialidad",
           "lenguaje"
-        ]
+        ],
+        "n": 293,
+        "voz": [
+          0.0,
+          9.46
+        ],
+        "en": 159.93
       },
       {
         "tipo": "momento",
-        "dura": 2.03,
+        "dura": 3.27,
         "parada": "BOG",
         "crudo": [
-          197.72,
-          199.75
+          196.97,
+          200.22
         ],
         "clip": "trailer/v4/lenguaje-b.mp4",
         "cuadros": "trailer/v4/lenguaje-b",
@@ -4796,7 +4808,13 @@
         "cita": "…puede ser representado como si fuera matemáticas.",
         "resalta": [
           "matemáticas."
-        ]
+        ],
+        "n": 98,
+        "voz": [
+          0.0,
+          3.08
+        ],
+        "en": 173.7
       },
       {
         "tipo": "parada",
@@ -4820,7 +4838,7 @@
       },
       {
         "tipo": "momento",
-        "dura": 4.85,
+        "dura": 4.87,
         "parada": "MAN",
         "crudo": [
           840.15,
@@ -4833,7 +4851,13 @@
         "cita": "¿Pueden pensar las máquinas? Y la cambió por un juego.",
         "resalta": [
           "juego."
-        ]
+        ],
+        "n": 146,
+        "voz": [
+          0.0,
+          4.5
+        ],
+        "en": 761.45
       },
       {
         "tipo": "parada",
@@ -4857,7 +4881,7 @@
       },
       {
         "tipo": "momento",
-        "dura": 3.65,
+        "dura": 3.67,
         "parada": "SV",
         "crudo": [
           1424.5,
@@ -4870,7 +4894,13 @@
         "cita": "Un programa obedece. Un modelo predice.",
         "resalta": [
           "predice."
-        ]
+        ],
+        "n": 110,
+        "voz": [
+          0.0,
+          3.36
+        ],
+        "en": 1285.43
       },
       {
         "tipo": "parada",
@@ -4894,7 +4924,7 @@
       },
       {
         "tipo": "momento",
-        "dura": 4.35,
+        "dura": 4.37,
         "parada": "SFO",
         "crudo": [
           1884.6,
@@ -4907,15 +4937,21 @@
         "cita": "El modelo es el motor. ChatGPT o Claude son el carro completo.",
         "resalta": [
           "motor."
-        ]
+        ],
+        "n": 131,
+        "voz": [
+          0.0,
+          4.04
+        ],
+        "en": 1713.9
       },
       {
         "tipo": "momento",
-        "dura": 5.3,
+        "dura": 5.73,
         "parada": "SFO",
         "crudo": [
           1971.65,
-          1976.95
+          1977.95
         ],
         "clip": "trailer/v4/claude.mp4",
         "cuadros": "trailer/v4/claude",
@@ -4925,7 +4961,13 @@
         "resalta": [
           "Claude",
           "momentico»."
-        ]
+        ],
+        "n": 172,
+        "voz": [
+          0.0,
+          5.6
+        ],
+        "en": 1800.95
       },
       {
         "tipo": "parada",
@@ -4969,15 +5011,21 @@
         "cita": "El gran poder de la IA es cómo tú la conectas con otras aplicaciones.",
         "resalta": [
           "conectas"
-        ]
+        ],
+        "n": 177,
+        "voz": [
+          0.0,
+          5.82
+        ],
+        "en": 3107.87
       },
       {
         "tipo": "momento",
-        "dura": 7.65,
+        "dura": 9.27,
         "parada": "ATL",
         "crudo": [
-          154.3,
-          161.95
+          153.62,
+          162.87
         ],
         "clip": "trailer/v4/presentacion.mp4",
         "cuadros": "trailer/v4/presentacion",
@@ -4986,7 +5034,13 @@
         "cita": "Una presentación hecha con inteligencia artificial. Hace unos años nos hubiera parecido impensable.",
         "resalta": [
           "impensable."
-        ]
+        ],
+        "n": 278,
+        "voz": [
+          0.0,
+          9.08
+        ],
+        "en": 133.75
       },
       {
         "tipo": "parada",
@@ -5009,20 +5063,26 @@
       },
       {
         "tipo": "momento",
-        "dura": 2.55,
+        "dura": 4.3,
         "parada": "BOG",
         "crudo": [
-          4401.2,
-          4403.75
+          4401.17,
+          4405.47
         ],
         "clip": "trailer/v4/cacharreen.mp4",
         "cuadros": "trailer/v4/cacharreen",
         "sonido": "trailer/v4/cacharreen.wav",
         "kicker": "El consejo final",
-        "cita": "Cacharreen. Ensayo y error.",
+        "cita": "Cacharreen. Aprendan el ensayo y el error.",
         "resalta": [
           "Cacharreen."
-        ]
+        ],
+        "n": 129,
+        "voz": [
+          0.0,
+          4.2
+        ],
+        "en": 4146.0
       },
       {
         "tipo": "comentarios",
@@ -5106,7 +5166,7 @@
       },
       {
         "tipo": "momento",
-        "dura": 6.32,
+        "dura": 6.33,
         "parada": "BOG",
         "crudo": [
           508.18,
@@ -5121,7 +5181,13 @@
           "antes",
           "que",
           "tú."
-        ]
+        ],
+        "n": 190,
+        "voz": [
+          0.0,
+          6.12
+        ],
+        "en": 455.91
       },
       {
         "tipo": "despegue",
@@ -5164,7 +5230,7 @@
       },
       {
         "tipo": "momento",
-        "dura": 9.75,
+        "dura": 9.77,
         "parada": "BOG",
         "crudo": [
           183.2,
@@ -5178,15 +5244,21 @@
         "resalta": [
           "genialidad",
           "lenguaje"
-        ]
+        ],
+        "n": 293,
+        "voz": [
+          0.0,
+          9.46
+        ],
+        "en": 159.93
       },
       {
         "tipo": "momento",
-        "dura": 2.03,
+        "dura": 3.27,
         "parada": "BOG",
         "crudo": [
-          197.72,
-          199.75
+          196.97,
+          200.22
         ],
         "clip": "trailer/v4/lenguaje-b.mp4",
         "cuadros": "trailer/v4/lenguaje-b",
@@ -5195,7 +5267,13 @@
         "cita": "…puede ser representado como si fuera matemáticas.",
         "resalta": [
           "matemáticas."
-        ]
+        ],
+        "n": 98,
+        "voz": [
+          0.0,
+          3.08
+        ],
+        "en": 173.7
       },
       {
         "tipo": "parada",
@@ -5219,7 +5297,7 @@
       },
       {
         "tipo": "momento",
-        "dura": 4.85,
+        "dura": 4.87,
         "parada": "MAN",
         "crudo": [
           840.15,
@@ -5232,7 +5310,13 @@
         "cita": "¿Pueden pensar las máquinas? Y la cambió por un juego.",
         "resalta": [
           "juego."
-        ]
+        ],
+        "n": 146,
+        "voz": [
+          0.0,
+          4.5
+        ],
+        "en": 761.45
       },
       {
         "tipo": "parada",
@@ -5256,7 +5340,7 @@
       },
       {
         "tipo": "momento",
-        "dura": 3.65,
+        "dura": 3.67,
         "parada": "SV",
         "crudo": [
           1424.5,
@@ -5269,7 +5353,13 @@
         "cita": "Un programa obedece. Un modelo predice.",
         "resalta": [
           "predice."
-        ]
+        ],
+        "n": 110,
+        "voz": [
+          0.0,
+          3.36
+        ],
+        "en": 1285.43
       },
       {
         "tipo": "parada",
@@ -5293,7 +5383,7 @@
       },
       {
         "tipo": "momento",
-        "dura": 4.35,
+        "dura": 4.37,
         "parada": "SFO",
         "crudo": [
           1884.6,
@@ -5306,15 +5396,21 @@
         "cita": "El modelo es el motor. ChatGPT o Claude son el carro completo.",
         "resalta": [
           "motor."
-        ]
+        ],
+        "n": 131,
+        "voz": [
+          0.0,
+          4.04
+        ],
+        "en": 1713.9
       },
       {
         "tipo": "momento",
-        "dura": 5.3,
+        "dura": 5.73,
         "parada": "SFO",
         "crudo": [
           1971.65,
-          1976.95
+          1977.95
         ],
         "clip": "trailer/v4/claude.mp4",
         "cuadros": "trailer/v4/claude",
@@ -5324,7 +5420,13 @@
         "resalta": [
           "Claude",
           "momentico»."
-        ]
+        ],
+        "n": 172,
+        "voz": [
+          0.0,
+          5.6
+        ],
+        "en": 1800.95
       },
       {
         "tipo": "parada",
@@ -5368,15 +5470,21 @@
         "cita": "El gran poder de la IA es cómo tú la conectas con otras aplicaciones.",
         "resalta": [
           "conectas"
-        ]
+        ],
+        "n": 177,
+        "voz": [
+          0.0,
+          5.82
+        ],
+        "en": 3107.87
       },
       {
         "tipo": "momento",
-        "dura": 7.65,
+        "dura": 9.27,
         "parada": "ATL",
         "crudo": [
-          154.3,
-          161.95
+          153.62,
+          162.87
         ],
         "clip": "trailer/v4/presentacion.mp4",
         "cuadros": "trailer/v4/presentacion",
@@ -5385,7 +5493,13 @@
         "cita": "Una presentación hecha con inteligencia artificial. Hace unos años nos hubiera parecido impensable.",
         "resalta": [
           "impensable."
-        ]
+        ],
+        "n": 278,
+        "voz": [
+          0.0,
+          9.08
+        ],
+        "en": 133.75
       },
       {
         "tipo": "parada",
@@ -5408,20 +5522,26 @@
       },
       {
         "tipo": "momento",
-        "dura": 2.55,
+        "dura": 4.3,
         "parada": "BOG",
         "crudo": [
-          4401.2,
-          4403.75
+          4401.17,
+          4405.47
         ],
         "clip": "trailer/v4/cacharreen.mp4",
         "cuadros": "trailer/v4/cacharreen",
         "sonido": "trailer/v4/cacharreen.wav",
         "kicker": "El consejo final",
-        "cita": "Cacharreen. Ensayo y error.",
+        "cita": "Cacharreen. Aprendan el ensayo y el error.",
         "resalta": [
           "Cacharreen."
-        ]
+        ],
+        "n": 129,
+        "voz": [
+          0.0,
+          4.2
+        ],
+        "en": 4146.0
       },
       {
         "tipo": "comentarios",
@@ -5475,7 +5595,7 @@
       },
       {
         "tipo": "momento",
-        "dura": 6.32,
+        "dura": 6.33,
         "parada": "BOG",
         "crudo": [
           508.18,
@@ -5490,7 +5610,13 @@
           "antes",
           "que",
           "tú."
-        ]
+        ],
+        "n": 190,
+        "voz": [
+          0.0,
+          6.12
+        ],
+        "en": 455.91
       },
       {
         "tipo": "parada",
@@ -5513,11 +5639,11 @@
       },
       {
         "tipo": "momento",
-        "dura": 2.03,
+        "dura": 3.27,
         "parada": "BOG",
         "crudo": [
-          197.72,
-          199.75
+          196.97,
+          200.22
         ],
         "clip": "trailer/v4/lenguaje-b.mp4",
         "cuadros": "trailer/v4/lenguaje-b",
@@ -5526,7 +5652,13 @@
         "cita": "El lenguaje humano puede ser representado como si fuera matemáticas.",
         "resalta": [
           "matemáticas."
-        ]
+        ],
+        "n": 98,
+        "voz": [
+          0.0,
+          3.08
+        ],
+        "en": 173.7
       },
       {
         "tipo": "parada",
@@ -5557,11 +5689,11 @@
       },
       {
         "tipo": "momento",
-        "dura": 7.65,
+        "dura": 9.27,
         "parada": "ATL",
         "crudo": [
-          154.3,
-          161.95
+          153.62,
+          162.87
         ],
         "clip": "trailer/v4/presentacion.mp4",
         "cuadros": "trailer/v4/presentacion",
@@ -5570,7 +5702,13 @@
         "cita": "Una presentación hecha con inteligencia artificial. Hace unos años nos hubiera parecido impensable.",
         "resalta": [
           "impensable."
-        ]
+        ],
+        "n": 278,
+        "voz": [
+          0.0,
+          9.08
+        ],
+        "en": 133.75
       },
       {
         "tipo": "comentarios",
@@ -5642,11 +5780,11 @@
       },
       {
         "tipo": "momento",
-        "dura": 2.03,
+        "dura": 3.27,
         "parada": "BOG",
         "crudo": [
-          197.72,
-          199.75
+          196.97,
+          200.22
         ],
         "clip": "trailer/v4/lenguaje-b.mp4",
         "cuadros": "trailer/v4/lenguaje-b",
@@ -5655,7 +5793,13 @@
         "cita": "El lenguaje humano puede ser representado como si fuera matemáticas.",
         "resalta": [
           "matemáticas."
-        ]
+        ],
+        "n": 98,
+        "voz": [
+          0.0,
+          3.08
+        ],
+        "en": 173.7
       },
       {
         "tipo": "parada",
@@ -5679,7 +5823,7 @@
       },
       {
         "tipo": "momento",
-        "dura": 3.65,
+        "dura": 3.67,
         "parada": "SV",
         "crudo": [
           1424.5,
@@ -5692,7 +5836,13 @@
         "cita": "Un programa obedece. Un modelo predice.",
         "resalta": [
           "predice."
-        ]
+        ],
+        "n": 110,
+        "voz": [
+          0.0,
+          3.36
+        ],
+        "en": 1285.43
       },
       {
         "tipo": "parada",
@@ -5716,11 +5866,11 @@
       },
       {
         "tipo": "momento",
-        "dura": 5.3,
+        "dura": 5.73,
         "parada": "SFO",
         "crudo": [
           1971.65,
-          1976.95
+          1977.95
         ],
         "clip": "trailer/v4/claude.mp4",
         "cuadros": "trailer/v4/claude",
@@ -5730,7 +5880,13 @@
         "resalta": [
           "Claude",
           "momentico»."
-        ]
+        ],
+        "n": 172,
+        "voz": [
+          0.0,
+          5.6
+        ],
+        "en": 1800.95
       },
       {
         "tipo": "comentarios",

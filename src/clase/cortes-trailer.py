@@ -16,6 +16,8 @@ import sys
 
 from faster_whisper import WhisperModel
 
+sys.stdout.reconfigure(encoding="utf-8")  # con -I se ignora PYTHONIOENCODING y la consola de Windows es cp1252
+
 RAIZ = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 FPS = 30
 slug, video, listas = sys.argv[1], sys.argv[2], sys.argv[3].split(',')
