@@ -1,5 +1,5 @@
 /**
- * Arma una clase grabada editada: npm run clase -- <slug> [--muestra=DESDE,HASTA] [--rehacer=base,audio,marco,capas]
+ * Arma una clase grabada editada: npm run clase -- <slug> [--muestra=DESDE,HASTA] [--rehacer=base,audio,marco,capas] [--master]
  *
  * Lee clases/<slug>.json (qué se hace) y trabaja en trabajo/clases/<slug>/ (crudo, audio,
  * transcripción, intermedios y salidas). Todo tiempo del JSON va en segundos del crudo.
@@ -15,6 +15,10 @@
  * Con --muestra sale solo ese tramo (con intro si empieza en el inicio): es lo que se le
  * muestra a Juan David antes de renderizar la clase entera. Nada se borra: cada salida lleva
  * versión (clase.version) y los intermedios quedan en la carpeta de trabajo.
+ *
+ * Con --master sale la clase lineal SIN subtítulos y con las capas del remontaje encima (Claude
+ * dibujado, tapas, gameplay, tarjeta de cabina): es la entrada de src/clase/remontaje.js, que corta,
+ * inserta los vuelos entre paradas y quema los subtítulos sobre la versión ya recortada.
  *
  * Por qué no Remotion para todo: 90 minutos a 30 fps son 170.000 cuadros; sin GPU serían horas
  * solo de captura. La grabación pasa por ffmpeg una vez y Remotion dibuja solo lo nuevo.
@@ -47,7 +51,7 @@ const fin = clase.fin?.seg ?? duracionDe(crudo);
 const [A, B] = opt.muestra ? opt.muestra.split(',').map(Number) : [inicio, fin];
 const conIntro = Math.abs(A - inicio) < 0.01;
 const conCierre = !opt.muestra || Math.abs(B - fin) < 0.01;
-const nombre = opt.muestra ? `muestra-${Math.round(A)}-${Math.round(B)}` : 'completa';
+const nombre = (opt.muestra ? `muestra-${Math.round(A)}-${Math.round(B)}` : 'completa') + ('master' in opt ? '-master' : '');
 const V = `v${clase.version ?? 1}`;
 const T = path.join(DIR, `10-${nombre}-${V}`);
 mkdirSync(T, { recursive: true });
@@ -127,6 +131,7 @@ console.log(`  ${cc.capitulos} capítulos y ${cc.subtitulos} subtítulos .vtt ju
 
 // ---------- 6. final ----------
 console.log('\n6/6 final (ffmpeg)…');
+const extra = 'master' in opt ? capasRemontaje() : [];
 componerFinal();
 console.log(`\n✔ ${path.relative(RAIZ, final)}  (${(duracionDe(final) / 60).toFixed(2)} min)`);
 
@@ -137,8 +142,114 @@ function run(cmd, a, opts = {}) {
   if (r.status !== 0) throw new Error(`${cmd} falló (${r.status})`);
 }
 
+/**
+ * Capas del remontaje (clase.remontaje): Claude dibujado y tapas (Remotion, 1600×900), el gameplay
+ * del juego y la tarjeta de cabina sobre la cámara. Se renderizan una vez en 40-remontaje/.
+ */
+function capasRemontaje() {
+  const R = clase.remontaje;
+  if (!R) return [];
+  const dir = path.join(DIR, '40-remontaje');
+  mkdirSync(dir, { recursive: true });
+  const pub = path.join(DIR, 'public');
+  const paq = path.join(DIR, 'paquete-remontaje');
+  console.log('\n+ capas del remontaje…');
+  remotion(['bundle', 'remotion/index.js', `--out-dir=${paq}`, `--public-dir=${pub}`, '--log=error']);
+  const props = path.join(dir, 'props-clase.json');
+  writeFileSync(props, JSON.stringify({ clase }));
+  const id = `clase--${slug}`;
+  const capas = [];
+  (R.claude ?? []).forEach((e, i) => {
+    if (e.en + e.dura < A || e.en > A + largo) return;
+    const archivo = path.join(dir, `claude-${i + 1}.mp4`);
+    if (!existsSync(archivo) || rehacer.has('remontaje')) remotion(['render', paq, `${id}--claude-${i + 1}`, archivo, `--props=${props}`, '--codec=h264', '--crf=16', '--concurrency=3', '--log=error']);
+    capas.push({ archivo, en: e.en, dura: e.dura });
+  });
+  // Escenas contextuales (remotion/clase/Contexto.jsx): mismo hueco, misma forma de pegarse.
+  (R.contexto ?? []).forEach((e, i) => {
+    if (e.en + e.dura < A || e.en > A + largo) return;
+    const archivo = path.join(dir, `ctx-${i + 1}.mp4`);
+    if (!existsSync(archivo) || rehacer.has('remontaje')) remotion(['render', paq, `${id}--ctx-${i + 1}`, archivo, `--props=${props}`, '--codec=h264', '--crf=16', '--concurrency=3', '--timeout=120000', '--log=error']);
+    capas.push({ archivo, en: e.en, dura: e.dura });
+  });
+  if (R.juego && R.juego.en < A + largo && R.juego.hasta > A) capas.push({ archivo: path.join(dir, R.juego.archivo), en: R.juego.en, dura: R.juego.hasta - R.juego.en });
+  // Cabina: tramos fijos de la clase + congelamientos de la cámara (freezedetect, ver 40-remontaje/congelados.txt).
+  const tramos = [...(R.ocultarCara ?? [])];
+  const cong = path.join(dir, 'congelados.txt');
+  if (existsSync(cong)) {
+    // El log trae freeze_start / freeze_duration / freeze_end. Solo los de 2 s o más (quedarse quieto
+    // un segundo es normal) y unidos si están a menos de 3 s: la cara no parpadea con la tarjeta.
+    let ini = null;
+    const cong2 = [];
+    for (const l of readFileSync(cong, 'utf8').split('\n')) {
+      const [k, v] = l.split(': ');
+      if (k === 'freeze_start') ini = Number(v);
+      if (k === 'freeze_end' && ini !== null && Number(v) - ini >= 2) {
+        const u = cong2[cong2.length - 1];
+        if (u && ini - 0.3 - u[1] < 3) u[1] = Number(v) + 0.5;
+        else cong2.push([ini - 0.3, Number(v) + 0.5]);
+      }
+    }
+    tramos.push(...cong2);
+  }
+  if (tramos.length) {
+    const png = path.join(dir, 'cabina.png');
+    remotion(['still', paq, `${id}--cabina`, png, `--props=${props}`, '--log=error']);
+    capas.push({ tipo: 'cabina', archivo: png, en: A, tramos });
+  }
+  console.log(`  ${capas.length} capas`);
+  return capas;
+}
+
+/**
+ * Une las escenas que van sobre la pantalla en pistas (1600×900, 30 fps), una detrás de otra y
+ * recortadas a su duración. Devuelve, por pista, dónde empieza y termina cada escena dentro de ella
+ * (p0, p1) para que componerFinal las corra a su segundo con un solo setpts por pista.
+ */
+function pistasDeCapas(lista) {
+  const [, , pw, ph] = clase.marco.pantalla;
+  const dir = path.join(T, 'capas');
+  mkdirSync(dir, { recursive: true });
+  // Si una escena se monta sobre la siguiente, la primera se acorta (gana la que entra).
+  const todas = [];
+  lista.forEach((c, i) => {
+    const sig = lista[i + 1];
+    const dura = q(Math.min(c.dura, sig ? sig.en - c.en : c.dura));
+    if (dura > 0) todas.push({ ...c, dura });
+  });
+  // ffmpeg no parsea un setpts con ~90 between() o más («Cannot allocate memory» al iniciar los
+  // filtros): las escenas van en pistas de a 40, cada una con su setpts y su enable.
+  const grupos = [];
+  for (let i = 0; i < todas.length; i += 40) grupos.push(todas.slice(i, i + 40));
+  return grupos.map((grupo, g) => {
+    const archivo = path.join(dir, `pista-${g + 1}.mp4`);
+    let p = 0;
+    const tramos = grupo.map((c) => {
+      const r = { ...c, p0: p, p1: p + c.dura };
+      p = q(p + c.dura);
+      return r;
+    });
+    const txt = path.join(dir, `pista-${g + 1}.txt`);
+    const contenido = tramos.map((r) => `file '${r.archivo.replace(/\\/g, '/')}'\noutpoint ${r.dura.toFixed(3)}`).join('\n');
+    // Solo se reescribe si cambió: su fecha decide si la pista se vuelve a hacer.
+    if (!existsSync(txt) || readFileSync(txt, 'utf8') !== contenido) writeFileSync(txt, contenido);
+    if (!existsSync(archivo) || rehacer.has('remontaje') || statSync(txt).mtimeMs > statSync(archivo).mtimeMs) {
+      console.log(`  pista de capas ${g + 1}/${grupos.length} (${tramos.length} escenas, ${(p / 60).toFixed(1)} min)…`);
+      run('ffmpeg', ['-v', 'error', '-y', '-f', 'concat', '-safe', '0', '-i', txt, '-vf', `scale=${pw}:${ph},fps=${FPS},format=yuv420p`, '-an', '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '14', '-g', '30', archivo]);
+    }
+    // Un clip roto o con otra base de tiempo corta o desordena la pista sin que ffmpeg falle.
+    const real = duracionDe(archivo);
+    if (Math.abs(real - p) > 1) throw new Error(`La pista ${g + 1} dura ${real.toFixed(1)} s y debería durar ${p.toFixed(1)} s: revisa sus clips (${txt}).`);
+    return { archivo, tramos };
+  });
+}
+
 function duracionDe(archivo) {
   return Number(execFileSync('ffprobe', ['-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', archivo], { encoding: 'utf8' }).trim());
+}
+
+function tieneAudio(archivo) {
+  return execFileSync('ffprobe', ['-v', 'error', '-select_streams', 'a', '-show_entries', 'stream=index', '-of', 'csv=p=0', archivo], { encoding: 'utf8' }).trim() !== '';
 }
 
 /** Desfase vigente en el segundo t del crudo (imagen tarde = positivo). */
@@ -254,7 +365,27 @@ function componerFinal() {
   // Los subtítulos se queman sobre el cuerpo SIN intro: el ASS se escribió con tiempos de salida,
   // así que se le resta la intro al quemarlos aquí (setpts del cuerpo empieza en 0).
   // `subtitulos.quemar: false` los deja solo como closed captions (.vtt) en el reproductor.
-  if (clase.subtitulos?.quemar === false) f.push(`[${ult}]format=yuv420p[cuerpo]`);
+  // Capas del remontaje (solo con --master): cada una entra en su segundo del crudo y se va al terminar.
+  // Las escenas sobre la pantalla se unen antes en pocas pistas (pistasDeCapas): con un archivo por
+  // escena serían más de cien entradas abiertas a la vez en este ffmpeg.
+  const sobrePantalla = extra.filter((c) => c.tipo !== 'cabina').sort((a, b) => a.en - b.en);
+  for (const { archivo, tramos } of sobrePantalla.length ? pistasDeCapas(sobrePantalla) : []) {
+    ent.push('-i', archivo);
+    // Cada tramo de la pista se corre a su segundo del cuerpo: PTS + (inicio en el cuerpo − inicio en la pista).
+    const corre = tramos.map((r) => `between(T,${r.p0.toFixed(3)},${(r.p1 - 0.0001).toFixed(4)})*${(r.en - A - r.p0).toFixed(3)}`).join('+');
+    const visible = tramos.map((r) => `between(t,${(r.en - A).toFixed(3)},${(r.en - A + r.p1 - r.p0 - 0.5 / FPS).toFixed(3)})`).join('+');
+    // Entre comillas: sin ellas, las comas de between() cortan el filtro (ffmpeg: «Filter not found»).
+    f.push(`[${n}:v]fps=${FPS},setpts='PTS+(${corre})/TB'[o${n}]`, `[${ult}][o${n}]overlay=${px}:${py}:eof_action=pass:enable='${visible}'[x${n}]`);
+    ult = `x${n}`;
+    n++;
+  }
+  for (const c of extra.filter((x) => x.tipo === 'cabina')) {
+    ent.push('-loop', '1', '-framerate', String(FPS), '-t', largo.toFixed(3), '-i', c.archivo);
+    f.push(`[${ult}][${n}:v]overlay=${cx}:${cy}:enable='${c.tramos.map(([a, b]) => `between(t,${(a - A).toFixed(2)},${(b - A).toFixed(2)})`).join('+')}'[x${n}]`);
+    ult = `x${n}`;
+    n++;
+  }
+  if (clase.subtitulos?.quemar === false || 'master' in opt) f.push(`[${ult}]format=yuv420p[cuerpo]`);
   else f.push(`[${ult}]setpts=PTS+${I}/TB,subtitles='${assEsc}':fontsdir='${fuentes}',setpts=PTS-${I}/TB,format=yuv420p[cuerpo]`);
   f.push(`[2:a]aformat=sample_rates=48000:channel_layouts=stereo[acuerpo]`);
   const segs = [];
@@ -262,8 +393,14 @@ function componerFinal() {
     // El logo sale de Veo a 1280x720 y 24 fps: se lleva a 1080p30 y se funde a negro al final,
     // porque termina en fondo gris claro y la intro del título es azul oscuro.
     ent.push('-i', LOGO);
-    f.push(`[${n}:v]trim=duration=${L},setpts=PTS-STARTPTS,scale=1920:1080:flags=lanczos,setsar=1,fps=${FPS},fade=t=out:st=${(L - 0.4).toFixed(2)}:d=0.4,format=yuv420p[vl]`,
-      `anullsrc=r=48000:cl=stereo,atrim=duration=${L}[al]`);
+    // El cuadro 0 de un clip de Veo es la imagen de referencia (el logo plano sobre negro), no la
+    // animación: se salta y se repite el último cuadro para que el logo siga durando L (capítulos y
+    // subtítulos no se corren).
+    f.push(`[${n}:v]trim=start_frame=1,setpts=PTS-STARTPTS,tpad=stop_mode=clone:stop_duration=0.1,trim=duration=${L},setpts=PTS-STARTPTS,scale=1920:1080:flags=lanczos,setsar=1,fps=${FPS},fade=t=out:st=${(L - 0.4).toFixed(2)}:d=0.4,format=yuv420p[vl]`,
+      // El sonido es parte del intro: se usa el del clip (si no trae, silencio) y se funde con la imagen.
+      tieneAudio(LOGO)
+        ? `[${n}:a]atrim=start=0.042,asetpts=PTS-STARTPTS,apad=whole_dur=${L},atrim=duration=${L},aformat=sample_rates=48000:channel_layouts=stereo,afade=t=out:st=${(L - 0.4).toFixed(2)}:d=0.4[al]`
+        : `anullsrc=r=48000:cl=stereo,atrim=duration=${L}[al]`);
     segs.push('[vl][al]');
     n++;
   }
@@ -281,6 +418,7 @@ function componerFinal() {
     n++;
   }
   f.push(`${segs.join('')}concat=n=${segs.length}:v=1:a=1[v][a]`);
+  if ('depurar' in opt) writeFileSync(path.join(T, 'filtro.txt'), [...ent, '', ...f].join('\n'));
   run('ffmpeg', ['-v', 'error', '-stats', '-y', ...ent, '-filter_complex', f.join(';'), '-map', '[v]', '-map', '[a]', '-t', (I + largo + C).toFixed(3),
     '-c:v', 'libx264', '-preset', opt.preset ?? 'medium', '-crf', '20', '-pix_fmt', 'yuv420p', '-r', String(FPS),
     '-color_primaries', 'bt709', '-color_trc', 'bt709', '-colorspace', 'bt709',

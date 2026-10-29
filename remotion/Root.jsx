@@ -15,6 +15,8 @@ import { Marco } from './clase/Marco.jsx';
 import { Cartel, Cierre, Intro } from './clase/Piezas.jsx';
 import { ComentarioSuelto, ComentariosCompuesto, Trailer, duracionTrailer } from './clase/Trailer.jsx';
 import { Viaje, cuadrosViaje } from './clase/Viaje.jsx';
+import { Cabina, SaltoParada, VentanaClaude, duracionSalto } from './clase/Remontaje.jsx';
+import { EscenaContexto } from './clase/Contexto.jsx';
 import { aplicarVoz, duracionDe, duracionPieza, FORMATOS } from './util.js';
 
 /**
@@ -190,6 +192,22 @@ function composicionesClase() {
       <Composition key={`${id}--cartel`} id={`${id}--cartel`} component={Cartel} {...base} durationInFrames={Math.round(clase.cartel.dura * FPS)} defaultProps={{ clase }} />,
       <Composition key={`${id}--intro`} id={`${id}--intro`} component={Intro} {...base} durationInFrames={Math.round(clase.intro.dura * FPS)} defaultProps={{ clase }} />,
       <Composition key={`${id}--cierre`} id={`${id}--cierre`} component={Cierre} {...base} durationInFrames={Math.round(clase.cierre.dura * FPS)} defaultProps={{ clase }} />,
+      // Remontaje (clase.remontaje): un salto por cada cambio de parada y Claude dibujado sobre la pantalla (1600×900).
+      ...(clase.remontaje ? [
+        ...clase.paradas.slice(1).map((_, i) => (
+          <Composition key={`${id}--salto-${i + 1}`} id={`${id}--salto-${i + 1}`} component={SaltoParada} {...base} durationInFrames={Math.round(duracionSalto * FPS)} defaultProps={{ clase, de: i, a: i + 1 }} />
+        )),
+        // Escenas contextuales (remontaje.contexto) y una de prueba que recibe la escena por --props.
+        ...(clase.remontaje.contexto ?? []).map((e, i) => (
+          <Composition key={`${id}--ctx-${i + 1}`} id={`${id}--ctx-${i + 1}`} component={EscenaContexto} fps={FPS} width={1600} height={900} durationInFrames={Math.round(e.dura * FPS)} defaultProps={{ clase, e }} />
+        )),
+        <Composition key={`${id}--ctx-prueba`} id={`${id}--ctx-prueba`} component={EscenaContexto} fps={FPS} width={1600} height={900} durationInFrames={FPS * 12}
+          defaultProps={{ clase, e: { tipo: 'titular', titulo: 'Prueba', dura: 12 } }} calculateMetadata={({ props }) => ({ durationInFrames: Math.round((props.e?.dura ?? 12) * FPS) })} />,
+        <Composition key={`${id}--cabina`} id={`${id}--cabina`} component={Cabina} fps={FPS} width={320} height={200} durationInFrames={1} defaultProps={{ clase }} />,
+        ...(clase.remontaje.claude ?? []).map((e, i) => (
+          <Composition key={`${id}--claude-${i + 1}`} id={`${id}--claude-${i + 1}`} component={VentanaClaude} fps={FPS} width={1600} height={900} durationInFrames={Math.round(e.dura * FPS)} defaultProps={{ clase, e }} />
+        )),
+      ] : []),
       // Venta (clase.venta): tráiler en los dos formatos, cada comentario suelto y los mejores juntos.
       ...(clase.venta ? [
         <Composition key={`${id}--trailer-16x9`} id={`${id}--trailer-16x9`} component={Trailer} {...base} durationInFrames={duracionTrailer(clase, 'escenas')} defaultProps={{ clase }} />,

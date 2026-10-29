@@ -795,9 +795,64 @@ Videos: IMG_3770, IMG_3772 e IMG_3776 de octubre (iPhone). Salieron `la-ia-que-n
 - `remotion still` con three.js tarda 2–4 min por cuadro (arranca el navegador y arma el planeta cada vez): pocas tomas.
 - `python -I` ignora PYTHONIOENCODING: en Windows la entrada y la salida estándar quedan en cp1252 y los saltos de línea
   salen como CRLF. Nunca reescribir un JSON por la salida estándar; abrir el archivo con `encoding='utf8'` y `newline='\n'`.
+
+## 28-oct-2026 · Remontaje de la clase (v3 y v4 de Fundamentos de IA)
+- **El cuadro 0 de un clip de Veo es la imagen de referencia** (el logo plano sobre negro con el nombre), no la animación.
+  El reproductor de Mis clases muestra el cuadro 0 antes del play (sin poster): por eso «el inicio horrible». armar.js
+  salta ese cuadro (`trim=start_frame=1` + `tpad` para que el logo siga durando 10 s) y usa el audio del clip (antes ponía
+  silencio). Revisar SIEMPRE el cuadro 0 con `select=lt(n\,2)`: una hoja de contacto a 8 fps se lo salta.
+- **Gusto de Juan David:** la clase editada tiene que ser «súper contextual» y generosa: motion graphics de lo que dice en
+  cada momento, vuelos entre paradas, Claude dibujado cuando explica una función, gameplay limpio del juego, tapas
+  animadas (no blur) con margen, menos cara donde el lipsync falla, subtítulos con golpe y cortes de silencio.
+- **Remontaje en dos pasos:** `npm run clase -- <slug> --master` (lineal, sin subtítulos, con las capas encima) y
+  `npm run clase-remontaje -- <slug>` (una sola pasada: `select`/`aselect` quitan los cortes, se intercalan los vuelos,
+  se queman los subtítulos sobre la versión ya recortada y se mezcla la pista de efectos). Capítulos y .vtt salen con el
+  mapa crudo → master → final.
+- **Cortes de silencio sin comerse palabras:** solo donde no hay palabras en la transcripción Y silencedetect dice que
+  el audio está callado (Whisper a veces no oye 20 s de habla). Aire de 0,3 s tras la última palabra y 0,25 s antes de
+  la siguiente. Nunca dentro de una escena animada (se vería saltar).
+- **Más de 100 capas en un ffmpeg:** se unen antes en una sola pista (concat con `outpoint`) y se corren a su segundo con
+  un solo `setpts=PTS+(Σ between(T,p0,p1)·desfase)/TB` y `enable` por tramos. Una entrada por escena revienta memoria.
+- **freezedetect** escribe tres líneas por evento (start, duration, end): leer por clave, no por pares.
+- **Grabar un juego three.js sin GPU:** chrome-headless-shell de Remotion por CDP con el reloj de la página reemplazado
+  (requestAnimationFrame, performance.now y Date.now avanzan 1/30 s por cuadro) y piloto automático vía `window.__a`.
+  Servir todo el `public` de tri-app2 (el juego carga `../joystick.js`). ~0,4 s por cuadro con SwiftShader.
+- **No matar `chrome-headless-shell.exe` por nombre:** otras sesiones renderizan con Remotion; matar por PID o por perfil.
+- En ASS los override dentro del texto son sensibles a mayúsculas: `\1c&HBBGGRR&` (minúscula); `\1C` no hace nada.
 - **Sonido de las transiciones:** a Juan David el golpe con ruido blanco le sonaba «rastrero, a interferencia». musica-trailer.py
   ahora hace un boom limpio (seno que cae, sin ruido), una subida tonal antes del precio y, en el viaje, una campanita de
   aeropuerto (ding-dong Mi5→Do5) al llegar a cada parada. Para cambiar solo el audio de un video ya hecho: render con
   `--codec=wav` (~5 min) y montarlo con ffmpeg sobre el MP4, sin volver a renderizar la imagen.
 - Le gustó mucho el viaje (publicado como trailer-16x9-v3). Pidió además una variante que abra con el precio
   (`venta.viajePrecio` + `venta.insignia`, el sello del precio durante todo el vuelo).
+- **El primer master completo falló con `FILTER_NOT_FOUND`** (ffmpeg sale con 3015096584 = −0x4C4946F8 = «\xF8FIL»): el
+  `setpts=PTS+(between(T,a,b)…)` de la pista de capas iba sin comillas y cada coma cortaba el filtro. Va entre comillas
+  simples. La muestra no lo vio porque no pasaba por la pista única. Decodificar el código: `-(n − 2³²)` en hex = FFERRTAG.
+- **El concat demuxer exige la misma base de tiempo en todos los archivos.** El gameplay salió de ffmpeg con 1/15360 y las
+  escenas de Remotion con 1/90000: el concat reescaló mal y el tiempo saltó de 1126,5 a 192,256 (= 1126,5·15360/90000),
+  así que el juego habría salido congelado. grabar-juego.js ahora usa `-video_track_timescale 90000`; para un clip ya
+  hecho basta remuxear con `-c copy -video_track_timescale 90000`. Revisar con
+  `ffprobe -f concat -i pista.txt -show_entries packet=pts_time` que no haya saltos hacia atrás.
+- **Un clip corrupto corta la pista en silencio:** ctx-109 (escrito a la vez por dos workers) solo tenía 140 de 390
+  cuadros legibles y el concat terminó ahí, sin error. Antes del master: decodificar completos todos los clips
+  (`ffmpeg -v error -i x.mp4 -map 0:v -f null -`, en paralelo con `xargs -P 4`); `ffprobe` de cabecera no lo detecta.
+- **Dos workers de render-capas no deben cubrir los mismos clips:** el que corre sin `--solo` recorre toda la lista y,
+  al alcanzar al otro, renderizan la misma escena a la vez sobre el mismo archivo. Repartir con `--solo` disjuntos.
+- **Portátil con batería:** con el render al 100 % la batería llegó a crítico y Windows suspendió 40 min (y el cambio de
+  red al despertar hizo fallar un render con `ERR_NETWORK_CHANGED`). Render largo: cargador conectado y una petición de
+  «no suspender» (SetThreadExecutionState) mientras dure.
+- **ffmpeg no parsea expresiones muy largas:** un `setpts` con ~90 `between()` o más (y un `enable` con 131) falla al
+  iniciar los filtros con «Cannot allocate memory» (−12), aunque sobre RAM. Con 80 pasa. Las escenas van en pistas de
+  a 40 (`pista-N.mp4`), cada una con su setpts y su enable, y cada pista verifica que dura lo que debe.
+- **El mismo límite en el remontaje:** con la clase completa salen 164 cortes de silencio y el `select='not(…)'` del
+  remontaje falló igual (−12), después de 70 min de master. Los cortes van en varios `select` encadenados de a 40 (sin
+  `setpts` entre ellos, `t` sigue siendo el tiempo del master). Regla: toda expresión de ffmpeg armada desde una lista
+  se parte en grupos de 40, aunque con la muestra corta pase.
+- **Un salto viejo se cuela:** remontaje.js reusa `salto-N.mp4` si existe. El salto 7 venía de la muestra de las 17:53,
+  antes de cambiar Globo.jsx. Al cambiar el componente del vuelo, apartar los saltos viejos (`40-remontaje/anteriores/`).
+- **Revisar datos personales con OCR, sin instalar nada:** Windows trae OCR (`Windows.Media.Ocr`, desde PowerShell 5.1
+  con WinRT). Un cuadro por segundo de la zona de pantalla, escalado a 2400 px, lee hasta la barra lateral de Claude.
+  Sirve para confirmar que no aparece un correo antes de subir.
+- **Los modelos 3D de las escenas «ciudad» no están en git:** Contexto.jsx carga `juegos/barrio/*.glb` y
+  `juegos/carros/*.glb` del public de la clase (`trabajo/clases/<slug>/public/juegos/`, ignorado). Se copiaron de
+  tri-app2: `public/juegos/panaderia-tycoon/3d/{barrio,carros}`. En una máquina nueva, copiarlos antes de render-capas.

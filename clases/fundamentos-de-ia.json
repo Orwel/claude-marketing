@@ -1,7 +1,7 @@
 {
   "slug": "fundamentos-de-ia",
   "titulo": "Fundamentos de IA",
-  "version": 2,
+  "version": 4,
   "_fuente": "Clase en vivo del 27-oct-2026 (7:06 p. m., Bogotá), evento f93c76aa-3c4a-48b0-b011-54f35998d24e. Grabación RoomComposite de LiveKit, layout speaker, 1080p a 15 fps. Presentación: trifuerza.co/academy/experiencias/2026-2/fundamentos-de-ia/vuelo-por-la-inteligencia-artificial/ver. Todo tiempo en segundos del crudo.",
   "fuente": {
     "archivo": "fundamentos-de-ia-2026-10-27-1906.mp4",
@@ -909,7 +909,2414 @@
       "fundamentos-de-ia-2026-10-27-1857.mp4"
     ]
   },
+  "remontaje": {
+    "_que": "v4: lo que va encima de la clase lineal (remotion/clase/Remontaje.jsx, src/clase/remontaje.js). en = segundo del crudo.",
+    "mapa": {
+      "BOG": {
+        "codigo": "BOG",
+        "nombre": "Bogotá",
+        "anio": "hoy",
+        "lat": 4.7,
+        "lon": -74.1
+      },
+      "MAN": {
+        "codigo": "MAN",
+        "nombre": "Manchester",
+        "anio": "1948",
+        "lat": 53.48,
+        "lon": -2.24
+      },
+      "HAN": {
+        "codigo": "HAN",
+        "nombre": "Hanover",
+        "anio": "1956",
+        "lat": 43.7,
+        "lon": -72.29
+      },
+      "TOR": {
+        "codigo": "TOR",
+        "nombre": "Toronto",
+        "anio": "2012",
+        "lat": 43.65,
+        "lon": -79.38
+      },
+      "SV": {
+        "codigo": "SV",
+        "nombre": "Silicon Valley",
+        "anio": "2017",
+        "lat": 37.39,
+        "lon": -122.08
+      },
+      "SFO": {
+        "codigo": "SFO",
+        "nombre": "San Francisco",
+        "anio": "2022",
+        "lat": 37.77,
+        "lon": -122.42,
+        "alto": 30
+      },
+      "NYC": {
+        "codigo": "NYC",
+        "nombre": "Nueva York",
+        "anio": "2023",
+        "lat": 40.71,
+        "lon": -74
+      },
+      "ATL": {
+        "codigo": "ATL",
+        "nombre": "Crucero",
+        "anio": "hoy",
+        "lat": 40,
+        "lon": -38,
+        "sinCiudad": true
+      },
+      "BRU": {
+        "codigo": "BRU",
+        "nombre": "Bruselas",
+        "anio": "2024",
+        "lat": 50.85,
+        "lon": 4.35
+      }
+    },
+    "claude": [
+      {
+        "en": 2236,
+        "dura": 12,
+        "modo": "chat",
+        "seccion": "Nuevo chat",
+        "rotulo": "En Claude · El chat",
+        "pregunta": "Explícame qué es la ventana de contexto como si fuera mi primera clase.",
+        "respuesta": "La ventana de contexto es la memoria de trabajo del modelo: todo lo que cabe en la conversación en este momento. Lo que queda por fuera, no lo ve."
+      },
+      {
+        "en": 2258,
+        "dura": 22,
+        "modo": "rejilla",
+        "seccion": "Proyectos",
+        "rotulo": "En Claude · Proyectos",
+        "titulo": "Proyectos",
+        "texto": "Un proyecto reúne tus documentos e instrucciones: cada chat que abras ahí ya conoce el contexto.",
+        "boton": "Nuevo proyecto",
+        "activa": 1,
+        "tarjetas": [
+          {
+            "nombre": "Contratos tipo",
+            "detalle": "Plantillas y cláusulas del despacho",
+            "icono": "FileText"
+          },
+          {
+            "nombre": "Derecho laboral",
+            "detalle": "Normas, sentencias y liquidaciones",
+            "icono": "Scale",
+            "color": "#4DD3E8"
+          },
+          {
+            "nombre": "Clases",
+            "detalle": "Guías, presentaciones y quices",
+            "icono": "GraduationCap",
+            "color": "#9b87f5"
+          },
+          {
+            "nombre": "Correspondencia",
+            "detalle": "Tono y formatos de correos",
+            "icono": "Mail",
+            "color": "#5fb27c"
+          },
+          {
+            "nombre": "Investigación",
+            "detalle": "Artículos y notas de lectura",
+            "icono": "BookOpen",
+            "color": "#f2a900"
+          },
+          {
+            "nombre": "Proyecto personal",
+            "detalle": "Ideas y borradores",
+            "icono": "Lightbulb"
+          }
+        ],
+        "_nota": "Tapa: lista de proyectos reales (2262-2279)"
+      },
+      {
+        "en": 2280,
+        "dura": 74,
+        "modo": "rejilla",
+        "seccion": "Artefactos",
+        "rotulo": "En Claude · Artefactos",
+        "titulo": "Artefactos",
+        "texto": "Páginas, apps y juegos que Claude construye en el chat y que puedes usar y compartir con un enlace.",
+        "boton": "Nuevo artefacto",
+        "activa": 0,
+        "tarjetas": [
+          {
+            "nombre": "Liquidador laboral",
+            "detalle": "Prestaciones, vacaciones e indemnización",
+            "icono": "Calculator"
+          },
+          {
+            "nombre": "Línea de tiempo",
+            "detalle": "Etapas de un proceso judicial",
+            "icono": "GitCommitHorizontal",
+            "color": "#4DD3E8"
+          },
+          {
+            "nombre": "Calculadora de intereses",
+            "detalle": "Mora e interés bancario corriente",
+            "icono": "Percent",
+            "color": "#f2a900"
+          },
+          {
+            "nombre": "Archipiélago jurídico",
+            "detalle": "Un contrato convertido en islas",
+            "icono": "Sailboat",
+            "color": "#2FB5B0"
+          },
+          {
+            "nombre": "Quiz de clase",
+            "detalle": "Preguntas con retroalimentación",
+            "icono": "ListChecks",
+            "color": "#9b87f5"
+          },
+          {
+            "nombre": "Tablero de tareas",
+            "detalle": "Pendientes por cliente",
+            "icono": "KanbanSquare",
+            "color": "#5fb27c"
+          }
+        ],
+        "ciclo": true,
+        "_nota": "Tapa: galería de artefactos con títulos reales (2280-2352)"
+      },
+      {
+        "en": 2500,
+        "dura": 134,
+        "modo": "rejilla",
+        "seccion": "Artefactos",
+        "rotulo": "En Claude · Artefactos",
+        "titulo": "Artefactos",
+        "texto": "Páginas, apps y juegos que Claude construye en el chat y que puedes usar y compartir con un enlace.",
+        "boton": "Nuevo artefacto",
+        "activa": 0,
+        "tarjetas": [
+          {
+            "nombre": "Liquidador laboral",
+            "detalle": "Prestaciones, vacaciones e indemnización",
+            "icono": "Calculator"
+          },
+          {
+            "nombre": "Línea de tiempo",
+            "detalle": "Etapas de un proceso judicial",
+            "icono": "GitCommitHorizontal",
+            "color": "#4DD3E8"
+          },
+          {
+            "nombre": "Calculadora de intereses",
+            "detalle": "Mora e interés bancario corriente",
+            "icono": "Percent",
+            "color": "#f2a900"
+          },
+          {
+            "nombre": "Archipiélago jurídico",
+            "detalle": "Un contrato convertido en islas",
+            "icono": "Sailboat",
+            "color": "#2FB5B0"
+          },
+          {
+            "nombre": "Quiz de clase",
+            "detalle": "Preguntas con retroalimentación",
+            "icono": "ListChecks",
+            "color": "#9b87f5"
+          },
+          {
+            "nombre": "Tablero de tareas",
+            "detalle": "Pendientes por cliente",
+            "icono": "KanbanSquare",
+            "color": "#5fb27c"
+          }
+        ],
+        "ciclo": true,
+        "_nota": "Tapa: galería de artefactos (2505-2630)"
+      },
+      {
+        "en": 2783,
+        "dura": 81,
+        "modo": "rejilla",
+        "seccion": "Artefactos",
+        "rotulo": "En Claude · Artefactos",
+        "titulo": "Artefactos",
+        "texto": "Páginas, apps y juegos que Claude construye en el chat y que puedes usar y compartir con un enlace.",
+        "boton": "Nuevo artefacto",
+        "activa": 0,
+        "tarjetas": [
+          {
+            "nombre": "Liquidador laboral",
+            "detalle": "Prestaciones, vacaciones e indemnización",
+            "icono": "Calculator"
+          },
+          {
+            "nombre": "Línea de tiempo",
+            "detalle": "Etapas de un proceso judicial",
+            "icono": "GitCommitHorizontal",
+            "color": "#4DD3E8"
+          },
+          {
+            "nombre": "Calculadora de intereses",
+            "detalle": "Mora e interés bancario corriente",
+            "icono": "Percent",
+            "color": "#f2a900"
+          },
+          {
+            "nombre": "Archipiélago jurídico",
+            "detalle": "Un contrato convertido en islas",
+            "icono": "Sailboat",
+            "color": "#2FB5B0"
+          },
+          {
+            "nombre": "Quiz de clase",
+            "detalle": "Preguntas con retroalimentación",
+            "icono": "ListChecks",
+            "color": "#9b87f5"
+          },
+          {
+            "nombre": "Tablero de tareas",
+            "detalle": "Pendientes por cliente",
+            "icono": "KanbanSquare",
+            "color": "#5fb27c"
+          }
+        ],
+        "ciclo": true,
+        "_nota": "Tapa: galería de artefactos (2790-2862)"
+      },
+      {
+        "en": 2958,
+        "dura": 146,
+        "modo": "rejilla",
+        "seccion": "Artefactos",
+        "rotulo": "En Claude · Artefactos",
+        "titulo": "Artefactos",
+        "texto": "Páginas, apps y juegos que Claude construye en el chat y que puedes usar y compartir con un enlace.",
+        "boton": "Nuevo artefacto",
+        "activa": 0,
+        "tarjetas": [
+          {
+            "nombre": "Liquidador laboral",
+            "detalle": "Prestaciones, vacaciones e indemnización",
+            "icono": "Calculator"
+          },
+          {
+            "nombre": "Línea de tiempo",
+            "detalle": "Etapas de un proceso judicial",
+            "icono": "GitCommitHorizontal",
+            "color": "#4DD3E8"
+          },
+          {
+            "nombre": "Calculadora de intereses",
+            "detalle": "Mora e interés bancario corriente",
+            "icono": "Percent",
+            "color": "#f2a900"
+          },
+          {
+            "nombre": "Archipiélago jurídico",
+            "detalle": "Un contrato convertido en islas",
+            "icono": "Sailboat",
+            "color": "#2FB5B0"
+          },
+          {
+            "nombre": "Quiz de clase",
+            "detalle": "Preguntas con retroalimentación",
+            "icono": "ListChecks",
+            "color": "#9b87f5"
+          },
+          {
+            "nombre": "Tablero de tareas",
+            "detalle": "Pendientes por cliente",
+            "icono": "KanbanSquare",
+            "color": "#5fb27c"
+          }
+        ],
+        "ciclo": true,
+        "_nota": "Tapa: galería de artefactos (2955-3100)"
+      },
+      {
+        "en": 3307,
+        "dura": 14,
+        "modo": "lista",
+        "seccion": "Nuevo chat",
+        "rotulo": "En Claude · Conectores",
+        "titulo": "Conectores",
+        "texto": "Le dan a Claude acceso a tus herramientas: lee tu correo, tu calendario o tus documentos sin copiar y pegar.",
+        "items": [
+          {
+            "nombre": "Google Drive",
+            "detalle": "Busca y lee tus documentos",
+            "icono": "HardDrive",
+            "color": "#4DD3E8"
+          },
+          {
+            "nombre": "Gmail",
+            "detalle": "Resume y redacta correos",
+            "icono": "Mail",
+            "color": "#e5484d"
+          },
+          {
+            "nombre": "Google Calendar",
+            "detalle": "Agenda y revisa reuniones",
+            "icono": "CalendarDays",
+            "color": "#5fb27c"
+          },
+          {
+            "nombre": "Notion",
+            "detalle": "Consulta y actualiza tus notas",
+            "icono": "NotebookPen",
+            "color": "#f5f4ef"
+          }
+        ]
+      },
+      {
+        "en": 3479,
+        "dura": 14,
+        "modo": "lista",
+        "seccion": "Nuevo chat",
+        "rotulo": "En Claude · Skills",
+        "titulo": "Skills",
+        "texto": "Instrucciones guardadas para una tarea que repites: Claude las usa sola cuando la tarea aparece.",
+        "items": [
+          {
+            "nombre": "Revisar un contrato",
+            "detalle": "Cláusulas de riesgo y lo que falta",
+            "icono": "FileSearch"
+          },
+          {
+            "nombre": "Redactar una tutela",
+            "detalle": "Con la estructura que usas siempre",
+            "icono": "Scale",
+            "color": "#4DD3E8"
+          },
+          {
+            "nombre": "Guía de clase",
+            "detalle": "Tu formato y tu tono",
+            "icono": "GraduationCap",
+            "color": "#9b87f5"
+          }
+        ]
+      },
+      {
+        "en": 3640,
+        "dura": 14,
+        "modo": "lista",
+        "seccion": "Nuevo chat",
+        "rotulo": "En Claude · Plugins",
+        "titulo": "Plugins",
+        "texto": "Paquetes de skills, conectores y comandos que se instalan de una vez, como el plugin jurídico.",
+        "items": [
+          {
+            "nombre": "Plugin jurídico",
+            "detalle": "Contratos, demandas y análisis de sentencias",
+            "icono": "Gavel"
+          },
+          {
+            "nombre": "Finanzas",
+            "detalle": "Conciliaciones y estados financieros",
+            "icono": "Landmark",
+            "color": "#5fb27c"
+          },
+          {
+            "nombre": "Productividad",
+            "detalle": "Resúmenes, tareas y reuniones",
+            "icono": "ListTodo",
+            "color": "#4DD3E8"
+          }
+        ]
+      },
+      {
+        "en": 3786,
+        "dura": 16,
+        "modo": "code",
+        "seccion": "Nuevo chat",
+        "rotulo": "Claude Code · un agente que trabaja en tus carpetas",
+        "carpeta": "mi-pagina",
+        "pedido": "Rediseña la página de inicio con los colores de mi marca",
+        "pasos": [
+          "Leo los archivos del proyecto",
+          "Encuentro la página de inicio",
+          "Cambio colores y tipografía",
+          "Reviso que todo se vea bien",
+          "Listo: te dejo el resumen de cambios"
+        ]
+      },
+      {
+        "en": 4135,
+        "dura": 14,
+        "modo": "lista",
+        "seccion": "Nuevo chat",
+        "rotulo": "En Claude · Elige el modelo",
+        "titulo": "Arquitecto y obrero",
+        "texto": "Un modelo grande para pensar el plan; uno rápido y barato para ejecutar las tareas repetidas.",
+        "items": [
+          {
+            "nombre": "Opus",
+            "detalle": "El arquitecto: razona lo difícil",
+            "icono": "Compass",
+            "color": "#d97757"
+          },
+          {
+            "nombre": "Sonnet",
+            "detalle": "El todoterreno del día a día",
+            "icono": "Gauge",
+            "color": "#4DD3E8"
+          },
+          {
+            "nombre": "Haiku",
+            "detalle": "El obrero: rápido y económico",
+            "icono": "Zap",
+            "color": "#f2a900"
+          }
+        ]
+      }
+    ],
+    "juego": {
+      "en": 2862,
+      "hasta": 2960,
+      "archivo": "archipielago-ejemplo-90k.mp4",
+      "_nota": "Reemplaza el contrato real (2869-2952) por un gameplay con un documento de ejemplo; con margen a cada lado."
+    },
+    "ocultarCara": [
+      [
+        1103.4,
+        2864.1
+      ]
+    ],
+    "_ocultarCara": "Tramos de sincronía de menor confianza (desfase -0,84 y -0,6 s): la cámara se reemplaza por la tarjeta de cabina. Los congelamientos de señal se suman solos.",
+    "contexto": [
+      {
+        "en": 53.3,
+        "dura": 9,
+        "tipo": "titular",
+        "kicker": "Trifuerza",
+        "titulo": "Tecnología, diseño y derecho",
+        "resalta": [
+          "diseño",
+          "derecho"
+        ],
+        "texto": "Trifuerza es la combinación de las tres.",
+        "icono": "Triangle",
+        "motivo": "Trifuerza es la combinación entre tecnología, diseño y derecho"
+      },
+      {
+        "en": 152.3,
+        "dura": 10,
+        "tipo": "ciudad",
+        "kicker": "Esta clase",
+        "titulo": "Una presentación que es un videojuego",
+        "resalta": [
+          "videojuego"
+        ],
+        "texto": "Hecha con inteligencia artificial: hace unos años habría sido impensable.",
+        "motivo": "la presentación es una especie de videojuego hecho con IA"
+      },
+      {
+        "en": 187.4,
+        "dura": 11,
+        "tipo": "frase",
+        "kicker": "La genialidad de la IA",
+        "texto": "El lenguaje humano… puede ser representado como si fuera matemáticas.",
+        "resalta": [
+          "lenguaje",
+          "matemáticas."
+        ],
+        "motivo": "el lenguaje humano se puede representar como matemáticas"
+      },
+      {
+        "en": 262.9,
+        "dura": 14,
+        "tipo": "tokens",
+        "titulo": "Cada sílaba es un token",
+        "resalta": [
+          "token"
+        ],
+        "frase": "Un token es la unidad mínima de información",
+        "texto": "Puede ser una sílaba, una palabra, un concepto o un texto entero.",
+        "motivo": "un token es la unidad mínima de información"
+      },
+      {
+        "en": 288.4,
+        "dura": 12,
+        "tipo": "titular",
+        "kicker": "Y eso es lo mágico",
+        "titulo": "Las probabilidades son finitas",
+        "resalta": [
+          "finitas"
+        ],
+        "texto": "Las palabras del lenguaje no son tan infinitas como creemos: hay un límite de posibilidades.",
+        "icono": "Dices",
+        "motivo": "las probabilidades son finitas, hay un límite de posibilidades"
+      },
+      {
+        "en": 352.4,
+        "dura": 16,
+        "tipo": "comparacion",
+        "kicker": "Un modelo por dentro",
+        "titulo": "Como intentar leer un cerebro",
+        "resalta": [
+          "cerebro"
+        ],
+        "izq": {
+          "titulo": "Un cerebro",
+          "icono": "Brain",
+          "puntos": [
+            "Ver sus recuerdos y descifrarlos es imposible"
+          ]
+        },
+        "der": {
+          "titulo": "Un modelo de IA",
+          "icono": "Binary",
+          "puntos": [
+            "Por dentro son números",
+            "Solo una máquina los lee e interpreta"
+          ]
+        },
+        "motivo": "un modelo por dentro es indescifrable como un cerebro: números"
+      },
+      {
+        "en": 389.5,
+        "dura": 9,
+        "tipo": "frase",
+        "kicker": "Una palabra clave en tecnología",
+        "texto": "Iterar, que significa repetir hasta lograr el resultado.",
+        "resalta": [
+          "Iterar,"
+        ],
+        "motivo": "iterar significa repetir hasta lograr el resultado"
+      },
+      {
+        "en": 439.2,
+        "dura": 16,
+        "tipo": "lista",
+        "kicker": "El plan de vuelo de hoy",
+        "titulo": "Así vamos a viajar",
+        "items": [
+          "Un poquito de historia",
+          "Lo que pasa por dentro de un modelo",
+          "Por qué se equivoca",
+          "La parte práctica: configurar tu asistente"
+        ],
+        "motivo": "primero historia, luego el modelo por dentro, errores y práctica"
+      },
+      {
+        "en": 461.5,
+        "dura": 14,
+        "tipo": "ciudad",
+        "kicker": "La discusión de hoy",
+        "titulo": "La IA no te va a reemplazar",
+        "resalta": [
+          "no"
+        ],
+        "texto": "No funciona sola: necesita que alguien prenda el computador y le dé un prompt.",
+        "motivo": "la IA no va a reemplazar a nadie, no funciona sola"
+      },
+      {
+        "en": 505.3,
+        "dura": 11,
+        "tipo": "frase",
+        "texto": "Lo que te va a empezar a reemplazar no es la inteligencia artificial en sí misma, sino alguien que entendió esto mucho antes que tú.",
+        "resalta": [
+          "alguien",
+          "antes"
+        ],
+        "motivo": "te reemplaza alguien que entendió esto antes que tú"
+      },
+      {
+        "en": 538.1,
+        "dura": 10,
+        "tipo": "prediccion",
+        "kicker": "Siguiente palabra · probabilidades ilustrativas",
+        "titulo": "La IA es probabilística",
+        "resalta": [
+          "probabilística"
+        ],
+        "frase": "Se sabe que el perro",
+        "opciones": [
+          {
+            "p": "ladra",
+            "prob": 0.91
+          },
+          {
+            "p": "corre",
+            "prob": 0.04
+          },
+          {
+            "p": "duerme",
+            "prob": 0.03
+          }
+        ],
+        "motivo": "se sabe que el perro ladra: conclusión probabilística"
+      },
+      {
+        "en": 566.5,
+        "dura": 16,
+        "tipo": "comparacion",
+        "kicker": "Dos tipos de sistemas",
+        "titulo": "Determinista o probabilístico",
+        "resalta": [
+          "probabilístico"
+        ],
+        "izq": {
+          "titulo": "Determinista",
+          "icono": "Workflow",
+          "puntos": [
+            "Las reglas ya están fijas en un flujo",
+            "Das like o comentas: queda guardado"
+          ]
+        },
+        "der": {
+          "titulo": "Probabilístico",
+          "icono": "Dices",
+          "puntos": [
+            "Decide con base en probabilidades",
+            "El algoritmo de tu feed: likes, comentarios, tiempo viendo"
+          ]
+        },
+        "motivo": "un like es determinista; el algoritmo de Instagram, probabilístico"
+      },
+      {
+        "en": 607.3,
+        "dura": 8,
+        "tipo": "frase",
+        "kicker": "Qué es un algoritmo",
+        "texto": "Un algoritmo es una secuencia de pasos ordenados que nos dicen cómo llegar a un resultado.",
+        "resalta": [
+          "pasos",
+          "ordenados"
+        ],
+        "motivo": "un algoritmo es una secuencia de pasos ordenados"
+      },
+      {
+        "en": 622.1,
+        "dura": 15,
+        "tipo": "nube",
+        "titulo": "La nube no existe",
+        "resalta": [
+          "no",
+          "existe"
+        ],
+        "texto": "La nube realmente es un servidor: el computador de otro, al que te conectas.",
+        "motivo": "la nube no existe: realmente es un servidor"
+      },
+      {
+        "en": 683,
+        "dura": 16,
+        "tipo": "planeta",
+        "kicker": "Así viaja el internet",
+        "titulo": "Cables bajo el océano",
+        "resalta": [
+          "océano"
+        ],
+        "texto": "Wi-Fi, antenas y cables llevan tu conexión hasta un servidor en otro país.",
+        "motivo": "cables interoceánicos te conectan a servidores en otros países"
+      },
+      {
+        "en": 754.4,
+        "dura": 9,
+        "tipo": "turing",
+        "titulo": "La máquina de Turing",
+        "resalta": [
+          "Turing"
+        ],
+        "texto": "Una de las primeras ideas sobre cómo podría hacerse la inteligencia artificial.",
+        "motivo": "Manchester, donde Turing y la máquina de Turing"
+      },
+      {
+        "en": 772.5,
+        "dura": 11.5,
+        "tipo": "linea",
+        "kicker": "Parada 01 · Manchester",
+        "titulo": "Manchester, 21 de junio de 1948",
+        "hitos": [
+          {
+            "anio": "1948",
+            "texto": "La Baby guarda su programa en memoria"
+          },
+          {
+            "anio": "1950",
+            "texto": "Turing: ¿pueden pensar las máquinas?"
+          },
+          {
+            "anio": "1956",
+            "texto": "Dartmouth: nace el nombre"
+          },
+          {
+            "anio": "2012",
+            "texto": "AlexNet aprende de ejemplos"
+          },
+          {
+            "anio": "2022",
+            "texto": "ChatGPT abre al público"
+          }
+        ],
+        "activo": 0,
+        "motivo": "la Baby corrió el primer programa guardado en memoria"
+      },
+      {
+        "en": 790.2,
+        "dura": 11,
+        "tipo": "bits",
+        "titulo": "Interruptores prendidos o apagados",
+        "resalta": [
+          "prendidos",
+          "apagados"
+        ],
+        "texto": "Así se guarda una foto, una canción o un video.",
+        "palabra": "A",
+        "motivo": "dentro hay transistores que almacenan ceros y unos"
+      },
+      {
+        "en": 826.5,
+        "dura": 16,
+        "tipo": "personaje",
+        "kicker": "Parada 01 · Manchester",
+        "nombre": "Alan Turing",
+        "anio": "1950",
+        "rol": "Matemático · ayudó a descifrar Enigma",
+        "cita": "¿Pueden pensar las máquinas?",
+        "rasgos": {
+          "pelo": "corto",
+          "gafas": false,
+          "barba": false,
+          "tono": "claro"
+        },
+        "motivo": "Turing descifró Enigma y en 1950 preguntó si piensan"
+      },
+      {
+        "en": 854.1,
+        "dura": 9,
+        "tipo": "frase",
+        "kicker": "El juego de la imitación",
+        "texto": "¿Acaso importa si la máquina piensa o no?",
+        "resalta": [
+          "importa"
+        ],
+        "motivo": "si el juez no distingue, ¿importa si la máquina piensa?"
+      },
+      {
+        "en": 893,
+        "dura": 13,
+        "tipo": "comparacion",
+        "kicker": "La máquina que guarda su programa",
+        "titulo": "Antes y ahora",
+        "izq": {
+          "titulo": "Antes",
+          "icono": "Cable",
+          "puntos": [
+            "Cambiar de tarea era recablear la máquina a mano"
+          ]
+        },
+        "der": {
+          "titulo": "Ahora",
+          "icono": "FileText",
+          "puntos": [
+            "El programa es información",
+            "Se escribe, se guarda y se cambia como un documento"
+          ]
+        },
+        "motivo": "antes se recableaba la máquina; ahora el programa es información"
+      },
+      {
+        "en": 931.5,
+        "dura": 15,
+        "tipo": "turing",
+        "kicker": "La guerra · Enigma",
+        "titulo": "Una máquina para descifrar el código",
+        "resalta": [
+          "código"
+        ],
+        "texto": "Buscó los patrones de los mensajes cifrados de los nazis.",
+        "motivo": "con una máquina descifraron el código de los nazis"
+      },
+      {
+        "en": 979.5,
+        "dura": 16,
+        "tipo": "lista",
+        "kicker": "Así funciona tu celular",
+        "titulo": "Memoria, procesador y programa",
+        "items": [
+          "Memoria: guarda la información (disco duro y RAM)",
+          "Procesador: es como el cerebro",
+          "Programa: el software que va encima del hardware"
+        ],
+        "motivo": "memoria, procesador como cerebro y programa como software"
+      },
+      {
+        "en": 1015.6,
+        "dura": 9,
+        "tipo": "frase",
+        "kicker": "Un computador por dentro",
+        "texto": "Por dentro no hay ideas, hay millones de interruptores que están encendidos o apagados.",
+        "resalta": [
+          "ideas,",
+          "interruptores"
+        ],
+        "motivo": "por dentro no hay ideas, solo interruptores encendidos o apagados"
+      },
+      {
+        "en": 1062,
+        "dura": 13,
+        "tipo": "cifra",
+        "kicker": "La CPU lee, entiende y ejecuta",
+        "numero": 1000000000,
+        "prefijo": "+",
+        "sufijo": " / s",
+        "texto": "Repite sus instrucciones miles de millones de veces por segundo.",
+        "motivo": "la CPU repite miles de millones de veces por segundo"
+      },
+      {
+        "en": 1115.5,
+        "dura": 15,
+        "tipo": "linea",
+        "kicker": "Parada 02 · Hanover",
+        "titulo": "Verano de 1956: nace el nombre",
+        "hitos": [
+          {
+            "anio": "1948",
+            "texto": "La Baby de Manchester"
+          },
+          {
+            "anio": "1950",
+            "texto": "La pregunta de Turing"
+          },
+          {
+            "anio": "1956",
+            "texto": "Dartmouth: «inteligencia artificial»"
+          },
+          {
+            "anio": "2012",
+            "texto": "AlexNet"
+          },
+          {
+            "anio": "2022",
+            "texto": "ChatGPT"
+          }
+        ],
+        "activo": 2,
+        "motivo": "en el verano de 1956 nace la inteligencia artificial"
+      },
+      {
+        "en": 1164.6,
+        "dura": 16,
+        "tipo": "lista",
+        "kicker": "La IA de reglas",
+        "titulo": "Expertos dictándole reglas a un programa",
+        "items": [
+          "Si hay fiebre y tos → gripa",
+          "Funcionó en problemas cerrados, como el ajedrez",
+          "Paciente con fiebre, cansancio y que volvió del Amazonas",
+          "Ninguna regla aplica"
+        ],
+        "motivo": "si hay fiebre y tos es gripa; ninguna regla aplica"
+      },
+      {
+        "en": 1216.6,
+        "dura": 15,
+        "tipo": "cifra",
+        "kicker": "Con reglas escritas, en el mejor caso",
+        "numero": 99,
+        "sufijo": " %",
+        "texto": "Llegar al 100 % no es posible: lo demostró Turing con el problema de la parada.",
+        "motivo": "puedes llegar al 99 %, pero el 100 % no es posible"
+      },
+      {
+        "en": 1250.4,
+        "dura": 8.5,
+        "tipo": "titular",
+        "kicker": "Años 70 y finales de los 80",
+        "titulo": "Los inviernos de la IA",
+        "resalta": [
+          "inviernos"
+        ],
+        "texto": "Las promesas no se cumplieron y se fue la plata.",
+        "icono": "Snowflake",
+        "motivo": "por eso hubo inviernos de la IA en los 70 y 80"
+      },
+      {
+        "en": 1267,
+        "dura": 12,
+        "tipo": "planeta",
+        "kicker": "Parada 03 · Toronto, 2012",
+        "titulo": "Una máquina que aprende mirando ejemplos",
+        "resalta": [
+          "ejemplos"
+        ],
+        "texto": "AlexNet ganó un concurso de reconocer imágenes, entrenada con tarjetas gráficas de videojuegos.",
+        "motivo": "viajamos a Toronto 2012: AlexNet aprende mirando ejemplos"
+      },
+      {
+        "en": 1288.3,
+        "dura": 14,
+        "tipo": "red",
+        "titulo": "Capas de puntos conectados",
+        "resalta": [
+          "conectados"
+        ],
+        "entrada": "foto de un gato",
+        "salida": "gato",
+        "texto": "Cada conexión tiene un peso: un número que dice cuánto influye.",
+        "motivo": "qué es una red neuronal: capas conectadas con pesos"
+      },
+      {
+        "en": 1336.6,
+        "dura": 11,
+        "tipo": "frase",
+        "kicker": "La regla queda repartida",
+        "texto": "Nadie escribió que el gato maúlla… eso fue una regla que quedó repartida en millones de números.",
+        "resalta": [
+          "millones",
+          "números."
+        ],
+        "motivo": "nadie escribió la regla: quedó repartida en millones de números"
+      },
+      {
+        "en": 1359,
+        "dura": 16,
+        "tipo": "red",
+        "kicker": "Capas de neuronas",
+        "titulo": "Las neuronas se van reforzando",
+        "resalta": [
+          "reforzando"
+        ],
+        "entrada": "foto de un perro",
+        "salida": "perro",
+        "texto": "Con millones de fotos, las conexiones se refuerzan y los pesos se ajustan.",
+        "motivo": "capas de neuronas que se unen y se van reforzando"
+      },
+      {
+        "en": 1387.2,
+        "dura": 10,
+        "tipo": "titular",
+        "kicker": "Por eso se llaman redes neuronales",
+        "titulo": "Aprender es repetir",
+        "resalta": [
+          "repetir"
+        ],
+        "texto": "El aprendizaje es la repetición: así entrenamos el músculo que es el cerebro.",
+        "icono": "Brain",
+        "motivo": "el aprendizaje es la repetición, como en el cerebro"
+      },
+      {
+        "en": 1424,
+        "dura": 16,
+        "tipo": "comparacion",
+        "kicker": "La llave de toda la clase",
+        "titulo": "Un programa obedece, un modelo predice",
+        "resalta": [
+          "obedece,",
+          "predice"
+        ],
+        "izq": {
+          "titulo": "Programa",
+          "icono": "Calculator",
+          "puntos": [
+            "Siempre responde lo mismo",
+            "Cuando no sabe, da error",
+            "Excel suma la columna"
+          ]
+        },
+        "der": {
+          "titulo": "Modelo de IA",
+          "icono": "Sparkles",
+          "puntos": [
+            "La respuesta puede variar",
+            "Cuando no sabe, responde algo que suena bien",
+            "Claude explica qué significa la columna"
+          ]
+        },
+        "motivo": "un programa obedece, un modelo predice"
+      },
+      {
+        "en": 1449.5,
+        "dura": 8,
+        "tipo": "frase",
+        "kicker": "Los asistentes de hoy combinan los dos",
+        "texto": "El modelo decide qué hacer y los programas lo hacen con exactitud.",
+        "resalta": [
+          "decide",
+          "exactitud."
+        ],
+        "motivo": "el modelo decide y los programas lo hacen con exactitud"
+      },
+      {
+        "en": 1507.8,
+        "dura": 16,
+        "tipo": "nube",
+        "kicker": "Capacidad de cómputo",
+        "titulo": "El modelo corre en otro computador",
+        "resalta": [
+          "otro"
+        ],
+        "texto": "Te conectas sin tener cientos de gigabytes de RAM ni tarjetas gráficas.",
+        "motivo": "te conectas al modelo sin tener toda esa capacidad de cómputo"
+      },
+      {
+        "en": 1538.3,
+        "dura": 16,
+        "tipo": "comparacion",
+        "kicker": "Puedes elegir el modelo",
+        "titulo": "No solamente está Claude",
+        "resalta": [
+          "Claude"
+        ],
+        "izq": {
+          "titulo": "Claude",
+          "icono": "Sparkles",
+          "puntos": [
+            "Empresa: Anthropic",
+            "Modelos: Opus, Fable, Sonnet"
+          ]
+        },
+        "der": {
+          "titulo": "ChatGPT",
+          "icono": "MessageCircle",
+          "puntos": [
+            "Empresa: OpenAI",
+            "También tiene sus modelos"
+          ]
+        },
+        "motivo": "no solo está Claude: también ChatGPT de OpenAI, con modelos"
+      },
+      {
+        "en": 1565,
+        "dura": 10,
+        "tipo": "titular",
+        "kicker": "Elegir el modelo",
+        "titulo": "Más potente, más tokens",
+        "resalta": [
+          "tokens"
+        ],
+        "texto": "Cuanto más potente es el modelo, más tokens gasta.",
+        "icono": "Gauge",
+        "motivo": "cuanto más potente el modelo, más tokens gasta"
+      },
+      {
+        "en": 1614.5,
+        "dura": 16,
+        "tipo": "prediccion",
+        "kicker": "Siguiente palabra · probabilidades ilustrativas",
+        "titulo": "Así se construye la respuesta",
+        "resalta": [
+          "respuesta"
+        ],
+        "frase": "El café de Colombia es",
+        "opciones": [
+          {
+            "p": "suave",
+            "prob": 0.38
+          },
+          {
+            "p": "famoso",
+            "prob": 0.24
+          },
+          {
+            "p": "único",
+            "prob": 0.08
+          },
+          {
+            "p": "caro",
+            "prob": 0.05
+          }
+        ],
+        "motivo": "café, de, Colombia, es… suave: la mayor probabilidad"
+      },
+      {
+        "en": 1649,
+        "dura": 11,
+        "tipo": "tokens",
+        "titulo": "El texto se corta en pedazos",
+        "resalta": [
+          "pedazos"
+        ],
+        "frase": "El café de Colombia es suave",
+        "texto": "Palabras o partes de palabras, y cada una se vuelve números.",
+        "motivo": "el texto se corta en tokens que se vuelven números"
+      },
+      {
+        "en": 1666.7,
+        "dura": 10,
+        "tipo": "frase",
+        "kicker": "Por eso se equivoca",
+        "texto": "A la inteligencia artificial no le importa acertar, lo que le importa es acercarse a la probabilidad.",
+        "resalta": [
+          "acertar,",
+          "probabilidad."
+        ],
+        "motivo": "a la IA no le importa acertar sino la probabilidad"
+      },
+      {
+        "en": 1727,
+        "dura": 12,
+        "tipo": "titular",
+        "kicker": "Programa vs. modelo",
+        "titulo": "Mismo prompt, respuestas distintas",
+        "resalta": [
+          "distintas"
+        ],
+        "texto": "En un modelo de IA, la respuesta puede variar.",
+        "icono": "Shuffle",
+        "motivo": "el mismo prompt puede dar respuestas completamente distintas"
+      },
+      {
+        "en": 1806.5,
+        "dura": 16,
+        "tipo": "apps",
+        "kicker": "No solo lenguaje",
+        "titulo": "Modelos para imagen, sonido… y para operar",
+        "resalta": [
+          "operar"
+        ],
+        "apps": [
+          {
+            "nombre": "Imágenes",
+            "icono": "Image",
+            "accion": "Genera imágenes, no solo lenguaje"
+          },
+          {
+            "nombre": "Música",
+            "icono": "Music",
+            "accion": "Genera sonido y música"
+          },
+          {
+            "nombre": "Tu computador",
+            "icono": "MousePointerClick",
+            "accion": "Abre este programa y lo cierra"
+          }
+        ],
+        "motivo": "modelos que generan imágenes, música y que operan programas"
+      },
+      {
+        "en": 1838.5,
+        "dura": 15,
+        "tipo": "linea",
+        "kicker": "Parada 05 · San Francisco",
+        "titulo": "30 de noviembre de 2022",
+        "hitos": [
+          {
+            "anio": "1950",
+            "texto": "Turing"
+          },
+          {
+            "anio": "1956",
+            "texto": "Dartmouth"
+          },
+          {
+            "anio": "2012",
+            "texto": "AlexNet"
+          },
+          {
+            "anio": "2017",
+            "texto": "El transformer"
+          },
+          {
+            "anio": "2022",
+            "texto": "ChatGPT abre al público"
+          },
+          {
+            "anio": "2023",
+            "texto": "Llegan Claude y Gemini"
+          }
+        ],
+        "activo": 4,
+        "motivo": "el 30 de noviembre de 2022 OpenAI abrió ChatGPT"
+      },
+      {
+        "en": 1869.9,
+        "dura": 8,
+        "tipo": "planeta",
+        "kicker": "La adopción más rápida",
+        "titulo": "Millones de usuarios en pocas semanas",
+        "resalta": [
+          "Millones"
+        ],
+        "texto": "Lo nuevo fue una caja de texto que cualquiera podía usar.",
+        "motivo": "en pocas semanas tuvo millones de usuarios"
+      },
+      {
+        "en": 1884,
+        "dura": 11,
+        "tipo": "titular",
+        "kicker": "Piénsenlo como un carro",
+        "titulo": "El modelo es el motor",
+        "resalta": [
+          "motor"
+        ],
+        "texto": "ChatGPT o Claude son el carro completo.",
+        "icono": "Car",
+        "motivo": "el modelo es el motor; ChatGPT o Claude, el carro"
+      },
+      {
+        "en": 1909.6,
+        "dura": 16,
+        "tipo": "comparacion",
+        "kicker": "Mala práctica",
+        "titulo": "No pongas a pelear dos IA",
+        "resalta": [
+          "pelear"
+        ],
+        "izq": {
+          "titulo": "Una IA",
+          "icono": "Bot",
+          "puntos": [
+            "Configurada y entrenada a su manera",
+            "Lo que para una está bien…"
+          ]
+        },
+        "der": {
+          "titulo": "La otra IA",
+          "icono": "Bot",
+          "puntos": [
+            "Entrenada de forma distinta",
+            "…para la otra puede estar mal"
+          ]
+        },
+        "motivo": "mala práctica ponerlas a luchar: fueron entrenadas distinto"
+      },
+      {
+        "en": 1962.4,
+        "dura": 9,
+        "tipo": "frase",
+        "kicker": "Por qué no ponerlas a pelear",
+        "texto": "Ella simplemente busca cómo de alguna forma darte la razón.",
+        "resalta": [
+          "darte",
+          "razón."
+        ],
+        "motivo": "entras en un bucle: la IA busca darte la razón"
+      },
+      {
+        "en": 1989.3,
+        "dura": 7.5,
+        "tipo": "titular",
+        "kicker": "Lo que no es",
+        "titulo": "Ni buscador ni oráculo",
+        "resalta": [
+          "buscador",
+          "oráculo"
+        ],
+        "texto": "Simplemente calcula una respuesta probable.",
+        "icono": "SearchX",
+        "motivo": "no es un buscador ni un oráculo: calcula lo probable"
+      },
+      {
+        "en": 2013.3,
+        "dura": 15,
+        "tipo": "alucina",
+        "kicker": "Parada 06 · Nueva York, 2023",
+        "titulo": "Seis sentencias que nunca existieron",
+        "resalta": [
+          "nunca",
+          "existieron"
+        ],
+        "citas": [
+          "Varghese v. China Southern Airlines",
+          "Shaboon v. Egyptair",
+          "Petersen v. Iran Air"
+        ],
+        "texto": "Mata v. Avianca: fallos inventados con nombres, números y citas textuales.",
+        "motivo": "demandaron citando fallos inventados por ChatGPT"
+      },
+      {
+        "en": 2042.3,
+        "dura": 12,
+        "tipo": "cifra",
+        "kicker": "El resultado: el juez los multó",
+        "numero": 5000,
+        "prefijo": "US$ ",
+        "texto": "El error no fue usar la IA: fue no verificar.",
+        "motivo": "el juez los multó por 5 mil dólares"
+      },
+      {
+        "en": 2062.6,
+        "dura": 8,
+        "tipo": "frase",
+        "kicker": "Por qué pasa",
+        "texto": "Y a veces suena bien, pero no significa que sea verdad.",
+        "resalta": [
+          "suena",
+          "verdad."
+        ],
+        "motivo": "a veces suena bien, pero no significa que sea verdad"
+      },
+      {
+        "en": 2093.4,
+        "dura": 13,
+        "tipo": "lista",
+        "kicker": "Por qué alucina",
+        "titulo": "Tres razones",
+        "items": [
+          "No sabe que no sabe",
+          "Aprendió hasta cierta fecha: lo posterior no lo conoce",
+          "Fue entrenada para responder: decir «no sé» le cuesta más que inventar"
+        ],
+        "motivo": "no sabe que no sabe, fecha de corte, entrenada para responder"
+      },
+      {
+        "en": 2112.5,
+        "dura": 9,
+        "tipo": "prediccion",
+        "kicker": "Lo más probable que siga · ilustrativo",
+        "titulo": "Una cita falsa con formato correcto es muy probable",
+        "resalta": [
+          "probable"
+        ],
+        "frase": "Fallo sobre retrasos de vuelos:",
+        "opciones": [
+          {
+            "p": "Varghese",
+            "prob": 0.64
+          },
+          {
+            "p": "Shaboon",
+            "prob": 0.19
+          },
+          {
+            "p": "Petersen",
+            "prob": 0.09
+          },
+          {
+            "p": "«No sé»",
+            "prob": 0.02
+          }
+        ],
+        "motivo": "dame jurisprudencia sobre retrasos de vuelos: le dio lo probable"
+      },
+      {
+        "en": 2131,
+        "dura": 14,
+        "tipo": "contexto",
+        "titulo": "La memoria de trabajo del modelo",
+        "resalta": [
+          "memoria"
+        ],
+        "texto": "Solo ve lo que cabe ahí: la conversación, los archivos que subiste y lo que traen sus herramientas. Lo que no está ahí, lo adivina.",
+        "motivo": "la ventana de contexto: solo ve lo que cabe ahí"
+      },
+      {
+        "en": 2151.1,
+        "dura": 16,
+        "tipo": "lista",
+        "kicker": "Cómo protegerte",
+        "titulo": "Contra las alucinaciones",
+        "resalta": [
+          "alucinaciones"
+        ],
+        "items": [
+          "Dale la fuente",
+          "Pídele que cite la página",
+          "Abre un chat nuevo si la conversación es muy larga",
+          "Verifica lo que vayas a firmar: sale con tu firma"
+        ],
+        "motivo": "denle la fuente, pidan la página, chat nuevo, verifiquen"
+      },
+      {
+        "en": 2204.7,
+        "dura": 13,
+        "tipo": "titular",
+        "kicker": "Parte práctica · el crucero",
+        "titulo": "Lo que hace la diferencia",
+        "resalta": [
+          "diferencia"
+        ],
+        "texto": "Cómo configuras tus modelos, tus proyectos y las instrucciones en memoria.",
+        "icono": "Settings",
+        "motivo": "lo que hace la diferencia es cómo configuras la IA"
+      },
+      {
+        "en": 2412.8,
+        "dura": 12,
+        "tipo": "cifra",
+        "kicker": "El liquidador, con horas extra",
+        "numero": 7000000,
+        "prefijo": "$",
+        "texto": "Con 200 mil pesos en horas extra, la liquidación sube a 7 millones.",
+        "motivo": "pongámosle 200 mil en horas extra: sube a 7 millones"
+      },
+      {
+        "en": 2431,
+        "dura": 16,
+        "tipo": "lista",
+        "kicker": "Iterar",
+        "titulo": "Así se construyó el liquidador",
+        "items": [
+          "No quedó a la primera ni con un prompt mágico",
+          "Primero indagar: qué se necesita para liquidar",
+          "Tener los datos: reglas, normas y variables",
+          "Luego, el dashboard de la app"
+        ],
+        "motivo": "no hubo prompt mágico: primero indagar y tener los datos"
+      },
+      {
+        "en": 2479.8,
+        "dura": 11,
+        "tipo": "frase",
+        "texto": "Corrijámosle esto, corrijámosle lo otro. Y ahí como tres iteraciones después nos dio ya realmente el resultado que buscábamos.",
+        "resalta": [
+          "iteraciones"
+        ],
+        "motivo": "corrijámosle esto y lo otro: tres iteraciones después"
+      },
+      {
+        "en": 2635.6,
+        "dura": 12,
+        "tipo": "titular",
+        "kicker": "Legal design",
+        "titulo": "Existe desde hace muchísimo tiempo",
+        "resalta": [
+          "muchísimo"
+        ],
+        "texto": "Solo hasta ahora los abogados nos volvimos conscientes de que había que estudiarlo.",
+        "icono": "PenTool",
+        "motivo": "el legal design existe desde hace muchísimo tiempo"
+      },
+      {
+        "en": 2692.8,
+        "dura": 16,
+        "tipo": "comparacion",
+        "kicker": "¿Para qué un contrato holograma?",
+        "titulo": "No reemplaza al contrato: lo explica",
+        "resalta": [
+          "explica"
+        ],
+        "izq": {
+          "titulo": "El PDF",
+          "icono": "FileText",
+          "puntos": [
+            "El contrato sigue estando ahí",
+            "El derecho se siente hostil: autoridad, poder, fuerza"
+          ]
+        },
+        "der": {
+          "titulo": "El holograma",
+          "icono": "Sparkles",
+          "puntos": [
+            "Sirve para entender el contrato",
+            "Una forma más amena y menos hostil"
+          ]
+        },
+        "motivo": "el contrato sigue en PDF; el holograma ayuda a entenderlo"
+      },
+      {
+        "en": 2767,
+        "dura": 14,
+        "tipo": "apps",
+        "kicker": "Otras maravillas con artefactos",
+        "titulo": "Lo que se puede hacer con artefactos",
+        "resalta": [
+          "artefactos"
+        ],
+        "apps": [
+          {
+            "nombre": "Liquidador laboral",
+            "icono": "Calculator",
+            "accion": "Suma cesantías, prima, vacaciones e indemnización"
+          },
+          {
+            "nombre": "Contrato holograma",
+            "icono": "ScrollText",
+            "accion": "Explica el contrato cláusula por cláusula"
+          },
+          {
+            "nombre": "Archipiélago jurídico",
+            "icono": "Sailboat",
+            "accion": "Convierte un contrato en islas"
+          }
+        ],
+        "motivo": "voy a mostrarles otra de las maravillas con artefactos"
+      },
+      {
+        "en": 3110.5,
+        "dura": 16,
+        "tipo": "apps",
+        "titulo": "La IA maneja tu navegador",
+        "apps": [
+          {
+            "nombre": "Extensión de Chrome",
+            "icono": "Globe",
+            "accion": "hace clics como si fueras tú"
+          },
+          {
+            "nombre": "Correo",
+            "icono": "Mail",
+            "accion": "filtra las transacciones del año pasado"
+          },
+          {
+            "nombre": "Notion",
+            "icono": "Notebook",
+            "accion": "organiza cada pantallazo con su monto"
+          }
+        ],
+        "motivo": "extensión de Chrome: correos del año ordenados en Notion"
+      },
+      {
+        "en": 3161.5,
+        "dura": 10,
+        "tipo": "frase",
+        "kicker": "La clave de esta clase",
+        "texto": "La inteligencia artificial y su poder viene de cómo tú la conectes con otros programas.",
+        "resalta": [
+          "poder",
+          "conectes"
+        ],
+        "motivo": "el poder de la IA viene de conectarla con programas"
+      },
+      {
+        "en": 3191.5,
+        "dura": 16,
+        "tipo": "lista",
+        "titulo": "Lo primero: privacidad",
+        "items": [
+          "Paga un plan: es una inversión",
+          "No compartas tu información",
+          "Que no entrene sus modelos con tus chats"
+        ],
+        "motivo": "lo primero es privacidad: pagar plan y no entrenar modelos"
+      },
+      {
+        "en": 3218,
+        "dura": 13,
+        "tipo": "titular",
+        "kicker": "En la página de Trifuerza",
+        "titulo": "Anonimizador de documentos",
+        "resalta": [
+          "Anonimizador"
+        ],
+        "texto": "Convierte los datos sensibles en un documento anonimizado",
+        "icono": "EyeOff",
+        "motivo": "en la página de Trifuerza hay un anonimizador de documentos"
+      },
+      {
+        "en": 3261,
+        "dura": 16,
+        "tipo": "apps",
+        "titulo": "Herramientas en la página de Trifuerza",
+        "apps": [
+          {
+            "nombre": "Anonimizador",
+            "icono": "EyeOff",
+            "accion": "devuelve el nombre y la cédula en blanco"
+          },
+          {
+            "nombre": "Generador de QR",
+            "icono": "QrCode",
+            "accion": "crea códigos QR gratis"
+          },
+          {
+            "nombre": "Plugins jurídicos",
+            "icono": "Scale",
+            "accion": "por país: México, Argentina, Chile, Perú"
+          }
+        ],
+        "motivo": "anonimizador, generador de QR y plugins jurídicos por país"
+      },
+      {
+        "en": 3333,
+        "dura": 16,
+        "tipo": "comparacion",
+        "titulo": "Affinity: logos que no se pixelan",
+        "izq": {
+          "titulo": "Imagen en píxeles",
+          "icono": "Grid3x3",
+          "puntos": [
+            "Se pixela al agrandarla",
+            "Un logo así se ve poco profesional"
+          ]
+        },
+        "der": {
+          "titulo": "Vectores",
+          "icono": "PenTool",
+          "puntos": [
+            "Las imágenes no se pixelan",
+            "Ideal para el logo de tu empresa",
+            "Affinity es 100 % gratuito"
+          ]
+        },
+        "motivo": "Affinity y vectores: el logo de tu empresa sin pixelarse"
+      },
+      {
+        "en": 3367.5,
+        "dura": 15,
+        "tipo": "apps",
+        "titulo": "Conecta tu Google Calendar",
+        "apps": [
+          {
+            "nombre": "Claude en el celular",
+            "icono": "Smartphone",
+            "accion": "«Mañana tengo reunión: agendémosla»"
+          },
+          {
+            "nombre": "Google Calendar",
+            "icono": "CalendarDays",
+            "accion": "agenda la reunión y tu semestre"
+          }
+        ],
+        "motivo": "conectar Google Calendar y agendar desde el celular"
+      },
+      {
+        "en": 3394,
+        "dura": 16,
+        "tipo": "lista",
+        "titulo": "Más conectores",
+        "items": [
+          "Google Drive: organiza tus archivos",
+          "GitHub: la red social de los programadores",
+          "Notion: el Excel con superpoderes",
+          "Supabase: bases de datos",
+          "Blender: mundos en 3D"
+        ],
+        "motivo": "Drive, GitHub, Notion, Supabase y Blender como conectores"
+      },
+      {
+        "en": 3508.5,
+        "dura": 11,
+        "tipo": "titular",
+        "kicker": "Skills: píldoras de superpoderes",
+        "titulo": "Con una buena skill de diseño, diseña mejor",
+        "resalta": [
+          "skill",
+          "mejor"
+        ],
+        "icono": "Palette",
+        "motivo": "si diseña con una skill de diseño, diseña mejor"
+      },
+      {
+        "en": 3527,
+        "dura": 10,
+        "tipo": "cifra",
+        "kicker": "Iterar hasta dar con el estilo",
+        "numero": 5,
+        "sufijo": " meses",
+        "texto": "iterando hasta que las presentaciones quedaron así",
+        "motivo": "se demoró unos cinco meses iterando sus presentaciones"
+      },
+      {
+        "en": 3546,
+        "dura": 16,
+        "tipo": "apps",
+        "titulo": "Dale imágenes para que diseñe mejor",
+        "apps": [
+          {
+            "nombre": "Pinterest",
+            "icono": "Image",
+            "accion": "busca imágenes 3D de referencia"
+          },
+          {
+            "nombre": "Figma",
+            "icono": "Shapes",
+            "accion": "monta las imágenes en un tablero"
+          },
+          {
+            "nombre": "Google Drive",
+            "icono": "FolderOpen",
+            "accion": "carga cientos de imágenes en una carpeta"
+          }
+        ],
+        "motivo": "imágenes 3D de Pinterest montadas en Figma o Drive"
+      },
+      {
+        "en": 3609,
+        "dura": 15,
+        "tipo": "comparacion",
+        "titulo": "Guarda en un skill lo que te gustó",
+        "izq": {
+          "titulo": "Sin skill",
+          "icono": "Shuffle",
+          "puntos": [
+            "La IA hace las cosas distinto cada vez"
+          ]
+        },
+        "der": {
+          "titulo": "Con skill",
+          "icono": "Save",
+          "puntos": [
+            "Guardas el método que usó en ese contrato",
+            "Le puedes pedir a la IA que cree el skill"
+          ]
+        },
+        "motivo": "guardar en un skill el método de un contrato que gustó"
+      },
+      {
+        "en": 3665,
+        "dura": 12,
+        "tipo": "titular",
+        "kicker": "Plugin de Trifuerza",
+        "titulo": "Un plugin jurídico para Colombia",
+        "resalta": [
+          "jurídico",
+          "Colombia"
+        ],
+        "texto": "Varios skills juntos, listos para descargar",
+        "icono": "Scale",
+        "motivo": "plugin jurídico para Colombia que se pueden descargar"
+      },
+      {
+        "en": 3684,
+        "dura": 16,
+        "tipo": "lista",
+        "titulo": "Skills que trae el plugin",
+        "items": [
+          "Crear contrato, demanda y denuncia",
+          "Acción constitucional y derecho de petición",
+          "Recurso, memorial y poder",
+          "Analizar contrato, documento y caso",
+          "Calcular términos y verificar citas",
+          "Anonimizar documentos"
+        ],
+        "motivo": "lista de skills: crear contrato, demanda, analizar, calcular términos"
+      },
+      {
+        "en": 3718.5,
+        "dura": 16,
+        "tipo": "titular",
+        "kicker": "Pregunta del chat",
+        "titulo": "¿Qué prompt crea un artefacto?",
+        "resalta": [
+          "artefacto"
+        ],
+        "texto": "«Vamos a hacer un artefacto sobre este tema…» y, para que quede más bonito, «constrúyelo en React»",
+        "icono": "Sparkles",
+        "motivo": "qué tipo de prompt se necesita para crear un artefacto"
+      },
+      {
+        "en": 3822.5,
+        "dura": 16,
+        "tipo": "comparacion",
+        "titulo": "De Claude Chat a Claude Code",
+        "izq": {
+          "titulo": "Claude Chat",
+          "icono": "MessageSquare",
+          "puntos": [
+            "Un chat: «hazme esto, hazme lo otro»"
+          ]
+        },
+        "der": {
+          "titulo": "Claude Code",
+          "icono": "SquareTerminal",
+          "puntos": [
+            "Trabaja sobre carpetas",
+            "En Drive, OneDrive o tu computador",
+            "Ahí le das la memoria del caso"
+          ]
+        },
+        "motivo": "de Claude Chat a Claude Code, trabajando sobre carpetas"
+      },
+      {
+        "en": 3862,
+        "dura": 11,
+        "tipo": "frase",
+        "kicker": "Aprender, no copiar",
+        "texto": "Yo no le voy a decir: venga, inteligencia artificial, y estudie por mí.",
+        "resalta": [
+          "estudie",
+          "por",
+          "mí"
+        ],
+        "motivo": "le pide guías del MBA, pero no que estudie por él"
+      },
+      {
+        "en": 3889.5,
+        "dura": 16,
+        "tipo": "lista",
+        "titulo": "Así nació el skill «guía clase»",
+        "items": [
+          "Primero lo hizo mal",
+          "«Arreglemos esto, arreglemos lo otro»",
+          "Le fui enseñando cómo lo quería",
+          "Ahora sale a mi estilo y con mis colores"
+        ],
+        "motivo": "primero lo hizo mal; le enseñó y creó el skill guía clase"
+      },
+      {
+        "en": 3938,
+        "dura": 10,
+        "tipo": "frase",
+        "kicker": "Por qué funcionan las guías visuales",
+        "texto": "Los humanos a veces entendemos mejor así: con tablitas, con columnas, con cuadraditos.",
+        "resalta": [
+          "tablitas",
+          "columnas",
+          "cuadraditos"
+        ],
+        "motivo": "entendemos mejor con tablitas, columnas y cuadraditos"
+      },
+      {
+        "en": 3955,
+        "dura": 11,
+        "tipo": "titular",
+        "kicker": "Claude Code",
+        "titulo": "Se llama Code, pero no es solo para programar",
+        "resalta": [
+          "Code",
+          "solo"
+        ],
+        "texto": "Sirve para trabajar a profundidad",
+        "icono": "SquareTerminal",
+        "motivo": "Claude Code no solamente sirve para programar"
+      },
+      {
+        "en": 4010,
+        "dura": 16,
+        "tipo": "lista",
+        "titulo": "No solo piensa: arma un plan",
+        "items": [
+          "Ver la portada como está hoy",
+          "Rediseñarla",
+          "Regenerar",
+          "Revisar y guardar"
+        ],
+        "motivo": "Claude Code crea un plan en varios pasos"
+      },
+      {
+        "en": 4034,
+        "dura": 12,
+        "tipo": "titular",
+        "kicker": "Para que no dañe nada",
+        "titulo": "Antes de ejecutar, pídele un plan",
+        "resalta": [
+          "plan"
+        ],
+        "texto": "Planificar, optimizar, auditar o hacer un artefacto para ver cómo queda",
+        "icono": "ClipboardList",
+        "motivo": "antes, decirle que planifique, audite o haga un artefacto"
+      },
+      {
+        "en": 4106,
+        "dura": 16,
+        "tipo": "apps",
+        "titulo": "Un artefacto para probar el diseño",
+        "apps": [
+          {
+            "nombre": "Página web",
+            "icono": "Globe",
+            "accion": "el menú que estaba configurando"
+          },
+          {
+            "nombre": "Artefacto",
+            "icono": "SlidersHorizontal",
+            "accion": "ajusta tamaño, color y transparencia"
+          },
+          {
+            "nombre": "Código",
+            "icono": "Code",
+            "accion": "se programa cuando ya te gusta"
+          }
+        ],
+        "motivo": "artefacto para ajustar tamaño, color y transparencia del menú"
+      },
+      {
+        "en": 4167,
+        "dura": 16,
+        "tipo": "titular",
+        "kicker": "Elige el modelo",
+        "titulo": "Los modelos tienen diferentes tamaños",
+        "resalta": [
+          "tamaños"
+        ],
+        "texto": "Para tareas de muchos pasos y difíciles, el más avanzado",
+        "icono": "Cpu",
+        "motivo": "modelos de distintos tamaños; lo difícil, al más avanzado"
+      },
+      {
+        "en": 4195,
+        "dura": 16,
+        "tipo": "lista",
+        "titulo": "El selector de modelo",
+        "items": [
+          "Modelos: Opus y Fable",
+          "Esfuerzo: medio, alto, extra o máximo",
+          "Opus en esfuerzo medio es más que suficiente",
+          "Fable: el más capaz, gasta tokens rápido"
+        ],
+        "motivo": "Opus, Fable y el nivel de esfuerzo en Claude"
+      },
+      {
+        "en": 4272.5,
+        "dura": 16,
+        "tipo": "comparacion",
+        "titulo": "Piénsalo como construir un edificio",
+        "izq": {
+          "titulo": "Arquitecto · modelo grande",
+          "icono": "Ruler",
+          "puntos": [
+            "Planifica y diseña",
+            "Cobra más: gasta más tokens"
+          ]
+        },
+        "der": {
+          "titulo": "Obrero · modelo económico",
+          "icono": "HardHat",
+          "puntos": [
+            "Hace las tareas operativas",
+            "Más efectivo para construir"
+          ]
+        },
+        "motivo": "arquitecto caro planifica, obrero económico construye"
+      },
+      {
+        "en": 4295,
+        "dura": 14,
+        "tipo": "ciudad",
+        "titulo": "El obrero sabe los truquitos",
+        "texto": "Cuánta arena, cemento y agua lleva el concreto: el oficio del modelo que ejecuta",
+        "motivo": "el obrero sabe hacer concreto: arena, cemento y agua"
+      },
+      {
+        "en": 4326,
+        "dura": 16,
+        "tipo": "lista",
+        "titulo": "Bajar de modelo para el día a día",
+        "items": [
+          "Producir contratos, demandas y código",
+          "Correos y resúmenes",
+          "Análisis de documentos",
+          "Clasificar, traducir y extraer datos"
+        ],
+        "motivo": "modelo más pequeño para correos, resúmenes y extraer datos"
+      },
+      {
+        "en": 4362,
+        "dura": 16,
+        "tipo": "apps",
+        "titulo": "Proyectos con memoria",
+        "apps": [
+          {
+            "nombre": "Proyecto · cliente",
+            "icono": "Briefcase",
+            "accion": "recuerda todo lo de ese cliente"
+          },
+          {
+            "nombre": "Proyecto · carrera",
+            "icono": "GraduationCap",
+            "accion": "te acompaña en lo que estudias"
+          },
+          {
+            "nombre": "Proyecto · trabajo",
+            "icono": "Building",
+            "accion": "ordena los temas de tu trabajo"
+          }
+        ],
+        "motivo": "un proyecto por cliente, por carrera, por trabajo"
+      },
+      {
+        "en": 4399.5,
+        "dura": 11,
+        "tipo": "frase",
+        "kicker": "Lo que quiero que se lleven",
+        "texto": "Cacharreen. Que no le tengan miedo a que se rompa, a dañarlo todo y a volver a empezar.",
+        "resalta": [
+          "Cacharreen",
+          "volver",
+          "empezar"
+        ],
+        "motivo": "cacharreen: ensayo y error sin miedo a dañarlo"
+      },
+      {
+        "en": 4448,
+        "dura": 16,
+        "tipo": "apps",
+        "titulo": "Conectores encadenados",
+        "apps": [
+          {
+            "nombre": "Google Drive",
+            "icono": "FolderOpen",
+            "accion": "el artefacto toma tus archivos"
+          },
+          {
+            "nombre": "Notion",
+            "icono": "Notebook",
+            "accion": "luego entra y organiza"
+          },
+          {
+            "nombre": "Figma",
+            "icono": "Shapes",
+            "accion": "luego pasa al diseño"
+          },
+          {
+            "nombre": "Blender",
+            "icono": "Cuboid",
+            "accion": "diseña esto en 3D"
+          }
+        ],
+        "motivo": "artefacto conectado a Drive, Notion, Figma y Blender"
+      },
+      {
+        "en": 4479,
+        "dura": 12,
+        "tipo": "titular",
+        "kicker": "Truco",
+        "titulo": "Los skills se llaman con /",
+        "resalta": [
+          "/"
+        ],
+        "texto": "Escribe la barra y aparecen los que tienes instalados",
+        "icono": "SquareSlash",
+        "motivo": "los skills se convocan escribiendo slash"
+      },
+      {
+        "en": 4513.5,
+        "dura": 16,
+        "tipo": "comparacion",
+        "titulo": "Por qué mi skill no te sirve tal cual",
+        "izq": {
+          "titulo": "Mi skill",
+          "icono": "UserRound",
+          "puntos": [
+            "Conectado a mi Drive y mi Hotmail",
+            "Con mi marca, Trifuerza"
+          ]
+        },
+        "der": {
+          "titulo": "El tuyo",
+          "icono": "Wrench",
+          "puntos": [
+            "Tus archivos en OneDrive u otro lugar",
+            "Créalo iterando y probando"
+          ]
+        },
+        "motivo": "su skill está configurado con su Drive, Hotmail y marca"
+      },
+      {
+        "en": 4597.5,
+        "dura": 10,
+        "tipo": "titular",
+        "kicker": "Claude Code",
+        "titulo": "Un agente que planea, usa herramientas, revisa y corrige",
+        "resalta": [
+          "planea",
+          "corrige"
+        ],
+        "texto": "En tu computador, con tus archivos y con tu permiso",
+        "icono": "Bot",
+        "motivo": "agente que no solo responde: planea, revisa y corrige"
+      },
+      {
+        "en": 4614,
+        "dura": 14,
+        "tipo": "apps",
+        "titulo": "Claude Code ordena tu computador",
+        "apps": [
+          {
+            "nombre": "Carpeta de PDF",
+            "icono": "FileStack",
+            "accion": "renombra 300 PDF guardados"
+          },
+          {
+            "nombre": "Tus carpetas",
+            "icono": "FolderTree",
+            "accion": "ordena todo el desorden"
+          },
+          {
+            "nombre": "Informe",
+            "icono": "FileText",
+            "accion": "saca un informe"
+          },
+          {
+            "nombre": "Finanzas",
+            "icono": "Wallet",
+            "accion": "organiza tus finanzas correo por correo"
+          }
+        ],
+        "motivo": "renombrar 300 PDF, ordenar carpetas, informes y finanzas"
+      },
+      {
+        "en": 4655.5,
+        "dura": 16,
+        "tipo": "lista",
+        "titulo": "Qué pedirle según tu oficio",
+        "items": [
+          "Abogado: revisar y redactar",
+          "Docente: preparar y evaluar",
+          "Emprendedor: vender y ordenar",
+          "Estudiante: aprender, no copiar",
+          "Creativo: idear y producir"
+        ],
+        "motivo": "abogado revisa, docente prepara, emprendedor vende, estudiante aprende"
+      },
+      {
+        "en": 4688,
+        "dura": 16,
+        "tipo": "riesgo",
+        "titulo": "Unión Europea, 2024: regular por riesgo",
+        "pisos": [
+          {
+            "nombre": "Prohibido",
+            "ejemplo": "Puntuar socialmente a las personas"
+          },
+          {
+            "nombre": "Alto riesgo",
+            "ejemplo": "Contratar, dar crédito o justicia, con controles estrictos"
+          },
+          {
+            "nombre": "Transparencia",
+            "ejemplo": "Si hablas con una IA, te lo deben decir"
+          },
+          {
+            "nombre": "Riesgo mínimo",
+            "ejemplo": "Libre"
+          }
+        ],
+        "motivo": "reglamento europeo de IA 2024: prohibido, alto riesgo, transparencia"
+      },
+      {
+        "en": 4714,
+        "dura": 9,
+        "tipo": "titular",
+        "kicker": "Colombia",
+        "titulo": "Aún no hay ley de IA, pero sí hay reglas",
+        "resalta": [
+          "sí",
+          "reglas"
+        ],
+        "texto": "Ley 1581 de 2012: protección de datos personales",
+        "icono": "Scale",
+        "motivo": "en Colombia no hay ley de IA, pero sí reglas"
+      },
+      {
+        "en": 4729,
+        "dura": 15,
+        "tipo": "comparacion",
+        "titulo": "Datos personales en la IA",
+        "izq": {
+          "titulo": "No pegues",
+          "icono": "Ban",
+          "puntos": [
+            "Cédulas",
+            "Historias clínicas",
+            "Datos de clientes sin autorización"
+          ]
+        },
+        "der": {
+          "titulo": "Mejor así",
+          "icono": "ShieldCheck",
+          "puntos": [
+            "Una cláusula de autorización",
+            "Anonimiza",
+            "Que tu plan no entrene con tus chats"
+          ]
+        },
+        "motivo": "Ley 1581: no pegar cédulas ni historias clínicas; anonimizar"
+      },
+      {
+        "en": 4752,
+        "dura": 12,
+        "tipo": "frase",
+        "kicker": "Corte Constitucional · T-323 de 2024",
+        "texto": "La inteligencia artificial es para apoyar al juez o a los abogados, no para reemplazarlos.",
+        "resalta": [
+          "apoyar",
+          "reemplazarlos"
+        ],
+        "motivo": "sentencia T-323 de 2024: apoyar al juez, no reemplazarlo"
+      },
+      {
+        "en": 4788.5,
+        "dura": 16,
+        "tipo": "lista",
+        "titulo": "Ideas para llevarte",
+        "items": [
+          "La IA pasó de reglas escritas a patrones aprendidos",
+          "Un modelo predice la siguiente palabra; no consulta una verdad",
+          "Inventa cuando no tiene la fuente: dásela y verifica",
+          "Proyectos, artefactos, conectores, skills y agentes: tu copiloto"
+        ],
+        "motivo": "cinco ideas: reglas a patrones, predice palabra, inventa, copiloto"
+      },
+      {
+        "en": 4811,
+        "dura": 8,
+        "tipo": "frase",
+        "kicker": "Idea cinco",
+        "texto": "La herramienta ayuda, pero la firma sigue siendo de ustedes.",
+        "resalta": [
+          "firma"
+        ],
+        "motivo": "la herramienta ayuda, pero la firma es de ustedes"
+      },
+      {
+        "en": 4825,
+        "dura": 11,
+        "tipo": "titular",
+        "kicker": "Tarea de esta semana",
+        "titulo": "Crea un proyecto para algo que haces cada semana",
+        "resalta": [
+          "proyecto"
+        ],
+        "texto": "En tus carpetas con Claude Code o en un proyecto",
+        "icono": "FolderOpen",
+        "motivo": "tarea: crear un proyecto para algo de la semana"
+      },
+      {
+        "en": 4933,
+        "dura": 16,
+        "tipo": "lista",
+        "titulo": "Encuesta: ¿qué curso hacemos?",
+        "items": [
+          "Edición de videos con IA",
+          "Crea tu primera aplicación con IA",
+          "IA para el derecho",
+          "Propón tu propio curso",
+          "Pregrabado, en vivo o mixto"
+        ],
+        "motivo": "opciones de la encuesta de próximos cursos"
+      },
+      {
+        "en": 4956,
+        "dura": 13,
+        "tipo": "apps",
+        "titulo": "Sigamos en contacto",
+        "apps": [
+          {
+            "nombre": "Chat del evento",
+            "icono": "MessagesSquare",
+            "accion": "ahí quedó el link"
+          },
+          {
+            "nombre": "WhatsApp",
+            "icono": "MessageCircle",
+            "accion": "únete a la comunidad de Trifuerza"
+          }
+        ],
+        "motivo": "link de la comunidad de Trifuerza en WhatsApp"
+      },
+      {
+        "en": 4977,
+        "dura": 12,
+        "tipo": "titular",
+        "kicker": "Al terminar la clase",
+        "titulo": "Tu certificado se genera automáticamente",
+        "resalta": [
+          "certificado"
+        ],
+        "texto": "Queda en la plataforma, en la sección de certificados",
+        "icono": "Award",
+        "motivo": "el certificado se genera automáticamente en la plataforma"
+      },
+      {
+        "en": 5006,
+        "dura": 16,
+        "tipo": "planeta",
+        "titulo": "Democratizar el conocimiento",
+        "texto": "Pensando en un mundo mejor. Si nos va bien a uno, nos va bien a todos.",
+        "motivo": "misión: democratizar el conocimiento pensando en un mundo mejor"
+      },
+      {
+        "en": 5143,
+        "dura": 14,
+        "tipo": "titular",
+        "kicker": "Pregunta del público",
+        "titulo": "¿Cómo entrar a la IA sin saber programar?",
+        "resalta": [
+          "sin",
+          "programar"
+        ],
+        "texto": "Las especializaciones piden Java y programación",
+        "icono": "GraduationCap",
+        "motivo": "especializaciones exigen Java; cómo adentrarse sin ser de sistemas"
+      },
+      {
+        "en": 5189.5,
+        "dura": 16,
+        "tipo": "comparacion",
+        "titulo": "Depende de lo que busques",
+        "izq": {
+          "titulo": "Educación informal",
+          "icono": "Lightbulb",
+          "puntos": [
+            "Aprendizajes técnicos y prácticos",
+            "No da título profesional"
+          ]
+        },
+        "der": {
+          "titulo": "Posgrado",
+          "icono": "GraduationCap",
+          "puntos": [
+            "Título profesional",
+            "Especialización o maestría"
+          ]
+        },
+        "motivo": "aspecto técnico o profesional: educación informal o posgrado"
+      },
+      {
+        "en": 5273,
+        "dura": 14,
+        "tipo": "ciudad",
+        "titulo": "Una ciudad llena de servicios",
+        "texto": "Un universo enorme donde aplicar la IA en el día a día",
+        "motivo": "en lo público la IA aún está cruda; universo enorme"
+      },
+      {
+        "en": 5398,
+        "dura": 16,
+        "tipo": "planeta",
+        "titulo": "Estudiar online",
+        "texto": "Ahorras tiempo de movilidad y estudias con gente de toda Hispanoamérica",
+        "motivo": "fan de la educación online, compañeros de Hispanoamérica"
+      },
+      {
+        "en": 5420,
+        "dura": 16,
+        "tipo": "lista",
+        "titulo": "Un camino para entrarle a la IA",
+        "items": [
+          "Hay maestrías y especializaciones en IA",
+          "Los cursos prácticos te dan la base",
+          "Llega a tu maestría preparado, no en cero"
+        ],
+        "motivo": "maestrías en IA; llegar preparado con cursos prácticos"
+      },
+      {
+        "en": 5476,
+        "dura": 14,
+        "tipo": "titular",
+        "kicker": "IA para lo público",
+        "titulo": "Políticas públicas con inteligencia artificial",
+        "resalta": [
+          "Políticas",
+          "públicas"
+        ],
+        "texto": "En lo público hay harto por hacer",
+        "icono": "Landmark",
+        "motivo": "usar IA para políticas públicas; hay harto que hacer"
+      },
+      {
+        "en": 5562,
+        "dura": 16,
+        "tipo": "lista",
+        "titulo": "Antes de despedirnos",
+        "items": [
+          "La clase queda grabada en el sistema",
+          "Para repasar el tema que quieran",
+          "Les llega una notificación al publicarla"
+        ],
+        "motivo": "la clase queda grabada para repasar; llega notificación"
+      },
+      {
+        "en": 5588.5,
+        "dura": 12,
+        "tipo": "apps",
+        "titulo": "Sígueme",
+        "apps": [
+          {
+            "nombre": "Instagram",
+            "icono": "Camera",
+            "accion": "sígueme como juanda.trifuerza"
+          },
+          {
+            "nombre": "WhatsApp",
+            "icono": "MessageCircle",
+            "accion": "sigamos hablando en la comunidad"
+          }
+        ],
+        "motivo": "síganme en Instagram como Juanda Trifuerza"
+      }
+    ]
+  },
   "verificar": [
+    "Casos inventados citados en Mata v. Avianca (S.D.N.Y. 2023): Varghese v. China Southern Airlines, Shaboon v. EgyptAir, Petersen v. Iran Air; multa de US$ 5.000 (escenas contextuales del remontaje)",
+    "Sentencia T-323 de 2024 (Corte Constitucional) citada por el profesor (escena «frase» del remontaje)",
     "Ley 1581 de 2012 (datos personales, Colombia)",
     "Sentencia T-323 de 2024 de la Corte Constitucional",
     "Reglamento de IA de la Unión Europea, 2024",

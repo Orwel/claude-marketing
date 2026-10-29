@@ -30,7 +30,8 @@
     "gameplay": "node src/sofa/gameplay.js",
     "clase": "node src/clase/armar.js",
     "clase-subir": "node src/clase/subir.js",
-    "clase-capitulos": "node src/clase/capitulos.js"
+    "clase-capitulos": "node src/clase/capitulos.js",
+    "clase-remontaje": "node src/clase/remontaje.js"
   },
   "dependencies": {
     "@react-three/drei": "^10.7.9",
