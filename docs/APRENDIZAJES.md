@@ -789,8 +789,9 @@ Videos: IMG_3770, IMG_3772 e IMG_3776 de octubre (iPhone). Salieron `la-ia-que-n
   cuadro a cuadro (`trailer/logo/0001.jpg…`) con su sonido en WAV aparte, y mostrarlo con `<Img>` según el cuadro.
   Lo mismo pasó con los clips de la clase (que en el tráiler anterior sí funcionaban): con ~600 MB de RAM libre el
   compositor pierde cuadros. Momento (Trailer.jsx) acepta `cuadros` + `n` + `sonido` para ir con JPG en vez de video.
-- Con poca RAM libre (otras sesiones armando la clase y builds de Next) el render con --concurrency=3 cerró el navegador
-  («Target closed»): para el planeta 3D usar --concurrency=2.
+- Un «Target closed» del 28-oct (~16:20) no fue la RAM: otra sesión corrió `taskkill /IM chrome-headless-shell.exe` y
+  cerró los navegadores de Remotion de todas las sesiones. Nunca matar procesos por nombre; solo por PID propio.
+  Aun así, con poca RAM libre, para el planeta 3D usar --concurrency=2 (o 1 si sale ERR_INSUFFICIENT_RESOURCES).
 - `remotion still` con three.js tarda 2–4 min por cuadro (arranca el navegador y arma el planeta cada vez): pocas tomas.
 - `python -I` ignora PYTHONIOENCODING: en Windows la entrada y la salida estándar quedan en cp1252 y los saltos de línea
   salen como CRLF. Nunca reescribir un JSON por la salida estándar; abrir el archivo con `encoding='utf8'` y `newline='\n'`.
