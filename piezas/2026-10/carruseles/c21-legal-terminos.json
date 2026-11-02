@@ -1,0 +1,92 @@
+{
+  "slug": "c21-legal-terminos",
+  "titulo": "Trifuerza Legal: no se te pasa un término",
+  "plantilla": "Carrusel",
+  "tipo": "carrusel",
+  "formato": "carrusel",
+  "segundos": 6,
+  "cuentas": [
+    "trifuerza"
+  ],
+  "colores": {
+    "acento": "#C9A227",
+    "fondo": "#030712",
+    "fondo2": "#0B1220",
+    "linea": "#1F2937"
+  },
+  "pie": "trifuerza.co/legal",
+  "laminas": [
+    {
+      "metafora": "reloj",
+      "datos": {
+        "numero": 3,
+        "unidad": "días hábiles"
+      },
+      "antetitulo": "Trifuerza Legal",
+      "titulo": "¿Cuántos términos *vigilas a mano?*"
+    },
+    {
+      "metafora": "lupa",
+      "datos": {
+        "etiqueta": "Nueva actuación",
+        "renglon": 4
+      },
+      "antetitulo": "Todos los días",
+      "titulo": "Revisamos la Rama Judicial *por ti.*",
+      "texto": "Cada proceso, cada actuación."
+    },
+    {
+      "metafora": "alarma",
+      "datos": {
+        "etiqueta": "Término",
+        "aviso": "Vence en 3 días",
+        "detalle": "Proceso 0457 · contestar"
+      },
+      "antetitulo": "Antes, no después",
+      "titulo": "La alerta llega *antes del vencimiento.*"
+    },
+    {
+      "metafora": "tablero",
+      "datos": {
+        "titulo": "Procesos del despacho",
+        "filas": [
+          "Proceso 0451",
+          "Proceso 0457",
+          "Proceso 0463",
+          "Proceso 0470",
+          "Proceso 0472"
+        ],
+        "alerta": 1,
+        "textoListo": "Al día",
+        "textoAlerta": "Término corriendo"
+      },
+      "antetitulo": "Para el socio",
+      "titulo": "Ves en qué va cada proceso *y quién lo lleva.*"
+    },
+    {
+      "metafora": "balanza",
+      "datos": {
+        "izq": "Ejercicio",
+        "der": "Software"
+      },
+      "antetitulo": "Por qué es distinto",
+      "titulo": "Lo hizo un abogado litigante *que programa.*",
+      "texto": "Las alertas están pensadas desde el ejercicio."
+    }
+  ],
+  "variantes": {
+    "trifuerza": {
+      "copy": "No se te pasa un término.\n\nTrifuerza Legal revisa la Rama Judicial todos los días, te avisa antes de que corra el término y le muestra al socio en qué va cada proceso y quién lo lleva.\n\nLo construyó un abogado litigante que también programa.\n\nConócelo en trifuerza.co/legal"
+    }
+  },
+  "verificar": [
+    {
+      "dato": "Funcionalidades de Trifuerza Legal (consulta diaria a la Rama, alertas antes del vencimiento, tablero por proceso y responsable): confirmar contra trifuerza.co/legal.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Números de proceso de las láminas son de ejemplo, no reales.",
+      "estado": "pendiente"
+    }
+  ]
+}

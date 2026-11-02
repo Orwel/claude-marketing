@@ -1,0 +1,65 @@
+{
+  "slug": "c23-tech-ley-diseno",
+  "titulo": "Trifuerza Technology: cumple la ley desde el diseño",
+  "plantilla": "Carrusel",
+  "tipo": "carrusel",
+  "formato": "carrusel",
+  "segundos": 6,
+  "cuentas": [
+    "trifuerza"
+  ],
+  "pie": "Agenda un diagnóstico",
+  "laminas": [
+    {
+      "metafora": "candado",
+      "datos": {
+        "etiqueta": "Desde el diseño"
+      },
+      "antetitulo": "Trifuerza Technology",
+      "titulo": "Software que *cumple la ley* desde el diseño."
+    },
+    {
+      "metafora": "rompecabezas",
+      "datos": {
+        "etiqueta": "Datos personales"
+      },
+      "antetitulo": "No parchado después",
+      "titulo": "Datos personales, firma y trazabilidad *desde el inicio.*"
+    },
+    {
+      "metafora": "balanza",
+      "datos": {
+        "izq": "Negocio",
+        "der": "Norma"
+      },
+      "antetitulo": "La diferencia",
+      "titulo": "Quien lo construye entiende *el negocio y la norma.*",
+      "texto": "Abogado y arquitecto de software."
+    },
+    {
+      "metafora": "pasos",
+      "datos": {
+        "items": [
+          "Diagnóstico",
+          "Alcance",
+          "Riesgos",
+          "Estimación"
+        ]
+      },
+      "antetitulo": "Cómo empezamos",
+      "titulo": "Un diagnóstico: *dos sesiones y un documento.*",
+      "texto": "Con alcance, riesgos y estimación."
+    }
+  ],
+  "variantes": {
+    "trifuerza": {
+      "copy": "Software que cumple la ley desde el diseño.\n\nDatos personales, firma y trazabilidad resueltos desde el inicio, no parchados después. Lo construye alguien que entiende el negocio y la norma.\n\nEmpezamos con un diagnóstico: dos sesiones y un documento con alcance, riesgos y estimación. Escríbenos."
+    }
+  },
+  "verificar": [
+    {
+      "dato": "Oferta de Trifuerza Technology (diagnóstico de dos sesiones con documento de alcance, riesgos y estimación): confirmar que ya se ofrece así.",
+      "estado": "pendiente"
+    }
+  ]
+}

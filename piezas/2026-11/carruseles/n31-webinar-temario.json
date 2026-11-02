@@ -1,0 +1,104 @@
+{
+  "slug": "n31-webinar-temario",
+  "titulo": "Lo que vas a aprender en el webinar",
+  "plantilla": "Carrusel",
+  "tipo": "carrusel",
+  "formato": "carrusel",
+  "segundos": 6,
+  "cuentas": [
+    "contrappto"
+  ],
+  "pie": "Inscríbete gratis · enlace en la bio",
+  "laminas": [
+    {
+      "metafora": "calendario",
+      "datos": {
+        "dia": 19,
+        "inicio": 6,
+        "dias": 30
+      },
+      "antetitulo": "Webinar gratuito",
+      "titulo": "Nociones contractuales *básicas*",
+      "texto": "Jueves 19 de noviembre."
+    },
+    {
+      "metafora": "chat",
+      "datos": {
+        "pregunta": "Te pago el viernes, tranqui. ¿Firmamos algo?",
+        "respuesta": "Entre nosotros no hace falta."
+      },
+      "antetitulo": "Bloque 1",
+      "titulo": "¿El contrato de palabra *vale?*",
+      "texto": "Lo que sí y lo que no."
+    },
+    {
+      "metafora": "caja",
+      "datos": {},
+      "antetitulo": "Bloque 2",
+      "titulo": "Los 4 contratos que vas a usar *este año*",
+      "texto": "Arriendo, servicios, compraventa y préstamo."
+    },
+    {
+      "metafora": "lupa",
+      "datos": {
+        "etiqueta": "Cláusula",
+        "renglon": "Si una parte incumple…"
+      },
+      "antetitulo": "Bloque 3",
+      "titulo": "Las cláusulas que *te salvan*",
+      "texto": "Las que nadie lee."
+    },
+    {
+      "metafora": "firmas",
+      "datos": {
+        "numero": 2
+      },
+      "antetitulo": "Bloque 4",
+      "titulo": "¿Firmar en el celular *vale?*",
+      "texto": "Firma electrónica, sin enredos."
+    },
+    {
+      "metafora": "alarma",
+      "datos": {
+        "etiqueta": "Incumplimiento",
+        "aviso": "No pagó",
+        "detalle": "¿Y ahora qué?"
+      },
+      "antetitulo": "Bloque 5",
+      "titulo": "Te incumplieron: *¿y ahora qué?*",
+      "texto": "Los pasos en orden."
+    },
+    {
+      "metafora": "reloj",
+      "datos": {
+        "numero": 30
+      },
+      "antetitulo": "Bloque 6",
+      "titulo": "Vencimientos y renovaciones que *se te pasan*",
+      "texto": "Y cómo no volver a perderlos."
+    },
+    {
+      "metafora": "certificado",
+      "datos": {},
+      "antetitulo": "Gratis",
+      "titulo": "Inscríbete *gratis*",
+      "texto": "Enlace en la bio.",
+      "pie": "Enlace en la bio"
+    }
+  ],
+  "variantes": {
+    "contrappto": {
+      "copy": "Seis preguntas que te vas a hacer este año y que casi nadie te explica:\n\n1. ¿El contrato de palabra vale?\n2. ¿Qué contratos vas a usar sí o sí?\n3. ¿Qué cláusulas te salvan?\n4. ¿Firmar en el celular vale?\n5. Te incumplieron: ¿y ahora qué?\n6. ¿Cómo no perder un vencimiento?\n\nLas respondemos en vivo en el webinar gratuito Nociones contractuales básicas, el jueves 19 de noviembre. Inscríbete con el enlace de la bio."
+    }
+  },
+  "verificar": [
+    {
+      "dato": "Hora y enlace de inscripción del webinar del 19 de noviembre.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Los 4 contratos del bloque 2 (arriendo, servicios, compraventa, préstamo): confirmar que son los del temario.",
+      "estado": "pendiente"
+    }
+  ]
+}

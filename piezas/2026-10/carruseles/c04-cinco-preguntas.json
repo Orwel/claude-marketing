@@ -1,0 +1,114 @@
+{
+  "slug": "c04-cinco-preguntas",
+  "titulo": "Las cinco preguntas que llegaron",
+  "plantilla": "Carrusel",
+  "tipo": "carrusel",
+  "formato": "carrusel",
+  "segundos": 6,
+  "cuentas": [
+    "juanda"
+  ],
+  "pie": "Comenta CLASE",
+  "laminas": [
+    {
+      "metafora": "burbujas",
+      "datos": {
+        "items": [
+          "¿Puedo subir mis documentos?",
+          "¿Cómo sé si es cierto?",
+          "¿Cuál herramienta compro?",
+          "¿Necesito programar?"
+        ]
+      },
+      "antetitulo": "Me llegaron muchas",
+      "titulo": "Estas cinco *se repitieron.*",
+      "texto": "Las respondo el 27 de octubre en vivo."
+    },
+    {
+      "metafora": "candado",
+      "antetitulo": "Pregunta 1",
+      "titulo": "¿Puedo subir documentos *de mi trabajo?*",
+      "texto": "Depende de tres cosas, y ninguna es la que se revisa primero."
+    },
+    {
+      "metafora": "lupa",
+      "antetitulo": "Pregunta 2",
+      "titulo": "¿Cómo sé si lo que me responde *es cierto?*",
+      "texto": "Hay tareas donde confías y otras donde verificas siempre."
+    },
+    {
+      "metafora": "brujula",
+      "datos": {
+        "etiqueta": "Criterio antes que marca"
+      },
+      "antetitulo": "Pregunta 3",
+      "titulo": "¿Cuál herramienta *compro?*",
+      "texto": "Antes de pagar, con qué comparar."
+    },
+    {
+      "metafora": "autocompletar",
+      "datos": {
+        "frase": "Para usar IA necesito",
+        "opciones": [
+          [
+            "criterio",
+            71
+          ],
+          [
+            "programar",
+            14
+          ],
+          [
+            "un curso",
+            10
+          ],
+          [
+            "otro",
+            5
+          ]
+        ]
+      },
+      "antetitulo": "Pregunta 4",
+      "titulo": "¿Necesito saber *programar?*",
+      "texto": "No. Ni una línea."
+    },
+    {
+      "metafora": "balanza",
+      "datos": {
+        "izq": "Criterio",
+        "der": "Tareas"
+      },
+      "antetitulo": "Pregunta 5",
+      "titulo": "¿Esto me va a *reemplazar?*",
+      "texto": "Cambia lo que se nos pide. Lo explico con ejemplos."
+    },
+    {
+      "metafora": "boleto",
+      "datos": {
+        "fecha": "MAR 27 OCT · 7:00 P.M."
+      },
+      "antetitulo": "Las cinco, en vivo",
+      "titulo": "Martes 27 de octubre, *7:00 p.m.*",
+      "texto": "Si tienes otra, déjala en los comentarios y la sumo."
+    }
+  ],
+  "variantes": {
+    "juanda": {
+      "copy": "Pedí preguntas sobre inteligencia artificial y estas cinco se repitieron:\n\n1. ¿Puedo subir documentos de mi trabajo?\n2. ¿Cómo sé si lo que me responde es cierto?\n3. ¿Cuál herramienta compro?\n4. ¿Necesito saber programar?\n5. ¿Esto me va a reemplazar?\n\nLas respondo el 27 de octubre en la clase en vivo. Si tienes otra, déjala aquí. Comenta CLASE y te mando el link."
+    }
+  },
+  "verificar": [
+    {
+      "dato": "Clase en vivo «Fundamentos para la Inteligencia Artificial»: martes 27 de octubre de 2026, 7:00 p.m. hora Colombia, gratis.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Certificado gratuito: quién lo emite (¿Trifuerza Academy?) y qué condiciones tiene.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Registro: link en el perfil, abre el lunes 5 de octubre.",
+      "estado": "pendiente"
+    }
+  ]
+}

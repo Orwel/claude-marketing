@@ -1,0 +1,163 @@
+{
+  "slug": "ctp-capas",
+  "titulo": "Un contrato no es un PDF",
+  "plantilla": "Capas",
+  "formato": "vertical",
+  "cuentas": [
+    "contrappto"
+  ],
+  "transicion": "barrido",
+  "pista": true,
+  "musica": "institucional",
+  "bpm": 112,
+  "_referencia": "referencias/pinterest-2026-11.md #8 (telefono con capas que se separan). Capturas de public/app/2026-10/contrappto.mp4 sin datos de clientes.",
+  "escala": 0.9,
+  "base": {
+    "archivo": "capas/contrappto/base.png",
+    "ancho": 720,
+    "alto": 1276,
+    "tapar": [
+      {
+        "x": 0.125,
+        "y": 0.094,
+        "w": 0.84,
+        "h": 0.05,
+        "fondo": "#0B141A",
+        "texto": "Contrato de arriendo vacacional",
+        "tamano": 30
+      }
+    ]
+  },
+  "capas": [
+    {
+      "archivo": "capas/contrappto/asesor.png",
+      "ancho": 662,
+      "alto": 626,
+      "escala": 0.8,
+      "destino": {
+        "x": -290,
+        "y": -260,
+        "z": 160
+      },
+      "giro": -3,
+      "etiqueta": "Le preguntas *a tu contrato*"
+    },
+    {
+      "archivo": "capas/contrappto/corriendo.png",
+      "ancho": 660,
+      "alto": 552,
+      "escala": 0.8,
+      "destino": {
+        "x": 300,
+        "y": 132,
+        "z": 240
+      },
+      "giro": 3,
+      "etiqueta": "Las fechas *corren solas*"
+    },
+    {
+      "archivo": "capas/contrappto/renegociacion.png",
+      "ancho": 664,
+      "alto": 152,
+      "escala": 0.9,
+      "origen": {
+        "x": 28,
+        "y": 628
+      },
+      "destino": {
+        "x": 300,
+        "y": 516,
+        "z": 200
+      },
+      "giro": -2,
+      "etiqueta": "Cada cambio, *firmado*"
+    },
+    {
+      "archivo": "capas/contrappto/creacion.png",
+      "ancho": 680,
+      "alto": 650,
+      "escala": 0.75,
+      "destino": {
+        "x": -290,
+        "y": 348,
+        "z": 320
+      },
+      "giro": 2,
+      "etiqueta": "Lo armas *respondiendo preguntas*"
+    },
+    {
+      "archivo": "capas/contrappto/estados.png",
+      "ancho": 680,
+      "alto": 84,
+      "escala": 0.9,
+      "origen": {
+        "x": 20,
+        "y": 196
+      },
+      "destino": {
+        "x": 0,
+        "y": -540,
+        "z": 300
+      }
+    },
+    {
+      "archivo": "capas/contrappto/fecha.png",
+      "ancho": 640,
+      "alto": 210,
+      "escala": 0.75,
+      "destino": {
+        "x": 300,
+        "y": -330,
+        "z": 400
+      },
+      "giro": 2
+    }
+  ],
+  "escenas": [
+    {
+      "tipo": "gancho",
+      "segundos": 2.5,
+      "texto": "Un contrato no es *un PDF*"
+    },
+    {
+      "tipo": "explota",
+      "segundos": 3,
+      "texto": "Es todo lo que *pasa después*"
+    },
+    {
+      "tipo": "recorrido",
+      "segundos": 6.4
+    },
+    {
+      "tipo": "cierra",
+      "segundos": 2,
+      "texto": "Todo en *un solo lugar*"
+    },
+    {
+      "tipo": "cta",
+      "segundos": 3.2,
+      "texto": "Míralo *funcionando*"
+    }
+  ],
+  "boton": "Agenda una demo de 20 minutos",
+  "variantes": {
+    "contrappto": {
+      "copy": "Firmar es el comienzo, no el final.\n\nDespués del PDF vienen las fechas que corren, los pagos, los cambios que hay que firmar otra vez y las preguntas de siempre: ¿cuándo vence?, ¿qué me toca hacer?\n\nEn Contrappto todo eso vive en el mismo contrato: lo armas respondiendo preguntas, sigue sus propias fechas y le puedes preguntar lo que necesites.\n\nAgenda una demo de 20 minutos. Link en el perfil.",
+      "copyLinkedin": "Un contrato no termina cuando se firma: empieza a correr.\n\nFechas de inicio y terminación, renegociaciones que vuelven a firmarse y preguntas sobre obligaciones que alguien tiene que responder. Cuando eso vive en carpetas, correos y calendarios separados, algo se pasa.\n\nContrappto reúne todas esas capas en el mismo contrato: se arma respondiendo preguntas, calcula y sigue sus fechas, guarda cada cambio firmado y tiene un asistente para consultar el documento.\n\nAgenda una demo de 20 minutos en contrappto.com."
+    }
+  },
+  "verificar": [
+    {
+      "dato": "El Asesor Legal IA (preguntarle al contrato) es del Plan Pro: ¿se puede mostrar en una pieza general sin decir el plan?",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "La demo dura 20 minutos (CTA de marca).",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Las capturas son de la grabación del 2026-10; confirmar que la interfaz no ha cambiado.",
+      "estado": "pendiente"
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "slug": "c22-legal-un-lugar",
+  "titulo": "Trifuerza Legal: todo tu ejercicio en un solo lugar",
+  "plantilla": "Carrusel",
+  "tipo": "carrusel",
+  "formato": "carrusel",
+  "segundos": 6,
+  "cuentas": [
+    "trifuerza"
+  ],
+  "colores": {
+    "acento": "#C9A227",
+    "fondo": "#030712",
+    "fondo2": "#0B1220",
+    "linea": "#1F2937"
+  },
+  "pie": "trifuerza.co/legal",
+  "laminas": [
+    {
+      "metafora": "caja",
+      "datos": {
+        "etiqueta": "Tu ejercicio, ordenado"
+      },
+      "antetitulo": "Trifuerza Legal",
+      "titulo": "Todo tu ejercicio *en un solo lugar.*"
+    },
+    {
+      "metafora": "tablero",
+      "datos": {
+        "titulo": "Clientes",
+        "filas": [
+          "Cliente A",
+          "Cliente B",
+          "Cliente C",
+          "Cliente D",
+          "Cliente E"
+        ],
+        "alerta": 2,
+        "textoListo": "Al día",
+        "textoAlerta": "Tarea pendiente"
+      },
+      "antetitulo": "Clientes y tareas",
+      "titulo": "Quién es quién *y qué falta.*"
+    },
+    {
+      "metafora": "firmas",
+      "datos": {
+        "numero": 24,
+        "unidad": "documentos firmados"
+      },
+      "antetitulo": "Documentos y firma",
+      "titulo": "Poderes y contratos *firmados sin salir.*"
+    },
+    {
+      "metafora": "alarma",
+      "datos": {
+        "etiqueta": "Audiencia",
+        "aviso": "Audiencia mañana",
+        "detalle": "Prepara el alegato"
+      },
+      "antetitulo": "Avisos",
+      "titulo": "Lo importante te *llega a tiempo.*"
+    },
+    {
+      "metafora": "pasos",
+      "datos": {
+        "items": [
+          "Demo",
+          "Cargar procesos",
+          "Arranque"
+        ]
+      },
+      "antetitulo": "Cómo empezar",
+      "titulo": "Demo, carga de procesos *y arranque guiado.*"
+    }
+  ],
+  "variantes": {
+    "trifuerza": {
+      "copy": "Todo tu ejercicio en un solo lugar: clientes, tareas, documentos, firma y avisos.\n\nSin pagarle a alguien para que revise a mano. Empiezas con una demo, cargamos tus procesos y te acompañamos en el arranque.\n\ntrifuerza.co/legal"
+    }
+  },
+  "verificar": [
+    {
+      "dato": "Módulos de Trifuerza Legal (CRM, tareas, documentos, firma, avisos) y el arranque acompañado: confirmar contra la landing y el plan actual.",
+      "estado": "pendiente"
+    }
+  ]
+}

@@ -45,6 +45,61 @@ function estiloDe(slug, bpm) {
   return { progresion: elegir(PROGRESIONES, 0), bpm: bpm ?? elegir([126, 132, 138], 5), transponer: elegir([0, 0, 2, -2, 3], 9), motivo: Array.from({ length: 8 }, (_, i) => Math.floor(azar(i * 3 + 1) * 7)), ancho: elegir([0.5, 0.25, 0.125], 13), orden: elegir([[0, 1, 2, 3], [0, 2, 1, 3], [1, 0, 2, 3], [2, 1, 0, 3], [1, 2, 0, 3]], 17) };
 }
 
+/**
+ * Giga celta en Re mixolidio (6/8, ~112 negras con puntillo), toda en ondas de 8 bits: bordon de gaita (triangulo
+ * en Re y La graves), arpa (pulso pulsado en acordes quebrados), bodhran (bombo tonal en 1 y 4, toque suave en el
+ * resto) y la melodia de silbato (pulso fino con vibrato y un adorno de nota de paso, el "cut" de la musica
+ * irlandesa). Melodia propia, no un tema tradicional ni de ningun juego. Entra por capas: bordon y arpa, luego el
+ * bodhran, luego la melodia; la segunda vuelta sube una octava con flauta de triangulo y terceras.
+ */
+function musicaCelta(sumar, finVoz) {
+  // `sumar(inicio, duracion, f)` escribe en el buffer de la musica.
+  const re = (s) => semitono(s + 2);
+  const corchea = 60 / (112 * 3);
+  const compas = corchea * 6;
+  // Acordes por compas (semitonos desde Re): Re, Do, Sol, Re | Re, Do, La menor, Re.
+  const ACORDES = [[0, 4, 7], [-2, 2, 5], [5, 9, 12], [0, 4, 7], [0, 4, 7], [-2, 2, 5], [7, 10, 14], [0, 4, 7]];
+  // Melodia: 6 corcheas por compas; -1 prolonga la nota anterior.
+  const MELODIA = [[7, 4, 7, 12, 7, 4], [5, 2, 5, 10, 5, 2], [9, 7, 5, 9, 12, 9], [7, 4, 0, 0, -1, -1],
+    [16, 14, 12, 7, 9, 12], [14, 12, 10, 5, 7, 10], [12, 9, 7, 4, 7, 9], [7, 4, 2, 0, -1, -1]];
+  // Bordon continuo con un leve vaiven, como el fuelle de la gaita.
+  for (let t = 0, c = 0; t < finVoz; t += compas, c++) {
+    const vuelta = Math.floor(c / 8);
+    const acorde = ACORDES[c % 8];
+    sumar(t, compas, (x) => (triangulo(re(-24), x) + 0.6 * triangulo(re(-17), x)) * (0.85 + 0.15 * Math.sin(2 * Math.PI * (t + x) * 0.5)) * Math.min(1, (t + x) / 1.5) * 0.06);
+    // Arpa: acorde quebrado en corcheas, sube y vuelve.
+    for (let k = 0; k < 6; k++) {
+      const semi = acorde[[0, 1, 2, 1, 2, 1][k]] + (k === 2 ? 12 : 0);
+      sumar(t + k * corchea, corchea * 2, (x) => pulso(re(semi - 12), x, 0.5) * ataque(x, 3) * Math.exp(-7 * x) * 0.05);
+    }
+    if (c >= 1) {
+      // Bodhran: golpe grave en 1 y 4, toques suaves de triangulo en las demas corcheas.
+      for (const k of [0, 3]) sumar(t + k * corchea, 0.25, (x) => Math.sin(2 * Math.PI * (70 * x + 1.6 * (1 - Math.exp(-30 * x)))) * Math.exp(-12 * x) * (k === 0 ? 0.42 : 0.3));
+      for (const k of [1, 2, 4, 5]) sumar(t + k * corchea, 0.06, (x) => triangulo(240, x) * Math.exp(-50 * x) * ataque(x, 2) * 0.12);
+    }
+    if (c < 2) continue;
+    const fila = MELODIA[c % 8];
+    const octava = vuelta % 2 === 1 ? 12 : 0;
+    for (let k = 0; k < 6; k++) {
+      if (fila[k] === -1) continue;
+      let largo = 1;
+      while (k + largo < 6 && fila[k + largo] === -1) largo++;
+      const dur = corchea * largo - 0.015;
+      const semi = fila[k] + octava;
+      const vib = (x) => 1 + 0.006 * Math.sin(2 * Math.PI * 5.5 * x) * Math.min(1, x / 0.15);
+      const env = (x) => ataque(x, 5) * Math.min(1, (dur - x) / 0.025) * (0.75 + 0.25 * Math.exp(-5 * x));
+      // "Cut": nota de adorno un tono arriba, de 30 ms, en el primer tiempo de cada grupo.
+      const adorno = k % 3 === 0 && largo === 1 ? 0.03 : 0;
+      if (adorno) sumar(t + k * corchea, adorno, (x) => pulso(re(semi + 2), x, 0.25) * ataque(x, 2) * 0.05);
+      const inicio = t + k * corchea + adorno;
+      if (octava) {
+        sumar(inicio, dur - adorno, (x) => triangulo(re(semi) * vib(x), x) * env(x) * 0.13);
+        sumar(inicio, dur - adorno, (x) => pulso(re(semi - 3 - 12), x, 0.5) * env(x) * 0.025);
+      } else sumar(inicio, dur - adorno, (x) => pulso(re(semi) * vib(x), x, 0.25) * env(x) * 0.075);
+    }
+  }
+}
+
 /** Pasa-bajos de un polo sobre un buffer (frecuencia de corte en Hz). */
 function pasaBajos(buffer, corte) {
   const a = 1 - Math.exp((-2 * Math.PI * corte) / TASA);
@@ -81,7 +136,13 @@ export function sintetizarArcade(pieza, marca) {
   // segunda voz · D respiro: solo bombo en 1 y eco de la melodia), y las capas entran al arrancar (bajo y arpegio,
   // luego bateria, luego melodia). Sin `capas`, el loop de siempre.
   const capas = !!pieza.capas;
-  for (let t = 0, c = 0; t < finVoz; t += compas, c++) {
+  // `pieza.musica: "celta"` (SOFA10, 19-oct-2026: Bélula, dragones y criaturas del bosque): una giga en 6/8 con los
+  // mismos timbres de 8 bits, que son los que suenan bien (los instrumentos "reales" desde codigo se descartaron).
+  const celta = pieza.musica === 'celta';
+  // `pieza.cancion`: la musica es una grabacion libre de derechos que se mezcla despues (src/sofa/cancion.js); aqui solo efectos.
+  const externa = !!pieza.cancion;
+  if (celta && !externa) musicaCelta((inicio, duracion, f) => sumar(musica, inicio, duracion, f), finVoz);
+  for (let t = 0, c = 0; !celta && !externa && t < finVoz; t += compas, c++) {
     const raiz = estilo.progresion[c % 4];
     const acorde = [raiz, raiz + (raiz === 9 ? 3 : 4), raiz + 7];
     // Cada pieza recorre las secciones en su propio orden (la D, el respiro, siempre al final): la idea es la misma, el video no.
@@ -119,7 +180,8 @@ export function sintetizarArcade(pieza, marca) {
   }
   pasaBajos(musica, 3600);
   // Acorde final arpegiado que queda sonando en la tarjeta de cierre.
-  [0, 4, 7, 12].forEach((semi, i) => sumar(musica, finVoz + i * 0.07, segundos - finVoz - i * 0.07, (x) => (pulso(tr(semi), x, 0.5) * 0.5 + triangulo(tr(semi - 12), x) * 0.5) * ataque(x) * Math.exp(-0.8 * x) * 0.09));
+  const notaFinal = celta ? (semi) => semitono(semi + 2) : tr;
+  if (!externa) [0, 4, 7, 12].forEach((semi, i) => sumar(musica, finVoz + i * 0.07, segundos - finVoz - i * 0.07, (x) => (pulso(notaFinal(semi), x, 0.5) * 0.5 + triangulo(notaFinal(semi - 12), x) * 0.5) * ataque(x) * Math.exp(-0.8 * x) * 0.09));
 
   // --- Efectos de 8 bits (todos con pasa-bajos despues).
   const fx = new Float32Array(n);
@@ -179,8 +241,10 @@ export function sintetizarArcade(pieza, marca) {
 
   // --- Mezcla: musica a ~-20 dBFS RMS bajo la voz (ducking de 3 dB), -14 en el titulo y el final.
   const habla = new Float32Array(n);
+  // Cuenta como voz la del metraje y la locucion de titulo/final (`voz`): la musica se recoge igual bajo las dos.
+  const hablada = (e) => e.tipo === 'clip' || e.tipo === 'cierre' || !!e.voz;
   for (const e of linea.escenas) {
-    if (e.tipo !== 'clip' && e.tipo !== 'cierre') continue;
+    if (!hablada(e)) continue;
     for (const s of e.subtitulos ?? []) {
       const a = Math.floor(((e.inicio / FPS) + s.startMs / 1000 - 0.12) * TASA);
       const b = Math.floor(((e.inicio / FPS) + s.endMs / 1000 + 0.35) * TASA);
@@ -189,7 +253,7 @@ export function sintetizarArcade(pieza, marca) {
   }
   const conVoz = new Float32Array(n);
   for (const e of linea.escenas) {
-    if (e.tipo !== 'clip' && e.tipo !== 'cierre') continue;
+    if (!hablada(e)) continue;
     for (let i = Math.floor((e.inicio / FPS) * TASA); i < Math.min(n, Math.floor(((e.inicio + e.cuadros) / FPS) * TASA)); i++) conVoz[i] = 1;
   }
   const k = 1 - Math.exp(-1 / (0.08 * TASA));

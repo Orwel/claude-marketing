@@ -1,0 +1,245 @@
+{
+  "slug": "propuesta-video-dostierras",
+  "titulo": "Propuesta Dos Tierras en video",
+  "pilar": "Propuestas de servicios",
+  "plantilla": "Brochure",
+  "formatos": [
+    "vertical"
+  ],
+  "estado": "propuesta privada · no se publica en redes",
+  "cuentas": [
+    "trifuerza"
+  ],
+  "bpm": 92,
+  "musica": "calido",
+  "transicion": "barrido",
+  "pista": true,
+  "volumenPista": 0.85,
+  "drive": {
+    "carpeta": "propuestas",
+    "nombre": "Propuesta_DosTierras_SAS_marca_web_v1 - Video"
+  },
+  "_fuente": "Contenido de brochures/propuesta-sas-marca-web.html (5-oct-2026).",
+  "escenas": [
+    {
+      "tipo": "portada",
+      "segundos": 5.5,
+      "antetitulo": "Propuesta para Dos Tierras",
+      "titulo": "Tu idea, *convertida en empresa.*",
+      "texto": "Una empresa que existe, una marca que se protege y una web que crece."
+    },
+    {
+      "tipo": "metafora",
+      "segundos": 6,
+      "antetitulo": "La historia que casi todos viven",
+      "titulo": "Muchos negocios nacen *al revés*",
+      "texto": "Primero el logo, luego la página, y un día descubren que el nombre ya tenía dueño.",
+      "metafora": "rompecabezas",
+      "datos": {
+        "completo": false,
+        "etiqueta": "El nombre"
+      }
+    },
+    {
+      "tipo": "metafora",
+      "segundos": 5.5,
+      "antetitulo": "Proponemos un orden",
+      "titulo": "Existir, proteger *y crecer*",
+      "texto": "Tres pasos, uno detrás del otro.",
+      "metafora": "pasos",
+      "datos": {
+        "items": [
+          "Tu SAS",
+          "Tu marca",
+          "Tu web"
+        ]
+      }
+    },
+    {
+      "tipo": "metafora",
+      "segundos": 6,
+      "antetitulo": "Capítulo I · Existir",
+      "titulo": "Primero, *la empresa existe*",
+      "texto": "Constituimos tu SAS con estatutos a la medida, matrícula mercantil y RUT.",
+      "metafora": "certificado",
+      "datos": {
+        "titulo": "Existencia",
+        "subtitulo": "Sociedad por Acciones Simplificada",
+        "nombre": "Dos Tierras S.A.S."
+      }
+    },
+    {
+      "tipo": "tarjetas",
+      "segundos": 6.5,
+      "antetitulo": "Tu SAS incluye",
+      "titulo": "Base legal *y claridad entre socios*",
+      "items": [
+        {
+          "icono": "Scale",
+          "titulo": "Asesoría jurídica",
+          "texto": "Tipo societario, capital y socios."
+        },
+        {
+          "icono": "FileText",
+          "titulo": "Estatutos a la medida",
+          "texto": "Órganos sociales y acciones."
+        },
+        {
+          "icono": "Coins",
+          "titulo": "Reparto según el aporte",
+          "texto": "Clases de acciones en los estatutos."
+        },
+        {
+          "icono": "Handshake",
+          "titulo": "Acuerdo de socios",
+          "texto": "Aportes, utilidades y salida de un socio."
+        },
+        {
+          "icono": "Building",
+          "titulo": "Matrícula y RUT",
+          "texto": "Registro ante la Cámara de Comercio."
+        },
+        {
+          "icono": "CalendarCheck",
+          "titulo": "Obligaciones anuales",
+          "texto": "Documento aparte para la sociedad."
+        }
+      ]
+    },
+    {
+      "tipo": "metafora",
+      "segundos": 6,
+      "antetitulo": "Capítulo II · Proteger la marca",
+      "titulo": "Antes de pagar, *medimos el terreno*",
+      "texto": "Buscamos marcas iguales o parecidas y evaluamos el riesgo de confusión.",
+      "metafora": "lupa",
+      "datos": {
+        "etiqueta": "Marca parecida",
+        "renglon": 3
+      }
+    },
+    {
+      "tipo": "metafora",
+      "segundos": 6.5,
+      "antetitulo": "Análisis de expectativas",
+      "titulo": "Una probabilidad, *tú decides*",
+      "texto": "Alta, media o baja: te explicamos qué significa y cómo seguir.",
+      "metafora": "semaforo",
+      "datos": {
+        "items": [
+          "Alta: avanzamos con la solicitud",
+          "Media: ajustamos el nombre",
+          "Baja: repensamos el nombre"
+        ]
+      }
+    },
+    {
+      "tipo": "metafora",
+      "segundos": 5.5,
+      "antetitulo": "Solicitud de registro",
+      "titulo": "Después, *la marca se protege*",
+      "texto": "Radicamos la solicitud ante la SIC y seguimos el trámite hasta la decisión.",
+      "metafora": "candado",
+      "datos": {
+        "etiqueta": "Marca protegida"
+      }
+    },
+    {
+      "tipo": "metafora",
+      "segundos": 6,
+      "antetitulo": "Hablemos claro",
+      "titulo": "La SIC decide, *en 6 a 8 meses*",
+      "texto": "Nadie puede garantizar el registro: por eso medimos antes de invertir y te acompañamos todo el trámite.",
+      "metafora": "reloj",
+      "datos": {
+        "numero": 8,
+        "unidad": "meses"
+      }
+    },
+    {
+      "tipo": "metafora",
+      "segundos": 5.5,
+      "antetitulo": "No es nuestra primera marca",
+      "titulo": "Cerca de *30 marcas* llevadas a registro",
+      "texto": "Restaurantes, bebidas, cervecería artesanal, tecnología y bienestar.",
+      "metafora": "firmas",
+      "datos": {
+        "numero": 30,
+        "unidad": "marcas"
+      }
+    },
+    {
+      "tipo": "tarjetas",
+      "segundos": 5.5,
+      "antetitulo": "Capítulo III · Crecer con tu web",
+      "titulo": "Una web que se siente *como una app*",
+      "items": [
+        {
+          "icono": "LayoutDashboard",
+          "titulo": "Landing y panel",
+          "texto": "Con las obligaciones de la sociedad."
+        },
+        {
+          "icono": "Sparkles",
+          "titulo": "Diseño animado",
+          "texto": "Pensado primero para el celular."
+        },
+        {
+          "icono": "Database",
+          "titulo": "Base escalable",
+          "texto": "Lista para crecer a tienda."
+        },
+        {
+          "icono": "ShieldCheck",
+          "titulo": "Política de datos",
+          "texto": "Conforme a la Ley 1581."
+        }
+      ]
+    },
+    {
+      "tipo": "metafora",
+      "segundos": 6.5,
+      "antetitulo": "Tu panel de control",
+      "titulo": "La empresa *al día*",
+      "texto": "Las obligaciones anuales de la sociedad, cargadas en tu propia web.",
+      "metafora": "tablero",
+      "datos": {
+        "titulo": "dostierras · Panel",
+        "filas": [
+          "Renovar matrícula mercantil",
+          "Asamblea ordinaria",
+          "Declaración de renta",
+          "Actualizar RUT"
+        ],
+        "alerta": 1,
+        "textoAlerta": "Próxima",
+        "textoListo": "Hecho"
+      }
+    },
+    {
+      "tipo": "metafora",
+      "segundos": 6,
+      "antetitulo": "Todo en un solo equipo",
+      "titulo": "Juntos, *pesa menos*",
+      "texto": "Contratando SAS, marca y web al iniciar, el descuento es del 15 %.",
+      "metafora": "balanza",
+      "datos": {
+        "izq": "Por separado",
+        "der": "Todo junto"
+      }
+    },
+    {
+      "tipo": "cierre",
+      "segundos": 5,
+      "texto": "¿Empezamos la historia *de Dos Tierras?*",
+      "cta": "Conócenos en www.trifuerza.co",
+      "web": "Valores y alcance, en la propuesta"
+    }
+  ],
+  "verificar": [
+    {
+      "dato": "Mismos datos y precios que el PDF de la propuesta; ver brochures/verificar.json.",
+      "estado": "pendiente"
+    }
+  ]
+}

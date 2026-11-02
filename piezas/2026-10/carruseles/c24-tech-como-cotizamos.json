@@ -1,0 +1,85 @@
+{
+  "slug": "c24-tech-como-cotizamos",
+  "titulo": "Trifuerza Technology: cómo cotizamos",
+  "plantilla": "Carrusel",
+  "tipo": "carrusel",
+  "formato": "carrusel",
+  "segundos": 6,
+  "cuentas": [
+    "trifuerza"
+  ],
+  "pie": "Agenda un diagnóstico",
+  "laminas": [
+    {
+      "metafora": "pasos",
+      "datos": {
+        "items": [
+          "Diagnóstico",
+          "Puntos",
+          "Construir",
+          "Entregas",
+          "Soporte"
+        ]
+      },
+      "antetitulo": "Trifuerza Technology",
+      "titulo": "Cómo cotizamos *un proyecto.*"
+    },
+    {
+      "metafora": "lupa",
+      "datos": {
+        "etiqueta": "Riesgo",
+        "renglon": 5
+      },
+      "antetitulo": "1 · Diagnóstico",
+      "titulo": "Alcance, riesgos *y estimación* por escrito."
+    },
+    {
+      "metafora": "balanza",
+      "datos": {
+        "izq": "Puntos",
+        "der": "Horas"
+      },
+      "antetitulo": "2 · Por puntos",
+      "titulo": "Un precio *predecible* y defendible."
+    },
+    {
+      "metafora": "rompecabezas",
+      "datos": {
+        "etiqueta": "Ya probado"
+      },
+      "antetitulo": "3 · Construir",
+      "titulo": "Reutilizamos piezas *ya probadas.*",
+      "texto": "Entregas más rápido y con menos riesgo."
+    },
+    {
+      "metafora": "tablero",
+      "datos": {
+        "titulo": "Entregas",
+        "filas": [
+          "Entrega 1 · demo",
+          "Entrega 2 · demo",
+          "Entrega 3 · demo",
+          "Salida a producción",
+          "Soporte mensual"
+        ],
+        "alerta": 3,
+        "textoListo": "Entregado",
+        "textoAlerta": "En curso"
+      },
+      "antetitulo": "4 · Entregas y soporte",
+      "titulo": "Entregas parciales, demos *y soporte mensual.*",
+      "texto": "Un solo responsable."
+    }
+  ],
+  "variantes": {
+    "trifuerza": {
+      "copy": "Cómo cotizamos un proyecto de software en Trifuerza Technology:\n\n1. Diagnóstico: alcance, riesgos y estimación por escrito.\n2. Por puntos: un precio predecible y defendible.\n3. Construimos reutilizando piezas ya probadas.\n4. Entregas parciales con demo, un solo responsable y soporte mensual.\n\nAgenda un diagnóstico."
+    }
+  },
+  "verificar": [
+    {
+      "dato": "Método de cotización por puntos y modelo de entregas/soporte de Technology: confirmar antes de publicar (en el canvas figura como borrador del 24-sep).",
+      "estado": "pendiente"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "slug": "c33-ctp-vencimientos",
+  "titulo": "Contrappto: no se te pasa una fecha",
+  "plantilla": "Carrusel",
+  "tipo": "carrusel",
+  "formato": "carrusel",
+  "segundos": 6,
+  "cuentas": [
+    "contrappto"
+  ],
+  "pie": "Agenda una demo de 20 min",
+  "laminas": [
+    {
+      "metafora": "reloj",
+      "datos": {
+        "numero": 5
+      },
+      "antetitulo": "Los contratos no avisan",
+      "titulo": "¿Cuántos vencen *este mes?*"
+    },
+    {
+      "metafora": "alarma",
+      "datos": {
+        "etiqueta": "Vencimiento",
+        "aviso": "Vence en 5 días",
+        "detalle": "Renegocia antes"
+      },
+      "antetitulo": "Contrappto sí",
+      "titulo": "Te avisa *antes* de que venza."
+    },
+    {
+      "metafora": "tablero",
+      "datos": {
+        "titulo": "Próximos vencimientos",
+        "alerta": 0
+      },
+      "antetitulo": "Con tiempo",
+      "titulo": "Renegocias *antes* de que llegue el plazo."
+    },
+    {
+      "metafora": "pasos",
+      "datos": {
+        "items": [
+          "Agendas",
+          "20 minutos",
+          "Ves tu tablero"
+        ]
+      },
+      "antetitulo": "Pruébalo",
+      "titulo": "Demo de *20 minutos.*"
+    }
+  ],
+  "variantes": {
+    "contrappto": {
+      "copy": "Los contratos no avisan cuando vencen. Contrappto sí.\n\nTe llega la alerta antes del vencimiento y renegocias con tiempo, no cuando ya pasó el plazo.\n\nAgenda una demo de 20 minutos."
+    }
+  },
+  "verificar": [
+    {
+      "dato": "Alertas de vencimiento de Contrappto: confirmar canales y anticipación.",
+      "estado": "pendiente"
+    }
+  ]
+}

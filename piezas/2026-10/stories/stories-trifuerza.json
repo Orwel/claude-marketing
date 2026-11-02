@@ -1,0 +1,82 @@
+{
+  "slug": "stories-trifuerza",
+  "titulo": "Stories animadas de trifuerza",
+  "plantilla": "Carrusel",
+  "tipo": "historias",
+  "formato": "vertical",
+  "segundos": 7,
+  "cuentas": [
+    "trifuerza"
+  ],
+  "laminas": [
+    {
+      "id": "h20-academy-clase",
+      "metafora": "boleto",
+      "datos": {
+        "fecha": "MAR 27 OCT · 7:00 P.M.",
+        "insignia": "ACADEMY"
+      },
+      "antetitulo": "Trifuerza Academy",
+      "titulo": "Clase en vivo *con certificado.*",
+      "pie": "Link en el perfil"
+    },
+    {
+      "id": "h21-legal-termino",
+      "metafora": "alarma",
+      "datos": {
+        "etiqueta": "Término",
+        "aviso": "Vence en 3 días",
+        "detalle": "Proceso 0457"
+      },
+      "antetitulo": "Trifuerza Legal",
+      "titulo": "No se te pasa *un término.*",
+      "pie": "trifuerza.co/legal"
+    },
+    {
+      "id": "h22-tech-encuesta",
+      "metafora": "candado",
+      "datos": {
+        "etiqueta": "Desde el diseño"
+      },
+      "antetitulo": "Encuesta",
+      "titulo": "¿Tu software *cumple la ley?*"
+    },
+    {
+      "id": "h23-tech-piezas",
+      "metafora": "rompecabezas",
+      "datos": {
+        "etiqueta": "Ya probado"
+      },
+      "antetitulo": "Trifuerza Technology",
+      "titulo": "Tu proyecto *no empieza de cero.*"
+    },
+    {
+      "id": "h24-academy-faltan-7",
+      "metafora": "reloj",
+      "datos": {
+        "numero": 7
+      },
+      "antetitulo": "Trifuerza Academy",
+      "titulo": "Falta *una semana.*",
+      "pie": "Link en el perfil"
+    }
+  ],
+  "verificar": [
+    {
+      "dato": "Clase en vivo «Fundamentos para la Inteligencia Artificial»: martes 27 de octubre de 2026, 7:00 p.m. hora Colombia, gratis.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Certificado gratuito: quién lo emite (¿Trifuerza Academy?) y qué condiciones tiene.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Registro: link en el perfil, abre el lunes 5 de octubre.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Funcionalidades de Trifuerza Legal y oferta de Technology: ver c21 a c25.",
+      "estado": "pendiente"
+    }
+  ]
+}

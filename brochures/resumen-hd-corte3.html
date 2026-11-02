@@ -1,0 +1,840 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Resumen · Humanidades Digitales · Corte 3 · Cierre humanístico, pulido y publicación</title>
+<link rel="stylesheet" href="kit/fuentes.css">
+<link rel="stylesheet" href="kit/resumen.css">
+<style>
+  /* Ajustes solo de este resumen (los mismos del corte 2): letra de tabla y de bloque en 11 px mínimo. */
+  .contenido > * { flex-shrink: 0; }
+  .tabla { font-size: 11px; }
+  .tabla td { padding: 5px 9px; }
+  .tabla th { padding: 6px 9px; }
+  .bloque p { font-size: 11.2px; }
+  .bloque { padding: 12px 14px; }
+  .flujo { display: grid; gap: 8px; }
+  .flujo .tarjeta { padding: 9px 11px; }
+  .flujo .n { font-size: 9.5px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--acc2); }
+  .flujo h3 { font-size: 12.3px; margin-top: 3px; }
+  .flujo p { font-size: 11px; color: var(--suave); line-height: 1.42; margin-top: 3px; }
+  .cinco { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
+  .seis { display: grid; grid-template-columns: repeat(6, 1fr); gap: 7px; }
+  .hito { display: grid; grid-template-columns: 62px 1fr; gap: 8px; font-size: 11px; line-height: 1.42; color: var(--suave); padding: 5px 0; border-bottom: 1px solid var(--borde); }
+  .hito b { color: var(--acc2); font-weight: 700; }
+  .hito:last-child { border-bottom: 0; }
+  .qa { padding: 10px 13px; }
+  .qa h3 { font-size: 11.5px; line-height: 1.35; }
+  .qa h3 span { color: var(--acc2); margin-right: 4px; }
+  .qa p { font-size: 11px; color: var(--suave); line-height: 1.45; margin-top: 4px; }
+  .portada-pregunta { font-family: 'Fraunces', serif; font-style: italic; font-size: 18px; line-height: 1.35; }
+  .codigo { font-family: ui-monospace, Consolas, monospace; font-size: 11px; line-height: 1.5; color: var(--suave); background: var(--panel2); border: 1px solid var(--borde); border-radius: 12px; padding: 10px 13px; white-space: pre; }
+  .codigo .c { color: var(--tenue); }
+  .codigo .k { color: var(--acc2); }
+  .codigo .w { color: var(--nar2); }
+  .fuente { font-size: 11px; color: var(--tenue); line-height: 1.45; margin-top: 5px; }
+  .fuente i { color: var(--suave); }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6M8 13h8M8 17h6"/></symbol>
+    <symbol id="i-pen" viewBox="0 0 24 24"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0ZM12 9v4M12 17h.01"/></symbol>
+    <symbol id="i-scale" viewBox="0 0 24 24"><path d="M12 3v18M7 21h10M5 7h14M5 7l-3 7a3 3 0 0 0 6 0ZM19 7l-3 7a3 3 0 0 0 6 0Z"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></symbol>
+    <symbol id="i-data" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></symbol>
+    <symbol id="i-chip" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></symbol>
+    <symbol id="i-msg" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2Z"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 2 10 5-10 5L2 7Z"/><path d="m2 17 10 5 10-5M2 12l10 5 10-5"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2 20a7 7 0 0 1 14 0M16 4.5a3.5 3.5 0 0 1 0 7M18 13.5a7 7 0 0 1 4 6.5"/></symbol>
+    <symbol id="i-building" viewBox="0 0 24 24"><path d="M4 21V5l8-3 8 3v16M4 21h16M9 9h.01M15 9h.01M9 13h.01M15 13h.01M10 21v-4h4v4"/></symbol>
+    <symbol id="i-game" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="11" rx="5"/><path d="M7 11v4M5 13h4M15.5 12h.01M18 14h.01"/></symbol>
+    <symbol id="i-branch" viewBox="0 0 24 24"><circle cx="6" cy="5" r="2.5"/><circle cx="6" cy="19" r="2.5"/><circle cx="18" cy="8" r="2.5"/><path d="M6 7.5v9M18 10.5c0 4-6 3-11.5 6.5"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-music" viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></symbol>
+    <symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0M12 17v5"/></symbol>
+    <symbol id="i-upload" viewBox="0 0 24 24"><path d="M12 16V4M7 9l5-5 5 5M4 20h16"/></symbol>
+  </defs>
+</svg>
+
+<!-- ============================== 1 · PORTADA ============================== -->
+<section class="pagina cruces">
+  <svg class="constelacion" data-paleta="academy" data-semilla="53" data-zona="500,96,785,410" data-nodos="17" data-cliente="Corte 3" viewBox="0 0 794 1123" aria-hidden="true"></svg>
+  <div class="brillo" style="width:760px;height:760px;right:-300px;top:-300px;background:radial-gradient(circle, rgba(0,196,204,.22), transparent 62%)"></div>
+  <div class="brillo" style="width:520px;height:520px;left:-260px;bottom:-200px;background:radial-gradient(circle, rgba(242,140,40,.13), transparent 62%)"></div>
+  <div class="contenido">
+    <div style="display:flex;justify-content:space-between;align-items:center">
+      <div class="logo"><img src="../public/marcas/trifuerza/logo-horizontal-claro.png" alt="Trifuerza"><span class="sep"></span><span class="linea">Academy</span></div>
+      <span class="etiqueta">Fundación Universitaria Los Libertadores · Humanidades Digitales · 2026-2</span>
+    </div>
+    <div style="margin-top:58px">
+      <span class="etiqueta">Resumen del 3.er corte (S11, S12 y muestra final)</span>
+      <h1 style="margin-top:22px">Cierre:<br>el mundo que<br><b>sale de la sala.</b></h1>
+      <p class="lead" style="margin-top:18px;max-width:450px">Autoría, trabajo creativo, juego y memoria, mientras el juego del equipo se integra, se congela, se publica en itch.io y se muestra en público. Sesiones 11 y 12 · 26 de octubre a 22 de noviembre · milestone Beta / Gold · muestra final el 23 de noviembre.</p>
+      <p class="texto" style="margin-top:10px"><b>Prof. Juan David Vanegas Roldán</b></p>
+    </div>
+
+    <div class="caja clave" style="margin-top:28px;padding:16px 20px">
+      <span class="tit">La pregunta del corte</span>
+      <div class="portada-pregunta">Si una máquina participó en su juego, ¿qué parte es suya? Y cuando ya nadie lo juegue, ¿qué queda de ese mundo?</div>
+    </div>
+
+    <div class="tarjeta" style="margin-top:18px;padding:18px 22px">
+      <h4>Contenido</h4>
+      <div class="indice" style="margin-top:6px">
+        <div><span>01</span>S11 · Humanismo digital, IA y autoría</div>
+        <div><span>05</span>Cómo cerrar el juego</div>
+        <div><span>02</span>S11 · Integración, feature freeze y QA</div>
+        <div><span>06</span>Muestra final del 23 de noviembre</div>
+        <div><span>03</span>S12 · Huizinga, Juul, memoria y preservación</div>
+        <div><span>07</span>Preguntas de repaso</div>
+        <div><span>04</span>S12 · Publicar en itch.io</div>
+        <div><span>08</span>Lo esencial del curso</div>
+      </div>
+    </div>
+
+    <div class="cuatro" style="margin-top:auto">
+      <div class="tarjeta bloque"><h4>S11 · 26 oct</h4><h3>Responder</h3><p>Floridi, Boden, autoría y la huelga de SAG-AFTRA.</p></div>
+      <div class="tarjeta bloque"><h4>S11 · taller</h4><h3>Integrar</h3><p>Merge, feature freeze, bugs como Issues.</p></div>
+      <div class="tarjeta bloque"><h4>S12 · 9 nov</h4><h3>Habitar</h3><p>Huizinga, Juul, memoria y publicación.</p></div>
+      <div class="tarjeta bloque borde-nar"><h4 style="color:var(--nar2)">23 nov</h4><h3>Mostrar</h3><p>Muestra final de los cinco juegos.</p></div>
+    </div>
+    <div class="pie" style="margin-top:20px"><span><a class="web" href="https://www.trifuerza.co"><b>www.trifuerza.co</b> ↗</a> · Trifuerza Academy</span><span>Juan David Vanegas Roldán · Los Libertadores · Corte 3 · 2026-2</span></div>
+  </div>
+</section>
+
+<!-- ============================== 2 · S11 (1/6) ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:620px;height:620px;right:-300px;top:-220px;background:radial-gradient(circle, rgba(0,196,204,.13), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">01</span> Sesión 11 · 26 de octubre</div>
+    <h2>Humanismo digital:<br><b>de quién es la voz.</b></h2>
+    <p class="texto" style="margin-top:12px">El humanismo renacentista puso a la persona en el centro del saber. El <b>humanismo digital</b> pregunta qué lugar queda para la persona cuando los sistemas técnicos median el trabajo, la creación y la memoria. <b>No es tecnofobia</b>: es exigir que la tecnología sirva a la dignidad humana y no al revés. La sesión cierra el arco del curso con un caso reciente: casi un año de huelga en el videojuego por quién es dueño de una voz, un cuerpo y un estilo que una máquina puede reproducir.</p>
+
+    <h4 style="margin-top:12px">El arco que se cierra: una sola pregunta, qué le pasa a lo humano cuando se delega en un sistema</h4>
+    <table class="tabla">
+      <tr><th style="width:26%">Sesión</th><th style="width:40%">Lo que preguntamos</th><th>Lo que quedó abierto</th></tr>
+      <tr><td>S1 · Predicción algorítmica</td><td>¿Qué se siente ser clasificado por un sistema que no te conoce?</td><td>Quién responde por la clasificación</td></tr>
+      <tr><td>S5 · Producción y crunch</td><td>¿Cuánto tiempo humano cuesta una obra y quién lo paga?</td><td>De quién es ese tiempo</td></tr>
+      <tr><td>S7 · Sesgo y vigilancia</td><td>¿Quién decide qué es sospechoso?</td><td>Con qué legitimidad</td></tr>
+      <tr><td>S8 · Propiedad intelectual</td><td>¿A quién pertenece un mundo cuando apagan el servidor?</td><td>Qué protege realmente el derecho de autor</td></tr>
+      <tr><td>S9 · Costo ambiental y atención</td><td>¿Cuánto cuesta cada respuesta instantánea?</td><td>A quién se le cobra</td></tr>
+      <tr><td>S11 · Hoy</td><td>¿Puede crear una máquina, y de quién es lo que sale de ahí?</td><td>Lo responden ustedes, con su juego en la mano</td></tr>
+    </table>
+
+    <h4 style="margin-top:12px">Luciano Floridi, <i>The Fourth Revolution</i> (2014), caps. 1 y 4: cuatro golpes al autorretrato</h4>
+    <p class="texto">Cada revolución científica cambió también la idea que teníamos de nosotros mismos. Floridi retoma un esquema que Freud ya había insinuado y le agrega un cuarto término.</p>
+    <div class="cuatro flujo" style="margin-top:6px">
+      <div class="tarjeta"><span class="n">Copérnico</span><h3>Golpe cosmológico</h3><p>No estamos en el centro del universo.</p></div>
+      <div class="tarjeta"><span class="n">Darwin</span><h3>Golpe biológico</h3><p>Somos una rama del árbol de lo vivo, no una creación aparte.</p></div>
+      <div class="tarjeta"><span class="n">Freud</span><h3>Golpe psicológico</h3><p>No somos dueños de nuestra casa mental.</p></div>
+      <div class="tarjeta borde-nar"><span class="n" style="color:var(--nar2)">Turing</span><h3>Golpe informacional</h3><p>No tenemos el monopolio de procesar información.</p></div>
+    </div>
+
+    <div class="dos" style="margin-top:10px">
+      <div class="tarjeta bloque borde-acc"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-globe"/></svg></div><h3>Infoesfera, onlife e inforgs</h3></div><p>La <b>infoesfera</b> es el entorno de agentes e información en el que ya vivimos: "en línea" y "fuera de línea" se borran porque el mundo está hecho de datos. <b>Onlife</b>: la vida que ya no se parte en dos; apagar el celular solo te deja sin acceso. <b>Inforgs</b>: agentes cuya identidad se construye con información.</p></div>
+      <div class="caja ojo"><span class="tit">Dónde discutirle a Floridi</span>Describe una condición general y habla poco de <b>quién es dueño de la infraestructura</b>. Un servidor tiene dueño, dirección física y factura de electricidad (S9). "Vivimos en la infoesfera" puede ser una descripción fina y, a la vez, una manera elegante de no nombrar a las pocas empresas que la operan.</div>
+    </div>
+
+    <h4 style="margin-top:12px">Si nos quitan el monopolio, ¿qué queda?</h4>
+    <div class="dos">
+      <div class="tarjeta bloque"><h3>Definirnos por la brecha</h3><p>"Somos lo que la máquina aún no puede hacer." Calcular, jugar ajedrez, traducir, dibujar: la trinchera se mueve cada año. Convierte la dignidad en una <b>competencia técnica</b> que se está perdiendo y produce pánico con cada modelo nuevo.</p></div>
+      <div class="tarjeta bloque borde-acc"><h3>Definirnos por la responsabilidad</h3><p>"Somos aquello a lo que se le puede pedir cuentas." Un modelo no tiene patrimonio, intención ni miedo a la sanción. Aquí la <b>autoría no es un premio a la habilidad: es la asignación de un responsable</b>, y encaja con el derecho, que siempre necesita un sujeto imputable.</p></div>
+    </div>
+    <div class="pie"><span><b>Humanidades Digitales · Corte 3</b> · S11 · Humanismo digital y Floridi</span><span>Juan David Vanegas Roldán · <a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 2</span></div>
+  </div>
+</section>
+
+<!-- ============================== 3 · S11 (2/6) ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:600px;height:600px;left:-300px;top:360px;background:radial-gradient(circle, rgba(0,196,204,.12), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">01</span> Sesión 11 · Trabajo, dignidad y creatividad</div>
+    <h2>¿Puede crear una máquina?<br><b>Mejor: ¿qué tipo de creación?</b></h2>
+
+    <h4 style="margin-top:14px">Futuro del trabajo: la automatización no reparte el ahorro</h4>
+    <p class="texto">"¿La IA elimina empleos?" es una pregunta demasiado gruesa. La útil: <b>qué parte de un oficio se automatiza y quién se queda con el ahorro</b>.</p>
+    <div class="cuatro flujo" style="margin-top:6px">
+      <div class="tarjeta"><span class="n">1 · La tarea</span><p>Se automatiza la tarea, no el oficio. No desaparece el actor: desaparecen las sesiones cortas, los gruñidos, los secundarios, lo que pagaba las cuentas.</p></div>
+      <div class="tarjeta"><span class="n">2 · El valor</span><p>Sube hacia quien tiene el modelo y los datos. Quien puso la voz recibe, en el mejor caso, un pago único por algo que se reutiliza sin límite.</p></div>
+      <div class="tarjeta"><span class="n">3 · La entrada</span><p>El trabajo junior es el primero que se automatiza y era el que formaba a la siguiente generación. También pasa en el derecho.</p></div>
+      <div class="tarjeta borde-nar"><span class="n" style="color:var(--nar2)">4 · La negociación</span><p>Nada de esto es destino técnico: es una distribución, y las distribuciones se negocian.</p></div>
+    </div>
+
+    <h4 style="margin-top:12px">Transhumanismo, dignidad y límites</h4>
+    <p class="texto">El transhumanismo propone usar la técnica para superar los límites biológicos: enfermedad, deterioro, memoria, incluso la muerte. No es absurdo (la medicina lleva siglos haciéndolo); el problema aparece cuando la mejora se usa para saltarse la pregunta de <b>quién decide qué es una mejora</b>.</p>
+    <div class="tres" style="margin-top:6px">
+      <div class="tarjeta bloque"><h3>La promesa</h3><p>Extender capacidades. Nadie objeta unos lentes, un marcapasos o un implante coclear: entre prótesis y mejora no hay frontera nítida.</p></div>
+      <div class="tarjeta bloque borde-nar"><h3>La trampa</h3><p>Si la mejora es un producto, la dignidad se vuelve una suscripción: quien no pueda pagarla queda <b>por debajo del nuevo estándar</b>.</p></div>
+      <div class="tarjeta bloque borde-acc"><h3>El límite jurídico</h3><p>La dignidad humana, en la tradición constitucional, <b>no es graduable ni negociable</b> y no depende del rendimiento.</p></div>
+    </div>
+    <div class="caja ejemplo" style="margin-top:8px"><span class="tit">Para su juego</span>Si su juego tiene mejoras, niveles o poderes que se compran, ya dice algo sobre esto. <b>Un sistema de progresión es una teoría del mérito</b>: revisen cuál escribieron sin darse cuenta.</div>
+
+    <h4 style="margin-top:12px">Margaret Boden, <i>The Creative Mind</i> (1990; 2.ª ed. 2004), cap. 1: tres tipos de creatividad</h4>
+    <p class="texto">Boden deja de preguntar si una máquina "es creativa", que no tiene respuesta, y distingue tres creatividades que se evalúan por separado.</p>
+    <div class="tres" style="margin-top:6px">
+      <div class="tarjeta bloque"><h3>Combinatoria</h3><p>Unir ideas conocidas de forma nueva: la metáfora, el collage, el chiste. "Un plataformas sobre trámites notariales". <span class="chip">Las máquinas son muy buenas</span></p></div>
+      <div class="tarjeta bloque"><h3>Exploratoria</h3><p>Moverse dentro de un espacio con reglas establecidas y hallar algo nuevo: un nivel nuevo en un género existente. <span class="chip">Buenas y mejorando</span></p></div>
+      <div class="tarjeta bloque borde-nar"><h3>Transformacional</h3><p>Cambiar las reglas del espacio: el cubismo, el primer juego que usó la muerte como mecánica de aprendizaje. <span class="chip nar">La discusión de verdad</span></p></div>
+    </div>
+    <table class="tabla" style="margin-top:8px">
+      <tr><th style="width:34%">Lo que le pidieron a la IA</th><th style="width:28%">Tipo, según Boden</th><th>Qué aportó el equipo</th></tr>
+      <tr><td>Sprites o texturas en un estilo existente</td><td>Combinatoria / exploratoria</td><td>Selección, descarte y coherencia del conjunto</td></tr>
+      <tr><td>Código de una mecánica estándar</td><td>Exploratoria, espacio muy conocido</td><td>Decidir que esa mecánica dice algo sobre el tema</td></tr>
+      <tr><td>Diálogos o textos de personajes</td><td>Combinatoria, casi siempre</td><td>La voz del personaje, si la reescribieron</td></tr>
+      <tr><td>Partir el alcance en tarjetas</td><td>Ninguno: es gestión</td><td>El juicio sobre qué era realista</td></tr>
+      <tr><td>La regla que hace distinto su juego</td><td>Aspira a transformacional</td><td>Nadie se la pidió a nadie: <b>es suya, nómbrenla</b></td></tr>
+    </table>
+    <div class="pie"><span><b>Humanidades Digitales · Corte 3</b> · S11 · Trabajo, transhumanismo y Boden</span><span>Juan David Vanegas Roldán · <a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 3</span></div>
+  </div>
+</section>
+
+<!-- ============================== 4 · S11 (3/6) ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:640px;height:640px;right:-300px;top:120px;background:radial-gradient(circle, rgba(242,140,40,.11), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">01</span> Sesión 11 · Autoría y derecho de autor</div>
+    <h2>El autor, en Colombia,<br><b>es una persona física.</b></h2>
+    <p class="texto" style="margin-top:12px">En la S5 la pregunta fue <b>de quién es el tiempo</b> que cuesta una obra (el crunch). La IA no la cancela, la vuelve más rara: el trabajo humano también está en todo lo que se usó para entrenar el modelo.</p>
+    <div class="cuatro flujo" style="margin-top:8px">
+      <div class="tarjeta"><span class="n">El tiempo · S5</span><p>Horas extra no pagadas: quién absorbe el costo de que la obra exista.</p></div>
+      <div class="tarjeta"><span class="n">La voz · S11</span><p>Grabas cuatro horas, firmas una cesión amplia y tu voz aparece años después en un personaje que nunca hiciste.</p></div>
+      <div class="tarjeta"><span class="n">El estilo · S11</span><p>Tu manera de dibujar se reproduce sin copiar una obra concreta. El derecho de autor protege expresiones, <b style="color:var(--tinta)">no estilos</b>.</p></div>
+      <div class="tarjeta"><span class="n">El cuerpo · S11</span><p>La captura de movimiento vende una manera de caminar o caer, entrenada por años y reutilizable una vez digitalizada.</p></div>
+    </div>
+
+    <h4 style="margin-top:12px">Aterrizaje jurídico colombiano (la norma andina es de aplicación directa y preferente)</h4>
+    <table class="tabla">
+      <tr><th style="width:26%">Norma</th><th style="width:40%">Qué establece</th><th>Consecuencia</th></tr>
+      <tr><td>Decisión Andina 351 de 1993, art. 3</td><td>Autor es "la persona física que realiza la creación intelectual"</td><td>Un modelo no es autor. No es una laguna: es una definición expresa</td></tr>
+      <tr><td>Decisión Andina 351 de 1993, art. 1</td><td>Protege las obras del ingenio en lo literario, artístico y científico</td><td>"Del ingenio" remite a una facultad humana, no a un procedimiento</td></tr>
+      <tr><td>Ley 23 de 1982</td><td>Régimen colombiano; derechos morales inalienables e irrenunciables</td><td>Paternidad e integridad solo tienen sentido referidas a una persona</td></tr>
+      <tr><td>Originalidad</td><td>La impronta de la personalidad del autor, no la mera novedad</td><td>Es el filtro que decide caso por caso</td></tr>
+    </table>
+    <p class="texto" style="margin-top:6px">Afuera va igual: en EE. UU., <i>Thaler v. Perlmutter</i> confirmó que una obra sin intervención humana no se registra; solo se protege el <b>aporte humano suficiente</b> (selección, arreglo, modificación).</p>
+
+    <div class="dos" style="margin-top:8px">
+      <div class="tarjeta bloque borde-acc"><h3>Lo verificable</h3><p>La definición de autor como persona física está en la norma andina. Análisis publicados sobre la práctica de la Dirección Nacional de Derecho de Autor reportan registros <b>negados</b> cuando la obra es enteramente generada por IA y <b>concedidos</b> cuando la IA fue herramienta de una creación humana identificable.</p></div>
+      <div class="tarjeta bloque borde-nar"><h3>Lo que la norma no resuelve</h3><p>El extremo es claro: sin persona, sin derecho de autor. Lo difícil es el medio, donde están ustedes: ¿escribir el prompt basta?, ¿descartar cien variantes es selección creativa o curaduría? <b>Se está construyendo caso por caso</b>, aquí y afuera.</p></div>
+    </div>
+    <div class="caja ojo" style="margin-top:8px"><span class="tit">Método, no dogma</span>Si alguien afirma que "en Colombia ya está resuelto lo de la IA y el derecho de autor", pídanle la norma o la providencia. Casi siempre hay un <b>concepto administrativo</b>, que orienta pero no es jurisprudencia: "tema en construcción" es la descripción correcta.</div>
+
+    <h4 style="margin-top:12px">Caso · <i>Zarya of the Dawn</i>: se registró el arreglo, no las imágenes</h4>
+    <p class="texto">Kris Kashtanova registró en EE. UU. (15 de septiembre de 2022) una novela gráfica con imágenes de Midjourney. Al conocer el uso de IA, la oficina la revisó y el 21 de febrero de 2023 <b>partió la obra en dos</b>.</p>
+    <div class="dos" style="margin-top:6px">
+      <div class="tarjeta bloque"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-check"/></svg></div><h3>Sí se protegió</h3></div><p>El <b>texto</b> escrito por la autora y la obra como <b>compilación</b>: selección, coordinación y disposición de los elementos. Es decir, la curaduría y el montaje, decisiones humanas verificables.</p></div>
+      <div class="tarjeta bloque"><div class="cab"><div class="ic-caja nar"><svg class="ico"><use href="#i-x"/></svg></div><h3>No se protegió</h3></div><p>Las <b>imágenes individuales</b>. La autora alegó que sus prompts fijaban poses y composición tras cientos de variantes; la oficina respondió que no tuvo control suficiente: <b>el prompt influye, pero no determina</b>.</p></div>
+    </div>
+    <div class="pie"><span><b>Humanidades Digitales · Corte 3</b> · S11 · Autoría y derecho de autor</span><span>Juan David Vanegas Roldán · <a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 4</span></div>
+  </div>
+</section>
+
+<!-- ============================== 5 · S11 (4/6) ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:640px;height:640px;left:-300px;top:-180px;background:radial-gradient(circle, rgba(0,196,204,.14), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">01</span> Sesión 11 · Casos de estudio</div>
+    <h2>Un año de huelga<br><b>por una cláusula de IA.</b></h2>
+    <p class="texto" style="margin-top:12px">Intérpretes de <b>voz y captura de movimiento</b> del sindicato estadounidense SAG-AFTRA pararon contra grandes compañías (entre ellas Activision, Electronic Arts, Epic Games y Take-Two). El centro no fue el salario sino la IA: <b>consentimiento y pago</b> cuando se usa su voz o imagen para crear réplicas digitales.</p>
+    <div class="dos" style="margin-top:8px;grid-template-columns:1fr 1.15fr">
+      <div class="tarjeta" style="padding:4px 14px">
+        <div class="hito"><b>Jul 2024</b><span><b style="color:var(--tinta)">26 de julio:</b> comienza la huelga del Interactive Media Agreement, trabada en las protecciones frente a réplicas digitales.</span></div>
+        <div class="hito"><b>2024–25</b><span>Producciones detenidas o rehechas; se vuelve el caso testigo de la IA en industrias creativas.</span></div>
+        <div class="hito"><b>Jun 2025</b><span><b style="color:var(--tinta)">11 de junio:</b> se suspende la huelga por un acuerdo tentativo; la ratificación se vota desde el 18.</span></div>
+        <div class="hito"><b>Jul 2025</b><span><b style="color:var(--tinta)">9 de julio:</b> se ratifica el Acuerdo de Medios Interactivos de 2025. Fin oficial, once meses después.</span></div>
+      </div>
+      <div>
+        <h4>Qué quedó escrito en el acuerdo</h4>
+        <div class="tarjeta" style="padding:2px 14px">
+          <div class="frase"><span>1</span><div><b style="color:var(--tinta)">Consentimiento informado:</b> usar una réplica de la voz o del desempeño exige consentimiento referido a ese uso, no una cesión genérica inicial.</div></div>
+          <div class="frase"><span>2</span><div><b style="color:var(--tinta)">Divulgación:</b> el empleador avisa cuándo usará una réplica. Sin información no hay consentimiento (el razonamiento del hábeas data, S1).</div></div>
+          <div class="frase"><span>3</span><div><b style="color:var(--tinta)">Compensación:</b> pago por el uso de réplicas, para que generar no salga más barato que contratar.</div></div>
+          <div class="frase"><span>4</span><div><b style="color:var(--tinta)">Suspensión en huelga:</b> los intérpretes pueden suspender el consentimiento para material nuevo; sin esto la huelga no tendría efecto.</div></div>
+        </div>
+      </div>
+    </div>
+    <p class="fuente">Fuentes de la clase: SAG-AFTRA, resumen de las cláusulas de IA del <i>2025 Interactive Media Agreement</i> (sagaftra.org, lectura de la sesión); cobertura de Deadline y Variety, julio de 2025. Las cifras de intérpretes, empresas y votación que se citaron en clase verifíquenlas en sagaftra.org antes de usarlas.</p>
+
+    <p class="texto" style="margin-top:8px"><b>La lección jurídica: cuando la ley no llega, llega el contrato colectivo.</b> El vacío no es un limbo: gobierna el contrato, y lo redacta quien tiene más poder. Lo colectivo llega antes que la ley (la jornada de ocho horas fue primero un pliego), pero solo cubre a quien está bajo el acuerdo: un intérprete en Bogotá que dobla para afuera no tiene nada de esto. Y lo protegido no es la obra sino <b>la persona</b>: voz y cuerpo están más cerca de los derechos de la personalidad y los datos personales.</p>
+
+    <h4 style="margin-top:12px">Su juego es, jurídicamente, varias obras (el razonamiento de Zarya aplicado)</h4>
+    <table class="tabla">
+      <tr><th style="width:30%">Capa del juego</th><th style="width:15%">Quién la hizo</th><th>Situación probable</th></tr>
+      <tr><td>Código escrito por el equipo</td><td>El equipo</td><td>Obra protegida, sujeta a la licencia elegida en el repositorio</td></tr>
+      <tr><td>Código sugerido por un asistente y revisado</td><td>Mixto</td><td>Zona gris: depende de cuánto se modificó y de si quedó en los commits</td></tr>
+      <tr><td>Arte generado y no editado</td><td>Modelo</td><td>Difícilmente protegible como propio; revisen los términos del servicio</td></tr>
+      <tr><td>Arte generado y reelaborado</td><td>Mixto</td><td>Protegible en lo que aportó la persona: documenten el antes y el después</td></tr>
+      <tr><td>Selección, montaje, niveles, ritmo</td><td>El equipo</td><td><b>Lo más claramente suyo</b>: es lo que sí se protegió en Zarya</td></tr>
+      <tr><td>Assets de terceros</td><td>Terceros</td><td>Sección 16 de la bitácora: sin la atribución que exige la licencia, hay infracción</td></tr>
+    </table>
+
+    <div class="dos" style="margin-top:10px">
+      <div class="caja ejemplo"><span class="tit">Caso · La reacción de los jugadores</span>Steam exige desde 2024 declarar el uso de IA generativa en la ficha. En <i>Call of Duty: Black Ops 6</i> la comunidad señaló imágenes con dedos de más y Activision terminó reconociendo en Steam IA en algunos activos. <b>El castigo vino del público, no del juez</b>.</div>
+      <div class="caja clave"><span class="tit">Taller: su sección 15 en voz alta</span>Lean el registro de IA tal como está, clasifiquen cada uso según Boden, señalen <b>una cosa que no existiría sin una decisión humana</b> y argumenten en qué medida el juego es suyo. Nadie pierde puntos por usar IA: <b>se pierde por no declararla</b>.</div>
+    </div>
+    <div class="pie"><span><b>Humanidades Digitales · Corte 3</b> · S11 · SAG-AFTRA y comunidades</span><span>Juan David Vanegas Roldán · <a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 5</span></div>
+  </div>
+</section>
+
+<!-- ============================== 6 · S11 (5/6) TÉCNICO ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:620px;height:620px;right:-300px;top:-200px;background:radial-gradient(circle, rgba(0,196,204,.14), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">02</span> Sesión 11 · Componente técnico</div>
+    <h2>Integrar y congelar:<br><b>cinco ramas, un juego.</b></h2>
+    <p class="texto" style="margin-top:12px">Hasta aquí cada quien trabajó en lo suyo: arte, niveles, sonido. La <b>integración</b> es el momento en que todo tiene que existir en la misma rama <span class="mono">main</span> y seguir funcionando. Es incómoda por diseño, y por eso se hace en clase y no la noche antes de entregar.</p>
+    <div class="seis flujo" style="margin-top:8px">
+      <div class="tarjeta"><span class="n">1</span><p>Rama de cada quien</p></div>
+      <div class="tarjeta"><span class="n">2</span><p>Actualizar desde main</p></div>
+      <div class="tarjeta"><span class="n">3</span><p>Resolver conflictos</p></div>
+      <div class="tarjeta"><span class="n">4</span><p>Probar que corre</p></div>
+      <div class="tarjeta"><span class="n">5</span><p>Pull Request</p></div>
+      <div class="tarjeta borde-nar"><span class="n" style="color:var(--nar2)">6</span><p>main jugable</p></div>
+    </div>
+    <div class="caja ojo" style="margin-top:8px"><span class="tit">El error clásico</span>Integrar al final. Un equipo que lleva tres semanas sin traer <b>main</b> a su rama no tiene un conflicto: tiene cuarenta, y los va a tener la víspera de la entrega. <b>Traigan main a su rama todos los días</b>, aunque no hayan cambiado nada.</div>
+
+    <h4 style="margin-top:12px">Conflictos de merge: Git no adivina, les pregunta</h4>
+    <p class="texto">Aparece cuando dos personas cambiaron <b>las mismas líneas del mismo archivo</b>. Git fusiona solo los cambios en zonas distintas; cuando se pisan, se detiene y escribe las dos versiones en el archivo, marcadas. No está dañado: espera una decisión humana.</p>
+    <div class="dos" style="margin-top:6px;grid-template-columns:.85fr 1.15fr">
+<div class="codigo"><span class="w">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span>  <span class="c"># su rama</span>
+velocidad_salto = 12.0
+gravedad = 30.0
+<span class="w">=======</span>  <span class="c"># separador</span>
+velocidad_salto = 9.5
+gravedad = 24.0
+<span class="w">&gt;&gt;&gt;&gt;&gt;&gt;&gt; rama-niveles</span>
+<span class="c">  # la rama que traen</span>
+
+<span class="c"># flujo completo</span>
+git checkout main
+git pull
+git checkout mi-rama
+git merge main  <span class="c"># conflicto</span>
+git add &lt;archivo&gt;
+git commit -m <span class="k">"merge: ..."</span>
+git push</div>
+      <div class="tarjeta" style="padding:2px 14px">
+        <div class="frase"><span>1</span><div><b style="color:var(--tinta)">Lean y decidan.</b> Gana una, gana la otra o se escribe una tercera. ¿El salto es 12 o 9.5? Es diseño, no Git: pregúntenle a quien hizo el nivel.</div></div>
+        <div class="frase"><span>2</span><div><b style="color:var(--tinta)">Borren las tres marcas.</b> Con una sola que quede, el juego no compila.</div></div>
+        <div class="frase"><span>3</span><div><b style="color:var(--tinta)">Corran el juego</b> en la escena del conflicto. Que compile no es que funcione.</div></div>
+        <div class="frase"><span>4</span><div><b style="color:var(--tinta)">Confirmen</b> con add y commit, y un mensaje que diga qué se decidió ("merge: se conserva la gravedad de la rama de niveles"), no "arreglos".</div></div>
+        <div class="frase"><span>5</span><div><b style="color:var(--tinta)">Si se enredan,</b> <span class="mono">git merge --abort</span> vuelve al estado anterior. Mejor perder veinte minutos que subir un main roto.</div></div>
+      </div>
+    </div>
+
+    <h4 style="margin-top:12px">Feature freeze: desde el 26 de octubre no entra nada nuevo</h4>
+    <div class="dos">
+      <div class="tarjeta bloque borde-acc"><h3>Sí entra después del congelamiento</h3>
+        <ul class="lista" style="margin-top:6px">
+          <li><svg class="ico"><use href="#i-check"/></svg><span>Corregir errores que rompen el juego o impiden terminarlo.</span></li>
+          <li><svg class="ico"><use href="#i-check"/></svg><span>Ajustar valores: velocidad, dificultad, duración, volumen.</span></li>
+          <li><svg class="ico"><use href="#i-check"/></svg><span>Cambiar un asset provisional por el definitivo, si ya existe.</span></li>
+          <li><svg class="ico"><use href="#i-check"/></svg><span>Textos, créditos, licencias y ficha de itch.io; lo necesario para desplegar.</span></li>
+        </ul></div>
+      <div class="tarjeta bloque borde-nar"><h3>No entra, aunque duela</h3>
+        <ul class="lista no" style="margin-top:6px">
+          <li><svg class="ico"><use href="#i-x"/></svg><span>Un nivel más: nunca hay un nivel más, hay un nivel a medias.</span></li>
+          <li><svg class="ico"><use href="#i-x"/></svg><span>Una mecánica "rapidísima", o cambiar motor, estructura o estilo.</span></li>
+          <li><svg class="ico"><use href="#i-x"/></svg><span>Rehacer algo que funciona porque a alguien no le gusta.</span></li>
+          <li><svg class="ico"><use href="#i-x"/></svg><span>Ideas del playtest que no estaban en el tablero.</span></li>
+        </ul></div>
+    </div>
+    <p class="texto" style="margin-top:6px">El freeze se declara por escrito en la <b>sección 10 de la bitácora</b>: fecha, lista cerrada de funciones y firma de todos. En la tabla de hitos de esa sección, <b>Alpha</b> es justamente el punto donde ya no entran funciones nuevas.</p>
+    <div class="pie"><span><b>Humanidades Digitales · Corte 3</b> · S11 · Integración y feature freeze</span><span>Juan David Vanegas Roldán · <a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 6</span></div>
+  </div>
+</section>
+
+<!-- ============================== 7 · S11 (6/6) QA ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:640px;height:640px;left:-300px;top:300px;background:radial-gradient(circle, rgba(0,196,204,.12), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">02</span> Sesión 11 · Control de calidad</div>
+    <h2>Un bug que no se reproduce<br><b>no se arregla.</b></h2>
+
+    <h4 style="margin-top:14px">Cuatro tipos de prueba</h4>
+    <div class="cuatro flujo">
+      <div class="tarjeta"><span class="n">Funcional</span><p>Cada mecánica hace lo que dice su tarjeta del tablero.</p></div>
+      <div class="tarjeta"><span class="n">Regresión</span><p>Lo que funcionaba sigue funcionando después de integrar.</p></div>
+      <div class="tarjeta"><span class="n">Compatibilidad</span><p>Corre en Chrome, Firefox y celular.</p></div>
+      <div class="tarjeta"><span class="n">Usabilidad</span><p>Un jugador nuevo entiende qué hacer sin ayuda.</p></div>
+    </div>
+
+    <h4 style="margin-top:12px">El reporte de error va como Issue en el tablero</h4>
+    <p class="texto">"El juego se traba" no es un reporte: es una queja. Un reporte permite que <b>otra persona provoque el error a voluntad</b>. Tres partes, siempre las mismas: pasos para reproducir, resultado esperado y resultado obtenido.</p>
+    <div class="tarjeta" style="margin-top:6px;padding:10px 14px">
+      <p class="texto" style="font-size:11.3px"><b>Título:</b> el personaje atraviesa el piso al saltar en la plataforma móvil del nivel 2</p>
+      <div class="tres" style="margin-top:6px">
+        <div><h4>Pasos para reproducir</h4><p class="texto" style="font-size:11px;line-height:1.45">1. Partida nueva y llegar al nivel 2. 2. Subirse a la plataforma móvil de la derecha. 3. Saltar mientras baja.</p></div>
+        <div><h4>Resultado esperado</h4><p class="texto" style="font-size:11px;line-height:1.45">El personaje salta y vuelve a caer sobre la plataforma.</p></div>
+        <div><h4 style="color:var(--nar2)">Resultado obtenido</h4><p class="texto" style="font-size:11px;line-height:1.45">Atraviesa la plataforma y cae al vacío; la partida no se reinicia sola.</p></div>
+      </div>
+      <p class="texto" style="font-size:11px;margin-top:6px;line-height:1.45"><b>Entorno:</b> Chrome, build desplegada del 26 de octubre · <b>Frecuencia:</b> 4 de 5 intentos · <b>Evidencia:</b> captura o video · <b>Etiquetas:</b> <span class="chip">bug</span> <span class="chip nar">bloqueante</span> <span class="chip gris">nivel-2</span></p>
+    </div>
+
+    <h4 style="margin-top:12px">Triaje: un juego terminado no es un juego sin errores, es uno cuyos errores están decididos</h4>
+    <table class="tabla">
+      <tr><th style="width:15%">Etiqueta</th><th style="width:44%">Criterio</th><th>Qué se hace</th></tr>
+      <tr><td>Bloqueante</td><td>Impide terminar el juego o lo cierra</td><td>Se arregla ya. Lo único que justifica una noche larga</td></tr>
+      <tr><td>Grave</td><td>Rompe la experiencia, pero se puede seguir (reiniciar el nivel)</td><td>Se arregla si alcanza el tiempo, después de los bloqueantes</td></tr>
+      <tr><td>Menor</td><td>Molesta o se ve mal sin afectar el juego: un texto cortado</td><td>Va a la lista de <b>limitaciones conocidas</b> (ficha de itch.io y bitácora), con el porqué</td></tr>
+      <tr><td>No es un bug</td><td>Una función nueva disfrazada: "le falta un tutorial"</td><td>Va a trabajo futuro en la bitácora. No se toca: hay freeze</td></tr>
+    </table>
+    <p class="fuente">La guía escrita de la sesión usa otra escala (bloqueante, mayor, menor, cosmético); la lógica es la misma: primero lo que impide terminar el juego.</p>
+    <div class="caja ejemplo" style="margin-top:8px"><span class="tit">Limitaciones conocidas</span>Una lista corta y honesta de lo que no funciona bien y <b>por qué se decidió no arreglarlo</b>. Escribirla es señal de madurez: el equipo sabe exactamente en qué estado está su obra. Todo estudio serio publica una.</div>
+
+    <h4 style="margin-top:12px">El repositorio dice la verdad: revisión del historial, equipo por equipo</h4>
+    <div class="dos" style="grid-template-columns:.85fr 1.15fr">
+<div class="codigo">git log --oneline --graph --all
+git shortlog -sn   <span class="c"># por persona</span>
+git log --pretty=format:<span class="k">"%h %an %ad %s"</span> \
+  --date=short</div>
+      <p class="texto" style="font-size:11.3px;line-height:1.5"><b>Reparto:</b> ¿una persona con el 80 % de los commits? Es un riesgo, no liderazgo. <b>Ritmo:</b> ¿repartidos en el tiempo o tres madrugadas antes de cada hito? <b>Mensajes:</b> cuarenta commits que dicen "cambios" no permiten volver atrás. <b>Trazabilidad:</b> es la prueba de autoría de su obra colectiva.</p>
+    </div>
+    <div class="caja clave" style="margin-top:10px"><span class="tit">Taller y qué gana el juego ese día</span>Integrar arte y niveles en main, declarar el freeze y hacer el <b>segundo playtest cruzado</b> con otro equipo, jugando a romper: <b>mínimo cinco Issues</b> por equipo evaluador y triaje en vivo. Al salir: <b>todas las mecánicas integradas y el juego se recorre completo</b>, con sus errores documentados.</div>
+    <div class="pie"><span><b>Humanidades Digitales · Corte 3</b> · S11 · QA, Issues e historial</span><span>Juan David Vanegas Roldán · <a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 7</span></div>
+  </div>
+</section>
+
+<!-- ============================== 8 · S12 (1/5) ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:640px;height:640px;right:-300px;top:-160px;background:radial-gradient(circle, rgba(0,196,204,.14), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">03</span> Sesión 12 · 9 de noviembre</div>
+    <h2>Jugar es anterior a la cultura:<br><b>Huizinga y el círculo mágico.</b></h2>
+    <p class="texto" style="margin-top:12px">Es la última sesión de contenido y el día en que el juego se publica: deja de vivir en cinco computadores y pasa a tener una dirección a la que puede entrar cualquiera. Por eso la pregunta es <b>qué clase de cosa acaban de hacer</b>. Johan Huizinga (1872–1945), historiador medievalista y rector de la Universidad de Leiden, publicó <i>Homo Ludens</i> en 1938 con una tesis provocadora: el juego es más antiguo que la cultura, y la cultura <b>nace y se desarrolla jugando</b>. Su subtítulo habla del elemento lúdico <i>de</i> la cultura, no <i>en</i> la cultura.</p>
+
+    <div class="tres" style="margin-top:10px">
+      <div class="tarjeta bloque"><h3>Anterior, literalmente</h3><p>Los animales juegan sin que nadie les enseñe. La civilización llega después y se apoya en el juego.</p></div>
+      <div class="tarjeta bloque"><h3>De dónde sale lo demás</h3><p>Derecho, guerra ritual, poesía, filosofía y culto tienen forma de juego: competencia con reglas, en un espacio aparte, con un desenlace que importa.</p></div>
+      <div class="tarjeta bloque borde-acc"><h3>Para un abogado</h3><p>La audiencia: toga, sala, turnos, fórmulas rituales, un espacio del que se entra y se sale. Huizinga dedica un capítulo al juego y el derecho.</p></div>
+    </div>
+
+    <h4 style="margin-top:12px">Un espacio y un tiempo aparte: los rasgos del juego</h4>
+    <div class="cuatro flujo">
+      <div class="tarjeta"><span class="n">Libre</span><p>Nadie puede ser obligado a jugar; a lo sumo, a cumplir. Y cumplir no es jugar.</p></div>
+      <div class="tarjeta"><span class="n">Delimitado</span><p>Empieza y termina; tiene borde en el espacio y en el tiempo. Afuera, las reglas no valen.</p></div>
+      <div class="tarjeta"><span class="n">Reglas propias</span><p>Adentro, mover el alfil en diagonal es obligación absoluta; afuera, una frase sin sentido.</p></div>
+      <div class="tarjeta"><span class="n">Por acuerdo</span><p>Crea orden, tensión y comunidad; el mundo se sostiene mientras todos actúan como si fuera verdad.</p></div>
+    </div>
+    <div class="caja ojo" style="margin-top:8px"><span class="tit">Precisión que se suele omitir</span>"Círculo mágico" aparece en Huizinga de pasada, en una enumeración de lugares de juego (el estadio, la mesa, el templo, el estrado). Como <b>concepto de diseño</b> lo popularizaron <b>Katie Salen y Eric Zimmerman</b> en <i>Rules of Play</i> (2003). Cuando alguien dice "Huizinga dice que el círculo mágico…", casi siempre está citando a Salen y Zimmerman.</div>
+
+    <h4 style="margin-top:12px">La distinción más útil del libro: el tramposo y el aguafiestas</h4>
+    <table class="tabla">
+      <tr><th style="width:18%"></th><th class="acc">El tramposo</th><th class="nar">El aguafiestas</th></tr>
+      <tr><td>Qué hace</td><td>Quiere ganar dentro del juego, así sea sucio</td><td>Se sale, o declara que nada de esto importa</td></tr>
+      <tr><td>Las reglas</td><td>Las necesita: sin ellas no hay nada que burlar</td><td>Muestra que el mundo dependía de que todos lo sostuvieran</td></tr>
+      <tr><td>Respuesta</td><td>Se le sanciona y se sigue jugando</td><td>Se le expulsa, y a menudo funda su propio juego</td></tr>
+      <tr><td>El mundo</td><td>Sobrevive</td><td><b>Se desarma</b>: el aguafiestas rompe el hechizo</td></tr>
+    </table>
+    <p class="texto" style="margin-top:6px">Por eso la comunidad de juego <b>perdona antes al tramposo</b>: el aguafiestas, en palabras de Huizinga, despoja al juego de su ilusión (<i>Homo Ludens</i>, cap. 1; edición española habitual: Alianza).</p>
+
+    <h4 style="margin-top:12px">El concepto está discutido</h4>
+    <div class="tres">
+      <div class="tarjeta bloque"><h3>Consalvo, 2009</h3><p>"There Is No Magic Circle" (<i>Games and Culture</i>, 4(4)): el jugador no deja su contexto en la puerta; juega con guías abiertas, amigos por voz y dinero real de por medio.</p></div>
+      <div class="tarjeta bloque"><h3>Zimmerman, 2012</h3><p>"Jerked Around by the Magic Circle" (Gamasutra): el círculo nunca fue un muro, sino la frontera porosa donde las reglas empiezan a significar algo.</p></div>
+      <div class="tarjeta bloque borde-acc"><h3>Lo que sobrevive</h3><p>La frontera es discutible; <b>el acto de entrar no</b>. Alguien decide tratar unas reglas como obligatorias: es lo que le van a pedir a un desconocido el 23.</p></div>
+    </div>
+    <div class="pie"><span><b>Humanidades Digitales · Corte 3</b> · S12 · Huizinga y el círculo mágico</span><span>Juan David Vanegas Roldán · <a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 8</span></div>
+  </div>
+</section>
+
+<!-- ============================== 9 · S12 (2/5) ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:600px;height:600px;left:-300px;top:-160px;background:radial-gradient(circle, rgba(0,196,204,.13), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">03</span> Sesión 12 · Jesper Juul y la memoria</div>
+    <h2>Mitad real, mitad ficción:<br><b>el jugador le cree a las reglas.</b></h2>
+    <p class="texto" style="margin-top:12px">Jesper Juul, en <i>Half-Real: Video Games between Real Rules and Fictional Worlds</i> (MIT Press, 2005, introducción y cap. 1), lo resume así: un videojuego es <b>mitad real</b>. Las reglas son reales (se gana y se pierde de verdad); el mundo es ficcional: el dragón que te mató no existe, pero tú sí perdiste. La experiencia nace de esa tensión.</p>
+    <div class="dos" style="margin-top:8px">
+      <div class="tarjeta bloque borde-acc"><h3>Lo real: las reglas</h3>
+        <ul class="lista" style="margin-top:6px">
+          <li><svg class="ico"><use href="#i-check"/></svg><span>Se ejecutan sin interpretación: el código no admite matices.</span></li>
+          <li><svg class="ico"><use href="#i-check"/></svg><span>Dan un resultado cuantificable; al jugador le importa el desenlace.</span></li>
+          <li><svg class="ico"><use href="#i-check"/></svg><span>En su juego: mecánicas, victoria, derrota y puntaje.</span></li>
+        </ul></div>
+      <div class="tarjeta bloque borde-nar"><h3>Lo ficcional: el mundo</h3>
+        <ul class="lista" style="margin-top:6px">
+          <li><svg class="ico" style="color:var(--nar2)"><use href="#i-check"/></svg><span>Incompleto por definición: nadie modela lo que no se usa.</span></li>
+          <li><svg class="ico" style="color:var(--nar2)"><use href="#i-check"/></svg><span>Se sostiene con arte, sonido, nombres y textos.</span></li>
+          <li><svg class="ico" style="color:var(--nar2)"><use href="#i-check"/></svg><span>En su juego: narrativa, personajes y el dilema humanístico.</span></li>
+        </ul></div>
+    </div>
+
+    <h4 style="margin-top:12px">La doble naturaleza distingue al videojuego</h4>
+    <table class="tabla">
+      <tr><th style="width:17%">Forma</th><th style="width:30%">Reglas</th><th style="width:27%">Mundo</th><th>Qué le pasa al que participa</th></tr>
+      <tr><td>Novela</td><td>Ninguna que el lector deba cumplir</td><td>Ficcional y completo</td><td>Interpreta; no puede perder</td></tr>
+      <tr><td>Ajedrez</td><td>Reales y exhaustivas</td><td>Casi inexistente</td><td>Gana o pierde; nada que imaginar</td></tr>
+      <tr><td>Fútbol</td><td>Reales, con árbitro que interpreta</td><td>Ninguno: la cancha es la cancha</td><td>Gana o pierde con el cuerpo</td></tr>
+      <tr><td>Videojuego</td><td>Reales, ejecutadas por una máquina</td><td>Ficcional, incompleto</td><td><b>Gana o pierde de verdad en un mundo que no existe</b></td></tr>
+      <tr><td>Rol de mesa</td><td>Reales pero negociables</td><td>Ficcional y expandible en vivo</td><td>Gana, pierde y co-escribe</td></tr>
+    </table>
+
+    <h4 style="margin-top:12px">Aterrizaje en las secciones 3 y 9 de la bitácora: sus reglas ya son reales</h4>
+    <div class="dos">
+      <div class="tarjeta" style="padding:2px 14px">
+        <div class="frase"><span>1</span><div><b style="color:var(--tinta)">Lo que el jugador puede hacer es real.</b> Si no puede negarse a algo, esa imposibilidad es un hecho de su mundo.</div></div>
+        <div class="frase"><span>2</span><div><b style="color:var(--tinta)">Lo que le impide es real.</b> Una pared invisible enseña más que tres párrafos.</div></div>
+      </div>
+      <div class="tarjeta" style="padding:2px 14px">
+        <div class="frase"><span>3</span><div><b style="color:var(--tinta)">La condición de derrota</b> es la definición operativa de qué considera valioso su juego.</div></div>
+        <div class="frase"><span>4</span><div><b style="color:var(--tinta)">La ficción no debe contradecir lo anterior:</b> si dicen cosas distintas, gana la regla.</div></div>
+      </div>
+    </div>
+    <div class="caja clave" style="margin-top:8px"><span class="tit">Por qué el tema tenía que ser mecánica</span>Si su tema está en un letrero, está en la mitad ficcional, y esa el jugador la puede ignorar. Si está en las reglas, no. Un buen juego alinea las dos capas, como <i>Papers, Please</i> (S7). Ejercicio: <b>¿qué afirma nuestro juego a través de una regla que no afirma en ningún texto?</b></div>
+
+    <h4 style="margin-top:12px">Dos memorias en el mismo mundo</h4>
+    <div class="dos">
+      <div class="tarjeta bloque"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-user"/></svg></div><h3>La memoria del jugador</h3></div><p>Dos lectores leen las mismas frases; dos jugadores recorren trayectorias distintas. Lo que se recuerda <b>no es el juego, es su partida</b>, y esa no queda guardada en ninguna parte salvo en él. La gente recuerda dónde se atascó, y las manos recuerdan combinaciones que la cabeza olvidó (memoria procedimental).</p></div>
+      <div class="tarjeta bloque"><div class="cab"><div class="ic-caja nar"><svg class="ico"><use href="#i-music"/></svg></div><h3>La memoria cultural y la música</h3></div><p>Hay mundos que varias generaciones habitaron. La música (S5) es la llave del recuerdo: el gráfico envejece, la melodía no igual, y como suena <b>en bucle durante horas</b> se recuerda como el clima de un lugar. Revisen la sección 8: que el bucle sea limpio y el silencio esté puesto a propósito.</p></div>
+    </div>
+    <div class="pie"><span><b>Humanidades Digitales · Corte 3</b> · S12 · Juul y las dos memorias</span><span>Juan David Vanegas Roldán · <a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 9</span></div>
+  </div>
+</section>
+
+<!-- ============================== 10 · S12 (3/5) ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:640px;height:640px;right:-300px;top:120px;background:radial-gradient(circle, rgba(242,140,40,.11), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">03</span> Sesión 12 · Ontología y preservación</div>
+    <h2>Cuando un mundo deja<br><b>de poder habitarse.</b></h2>
+    <p class="texto" style="margin-top:12px">Todo juego tiene una <b>ontología</b>: define qué cosas existen en su mundo y qué se puede hacer con ellas (S6). En la S8 la preservación fue un problema jurídico; ahora la pregunta es anterior: <b>si un mundo ya no se puede habitar, ¿todavía existe?</b> El derecho pregunta si está permitido conservar; la ontología, qué se conservaría.</p>
+
+    <table class="tabla" style="margin-top:8px">
+      <tr><th style="width:18%">Pregunta</th><th class="acc" style="width:40%">Formulación jurídica · S8</th><th class="nar">Formulación ontológica · S12</th></tr>
+      <tr><td>Qué es la obra</td><td>Programa protegido como obra literaria, más música, arte y texto</td><td>Un espacio de posibilidades que solo existe mientras algo lo ejecuta</td></tr>
+      <tr><td>Qué es copiar</td><td>Reproducción, sujeta a autorización o excepción legal</td><td>Trasladar un mundo a un soporte que no lo vio nacer</td></tr>
+      <tr><td>Servidor apagado</td><td>Cese de un servicio; el contrato suele preverlo</td><td>La desaparición del único lugar donde ese mundo ocurría</td></tr>
+      <tr><td>Qué es emular</td><td>Puede exigir ingeniería inversa y eludir medidas tecnológicas</td><td>Reconstruir las condiciones de posibilidad de una experiencia</td></tr>
+      <tr><td>La comunidad</td><td>Terceros sin titularidad, salvo licencia</td><td>Parte del mundo: sin ella no hay nada que encender</td></tr>
+    </table>
+
+    <h4 style="margin-top:12px">Caso · <i>City of Heroes</i>: un mundo que se apagó y volvió</h4>
+    <div class="tarjeta" style="padding:4px 14px">
+      <div class="hito"><b>2004</b><span><b style="color:var(--tinta)">28 de abril:</b> sale el MMO de superhéroes de Cryptic Studios, publicado por NCSoft, con una comunidad pequeña y estable.</span></div>
+      <div class="hito"><b>2012</b><span><b style="color:var(--tinta)">31 de agosto:</b> NCSoft cierra Paragon Studios y anuncia el fin. La comunidad intenta comprar la propiedad intelectual; no prospera.</span></div>
+      <div class="hito"><b>2012</b><span><b style="color:var(--tinta)">30 de noviembre:</b> se apagan los servidores. El juego no queda sin actualizaciones: queda <b style="color:var(--tinta)">imposible de jugar</b>.</span></div>
+      <div class="hito"><b>2019</b><span><b style="color:var(--tinta)">Abril:</b> se revela que un grupo reducido ejecutaba el servidor en privado desde hacía unos seis años. La comunidad se parte.</span></div>
+      <div class="hito"><b>2019</b><span><b style="color:var(--tinta)">25 de abril:</b> abre Homecoming, servidor comunitario público, en una situación jurídica incómoda.</span></div>
+      <div class="hito"><b>2024</b><span><b style="color:var(--tinta)">4 de enero:</b> NCSoft otorga a Homecoming una licencia limitada para operar y desarrollar el juego, doce años después del apagón.</span></div>
+    </div>
+    <p class="fuente">Fuentes de la clase: Wikipedia y prensa sobre la licencia de 2024. Contrasten con el comunicado de Homecoming antes de citarlo.</p>
+
+    <h4 style="margin-top:10px">Servidores privados: preservar copiando sin permiso</h4>
+    <div class="dos">
+      <div class="tarjeta bloque borde-acc"><h3>Argumento de la preservación</h3><p>El titular abandonó el mundo y nadie más lo opera; no hay producto que se deje de comprar; sin la copia no hay objeto de estudio, solo capturas; la comunidad aporta trabajo, no lucro.</p></div>
+      <div class="tarjeta bloque borde-nar"><h3>Lo que sigue en pie</h3><p>El derecho patrimonial no se pierde por desuso; reproducir el código es reproducir, con o sin lucro; marcas y personajes siguen protegidos; la ingeniería inversa tiene límites propios en cada país.</p></div>
+    </div>
+    <div class="caja clave" style="margin-top:8px"><span class="tit">Lo que enseña el desenlace</span><i>City of Heroes</i> no se resolvió con una teoría jurídica: <b>se resolvió con una licencia</b>. Cuando el marco legal no da respuesta, llega el contrato y depende de que el titular quiera darlo, igual que en la huelga de SAG-AFTRA. Eso es lo frágil del asunto.</div>
+    <div class="caja ejemplo" style="margin-top:8px"><span class="tit">Su juego como documento</span>Todo juego preserva una época y una forma de pensar: el suyo, publicado, será <b>un documento de lo que ustedes pensaron en 2026</b>. Y quien lo juegue el 23 no jugará el que ustedes tienen en la cabeza, sino el suyo: ensayar es aprender a no corregirlo.</div>
+    <div class="pie"><span><b>Humanidades Digitales · Corte 3</b> · S12 · Ontología y City of Heroes</span><span>Juan David Vanegas Roldán · <a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 10</span></div>
+  </div>
+</section>
+
+<!-- ============================== 11 · S12 (4/5) ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:640px;height:640px;left:-300px;top:-180px;background:radial-gradient(circle, rgba(0,196,204,.14), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">03</span> Sesión 12 · El museo, Journey y su mundo</div>
+    <h2>¿Qué se conserva cuando<br><b>se conserva un videojuego?</b></h2>
+    <p class="texto" style="margin-top:12px">En 2012 el <b>MoMA</b> incorporó catorce videojuegos a su colección, en el Departamento de Arquitectura y Diseño, con un criterio explícito: el <b>diseño de la interacción</b>. Se exhibieron en <i>Applied Design</i> (2013–2014). La discusión no fue si son arte, sino algo más difícil: <b>cómo se exhibe una cosa que hay que hacer</b>.</p>
+    <table class="tabla" style="margin-top:8px">
+      <tr><th style="width:22%">Obra</th><th style="width:32%">Cómo se muestra</th><th>Qué se conserva y qué no</th></tr>
+      <tr><td>Pac-Man</td><td>Jugable, con control</td><td>El acto de jugar; el salón ya no es un salón de máquinas</td></tr>
+      <tr><td>Tetris</td><td>Emulado sobre hardware que imita el original</td><td>La interacción; el objeto físico se sustituye</td></tr>
+      <tr><td>SimCity 2000</td><td>Demostración y mural de capturas</td><td>La estética; la decisión, que es el juego entero, no</td></tr>
+      <tr><td>The Sims · Myst</td><td>Video de demostración</td><td>El visitante mira a otro jugar: la obra se vuelve cine</td></tr>
+      <tr><td>Dwarf Fortress</td><td>Tráiler</td><td>El relato sobre el juego, no el juego</td></tr>
+    </table>
+    <p class="fuente">El número de piezas de la colección cambia con cada adquisición (en clase se dijo que ronda los treinta y cinco juegos): verifíquenlo en la ficha del museo antes de citarlo.</p>
+
+    <h4 style="margin-top:10px">Tres objetos distintos, con técnicas y dueños distintos</h4>
+    <div class="tres">
+      <div class="tarjeta bloque"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-data"/></svg></div><h3>El archivo</h3></div><p>Código, assets, ejecutable. Lo único que se copia bien y lo que menos se parece al juego: sin máquina que lo corra es un fósil. Se conserva con copias, formatos abiertos y documentación del entorno.</p></div>
+      <div class="tarjeta bloque"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-game"/></svg></div><h3>La experiencia</h3></div><p>Latencia, control, dificultad, sonido. Lo que el museo intenta y casi siempre falla. Se conserva con emulación fiel, grabaciones de partidas y descripciones de quienes jugaron.</p></div>
+      <div class="tarjeta bloque borde-nar"><div class="cab"><div class="ic-caja nar"><svg class="ico"><use href="#i-users"/></svg></div><h3>La comunidad</h3></div><p>Quienes sabían jugarlo, su jerga y sus normas no escritas. No se guarda en ningún disco: solo se conserva si sigue existiendo. Riesgo: <b>se enciende el servidor y no llega nadie</b>.</p></div>
+    </div>
+
+    <div class="dos" style="margin-top:10px;grid-template-columns:1.1fr .9fr">
+      <div class="tarjeta bloque borde-acc"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-msg"/></svg></div><h3>Caso · <i>Journey</i> y el compañero anónimo</h3></div><p>thatgamecompany, PlayStation 3, marzo de 2012, dirección de Jenova Chen. En el desierto aparece a veces otra persona, en vivo, sin chat, voz ni nombre: solo un canto corto. <b>Quitar la comunicación obliga al encuentro</b>: solo queda acompañar o abandonar. Y nadie puede reconstruir su partida: la experiencia solo existió mientras ocurría.</p></div>
+      <div class="caja ejemplo"><span class="tit">Lo que copiar de aquí</span>La <b>restricción bien elegida</b> diseña más que la función añadida. Antes de agregar algo a su juego en estas semanas, prueben a quitar algo: es más barato y suele ser mejor (y además respeta el freeze).</div>
+    </div>
+
+    <h4 style="margin-top:12px">Discusión dirigida: respondan por el mundo que construyeron</h4>
+    <div class="tarjeta" style="padding:2px 14px">
+      <div class="frase"><span>1</span><div><b style="color:var(--tinta)">Ontología.</b> ¿Qué tipo de existencia tiene su mundo? ¿Dónde ocurre y qué tendría que pasar para que dejara de ocurrir?</div></div>
+      <div class="frase"><span>2</span><div><b style="color:var(--tinta)">Reglas y ficción.</b> ¿Qué parte es real en el sentido de Juul y qué parte es ficción que el jugador podría ignorar?</div></div>
+      <div class="frase"><span>3</span><div><b style="color:var(--tinta)">Memoria.</b> ¿Qué va a recordar quien lo juegue una sola vez? Un sonido, una muerte, una decisión.</div></div>
+      <div class="frase"><span>4</span><div><b style="color:var(--tinta)">Desaparición.</b> Si en diez años nadie lo abre, ¿qué se perdió: el archivo, la experiencia o la comunidad?</div></div>
+      <div class="frase"><span>5</span><div><b style="color:var(--tinta)">El tema.</b> ¿Es hoy el mismo que eligieron en septiembre (sección 3)? Casi ningún equipo termina con el que empezó, y eso es lo que enseña construir.</div></div>
+    </div>
+    <p class="texto" style="margin-top:6px"><b>Regla:</b> el equipo no explica su juego, lo afirma. Si una respuesta necesita contar primero la trama, está mal.</p>
+    <div class="pie"><span><b>Humanidades Digitales · Corte 3</b> · S12 · Museo, Journey y discusión</span><span>Juan David Vanegas Roldán · <a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 11</span></div>
+  </div>
+</section>
+
+<!-- ============================== 12 · S12 (5/5) TÉCNICO ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:620px;height:620px;right:-300px;top:-200px;background:radial-gradient(circle, rgba(0,196,204,.14), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">04</span> Sesión 12 · Componente técnico</div>
+    <h2>Publicar en itch.io:<br><b>desplegar no es publicar.</b></h2>
+    <p class="texto" style="margin-top:12px">Desplegar es que el programa corra en un servidor; <b>publicar es que exista para alguien más</b>. El despliegue de GitHub Pages no se reemplaza: se conserva. Quedan dos direcciones vivas: el repositorio (la evidencia) y la página de itch.io (la obra).</p>
+    <table class="tabla" style="margin-top:8px">
+      <tr><th style="width:18%"></th><th class="acc">GitHub Pages · octubre</th><th class="nar">itch.io · 9 de noviembre</th></tr>
+      <tr><td>Qué hace</td><td>Sirve los archivos de una rama o carpeta del repositorio</td><td>Aloja el build en un ZIP y lo ejecuta dentro de la página del juego</td></tr>
+      <tr><td>Se actualiza</td><td>Solo, con cada push: es el sitio de desarrollo</td><td>Subiendo un build nuevo: es la versión publicada</td></tr>
+      <tr><td>Tiene</td><td>Ni página de obra, ni portada, ni etiquetas</td><td>Portada, capturas, descripción, etiquetas, créditos, licencia</td></tr>
+      <tr><td>Cómo se llega</td><td>Solo con el enlace</td><td>Es un catálogo: la gente busca y entra sin conocerlos</td></tr>
+    </table>
+
+    <h4 style="margin-top:12px">El ZIP, el index.html y los límites</h4>
+    <div class="dos" style="grid-template-columns:.95fr 1.05fr">
+<div class="codigo"><span class="w">mal</span>  juego.zip / build / index.html
+      <span class="c">itch no encuentra el index</span>
+<span class="k">bien</span> juego.zip / index.html
+     juego.zip / assets / …
+
+<span class="c"># comprimir el contenido, no la carpeta</span>
+cd build
+zip -r ../juego-web.zip .
+unzip -l ../juego-web.zip | head</div>
+      <div class="tarjeta" style="padding:2px 14px">
+        <div class="frase"><span>1</span><div><b style="color:var(--tinta)">Upload new project</b> y en <i>Kind of project</i>, <b style="color:var(--tinta)">HTML</b>. Con "Downloadable" no corre en el navegador.</div></div>
+        <div class="frase"><span>2</span><div>Suban el ZIP y marquen <b style="color:var(--tinta)">«This file will be played in the browser»</b>.</div></div>
+        <div class="frase"><span>3</span><div><b style="color:var(--tinta)">Embed:</b> lienzo con las medidas de su juego (por ejemplo 1280 × 720), pantalla completa activada; <i>mobile friendly</i> solo si lo probaron.</div></div>
+        <div class="frase"><span>4</span><div><b style="color:var(--tinta)">Rutas relativas</b> y mayúsculas exactas; recursos externos por <b style="color:var(--tinta)">HTTPS</b>.</div></div>
+      </div>
+    </div>
+    <div class="caja ojo" style="margin-top:8px"><span class="tit">Límites de la plataforma: léanlos, no los recuerden</span>itch.io pone tope al número de archivos del ZIP, a la longitud de las rutas y al peso descomprimido. Los números exactos cambian: <b>verifíquenlos el mismo día en itch.io/docs/creators/html5</b> ("Uploading HTML5 games"). Casi todo fracaso es una carpeta de más en el ZIP.</div>
+
+    <h4 style="margin-top:12px">La ficha no es un trámite: es el paratexto de la obra</h4>
+    <table class="tabla">
+      <tr><th style="width:18%">Elemento</th><th style="width:40%">Qué hace</th><th>Error típico</th></tr>
+      <tr><td>Portada</td><td>Miniatura del catálogo; decide si alguien entra</td><td>Una captura con interfaz, ilegible en pequeño</td></tr>
+      <tr><td>Título</td><td>Una línea que diga qué es y qué se hace</td><td>Un nombre poético sin pista del tipo de juego</td></tr>
+      <tr><td>Descripción</td><td>Qué se juega, duración, controles y tema</td><td>Sinopsis sin decir cómo se juega</td></tr>
+      <tr><td>Capturas</td><td>El juego jugándose</td><td>Tres capturas del menú principal</td></tr>
+      <tr><td>Etiquetas</td><td>Cómo los encuentran dentro de itch</td><td>Ninguna; incluyan también el tema de humanidades</td></tr>
+      <tr><td>Créditos y licencias</td><td>Quién hizo qué y bajo qué licencia va cada asset ajeno</td><td>Dejarlo "para después"</td></tr>
+      <tr><td>Contexto académico</td><td>Curso, universidad, semestre y enlace al repositorio</td><td>Omitirlo y que el trabajo parezca anónimo</td></tr>
+    </table>
+    <p class="texto" style="margin-top:6px">Agreguen la <b>licencia del proyecto</b>, la <b>declaración de uso de IA</b> y las limitaciones conocidas. Visibilidad: <b>Public</b> (o Restricted con enlace). Usen las medidas de imagen que pide el formulario.</p>
+    <div class="pie"><span><b>Humanidades Digitales · Corte 3</b> · S12 · Publicación en itch.io</span><span>Juan David Vanegas Roldán · <a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 12</span></div>
+  </div>
+</section>
+
+<!-- ============================== 13 · CÓMO CERRAR EL JUEGO ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:640px;height:640px;left:-300px;top:300px;background:radial-gradient(circle, rgba(0,196,204,.12), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">05</span> Guía práctica del corte</div>
+    <h2>Cómo cerrar el juego:<br><b>del freeze a la URL pública.</b></h2>
+
+    <div class="dos" style="margin-top:14px;grid-template-columns:1fr 1fr">
+      <div>
+        <h4>El calendario del cierre</h4>
+        <div class="tarjeta" style="padding:4px 14px">
+          <div class="hito"><b>19 oct</b><span>Hito 2, cerrado: juego desplegado con un nivel jugable de principio a fin.</span></div>
+          <div class="hito"><b>26 oct</b><span>S11: integración, <b style="color:var(--tinta)">feature freeze</b>, segundo playtest cruzado.</span></div>
+          <div class="hito"><b>9 nov</b><span>S12: export final y <b style="color:var(--tinta)">publicación en itch.io</b>; ensayo.</span></div>
+          <div class="hito"><b>2 y 16</b><span>Noviembre, festivos sin clase: margen, no frentes nuevos.</span></div>
+          <div class="hito"><b>23 nov</b><span><b style="color:var(--nar2)">Muestra final.</b> Sin prórroga.</span></div>
+        </div>
+      </div>
+      <div>
+        <h4>Los hitos (bitácora, sección 10.2)</h4>
+        <div class="tarjeta" style="padding:4px 14px">
+          <div class="hito" style="grid-template-columns:52px 1fr"><b>Alpha</b><span>Todas las mecánicas implementadas, contenido incompleto. Desde aquí, <b style="color:var(--tinta)">feature freeze</b>.</span></div>
+          <div class="hito" style="grid-template-columns:52px 1fr"><b>Beta</b><span>Todo el contenido adentro, se juega de principio a fin; solo errores y ajuste (<i>content lock</i>).</span></div>
+          <div class="hito" style="grid-template-columns:52px 1fr"><b>Gold</b><span>Versión final publicada y jugable desde un enlace; solo errores críticos.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <h4 style="margin-top:12px">Export, verificación y plan de publicación</h4>
+    <div class="cuatro flujo">
+      <div class="tarjeta"><span class="n">Build de producción</span><p>Sin consola de depuración, niveles de prueba ni assets sobrantes.</p></div>
+      <div class="tarjeta"><span class="n">Equipo ajeno</span><p>Que lo abran otros sin que ustedes toquen el teclado.</p></div>
+      <div class="tarjeta"><span class="n">Incógnito y celular</span><p>Sin caché; en vertical y táctil. Si no sirve, díganlo en la ficha.</p></div>
+      <div class="tarjeta"><span class="n">Consola · F12</span><p>Red, con el juego <b style="color:var(--tinta)">en itch</b>: un 404 explica casi todo.</p></div>
+    </div>
+
+    <h4 style="margin-top:12px">Créditos con TASL · secciones 15 y 16 de la bitácora</h4>
+    <div class="dos" style="grid-template-columns:.9fr 1.1fr">
+      <div class="caja clave"><span class="tit">TASL</span><b>Título, Autor, Source</b> (la URL) y <b>Licencia</b> con su enlace, en una <b>pantalla de créditos accesible desde el menú</b> y en un <b>CREDITS.txt</b>. Con CC BY, el crédito es la condición de la licencia.</div>
+      <ul class="lista" style="justify-content:center">
+        <li><svg class="ico"><use href="#i-check"/></svg><span>Nombre completo y rol de cada integrante (se cruza con los commits).</span></li>
+        <li><svg class="ico"><use href="#i-check"/></svg><span>Cada asset ajeno con TASL, incluido lo generado con IA.</span></li>
+        <li><svg class="ico"><use href="#i-check"/></svg><span>IA declarada: qué, con qué herramienta y qué hicieron después.</span></li>
+        <li><svg class="ico"><use href="#i-check"/></svg><span>Los mismos créditos, en texto, en la página de itch.io.</span></li>
+      </ul>
+    </div>
+
+    <h4 style="margin-top:12px">Recursos con licencia: verifiquen la del archivo, no la del sitio</h4>
+    <table class="tabla">
+      <tr><th style="width:24%">Sitio</th><th style="width:30%">Qué tiene</th><th>Licencia y advertencia</th></tr>
+      <tr><td>kenney.nl</td><td>Arte 2D y 3D, interfaz, sonidos</td><td>CC0 (dominio público): no exige atribución. El punto de partida más seguro</td></tr>
+      <tr><td>opengameart.org</td><td>Arte y audio</td><td>Licencia distinta por archivo: revisar uno por uno</td></tr>
+      <tr><td>freesound.org</td><td>Efectos y ambientes</td><td>CC0, CC-BY o CC-BY-NC según el archivo</td></tr>
+      <tr><td>Google Fonts</td><td>Tipografías</td><td>Casi todas SIL Open Font License: uso comercial e incrustación permitidos</td></tr>
+      <tr><td>lospec.com</td><td>Paletas restringidas</td><td>Licencia no uniforme: <b>no asuman dominio público</b></td></tr>
+      <tr><td>itch.io (asset packs)</td><td>Packs de arte y audio</td><td>La licencia la pone cada creador: <b>sin licencia escrita, no se usa</b></td></tr>
+    </table>
+    <p class="fuente">Variantes CC: ND prohíbe adaptar (no sirve para un juego), NC impide el uso comercial, SA obliga a licenciar igual.</p>
+
+    <h4 style="margin-top:10px">Checklist Gold, antes de dar la URL</h4>
+    <div class="dos" style="gap:6px 12px">
+      <ul class="lista">
+        <li><svg class="ico"><use href="#i-check"/></svg><span>Se juega de principio a fin, sin errores bloqueantes.</span></li>
+        <li><svg class="ico"><use href="#i-check"/></svg><span>Carga rápida; abre en incógnito, en celular y en un equipo ajeno.</span></li>
+        <li><svg class="ico"><use href="#i-check"/></svg><span>Créditos completos en el juego, en itch.io y en CREDITS.txt.</span></li>
+      </ul>
+      <ul class="lista">
+        <li><svg class="ico"><use href="#i-check"/></svg><span>Cada integrante con commits propios en el repositorio.</span></li>
+        <li><svg class="ico"><use href="#i-check"/></svg><span>Bitácora actualizada (§10 freeze, §15 IA, §16 licencias).</span></li>
+        <li><svg class="ico"><use href="#i-check"/></svg><span>URL pública probada desde un dispositivo distinto al de quien la subió.</span></li>
+      </ul>
+    </div>
+    <div class="pie"><span><b>Humanidades Digitales · Corte 3</b> · Cómo cerrar el juego</span><span>Juan David Vanegas Roldán · <a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 13</span></div>
+  </div>
+</section>
+
+<!-- ============================== 14 · MUESTRA FINAL ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:640px;height:640px;right:-300px;top:-160px;background:radial-gradient(circle, rgba(242,140,40,.12), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">06</span> Muestra final · lunes 23 de noviembre</div>
+    <h2>El juego, funcionando,<br><b>y ustedes al lado.</b></h2>
+    <p class="texto" style="margin-top:12px">Presentación pública de los cinco juegos, en vivo: no una exposición sobre el juego, sino <b>el juego funcionando</b> con el equipo explicando decisiones. El mejor proyecto se destaca en <b>trifuerza.co</b> con su equipo y su enlace.</p>
+
+    <h4 style="margin-top:12px">Qué se evalúa: tres cosas juntas</h4>
+    <div class="tres">
+      <div class="tarjeta bloque borde-acc"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-branch"/></svg></div><h3>El historial del repositorio</h3></div><p>El <i>contribution graph</i>: quién hizo qué y cuándo. Un integrante sin commits propios no se salva con una buena presentación.</p></div>
+      <div class="tarjeta bloque borde-acc"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-users"/></svg></div><h3>La sustentación de roles</h3></div><p>Cada quien explica su aporte, respaldado por el historial. Es la prueba de autoría de su obra colectiva.</p></div>
+      <div class="tarjeta bloque borde-nar"><div class="cab"><div class="ic-caja nar"><svg class="ico"><use href="#i-scale"/></svg></div><h3>El tema de humanidades</h3></div><p>Cómo el dilema elegido se volvió mecánica. Un reparto perfecto de commits sin tema tampoco aprueba.</p></div>
+    </div>
+
+    <h4 style="margin-top:12px">Qué mostrar y en qué orden</h4>
+    <div class="seis flujo">
+      <div class="tarjeta"><span class="n">1 · URL</span><p>Abran la dirección pública delante de todos: ni ejecutable local ni video.</p></div>
+      <div class="tarjeta"><span class="n">2 · Jugar</span><p>Alguien de otro equipo juega en silencio. Si hay que explicar controles, admítanlo.</p></div>
+      <div class="tarjeta"><span class="n">3 · Tema</span><p>Señalen la regla concreta, no el letrero.</p></div>
+      <div class="tarjeta"><span class="n">4 · Decisión</span><p>Algo de septiembre que se cayó, por qué y qué lo reemplazó.</p></div>
+      <div class="tarjeta"><span class="n">5 · Roles</span><p>Cada quien dice qué hizo, contrastado con los commits.</p></div>
+      <div class="tarjeta borde-nar"><span class="n" style="color:var(--nar2)">6 · Qué falta</span><p>Lo que no alcanzaron y por qué: eso es criterio.</p></div>
+    </div>
+    <p class="fuente">La guía de S12 propone pitch de 3 minutos y demo de 2; confirmen los tiempos exactos con el profesor.</p>
+
+    <h4 style="margin-top:10px">Guion de sustentación por roles (roles sugeridos en la sección 11 de la bitácora)</h4>
+    <table class="tabla">
+      <tr><th style="width:21%">Rol</th><th style="width:47%">Qué cuenta en la muestra</th><th>Evidencia</th></tr>
+      <tr><td>Dirección</td><td>Cómo protegieron el alcance y qué se cortó</td><td>Tablero, freeze firmado</td></tr>
+      <tr><td>Narrativa y diseño</td><td>Dónde vive el tema en las reglas</td><td>Secciones 3, 5 y 9</td></tr>
+      <tr><td>Arte y UI</td><td>Cómo la paleta y la silueta enseñan a jugar</td><td>Guía de estilo (7.5)</td></tr>
+      <tr><td>Audio y música</td><td>Qué comunica el sonido y qué se recordará</td><td>Sección 8 y licencias</td></tr>
+      <tr><td>Programación</td><td>La mecánica central y su criterio de aceptación</td><td>Commits, proyecto</td></tr>
+      <tr><td>Integración y QA</td><td>Cómo se integró, qué bugs se decidieron</td><td>PR, Issues, URL itch.io</td></tr>
+    </table>
+
+    <h4 style="margin-top:10px">Va a fallar en algún equipo: tengan plan B</h4>
+    <table class="tabla">
+      <tr><th style="width:24%">Qué falla</th><th style="width:34%">Por qué pasa</th><th>Qué tienen listo</th></tr>
+      <tr><td>Internet caído</td><td>Red del salón saturada</td><td>Copia local del build, probada antes</td></tr>
+      <tr><td>itch no carga</td><td>Build mal subido o caché</td><td>El enlace de GitHub Pages, vivo</td></tr>
+      <tr><td>No hay sonido</td><td>El navegador espera una interacción</td><td>Un clic o tecla al inicio</td></tr>
+      <tr><td>Se ve cortado</td><td>Proyector con otra resolución</td><td>Pantalla completa probada allí</td></tr>
+      <tr><td>Todo falla</td><td>Pasa</td><td>Video de una partida completa, local</td></tr>
+    </table>
+    <div class="caja clave" style="margin-top:10px"><span class="tit">Conecten el juego con el curso</span>Lleguen con respuestas preparadas sobre <b>licencias, uso de IA y dark patterns</b>. Y si algo se cae, no lo tapen hablando: digan qué se rompió, muestren el respaldo y sigan. Lo que se evalúa no es el error, sino <b>si lo previeron</b>.</div>
+    <div class="pie"><span><b>Humanidades Digitales · Corte 3</b> · Muestra final</span><span>Juan David Vanegas Roldán · <a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 14</span></div>
+  </div>
+</section>
+
+<!-- ============================== 15 · PREGUNTAS ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:640px;height:640px;right:-300px;top:-160px;background:radial-gradient(circle, rgba(0,196,204,.14), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">07</span> Para ponerse a prueba</div>
+    <h2>Preguntas de repaso<br><b>antes de la muestra.</b></h2>
+    <p class="texto" style="margin-top:8px">Salen de las guías y presentaciones de cada sesión. Piensen la respuesta antes de leerla.</p>
+    <div class="dos" style="margin-top:10px;gap:8px 10px">
+      <div class="tarjeta qa"><h3><span>1.</span>¿En qué se diferencia el humanismo digital de la tecnofobia?</h3><p>No rechaza la tecnología: exige que sirva a la dignidad humana y pregunta qué lugar queda a la persona cuando los sistemas median trabajo, creación y memoria.</p></div>
+      <div class="tarjeta qa"><h3><span>2.</span>¿Cuáles son las cuatro revoluciones de Floridi?</h3><p>Copérnico (cosmológica), Darwin (biológica), Freud (psicológica) y Turing (informacional): ya no tenemos el monopolio de procesar información.</p></div>
+      <div class="tarjeta qa"><h3><span>3.</span>¿Qué es la infoesfera y qué significa onlife?</h3><p>El entorno de agentes e información en el que vivimos; onlife es la vida que ya no se parte entre "en línea" y "fuera de línea".</p></div>
+      <div class="tarjeta qa"><h3><span>4.</span>¿Cuáles son los tres tipos de creatividad de Boden?</h3><p>Combinatoria (unir lo conocido), exploratoria (buscar dentro de reglas dadas) y transformacional (cambiar las reglas del espacio).</p></div>
+      <div class="tarjeta qa"><h3><span>5.</span>¿Por qué el derecho niega la autoría a una IA? Cite la norma.</h3><p>La Decisión Andina 351 (art. 3) define al autor como la persona física que realiza la creación intelectual.</p></div>
+      <div class="tarjeta qa"><h3><span>6.</span>¿Qué se protegió y qué no en Zarya of the Dawn?</h3><p>Sí el texto y la selección y disposición de la obra; no las imágenes individuales generadas, por falta de control suficiente sobre la salida.</p></div>
+      <div class="tarjeta qa"><h3><span>7.</span>¿Qué pedía SAG-AFTRA y por qué toca los datos personales?</h3><p>Consentimiento, aviso y pago por réplicas digitales de voz y desempeño: la voz y el cuerpo son rasgos que identifican a una persona.</p></div>
+      <div class="tarjeta qa"><h3><span>8.</span>¿Por qué la cláusula de suspensión en huelga es clave?</h3><p>Sin ella la empresa seguiría produciendo con las réplicas de los huelguistas y la huelga no tendría efecto.</p></div>
+      <div class="tarjeta qa"><h3><span>9.</span>¿Qué es una prueba de regresión?</h3><p>Verificar que lo que funcionaba antes sigue funcionando después de integrar o corregir.</p></div>
+      <div class="tarjeta qa"><h3><span>10.</span>¿Qué es el feature freeze y qué sí entra después?</h3><p>Cerrar la lista de funciones: solo se corrigen errores, se ajustan valores, se ponen assets definitivos, créditos y ficha.</p></div>
+      <div class="tarjeta qa"><h3><span>11.</span>¿Cuáles son las tres partes de un reporte de bug?</h3><p>Pasos para reproducir, resultado esperado y resultado obtenido; se abre como Issue y se etiqueta por gravedad.</p></div>
+      <div class="tarjeta qa"><h3><span>12.</span>¿Qué es el círculo mágico y quién popularizó el término?</h3><p>El espacio y tiempo aparte donde rigen las reglas del juego; como concepto de diseño lo difundieron Salen y Zimmerman (2003).</p></div>
+      <div class="tarjeta qa"><h3><span>13.</span>¿Por qué se perdona antes al tramposo que al aguafiestas?</h3><p>El tramposo reconoce las reglas y mantiene el mundo en pie; el aguafiestas revela que todo era un acuerdo y lo desarma.</p></div>
+      <div class="tarjeta qa"><h3><span>14.</span>¿Por qué Juul dice que los videojuegos son "mitad reales"?</h3><p>Las reglas son reales (se gana y se pierde de verdad) y el mundo es ficticio; la experiencia nace de la tensión entre ambas.</p></div>
+    </div>
+    <div class="tarjeta qa borde-acc" style="margin-top:8px"><h3><span>15.</span>¿Qué se conserva cuando se conserva un videojuego, y qué debe tener su página de itch.io para cumplir con propiedad intelectual y transparencia?</h3><p>Tres objetos distintos: el archivo, la experiencia y la comunidad, y ninguno basta solo. La página necesita créditos con TASL de cada asset ajeno, la licencia del proyecto, la declaración de uso de IA, las limitaciones conocidas y el contexto académico con enlace al repositorio.</p></div>
+    <div class="pie"><span><b>Humanidades Digitales · Corte 3</b> · Preguntas de repaso</span><span>Juan David Vanegas Roldán · <a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 15</span></div>
+  </div>
+</section>
+
+<!-- ============================== 16 · LO ESENCIAL ============================== -->
+<section class="pagina cruces">
+  <svg class="constelacion" data-paleta="academy" data-semilla="37" data-zona="440,40,770,150" data-nodos="8" viewBox="0 0 794 1123" aria-hidden="true" style="opacity:.55"></svg>
+  <div class="brillo" style="width:800px;height:800px;right:-340px;bottom:-340px;background:radial-gradient(circle, rgba(0,196,204,.2), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">08</span> Para repasar el semestre</div>
+    <h2>Lo esencial del curso<br><b>en diez frases.</b></h2>
+
+    <div class="tarjeta" style="margin-top:14px;padding:2px 18px">
+      <div class="frase"><span>01</span><div>Un algoritmo es una receta; el daño <b style="color:var(--tinta)">no necesita maldad</b>, necesita que nadie se haga responsable de pensar (S1, Arendt).</div></div>
+      <div class="frase"><span>02</span><div>Lo que no está en el repositorio <b style="color:var(--tinta)">no existe</b>: el historial de commits es la prueba del trabajo de cada quien (S4).</div></div>
+      <div class="frase"><span>03</span><div>El tema se vuelve <b style="color:var(--tinta)">mecánica, no letrero</b>; y un método de trabajo con límite de tareas también es una decisión ética frente al crunch (S5).</div></div>
+      <div class="frase"><span>04</span><div>Clasificar es <b style="color:var(--tinta)">repartir</b>, y un estado sin salida es un problema de derechos (S6); la distopía extrapola y el juego la vuelve verbo (S7).</div></div>
+      <div class="frase"><span>05</span><div>El derecho de autor protege <b style="color:var(--tinta)">la forma, no la idea</b>; sin licencia escrita no se usa, y se atribuye con TASL (S8).</div></div>
+      <div class="frase"><span>06</span><div>Toda mecánica de retención es <b style="color:var(--tinta)">una decisión ética</b>, y la nube es un lugar con costo (S9).</div></div>
+      <div class="frase"><span>07</span><div>La autoría <b style="color:var(--tinta)">no es un trofeo a la originalidad</b>: es la dirección a la que se manda la cuenta. En Colombia, el autor es una persona física (S11).</div></div>
+      <div class="frase"><span>08</span><div>Cuando la ley no llega, <b style="color:var(--tinta)">llega el contrato</b>: la huelga de SAG-AFTRA y la licencia de City of Heroes (S11, S12).</div></div>
+      <div class="frase"><span>09</span><div>Las reglas son reales y el mundo es ficción: <b style="color:var(--tinta)">el jugador le cree a las reglas</b> (Huizinga, Juul, S12).</div></div>
+      <div class="frase"><span>10</span><div>Desplegar no es publicar, y <b style="color:var(--tinta)">los mundos se apagan más rápido de lo que se construyen</b>: cuídenlos (S12).</div></div>
+    </div>
+
+    <h4 style="margin-top:14px">Mapa de fuentes del corte</h4>
+    <table class="tabla">
+      <tr><th style="width:34%">Fuente</th><th>Qué aporta, en una línea</th><th style="width:10%">Sesión</th></tr>
+      <tr><td>Floridi, <i>The Fourth Revolution</i> (2014)</td><td>Cuarta revolución, infoesfera, onlife, inforgs</td><td>S11</td></tr>
+      <tr><td>Boden, <i>The Creative Mind</i> (1990)</td><td>Creatividad combinatoria, exploratoria y transformacional</td><td>S11</td></tr>
+      <tr><td>Decisión 351/1993 · Ley 23/1982</td><td>El autor es persona física · derechos morales</td><td>S11</td></tr>
+      <tr><td>SAG-AFTRA, Interactive Media Agreement 2025</td><td>Consentimiento, divulgación y pago por réplicas digitales</td><td>S11</td></tr>
+      <tr><td>U.S. Copyright Office (2023)</td><td><i>Zarya of the Dawn</i>: se protege el arreglo humano</td><td>S11</td></tr>
+      <tr><td>Huizinga, <i>Homo Ludens</i> (1938) · Salen y Zimmerman</td><td>El juego anterior a la cultura · el círculo mágico</td><td>S12</td></tr>
+      <tr><td>Juul, <i>Half-Real</i> (2005) · Consalvo (2009)</td><td>Reglas reales, mundo ficcional · crítica del círculo</td><td>S12</td></tr>
+      <tr><td>itch.io, "Uploading HTML5 games"</td><td>Publicación del build HTML5 y sus límites vigentes</td><td>S12</td></tr>
+    </table>
+    <div class="caja clave" style="margin-top:10px"><span class="tit">Lo último</span>Empezaron el semestre sin haber escrito una línea de código y lo terminan con cinco mundos publicados. Ninguno es el juego de la bitácora de septiembre, y esa distancia es lo que de verdad aprendieron: <b>hicieron algo que otra persona puede habitar</b>.</div>
+    <p class="texto" style="margin-top:8px">Este resumen recoge la idea de cada fuente, no su texto. <span class="tenue">Verifiquen normas, fechas, cifras y límites de plataformas en la fuente oficial antes de citarlos en la bitácora.</span> Nos vemos el <b class="nar">23 de noviembre</b> en la muestra final.</p>
+
+    <div class="pie" style="border-top:1px solid var(--borde);padding-top:16px">
+      <span class="logo"><img src="../public/marcas/trifuerza/logo-horizontal-claro.png" alt="Trifuerza" style="height:22px"><span class="sep" style="height:18px"></span><span class="linea" style="font-size:10.5px">Academy</span></span>
+      <span>Juan David Vanegas Roldán · <a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 16</span>
+    </div>
+  </div>
+</section>
+
+<script>window.TERMINOS_PROPUESTA = {
+  tech: ['merge', 'QA', 'itch.io', 'index.html', 'Issue', 'git log', '{ }'],
+  law: ['§15', 'Decisión 351', 'Ley 23/1982', 'TASL', 'CC0', 'autor'],
+  design: ['círculo mágico', 'half-real', 'playtest', 'Gold', 'memoria', '△'],
+};</script>
+<script src="kit/constelacion.js"></script>
+<script src="kit/pdf-limpio.js"></script>
+</body>
+</html>

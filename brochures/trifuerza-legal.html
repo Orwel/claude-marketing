@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Trifuerza Legal · Brochure</title>
+<!--
+  Brochure de Trifuerza Legal (A4, 7 páginas). Se imprime a PDF con `npm run brochure`.
+  Contenido: Business Model Canvas de Trifuerza Legal del FigJam de Trifuerza (24-sep-2026) y los
+  módulos de trifuerza.co/legal. Mundo visual de Legal: dorado #C9A227 sobre #030712, Inter.
+  Los precios del canvas son propuestos: ver brochures/verificar.json antes de repartirlo.
+-->
+<style>
+  @font-face { font-family: 'Inter'; src: url('../public/fuentes/Inter.woff2') format('woff2'); font-weight: 100 900; }
+  @font-face { font-family: 'Fraunces'; src: url('../public/fuentes/Fraunces.woff2') format('woff2'); font-weight: 100 900; }
+  :root {
+    --fondo: #030712; --panel: #111827; --panel2: #0B1220; --borde: #1F2937;
+    --tinta: #F9FAFB; --tenue: #9CA3AF; --oro: #C9A227; --oro2: #E8C547; --oro3: #F5E6A8;
+    --ok: #10B981; --okt: #34D399; --error: #EF4444; --errort: #FECACA; --sky: #0EA5E9;
+  }
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--fondo); }
+  body { font-family: 'Inter', sans-serif; color: var(--tinta); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .pagina { position: relative; width: 210mm; height: 297mm; overflow: hidden; padding: 64px 60px 56px; page-break-after: always; background: var(--fondo); }
+  .pagina:last-child { page-break-after: auto; }
+  /* Patrón de cruces al 3 % y resplandor dorado arriba a la derecha, como el hero de trifuerza.co/legal. */
+  .cruces::before { content: ''; position: absolute; inset: 0; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48'%3E%3Cpath d='M24 20v8M20 24h8' stroke='white' stroke-opacity='.05' stroke-width='1.2'/%3E%3C/svg%3E"); }
+  .brillo { position: absolute; border-radius: 50%; pointer-events: none; }
+  .contenido { position: relative; z-index: 2; height: 100%; display: flex; flex-direction: column; }
+
+  .logo { display: flex; align-items: center; gap: 12px; }
+  .logo img { height: 34px; }
+  .logo .sep { width: 1px; height: 26px; background: var(--borde); }
+  .logo .legal { font-size: 13px; font-weight: 600; letter-spacing: .32em; text-transform: uppercase; color: var(--oro2); }
+  .pie { margin-top: auto; display: flex; justify-content: space-between; align-items: center; font-size: 10.5px; color: var(--tenue); letter-spacing: .04em; }
+  .pie b { color: var(--tinta); font-weight: 600; }
+
+  .etiqueta { display: inline-flex; align-items: center; gap: 8px; padding: 6px 13px; border-radius: 10px; font-size: 11px; color: var(--tenue); background: rgba(31,41,55,.5); border: 1px solid #374151; }
+  .etiqueta .ico { width: 14px; height: 14px; color: var(--oro2); }
+  .antetitulo { font-size: 11px; font-weight: 600; letter-spacing: .28em; text-transform: uppercase; color: var(--oro); margin-bottom: 16px; display: flex; align-items: center; gap: 12px; }
+  .antetitulo::before { content: ''; width: 26px; height: 1px; background: var(--oro); }
+  h1 { font-size: 62px; line-height: 1.02; font-weight: 300; letter-spacing: -.04em; }
+  h1 b, h2 b { font-weight: 700; }
+  h2 { font-size: 40px; line-height: 1.08; font-weight: 300; letter-spacing: -.035em; }
+  h3 { font-size: 16px; font-weight: 600; letter-spacing: -.01em; }
+  p { line-height: 1.6; }
+  .lead { font-size: 15px; color: var(--tenue); font-weight: 300; line-height: 1.65; }
+  .oro { color: var(--oro2); }
+  .serif { font-family: 'Fraunces', serif; font-style: italic; font-weight: 400; }
+  .tenue { color: var(--tenue); }
+
+  .tarjeta { background: linear-gradient(165deg, rgba(17,24,39,.95), rgba(11,18,32,.95)); border: 1px solid var(--borde); border-radius: 18px; }
+  .tarjeta.oro-borde { border-color: rgba(201,162,39,.4); box-shadow: 0 0 50px rgba(201,162,39,.08); }
+  .ventana { border-radius: 18px; overflow: hidden; background: var(--fondo); border: 1px solid #263041; box-shadow: 0 30px 70px rgba(0,0,0,.6), 0 0 60px rgba(201,162,39,.1); }
+  .barra { height: 36px; display: flex; align-items: center; gap: 7px; padding: 0 16px; background: rgba(17,24,39,.95); border-bottom: 1px solid var(--borde); font-size: 12.5px; font-weight: 600; }
+  .barra span.p { width: 9px; height: 9px; border-radius: 50%; }
+  .barra .t { margin-left: 10px; }
+  .estado { display: inline-block; padding: 3px 10px; border-radius: 999px; font-size: 9.5px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; white-space: nowrap; }
+  .e-ok { color: var(--okt); background: rgba(16,185,129,.14); border: 1px solid rgba(16,185,129,.35); }
+  .e-crit { color: var(--errort); background: rgba(239,68,68,.16); border: 1px solid rgba(239,68,68,.45); }
+  .e-act { color: #BAE6FD; background: rgba(14,165,233,.14); border: 1px solid rgba(14,165,233,.35); }
+  .e-oro { color: var(--oro2); background: rgba(201,162,39,.12); border: 1px solid rgba(201,162,39,.4); }
+  .ico { width: 20px; height: 20px; stroke: currentColor; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+  .mono { font-family: ui-monospace, Consolas, monospace; letter-spacing: .02em; }
+
+  /* ---------- Portada ---------- */
+  .tabla-proc .fila { display: flex; align-items: center; gap: 14px; padding: 11px 16px; border-radius: 12px; background: rgba(249,250,251,.03); border: 1px solid rgba(249,250,251,.06); }
+  .tabla-proc .fila + .fila { margin-top: 8px; }
+  .tabla-proc .fila .ico { color: var(--oro2); }
+  .tabla-proc .fila b { display: block; font-size: 13.5px; font-weight: 600; }
+  .tabla-proc .fila small { font-size: 11px; color: var(--tenue); }
+  .tabla-proc .fila.critico { background: rgba(127,29,29,.3); border-color: rgba(239,68,68,.45); }
+  .banner { display: flex; gap: 12px; align-items: center; padding: 12px 16px; border-radius: 12px; background: rgba(127,29,29,.32); border: 1.5px solid rgba(239,68,68,.5); box-shadow: 0 0 24px rgba(239,68,68,.25); margin-bottom: 10px; }
+  .banner .ico { color: var(--error); width: 24px; height: 24px; }
+  .banner b { font-size: 13px; color: var(--errort); display: block; }
+  .banner small { font-size: 10.5px; color: rgba(254,202,202,.8); }
+
+  /* ---------- Promesa ---------- */
+  .telefono { width: 250px; height: 470px; border-radius: 40px; padding: 12px; background: #0B0F19; border: 2px solid #2A3344; box-shadow: 0 40px 80px rgba(0,0,0,.6), 0 0 80px rgba(201,162,39,.12); position: relative; }
+  .telefono .pantalla { width: 100%; height: 100%; border-radius: 30px; background: radial-gradient(circle at 50% 0%, rgba(201,162,39,.18), #050912 60%); padding: 44px 12px 12px; display: flex; flex-direction: column; gap: 9px; }
+  .telefono .isla { position: absolute; top: 22px; left: 50%; width: 80px; height: 22px; margin-left: -40px; border-radius: 12px; background: #000; }
+  .telefono .hora { text-align: center; font-size: 42px; font-weight: 200; letter-spacing: -.03em; margin-bottom: 8px; }
+  .noti { display: flex; gap: 10px; padding: 10px 11px; border-radius: 16px; background: rgba(17,24,39,.94); border: 1px solid rgba(255,255,255,.08); }
+  .noti .app { width: 30px; height: 30px; border-radius: 9px; display: grid; place-items: center; flex: none; color: #fff; }
+  .noti .app .ico { width: 16px; height: 16px; }
+  .noti small { display: flex; justify-content: space-between; font-size: 8.5px; color: var(--tenue); }
+  .noti b { display: block; font-size: 10.5px; font-weight: 600; line-height: 1.3; }
+  .noti span { font-size: 9.5px; color: var(--tenue); }
+  .flujo { display: flex; flex-direction: column; gap: 14px; }
+  .paso { display: grid; grid-template-columns: 44px 1fr; gap: 14px; align-items: start; }
+  .paso .n { width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; border: 1.5px solid rgba(201,162,39,.55); color: var(--oro2); font-weight: 600; font-size: 15px; background: rgba(201,162,39,.08); }
+  .paso h3 { font-size: 15px; margin-bottom: 3px; }
+  .paso p { font-size: 12px; color: var(--tenue); line-height: 1.5; }
+
+  /* ---------- Módulos ---------- */
+  .modulos { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 28px; }
+  .modulo { padding: 20px; display: flex; flex-direction: column; gap: 12px; }
+  .modulo .cab { display: flex; align-items: center; gap: 12px; }
+  .modulo .cab .ic { padding: 8px; border-radius: 10px; border: 1px solid #374151; background: rgba(31,41,55,.5); color: var(--oro2); display: grid; place-items: center; }
+  .modulo .cab h3 { font-size: 16px; }
+  .modulo p { font-size: 12px; color: var(--tenue); line-height: 1.55; }
+  .demo { height: 104px; border-radius: 12px; background: var(--fondo); border: 1px solid var(--borde); padding: 10px 12px; font-size: 10px; overflow: hidden; }
+  .demo .r { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,.05); }
+  .demo .r:last-child { border-bottom: 0; }
+  .kan { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; height: 100%; }
+  .kan div { border-radius: 8px; background: rgba(255,255,255,.03); padding: 6px; display: flex; flex-direction: column; gap: 5px; }
+  .kan i { font-style: normal; font-size: 8.5px; color: var(--tenue); display: flex; align-items: center; gap: 5px; }
+  .kan i::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--c); }
+  .kan em { font-style: normal; font-size: 9px; padding: 5px 6px; border-radius: 6px; background: var(--panel); border: 1px solid rgba(255,255,255,.07); }
+  .kan em.oro { border-color: rgba(201,162,39,.55); background: rgba(201,162,39,.12); }
+
+  /* ---------- Para quién ---------- */
+  .segmentos { display: flex; flex-direction: column; gap: 12px; margin-top: 30px; }
+  .seg { display: grid; grid-template-columns: 44px 1.05fr 1.5fr 112px; gap: 16px; align-items: center; padding: 22px 20px; }
+  .seg .ic { width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center; background: rgba(201,162,39,.1); border: 1px solid rgba(201,162,39,.35); color: var(--oro2); }
+  .seg h3 { font-size: 14.5px; }
+  .seg small { font-size: 11px; color: var(--tenue); display: block; margin-top: 2px; }
+  .seg p { font-size: 12.5px; line-height: 1.5; }
+  .seg .plan { text-align: right; }
+
+  /* ---------- Arranque ---------- */
+  .linea-tiempo { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 26px; position: relative; }
+  .linea-tiempo::before { content: ''; position: absolute; left: 30px; right: 30px; top: 23px; height: 2px; background: linear-gradient(90deg, var(--oro), rgba(201,162,39,.2)); }
+  .hito { position: relative; }
+  .hito .n { width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center; background: var(--fondo); border: 1.5px solid var(--oro); color: var(--oro2); font-weight: 600; margin-bottom: 14px; box-shadow: 0 0 0 6px var(--fondo); }
+  .hito h3 { font-size: 14.5px; margin-bottom: 5px; }
+  .hito p { font-size: 11.5px; color: var(--tenue); line-height: 1.5; }
+  .diferencial { padding: 30px 32px; border-radius: 22px; background: radial-gradient(circle at 100% 0%, rgba(201,162,39,.2), transparent 55%), linear-gradient(165deg, #111827, #070B14); border: 1px solid rgba(201,162,39,.45); }
+
+  /* ---------- Planes ---------- */
+  .planes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 24px; align-items: stretch; }
+  .plan { padding: 22px 20px; display: flex; flex-direction: column; }
+  .plan.destacado { background: linear-gradient(170deg, rgba(201,162,39,.2), rgba(11,18,32,.96) 55%); border: 1.5px solid rgba(201,162,39,.7); box-shadow: 0 0 60px rgba(201,162,39,.16), 0 24px 60px rgba(0,0,0,.5); }
+  .plan .nombre { font-size: 12px; font-weight: 600; letter-spacing: .24em; text-transform: uppercase; color: var(--oro2); }
+  .plan .precio { font-size: 29px; font-weight: 700; letter-spacing: -.04em; margin-top: 12px; white-space: nowrap; }
+  .plan .precio small { display: block; margin-top: 4px; font-size: 11px; font-weight: 400; color: var(--tenue); letter-spacing: 0; }
+  .plan .para { font-size: 11.5px; color: var(--tenue); margin: 12px 0 14px; line-height: 1.45; min-height: 34px; }
+  .plan .cifras { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; padding: 12px 0; border-top: 1px solid var(--borde); border-bottom: 1px solid var(--borde); margin-bottom: 14px; }
+  .plan .cifras div { text-align: center; }
+  .plan .cifras b { display: block; font-size: 17px; font-weight: 700; }
+  .plan .cifras span { font-size: 9px; color: var(--tenue); text-transform: uppercase; letter-spacing: .08em; }
+  .plan ul { list-style: none; display: flex; flex-direction: column; gap: 7px; }
+  .plan li { display: flex; gap: 8px; font-size: 11.5px; line-height: 1.4; }
+  .plan li .ico { width: 15px; height: 15px; color: var(--oro2); margin-top: 1px; }
+  .plan .btn { margin-top: auto; display: block; text-align: center; padding: 11px; border-radius: 12px; font-size: 12px; font-weight: 600; border: 1.5px solid #4B5563; }
+  .plan .btn.lleno { background: #fff; color: var(--fondo); border-color: #fff; }
+  .addons { margin-top: 16px; padding: 18px 20px; }
+  .addons .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-top: 12px; }
+  .addon { padding: 9px 11px; border-radius: 10px; background: rgba(255,255,255,.03); border: 1px solid var(--borde); }
+  .addon b { display: block; font-size: 12.5px; }
+  .addon span { font-size: 10px; color: var(--tenue); }
+  .notas { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 14px; }
+  .nota { padding: 14px 16px; border-radius: 14px; border: 1px dashed rgba(201,162,39,.35); font-size: 11px; color: var(--tenue); line-height: 1.5; }
+  .nota b { display: block; color: var(--tinta); font-size: 12.5px; margin-bottom: 3px; }
+
+  /* ---------- Cierre ---------- */
+  .cta { padding: 40px 38px; border-radius: 26px; background: radial-gradient(circle at 85% 0%, rgba(201,162,39,.32), transparent 55%), linear-gradient(160deg, #161D2B, #050811 75%); border: 1.5px solid rgba(201,162,39,.6); box-shadow: 0 0 90px rgba(201,162,39,.15); }
+  .cta .boton { display: inline-flex; align-items: center; gap: 10px; margin-top: 26px; padding: 15px 26px; border-radius: 14px; background: var(--oro); color: #030712; font-weight: 700; font-size: 15px; box-shadow: 0 0 36px rgba(201,162,39,.45); }
+</style>
+</head>
+<body>
+
+<!-- Íconos (trazos de lucide, MIT) -->
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <symbol id="i-scale" viewBox="0 0 24 24"><path d="m16 16 3-8 3 8c-.9.7-1.9 1-3 1s-2.1-.3-3-1Z"/><path d="m2 16 3-8 3 8c-.9.7-1.9 1-3 1s-2.1-.3-3-1Z"/><path d="M7 21h10M12 3v18M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></symbol>
+    <symbol id="i-check-sq" viewBox="0 0 24 24"><path d="m9 11 3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4M10 9H8M16 13H8M16 17H8"/></symbol>
+    <symbol id="i-pen" viewBox="0 0 24 24"><path d="m12 19 7-7 3 3-7 7-3-3z"/><path d="m18 13-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="m2 2 7.6 7.6"/><circle cx="11" cy="11" r="2"/></symbol>
+    <symbol id="i-drive" viewBox="0 0 24 24"><path d="M22 12H2M5.5 5.1 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.5-6.9A2 2 0 0 0 16.8 4H7.2a2 2 0 0 0-1.7 1.1zM6 16h.01M10 16h.01"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><path d="m21.7 18-8-14a2 2 0 0 0-3.5 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.7-3Z"/><path d="M12 9v4M12 17h.01"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+    <symbol id="i-building" viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4M8 6h.01M16 6h.01M12 6h.01M12 10h.01M12 14h.01M16 10h.01M16 14h.01M8 10h.01M8 14h.01"/></symbol>
+    <symbol id="i-grad" viewBox="0 0 24 24"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></symbol>
+    <symbol id="i-landmark" viewBox="0 0 24 24"><path d="M3 22h18M6 18v-7M10 18v-7M14 18v-7M18 18v-7M12 2l8 5H4z"/></symbol>
+    <symbol id="i-brief" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+    <symbol id="i-msg" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+  </defs>
+</svg>
+
+<!-- ============================== 1 · PORTADA ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:760px;height:760px;right:-300px;top:-300px;background:radial-gradient(circle, rgba(201,162,39,.26), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="logo"><img src="../public/marcas/trifuerza/logo-horizontal-claro.png" alt="Trifuerza"><span class="sep"></span><span class="legal">Legal</span></div>
+    <div style="margin-top:96px">
+      <span class="etiqueta"><svg class="ico"><use href="#i-scale"/></svg>Software jurídico Trifuerza</span>
+      <h1 style="margin-top:24px;font-size:74px">No se te pasa<br><b>un término.</b></h1>
+      <p class="lead" style="margin-top:22px;max-width:470px">Gestión integral para firmas de abogados: la Rama Judicial vigilada todos los días, y el CRM, las tareas, los documentos y la firma en la misma plataforma.</p>
+    </div>
+    <div class="ventana" style="margin-top:auto;margin-bottom:40px">
+      <div class="barra"><span class="p" style="background:#F87171"></span><span class="p" style="background:#FBBF24"></span><span class="p" style="background:#34D399"></span><span class="t">Trifuerza <span class="oro">Legal</span></span><span style="margin-left:auto;font-size:10.5px;font-weight:500" class="tenue">Procesos · Rama Judicial CO</span></div>
+      <div class="tabla-proc" style="padding:18px 20px">
+        <div class="banner"><svg class="ico"><use href="#i-alert"/></svg><div><b>Nueva actuación en radicado crítico</b><small>Sincronizado hace 2 min · aviso enviado por Telegram y correo</small></div></div>
+        <div class="fila critico"><svg class="ico"><use href="#i-scale"/></svg><div style="flex:1"><b>Demanda laboral</b><small class="mono">Rad. ••••• / 20••</small></div><span class="estado e-crit">Crítico</span></div>
+        <div class="fila"><svg class="ico"><use href="#i-scale"/></svg><div style="flex:1"><b>Proceso ejecutivo</b><small class="mono">Rad. ••••• / 20••</small></div><span class="estado e-ok">Al día</span></div>
+        <div class="fila"><svg class="ico"><use href="#i-scale"/></svg><div style="flex:1"><b>Acción de tutela</b><small class="mono">Rad. ••••• / 20••</small></div><span class="estado e-ok">Al día</span></div>
+      </div>
+    </div>
+    <div class="pie" style="margin-top:0"><span><b>trifuerza.co/legal</b></span><span>CRM · Judicial · Tareas · Documentos · Firma · Drive</span></div>
+  </div>
+</section>
+
+<!-- ============================== 2 · LA PROMESA ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:600px;height:600px;left:-260px;top:280px;background:radial-gradient(circle, rgba(201,162,39,.16), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo">La promesa</div>
+    <h2>La Rama vigilada<br><b>todos los días.</b></h2>
+    <p class="lead" style="margin-top:16px;max-width:560px">Revisar procesos a mano, uno por uno, es el trabajo que nadie quiere hacer y el que no se puede dejar de hacer. Trifuerza Legal lo hace por ti y te avisa apenas pasa algo.</p>
+
+    <div style="display:grid;grid-template-columns:250px 1fr;gap:40px;margin-top:34px;align-items:center">
+      <div class="telefono"><div class="isla"></div>
+        <div class="pantalla">
+          <div class="hora">7:42</div>
+          <div class="noti"><div class="app" style="background:#2AABEE"><svg class="ico"><use href="#i-send"/></svg></div><div><small><span>Telegram</span><span>ahora</span></small><b>Nueva actuación · Demanda laboral</b><span class="mono">Rad. ••••• / 20••</span></div></div>
+          <div class="noti"><div class="app" style="background:#EA4335"><svg class="ico"><use href="#i-mail"/></svg></div><div><small><span>Correo</span><span>ahora</span></small><b>Trifuerza Legal: actuación registrada</b><span>Revísala antes de que corra el término</span></div></div>
+          <div class="noti"><div class="app" style="background:var(--oro);color:#030712"><svg class="ico"><use href="#i-check-sq"/></svg></div><div><small><span>Trifuerza Legal</span><span>7:40</span></small><b>Tarea creada y asignada</b><span>Contestar requerimiento · vence el viernes</span></div></div>
+        </div>
+      </div>
+      <div class="flujo">
+        <div class="paso"><div class="n">1</div><div><h3>Cargas tus procesos una sola vez</h3><p>Con el radicado basta. En las cuentas de firma, la carga inicial la hacemos contigo.</p></div></div>
+        <div class="paso"><div class="n">2</div><div><h3>La plataforma consulta la Rama a diario</h3><p>Cada proceso vigilado se revisa todos los días, sin que nadie tenga que entrar a buscarlo.</p></div></div>
+        <div class="paso"><div class="n">3</div><div><h3>Te avisa por correo y Telegram</h3><p>Cuando hay una actuación nueva, llega el aviso. Tú decides qué hacer antes de que corra el término.</p></div></div>
+        <div class="paso"><div class="n">4</div><div><h3>La vuelves tarea del equipo</h3><p>La actuación se convierte en tarea con responsable y fecha, vinculada al proceso y al cliente.</p></div></div>
+      </div>
+    </div>
+
+    <div class="tarjeta oro-borde" style="margin-top:36px;padding:26px 28px;display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:center">
+      <div class="serif oro" style="font-size:64px;line-height:.8">“</div>
+      <div><div style="font-size:19px;font-weight:300;line-height:1.45">Lo construye un abogado litigante que también programa: las alertas están pensadas <b style="font-weight:600">desde el ejercicio</b>, no desde el software.</div><div class="tenue" style="font-size:11.5px;margin-top:10px">Saber qué alerta importa y cuál es ruido es criterio jurídico, no código.</div></div>
+    </div>
+    <div class="pie"><span><b>Trifuerza Legal</b> · La promesa</span><span>02</span></div>
+  </div>
+</section>
+
+<!-- ============================== 3 · MÓDULOS ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:640px;height:640px;right:-280px;top:-200px;background:radial-gradient(circle, rgba(201,162,39,.16), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo">Módulos</div>
+    <h2>Todo lo que tu firma necesita,<br><b>en una sola plataforma.</b></h2>
+    <p class="lead" style="margin-top:14px;max-width:560px">Lo demás existe para que la promesa se cumpla sin salir de la plataforma. Activa solo lo que uses.</p>
+
+    <div class="modulos">
+      <div class="tarjeta modulo">
+        <div class="demo"><div class="r"><span>María G. · Cliente</span><span class="estado e-ok">Activo</span></div><div class="r"><span>Formulario de ingreso</span><span class="estado e-act">Nuevo</span></div><div class="r"><span>Empresa ABC · Contacto</span><span class="tenue">3 procesos</span></div></div>
+        <div class="cab"><div class="ic"><svg class="ico" style="width:17px;height:17px"><use href="#i-users"/></svg></div><h3>CRM</h3></div>
+        <p>Clientes, contactos y formularios de ingreso en un solo lugar.</p>
+      </div>
+      <div class="tarjeta modulo">
+        <div class="demo"><div class="r"><span>Demanda laboral</span><span class="estado e-crit">Actuación</span></div><div class="r"><span>Proceso ejecutivo</span><span class="estado e-ok">Al día</span></div><div class="r"><span>Acción de tutela</span><span class="estado e-ok">Al día</span></div></div>
+        <div class="cab"><div class="ic"><svg class="ico" style="width:17px;height:17px"><use href="#i-scale"/></svg></div><h3>Judicial</h3></div>
+        <p>Conectado a la Rama Judicial de Colombia: monitoreo de procesos y alertas por correo electrónico y Telegram.</p>
+      </div>
+      <div class="tarjeta modulo">
+        <div class="demo" style="padding:8px"><div class="kan"><div><i style="--c:#6B7280">Pendiente</i><em>Poder especial</em><em>Pruebas</em></div><div><i style="--c:#3B82F6">En progreso</i><em class="oro">Contestar requerimiento</em></div><div><i style="--c:#10B981">Hecho</i><em>Memorial</em></div></div></div>
+        <div class="cab"><div class="ic"><svg class="ico" style="width:17px;height:17px"><use href="#i-check-sq"/></svg></div><h3>Tareas</h3></div>
+        <p>Organiza el trabajo del equipo en Kanban y vincula cada tarea a un proceso y a un cliente.</p>
+      </div>
+      <div class="tarjeta modulo">
+        <div class="demo"><div class="r"><span>Tutela_borrador.docx</span><span class="tenue">v3</span></div><div class="r"><span>Contrato_servicios.pdf</span><span class="estado e-ok">Listo</span></div><div class="r"><span>Plantilla · Poder</span><span class="tenue">Plantilla</span></div></div>
+        <div class="cab"><div class="ic"><svg class="ico" style="width:17px;height:17px"><use href="#i-file"/></svg></div><h3>Documentos</h3></div>
+        <p>Plantillas, versiones y la documentación de cada caso, centralizadas.</p>
+      </div>
+      <div class="tarjeta modulo">
+        <div class="demo"><div class="r"><span>Contrato de servicios</span><span class="estado e-oro">Enviado</span></div><div class="r"><span>Firmante 1 de 1</span><span class="estado e-ok">Firmó</span></div><div class="r"><span>Identidad</span><span class="estado e-ok">Verificada</span></div></div>
+        <div class="cab"><div class="ic"><svg class="ico" style="width:17px;height:17px"><use href="#i-pen"/></svg></div><h3>Firma electrónica</h3></div>
+        <p>Envía documentos a firmar con verificación de identidad, trazabilidad y control de estado.</p>
+      </div>
+      <div class="tarjeta modulo">
+        <div class="demo"><div class="r"><span>Caso · Demanda laboral</span><span class="tenue">24 archivos</span></div><div class="r"><span>Caso · Proceso ejecutivo</span><span class="tenue">11 archivos</span></div><div class="r"><span>Espacio de la firma</span><span class="tenue">Seguro</span></div></div>
+        <div class="cab"><div class="ic"><svg class="ico" style="width:17px;height:17px"><use href="#i-drive"/></svg></div><h3>Drive</h3></div>
+        <p>Almacenamiento seguro de archivos, vinculado a tu firma y a cada caso.</p>
+      </div>
+    </div>
+    <div class="pie"><span><b>Trifuerza Legal</b> · Módulos</span><span>03</span></div>
+  </div>
+</section>
+
+<!-- ============================== 4 · PARA QUIÉN ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:600px;height:600px;left:-260px;bottom:-200px;background:radial-gradient(circle, rgba(201,162,39,.14), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo">Para quién es</div>
+    <h2>Del litigante independiente<br><b>a la firma con equipo.</b></h2>
+    <p class="lead" style="margin-top:14px;max-width:560px">Cada práctica tiene un dolor distinto. La promesa es la misma: que ningún término se pase.</p>
+
+    <div class="segmentos">
+      <div class="tarjeta seg"><div class="ic"><svg class="ico"><use href="#i-user"/></svg></div><div><h3>Litigante independiente</h3><small>30 a 80 procesos, solo o con un dependiente</small></div><p>Todo tu ejercicio en un solo lugar, sin pagarle a alguien para que revise a mano.</p><div class="plan"><span class="estado e-oro">Firma</span></div></div>
+      <div class="tarjeta seg"><div class="ic"><svg class="ico"><use href="#i-users"/></svg></div><div><h3>Oficina de 3 a 8 abogados</h3><small>100 a 300 procesos</small></div><p>El socio ve en qué va cada proceso y quién está haciendo qué.</p><div class="plan"><span class="estado e-oro">Firma</span></div></div>
+      <div class="tarjeta seg"><div class="ic"><svg class="ico"><use href="#i-brief"/></svg></div><div><h3>Firma de 8 a 20 abogados</h3><small>Equipos con roles</small></div><p>Trazabilidad, roles y reportes que se le pueden mostrar al cliente.</p><div class="plan"><span class="estado e-oro">+ add-ons</span></div></div>
+      <div class="tarjeta seg"><div class="ic"><svg class="ico"><use href="#i-building"/></svg></div><div><h3>Área jurídica de empresa</h3><small>Rinde cuentas a gerencia</small></div><p>El estado de cada proceso a la vista, listo para el informe a la gerencia.</p><div class="plan"><span class="estado e-oro">+ add-ons</span></div></div>
+      <div class="tarjeta seg"><div class="ic"><svg class="ico"><use href="#i-grad"/></svg></div><div><h3>Consultorio jurídico</h3><small>Muchos estudiantes rotando</small></div><p>Supervisar a muchos estudiantes sin perder el control de los casos.</p><div class="plan"><span class="estado e-act">Convenio</span></div></div>
+      <div class="tarjeta seg"><div class="ic"><svg class="ico"><use href="#i-landmark"/></svg></div><div><h3>Entidad pública</h3><small>Cumplimiento y trazabilidad</small></div><p>Vigilancia de procesos con trazabilidad completa de quién hizo qué y cuándo.</p><div class="plan"><span class="estado e-act">Contrato</span></div></div>
+    </div>
+    <div class="pie"><span><b>Trifuerza Legal</b> · Para quién es</span><span>04</span></div>
+  </div>
+</section>
+
+<!-- ============================== 5 · CÓMO ARRANCAMOS ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:640px;height:640px;right:-260px;top:120px;background:radial-gradient(circle, rgba(201,162,39,.15), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo">Cómo arrancamos</div>
+    <h2>No te dejamos solo<br><b>con la plataforma.</b></h2>
+    <p class="lead" style="margin-top:14px;max-width:560px">La carga inicial de procesos es el momento que define si una herramienta se usa o se abandona. Por eso la hacemos contigo.</p>
+
+    <div class="linea-tiempo">
+      <div class="hito"><div class="n">1</div><h3>Demo 1 a 1</h3><p>Vemos cómo trabaja tu oficina y te mostramos la plataforma con casos como los tuyos.</p></div>
+      <div class="hito"><div class="n">2</div><h3>Habilitamos tu cuenta</h3><p>Usuarios, roles y la marca de tu firma: tu logo y tus colores en el panel.</p></div>
+      <div class="hito"><div class="n">3</div><h3>Carga inicial</h3><p>Subimos tus procesos y clientes. Desde ese día, la Rama queda vigilada.</p></div>
+      <div class="hito"><div class="n">4</div><h3>Arranque guiado</h3><p>Acompañamos las primeras semanas hasta que el equipo trabaja solo.</p></div>
+    </div>
+
+    <div class="ventana" style="margin-top:34px">
+      <div class="barra"><span class="p" style="background:#F87171"></span><span class="p" style="background:#FBBF24"></span><span class="p" style="background:#34D399"></span><span class="t">Trifuerza <span class="oro">Legal</span></span><span style="margin-left:auto;font-size:10.5px;font-weight:500" class="tenue">Panel del socio</span></div>
+      <div style="padding:18px 20px;display:grid;grid-template-columns:repeat(4,1fr);gap:10px">
+        <div class="tarjeta" style="padding:14px"><div style="font-size:28px;font-weight:700" class="oro">142</div><div class="tenue" style="font-size:10.5px">procesos vigilados</div></div>
+        <div class="tarjeta" style="padding:14px"><div style="font-size:28px;font-weight:700;color:var(--errort)">3</div><div class="tenue" style="font-size:10.5px">actuaciones nuevas hoy</div></div>
+        <div class="tarjeta" style="padding:14px"><div style="font-size:28px;font-weight:700;color:#BAE6FD">17</div><div class="tenue" style="font-size:10.5px">tareas en curso</div></div>
+        <div class="tarjeta" style="padding:14px"><div style="font-size:28px;font-weight:700;color:var(--okt)">5</div><div class="tenue" style="font-size:10.5px">abogados en el equipo</div></div>
+      </div>
+    </div>
+    <div class="tenue" style="font-size:9.5px;margin-top:6px;text-align:right">Cifras de ejemplo</div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:22px">
+      <div class="tarjeta" style="padding:20px;display:flex;gap:14px"><svg class="ico oro" style="width:26px;height:26px"><use href="#i-msg"/></svg><div><h3 style="font-size:14.5px">Soporte cercano</h3><p class="tenue" style="font-size:11.5px;margin-top:4px">Por WhatsApp para las firmas y por correo para los independientes.</p></div></div>
+      <div class="tarjeta" style="padding:20px;display:flex;gap:14px"><svg class="ico oro" style="width:26px;height:26px"><use href="#i-eye"/></svg><div><h3 style="font-size:14.5px">Vuelves sin esfuerzo</h3><p class="tenue" style="font-size:11.5px;margin-top:4px">La alerta diaria te trae de vuelta a la plataforma: no hay que acordarse de revisar.</p></div></div>
+    </div>
+    <div class="tarjeta oro-borde" style="margin-top:14px;padding:22px 24px;display:grid;grid-template-columns:1fr 220px;gap:24px;align-items:center">
+      <div><h3 style="font-size:15px">La plataforma, con la marca de tu firma</h3><p class="tenue" style="font-size:11.5px;margin-top:6px">Tu logo y tu color en el panel y en lo que ven tus clientes. Para el equipo es una herramienta de la oficina, no un software más.</p></div>
+      <div class="ventana" style="box-shadow:none"><div class="barra" style="height:28px;font-size:10.5px"><span class="p" style="background:#F87171;width:7px;height:7px"></span><span class="p" style="background:#FBBF24;width:7px;height:7px"></span><span class="p" style="background:#34D399;width:7px;height:7px"></span><span class="t">Marca de la firma</span></div>
+        <div style="padding:10px 12px;font-size:10px;display:flex;flex-direction:column;gap:7px"><div style="display:flex;justify-content:space-between"><span class="tenue">Color primario</span><span style="display:flex;gap:4px"><i style="width:14px;height:14px;border-radius:4px;background:#1E3A8A"></i><i style="width:14px;height:14px;border-radius:4px;background:var(--oro);outline:2px solid #fff"></i><i style="width:14px;height:14px;border-radius:4px;background:#065F46"></i></span></div><div style="display:flex;justify-content:space-between"><span class="tenue">Tema personalizado</span><span class="estado e-ok">Activo</span></div></div></div>
+    </div>
+    <div class="pie"><span><b>Trifuerza Legal</b> · Cómo arrancamos</span><span>05</span></div>
+  </div>
+</section>
+
+<!-- ============================== 6 · PLANES ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:620px;height:620px;left:50%;top:60px;margin-left:-310px;background:radial-gradient(circle, rgba(201,162,39,.18), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo">Planes</div>
+    <h2>Un plan base.<br><b>Creces solo con lo que uses.</b></h2>
+    <p class="lead" style="margin-top:12px;max-width:560px">Pagas por firma de abogados, no por cada abogado. Cuando la firma crece, sumas usuarios y procesos.</p>
+
+    <div class="tarjeta plan destacado" style="margin-top:24px;padding:28px 30px;display:grid;grid-template-columns:1fr 1.05fr;gap:30px;align-items:center">
+      <div>
+        <div class="nombre">Plan Firma</div>
+        <div class="precio" style="font-size:44px">$249.000 <small style="font-size:13px">al mes, por firma de abogados</small></div>
+        <div class="cifras" style="margin:18px 0 0;grid-template-columns:repeat(3,1fr)"><div><b>200</b><span>procesos</span></div><div><b>5</b><span>usuarios</span></div><div><b>20</b><span>firmas electrónicas</span></div></div>
+        <span class="btn lleno" style="margin-top:18px">Agendar demo</span>
+      </div>
+      <ul>
+        <li><svg class="ico"><use href="#i-check"/></svg>Vigilancia diaria de la Rama Judicial</li>
+        <li><svg class="ico"><use href="#i-check"/></svg>Alertas por correo y Telegram</li>
+        <li><svg class="ico"><use href="#i-check"/></svg>CRM, tareas en Kanban y documentos</li>
+        <li><svg class="ico"><use href="#i-check"/></svg>Firma electrónica con identidad verificada</li>
+        <li><svg class="ico"><use href="#i-check"/></svg>Drive y la marca de tu firma en el panel</li>
+        <li><svg class="ico"><use href="#i-check"/></svg>Carga inicial de procesos con nosotros</li>
+        <li><svg class="ico"><use href="#i-check"/></svg>Soporte por WhatsApp</li>
+      </ul>
+    </div>
+
+    <div class="tarjeta addons" style="margin-top:14px">
+      <div style="display:flex;justify-content:space-between;align-items:baseline"><h3 style="font-size:14px">Cuando la firma crece: add-ons</h3><span class="tenue" style="font-size:11px">Se activa solo lo que se usa</span></div>
+      <div class="grid">
+        <div class="addon" style="border-color:rgba(201,162,39,.45)"><b class="oro">$35.000</b><span>por usuario adicional</span></div>
+        <div class="addon" style="border-color:rgba(201,162,39,.45)"><b class="oro">$29.000</b><span>por cada 50 procesos más</span></div>
+        <div class="addon"><b>$69.000</b><span>20 firmas electrónicas más</span></div>
+        <div class="addon"><b>$39.000</b><span>conexión con Drive</span></div>
+        <div class="addon"><b>$49.000</b><span>formulario público de ingreso</span></div>
+        <div class="addon"><b>$99.000</b><span>acceso por API</span></div>
+        <div class="addon" style="grid-column: span 2"><b>A la medida</b><span>consultorios jurídicos y entidades</span></div>
+      </div>
+    </div>
+
+    <div class="notas">
+      <div class="nota"><b>12 meses por el precio de 10</b>El pago anual equivale a diez mensualidades.</div>
+      <div class="nota"><b>Precio fundador</b>Las primeras 20 cuentas: 30 % de descuento congelado por 12 meses.</div>
+      <div class="nota"><b>Convenios</b>Consultorios jurídicos y colegios de abogados, con condiciones negociadas.</div>
+    </div>
+    <div class="pie"><span><b>Trifuerza Legal</b> · Precios mensuales en pesos colombianos</span><span>06</span></div>
+  </div>
+</section>
+
+<!-- ============================== 7 · CIERRE ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:800px;height:800px;right:-320px;bottom:-320px;background:radial-gradient(circle, rgba(201,162,39,.22), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo">Empieza hoy</div>
+    <h2>Tu próximo término<br><b>ya está corriendo.</b></h2>
+    <p class="lead" style="margin-top:16px;max-width:520px">En una demo de veinte minutos cargamos uno de tus procesos y ves llegar la primera alerta.</p>
+
+    <div class="cta" style="margin-top:34px">
+      <div class="serif oro" style="font-size:26px">No se te pasa un término.</div>
+      <div style="font-size:30px;font-weight:300;letter-spacing:-.03em;line-height:1.2;margin-top:12px">Solicita tu demo y empieza con<br><b style="font-weight:700">precio fundador.</b></div>
+      <span class="boton">Solicitar acceso <svg class="ico"><use href="#i-arrow"/></svg></span>
+      <div style="margin-top:20px;font-size:13px" class="tenue">trifuerza.co/legal</div>
+    </div>
+
+    <div class="tarjeta" style="margin-top:22px;padding:24px 26px">
+      <h3 style="font-size:14px;margin-bottom:14px">En la demo</h3>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px 24px;font-size:12px">
+        <div style="display:flex;gap:10px"><svg class="ico oro" style="width:17px;height:17px"><use href="#i-check"/></svg>Cargamos uno de tus procesos reales</div>
+        <div style="display:flex;gap:10px"><svg class="ico oro" style="width:17px;height:17px"><use href="#i-check"/></svg>Configuramos tus alertas de Telegram y correo</div>
+        <div style="display:flex;gap:10px"><svg class="ico oro" style="width:17px;height:17px"><use href="#i-check"/></svg>Vemos cómo se reparte el trabajo en el equipo</div>
+        <div style="display:flex;gap:10px"><svg class="ico oro" style="width:17px;height:17px"><use href="#i-check"/></svg>Elegimos el plan que le sirve a tu práctica</div>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px">
+      <div class="tarjeta" style="padding:18px"><div class="oro" style="font-size:22px;font-weight:700">Diario</div><div class="tenue" style="font-size:11px;margin-top:4px">cada proceso vigilado se revisa todos los días</div></div>
+      <div class="tarjeta" style="padding:18px"><div class="oro" style="font-size:22px;font-weight:700">6 módulos</div><div class="tenue" style="font-size:11px;margin-top:4px">CRM, Judicial, Tareas, Documentos, Firma y Drive</div></div>
+      <div class="tarjeta" style="padding:18px"><div class="oro" style="font-size:22px;font-weight:700">2 canales</div><div class="tenue" style="font-size:11px;margin-top:4px">de alerta: correo electrónico y Telegram</div></div>
+    </div>
+
+    <div class="pie" style="border-top:1px solid var(--borde);padding-top:20px">
+      <span class="logo"><img src="../public/marcas/trifuerza/logo-horizontal-claro.png" alt="Trifuerza" style="height:26px"><span class="sep" style="height:20px"></span><span class="legal" style="font-size:11px">Legal</span></span>
+      <span>Una línea de <b>Trifuerza</b> · tecnología útil, sólida y bien pensada</span>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

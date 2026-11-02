@@ -1105,7 +1105,8 @@
   ],
   "variantes": {
     "contrappto": {
-      "cta": "Escríbeme"
+      "cta": "Escríbeme",
+      "portada": "Contrappto para *empresas*"
     }
   }
 }

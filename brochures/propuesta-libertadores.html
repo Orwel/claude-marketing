@@ -1,0 +1,1024 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Propuesta · Consultorio Jurídico Los Libertadores</title>
+<!--
+  Propuesta de servicios para el Consultorio Jurídico de la Fundación Universitaria Los Libertadores,
+  rehecha en el estilo del brochure de Trifuerza Legal (dorado #C9A227 sobre #030712, Inter).
+  Fuente de precios, puntos y sprints: Propuesta_Final_Libertadores_v4 (1-jun-2026, Drive
+  07 Comercial/Propuestas enviadas). No se cambió ninguna cifra.
+  Las pantallas son recreaciones en HTML de cj-full-app con datos de mentira: la app real tiene
+  nombres de partes y radicados reales, que no pueden salir en un documento comercial.
+  Pendientes de confirmar antes de enviar: brochures/verificar.json → "propuesta-libertadores".
+-->
+<link rel="stylesheet" href="kit/fuentes.css">
+<style>
+  :root {
+    --fondo: #030712; --panel: #111827; --panel2: #0B1220; --borde: #1F2937;
+    --tinta: #F9FAFB; --tenue: #9CA3AF; --oro: #C9A227; --oro2: #E8C547; --oro3: #F5E6A8;
+    --ok: #10B981; --okt: #34D399; --error: #EF4444; --errort: #FECACA; --sky: #0EA5E9; --ambar: #F59E0B;
+    /* Mundo visual de la app del consultorio (cj-full-app): verde institucional y barra lateral oscura. */
+    --u-verde: #004F4A; --u-verde2: #006C63; --u-lat: #18181B; --u-fondo: #F1F5F4; --u-borde: #E2E8F0; --u-tinta: #0F172A; --u-tenue: #64748B;
+  }
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--fondo); }
+  body { font-family: 'Inter', sans-serif; color: var(--tinta); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .pagina { position: relative; width: 210mm; height: 297mm; overflow: hidden; padding: 60px 56px 50px; page-break-after: always; background: var(--fondo); }
+  .pagina:last-child { page-break-after: auto; }
+  .cruces::before { content: ''; position: absolute; inset: 0; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48'%3E%3Cpath d='M24 20v8M20 24h8' stroke='white' stroke-opacity='.05' stroke-width='1.2'/%3E%3C/svg%3E"); }
+  .brillo { position: absolute; border-radius: 50%; pointer-events: none; }
+  .contenido { position: relative; z-index: 2; height: 100%; display: flex; flex-direction: column; }
+
+  .logo { display: flex; align-items: center; gap: 12px; }
+  .logo img { height: 32px; }
+  .logo .sep { width: 1px; height: 26px; background: var(--borde); }
+  .logo .legal { font-size: 13px; font-weight: 600; letter-spacing: .32em; text-transform: uppercase; color: var(--oro2); }
+  .pie { margin-top: auto; display: flex; justify-content: space-between; align-items: center; font-size: 10.5px; color: var(--tenue); letter-spacing: .04em; padding-top: 14px; }
+  .pie b { color: var(--tinta); font-weight: 600; }
+
+  .etiqueta { display: inline-flex; align-items: center; gap: 8px; padding: 6px 13px; border-radius: 10px; font-size: 11px; color: var(--tenue); background: rgba(31,41,55,.5); border: 1px solid #374151; }
+  .etiqueta .ico { width: 14px; height: 14px; color: var(--oro2); }
+  .antetitulo { font-size: 11px; font-weight: 600; letter-spacing: .28em; text-transform: uppercase; color: var(--oro); margin-bottom: 14px; display: flex; align-items: center; gap: 12px; }
+  .antetitulo::before { content: ''; width: 26px; height: 1px; background: var(--oro); }
+  .antetitulo .num { color: var(--tenue); letter-spacing: .1em; }
+  h1 { font-size: 58px; line-height: 1.03; font-weight: 300; letter-spacing: -.04em; }
+  h1 b, h2 b { font-weight: 700; }
+  h2 { font-size: 36px; line-height: 1.1; font-weight: 300; letter-spacing: -.035em; }
+  h3 { font-size: 15px; font-weight: 600; letter-spacing: -.01em; }
+  p { line-height: 1.55; }
+  .lead { font-size: 14px; color: var(--tenue); font-weight: 300; line-height: 1.6; }
+  .oro { color: var(--oro2); }
+  .serif { font-family: 'Fraunces', serif; font-style: italic; font-weight: 400; }
+  .tenue { color: var(--tenue); }
+  .mono { font-family: ui-monospace, Consolas, monospace; letter-spacing: .02em; }
+
+  .tarjeta { background: linear-gradient(165deg, rgba(17,24,39,.95), rgba(11,18,32,.95)); border: 1px solid var(--borde); border-radius: 16px; }
+  .tarjeta.oro-borde { border-color: rgba(201,162,39,.42); box-shadow: 0 0 50px rgba(201,162,39,.08); }
+  .estado { display: inline-block; padding: 3px 9px; border-radius: 999px; font-size: 9px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; white-space: nowrap; }
+  .e-ok { color: var(--okt); background: rgba(16,185,129,.14); border: 1px solid rgba(16,185,129,.35); }
+  .e-crit { color: var(--errort); background: rgba(239,68,68,.16); border: 1px solid rgba(239,68,68,.45); }
+  .e-act { color: #BAE6FD; background: rgba(14,165,233,.14); border: 1px solid rgba(14,165,233,.35); }
+  .e-oro { color: var(--oro2); background: rgba(201,162,39,.12); border: 1px solid rgba(201,162,39,.4); }
+  .e-amb { color: #FDE68A; background: rgba(245,158,11,.14); border: 1px solid rgba(245,158,11,.4); }
+  .ico { width: 20px; height: 20px; stroke: currentColor; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+  .ic-caja { width: 38px; height: 38px; border-radius: 11px; display: grid; place-items: center; background: rgba(201,162,39,.1); border: 1px solid rgba(201,162,39,.35); color: var(--oro2); flex: none; }
+  .ic-caja .ico { width: 18px; height: 18px; }
+  .lista { list-style: none; display: flex; flex-direction: column; gap: 7px; }
+  .lista li { display: flex; gap: 9px; font-size: 11.5px; line-height: 1.45; }
+  .lista li .ico { width: 15px; height: 15px; color: var(--oro2); margin-top: 1px; }
+  .lista.x li .ico { color: #6B7280; }
+
+  /* ---------- Pantallas de la app (claras, como la app real) ---------- */
+  .navegador { border-radius: 14px; overflow: hidden; background: var(--u-fondo); border: 1px solid #2A3344; box-shadow: 0 30px 70px rgba(0,0,0,.6), 0 0 60px rgba(201,162,39,.1); color: var(--u-tinta); }
+  .navegador .barra { height: 30px; display: flex; align-items: center; gap: 6px; padding: 0 12px; background: #1F2937; }
+  .navegador .barra span.p { width: 8px; height: 8px; border-radius: 50%; }
+  .navegador .barra .url { margin-left: 12px; flex: 1; max-width: 300px; height: 18px; border-radius: 6px; background: #111827; color: #9CA3AF; font-size: 9px; display: flex; align-items: center; padding: 0 9px; }
+  .app { display: grid; grid-template-columns: 150px 1fr; height: 100%; }
+  .lateral { background: var(--u-lat); color: #D1D5DB; padding: 12px 0; display: flex; flex-direction: column; font-size: 10px; }
+  .lateral .marca { padding: 0 12px 10px; border-bottom: 1px solid #2B3036; margin-bottom: 8px; }
+  .lateral .marca b { display: block; font-size: 9.5px; letter-spacing: .06em; color: #fff; font-family: 'Fraunces', serif; font-weight: 600; }
+  .lateral .marca small { font-size: 6.5px; color: #9CA3AF; display: block; }
+  .lateral .marca em { display: block; font-style: normal; font-size: 7.5px; letter-spacing: .08em; margin-top: 7px; color: #D1D5DB; }
+  .lateral .sec { font-size: 7px; letter-spacing: .14em; color: #6B7280; padding: 8px 12px 4px; }
+  .lateral .it { padding: 6px 12px; margin: 1px 6px; border-radius: 6px; display: flex; justify-content: space-between; }
+  .lateral .it.on { background: var(--u-verde); color: #fff; }
+  .lateral .it i { font-style: normal; font-size: 8px; background: rgba(0,0,0,.35); border-radius: 999px; padding: 0 5px; }
+  .lateral .sistema { margin: auto 8px 0; padding: 7px 8px; border: 1px solid #2B3036; border-radius: 6px; font-size: 8px; color: #9CA3AF; }
+  .lateral .sistema b { color: #34D399; font-weight: 500; display: block; }
+  .principal { padding: 12px 16px; font-size: 10px; overflow: hidden; }
+  .migas { font-size: 9px; color: var(--u-tenue); display: flex; justify-content: space-between; padding-bottom: 9px; border-bottom: 1px solid var(--u-borde); margin: -2px -16px 10px; padding-left: 16px; padding-right: 16px; }
+  .migas b { color: var(--u-tinta); }
+  .ucard { background: #fff; border: 1px solid var(--u-borde); border-radius: 9px; padding: 10px 12px; }
+  .ukpi b { display: block; font-size: 18px; font-weight: 700; letter-spacing: -.02em; }
+  .ukpi span { font-size: 8.5px; color: var(--u-tenue); }
+  .ubtn { display: inline-block; padding: 5px 9px; border-radius: 6px; font-size: 8.5px; border: 1px solid var(--u-borde); background: #fff; }
+  .ubtn.negro { background: #111827; color: #fff; border-color: #111827; }
+  .upill { display: inline-flex; align-items: center; gap: 5px; padding: 3px 8px; border-radius: 999px; font-size: 8px; background: #ECFDF5; color: #065F46; border: 1px solid #A7F3D0; }
+  .upill::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: #10B981; }
+  .uchip { display: inline-block; padding: 2px 7px; border-radius: 999px; font-size: 7.5px; font-weight: 600; }
+  .c-rojo { background: #FEE2E2; color: #991B1B; } .c-amb { background: #FEF3C7; color: #92400E; } .c-verde { background: #D1FAE5; color: #065F46; } .c-gris { background: #F3F4F6; color: #374151; }
+  .utabla { width: 100%; border-collapse: collapse; font-size: 9px; }
+  .utabla th { text-align: left; font-weight: 500; color: var(--u-tenue); font-size: 8px; padding: 5px 6px; border-bottom: 1px solid var(--u-borde); }
+  .utabla td { padding: 6px; border-bottom: 1px solid #F1F2F4; }
+  .ucampo span { display: block; font-size: 8px; color: var(--u-tenue); }
+  .ucampo b { font-weight: 500; font-size: 9px; }
+
+  .telefono { width: 196px; height: 400px; border-radius: 34px; padding: 9px; background: #0B0F19; border: 2px solid #2A3344; box-shadow: 0 30px 60px rgba(0,0,0,.6), 0 0 60px rgba(201,162,39,.1); position: relative; flex: none; }
+  .telefono .pantalla { text-align: left; width: 100%; height: 100%; border-radius: 26px; overflow: hidden; background: var(--u-fondo); color: var(--u-tinta); display: flex; flex-direction: column; font-size: 9px; }
+  .telefono .isla { position: absolute; top: 17px; left: 50%; width: 64px; height: 18px; margin-left: -32px; border-radius: 10px; background: #000; z-index: 3; }
+  .telefono .estado-sup { height: 34px; flex: none; }
+  .telefono .cab-m { background: var(--u-verde); color: #fff; padding: 8px 12px 10px; display: flex; justify-content: space-between; align-items: center; }
+  .telefono .cab-m b { font-size: 10.5px; }
+  .telefono .cuerpo { padding: 9px; display: flex; flex-direction: column; gap: 7px; flex: 1; overflow: hidden; }
+  .telefono .nav-m { display: flex; justify-content: space-around; padding: 7px 0 12px; background: #fff; border-top: 1px solid var(--u-borde); font-size: 7.5px; color: var(--u-tenue); }
+  .telefono .nav-m span { display: flex; flex-direction: column; align-items: center; gap: 2px; }
+  .telefono .nav-m span.on { color: var(--u-verde); font-weight: 600; }
+  .telefono .nav-m .ico { width: 14px; height: 14px; }
+  .mcard { background: #fff; border: 1px solid var(--u-borde); border-radius: 9px; padding: 8px 9px; }
+  .tg { background: #E6EBEE; }
+  .tg .cab-m { background: #fff; color: var(--u-tinta); border-bottom: 1px solid var(--u-borde); justify-content: flex-start; gap: 8px; }
+  .tg .avatar { width: 24px; height: 24px; border-radius: 50%; background: var(--u-verde); color: #fff; display: grid; place-items: center; font-size: 8px; font-weight: 700; }
+  .burbuja { background: #fff; border-radius: 10px 10px 10px 2px; padding: 7px 9px; font-size: 8.5px; line-height: 1.45; box-shadow: 0 1px 1px rgba(0,0,0,.06); max-width: 92%; }
+  .burbuja small { display: block; text-align: right; color: #9CA3AF; font-size: 7px; margin-top: 2px; }
+
+  /* ---------- Bloques de la propuesta ---------- */
+  .kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .kpi { padding: 16px 18px; }
+  .kpi b { display: block; font-size: 26px; font-weight: 700; letter-spacing: -.035em; }
+  .kpi span { font-size: 10.5px; color: var(--tenue); }
+  .dos { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .tres { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .bloque { padding: 18px 18px; }
+  .bloque p { font-size: 11.5px; color: var(--tenue); margin-top: 6px; }
+  .bloque .cab { display: flex; align-items: center; gap: 12px; }
+  .paso { display: grid; grid-template-columns: 38px 1fr; gap: 12px; align-items: start; }
+  .paso .n { width: 38px; height: 38px; border-radius: 50%; display: grid; place-items: center; border: 1.5px solid rgba(201,162,39,.55); color: var(--oro2); font-weight: 600; font-size: 14px; background: rgba(201,162,39,.08); }
+  .paso h3 { font-size: 13.5px; margin-bottom: 2px; }
+  .paso p { font-size: 11px; color: var(--tenue); line-height: 1.45; }
+  .sprint { padding: 18px 20px; display: grid; grid-template-columns: 150px 1fr; gap: 20px; }
+  .sprint .s { font-size: 10px; font-weight: 700; letter-spacing: .2em; color: var(--oro2); }
+  .sprint .sem { font-size: 22px; font-weight: 700; letter-spacing: -.03em; margin-top: 6px; }
+  .sprint .tit { font-size: 12px; color: var(--tenue); margin-top: 2px; }
+  .barra-sem { display: grid; grid-template-columns: repeat(12, 1fr); gap: 3px; margin-top: 12px; }
+  .barra-sem i { height: 6px; border-radius: 3px; background: #1F2937; }
+  .barra-sem i.on { background: var(--oro); }
+  .puntos .fila { display: grid; grid-template-columns: 1fr 160px 48px; gap: 16px; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--borde); }
+  .puntos .fila:last-child { border-bottom: 0; }
+  .puntos .fila h3 { font-size: 12.5px; }
+  .puntos .fila p { font-size: 10.5px; color: var(--tenue); margin-top: 2px; line-height: 1.4; }
+  .puntos .medidor { height: 8px; border-radius: 4px; background: #1F2937; overflow: hidden; }
+  .puntos .medidor i { display: block; height: 100%; background: linear-gradient(90deg, var(--oro), var(--oro2)); border-radius: 4px; }
+  .puntos .pts { text-align: right; font-size: 18px; font-weight: 700; }
+  .puntos .pts small { font-size: 9px; color: var(--tenue); font-weight: 400; display: block; }
+  .req { display: grid; grid-template-columns: 34px 1fr 96px; gap: 12px; align-items: start; padding: 11px 14px; border-radius: 12px; background: rgba(249,250,251,.025); border: 1px solid rgba(249,250,251,.07); }
+  .req + .req { margin-top: 7px; }
+  .req .ic-caja { width: 34px; height: 34px; }
+  .req h3 { font-size: 12.5px; }
+  .req p { font-size: 10.5px; color: var(--tenue); margin-top: 2px; line-height: 1.45; }
+  .req .quien { text-align: right; }
+  .aviso-legal { padding: 20px 22px; border-radius: 16px; border: 1px dashed rgba(201,162,39,.45); background: rgba(201,162,39,.04); }
+  .cta { padding: 34px 34px; border-radius: 24px; background: radial-gradient(circle at 85% 0%, rgba(201,162,39,.32), transparent 55%), linear-gradient(160deg, #161D2B, #050811 75%); border: 1.5px solid rgba(201,162,39,.6); box-shadow: 0 0 90px rgba(201,162,39,.15); }
+
+  /* Constelación (réplica de trifuerza.co, como en la propuesta de Dos Tierras) */
+  .constelacion { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; }
+  .constelacion text { font-family: ui-monospace, Consolas, monospace; }
+  .constelacion .cliente { font-family: 'Inter', sans-serif; font-weight: 800; letter-spacing: -.02em; }
+  .boton-web { display: inline-block; margin-top: 12px; padding: 11px 18px; border-radius: 12px; background: linear-gradient(90deg, var(--oro), var(--oro2)); color: #0A0F1A; font-size: 13px; font-weight: 800; text-decoration: none; }
+  @media screen and (prefers-reduced-motion: no-preference) {
+    .constelacion .nodo { animation: titila 5s ease-in-out infinite alternate; }
+    .constelacion .cruce { animation: corre 6s linear infinite; }
+    .constelacion .anillo { animation: anillo 3.2s ease-out infinite; transform-box: fill-box; transform-origin: center; }
+  }
+  @keyframes titila { from { opacity: 1; } to { opacity: .35; } }
+  @keyframes corre { to { stroke-dashoffset: -90; } }
+  @keyframes anillo { from { transform: scale(.4); opacity: .9; } to { transform: scale(3.2); opacity: 0; } }
+  @media print {
+    .constelacion .nodo, .constelacion .cruce, .constelacion .anillo { animation: none !important; }
+    .constelacion .pulso, .constelacion .anillo { display: none; }
+  }
+  a.web { color: inherit; text-decoration: none; border-bottom: 1px solid currentColor; }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <symbol id="i-scale" viewBox="0 0 24 24"><path d="m16 16 3-8 3 8c-.9.7-1.9 1-3 1s-2.1-.3-3-1Z"/><path d="m2 16 3-8 3 8c-.9.7-1.9 1-3 1s-2.1-.3-3-1Z"/><path d="M7 21h10M12 3v18M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></symbol>
+    <symbol id="i-check-sq" viewBox="0 0 24 24"><path d="m9 11 3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4M10 9H8M16 13H8M16 17H8"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><path d="m21.7 18-8-14a2 2 0 0 0-3.5 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.7-3Z"/><path d="M12 9v4M12 17h.01"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+    <symbol id="i-grad" viewBox="0 0 24 24"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></symbol>
+    <symbol id="i-landmark" viewBox="0 0 24 24"><path d="M3 22h18M6 18v-7M10 18v-7M14 18v-7M18 18v-7M12 2l8 5H4z"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+    <symbol id="i-msg" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9M10.3 21a1.9 1.9 0 0 0 3.4 0"/></symbol>
+    <symbol id="i-folder" viewBox="0 0 24 24"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-8l-2-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2Z"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18M7 15l4-4 3 3 5-6"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></symbol>
+    <symbol id="i-db" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></symbol>
+    <symbol id="i-table" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18"/></symbol>
+    <symbol id="i-hash" viewBox="0 0 24 24"><path d="M4 9h16M4 15h16M10 3 8 21M16 3l-2 18"/></symbol>
+    <symbol id="i-note" viewBox="0 0 24 24"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></symbol>
+    <symbol id="i-flag" viewBox="0 0 24 24"><path d="M4 22V4M4 4h13l-2 4 2 4H4"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-tool" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4Z"/></symbol>
+    <symbol id="i-layout" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></symbol>
+    <symbol id="i-palette" viewBox="0 0 24 24"><circle cx="13.5" cy="6.5" r="1"/><circle cx="17.5" cy="10.5" r="1"/><circle cx="8.5" cy="7.5" r="1"/><circle cx="6.5" cy="12.5" r="1"/><path d="M12 2a10 10 0 0 0 0 20c1.1 0 2-.9 2-2 0-.5-.2-1-.5-1.3-.3-.4-.5-.8-.5-1.3 0-1.1.9-2 2-2h2.3A5.7 5.7 0 0 0 22 9.9C22 5.5 17.5 2 12 2Z"/></symbol>
+    <symbol id="i-sync" viewBox="0 0 24 24"><path d="M21 12a9 9 0 0 1-15.5 6.3L3 16M3 12a9 9 0 0 1 15.5-6.3L21 8M21 3v5h-5M3 21v-5h5"/></symbol>
+    <symbol id="i-key" viewBox="0 0 24 24"><circle cx="7.5" cy="15.5" r="4.5"/><path d="m10.7 12.3 9.8-9.8M17 6l3 3M14 9l2 2"/></symbol>
+    <symbol id="i-life" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="m5.6 5.6 3.6 3.6M14.8 14.8l3.6 3.6M14.8 9.2l3.6-3.6M5.6 18.4l3.6-3.6"/></symbol>
+  </defs>
+</svg>
+
+<!-- ============================== 1 · PORTADA ============================== -->
+<section class="pagina cruces">
+  <svg class="constelacion" data-paleta="legal" data-semilla="7" data-zona="495,105,785,400" data-nodos="18" data-cliente="Los Libertadores" viewBox="0 0 794 1123" aria-hidden="true"></svg>
+  <div class="brillo" style="width:760px;height:760px;right:-300px;top:-300px;background:radial-gradient(circle, rgba(201,162,39,.26), transparent 62%)"></div>
+  <div class="contenido">
+    <div style="display:flex;justify-content:space-between;align-items:center">
+      <div class="logo"><img src="../public/marcas/trifuerza/logo-horizontal-claro.png" alt="Trifuerza"><span class="sep"></span><span class="legal">Technology</span></div>
+      <span class="etiqueta">Propuesta de servicios · Octubre 2026</span>
+    </div>
+    <div style="margin-top:62px">
+      <span class="etiqueta"><svg class="ico"><use href="#i-grad"/></svg>Consultorio Jurídico · Fundación Universitaria Los Libertadores</span>
+      <h1 style="margin-top:22px">Una plataforma<br><b>propia</b> para el<br>consultorio.</h1>
+      <p class="lead" style="margin-top:18px;max-width:490px">Sistema de Gestión Jurídica hecho a la medida: todos los casos del consultorio, estén o no en la Rama Judicial, con alertas por Telegram y correo y un diseño accesible desde el celular.</p>
+    </div>
+
+    <!-- Escena: computador + celular, la misma plataforma en los dos -->
+    <div class="escena" style="position:relative;margin-top:30px;height:390px">
+      <div class="navegador" style="position:absolute;left:0;top:0;width:530px;height:360px">
+        <div class="barra"><span class="p" style="background:#F87171"></span><span class="p" style="background:#FBBF24"></span><span class="p" style="background:#34D399"></span><span class="url">consultorio.ulibertadores.edu.co/panel</span></div>
+        <div class="app" style="height:330px">
+          <div class="lateral">
+            <div class="marca"><img src="../public/clientes/libertadores/logo.png" alt="Los Libertadores" style="height:24px;display:block"><em>CONSULTORIO JURÍDICO</em></div>
+            <div class="sec">GENERAL</div><div class="it on">Panel</div><div class="it">Casos <i>48</i></div><div class="it">Alertas</div><div class="it">Perfil</div>
+            <div class="sec">ANÁLISIS</div><div class="it">Estadísticas</div>
+            <div class="sec">ADMINISTRACIÓN</div><div class="it">Estudiantes</div>
+            <div class="sistema"><b>Sistema operativo</b>Última sync: hoy 9:00 a. m.</div>
+          </div>
+          <div class="principal">
+            <div class="migas"><span><b>Panel</b></span><span>docente.asesor</span></div>
+            <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:7px">
+              <div class="ucard ukpi"><b>312</b><span>casos activos</span></div>
+              <div class="ucard ukpi"><b style="color:#B91C1C">6</b><span>riesgo de desistimiento</span></div>
+              <div class="ucard ukpi"><b>27</b><span>actuaciones nuevas</span></div>
+              <div class="ucard ukpi"><b>94</b><span>estudiantes con Telegram</span></div>
+            </div>
+            <div class="ucard" style="margin-top:8px;padding:8px 10px">
+              <div style="display:flex;justify-content:space-between;margin-bottom:4px"><b style="font-size:10px">Requieren atención</b><span style="font-size:8px;color:var(--u-tenue)">Ordenado por urgencia</span></div>
+              <table class="utabla">
+                <tr><th></th><th>Proceso</th><th>Área</th><th>Sin actuación</th></tr>
+                <tr><td><span class="uchip c-rojo">Crítico</span></td><td>Ejecutivo singular · <span class="mono">••••• / 20••</span></td><td>Civil</td><td>11 meses</td></tr>
+                <tr><td><span class="uchip c-amb">Atención</span></td><td>Fijación de cuota · <span class="mono">••••• / 20••</span></td><td>Familia</td><td>9 meses</td></tr>
+                <tr><td><span class="uchip c-verde">Al día</span></td><td>Ordinario laboral · <span class="mono">••••• / 20••</span></td><td>Laboral</td><td>8 días</td></tr>
+                <tr><td><span class="uchip c-verde">Al día</span></td><td>Restitución de inmueble · <span class="mono">••••• / 20••</span></td><td>Civil</td><td>3 días</td></tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="telefono" style="position:absolute;right:0;top:-6px">
+        <div class="isla"></div>
+        <div class="pantalla">
+          <div class="estado-sup" style="background:var(--u-verde)"></div>
+          <div class="cab-m"><b>Mis casos</b><svg class="ico" style="width:14px;height:14px"><use href="#i-bell"/></svg></div>
+          <div class="cuerpo">
+            <div class="mcard" style="border-color:#FCA5A5;background:#FEF2F2"><b style="font-size:9px;color:#991B1B">Riesgo de desistimiento</b><div style="font-size:8px;color:#7F1D1D;margin-top:2px">Ejecutivo singular · 11 meses sin actuación</div></div>
+            <div class="mcard"><div style="display:flex;justify-content:space-between"><b>Fijación de cuota</b><span class="uchip c-amb">Atención</span></div><div class="mono" style="font-size:7.5px;color:var(--u-tenue);margin-top:3px">Rad. ••••• / 20••</div></div>
+            <div class="mcard"><div style="display:flex;justify-content:space-between"><b>Ordinario laboral</b><span class="uchip c-verde">Al día</span></div><div style="font-size:7.5px;color:var(--u-tenue);margin-top:3px">Nueva actuación: auto admisorio</div></div>
+            <div class="mcard"><div style="display:flex;justify-content:space-between"><b>Restitución</b><span class="uchip c-verde">Al día</span></div><div style="font-size:7.5px;color:var(--u-tenue);margin-top:3px">Sincronizado hoy 9:00 a. m.</div></div>
+          </div>
+          <div class="nav-m"><span class="on"><svg class="ico"><use href="#i-home"/></svg>Panel</span><span><svg class="ico"><use href="#i-folder"/></svg>Casos</span><span><svg class="ico"><use href="#i-bell"/></svg>Alertas</span><span><svg class="ico"><use href="#i-menu"/></svg>Menú</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="kpis" style="margin-top:auto">
+      <div class="tarjeta kpi"><b>12 <span style="font-size:15px;font-weight:500;color:var(--tenue)">semanas</span></b><span>duración estimada, en 3 sprints</span></div>
+      <div class="tarjeta kpi"><b>95 <span style="font-size:15px;font-weight:500;color:var(--tenue)">puntos</span></b><span>de desarrollo, con alcance cerrado</span></div>
+      <div class="tarjeta kpi oro-borde"><b class="oro">Premium</b><span>diseño sofisticado y moderno, a la altura de la universidad</span></div>
+    </div>
+    <div class="pie"><span><a class="web" href="https://www.trifuerza.co"><b>www.trifuerza.co ↗</b></a> · Trifuerza Technology</span><span>Desarrollado por Trifuerza (Triforce Boosters S.A.S.)</span></div>
+  </div>
+</section>
+
+<!-- ============================== 2 · POR QUÉ UNA PLATAFORMA PROPIA ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:600px;height:600px;left:-260px;top:300px;background:radial-gradient(circle, rgba(201,162,39,.15), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">01</span> Por qué una plataforma propia</div>
+    <h2>Cada desistimiento<br><b>le cuesta a la universidad.</b></h2>
+    <p class="lead" style="margin-top:14px;max-width:580px">Un proceso que se cae por inactividad no es solo un expediente archivado: es un usuario vulnerable sin respuesta, un estudiante que pierde la práctica y un consultorio que responde por ello.</p>
+
+    <div class="tres" style="margin-top:24px">
+      <div class="tarjeta bloque"><div class="ic-caja"><svg class="ico"><use href="#i-user"/></svg></div><h3 style="margin-top:12px">El usuario</h3><p>Personas que acuden al consultorio porque no pueden pagar un abogado. Si el proceso termina por desistimiento tácito, se quedan sin la protección que vinieron a buscar.</p></div>
+      <div class="tarjeta bloque"><div class="ic-caja"><svg class="ico"><use href="#i-grad"/></svg></div><h3 style="margin-top:12px">El estudiante</h3><p>Rota cada semestre, lleva varios casos y estudia al tiempo. Revisar la Rama a mano, uno por uno, es justo lo que se olvida en semana de parciales.</p></div>
+      <div class="tarjeta bloque"><div class="ic-caja"><svg class="ico"><use href="#i-landmark"/></svg></div><h3 style="margin-top:12px">La universidad</h3><p>El consultorio responde por la calidad del servicio ante sus usuarios y ante quien lo vigila. Cada caso perdido por descuido pesa en su reputación.</p></div>
+    </div>
+
+    <!-- Metáfora: arrendar vs. ser dueño -->
+    <div class="dos" style="margin-top:22px">
+      <div class="tarjeta bloque" style="border-color:#3B2A2A">
+        <span class="estado e-crit">Licencia genérica</span>
+        <h3 style="margin-top:12px;font-size:17px">Arrendar un software genérico</h3>
+        <svg viewBox="0 0 300 120" style="width:100%;margin:12px 0 6px">
+          <!-- Escalera de pagos: cada año se vuelve a pagar la licencia -->
+          <g fill="#7F1D1D" stroke="#EF4444">
+            <rect x="10" y="88" width="46" height="22" rx="4"/><rect x="66" y="66" width="46" height="44" rx="4"/><rect x="122" y="44" width="46" height="66" rx="4"/><rect x="178" y="22" width="46" height="88" rx="4"/><rect x="234" y="0" width="46" height="110" rx="4"/>
+          </g>
+          <g fill="#9CA3AF" font-size="9" font-family="Inter" text-anchor="middle"><text x="33" y="120">Año 1</text><text x="89" y="120">Año 2</text><text x="145" y="120">Año 3</text><text x="201" y="120">Año 4</text><text x="257" y="120">Año 5</text></g>
+        </svg>
+        <ul class="lista x">
+          <li><svg class="ico"><use href="#i-x"/></svg>Pensado para firmas y oficinas en general, no para un consultorio con rotación semestral y supervisión docente</li>
+          <li><svg class="ico"><use href="#i-x"/></svg>En el uso actual del consultorio, sin conexión con la Rama Judicial: alguien revisa a mano</li>
+          <li><svg class="ico"><use href="#i-x"/></svg>Una experiencia de uso que no está adaptada a estudiantes ni docentes</li>
+          <li><svg class="ico"><use href="#i-x"/></svg>Se paga todos los años, para siempre</li>
+        </ul>
+      </div>
+      <div class="tarjeta bloque oro-borde">
+        <span class="estado e-oro">Plataforma propia</span>
+        <h3 style="margin-top:12px;font-size:17px">Ser dueño de la herramienta</h3>
+        <svg viewBox="0 0 300 120" style="width:100%;margin:12px 0 6px">
+          <!-- Un solo bloque y después solo el costo de servidores -->
+          <rect x="10" y="40" width="46" height="70" rx="4" fill="#C9A227"/>
+          <g fill="#10B981"><rect x="66" y="102" width="46" height="8" rx="3"/><rect x="122" y="102" width="46" height="8" rx="3"/><rect x="178" y="102" width="46" height="8" rx="3"/><rect x="234" y="102" width="46" height="8" rx="3"/></g>
+          <text x="33" y="32" fill="#E8C547" font-size="9" font-family="Inter" text-anchor="middle" font-weight="700">Pago único</text>
+          <text x="173" y="92" fill="#34D399" font-size="9" font-family="Inter" text-anchor="middle">solo servidores ≈ $150.000 / mes</text>
+          <g fill="#9CA3AF" font-size="9" font-family="Inter" text-anchor="middle"><text x="33" y="120">Año 1</text><text x="89" y="120">Año 2</text><text x="145" y="120">Año 3</text><text x="201" y="120">Año 4</text><text x="257" y="120">Año 5</text></g>
+        </svg>
+        <ul class="lista">
+          <li><svg class="ico"><use href="#i-check"/></svg>Diseñada con el consultorio, para estudiantes, docentes y directores</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Conectada a la Rama Judicial, con alertas por Telegram y correo</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>El código es de la universidad: se adapta y escala cuando lo necesite</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Un solo pago: el ahorro de la licencia es de por vida</li>
+        </ul>
+      </div>
+    </div>
+    <p class="tenue" style="font-size:9.5px;margin-top:10px">Gráficas ilustrativas: la escala de la licencia depende del valor que hoy paga el consultorio.</p>
+    <div class="pie"><span><b>Propuesta Los Libertadores</b> · Por qué una plataforma propia</span><span><a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 02</span></div>
+  </div>
+</section>
+
+<!-- ============================== 3 · LO QUE YA FUNCIONA ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:700px;height:700px;right:-320px;top:-200px;background:radial-gradient(circle, rgba(201,162,39,.17), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">02</span> No partimos de cero</div>
+    <h2>La base <b>ya está funcionando.</b></h2>
+    <p class="lead" style="margin-top:14px;max-width:590px">Existe un primer desarrollo en producción, con la identidad del consultorio: consulta la Rama Judicial, sincroniza los expedientes y avisa por Telegram. La propuesta construye la plataforma completa alrededor de esa base.</p>
+
+    <div class="navegador" style="margin-top:24px;height:470px">
+      <div class="barra"><span class="p" style="background:#F87171"></span><span class="p" style="background:#FBBF24"></span><span class="p" style="background:#34D399"></span><span class="url">Casos / Detalle</span></div>
+      <div class="app" style="height:440px;grid-template-columns:160px 1fr">
+        <div class="lateral">
+          <div class="marca"><img src="../public/clientes/libertadores/logo.png" alt="Los Libertadores" style="height:24px;display:block"><em>CONSULTORIO JURÍDICO</em></div>
+          <div class="sec">GENERAL</div><div class="it">Panel</div><div class="it on">Casos <i>3</i></div><div class="it">Alertas</div><div class="it">Perfil</div>
+          <div class="sec">ANÁLISIS</div><div class="it">Estadísticas</div>
+          <div class="sec">ADMINISTRACIÓN</div><div class="it">Estudiantes</div><div class="it">Operaciones</div>
+          <div class="sistema"><b>Sistema operativo</b>Cola: 0 pend. · 6 ok</div>
+        </div>
+        <div class="principal" style="padding:12px 18px">
+          <div class="migas"><span>Panel / Casos / <b>Detalle</b></span><span>estudiante</span></div>
+          <div style="display:grid;grid-template-columns:1fr 210px;gap:14px">
+            <div>
+              <div style="color:#1D4ED8;font-size:9px">← Volver a casos</div>
+              <div style="color:var(--u-tenue);font-size:9px;margin-top:8px">Familia · Alimentos</div>
+              <div style="font-size:19px;font-weight:700;letter-spacing:-.02em">Expediente</div>
+              <div class="mono" style="font-size:9.5px;margin-top:2px">Rad. ••••• •••• / 20•• •••</div>
+              <div style="font-size:9.5px;margin-top:4px">Demandado: <span style="background:#E5E7EB;color:#E5E7EB;border-radius:3px">XXXXXXXXXXXXXXXXXX</span></div>
+              <div style="font-size:8px;color:var(--u-tenue);margin-top:6px">Última sync: hoy, 9:00 a. m. · Última actuación Rama: hace 6 días</div>
+            </div>
+            <div class="ucard">
+              <div style="font-size:7.5px;letter-spacing:.1em;color:var(--u-tenue)">ACCIONES</div>
+              <div style="display:flex;gap:5px;margin-top:6px"><span class="ubtn negro">Sincronizar Rama</span><span class="ubtn">Dejar de seguir</span></div>
+              <div class="ubtn" style="display:block;text-align:center;margin-top:5px">Editar datos del consultorio</div>
+              <div class="upill" style="margin-top:6px">Siguiendo alertas e informe diario en Telegram</div>
+            </div>
+          </div>
+          <div class="ucard" style="margin-top:12px">
+            <div style="display:flex;align-items:center;gap:8px"><b style="font-size:12px">Expediente judicial</b><span class="uchip c-gris">Activo</span></div>
+            <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px 14px;margin-top:10px">
+              <div class="ucampo"><span>Área consultorio</span><b>Familia</b></div>
+              <div class="ucampo"><span>Despacho</span><b>Juzgado de Familia · Bogotá</b></div>
+              <div class="ucampo"><span>Departamento</span><b>Bogotá</b></div>
+              <div class="ucampo"><span>Tipo proceso</span><b>Verbal sumario</b></div>
+              <div class="ucampo"><span>Clase / Subclase</span><b>Alimentos · Fijación de cuota</b></div>
+              <div class="ucampo"><span>Estudiante asignado</span><b>Est. 9.º semestre</b></div>
+            </div>
+          </div>
+          <div class="ucard" style="margin-top:10px">
+            <b style="font-size:11px">Actuaciones de la Rama</b>
+            <table class="utabla" style="margin-top:6px">
+              <tr><th>Fecha</th><th>Actuación</th><th>Anotación</th></tr>
+              <tr><td>Hace 6 días</td><td>Auto fija fecha de audiencia</td><td>Se programa audiencia inicial</td></tr>
+              <tr><td>Hace 1 mes</td><td>Recepción de memorial</td><td>Contestación de la demanda</td></tr>
+              <tr><td>Hace 3 meses</td><td>Auto admite demanda</td><td>Se ordena notificar</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tres" style="margin-top:20px">
+      <div class="tarjeta bloque"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-sync"/></svg></div><h3>Conexión con la Rama</h3></div><p>Consulta automática del estado de cada proceso y de sus actuaciones, sin entrar a buscarlo.</p></div>
+      <div class="tarjeta bloque"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-send"/></svg></div><h3>Alertas en Telegram y correo</h3></div><p>Aviso de actuaciones nuevas e informe diario para quien sigue el caso.</p></div>
+      <div class="tarjeta bloque"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-palette"/></svg></div><h3>Identidad del consultorio</h3></div><p>Con la marca de Los Libertadores: los estudiantes la sienten como su herramienta.</p></div>
+    </div>
+    <div class="tarjeta oro-borde" style="margin-top:14px;padding:18px 22px">
+      <h3 style="font-size:15px">Más allá de la Rama Judicial</h3>
+      <p class="tenue" style="font-size:11.5px;margin-top:4px">La plataforma gestiona todos los casos del consultorio, también los que nunca llegan a un despacho, con un diseño accesible y portátil.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:7px;margin-top:12px">
+        <span class="estado e-oro" style="font-size:9.5px;padding:5px 11px">Asesorías y consultas</span>
+        <span class="estado e-oro" style="font-size:9.5px;padding:5px 11px">Conciliaciones</span>
+        <span class="estado e-oro" style="font-size:9.5px;padding:5px 11px">Derechos de petición</span>
+        <span class="estado e-oro" style="font-size:9.5px;padding:5px 11px">Tutelas antes de radicar</span>
+        <span class="estado e-oro" style="font-size:9.5px;padding:5px 11px">Trámites administrativos</span>
+        <span class="estado e-oro" style="font-size:9.5px;padding:5px 11px">Seguimiento de usuarios</span>
+      </div>
+    </div>
+    <div class="pie"><span><b>Propuesta Los Libertadores</b> · Recreación de la pantalla actual con datos de ejemplo</span><span><a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 03</span></div>
+  </div>
+</section>
+
+<!-- ============================== 4 · EN EL CELULAR ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:700px;height:700px;left:50%;top:180px;margin-left:-350px;background:radial-gradient(circle, rgba(201,162,39,.16), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">03</span> Pensada para el celular</div>
+    <h2>Si no está en el celular,<br><b>no se usa.</b></h2>
+    <p class="lead" style="margin-top:14px;max-width:590px">Estudiantes, docentes y directores viven en su teléfono. La plataforma se diseña primero para la pantalla pequeña: revisar un caso entre clases, recibir la alerta en el bus o supervisar el área desde cualquier lugar. Sin instalar nada: se abre en el navegador.</p>
+
+    <div class="fila-telefonos" style="display:flex;justify-content:space-between;margin-top:30px;padding:0 6px">
+      <!-- Teléfono 1: panel del estudiante -->
+      <div style="text-align:center">
+        <div class="telefono"><div class="isla"></div>
+          <div class="pantalla">
+            <div class="estado-sup" style="background:var(--u-verde)"></div>
+            <div class="cab-m"><b>Hola, estudiante</b><svg class="ico" style="width:14px;height:14px"><use href="#i-bell"/></svg></div>
+            <div class="cuerpo">
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px">
+                <div class="mcard ukpi"><b style="font-size:15px">5</b><span>mis casos</span></div>
+                <div class="mcard ukpi"><b style="font-size:15px;color:#B91C1C">1</b><span>urgente</span></div>
+              </div>
+              <div class="mcard" style="border-color:#FCA5A5;background:#FEF2F2"><b style="color:#991B1B;font-size:8.5px">Riesgo de desistimiento tácito</b><div style="font-size:7.5px;color:#7F1D1D;margin-top:2px">Ejecutivo singular · 11 meses sin actuación. Habla con tu docente.</div></div>
+              <div class="mcard"><b style="font-size:8.5px">Próximo en la agenda</b><div style="font-size:7.5px;color:var(--u-tenue);margin-top:2px">Audiencia inicial · jueves 9:00 a. m.</div></div>
+              <div class="mcard"><b style="font-size:8.5px">Hoy en la Rama</b><div style="font-size:7.5px;color:var(--u-tenue);margin-top:2px">2 actuaciones nuevas en tus casos</div></div>
+            </div>
+            <div class="nav-m"><span class="on"><svg class="ico"><use href="#i-home"/></svg>Panel</span><span><svg class="ico"><use href="#i-folder"/></svg>Casos</span><span><svg class="ico"><use href="#i-bell"/></svg>Alertas</span><span><svg class="ico"><use href="#i-menu"/></svg>Menú</span></div>
+          </div>
+        </div>
+        <div style="font-size:12px;font-weight:600;margin-top:14px">Su panel</div><div class="tenue" style="font-size:10.5px">lo urgente primero</div>
+      </div>
+      <!-- Teléfono 2: detalle del caso -->
+      <div style="text-align:center;margin-top:30px">
+        <div class="telefono"><div class="isla"></div>
+          <div class="pantalla">
+            <div class="estado-sup" style="background:var(--u-verde)"></div>
+            <div class="cab-m"><b>← Expediente</b><span class="uchip" style="background:rgba(255,255,255,.18);color:#fff">Familia</span></div>
+            <div class="cuerpo">
+              <div class="mcard"><b style="font-size:10px">Fijación de cuota alimentaria</b><div class="mono" style="font-size:7.5px;color:var(--u-tenue);margin-top:2px">Rad. ••••• / 20••</div><div class="upill" style="margin-top:6px;font-size:7px">Alertas en Telegram</div></div>
+              <div class="mcard"><div style="font-size:7px;letter-spacing:.1em;color:var(--u-tenue)">LÍNEA DE TIEMPO</div>
+                <div style="border-left:2px solid var(--u-verde);margin:6px 0 0 3px;padding-left:8px;display:flex;flex-direction:column;gap:6px;font-size:7.5px">
+                  <div><b>Hace 6 días</b><br>Auto fija fecha de audiencia</div>
+                  <div><b>Hace 1 mes</b><br>Recepción de memorial</div>
+                  <div><b>Hace 3 meses</b><br>Auto admite demanda</div>
+                </div>
+              </div>
+              <div class="ubtn negro" style="text-align:center;padding:7px">Agregar anotación</div>
+            </div>
+            <div class="nav-m"><span><svg class="ico"><use href="#i-home"/></svg>Panel</span><span class="on"><svg class="ico"><use href="#i-folder"/></svg>Casos</span><span><svg class="ico"><use href="#i-bell"/></svg>Alertas</span><span><svg class="ico"><use href="#i-menu"/></svg>Menú</span></div>
+          </div>
+        </div>
+        <div style="font-size:12px;font-weight:600;margin-top:14px">El caso completo</div><div class="tenue" style="font-size:10.5px">actuaciones y anotaciones</div>
+      </div>
+      <!-- Teléfono 3: Telegram -->
+      <div style="text-align:center">
+        <div class="telefono"><div class="isla"></div>
+          <div class="pantalla tg">
+            <div class="estado-sup" style="background:#fff"></div>
+            <div class="cab-m"><span class="avatar">CJ</span><div style="text-align:left"><b style="font-size:9.5px">Consultorio Jurídico</b><div style="font-size:7px;color:var(--u-tenue)">bot</div></div></div>
+            <div class="cuerpo" style="gap:6px">
+              <div class="burbuja"><b>Consultorio — 2 alertas</b><br>Caso: Fijación de cuota<br><span class="mono">Radicado: ••••• / 20••</span><br><i style="display:inline-block;width:7px;height:7px;border-radius:50%;background:#EAB308;margin-right:3px;vertical-align:middle"></i> <b>Auto fija fecha de audiencia</b><br><i style="display:inline-block;width:7px;height:7px;border-radius:50%;background:#F97316;margin-right:3px;vertical-align:middle"></i> <b>Traslado</b> · corre término<br><u style="color:#2AABEE">Ver caso</u> · <u style="color:#2AABEE">Todas las alertas</u><small>7:42</small></div>
+              <div class="burbuja" style="border-left:3px solid #EF4444"><i style="display:inline-block;width:7px;height:7px;border-radius:50%;background:#EF4444;margin-right:3px;vertical-align:middle"></i> <b>Riesgo de desistimiento</b><br>Ejecutivo singular · 11 meses sin actuación. Revísalo con tu docente asesor.<small>7:42</small></div>
+              <div class="burbuja"><b>Informe diario — Consultorio</b><br>5 casos · +2 actuaciones nuevas en 24 h<small>5:00</small></div>
+            </div>
+          </div>
+        </div>
+        <div style="font-size:12px;font-weight:600;margin-top:14px">La alerta los encuentra</div><div class="tenue" style="font-size:10.5px">no tienen que acordarse de revisar</div>
+      </div>
+    </div>
+
+    <div class="tres" style="margin-top:auto">
+      <div class="tarjeta bloque"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-phone"/></svg></div><h3>100 % responsive</h3></div><p>Celular, tableta o computador, con la misma cuenta y los mismos datos.</p></div>
+      <div class="tarjeta bloque"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-eye"/></svg></div><h3>Más accesible</h3></div><p>El estudiante que no tiene computador propio también puede llevar sus casos al día.</p></div>
+      <div class="tarjeta bloque"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-users"/></svg></div><h3>Se adopta sola</h3></div><p>Una herramienta cómoda se usa; una incómoda se evita. La adopción es la mitad del éxito.</p></div>
+    </div>
+    <div class="pie"><span><b>Propuesta Los Libertadores</b> · Propuesta de diseño con datos de ejemplo</span><span><a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 04</span></div>
+  </div>
+</section>
+
+<!-- ============================== 5 · DIRECTORES Y DOCENTES ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:700px;height:700px;right:-320px;top:-220px;background:radial-gradient(circle, rgba(201,162,39,.17), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">04</span> Directores y docentes</div>
+    <h2>Menos tiempo revisando,<br><b>más tiempo enseñando.</b></h2>
+    <p class="lead" style="margin-top:14px;max-width:590px">La plataforma no es solo para el estudiante. Potencia el trabajo de quienes supervisan: el docente asesor ve todos sus casos y estudiantes en una pantalla, y la dirección tiene la foto completa del consultorio.</p>
+
+    <div class="navegador" style="margin-top:22px;height:400px">
+      <div class="barra"><span class="p" style="background:#F87171"></span><span class="p" style="background:#FBBF24"></span><span class="p" style="background:#34D399"></span><span class="url">Panel de docentes · Área Civil</span></div>
+      <div class="app" style="height:370px">
+        <div class="lateral">
+          <div class="marca"><img src="../public/clientes/libertadores/logo.png" alt="Los Libertadores" style="height:24px;display:block"><em>CONSULTORIO JURÍDICO</em></div>
+          <div class="sec">GENERAL</div><div class="it on">Panel</div><div class="it">Casos <i>86</i></div><div class="it">Alertas</div><div class="it">Perfil</div>
+          <div class="sec">ANÁLISIS</div><div class="it">Estadísticas</div>
+          <div class="sec">ADMINISTRACIÓN</div><div class="it">Estudiantes</div><div class="it">Operaciones</div>
+          <div class="sistema"><b>Sistema operativo</b>Cola: 0 pend. · 86 ok</div>
+        </div>
+        <div class="principal">
+          <div class="migas"><span><b>Panel de docentes</b> · Civil</span><span>docente.asesor</span></div>
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:7px">
+            <div class="ucard ukpi"><b>86</b><span>casos del área</span></div>
+            <div class="ucard ukpi"><b>21</b><span>estudiantes</span></div>
+            <div class="ucard ukpi"><b style="color:#B91C1C">3</b><span>casos críticos</span></div>
+            <div class="ucard ukpi"><b style="color:#B45309">2</b><span>sin Telegram</span></div>
+          </div>
+          <div class="ucard" style="margin-top:8px;padding:8px 10px">
+            <div style="display:flex;justify-content:space-between;margin-bottom:4px"><b style="font-size:10px">Estudiantes del área</b><span style="font-size:8px;color:var(--u-tenue)">Rol: Estudiantes · Estado: Con críticos</span></div>
+            <table class="utabla">
+              <tr><th>Estudiante</th><th>Casos</th><th>Críticos</th><th>Alertas</th><th>Telegram</th><th></th></tr>
+              <tr><td>Estudiante A · 9.º sem.</td><td>6</td><td style="color:#B91C1C;font-weight:700">2</td><td style="color:#B45309">4</td><td><span class="uchip c-verde">Vinculado</span></td><td style="color:var(--u-verde)">Ver</td></tr>
+              <tr><td>Estudiante B · 8.º sem.</td><td>5</td><td style="color:#B91C1C;font-weight:700">1</td><td style="color:#B45309">2</td><td><span class="uchip c-gris">No</span></td><td style="color:var(--u-verde)">Ver</td></tr>
+              <tr><td>Estudiante C · 10.º sem.</td><td>4</td><td>0</td><td>1</td><td><span class="uchip c-verde">Vinculado</span></td><td style="color:var(--u-verde)">Ver</td></tr>
+              <tr><td>Estudiante D · 10.º sem. <span class="uchip c-amb">Termina práctica</span></td><td>5</td><td>0</td><td>0</td><td><span class="uchip c-verde">Vinculado</span></td><td><span class="ubtn negro" style="padding:3px 7px">Sustituir</span></td></tr>
+            </table>
+          </div>
+          <div style="display:grid;grid-template-columns:1.3fr 1fr;gap:8px;margin-top:8px">
+            <div class="ucard" style="padding:8px 10px"><b style="font-size:10px">Alertas por severidad (30 días)</b>
+              <svg viewBox="0 0 260 60" style="width:100%;margin-top:4px"><path d="M0 52 L30 46 60 48 90 38 120 40 150 30 180 34 210 22 240 26 260 18 V60 H0Z" fill="#cfe7e2"/><path d="M0 56 L30 54 60 55 90 50 120 52 150 47 180 49 210 44 240 46 260 42 V60 H0Z" fill="#f59e0b" opacity=".55"/><path d="M0 58 L60 57 120 56 180 55 240 54 260 53 V60 H0Z" fill="#e11d48" opacity=".7"/></svg>
+            </div>
+            <div class="ucard" style="padding:8px 10px;display:flex;gap:10px;align-items:center"><svg viewBox="0 0 42 42" style="width:58px;flex:none"><circle cx="21" cy="21" r="15" fill="none" stroke="#004f4a" stroke-width="7" stroke-dasharray="38 94"/><circle cx="21" cy="21" r="15" fill="none" stroke="#1a8675" stroke-width="7" stroke-dasharray="26 94" stroke-dashoffset="-38"/><circle cx="21" cy="21" r="15" fill="none" stroke="#6fb7aa" stroke-width="7" stroke-dasharray="18 94" stroke-dashoffset="-64"/><circle cx="21" cy="21" r="15" fill="none" stroke="#94a3b8" stroke-width="7" stroke-dasharray="12 94" stroke-dashoffset="-82"/></svg><div style="font-size:8.5px"><b style="font-size:10px">Casos por área</b><br>Civil · Familia<br>Laboral · Penal</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dos" style="margin-top:18px">
+      <div class="tarjeta bloque">
+        <div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-users"/></svg></div><h3>Para el docente asesor</h3></div>
+        <ul class="lista" style="margin-top:12px">
+          <li><svg class="ico"><use href="#i-check"/></svg>Todos sus casos y estudiantes en una sola vista, ordenados por urgencia</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Sabe qué estudiante necesita acompañamiento antes de que el caso se caiga</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Sigue en Telegram los casos que quiera vigilar de cerca</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Sustituye al estudiante que termina en un clic, sin perder el historial</li>
+        </ul>
+      </div>
+      <div class="tarjeta bloque">
+        <div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-landmark"/></svg></div><h3>Para la dirección</h3></div>
+        <ul class="lista" style="margin-top:12px">
+          <li><svg class="ico"><use href="#i-check"/></svg>Estadísticas del consultorio por área, estado y actividad judicial</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Información lista para informes institucionales y de acreditación</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Control de quién entra a la plataforma y con qué permisos</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Seguimiento del avance académico de cada estudiante</li>
+        </ul>
+      </div>
+    </div>
+    <div class="pie"><span><b>Propuesta Los Libertadores</b> · Propuesta de diseño con datos de ejemplo</span><span><a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 05</span></div>
+  </div>
+</section>
+
+<!-- ============================== 6 · MONITOREO JUDICIAL ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:620px;height:620px;right:-260px;top:380px;background:radial-gradient(circle, rgba(201,162,39,.15), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">05</span> Monitoreo judicial</div>
+    <h2>La Rama vigilada<br><b>todos los días.</b></h2>
+    <p class="lead" style="margin-top:14px;max-width:580px">La plataforma consulta cada radicado, detecta las actuaciones nuevas y mide el tiempo sin movimiento. Cuando un proceso se acerca al plazo de desistimiento tácito, avisa al estudiante y a su docente con tiempo para actuar.</p>
+
+    <!-- Flujo: Rama → plataforma → estudiante → docente -->
+    <div class="tarjeta" style="margin-top:24px;padding:22px 20px">
+      <svg viewBox="0 0 640 120" style="width:100%">
+        <defs><marker id="fl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 10 5 0 10z" fill="#C9A227"/></marker></defs>
+        <g font-family="Inter" text-anchor="middle">
+          <rect x="4" y="22" width="130" height="66" rx="14" fill="#E5E7EB"/>
+          <text x="69" y="50" fill="#0B1220" font-size="13" font-weight="600">Rama Judicial</text><text x="69" y="68" fill="#1F2937" font-size="10">consulta de procesos</text>
+          <rect x="172" y="14" width="140" height="82" rx="14" fill="#E8C547"/>
+          <text x="242" y="44" fill="#0B1220" font-size="13" font-weight="700">Plataforma</text><text x="242" y="62" fill="#1F2937" font-size="10">sincroniza y compara</text><text x="242" y="78" fill="#1F2937" font-size="10">mide días sin actuación</text>
+          <rect x="350" y="22" width="130" height="66" rx="14" fill="#7DD3FC"/>
+          <text x="415" y="50" fill="#0B1220" font-size="13" font-weight="600">Estudiante</text><text x="415" y="68" fill="#1F2937" font-size="10">Telegram y correo</text>
+          <rect x="506" y="22" width="130" height="66" rx="14" fill="#6EE7B7"/>
+          <text x="571" y="50" fill="#0B1220" font-size="13" font-weight="600">Docente asesor</text><text x="571" y="68" fill="#1F2937" font-size="10">panel consolidado</text>
+          <g stroke="#C9A227" stroke-width="1.8" marker-end="url(#fl)"><path d="M136 55h32"/><path d="M314 55h32"/><path d="M482 55h20"/></g>
+          <text x="242" y="114" fill="#6B7280" font-size="9.5">Programado a diario · sincronización manual disponible en cada caso</text>
+        </g>
+      </svg>
+    </div>
+
+    <!-- Semáforo del desistimiento tácito -->
+    <div class="tarjeta oro-borde" style="margin-top:14px;padding:22px 22px">
+      <div style="display:flex;justify-content:space-between;align-items:baseline"><h3 style="font-size:15px">Semáforo de inactividad <span class="estado e-oro" style="margin-left:6px;vertical-align:middle">Se construye en el Sprint 2</span></h3><span class="tenue" style="font-size:10.5px">Desistimiento tácito · art. 317 del Código General del Proceso</span></div>
+      <svg viewBox="0 0 640 96" style="width:100%;margin-top:14px">
+        <defs><linearGradient id="sem" x1="0" x2="1"><stop offset="0" stop-color="#10B981"/><stop offset=".55" stop-color="#10B981"/><stop offset=".7" stop-color="#F59E0B"/><stop offset=".86" stop-color="#EF4444"/><stop offset="1" stop-color="#7F1D1D"/></linearGradient></defs>
+        <rect x="0" y="30" width="640" height="14" rx="7" fill="url(#sem)"/>
+        <g font-family="Inter" font-size="10" fill="#9CA3AF">
+          <text x="0" y="20">Última actuación</text>
+          <text x="352" y="20" text-anchor="middle">Aviso preventivo</text>
+          <text x="448" y="20" text-anchor="middle">Alerta al docente</text>
+          <text x="640" y="20" text-anchor="end" fill="#FECACA">Plazo legal</text>
+        </g>
+        <g fill="#F9FAFB"><circle cx="352" cy="37" r="5"/><circle cx="448" cy="37" r="5"/><circle cx="634" cy="37" r="5"/></g>
+        <g font-family="Inter" font-size="11" font-weight="600">
+          <text x="80" y="68" fill="#34D399" text-anchor="middle">Al día</text>
+          <text x="400" y="68" fill="#FDE68A" text-anchor="middle">Atención</text>
+          <text x="560" y="68" fill="#FECACA" text-anchor="middle">Crítico</text>
+        </g>
+        <text x="320" y="90" font-family="Inter" font-size="9.5" fill="#6B7280" text-anchor="middle">Los umbrales de aviso se definen con los directores del consultorio en el Sprint 1</text>
+      </svg>
+    </div>
+
+    <div class="dos" style="margin-top:14px">
+      <div class="tarjeta bloque"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-chart"/></svg></div><h3>Panel de docentes</h3></div><p>Todos los casos de su área en una sola vista, filtrados por estudiante, estado y urgencia. Ve primero lo que se puede caer.</p></div>
+      <div class="tarjeta bloque"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-clock"/></svg></div><h3>Control de términos</h3></div><p>Verde, amarillo o rojo según la cercanía del vencimiento, con alertas escalonadas que suben del estudiante al docente.</p></div>
+    </div>
+    <div class="navegador" style="margin-top:16px">
+      <div class="barra"><span class="p" style="background:#F87171"></span><span class="p" style="background:#FBBF24"></span><span class="p" style="background:#34D399"></span><span class="url">Alertas · Actualizaciones</span></div>
+      <div class="principal" style="padding:12px 16px">
+        <div style="display:flex;justify-content:space-between;align-items:center"><div><b style="font-size:14px">Actualizaciones</b> <span style="font-size:9px;color:#B45309;margin-left:6px">3 sin leer</span></div><span class="ubtn negro">Marcar todas como leídas (3)</span></div>
+        <div class="ucard" style="margin-top:9px">
+          <div style="display:flex;gap:6px;align-items:center"><b style="font-size:10.5px">Ejecutivo singular</b><span class="uchip c-gris">2 actuaciones</span><span class="uchip c-rojo">Caso crítico</span><span style="margin-left:auto;font-size:8px;color:var(--u-tenue)">Sync: hoy 9:00 a. m. · <span style="color:var(--u-verde)">Ver expediente →</span></span></div>
+          <div class="mono" style="font-size:8px;color:#1D4ED8;margin-top:2px">••••• / 20••</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px">
+            <div style="border:1px solid var(--u-borde);border-radius:7px;padding:7px 9px"><span class="uchip c-rojo">Crítica</span> <span style="font-size:8px;color:var(--u-tenue)">#14 · Nueva</span><div style="font-weight:700;margin-top:4px">Requerimiento previo a desistimiento</div><div style="font-size:8px;color:var(--u-tenue)">Fin término: <b style="color:#B91C1C">en 3 días</b></div></div>
+            <div style="border:1px solid var(--u-borde);border-radius:7px;padding:7px 9px"><span class="uchip c-amb">Urgente</span> <span style="font-size:8px;color:var(--u-tenue)">#13 · Nueva</span><div style="font-weight:700;margin-top:4px">Traslado</div><div style="font-size:8px;color:var(--u-tenue)">Fin término: <b style="color:#B45309">en 6 días</b></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pie"><span><b>Propuesta Los Libertadores</b> · Monitoreo judicial</span><span><a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 06</span></div>
+  </div>
+</section>
+
+<!-- ============================== 6 · DISEÑO CON LOS ESTUDIANTES ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:640px;height:640px;left:-280px;top:-180px;background:radial-gradient(circle, rgba(201,162,39,.16), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">06</span> Diseño centrado en el estudiante</div>
+    <h2>La diseñamos <b>con quienes<br>la van a usar.</b></h2>
+    <p class="lead" style="margin-top:14px;max-width:590px">Una buena experiencia de usuario no se adivina: se escucha. Antes de diseñar, recogemos propuestas de estudiantes, docentes y administrativos, y validamos cada pantalla con ellos.</p>
+
+    <div style="display:flex;flex-direction:column;gap:14px;margin-top:26px">
+      <div class="paso"><div class="n">1</div><div><h3>Escuchar</h3><p>Encuesta corta a estudiantes y docentes, y dos o tres sesiones de trabajo: qué les cuesta hoy, qué revisan primero, qué olvidan, desde qué dispositivo trabajan.</p></div></div>
+      <div class="paso"><div class="n">2</div><div><h3>Proponer</h3><p>Bocetos navegables de las pantallas clave (panel, caso, alertas) para que los prueben en su propio celular antes de programar.</p></div></div>
+      <div class="paso"><div class="n">3</div><div><h3>Ajustar</h3><p>Recibimos observaciones al cierre de cada sprint y las incorporamos en el siguiente.</p></div></div>
+      <div class="paso"><div class="n">4</div><div><h3>Socializar</h3><p>Lanzamiento con capacitación, manuales y un periodo de acompañamiento para resolver dudas.</p></div></div>
+    </div>
+
+    <div class="tarjeta oro-borde" style="margin-top:24px;padding:22px 24px">
+      <h3 style="font-size:15px">Lo que necesitamos de la universidad para el diseño</h3>
+      <p class="tenue" style="font-size:11px;margin-top:4px">Nada técnico: se trata de abrir los espacios para escuchar a los usuarios.</p>
+      <div class="dos" style="margin-top:14px;gap:10px 22px">
+        <ul class="lista">
+          <li><svg class="ico"><use href="#i-check"/></svg><span><b>Un enlace del consultorio</b> que coordine reuniones y respuestas</span></li>
+          <li><svg class="ico"><use href="#i-check"/></svg><span><b>Un grupo piloto</b> de estudiantes de distintos semestres y áreas</span></li>
+          <li><svg class="ico"><use href="#i-check"/></svg><span><b>Espacios con docentes asesores</b> y directores de área</span></li>
+          <li><svg class="ico"><use href="#i-check"/></svg><span><b>Difusión de la encuesta</b> por los canales del consultorio</span></li>
+        </ul>
+        <ul class="lista">
+          <li><svg class="ico"><use href="#i-check"/></svg><span><b>Manual de marca</b> y logos de Los Libertadores</span></li>
+          <li><svg class="ico"><use href="#i-check"/></svg><span><b>Formatos actuales</b> (fichas, actas, reportes) para replicarlos</span></li>
+          <li><svg class="ico"><use href="#i-check"/></svg><span><b>Lo que hoy no funciona</b> en la herramienta actual, en palabras de los usuarios</span></li>
+          <li><svg class="ico"><use href="#i-check"/></svg><span><b>Aprobación</b> de cada propuesta de diseño en un plazo acordado</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="tres" style="margin-top:14px">
+      <div class="tarjeta bloque" style="padding:16px"><div class="oro" style="font-size:20px;font-weight:700">Estudiantes</div><p style="margin-top:4px">Sus casos, sus alertas y su agenda, sin ruido.</p></div>
+      <div class="tarjeta bloque" style="padding:16px"><div class="oro" style="font-size:20px;font-weight:700">Docentes</div><p style="margin-top:4px">Supervisión de muchos casos y estudiantes a la vez.</p></div>
+      <div class="tarjeta bloque" style="padding:16px"><div class="oro" style="font-size:20px;font-weight:700">Dirección</div><p style="margin-top:4px">Estadísticas del consultorio para informes y decisiones.</p></div>
+    </div>
+    <div class="tarjeta oro-borde" style="margin-top:14px;padding:22px 26px;display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:center">
+      <div class="serif oro" style="font-size:60px;line-height:.8">“</div>
+      <div><div style="font-size:17px;font-weight:300;line-height:1.45">La construye un equipo de abogados y desarrolladores: las alertas se piensan <b style="font-weight:600">desde el ejercicio</b>, no desde el software.</div><div class="tenue" style="font-size:11px;margin-top:8px">Saber qué alerta importa y cuál es ruido es criterio jurídico, no código.</div></div>
+    </div>
+    <div class="pie"><span><b>Propuesta Los Libertadores</b> · Diseño centrado en el estudiante</span><span><a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 07</span></div>
+  </div>
+</section>
+
+<!-- ============================== 7 · METODOLOGÍA ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:620px;height:620px;right:-260px;top:-200px;background:radial-gradient(circle, rgba(201,162,39,.16), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">07</span> Metodología</div>
+    <h2>3 sprints · <b>12 semanas.</b></h2>
+    <p class="lead" style="margin-top:14px;max-width:590px">Entregables claros, revisión conjunta al cierre de cada etapa y comunicación directa durante todo el proyecto. Los tiempos pueden reducirse: ya existe un panel funcionando y una base de datos montada.</p>
+
+    <div style="display:flex;flex-direction:column;gap:12px;margin-top:24px">
+      <div class="tarjeta sprint">
+        <div><div class="s">SPRINT 1</div><div class="sem">Sem. 1 – 4</div><div class="tit">Fundamentos y arquitectura</div><div class="barra-sem"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+        <ul class="lista">
+          <li><svg class="ico"><use href="#i-check"/></svg>Levantamiento de requerimientos con los directores del consultorio</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Diseño de base de datos: expedientes, casos, usuarios, términos y actuaciones</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Autenticación y roles: Administrador, Director, Estudiante</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Primeras propuestas de diseño con la identidad visual de Los Libertadores</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Panel inicial: casos activos y alertas pendientes</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Experiencia de usuario intuitiva y adaptada al consultorio</li>
+        </ul>
+      </div>
+      <div class="tarjeta sprint">
+        <div><div class="s">SPRINT 2</div><div class="sem">Sem. 5 – 8</div><div class="tit">Módulos centrales</div><div class="barra-sem"><i></i><i></i><i></i><i></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i><i></i></div></div>
+        <ul class="lista">
+          <li><svg class="ico"><use href="#i-check"/></svg>Expedientes: creación, edición y asignación de director y estudiantes</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Integración con la Rama Judicial conectada a cada expediente</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Motor de alertas por Telegram y correo: actuaciones, vencimientos y desistimientos</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Agenda jurídica con fechas procesales y citas de usuarios</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Control de términos con semáforo verde / amarillo / rojo</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Panel de directores y módulo de comunicaciones</li>
+        </ul>
+      </div>
+      <div class="tarjeta sprint oro-borde">
+        <div><div class="s">SPRINT 3</div><div class="sem">Sem. 8 – 12</div><div class="tit">Transición</div><div class="barra-sem"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div></div>
+        <ul class="lista">
+          <li><svg class="ico"><use href="#i-check"/></svg>Transición desde la herramienta actual (ver página 10)</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Acceso desde el navegador del celular</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Pruebas finales de calidad</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Presentación, ajustes y optimizaciones</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Manuales de uso para estudiantes y docentes</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Socialización y capacitación en el uso de la plataforma</li>
+        </ul>
+      </div>
+    </div>
+    <div class="tres" style="margin-top:14px">
+      <div class="tarjeta bloque"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-msg"/></svg></div><h3>Canal directo</h3></div><p>Un grupo con el enlace del consultorio para dudas y decisiones del día a día.</p></div>
+      <div class="tarjeta bloque"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-eye"/></svg></div><h3>Demo por sprint</h3></div><p>Al cierre de cada etapa se ve la plataforma funcionando, no un informe.</p></div>
+      <div class="tarjeta bloque"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-check-sq"/></svg></div><h3>Aprobación por etapa</h3></div><p>Cada sprint se recibe a satisfacción antes de pasar al siguiente.</p></div>
+    </div>
+    <div class="pie"><span><b>Propuesta Los Libertadores</b> · Metodología</span><span><a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 08</span></div>
+  </div>
+</section>
+
+<!-- ============================== 8 · ALCANCE POR PUNTOS ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:620px;height:620px;left:-280px;top:420px;background:radial-gradient(circle, rgba(201,162,39,.14), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">08</span> Alcance funcional</div>
+    <h2>95 puntos, <b>uno por uno.</b></h2>
+    <p class="lead" style="margin-top:12px;max-width:590px">El proyecto se cotiza por puntos de desarrollo: transparencia en el alcance y control claro del presupuesto. Cada punto equivale a ~COP $421.000.</p>
+
+    <div class="tarjeta puntos" style="margin-top:18px;padding:6px 22px">
+      <div class="fila"><div><h3>Arquitectura y configuración inicial</h3><p>Base de datos, entornos, estructura del proyecto, integración y despliegue continuos</p></div><div class="medidor"><i style="width:80%"></i></div><div class="pts">12<small>pts</small></div></div>
+      <div class="fila"><div><h3>Autenticación y roles</h3><p>Registro, ingreso, recuperación de contraseña y permisos para Admin, Director y Estudiante</p></div><div class="medidor"><i style="width:66.7%"></i></div><div class="pts">10<small>pts</small></div></div>
+      <div class="fila"><div><h3>Panel principal</h3><p>Casos activos, usuarios, anotaciones, comunicaciones, alertas, próximos vencimientos y estadísticas</p></div><div class="medidor"><i style="width:53.3%"></i></div><div class="pts">8<small>pts</small></div></div>
+      <div class="fila"><div><h3>Expedientes y casos</h3><p>Creación y edición, asignación de docentes y estudiantes, área, estado procesal y documentos</p></div><div class="medidor"><i style="width:66.7%"></i></div><div class="pts">10<small>pts</small></div></div>
+      <div class="fila"><div><h3>Integración con la Rama Judicial</h3><p>Consulta automatizada del estado de cada proceso y detección de actuaciones nuevas. Ya desarrollada.</p></div><div class="medidor"><i style="width:100%"></i></div><div class="pts">15<small>pts</small></div></div>
+      <div class="fila"><div><h3>Motor de alertas inteligentes</h3><p>Telegram y correo: vencimientos, actuaciones nuevas y riesgo de desistimiento tácito</p></div><div class="medidor"><i style="width:53.3%"></i></div><div class="pts">8<small>pts</small></div></div>
+      <div class="fila"><div><h3>Control de términos con semáforo</h3><p>Indicador verde / amarillo / rojo según la cercanía del vencimiento; alertas escalonadas</p></div><div class="medidor"><i style="width:46.7%"></i></div><div class="pts">7<small>pts</small></div></div>
+      <div class="fila"><div><h3>Panel de docentes</h3><p>Casos por área (civil, laboral, familia, penal) con filtros por estudiante, estado y urgencia</p></div><div class="medidor"><i style="width:80%"></i></div><div class="pts">12<small>pts</small></div></div>
+      <div class="fila"><div><h3>Estudiantes y supervisión académica</h3><p>Asignación por semestre, registro de actuaciones y seguimiento del avance por director</p></div><div class="medidor"><i style="width:53.3%"></i></div><div class="pts">8<small>pts</small></div></div>
+      <div class="fila"><div><h3>Comunicaciones con usuarios</h3><p>Plantillas, historial por expediente y citaciones y notificaciones automáticas</p></div><div class="medidor"><i style="width:33.3%"></i></div><div class="pts">5<small>pts</small></div></div>
+    </div>
+    <div class="tarjeta oro-borde" style="margin-top:12px;padding:16px 22px;display:flex;justify-content:space-between;align-items:center">
+      <div><div style="font-size:10px;letter-spacing:.24em;color:var(--oro2);font-weight:600">TOTAL</div><div class="tenue" style="font-size:11px;margin-top:2px">95 puntos × ~$421.000 = $40.000.000</div></div>
+      <div style="font-size:34px;font-weight:700;letter-spacing:-.04em" class="oro">95 <span style="font-size:14px;color:var(--tenue);font-weight:500">puntos</span></div>
+    </div>
+    <div class="pie"><span><b>Propuesta Los Libertadores</b> · Alcance funcional</span><span><a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 09</span></div>
+  </div>
+</section>
+
+<!-- ============================== 9 · TRANSICIÓN ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:640px;height:640px;right:-280px;top:-200px;background:radial-gradient(circle, rgba(201,162,39,.17), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">09</span> La transición</div>
+    <h2>Un puente, <b>no un salto.</b></h2>
+    <p class="lead" style="margin-top:12px;max-width:590px">Pasar de la herramienta actual a la plataforma propia sin perder un solo caso exige trabajo de las dos partes. Esto es lo que necesitamos del consultorio para asegurar una transición correcta.</p>
+
+    <!-- Metáfora: puente entre la herramienta actual y la plataforma -->
+    <svg viewBox="0 0 640 92" style="width:100%;margin-top:16px">
+      <g font-family="Inter" text-anchor="middle">
+        <rect x="0" y="34" width="150" height="46" rx="12" fill="rgba(249,250,251,.04)" stroke="#374151"/><text x="75" y="62" fill="#9CA3AF" font-size="12">Herramienta actual</text>
+        <rect x="490" y="34" width="150" height="46" rx="12" fill="rgba(201,162,39,.14)" stroke="#C9A227"/><text x="565" y="62" fill="#E8C547" font-size="12" font-weight="700">Plataforma propia</text>
+        <path d="M150 50 Q320 -4 490 50" fill="none" stroke="#C9A227" stroke-width="2"/>
+        <path d="M150 58h340" stroke="#C9A227" stroke-width="2"/>
+        <g stroke="rgba(201,162,39,.55)" stroke-width="1.3"><path d="M200 58V35M250 58V24M300 58V18M340 58V18M390 58V24M440 58V35"/></g>
+        <g fill="#9CA3AF" font-size="9.5"><text x="225" y="76">datos</text><text x="320" y="76">usuarios</text><text x="415" y="76">capacitación</text></g>
+      </g>
+    </svg>
+
+    <div style="margin-top:10px">
+      <div class="req"><div class="ic-caja"><svg class="ico"><use href="#i-table"/></svg></div><div><h3>Copia de la base de datos en formato .csv</h3><p>Exportación de la herramienta actual con expedientes, partes, áreas y responsables. Lo que no se pueda exportar se carga manualmente.</p></div><div class="quien"><span class="estado e-oro">Universidad</span></div></div>
+      <div class="req"><div class="ic-caja"><svg class="ico"><use href="#i-users"/></svg></div><div><h3>Registro de usuarios</h3><p>Cada estudiante crea su propio usuario y se apersona de él. La universidad autoriza y valida cada registro, y asigna rol, área y casos.</p></div><div class="quien"><span class="estado e-oro">Universidad</span></div></div>
+      <div class="req"><div class="ic-caja"><svg class="ico"><use href="#i-hash"/></svg></div><div><h3>Radicados de cada proceso</h3><p>Cada estudiante registra y verifica en la plataforma el radicado de sus procesos, y radica los nuevos desde su usuario. Así cada uno se apersona de sus casos.</p></div><div class="quien"><span class="estado e-act">Estudiantes</span></div></div>
+      <div class="req"><div class="ic-caja"><svg class="ico"><use href="#i-note"/></svg></div><div><h3>Anotaciones y estados de los procesos</h3><p>La universidad registra las notas internas y el estado procesal de cada caso, para que nadie empiece de cero.</p></div><div class="quien"><span class="estado e-oro">Universidad</span></div></div>
+      <div class="req"><div class="ic-caja"><svg class="ico"><use href="#i-db"/></svg></div><div><h3>Carga inicial</h3><p>Con la copia .csv hacemos una carga parcial de la información existente y entregamos un reporte de lo que quedó cargado y lo que cada estudiante debe completar.</p></div><div class="quien"><span class="estado e-ok">Trifuerza</span></div></div>
+      <div class="req"><div class="ic-caja"><svg class="ico"><use href="#i-send"/></svg></div><div><h3>Capacitación de estudiantes</h3><p>Sesiones de uso de la plataforma y configuración de Telegram en el celular de cada estudiante. La universidad convoca; Trifuerza capacita.</p></div><div class="quien"><span class="estado e-act">Conjunto</span></div></div>
+      <div class="req"><div class="ic-caja"><svg class="ico"><use href="#i-sync"/></svg></div><div><h3>Sustituciones al terminar el semestre</h3><p>Cuando un estudiante termina su práctica, la universidad designa a quién pasan sus casos; la plataforma los traslada con todo su historial y retira el acceso del saliente.</p></div><div class="quien"><span class="estado e-oro">Universidad</span></div></div>
+      <div class="req"><div class="ic-caja"><svg class="ico"><use href="#i-file"/></svg></div><div><h3>Términos y condiciones · Política de privacidad</h3><p>Documentos para usuarios y estudiantes, que cada uno acepta al ingresar. Detalle en la página siguiente.</p></div><div class="quien"><span class="estado e-act">Conjunto</span></div></div>
+    </div>
+    <p class="tenue" style="font-size:9.5px;margin-top:10px">Puede requerirse participación estudiantil y trabajo manual de algunos funcionarios del consultorio. La migración automática depende del formato en que la herramienta actual entregue la información.</p>
+    <div class="pie"><span><b>Propuesta Los Libertadores</b> · La transición</span><span><a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 10</span></div>
+  </div>
+</section>
+
+<!-- ============================== 10 · MARCO LEGAL Y SEGURIDAD ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:640px;height:640px;left:-280px;top:260px;background:radial-gradient(circle, rgba(201,162,39,.15), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">10</span> Marco legal y seguridad</div>
+    <h2>La universidad,<br><b>blindada.</b></h2>
+    <p class="lead" style="margin-top:12px;max-width:590px">El consultorio maneja información sensible de personas vulnerables. La plataforma se entrega con sus reglas de juego escritas y con la seguridad pensada desde el diseño.</p>
+
+    <div class="dos" style="margin-top:22px">
+      <div class="tarjeta bloque oro-borde">
+        <div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-file"/></svg></div><h3>Términos y condiciones</h3></div>
+        <p>Para estudiantes, docentes y administrativos. Cada uno los acepta al primer ingreso.</p>
+        <ul class="lista" style="margin-top:12px">
+          <li><svg class="ico"><use href="#i-check"/></svg>La plataforma es una herramienta de apoyo: no reemplaza la revisión del expediente ni el deber de vigilancia del estudiante y del docente</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Límites de responsabilidad ante fallas o cambios de fuentes externas, como el portal de la Rama Judicial</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Confidencialidad y secreto profesional sobre los casos</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Credenciales personales e intransferibles; prohibido extraer o compartir información fuera de la plataforma</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Deber de reportar de inmediato cualquier incidente o acceso indebido</li>
+        </ul>
+      </div>
+      <div class="tarjeta bloque oro-borde">
+        <div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-shield"/></svg></div><h3>Política de tratamiento de datos</h3></div>
+        <p>Para los usuarios del consultorio y los estudiantes, conforme al régimen de protección de datos personales.</p>
+        <ul class="lista" style="margin-top:12px">
+          <li><svg class="ico"><use href="#i-check"/></svg>Roles definidos: la universidad como responsable del tratamiento y Trifuerza como encargado</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Finalidades claras y autorización de los titulares</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Tratamiento reforzado de datos sensibles y de menores de edad</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Canales para consultas y reclamos de los titulares</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Protocolo de atención y notificación de incidentes de seguridad</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="tarjeta" style="margin-top:14px;padding:20px 22px">
+      <h3 style="font-size:15px">Ciberseguridad y prevención de filtraciones</h3>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px">
+        <div><div class="ic-caja"><svg class="ico"><use href="#i-key"/></svg></div><b style="display:block;font-size:12px;margin-top:9px">Acceso por roles</b><span class="tenue" style="font-size:10.5px">cada estudiante ve solo los casos que tiene asignados</span></div>
+        <div><div class="ic-caja"><svg class="ico"><use href="#i-lock"/></svg></div><b style="display:block;font-size:12px;margin-top:9px">Conexión cifrada</b><span class="tenue" style="font-size:10.5px">toda la información viaja protegida (HTTPS)</span></div>
+        <div><div class="ic-caja"><svg class="ico"><use href="#i-db"/></svg></div><b style="display:block;font-size:12px;margin-top:9px">Copias de seguridad</b><span class="tenue" style="font-size:10.5px">respaldos periódicos de la base de datos</span></div>
+        <div><div class="ic-caja"><svg class="ico"><use href="#i-eye"/></svg></div><b style="display:block;font-size:12px;margin-top:9px">Trazabilidad</b><span class="tenue" style="font-size:10.5px">registro de quién hizo qué y cuándo</span></div>
+      </div>
+      <div style="margin-top:14px;padding-top:12px;border-top:1px solid var(--borde);font-size:11px" class="tenue"><b style="color:var(--tinta)">Sistema de sustituciones:</b> al terminar el semestre, los accesos de los estudiantes que rotan se desactivan y sus casos pasan a quien los sustituye, para que nadie conserve información que ya no le corresponde.</div>
+    </div>
+    <div class="navegador" style="margin-top:14px;box-shadow:none">
+      <div class="principal" style="padding:14px 18px;display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center">
+        <div><b style="font-size:11.5px">Antes de continuar</b>
+          <div style="display:flex;gap:7px;align-items:flex-start;margin-top:7px;font-size:9.5px"><span style="width:12px;height:12px;border-radius:3px;background:var(--u-verde);color:#fff;display:grid;place-items:center;font-size:8px;flex:none">✓</span>Acepto los <u>Términos y condiciones</u> de uso de la plataforma del Consultorio Jurídico.</div>
+          <div style="display:flex;gap:7px;align-items:flex-start;margin-top:5px;font-size:9.5px"><span style="width:12px;height:12px;border-radius:3px;background:var(--u-verde);color:#fff;display:grid;place-items:center;font-size:8px;flex:none">✓</span>Autorizo el tratamiento de mis datos personales según la <u>Política de tratamiento de datos</u>.</div>
+        </div>
+        <span class="ubtn" style="background:var(--u-verde);color:#fff;border-color:var(--u-verde);padding:8px 16px;font-size:10px">Ingresar</span>
+      </div>
+    </div>
+    <p class="tenue" style="font-size:9.5px;margin-top:10px">Trifuerza redacta los documentos con base en su experiencia jurídica; la oficina jurídica de la universidad los revisa y aprueba antes del lanzamiento.</p>
+    <div class="pie"><span><b>Propuesta Los Libertadores</b> · Marco legal y seguridad</span><span><a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 11</span></div>
+  </div>
+</section>
+
+<!-- ============================== 11 · UN APOYO, NO UN REEMPLAZO ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:640px;height:640px;right:-280px;top:340px;background:radial-gradient(circle, rgba(201,162,39,.15), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">11</span> Expectativas claras</div>
+    <h2>Un copiloto,<br><b>no un piloto automático.</b></h2>
+    <p class="lead" style="margin-top:12px;max-width:590px">La plataforma reduce drásticamente el riesgo de que un caso se olvide, pero no reemplaza el criterio ni la responsabilidad de quien lleva el proceso. Decirlo desde el principio protege a todos.</p>
+
+    <!-- Metáfora: copiloto -->
+    <div class="dos" style="margin-top:24px">
+      <div class="tarjeta bloque">
+        <h3 style="font-size:15px">Lo que hace la plataforma</h3>
+        <ul class="lista" style="margin-top:12px">
+          <li><svg class="ico"><use href="#i-check"/></svg>Consulta la Rama a diario y detecta actuaciones nuevas</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Avisa por Telegram y correo antes de que sea tarde</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Ordena los casos por urgencia y muestra lo que se puede caer</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Da a los docentes la vista completa de su área</li>
+        </ul>
+      </div>
+      <div class="tarjeta bloque">
+        <h3 style="font-size:15px">Lo que sigue siendo del equipo</h3>
+        <ul class="lista" style="margin-top:12px">
+          <li><svg class="ico"><use href="#i-user"/></svg>Revisar el expediente y actuar dentro de los términos</li>
+          <li><svg class="ico"><use href="#i-user"/></svg>Leer y atender las alertas que reciben</li>
+          <li><svg class="ico"><use href="#i-user"/></svg>Mantener al día las anotaciones de sus casos</li>
+          <li><svg class="ico"><use href="#i-user"/></svg>La supervisión académica del docente asesor</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="aviso-legal" style="margin-top:16px">
+      <div style="display:flex;gap:14px;align-items:flex-start">
+        <svg class="ico oro" style="width:26px;height:26px"><use href="#i-alert"/></svg>
+        <div>
+          <h3 style="font-size:14px">Puede haber fallas, y serán mínimas</h3>
+          <p class="tenue" style="font-size:11.5px;margin-top:5px">El monitoreo depende de fuentes externas: si el portal de la Rama Judicial está caído, cambia su estructura o publica tarde una actuación, la alerta puede retrasarse. La plataforma registra cada sincronización y muestra cuándo se hizo la última, para que nadie confíe a ciegas. Estudiantes y docentes deben seguir pendientes de sus procesos.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="tarjeta oro-borde" style="margin-top:16px;padding:24px 26px;display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:center">
+      <div class="ic-caja" style="width:54px;height:54px;border-radius:16px"><svg class="ico" style="width:26px;height:26px"><use href="#i-life"/></svg></div>
+      <div>
+        <h3 style="font-size:16px">Asistencia técnica Contrappto</h3>
+        <p class="tenue" style="font-size:11.5px;margin-top:5px">Después de los 3 meses de soporte incluidos, el consultorio puede contar con un plan de asistencia a bajo costo para atender fallas, ajustes por cambios en la Rama Judicial y dudas de uso. Si no lo necesita, no lo paga.</p>
+      </div>
+    </div>
+
+    <div class="tres" style="margin-top:14px">
+      <div class="tarjeta bloque" style="padding:16px"><div class="oro" style="font-size:20px;font-weight:700">3 meses</div><p style="margin-top:4px">de soporte incluidos tras la entrega</p></div>
+      <div class="tarjeta bloque" style="padding:16px"><div class="oro" style="font-size:20px;font-weight:700">Visible</div><p style="margin-top:4px">la hora de la última sincronización en cada caso</p></div>
+      <div class="tarjeta bloque" style="padding:16px"><div class="oro" style="font-size:20px;font-weight:700">Opcional</div><p style="margin-top:4px">la asistencia posterior, a bajo costo</p></div>
+    </div>
+    <div class="pie"><span><b>Propuesta Los Libertadores</b> · Expectativas claras</span><span><a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 12</span></div>
+  </div>
+</section>
+
+<!-- ============================== 12 · INVERSIÓN ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:620px;height:620px;left:50%;top:60px;margin-left:-310px;background:radial-gradient(circle, rgba(201,162,39,.18), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">12</span> Inversión</div>
+    <h2>Se paga una vez.<br><b>Se ahorra para siempre.</b></h2>
+    <p class="lead" style="margin-top:12px;max-width:590px">Sin suscripción ni licencias por usuario: el consultorio es dueño del código y de los datos. Después de la entrega solo paga los servidores donde vive la plataforma.</p>
+
+    <!-- Fondo sólido y borde dorado (estilo Academy): un degradado aquí se partía en dos colores en el PDF. -->
+    <div class="tarjeta" style="margin-top:22px;padding:28px 30px;display:grid;grid-template-columns:1.1fr 1fr;gap:28px;align-items:center;background:#0F1626;border:1.5px solid var(--oro)">
+      <div>
+        <span style="display:inline-block;padding:4px 11px;border-radius:999px;background:var(--oro);color:#0B1220;font-size:10px;font-weight:800;letter-spacing:.14em">PAGO ÚNICO</span>
+        <div style="font-size:11px;font-weight:600;letter-spacing:.24em;color:var(--tenue);margin-top:16px">INVERSIÓN TOTAL DEL PROYECTO</div>
+        <div class="oro" style="font-size:46px;font-weight:800;letter-spacing:-.04em;margin-top:6px">$40.000.000</div>
+        <div class="tenue" style="font-size:12px;margin-top:4px">COP · antes de IVA · sin suscripción · 95 puntos de desarrollo</div>
+        <div style="margin-top:10px;font-size:12px;color:var(--tinta)">+ IVA 19 % $7.600.000 · <b>Total $47.600.000</b></div>
+      </div>
+      <ul class="lista">
+        <li><svg class="ico"><use href="#i-check"/></svg>Plataforma completa en producción</li>
+        <li><svg class="ico"><use href="#i-check"/></svg>3 meses de soporte incluidos</li>
+        <li><svg class="ico"><use href="#i-check"/></svg>Transición y capacitación</li>
+        <li><svg class="ico"><use href="#i-check"/></svg>Código fuente documentado, propiedad de la universidad</li>
+        <li><svg class="ico"><use href="#i-check"/></svg>Acceso desde celular, tableta y computador</li>
+      </ul>
+    </div>
+    <div class="tarjeta" style="margin-top:12px;padding:16px 22px;display:flex;justify-content:space-between;align-items:center">
+      <div><h3 style="font-size:13.5px">Infraestructura mensual</h3><p class="tenue" style="font-size:11px;margin-top:2px">Servidores y base de datos en la nube, a cargo del consultorio tras la entrega</p></div>
+      <div style="font-size:22px;font-weight:700;white-space:nowrap">~$150.000 <span class="tenue" style="font-size:11px;font-weight:400">/ mes</span></div>
+    </div>
+
+    <h3 style="font-size:15px;margin-top:18px">Módulos adicionales <span class="tenue" style="font-weight:400;font-size:12px">· opcionales, según prioridades · valores antes de IVA</span></h3>
+    <div class="tres" style="margin-top:12px;gap:10px">
+      <div class="tarjeta bloque" style="padding:16px 18px"><div><h3 style="font-size:13px">Generador de documentos</h3><b class="oro" style="display:block;margin-top:4px">$2.500.000</b></div><p>Poderes, derechos de petición, demandas tipo y comunicaciones con campos autocompletados.</p></div>
+      <div class="tarjeta bloque" style="padding:16px 18px"><div><h3 style="font-size:13px">Portal de usuarios</h3><b class="oro" style="display:block;margin-top:4px">$3.000.000</b></div><p>Cada usuario del consultorio consulta el estado de su proceso, sus audiencias y las comunicaciones recibidas.</p></div>
+      <div class="tarjeta bloque" style="padding:16px 18px"><div><h3 style="font-size:13px">Firma electrónica</h3><b class="oro" style="display:block;margin-top:4px">$2.800.000</b></div><p>Firma electrónica de poderes y comunicaciones con validez conforme a la Ley 527 de 1999.</p></div>
+      <div class="tarjeta bloque" style="padding:16px 18px"><div><h3 style="font-size:13px">App Store y Play Store</h3><b class="oro" style="display:block;margin-top:4px">$6.000.000</b></div><p>App descargable desde las tiendas, con notificaciones directas al celular.</p></div>
+      <div class="tarjeta bloque" style="padding:16px 18px;grid-column:span 2"><div><h3 style="font-size:13px">App de toda la universidad</h3><b class="oro" style="display:block;margin-top:4px;font-size:12px">Se cotiza tras diagnóstico</b></div><p>El consultorio puede integrarse a una app institucional que centralice todos los servicios de la universidad.</p></div>
+    </div>
+    <div class="tarjeta oro-borde" style="margin-top:14px;padding:18px 22px">
+      <h3 style="font-size:13.5px">Desde el segundo año, solo servidores</h3>
+      <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:12px;align-items:end;height:62px">
+        <div style="text-align:center"><div style="height:38px;border-radius:6px;background:var(--oro)"></div><div style="font-size:9.5px;margin-top:5px" class="tenue">Año 1 · $40 M + servidores</div></div>
+        <div style="text-align:center"><div style="height:6px;border-radius:3px;background:#10B981"></div><div style="font-size:9.5px;margin-top:5px" class="tenue">Año 2 · ~$1,8 M</div></div><div style="text-align:center"><div style="height:6px;border-radius:3px;background:#10B981"></div><div style="font-size:9.5px;margin-top:5px" class="tenue">Año 3 · ~$1,8 M</div></div><div style="text-align:center"><div style="height:6px;border-radius:3px;background:#10B981"></div><div style="font-size:9.5px;margin-top:5px" class="tenue">Año 4 · ~$1,8 M</div></div><div style="text-align:center"><div style="height:6px;border-radius:3px;background:#10B981"></div><div style="font-size:9.5px;margin-top:5px" class="tenue">Año 5 · ~$1,8 M</div></div>
+      </div>
+      <p class="tenue" style="font-size:10.5px;margin-top:10px">Lo que hoy se paga cada año en licencia queda libre para el consultorio, de por vida.</p>
+    </div>
+    <div class="pie"><span><b>Propuesta Los Libertadores</b> · Inversión</span><span><a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 13</span></div>
+  </div>
+</section>
+
+<!-- ============================== 13 · ENTREGABLES Y CIERRE ============================== -->
+<section class="pagina cruces">
+  <svg class="constelacion" data-paleta="legal" data-semilla="21" data-zona="40,955,760,1005" data-nodos="9" viewBox="0 0 794 1123" aria-hidden="true" style="opacity:.55"></svg>
+  <div class="brillo" style="width:800px;height:800px;right:-320px;bottom:-320px;background:radial-gradient(circle, rgba(201,162,39,.22), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">13</span> Entregables</div>
+    <h2>Lo que recibe <b>el consultorio.</b></h2>
+
+    <div class="tres" style="margin-top:20px">
+      <div class="tarjeta bloque"><div class="ic-caja"><svg class="ico"><use href="#i-layout"/></svg></div><h3 style="margin-top:10px;font-size:13.5px">Software en producción</h3><p>Desplegado y operativo para docentes y estudiantes desde el primer día.</p></div>
+      <div class="tarjeta bloque"><div class="ic-caja"><svg class="ico"><use href="#i-chart"/></svg></div><h3 style="margin-top:10px;font-size:13.5px">Panel de docentes</h3><p>Casos, estudiantes, términos y estadísticas del consultorio.</p></div>
+      <div class="tarjeta bloque"><div class="ic-caja"><svg class="ico"><use href="#i-scale"/></svg></div><h3 style="margin-top:10px;font-size:13.5px">Rama + alertas activas</h3><p>Monitoreo judicial y avisos por Telegram funcionando.</p></div>
+      <div class="tarjeta bloque"><div class="ic-caja"><svg class="ico"><use href="#i-folder"/></svg></div><h3 style="margin-top:10px;font-size:13.5px">Código fuente</h3><p>Documentado y propiedad de la universidad, para adaptarlo y escalarlo.</p></div>
+      <div class="tarjeta bloque"><div class="ic-caja"><svg class="ico"><use href="#i-file"/></svg></div><h3 style="margin-top:10px;font-size:13.5px">Documentos legales</h3><p>Términos y condiciones y política de tratamiento de datos.</p></div>
+      <div class="tarjeta bloque"><div class="ic-caja"><svg class="ico"><use href="#i-grad"/></svg></div><h3 style="margin-top:10px;font-size:13.5px">Manuales y capacitación</h3><p>Para estudiantes y docentes, con la configuración de Telegram.</p></div>
+    </div>
+
+    <div class="tarjeta" style="margin-top:14px;padding:18px 22px">
+      <h3 style="font-size:13.5px">Fuera del alcance</h3>
+      <ul class="lista x" style="margin-top:10px;display:grid;grid-template-columns:1fr 1fr;gap:7px 22px">
+        <li><svg class="ico"><use href="#i-x"/></svg>Integración con nómina o contabilidad de la universidad</li>
+        <li><svg class="ico"><use href="#i-x"/></svg>Migración automática total desde la herramienta actual: depende de lo que se pueda exportar</li>
+        <li><svg class="ico"><use href="#i-x"/></svg>Representación jurídica o asesoría legal de los casos</li>
+        <li><svg class="ico"><use href="#i-x"/></svg>Integraciones con terceros no listadas en esta propuesta</li>
+      </ul>
+    </div>
+
+    <div class="cta" style="margin-top:18px">
+      <div class="serif oro" style="font-size:22px">La conexión con la Rama ya funciona.</div>
+      <div style="font-size:27px;font-weight:300;letter-spacing:-.03em;line-height:1.2;margin-top:10px">Lo que sigue es construir a su alrededor<br><b style="font-weight:700">la herramienta que el consultorio merece.</b></div>
+      <div style="margin-top:22px;font-size:14px;font-weight:600">¿Quieres saber más de nosotros?</div><a class="boton-web" href="https://www.trifuerza.co">Conócenos en www.trifuerza.co ↗</a><div class="tenue" style="font-size:11.5px;margin-top:12px">Juan David Vanegas · Trifuerza</div>
+    </div>
+
+    <div class="pie" style="border-top:1px solid var(--borde);padding-top:16px">
+      <span class="logo"><img src="../public/marcas/trifuerza/logo-horizontal-claro.png" alt="Trifuerza" style="height:24px"><span class="sep" style="height:20px"></span><span class="legal" style="font-size:11px">Technology</span></span>
+      <span><a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 14</span>
+    </div>
+  </div>
+</section>
+
+<script src="kit/constelacion.js"></script>
+<script src="kit/pdf-limpio.js"></script>
+</body>
+</html>

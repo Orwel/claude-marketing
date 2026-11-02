@@ -13,6 +13,7 @@
     "validar": "node src/video/validar.js",
     "pista": "node src/audio/pista.js",
     "voz": "node src/voz/locutar.js",
+    "medir-voz": "node src/voz/medir.js",
     "vertical": "node src/vertical/preparar.js",
     "armar": "node src/montaje/armar.js",
     "montaje": "node src/montaje/render.js",

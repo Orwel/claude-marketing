@@ -1,0 +1,85 @@
+{
+  "slug": "c11-confidencialidad",
+  "titulo": "Tres cosas antes de subir un contrato a una IA",
+  "plantilla": "Carrusel",
+  "tipo": "carrusel",
+  "formato": "carrusel",
+  "segundos": 6,
+  "cuentas": [
+    "trifuerza",
+    "juanda"
+  ],
+  "pie": "Guárdalo",
+  "laminas": [
+    {
+      "metafora": "candado",
+      "antetitulo": "Confidencialidad",
+      "titulo": "¿Puedes subir el contrato de tu cliente *a una IA?*",
+      "texto": "Depende de tres cosas."
+    },
+    {
+      "metafora": "lupa",
+      "datos": {
+        "etiqueta": "Cláusula",
+        "renglon": 2
+      },
+      "antetitulo": "1 · Tu contrato con el cliente",
+      "titulo": "Muchas cláusulas prohíben compartir *con terceros.*",
+      "texto": "Y un proveedor de software es un tercero."
+    },
+    {
+      "metafora": "tablero",
+      "datos": {
+        "titulo": "Plan del proveedor",
+        "filas": [
+          "Uso de tus datos",
+          "Entrenamiento",
+          "Retención",
+          "Acceso de terceros",
+          "Ubicación"
+        ],
+        "alerta": 1,
+        "textoListo": "Revisado",
+        "textoAlerta": "Leer términos"
+      },
+      "antetitulo": "2 · Qué hace el proveedor",
+      "titulo": "No es lo mismo un plan gratuito *que uno empresarial.*",
+      "texto": "Está en los términos. Hay que leerlos."
+    },
+    {
+      "metafora": "candado",
+      "datos": {
+        "etiqueta": "Nombres, cédulas y cifras fuera"
+      },
+      "antetitulo": "3 · Anonimiza",
+      "titulo": "Quita nombres, cédulas *y cifras.*",
+      "texto": "La herramienta te sirve casi igual y el problema desaparece."
+    },
+    {
+      "metafora": "semaforo",
+      "datos": {
+        "items": [
+          "Anonimizado: sí",
+          "Con plan revisado: con criterio",
+          "Documento crudo: casi nunca"
+        ]
+      },
+      "antetitulo": "La respuesta corta",
+      "titulo": "Sí se puede, con criterio. *Casi nunca con el documento crudo.*"
+    }
+  ],
+  "variantes": {
+    "trifuerza": {
+      "copy": "¿Puedes subir el contrato de tu cliente a una herramienta de IA? Depende de tres cosas:\n\n1. Tu contrato con el cliente: muchas cláusulas de confidencialidad prohíben compartir con terceros, y un proveedor de software es un tercero.\n2. Qué hace el proveedor con tus datos: no es lo mismo un plan gratuito que uno empresarial.\n3. Si puedes anonimizar: quita nombres, cédulas y cifras.\n\nSí se puede, con criterio, y casi nunca con el documento crudo. Guárdalo."
+    },
+    "juanda": {
+      "copy": "¿Puedes subir el contrato de tu cliente a una herramienta de IA? Depende de tres cosas:\n\n1. Tu contrato con el cliente: muchas cláusulas de confidencialidad prohíben compartir con terceros, y un proveedor de software es un tercero.\n2. Qué hace el proveedor con tus datos: no es lo mismo un plan gratuito que uno empresarial.\n3. Si puedes anonimizar: quita nombres, cédulas y cifras.\n\nSí se puede, con criterio, y casi nunca con el documento crudo. Guárdalo."
+    }
+  },
+  "verificar": [
+    {
+      "dato": "Criterio general sobre confidencialidad y proveedores de IA: revisar que no se lea como asesoría de un caso particular.",
+      "estado": "pendiente"
+    }
+  ]
+}

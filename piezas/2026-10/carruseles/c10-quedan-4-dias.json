@@ -1,0 +1,82 @@
+{
+  "slug": "c10-quedan-4-dias",
+  "titulo": "Quedan 4 días: las preguntas",
+  "plantilla": "Carrusel",
+  "tipo": "carrusel",
+  "formato": "carrusel",
+  "segundos": 6,
+  "cuentas": [
+    "juanda"
+  ],
+  "pie": "Link en mi perfil",
+  "laminas": [
+    {
+      "metafora": "reloj",
+      "datos": {
+        "numero": 4
+      },
+      "antetitulo": "El martes, en vivo",
+      "titulo": "Quedan *4 días.*",
+      "texto": "Estas son las preguntas que voy a responder."
+    },
+    {
+      "metafora": "candado",
+      "antetitulo": "Pregunta",
+      "titulo": "¿Puedo subir documentos *de mi trabajo?*"
+    },
+    {
+      "metafora": "lupa",
+      "antetitulo": "Pregunta",
+      "titulo": "¿Cómo sé si lo que me responde *es cierto?*"
+    },
+    {
+      "metafora": "brujula",
+      "datos": {
+        "etiqueta": "Criterio de compra"
+      },
+      "antetitulo": "Pregunta",
+      "titulo": "¿Cuál herramienta compro *y con qué criterio?*"
+    },
+    {
+      "metafora": "semaforo",
+      "datos": {
+        "items": [
+          "Redactar: sí",
+          "Resumir: con cuidado",
+          "Decidir: nunca"
+        ]
+      },
+      "antetitulo": "Pregunta",
+      "titulo": "¿Qué no puedo *delegarle nunca?*"
+    },
+    {
+      "metafora": "calendario",
+      "datos": {
+        "etiqueta": "Clase en vivo · 7 p.m.",
+        "hoy": 23
+      },
+      "antetitulo": "Gratis · con certificado",
+      "titulo": "Martes 27, *7 de la noche.*",
+      "texto": "Si la tuya no está, déjala en los comentarios."
+    }
+  ],
+  "variantes": {
+    "juanda": {
+      "copy": "Estas son las preguntas que voy a responder en vivo el martes:\n\n— ¿Puedo subir documentos de mi trabajo?\n— ¿Cómo sé si lo que me responde es cierto?\n— ¿Cuál herramienta compro y con qué criterio?\n— ¿Qué no puedo delegarle nunca?\n\nSi la tuya no está, déjala aquí y la sumo. Martes 27, 7 de la noche. Gratis. Link en mi perfil."
+    }
+  },
+  "verificar": [
+    {
+      "dato": "Clase en vivo «Fundamentos para la Inteligencia Artificial»: martes 27 de octubre de 2026, 7:00 p.m. hora Colombia, gratis.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Certificado gratuito: quién lo emite (¿Trifuerza Academy?) y qué condiciones tiene.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Registro: link en el perfil, abre el lunes 5 de octubre.",
+      "estado": "pendiente"
+    }
+  ]
+}

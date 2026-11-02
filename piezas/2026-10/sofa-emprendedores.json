@@ -240,34 +240,33 @@
   ],
   "variantes": {
     "trifuerza": {
-      "cta": "Vota: link en el perfil",
+      "cta": "ESCRIBENOS POR DM",
       "copy": ""
     }
   },
   "intro": {
-    "participantes": [
-      "Bélula",
-      "Corte del dragón",
-      "Janía Abril",
-      "Cacher Studio"
-    ]
+    "ganador": "Bélula",
+    "premio": "PÁGINA WEB · TRIFUERZA"
   },
   "slug": "sofa-emprendedores",
   "codigo": "SOFA10",
-  "titulo": "Emprendedores del SOFA: ¿quién se gana la página web?",
-  "niveles": 4,
+  "titulo": "Conoce Bélula: ganadores de una página web hecha por Trifuerza",
+  "niveles": 3,
   "escenas": [
     {
       "tipo": "titulo",
       "segundos": 3.4,
-      "alto": 360,
-      "parte": "PARTE 1"
+      "alto": 300,
+      "voz": {
+        "archivo": "sofa/voces/arboleda-7.wav",
+        "en": 0.6
+      }
     },
     {
       "tipo": "clip",
       "archivo": "DJI_20261012_140032_602_video.mp4",
       "desde": 0.3,
-      "hasta": 21.8,
+      "hasta": 44.6,
       "golpes": [
         {
           "en": "amuletos",
@@ -278,6 +277,21 @@
           "en": "dragones",
           "texto": "DRAGONES",
           "estilo": "golpe"
+        },
+        {
+          "en": "gnomos",
+          "texto": "GNOMOS",
+          "estilo": "golpe"
+        },
+        {
+          "en": "sustentable",
+          "texto": "NEGOCIO SUSTENTABLE",
+          "estilo": "xp"
+        },
+        {
+          "en": "terapeuta",
+          "texto": "MI TERAPEUTA",
+          "estilo": "pastilla"
         }
       ],
       "fx": [
@@ -290,6 +304,20 @@
         {
           "tipo": "fuego",
           "en": "dragones",
+          "dura": 2.4,
+          "quien": "p2",
+          "color": "#58D35A"
+        },
+        {
+          "tipo": "estrellas",
+          "en": "gnomos",
+          "dura": 2.4,
+          "quien": "p2",
+          "color": "#58D35A"
+        },
+        {
+          "tipo": "aura",
+          "en": "Céfira",
           "dura": 2.4,
           "quien": "p2",
           "color": "#58D35A"
@@ -312,7 +340,7 @@
           },
           {
             "n": "PÁGINA WEB",
-            "v": 0.1
+            "v": 1
           }
         ],
         "resumen": "Amuletos y seres fantásticos"
@@ -334,6 +362,11 @@
         {
           "desde": 7,
           "quien": "p2"
+        },
+        {
+          "desde": 43.3,
+          "quien": "jd",
+          "fijo": true
         }
       ],
       "foco": {
@@ -355,42 +388,32 @@
       "_avisos": []
     },
     {
+      "tipo": "nivel",
+      "numero": 2,
+      "nombre": "La tienda de Bélula",
+      "estilo": "mision",
+      "segundos": 2
+    },
+    {
       "tipo": "clip",
-      "archivo": "DJI_20261012_140032_602_video.mp4",
-      "desde": 35.7,
-      "hasta": 53.2,
+      "archivo": "DJI_20261012_140135_450_video.mp4",
+      "desde": 5,
+      "hasta": 16.1,
       "golpes": [
         {
-          "en": "terapeuta",
-          "texto": "MI TERAPEUTA",
-          "estilo": "pastilla"
-        },
-        {
-          "en": "gratis",
-          "texto": "PÁGINA WEB GRATIS",
+          "en": "mano",
+          "texto": "HECHO A MANO",
           "estilo": "xp"
-        },
-        {
-          "en": "vótalo",
-          "texto": "¡VÓTALO!",
-          "estilo": "golpe"
         }
       ],
       "fx": [
         {
-          "tipo": "aura",
-          "en": "Céfira",
-          "dura": 2.4,
-          "quien": "p2",
-          "color": "#58D35A"
-        },
-        {
           "tipo": "estrellas",
-          "en": "gratis",
-          "dura": 2.5,
+          "en": "productos",
+          "dura": 2.6,
           "quien": null,
           "lado": "centro",
-          "color": "#F2C85B"
+          "color": "#58D35A"
         }
       ],
       "personaje": {
@@ -403,206 +426,166 @@
       },
       "turnos": [
         {
-          "desde": 35.7,
+          "desde": 5.3,
+          "quien": "jd"
+        },
+        {
+          "desde": 9.1,
           "quien": "p2"
         },
         {
-          "desde": 43.3,
+          "desde": 15.3,
           "quien": "jd",
           "fijo": true
-        },
-        {
-          "desde": 47.3,
-          "quien": "jd"
         }
       ],
       "foco": {
         "jd": {
-          "x": 0.65,
-          "y": 0.33,
-          "escala": 1.3
-        },
-        "p2": {
-          "x": 0.3,
+          "x": 0.5,
           "y": 0.45,
-          "escala": 1.35
-        }
-      },
-      "lados": {
-        "jd": "derecha",
-        "p2": "izquierda"
-      },
-      "_avisos": []
-    },
-    {
-      "tipo": "nivel",
-      "numero": 2,
-      "nombre": "La corte del dragón",
-      "estilo": "mision",
-      "segundos": 2
-    },
-    {
-      "tipo": "clip",
-      "archivo": "DJI_20261012_141027_595_video.mp4",
-      "desde": 1.6,
-      "hasta": 21.8,
-      "golpes": [
-        {
-          "en": "medievales",
-          "texto": "IDEAS MEDIEVALES",
-          "estilo": "pastilla"
-        },
-        {
-          "en": "recuerdo",
-          "texto": "UN RECUERDO BONITO",
-          "estilo": "xp"
-        }
-      ],
-      "fx": [
-        {
-          "tipo": "estrellas",
-          "en": "dragón",
-          "dura": 2.4,
-          "quien": "p2",
-          "color": "#B388FF"
-        },
-        {
-          "tipo": "corte",
-          "en": "medievales",
-          "dura": 1.2,
-          "quien": "p2",
-          "color": "#F4EFE6"
-        }
-      ],
-      "personaje": {
-        "nombre": "Lucía",
-        "clase": "La corte del dragón artesano",
-        "tema": "mazmorra",
-        "color": "#B388FF",
-        "mundo": "Expositora · SOFA 2026",
-        "stats": [
-          {
-            "n": "TALLERES",
-            "v": 1
-          },
-          {
-            "n": "MEDIEVAL",
-            "v": 0.9
-          },
-          {
-            "n": "PÁGINA WEB",
-            "v": 0.1
-          }
-        ],
-        "resumen": "Talleres con ideas medievales"
-      },
-      "ficha": true,
-      "fichaEn": 0.3,
-      "retrato": {
-        "t": 11.6,
-        "x": 0.5642,
-        "y": 0.4336,
-        "w": 0.1706,
-        "h": 0.1088
-      },
-      "turnos": [
-        {
-          "desde": 1.6,
-          "quien": "jd"
-        },
-        {
-          "desde": 3.1,
-          "quien": "p2"
-        },
-        {
-          "desde": 7.3,
-          "quien": "jd"
-        },
-        {
-          "desde": 9.8,
-          "quien": "p2",
-          "fijo": true
-        },
-        {
-          "desde": 20.3,
-          "quien": "jd"
-        }
-      ],
-      "foco": {
-        "jd": {
-          "x": 0.3,
-          "y": 0.32,
-          "escala": 1.3
+          "escala": 1.1
         },
         "p2": {
-          "x": 0.62,
-          "y": 0.42,
-          "escala": 1.35
-        }
-      },
-      "_avisos": []
-    },
-    {
-      "tipo": "cierre",
-      "archivo": "DJI_20261012_151344_201_video.mp4",
-      "desde": 2.1,
-      "hasta": 7.9,
-      "golpes": [
-        {
-          "en": "gratis",
-          "texto": "PÁGINA WEB GRATIS",
-          "estilo": "xp"
-        }
-      ],
-      "fx": [
-        {
-          "tipo": "estrellas",
-          "en": "votación",
-          "dura": 4,
-          "quien": null,
-          "lado": "centro",
-          "color": "#F2C85B"
-        }
-      ],
-      "foco": {
-        "jd": {
-          "x": 0.47,
-          "y": 0.33,
-          "escala": 1.3
+          "x": 0.5,
+          "y": 0.45,
+          "escala": 1.1
         }
       },
       "lados": {
-        "jd": "centro"
+        "jd": "centro",
+        "p2": "centro"
       },
-      "cta": "VOTA · LINK EN EL PERFIL",
+      "correcciones": [
+        {
+          "de": "chéverees",
+          "a": "chéveres"
+        },
+        {
+          "de": "labora",
+          "a": "elaboras"
+        },
+        {
+          "de": "son gracias",
+          "a": "sí, gracias"
+        }
+      ],
       "_avisos": []
     }
   ],
+  "final": {
+    "voz": {
+      "archivo": "sofa/voces/arboleda-10.wav",
+      "en": 0.9
+    }
+  },
   "verificar": [
     {
-      "dato": "Concurso: un comercio del SOFA se gana una página web por votación (lo dice Juan David en cámara); mecánica y enlace por confirmar antes de publicar",
+      "dato": "Bélula ganó la página web hecha por Trifuerza (lo dice Juan David en la locución; estrategia del 19-oct-2026)",
       "estado": "pendiente"
     },
     {
-      "dato": "Bélula (oído «Vélula»; el letrero del stand dice BÉLU…), Céfira, Lucía: escritura por confirmar",
+      "dato": "Clip 140135_450: Whisper oyó «lo que labora» y «son gracias»; en pantalla va «lo que elaboras» y «sí, gracias». Confirmar al oído",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Bélula (oído «Vélula»; el letrero del stand dice BÉLU…), Céfira: escritura por confirmar",
       "estado": "pendiente"
     }
   ],
+  "bpm": 140,
+  "capas": true,
+  "cancion": {
+    "archivo": "trabajo/musica-libre/celtic-impulse.mp3",
+    "titulo": "Celtic Impulse",
+    "autor": "Kevin MacLeod (incompetech.com)",
+    "licencia": "CC BY 4.0"
+  },
   "generado": {
     "escenas": [
       {
         "tipo": "titulo",
         "segundos": 3.4,
-        "alto": 360,
-        "parte": "PARTE 1",
+        "alto": 300,
+        "voz": {
+          "archivo": "sofa/voces/arboleda-7.wav",
+          "en": 0.6
+        },
         "inicio": 0,
-        "cuadros": 102
+        "cuadros": 254,
+        "subtitulos": [
+          {
+            "text": " Conoce",
+            "startMs": 1370,
+            "endMs": 2205,
+            "quien": "jd"
+          },
+          {
+            "text": " Bélula,",
+            "startMs": 2205,
+            "endMs": 3226,
+            "quien": "jd"
+          },
+          {
+            "text": " los",
+            "startMs": 3226,
+            "endMs": 3403,
+            "quien": "jd"
+          },
+          {
+            "text": " ganadores",
+            "startMs": 3403,
+            "endMs": 4036,
+            "quien": "jd"
+          },
+          {
+            "text": " de",
+            "startMs": 4036,
+            "endMs": 4171,
+            "quien": "jd"
+          },
+          {
+            "text": " una",
+            "startMs": 4171,
+            "endMs": 4382,
+            "quien": "jd"
+          },
+          {
+            "text": " página",
+            "startMs": 4382,
+            "endMs": 4855,
+            "quien": "jd"
+          },
+          {
+            "text": " web",
+            "startMs": 4855,
+            "endMs": 5116,
+            "quien": "jd"
+          },
+          {
+            "text": " hecha",
+            "startMs": 5116,
+            "endMs": 5749,
+            "quien": "jd"
+          },
+          {
+            "text": " por",
+            "startMs": 5749,
+            "endMs": 6129,
+            "quien": "jd"
+          },
+          {
+            "text": " Trifuerza.",
+            "startMs": 6129,
+            "endMs": 7580,
+            "quien": "jd"
+          }
+        ]
       },
       {
         "tipo": "clip",
         "archivo": "DJI_20261012_140032_602_video.mp4",
         "desde": 0.3,
-        "hasta": 21.8,
+        "hasta": 44.6,
         "golpes": [
           {
             "en": "amuletos",
@@ -613,6 +596,21 @@
             "en": "dragones",
             "texto": "DRAGONES",
             "estilo": "golpe"
+          },
+          {
+            "en": "gnomos",
+            "texto": "GNOMOS",
+            "estilo": "golpe"
+          },
+          {
+            "en": "sustentable",
+            "texto": "NEGOCIO SUSTENTABLE",
+            "estilo": "xp"
+          },
+          {
+            "en": "terapeuta",
+            "texto": "MI TERAPEUTA",
+            "estilo": "pastilla"
           }
         ],
         "fx": [
@@ -625,6 +623,20 @@
           {
             "tipo": "fuego",
             "en": "dragones",
+            "dura": 2.4,
+            "quien": "p2",
+            "color": "#58D35A"
+          },
+          {
+            "tipo": "estrellas",
+            "en": "gnomos",
+            "dura": 2.4,
+            "quien": "p2",
+            "color": "#58D35A"
+          },
+          {
+            "tipo": "aura",
+            "en": "Céfira",
             "dura": 2.4,
             "quien": "p2",
             "color": "#58D35A"
@@ -647,7 +659,7 @@
             },
             {
               "n": "PÁGINA WEB",
-              "v": 0.1
+              "v": 1
             }
           ],
           "resumen": "Amuletos y seres fantásticos"
@@ -669,6 +681,11 @@
           {
             "desde": 7,
             "quien": "p2"
+          },
+          {
+            "desde": 43.3,
+            "quien": "jd",
+            "fijo": true
           }
         ],
         "foco": {
@@ -687,9 +704,9 @@
           "jd": "derecha",
           "p2": "izquierda"
         },
-        "inicio": 102,
-        "cuadros": 580,
-        "cola": 8,
+        "inicio": 254,
+        "cuadros": 1081,
+        "cola": 0,
         "tramos": [
           {
             "archivo": "sofa/DJI_20261012_140032_602_video.mp4",
@@ -718,10 +735,50 @@
           {
             "archivo": "sofa/DJI_20261012_140032_602_video.mp4",
             "desde": 17.9,
-            "hasta": 22.4,
+            "hasta": 22.1,
             "velocidad": 1.08,
             "inicio": 447,
-            "cuadros": 125
+            "cuadros": 117
+          },
+          {
+            "archivo": "sofa/DJI_20261012_140032_602_video.mp4",
+            "desde": 23.76,
+            "hasta": 25.9,
+            "velocidad": 1.08,
+            "inicio": 564,
+            "cuadros": 59
+          },
+          {
+            "archivo": "sofa/DJI_20261012_140032_602_video.mp4",
+            "desde": 26.5,
+            "hasta": 28.8,
+            "velocidad": 1.08,
+            "inicio": 623,
+            "cuadros": 64
+          },
+          {
+            "archivo": "sofa/DJI_20261012_140032_602_video.mp4",
+            "desde": 29.82,
+            "hasta": 33.1,
+            "velocidad": 1.08,
+            "inicio": 687,
+            "cuadros": 91
+          },
+          {
+            "archivo": "sofa/DJI_20261012_140032_602_video.mp4",
+            "desde": 33.4,
+            "hasta": 41.5,
+            "velocidad": 1.08,
+            "inicio": 778,
+            "cuadros": 225
+          },
+          {
+            "archivo": "sofa/DJI_20261012_140032_602_video.mp4",
+            "desde": 42.2,
+            "hasta": 45,
+            "velocidad": 1.08,
+            "inicio": 1003,
+            "cuadros": 78
           }
         ],
         "subtitulos": [
@@ -1092,48 +1149,456 @@
             "timestampMs": null,
             "confidence": 0.697478,
             "quien": "p2"
+          },
+          {
+            "text": " mucho",
+            "startMs": 18981,
+            "endMs": 19130,
+            "timestampMs": null,
+            "confidence": 0.998525,
+            "quien": "p2"
+          },
+          {
+            "text": " en",
+            "startMs": 19130,
+            "endMs": 19259,
+            "timestampMs": null,
+            "confidence": 0.99257,
+            "quien": "p2"
+          },
+          {
+            "text": " lo",
+            "startMs": 19259,
+            "endMs": 19389,
+            "timestampMs": null,
+            "confidence": 0.986999,
+            "quien": "p2"
+          },
+          {
+            "text": " que",
+            "startMs": 19389,
+            "endMs": 19556,
+            "timestampMs": null,
+            "confidence": 0.996763,
+            "quien": "p2"
+          },
+          {
+            "text": " es",
+            "startMs": 19556,
+            "endMs": 19630,
+            "timestampMs": null,
+            "confidence": 0.97481,
+            "quien": "p2"
+          },
+          {
+            "text": " eso",
+            "startMs": 19630,
+            "endMs": 19963,
+            "timestampMs": null,
+            "confidence": 0.950662,
+            "quien": "p2"
+          },
+          {
+            "text": " la",
+            "startMs": 19963,
+            "endMs": 20222,
+            "timestampMs": null,
+            "confidence": 0.854993,
+            "quien": "p2"
+          },
+          {
+            "text": " fantasía",
+            "startMs": 20222,
+            "endMs": 20345,
+            "timestampMs": null,
+            "confidence": 0.984395,
+            "quien": "p2"
+          },
+          {
+            "text": " desde",
+            "startMs": 20345,
+            "endMs": 20429,
+            "timestampMs": null,
+            "confidence": 0.65638,
+            "quien": "p2"
+          },
+          {
+            "text": " niño",
+            "startMs": 20429,
+            "endMs": 20500,
+            "timestampMs": null,
+            "confidence": 0.9621,
+            "quien": "p2"
+          },
+          {
+            "text": " desde",
+            "startMs": 20963,
+            "endMs": 21214,
+            "timestampMs": null,
+            "confidence": 0.348513,
+            "quien": "p2"
+          },
+          {
+            "text": " niño",
+            "startMs": 21214,
+            "endMs": 21426,
+            "timestampMs": null,
+            "confidence": 0.936679,
+            "quien": "p2"
+          },
+          {
+            "text": " que",
+            "startMs": 21889,
+            "endMs": 22156,
+            "timestampMs": null,
+            "confidence": 0.841285,
+            "quien": "p2"
+          },
+          {
+            "text": " por",
+            "startMs": 22156,
+            "endMs": 22422,
+            "timestampMs": null,
+            "confidence": 0.905583,
+            "quien": "p2"
+          },
+          {
+            "text": " mi",
+            "startMs": 22422,
+            "endMs": 22630,
+            "timestampMs": null,
+            "confidence": 0.994753,
+            "quien": "p2"
+          },
+          {
+            "text": " abuela",
+            "startMs": 23093,
+            "endMs": 23685,
+            "timestampMs": null,
+            "confidence": 0.986012,
+            "quien": "p2"
+          },
+          {
+            "text": " que",
+            "startMs": 23685,
+            "endMs": 24259,
+            "timestampMs": null,
+            "confidence": 0.949778,
+            "quien": "p2"
+          },
+          {
+            "text": " me",
+            "startMs": 24259,
+            "endMs": 24500,
+            "timestampMs": null,
+            "confidence": 0.905536,
+            "quien": "p2"
+          },
+          {
+            "text": " hablaba",
+            "startMs": 24500,
+            "endMs": 24722,
+            "timestampMs": null,
+            "confidence": 0.851327,
+            "quien": "p2"
+          },
+          {
+            "text": " de",
+            "startMs": 24722,
+            "endMs": 25000,
+            "timestampMs": null,
+            "confidence": 0.965703,
+            "quien": "p2"
+          },
+          {
+            "text": " los",
+            "startMs": 25000,
+            "endMs": 25278,
+            "timestampMs": null,
+            "confidence": 0.957675,
+            "quien": "p2"
+          },
+          {
+            "text": " gnomos",
+            "startMs": 25278,
+            "endMs": 25360,
+            "timestampMs": null,
+            "confidence": 0.69322,
+            "quien": "p2"
+          },
+          {
+            "text": " y",
+            "startMs": 25360,
+            "endMs": 25387,
+            "timestampMs": null,
+            "confidence": 0.950673,
+            "quien": "p2"
+          },
+          {
+            "text": " todo",
+            "startMs": 25387,
+            "endMs": 25447,
+            "timestampMs": null,
+            "confidence": 0.923534,
+            "quien": "p2"
+          },
+          {
+            "text": " este",
+            "startMs": 25447,
+            "endMs": 25507,
+            "timestampMs": null,
+            "confidence": 0.98763,
+            "quien": "p2"
+          },
+          {
+            "text": " mundo",
+            "startMs": 25507,
+            "endMs": 25579,
+            "timestampMs": null,
+            "confidence": 0.99968,
+            "quien": "p2"
+          },
+          {
+            "text": " me",
+            "startMs": 25579,
+            "endMs": 25618,
+            "timestampMs": null,
+            "confidence": 0.990214,
+            "quien": "p2"
+          },
+          {
+            "text": " fue",
+            "startMs": 25618,
+            "endMs": 25667,
+            "timestampMs": null,
+            "confidence": 0.992771,
+            "quien": "p2"
+          },
+          {
+            "text": " quedando",
+            "startMs": 26130,
+            "endMs": 26550,
+            "timestampMs": null,
+            "confidence": 0.998127,
+            "quien": "p2"
+          },
+          {
+            "text": " lo",
+            "startMs": 26550,
+            "endMs": 26705,
+            "timestampMs": null,
+            "confidence": 0.571633,
+            "quien": "p2"
+          },
+          {
+            "text": " fui",
+            "startMs": 26705,
+            "endMs": 26904,
+            "timestampMs": null,
+            "confidence": 0.951188,
+            "quien": "p2"
+          },
+          {
+            "text": " volviendo",
+            "startMs": 26904,
+            "endMs": 27368,
+            "timestampMs": null,
+            "confidence": 0.954274,
+            "quien": "p2"
+          },
+          {
+            "text": " pues",
+            "startMs": 27368,
+            "endMs": 27611,
+            "timestampMs": null,
+            "confidence": 0.899052,
+            "quien": "p2"
+          },
+          {
+            "text": " negocio",
+            "startMs": 28074,
+            "endMs": 28481,
+            "timestampMs": null,
+            "confidence": 0.831842,
+            "quien": "p2"
+          },
+          {
+            "text": " sustentable",
+            "startMs": 28481,
+            "endMs": 29078,
+            "timestampMs": null,
+            "confidence": 0.888306,
+            "quien": "p2"
+          },
+          {
+            "text": " la",
+            "startMs": 29078,
+            "endMs": 29245,
+            "timestampMs": null,
+            "confidence": 0.467412,
+            "quien": "p2"
+          },
+          {
+            "text": " gente",
+            "startMs": 29245,
+            "endMs": 29556,
+            "timestampMs": null,
+            "confidence": 0.995046,
+            "quien": "p2"
+          },
+          {
+            "text": " ha",
+            "startMs": 29741,
+            "endMs": 29915,
+            "timestampMs": null,
+            "confidence": 0.96286,
+            "quien": "p2"
+          },
+          {
+            "text": " conectado",
+            "startMs": 29915,
+            "endMs": 30436,
+            "timestampMs": null,
+            "confidence": 0.999786,
+            "quien": "p2"
+          },
+          {
+            "text": " mucho",
+            "startMs": 30436,
+            "endMs": 30759,
+            "timestampMs": null,
+            "confidence": 0.998837,
+            "quien": "p2"
+          },
+          {
+            "text": " y",
+            "startMs": 30944,
+            "endMs": 31085,
+            "timestampMs": null,
+            "confidence": 0.925315,
+            "quien": "p2"
+          },
+          {
+            "text": " esta",
+            "startMs": 31085,
+            "endMs": 31395,
+            "timestampMs": null,
+            "confidence": 0.798064,
+            "quien": "p2"
+          },
+          {
+            "text": " es",
+            "startMs": 31395,
+            "endMs": 31593,
+            "timestampMs": null,
+            "confidence": 0.928825,
+            "quien": "p2"
+          },
+          {
+            "text": " mi",
+            "startMs": 32148,
+            "endMs": 32310,
+            "timestampMs": null,
+            "confidence": 0.991397,
+            "quien": "p2"
+          },
+          {
+            "text": " amiga",
+            "startMs": 32310,
+            "endMs": 32611,
+            "timestampMs": null,
+            "confidence": 0.997976,
+            "quien": "p2"
+          },
+          {
+            "text": " Céfira",
+            "startMs": 32611,
+            "endMs": 32958,
+            "timestampMs": null,
+            "confidence": 0.290672,
+            "quien": "p2"
+          },
+          {
+            "text": " que",
+            "startMs": 32958,
+            "endMs": 33167,
+            "timestampMs": null,
+            "confidence": 0.573052,
+            "quien": "p2"
+          },
+          {
+            "text": " es",
+            "startMs": 33630,
+            "endMs": 33805,
+            "timestampMs": null,
+            "confidence": 0.991102,
+            "quien": "p2"
+          },
+          {
+            "text": " mi",
+            "startMs": 33805,
+            "endMs": 33980,
+            "timestampMs": null,
+            "confidence": 0.985252,
+            "quien": "p2"
+          },
+          {
+            "text": " terapeuta",
+            "startMs": 33980,
+            "endMs": 34504,
+            "timestampMs": null,
+            "confidence": 0.855469,
+            "quien": "p2"
+          },
+          {
+            "text": " bueno",
+            "startMs": 34504,
+            "endMs": 34829,
+            "timestampMs": null,
+            "confidence": 0.927339,
+            "quien": "jd"
+          },
+          {
+            "text": " genial",
+            "startMs": 34829,
+            "endMs": 35204,
+            "timestampMs": null,
+            "confidence": 0.970384,
+            "quien": "jd"
           }
         ],
-        "texto": "hoy estamos con Vélula, cuéntanos de qué trata tu negocio bueno pues mi negocio empezó siendo de amuletos para llevar en el cuerpo cierto y eso fue mutando en cosas que puedas tener también como objetos de seres fantásticos como dragones, unicornios y pues me inspiró",
+        "texto": "hoy estamos con Vélula, cuéntanos de qué trata tu negocio bueno pues mi negocio empezó siendo de amuletos para llevar en el cuerpo cierto y eso fue mutando en cosas que puedas tener también como objetos de seres fantásticos como dragones, unicornios y pues me inspiró mucho en lo que es eso la fantasía desde niño desde niño que por mi abuela que me hablaba de los gnomos y todo este mundo me fue quedando lo fui volviendo pues negocio sustentable la gente ha conectado mucho y esta es mi amiga Séfira que es mi terapeuta bueno genial",
         "retratoPng": "sofa/retratos/sofa-emprendedores-1-a7768838.png"
       },
       {
+        "tipo": "nivel",
+        "numero": 2,
+        "nombre": "La tienda de Bélula",
+        "estilo": "mision",
+        "segundos": 2,
+        "inicio": 1335,
+        "cuadros": 60
+      },
+      {
         "tipo": "clip",
-        "archivo": "DJI_20261012_140032_602_video.mp4",
-        "desde": 35.7,
-        "hasta": 53.2,
+        "archivo": "DJI_20261012_140135_450_video.mp4",
+        "desde": 5,
+        "hasta": 16.1,
         "golpes": [
           {
-            "en": "terapeuta",
-            "texto": "MI TERAPEUTA",
-            "estilo": "pastilla"
-          },
-          {
-            "en": "gratis",
-            "texto": "PÁGINA WEB GRATIS",
+            "en": "mano",
+            "texto": "HECHO A MANO",
             "estilo": "xp"
-          },
-          {
-            "en": "vótalo",
-            "texto": "¡VÓTALO!",
-            "estilo": "golpe"
           }
         ],
         "fx": [
           {
-            "tipo": "aura",
-            "en": "Céfira",
-            "dura": 2.4,
-            "quien": "p2",
-            "color": "#58D35A"
-          },
-          {
             "tipo": "estrellas",
-            "en": "gratis",
-            "dura": 2.5,
+            "en": "productos",
+            "dura": 2.6,
             "quien": null,
             "lado": "centro",
-            "color": "#F2C85B"
+            "color": "#58D35A"
           }
         ],
         "personaje": {
@@ -1146,1125 +1611,385 @@
         },
         "turnos": [
           {
-            "desde": 35.7,
+            "desde": 5.3,
+            "quien": "jd"
+          },
+          {
+            "desde": 9.1,
             "quien": "p2"
           },
           {
-            "desde": 43.3,
+            "desde": 15.3,
             "quien": "jd",
             "fijo": true
-          },
-          {
-            "desde": 47.3,
-            "quien": "jd"
           }
         ],
         "foco": {
           "jd": {
-            "x": 0.65,
-            "y": 0.33,
-            "escala": 1.3
+            "x": 0.5,
+            "y": 0.45,
+            "escala": 1.1
           },
           "p2": {
-            "x": 0.3,
+            "x": 0.5,
             "y": 0.45,
-            "escala": 1.35
+            "escala": 1.1
           }
         },
         "lados": {
-          "jd": "derecha",
-          "p2": "izquierda"
+          "jd": "centro",
+          "p2": "centro"
         },
-        "inicio": 682,
-        "cuadros": 428,
-        "cola": 8,
+        "correcciones": [
+          {
+            "de": "chéverees",
+            "a": "chéveres"
+          },
+          {
+            "de": "labora",
+            "a": "elaboras"
+          },
+          {
+            "de": "son gracias",
+            "a": "sí, gracias"
+          }
+        ],
+        "inicio": 1395,
+        "cuadros": 186,
+        "cola": 23,
         "tramos": [
           {
-            "archivo": "sofa/DJI_20261012_140032_602_video.mp4",
-            "desde": 35.5,
-            "hasta": 41.5,
+            "archivo": "sofa/DJI_20261012_140135_450_video.mp4",
+            "desde": 5.1,
+            "hasta": 6.8,
             "velocidad": 1.08,
             "inicio": 0,
-            "cuadros": 167
+            "cuadros": 47
           },
           {
-            "archivo": "sofa/DJI_20261012_140032_602_video.mp4",
-            "desde": 42.2,
-            "hasta": 44.4,
+            "archivo": "sofa/DJI_20261012_140135_450_video.mp4",
+            "desde": 7.4,
+            "hasta": 9.8,
             "velocidad": 1.08,
-            "inicio": 167,
-            "cuadros": 61
+            "inicio": 47,
+            "cuadros": 67
           },
           {
-            "archivo": "sofa/DJI_20261012_140032_602_video.mp4",
-            "desde": 47.1,
-            "hasta": 54,
+            "archivo": "sofa/DJI_20261012_140135_450_video.mp4",
+            "desde": 14.3,
+            "hasta": 16.079,
             "velocidad": 1.08,
-            "inicio": 228,
-            "cuadros": 192
+            "inicio": 114,
+            "cuadros": 49
           }
         ],
         "subtitulos": [
           {
-            "text": " negocio",
-            "startMs": 185,
-            "endMs": 592,
-            "timestampMs": null,
-            "confidence": 0.831842,
-            "quien": "p2"
-          },
-          {
-            "text": " sustentable",
-            "startMs": 592,
-            "endMs": 1189,
-            "timestampMs": null,
-            "confidence": 0.888306,
-            "quien": "p2"
-          },
-          {
-            "text": " la",
-            "startMs": 1189,
-            "endMs": 1356,
-            "timestampMs": null,
-            "confidence": 0.467412,
-            "quien": "p2"
-          },
-          {
-            "text": " gente",
-            "startMs": 1356,
-            "endMs": 1667,
-            "timestampMs": null,
-            "confidence": 0.995046,
-            "quien": "p2"
-          },
-          {
-            "text": " ha",
-            "startMs": 1852,
-            "endMs": 2026,
-            "timestampMs": null,
-            "confidence": 0.96286,
-            "quien": "p2"
-          },
-          {
-            "text": " conectado",
-            "startMs": 2026,
-            "endMs": 2547,
-            "timestampMs": null,
-            "confidence": 0.999786,
-            "quien": "p2"
-          },
-          {
-            "text": " mucho",
-            "startMs": 2547,
-            "endMs": 2870,
-            "timestampMs": null,
-            "confidence": 0.998837,
-            "quien": "p2"
-          },
-          {
             "text": " y",
-            "startMs": 3056,
-            "endMs": 3196,
+            "startMs": 185,
+            "endMs": 232,
             "timestampMs": null,
-            "confidence": 0.925315,
-            "quien": "p2"
-          },
-          {
-            "text": " esta",
-            "startMs": 3196,
-            "endMs": 3506,
-            "timestampMs": null,
-            "confidence": 0.798064,
-            "quien": "p2"
-          },
-          {
-            "text": " es",
-            "startMs": 3506,
-            "endMs": 3704,
-            "timestampMs": null,
-            "confidence": 0.928825,
-            "quien": "p2"
-          },
-          {
-            "text": " mi",
-            "startMs": 4259,
-            "endMs": 4421,
-            "timestampMs": null,
-            "confidence": 0.991397,
-            "quien": "p2"
-          },
-          {
-            "text": " amiga",
-            "startMs": 4421,
-            "endMs": 4722,
-            "timestampMs": null,
-            "confidence": 0.997976,
-            "quien": "p2"
-          },
-          {
-            "text": " Céfira",
-            "startMs": 4722,
-            "endMs": 5069,
-            "timestampMs": null,
-            "confidence": 0.290672,
-            "quien": "p2"
-          },
-          {
-            "text": " que",
-            "startMs": 5069,
-            "endMs": 5278,
-            "timestampMs": null,
-            "confidence": 0.573052,
-            "quien": "p2"
-          },
-          {
-            "text": " es",
-            "startMs": 5741,
-            "endMs": 5916,
-            "timestampMs": null,
-            "confidence": 0.991102,
-            "quien": "p2"
-          },
-          {
-            "text": " mi",
-            "startMs": 5916,
-            "endMs": 6091,
-            "timestampMs": null,
-            "confidence": 0.985252,
-            "quien": "p2"
-          },
-          {
-            "text": " terapeuta",
-            "startMs": 6091,
-            "endMs": 6615,
-            "timestampMs": null,
-            "confidence": 0.855469,
-            "quien": "p2"
-          },
-          {
-            "text": " bueno",
-            "startMs": 6615,
-            "endMs": 6940,
-            "timestampMs": null,
-            "confidence": 0.927339,
+            "confidence": 0.0998924,
             "quien": "jd"
           },
           {
-            "text": " genial",
-            "startMs": 6940,
-            "endMs": 7315,
+            "text": " estos",
+            "startMs": 232,
+            "endMs": 356,
             "timestampMs": null,
-            "confidence": 0.970384,
+            "confidence": 0.924088,
+            "quien": "jd"
+          },
+          {
+            "text": " productos",
+            "startMs": 356,
+            "endMs": 556,
+            "timestampMs": null,
+            "confidence": 0.98667,
+            "quien": "jd"
+          },
+          {
+            "text": " están",
+            "startMs": 833,
+            "endMs": 973,
+            "timestampMs": null,
+            "confidence": 0.933251,
+            "quien": "jd"
+          },
+          {
+            "text": " muy",
+            "startMs": 973,
+            "endMs": 1070,
+            "timestampMs": null,
+            "confidence": 0.923388,
+            "quien": "jd"
+          },
+          {
+            "text": " chéveres",
+            "startMs": 1070,
+            "endMs": 1296,
+            "timestampMs": null,
+            "confidence": 0.434423,
+            "quien": "jd"
+          },
+          {
+            "text": " todos",
+            "startMs": 1759,
+            "endMs": 1887,
+            "timestampMs": null,
+            "confidence": 0.75124,
+            "quien": "jd"
+          },
+          {
+            "text": " estos",
+            "startMs": 1887,
+            "endMs": 2016,
+            "timestampMs": null,
+            "confidence": 0.649796,
+            "quien": "jd"
+          },
+          {
+            "text": " productos,",
+            "startMs": 2016,
+            "endMs": 2222,
+            "timestampMs": null,
+            "confidence": 0.956429,
+            "quien": "jd"
+          },
+          {
+            "text": " lo",
+            "startMs": 2500,
+            "endMs": 2563,
+            "timestampMs": null,
+            "confidence": 0.655525,
             "quien": "jd"
           },
           {
             "text": " que",
-            "startMs": 7778,
-            "endMs": 8008,
+            "startMs": 2563,
+            "endMs": 2644,
             "timestampMs": null,
-            "confidence": 0.545548,
+            "confidence": 0.989436,
             "quien": "jd"
           },
           {
-            "text": " te",
-            "startMs": 8008,
-            "endMs": 8187,
+            "text": " elaboras",
+            "startMs": 2644,
+            "endMs": 2778,
             "timestampMs": null,
-            "confidence": 0.998155,
+            "confidence": 0.127764,
             "quien": "jd"
           },
           {
-            "text": " parece",
-            "startMs": 8187,
-            "endMs": 8571,
+            "text": " sí, gracias,",
+            "startMs": 3148,
+            "endMs": 3519,
             "timestampMs": null,
-            "confidence": 0.929789,
+            "confidence": 0.433644,
+            "quien": "p2"
+          },
+          {
+            "text": " lo",
+            "startMs": 3981,
+            "endMs": 4120,
+            "timestampMs": null,
+            "confidence": 0.24089,
+            "quien": "p2"
+          },
+          {
+            "text": " he",
+            "startMs": 4120,
+            "endMs": 4259,
+            "timestampMs": null,
+            "confidence": 0.630406,
+            "quien": "p2"
+          },
+          {
+            "text": " hecho",
+            "startMs": 4444,
+            "endMs": 4605,
+            "timestampMs": null,
+            "confidence": 0.837936,
+            "quien": "p2"
+          },
+          {
+            "text": " a",
+            "startMs": 4605,
+            "endMs": 4667,
+            "timestampMs": null,
+            "confidence": 0.886624,
+            "quien": "p2"
+          },
+          {
+            "text": " mano",
+            "startMs": 4667,
+            "endMs": 4803,
+            "timestampMs": null,
+            "confidence": 0.70423,
+            "quien": "p2"
+          },
+          {
+            "text": " bueno,",
+            "startMs": 4803,
+            "endMs": 4963,
+            "timestampMs": null,
+            "confidence": 0.799167,
             "quien": "jd"
           },
           {
-            "text": " este",
-            "startMs": 8571,
-            "endMs": 8853,
+            "text": " que",
+            "startMs": 4963,
+            "endMs": 5074,
             "timestampMs": null,
-            "confidence": 0.988433,
+            "confidence": 0.873542,
             "quien": "jd"
           },
           {
-            "text": " negocio",
-            "startMs": 8853,
-            "endMs": 9287,
+            "text": " estés",
+            "startMs": 5074,
+            "endMs": 5234,
             "timestampMs": null,
-            "confidence": 0.996358,
+            "confidence": 0.987534,
+            "quien": "jd"
+          },
+          {
+            "text": " bien",
+            "startMs": 5234,
+            "endMs": 5370,
+            "timestampMs": null,
+            "confidence": 0.997503,
+            "quien": "jd"
+          }
+        ],
+        "texto": "y estos productos están muy chéverees todos estos productos, lo que labora son gracias, lo he hecho a mano bueno, que estés bien"
+      },
+      {
+        "voz": {
+          "archivo": "sofa/voces/arboleda-10.wav",
+          "en": 0.9
+        },
+        "tipo": "final",
+        "inicio": 1581,
+        "cuadros": 293,
+        "subtitulos": [
+          {
+            "text": " Escríbenos",
+            "startMs": 1620,
+            "endMs": 2486,
+            "quien": "jd"
+          },
+          {
+            "text": " si",
+            "startMs": 2486,
+            "endMs": 2644,
             "quien": "jd"
           },
           {
             "text": " quieres",
-            "startMs": 9287,
-            "endMs": 9722,
-            "timestampMs": null,
-            "confidence": 0.829069,
-            "quien": "jd"
-          },
-          {
-            "text": " que",
-            "startMs": 10093,
-            "endMs": 10338,
-            "timestampMs": null,
-            "confidence": 0.994088,
-            "quien": "jd"
-          },
-          {
-            "text": " se",
-            "startMs": 10338,
-            "endMs": 10529,
-            "timestampMs": null,
-            "confidence": 0.967333,
-            "quien": "jd"
-          },
-          {
-            "text": " gane",
-            "startMs": 10529,
-            "endMs": 10828,
-            "timestampMs": null,
-            "confidence": 0.829396,
+            "startMs": 2644,
+            "endMs": 3195,
             "quien": "jd"
           },
           {
             "text": " una",
-            "startMs": 10828,
-            "endMs": 11073,
-            "timestampMs": null,
-            "confidence": 0.963653,
+            "startMs": 3195,
+            "endMs": 3431,
             "quien": "jd"
           },
           {
             "text": " página",
-            "startMs": 11073,
-            "endMs": 11481,
-            "timestampMs": null,
-            "confidence": 0.989774,
+            "startMs": 3431,
+            "endMs": 3983,
             "quien": "jd"
           },
           {
             "text": " web",
-            "startMs": 11759,
-            "endMs": 12016,
-            "timestampMs": null,
-            "confidence": 0.982071,
+            "startMs": 3983,
+            "endMs": 4315,
             "quien": "jd"
           },
           {
-            "text": " gratis,",
-            "startMs": 12016,
-            "endMs": 12443,
-            "timestampMs": null,
-            "confidence": 0.862853,
+            "text": " o",
+            "startMs": 4315,
+            "endMs": 4395,
             "quien": "jd"
           },
           {
-            "text": " vótalo.",
-            "startMs": 12443,
-            "endMs": 12870,
-            "timestampMs": null,
-            "confidence": 0.316346,
+            "text": " desarrollo",
+            "startMs": 4315,
+            "endMs": 5024,
             "quien": "jd"
           },
           {
-            "text": " ¡Listo!",
-            "startMs": 13056,
-            "endMs": 13426,
-            "timestampMs": null,
-            "confidence": 0.110868,
+            "text": " software,",
+            "startMs": 5024,
+            "endMs": 5601,
             "quien": "jd"
-          }
-        ],
-        "texto": "negocio sustentable la gente ha conectado mucho y esta es mi amiga Séfira que es mi terapeuta bueno genial que te parece este negocio quieres que se gane una página web gratis, bótalo. ¡Listo!"
-      },
-      {
-        "tipo": "nivel",
-        "numero": 2,
-        "nombre": "La corte del dragón",
-        "estilo": "mision",
-        "segundos": 2,
-        "inicio": 1110,
-        "cuadros": 60
-      },
-      {
-        "tipo": "clip",
-        "archivo": "DJI_20261012_141027_595_video.mp4",
-        "desde": 1.6,
-        "hasta": 21.8,
-        "golpes": [
-          {
-            "en": "medievales",
-            "texto": "IDEAS MEDIEVALES",
-            "estilo": "pastilla"
-          },
-          {
-            "en": "recuerdo",
-            "texto": "UN RECUERDO BONITO",
-            "estilo": "xp"
-          }
-        ],
-        "fx": [
-          {
-            "tipo": "estrellas",
-            "en": "dragón",
-            "dura": 2.4,
-            "quien": "p2",
-            "color": "#B388FF"
-          },
-          {
-            "tipo": "corte",
-            "en": "medievales",
-            "dura": 1.2,
-            "quien": "p2",
-            "color": "#F4EFE6"
-          }
-        ],
-        "personaje": {
-          "nombre": "Lucía",
-          "clase": "La corte del dragón artesano",
-          "tema": "mazmorra",
-          "color": "#B388FF",
-          "mundo": "Expositora · SOFA 2026",
-          "stats": [
-            {
-              "n": "TALLERES",
-              "v": 1
-            },
-            {
-              "n": "MEDIEVAL",
-              "v": 0.9
-            },
-            {
-              "n": "PÁGINA WEB",
-              "v": 0.1
-            }
-          ],
-          "resumen": "Talleres con ideas medievales"
-        },
-        "ficha": true,
-        "fichaEn": 0.3,
-        "retrato": {
-          "t": 11.6,
-          "x": 0.5642,
-          "y": 0.4336,
-          "w": 0.1706,
-          "h": 0.1088
-        },
-        "turnos": [
-          {
-            "desde": 1.6,
-            "quien": "jd"
-          },
-          {
-            "desde": 3.1,
-            "quien": "p2"
-          },
-          {
-            "desde": 7.3,
-            "quien": "jd"
-          },
-          {
-            "desde": 9.8,
-            "quien": "p2",
-            "fijo": true
-          },
-          {
-            "desde": 20.3,
-            "quien": "jd"
-          }
-        ],
-        "foco": {
-          "jd": {
-            "x": 0.3,
-            "y": 0.32,
-            "escala": 1.3
-          },
-          "p2": {
-            "x": 0.62,
-            "y": 0.42,
-            "escala": 1.35
-          }
-        },
-        "inicio": 1170,
-        "cuadros": 508,
-        "cola": 6,
-        "tramos": [
-          {
-            "archivo": "sofa/DJI_20261012_141027_595_video.mp4",
-            "desde": 1.4,
-            "hasta": 2.9,
-            "velocidad": 1.08,
-            "inicio": 0,
-            "cuadros": 42
-          },
-          {
-            "archivo": "sofa/DJI_20261012_141027_595_video.mp4",
-            "desde": 3.12,
-            "hasta": 6.5,
-            "velocidad": 1.08,
-            "inicio": 42,
-            "cuadros": 94
-          },
-          {
-            "archivo": "sofa/DJI_20261012_141027_595_video.mp4",
-            "desde": 7.1,
-            "hasta": 13.2,
-            "velocidad": 1.08,
-            "inicio": 136,
-            "cuadros": 169
-          },
-          {
-            "archivo": "sofa/DJI_20261012_141027_595_video.mp4",
-            "desde": 14.16,
-            "hasta": 16.2,
-            "velocidad": 1.08,
-            "inicio": 305,
-            "cuadros": 57
-          },
-          {
-            "archivo": "sofa/DJI_20261012_141027_595_video.mp4",
-            "desde": 16.98,
-            "hasta": 19.7,
-            "velocidad": 1.08,
-            "inicio": 362,
-            "cuadros": 76
-          },
-          {
-            "archivo": "sofa/DJI_20261012_141027_595_video.mp4",
-            "desde": 20.1,
-            "hasta": 22.4,
-            "velocidad": 1.08,
-            "inicio": 438,
-            "cuadros": 64
-          }
-        ],
-        "subtitulos": [
-          {
-            "text": " Hoy",
-            "startMs": 185,
-            "endMs": 423,
-            "timestampMs": null,
-            "confidence": 0.256159,
-            "quien": "jd"
-          },
-          {
-            "text": " estamos",
-            "startMs": 423,
-            "endMs": 873,
-            "timestampMs": null,
-            "confidence": 0.98811,
-            "quien": "jd"
-          },
-          {
-            "text": " con...",
-            "startMs": 873,
-            "endMs": 1111,
-            "timestampMs": null,
-            "confidence": 0.992792,
-            "quien": "jd"
-          },
-          {
-            "text": " Hola,",
-            "startMs": 1574,
-            "endMs": 1852,
-            "timestampMs": null,
-            "confidence": 0.84703,
-            "quien": "p2"
-          },
-          {
-            "text": " soy",
-            "startMs": 1852,
-            "endMs": 2019,
-            "timestampMs": null,
-            "confidence": 0.964258,
-            "quien": "p2"
-          },
-          {
-            "text": " Lucía,",
-            "startMs": 2019,
-            "endMs": 2778,
-            "timestampMs": null,
-            "confidence": 0.766415,
-            "quien": "p2"
-          },
-          {
-            "text": " esta",
-            "startMs": 2778,
-            "endMs": 3037,
-            "timestampMs": null,
-            "confidence": 0.704653,
-            "quien": "p2"
-          },
-          {
-            "text": " es",
-            "startMs": 3037,
-            "endMs": 3185,
-            "timestampMs": null,
-            "confidence": 0.985141,
-            "quien": "p2"
-          },
-          {
-            "text": " la",
-            "startMs": 3185,
-            "endMs": 3352,
-            "timestampMs": null,
-            "confidence": 0.955587,
-            "quien": "p2"
-          },
-          {
-            "text": " corte",
-            "startMs": 3352,
-            "endMs": 3556,
-            "timestampMs": null,
-            "confidence": 0.688242,
-            "quien": "p2"
-          },
-          {
-            "text": " del",
-            "startMs": 3556,
-            "endMs": 3648,
-            "timestampMs": null,
-            "confidence": 0.837884,
-            "quien": "p2"
-          },
-          {
-            "text": " dragón",
-            "startMs": 3648,
-            "endMs": 3944,
-            "timestampMs": null,
-            "confidence": 0.107516,
-            "quien": "p2"
-          },
-          {
-            "text": " artesano.",
-            "startMs": 3944,
-            "endMs": 4241,
-            "timestampMs": null,
-            "confidence": 0.943402,
-            "quien": "p2"
-          },
-          {
-            "text": " Cuéntanos",
-            "startMs": 4704,
-            "endMs": 5265,
-            "timestampMs": null,
-            "confidence": 0.942355,
-            "quien": "jd"
-          },
-          {
-            "text": " de",
-            "startMs": 5265,
-            "endMs": 5452,
-            "timestampMs": null,
-            "confidence": 0.991318,
-            "quien": "jd"
-          },
-          {
-            "text": " tu",
-            "startMs": 5452,
-            "endMs": 5639,
-            "timestampMs": null,
-            "confidence": 0.992244,
-            "quien": "jd"
-          },
-          {
-            "text": " negocio,",
-            "startMs": 5639,
-            "endMs": 6093,
-            "timestampMs": null,
-            "confidence": 0.99317,
-            "quien": "jd"
-          },
-          {
-            "text": " ¿de",
-            "startMs": 6741,
-            "endMs": 6831,
-            "timestampMs": null,
-            "confidence": 0.408729,
-            "quien": "jd"
-          },
-          {
-            "text": " qué",
-            "startMs": 6831,
-            "endMs": 6947,
-            "timestampMs": null,
-            "confidence": 0.866657,
-            "quien": "jd"
-          },
-          {
-            "text": " es?",
-            "startMs": 6947,
-            "endMs": 7037,
-            "timestampMs": null,
-            "confidence": 0.998376,
-            "quien": "jd"
-          },
-          {
-            "text": " Hacemos",
-            "startMs": 7037,
-            "endMs": 7759,
-            "timestampMs": null,
-            "confidence": 0.978522,
-            "quien": "p2"
-          },
-          {
-            "text": " talleres",
-            "startMs": 7759,
-            "endMs": 8630,
-            "timestampMs": null,
-            "confidence": 0.959748,
-            "quien": "p2"
-          },
-          {
-            "text": " con",
-            "startMs": 8630,
-            "endMs": 9130,
-            "timestampMs": null,
-            "confidence": 0.890613,
-            "quien": "p2"
-          },
-          {
-            "text": " ideas",
-            "startMs": 9130,
-            "endMs": 9593,
-            "timestampMs": null,
-            "confidence": 0.970937,
-            "quien": "p2"
-          },
-          {
-            "text": " medievales,",
-            "startMs": 9593,
-            "endMs": 9705,
-            "timestampMs": null,
-            "confidence": 0.401726,
-            "quien": "p2"
           },
           {
             "text": " como",
-            "startMs": 9705,
-            "endMs": 9757,
-            "timestampMs": null,
-            "confidence": 0.785673,
-            "quien": "p2"
-          },
-          {
-            "text": " recreándolas,",
-            "startMs": 9757,
-            "endMs": 9889,
-            "timestampMs": null,
-            "confidence": 0.680639,
-            "quien": "p2"
-          },
-          {
-            "text": " pero",
-            "startMs": 10352,
-            "endMs": 10593,
-            "timestampMs": null,
-            "confidence": 0.995459,
-            "quien": "p2"
-          },
-          {
-            "text": " con",
-            "startMs": 10593,
-            "endMs": 10870,
-            "timestampMs": null,
-            "confidence": 0.993794,
-            "quien": "p2"
-          },
-          {
-            "text": " cosas",
-            "startMs": 10870,
-            "endMs": 11056,
-            "timestampMs": null,
-            "confidence": 0.996417,
-            "quien": "p2"
-          },
-          {
-            "text": " que",
-            "startMs": 11056,
-            "endMs": 11167,
-            "timestampMs": null,
-            "confidence": 0.990138,
-            "quien": "p2"
-          },
-          {
-            "text": " hay",
-            "startMs": 11167,
-            "endMs": 11259,
-            "timestampMs": null,
-            "confidence": 0.916548,
-            "quien": "p2"
-          },
-          {
-            "text": " en",
-            "startMs": 11259,
-            "endMs": 11333,
-            "timestampMs": null,
-            "confidence": 0.978028,
-            "quien": "p2"
-          },
-          {
-            "text": " la",
-            "startMs": 11333,
-            "endMs": 11481,
-            "timestampMs": null,
-            "confidence": 0.993873,
-            "quien": "p2"
-          },
-          {
-            "text": " actualidad",
-            "startMs": 11481,
-            "endMs": 11606,
-            "timestampMs": null,
-            "confidence": 0.986583,
-            "quien": "p2"
-          },
-          {
-            "text": " y",
-            "startMs": 11606,
-            "endMs": 11632,
-            "timestampMs": null,
-            "confidence": 0.474921,
-            "quien": "p2"
-          },
-          {
-            "text": " que",
-            "startMs": 11632,
-            "endMs": 11681,
-            "timestampMs": null,
-            "confidence": 0.987364,
-            "quien": "p2"
-          },
-          {
-            "text": " sean",
-            "startMs": 11681,
-            "endMs": 11740,
-            "timestampMs": null,
-            "confidence": 0.688856,
-            "quien": "p2"
-          },
-          {
-            "text": " de",
-            "startMs": 11740,
-            "endMs": 11778,
-            "timestampMs": null,
-            "confidence": 0.93662,
-            "quien": "p2"
-          },
-          {
-            "text": " forma",
-            "startMs": 12241,
-            "endMs": 12500,
-            "timestampMs": null,
-            "confidence": 0.992663,
-            "quien": "p2"
-          },
-          {
-            "text": " rápida",
-            "startMs": 12500,
-            "endMs": 12741,
-            "timestampMs": null,
-            "confidence": 0.563161,
-            "quien": "p2"
-          },
-          {
-            "text": " y",
-            "startMs": 12741,
-            "endMs": 12889,
-            "timestampMs": null,
-            "confidence": 0.990342,
-            "quien": "p2"
-          },
-          {
-            "text": " puedan",
-            "startMs": 12889,
-            "endMs": 13037,
-            "timestampMs": null,
-            "confidence": 0.830393,
-            "quien": "p2"
-          },
-          {
-            "text": " llevarse",
-            "startMs": 13037,
-            "endMs": 13241,
-            "timestampMs": null,
-            "confidence": 0.99219,
-            "quien": "p2"
-          },
-          {
-            "text": " un",
-            "startMs": 13241,
-            "endMs": 13370,
-            "timestampMs": null,
-            "confidence": 0.989057,
-            "quien": "p2"
-          },
-          {
-            "text": " recuerdo",
-            "startMs": 13370,
-            "endMs": 13648,
-            "timestampMs": null,
-            "confidence": 0.989204,
-            "quien": "p2"
-          },
-          {
-            "text": " bonito",
-            "startMs": 13648,
-            "endMs": 13741,
-            "timestampMs": null,
-            "confidence": 0.994004,
-            "quien": "p2"
-          },
-          {
-            "text": " para",
-            "startMs": 13926,
-            "endMs": 14067,
-            "timestampMs": null,
-            "confidence": 0.996637,
-            "quien": "p2"
-          },
-          {
-            "text": " la",
-            "startMs": 14067,
-            "endMs": 14156,
-            "timestampMs": null,
-            "confidence": 0.991132,
-            "quien": "p2"
-          },
-          {
-            "text": " casa.",
-            "startMs": 14156,
-            "endMs": 14296,
-            "timestampMs": null,
-            "confidence": 0.996204,
-            "quien": "p2"
-          },
-          {
-            "text": " ¡Súper,",
-            "startMs": 14759,
-            "endMs": 15077,
-            "timestampMs": null,
-            "confidence": 0.726334,
-            "quien": "jd"
-          },
-          {
-            "text": " muchísimas",
-            "startMs": 15077,
-            "endMs": 15640,
-            "timestampMs": null,
-            "confidence": 0.988071,
-            "quien": "jd"
-          },
-          {
-            "text": " gracias!",
-            "startMs": 15640,
-            "endMs": 16056,
-            "timestampMs": null,
-            "confidence": 0.997984,
-            "quien": "jd"
-          }
-        ],
-        "texto": "Hoy estamos con... Hola, soy Lucía, esta es la corte del dragón artesano. Cuéntanos de tu negocio, ¿de qué es? Hacemos talleres con ideas medievales, como recreándolas, pero con cosas que hay en la actualidad y que sean de forma rápida y puedan llevarse un recuerdo bonito para la casa. ¡Súper, muchísimas gracias!",
-        "retratoPng": "sofa/retratos/sofa-emprendedores-3-65653688.png"
-      },
-      {
-        "tipo": "cierre",
-        "archivo": "DJI_20261012_151344_201_video.mp4",
-        "desde": 2.1,
-        "hasta": 7.9,
-        "golpes": [
-          {
-            "en": "gratis",
-            "texto": "PÁGINA WEB GRATIS",
-            "estilo": "xp"
-          }
-        ],
-        "fx": [
-          {
-            "tipo": "estrellas",
-            "en": "votación",
-            "dura": 4,
-            "quien": null,
-            "lado": "centro",
-            "color": "#F2C85B"
-          }
-        ],
-        "foco": {
-          "jd": {
-            "x": 0.47,
-            "y": 0.33,
-            "escala": 1.3
-          }
-        },
-        "lados": {
-          "jd": "centro"
-        },
-        "cta": "VOTA · LINK EN EL PERFIL",
-        "inicio": 1678,
-        "cuadros": 181,
-        "cola": 0,
-        "tramos": [
-          {
-            "archivo": "sofa/DJI_20261012_151344_201_video.mp4",
-            "desde": 1.9,
-            "hasta": 8.4,
-            "velocidad": 1.08,
-            "inicio": 0,
-            "cuadros": 181
-          }
-        ],
-        "subtitulos": [
-          {
-            "text": " la",
-            "startMs": 185,
-            "endMs": 365,
-            "timestampMs": null,
-            "confidence": 0.00364942,
-            "quien": "jd"
-          },
-          {
-            "text": " votación",
-            "startMs": 365,
-            "endMs": 852,
-            "timestampMs": null,
-            "confidence": 0.644476,
-            "quien": "jd"
-          },
-          {
-            "text": " para",
-            "startMs": 852,
-            "endMs": 1134,
-            "timestampMs": null,
-            "confidence": 0.75755,
-            "quien": "jd"
-          },
-          {
-            "text": " que",
-            "startMs": 1134,
-            "endMs": 1366,
-            "timestampMs": null,
-            "confidence": 0.832068,
-            "quien": "jd"
-          },
-          {
-            "text": " puedas",
-            "startMs": 1366,
-            "endMs": 1750,
-            "timestampMs": null,
-            "confidence": 0.776882,
-            "quien": "jd"
-          },
-          {
-            "text": " elegir",
-            "startMs": 1750,
-            "endMs": 2135,
-            "timestampMs": null,
-            "confidence": 0.948053,
-            "quien": "jd"
-          },
-          {
-            "text": " el",
-            "startMs": 2135,
-            "endMs": 2315,
-            "timestampMs": null,
-            "confidence": 0.825171,
-            "quien": "jd"
-          },
-          {
-            "text": " comercio",
-            "startMs": 2500,
-            "endMs": 2881,
-            "timestampMs": null,
-            "confidence": 0.94713,
-            "quien": "jd"
-          },
-          {
-            "text": " que",
-            "startMs": 2881,
-            "endMs": 3062,
-            "timestampMs": null,
-            "confidence": 0.921616,
-            "quien": "jd"
-          },
-          {
-            "text": " se",
-            "startMs": 3062,
-            "endMs": 3202,
-            "timestampMs": null,
-            "confidence": 0.923878,
-            "quien": "jd"
-          },
-          {
-            "text": " va",
-            "startMs": 3202,
-            "endMs": 3343,
-            "timestampMs": null,
-            "confidence": 0.689043,
-            "quien": "jd"
-          },
-          {
-            "text": " a",
-            "startMs": 3343,
-            "endMs": 3443,
-            "timestampMs": null,
-            "confidence": 0.972318,
-            "quien": "jd"
-          },
-          {
-            "text": " ganar",
-            "startMs": 3443,
-            "endMs": 3704,
-            "timestampMs": null,
-            "confidence": 0.949908,
+            "startMs": 5601,
+            "endMs": 5768,
             "quien": "jd"
           },
           {
             "text": " una",
-            "startMs": 3889,
-            "endMs": 4116,
-            "timestampMs": null,
-            "confidence": 0.928389,
+            "startMs": 5768,
+            "endMs": 5855,
             "quien": "jd"
           },
           {
-            "text": " página",
-            "startMs": 4116,
-            "endMs": 4495,
-            "timestampMs": null,
-            "confidence": 0.896127,
+            "text": " aplicación",
+            "startMs": 5855,
+            "endMs": 6345,
             "quien": "jd"
           },
           {
-            "text": " web",
-            "startMs": 4495,
-            "endMs": 4722,
-            "timestampMs": null,
-            "confidence": 0.975967,
+            "text": " de",
+            "startMs": 6345,
+            "endMs": 6450,
             "quien": "jd"
           },
           {
-            "text": " gratis.",
-            "startMs": 4907,
-            "endMs": 5185,
-            "timestampMs": null,
-            "confidence": 0.933574,
+            "text": " alta",
+            "startMs": 6450,
+            "endMs": 6853,
+            "quien": "jd"
+          },
+          {
+            "text": " calidad",
+            "startMs": 6853,
+            "endMs": 7623,
+            "quien": "jd"
+          },
+          {
+            "text": " como",
+            "startMs": 7623,
+            "endMs": 7868,
+            "quien": "jd"
+          },
+          {
+            "text": " la",
+            "startMs": 7868,
+            "endMs": 8016,
+            "quien": "jd"
+          },
+          {
+            "text": " de",
+            "startMs": 8016,
+            "endMs": 8156,
+            "quien": "jd"
+          },
+          {
+            "text": " Bélula.",
+            "startMs": 8156,
+            "endMs": 8620,
             "quien": "jd"
           }
-        ],
-        "texto": "la votación para que puedas elegir el comercio que se va a ganar una página web gratis."
-      },
-      {
-        "tipo": "final",
-        "inicio": 1859,
-        "cuadros": 72
+        ]
       }
     ],
-    "total": 1931,
+    "total": 1874,
     "avisos": []
-  },
-  "bpm": 140,
-  "capas": true
+  }
 }

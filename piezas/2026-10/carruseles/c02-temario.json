@@ -1,0 +1,66 @@
+{
+  "slug": "c02-temario",
+  "titulo": "Temario de la clase del 27",
+  "plantilla": "Carrusel",
+  "tipo": "carrusel",
+  "formato": "carrusel",
+  "segundos": 6,
+  "cuentas": [
+    "juanda"
+  ],
+  "pie": "Link en mi perfil",
+  "laminas": [
+    {
+      "metafora": "caja",
+      "datos": {
+        "etiqueta": "Lo que pasa adentro"
+      },
+      "antetitulo": "Clase en vivo · 27 oct",
+      "titulo": "Cómo funciona la IA *por dentro.*",
+      "texto": "Sin tecnicismos. Lo que necesitas para usarla con criterio."
+    },
+    {
+      "metafora": "espejismo",
+      "antetitulo": "Bloque 1",
+      "titulo": "Por qué se *inventa* sentencias.",
+      "texto": "Y por qué no es una falla que vayan a arreglar."
+    },
+    {
+      "metafora": "semaforo",
+      "antetitulo": "Bloque 2",
+      "titulo": "Cuándo confiar y cuándo *verificar.*",
+      "texto": "Una regla sencilla que te ahorra la mayoría de los problemas."
+    },
+    {
+      "metafora": "candado",
+      "antetitulo": "Bloque 3",
+      "titulo": "Qué puedes subir y *qué no.*",
+      "texto": "Confidencialidad sin paranoia y sin descuido."
+    },
+    {
+      "metafora": "certificado",
+      "antetitulo": "Gratis · 7:00 p.m.",
+      "titulo": "Para todo público, *con certificado.*",
+      "texto": "Deja tu correo en el link del perfil."
+    }
+  ],
+  "variantes": {
+    "juanda": {
+      "copy": "Esto es lo que vamos a ver el martes 27 de octubre en la clase en vivo:\n\n1. Cómo funciona la IA por dentro, sin tecnicismos.\n2. Por qué se inventa sentencias (y por qué no lo van a arreglar).\n3. Cuándo confiar y cuándo verificar siempre.\n4. Qué puedes subir y qué no.\n\nGratis, para todo público y con certificado. Guárdalo y link en mi perfil."
+    }
+  },
+  "verificar": [
+    {
+      "dato": "Clase en vivo «Fundamentos para la Inteligencia Artificial»: martes 27 de octubre de 2026, 7:00 p.m. hora Colombia, gratis.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Certificado gratuito: quién lo emite (¿Trifuerza Academy?) y qué condiciones tiene.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Registro: link en el perfil, abre el lunes 5 de octubre.",
+      "estado": "pendiente"
+    }
+  ]
+}

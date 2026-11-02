@@ -112,9 +112,11 @@ export const Momento = ({ clase, e }) => {
   const s = ancho / pw;
   const zoom = interpolate(frame, [0, durationInFrames], [1, 1.07]);
   const a = ent(0);
-  const lado = Math.min(cw, chh) - 10;
-  const d = vert ? 330 : 300;
-  const k = d / lado;
+  // La cámara entera (320×200) en un rectángulo con esquinas redondeadas: el círculo recortaba solo la cara
+  // y a Juan David se le veía poco; así entran hombros y gestos de las manos.
+  const dw = vert ? 520 : 370; // horizontal: termina antes de la tarjeta (x=510)
+  const dh = (dw * chh) / cw;
+  const k = dw / cw;
   const fc = ent(8);
   const src = staticFile(e.clip);
   // Con `cuadros` el clip va como JPG cuadro a cuadro y su sonido aparte (Viaje.jsx): con poca RAM libre el
@@ -130,9 +132,9 @@ export const Momento = ({ clase, e }) => {
           <Medio style={{ position: 'absolute', width: 1920 * s, height: 1080 * s, left: -px * s, top: -py * s, maxWidth: 'none' }} />
         </div>
       </div>
-      <div style={{ position: 'absolute', left: vert ? 50 : 130, top: vert ? arriba + alto - d * 0.55 : arriba + alto - d - 10, width: d, height: d, borderRadius: '50%', overflow: 'hidden',
+      <div style={{ position: 'absolute', left: vert ? 50 : 130, top: vert ? arriba + alto - dh * 0.55 : arriba + alto - dh - 10, width: dw, height: dh, borderRadius: 22, overflow: 'hidden',
         border: `5px solid ${T.acento}`, boxShadow: '0 20px 50px #000b', opacity: fc, transform: `scale(${0.6 + 0.4 * fc})`, background: T.fondo2 }}>
-        <Medio muted style={{ position: 'absolute', width: 1920 * k, height: 1080 * k, left: -(cx + (cw - lado) / 2) * k, top: -(cy + (chh - lado) / 2) * k, maxWidth: 'none' }} />
+        <Medio muted style={{ position: 'absolute', width: 1920 * k, height: 1080 * k, left: -cx * k, top: -cy * k, maxWidth: 'none' }} />
       </div>
       <div style={{ position: 'absolute', left: 0, right: 0, top: vert ? 270 : 40, display: 'flex', justifyContent: vert ? 'center' : 'flex-start', paddingLeft: vert ? 0 : izq + 30 }}>
         <Kicker T={T} a={ent(4)}>{e.kicker}</Kicker>

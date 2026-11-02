@@ -1,0 +1,713 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Resumen · Derecho y Tecnología · Corte 2 · Tecnologías emergentes y problemas jurídicos</title>
+<link rel="stylesheet" href="kit/fuentes.css">
+<link rel="stylesheet" href="kit/resumen.css">
+<style>
+  /* Ajustes solo de este resumen: la letra de tabla y de bloque sube a 11 px mínimo (regla de los resúmenes de clase). */
+  .contenido > * { flex-shrink: 0; }
+  .tabla { font-size: 11px; }
+  .tabla td { padding: 6px 9px; }
+  .bloque p { font-size: 11.2px; }
+  .cita { font-family: 'Fraunces', serif; font-style: italic; font-size: 19px; line-height: 1.3; color: var(--tinta); }
+  .cita small { display: block; font-family: 'Inter', sans-serif; font-style: normal; font-size: 9.5px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--acc2); margin-top: 6px; }
+  .flujo { display: grid; gap: 8px; }
+  .flujo .tarjeta { padding: 10px 12px; }
+  .flujo .n { font-size: 9.5px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--acc2); }
+  .flujo h3 { font-size: 12.3px; margin-top: 3px; }
+  .flujo p { font-size: 11px; color: var(--suave); line-height: 1.42; margin-top: 3px; }
+  .sintesis { padding: 10px 16px; border-color: #1E6E78; }
+  .sintesis h4 { margin-bottom: 2px; }
+  .sintesis .frase { padding: 5px 0; font-size: 11.1px; }
+  .hito { display: grid; grid-template-columns: 62px 1fr; gap: 8px; font-size: 11px; line-height: 1.42; color: var(--suave); padding: 5px 0; border-bottom: 1px solid var(--borde); }
+  .hito b { color: var(--acc2); font-weight: 700; }
+  .hito:last-child { border-bottom: 0; }
+  .qa { padding: 11px 14px; }
+  .qa h3 { font-size: 11.6px; line-height: 1.35; }
+  .qa h3 span { color: var(--acc2); margin-right: 4px; }
+  .qa p { font-size: 11px; color: var(--suave); line-height: 1.45; margin-top: 4px; }
+  .portada-pregunta { font-family: 'Fraunces', serif; font-style: italic; font-size: 18px; line-height: 1.35; }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></symbol>
+    <symbol id="i-copy2" viewBox="0 0 24 24"><rect x="8" y="8" width="13" height="13" rx="2"/><path d="M4 16V5a2 2 0 0 1 2-2h11"/></symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6M8 13h8M8 17h6"/></symbol>
+    <symbol id="i-pen" viewBox="0 0 24 24"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0ZM12 9v4M12 17h.01"/></symbol>
+    <symbol id="i-scale" viewBox="0 0 24 24"><path d="M12 3v18M7 21h10M5 7h14M5 7l-3 7a3 3 0 0 0 6 0ZM19 7l-3 7a3 3 0 0 0 6 0Z"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></symbol>
+    <symbol id="i-data" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></symbol>
+    <symbol id="i-chip" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></symbol>
+    <symbol id="i-msg" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2Z"/></symbol>
+    <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></symbol>
+    <symbol id="i-loop" viewBox="0 0 24 24"><path d="M17 2l4 4-4 4"/><path d="M3 11V9a3 3 0 0 1 3-3h15M7 22l-4-4 4-4"/><path d="M21 13v2a3 3 0 0 1-3 3H3"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 2 10 5-10 5L2 7Z"/><path d="m2 17 10 5 10-5M2 12l10 5 10-5"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2 20a7 7 0 0 1 14 0M16 4.5a3.5 3.5 0 0 1 0 7M18 13.5a7 7 0 0 1 4 6.5"/></symbol>
+    <symbol id="i-building" viewBox="0 0 24 24"><path d="M4 21V5l8-3 8 3v16M4 21h16M9 9h.01M15 9h.01M9 13h.01M15 13h.01M10 21v-4h4v4"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2 3 14h9l-1 8 10-12h-9Z"/></symbol>
+  </defs>
+</svg>
+
+<!-- ============================== 1 · PORTADA ============================== -->
+<section class="pagina cruces">
+  <svg class="constelacion" data-paleta="academy" data-semilla="23" data-zona="500,96,785,410" data-nodos="17" data-cliente="S06–S11" viewBox="0 0 794 1123" aria-hidden="true"></svg>
+  <div class="brillo" style="width:760px;height:760px;right:-300px;top:-300px;background:radial-gradient(circle, rgba(0,196,204,.22), transparent 62%)"></div>
+  <div class="brillo" style="width:520px;height:520px;left:-260px;bottom:-200px;background:radial-gradient(circle, rgba(242,140,40,.13), transparent 62%)"></div>
+  <div class="contenido">
+    <div style="display:flex;justify-content:space-between;align-items:center">
+      <div class="logo"><img src="../public/marcas/trifuerza/logo-horizontal-claro.png" alt="Trifuerza"><span class="sep"></span><span class="linea">Academy</span></div>
+      <span class="etiqueta">Universidad del Rosario · Derecho y Tecnología · 2026-2</span>
+    </div>
+    <div style="margin-top:58px">
+      <span class="etiqueta">Resumen del 2.º corte (S06–S11)</span>
+      <h1 style="margin-top:22px">Tecnologías<br>emergentes y<br><b>problemas jurídicos.</b></h1>
+      <p class="lead" style="margin-top:18px;max-width:440px">De la máquina que nos califica a la máquina que habla, y de ahí al contrato que se ejecuta solo. Sesiones 6 a 11 · 2 de septiembre a 7 de octubre.</p>
+      <p class="texto" style="margin-top:10px"><b>Prof. Juan David Vanegas Roldán</b></p>
+    </div>
+
+    <div class="caja clave" style="margin-top:28px;padding:16px 20px">
+      <span class="tit">La pregunta del corte</span>
+      <div class="portada-pregunta">¿Qué le queda de ciudadano a alguien cuyas decisiones importantes las toma un sistema que no puede ver, ni entender, ni discutir?</div>
+    </div>
+
+    <div class="tarjeta" style="margin-top:18px;padding:18px 22px">
+      <h4>Contenido</h4>
+      <div class="indice" style="margin-top:6px">
+        <div><span>01</span>S06 · Ciudadanía digital y democracia</div>
+        <div><span>05</span>S10 · Contratos digitales: la ley como código</div>
+        <div><span>02</span>S07 · El sesgo no es un error · ¿Qué es la IA?</div>
+        <div><span>06</span>S11 · Blockchain y smart contracts</div>
+        <div><span>03</span>S08 · Adentro del modelo (LLM)</div>
+        <div><span>07</span>Preguntas de repaso</div>
+        <div><span>04</span>S09 · Big Data y perfilamiento</div>
+        <div><span>08</span>Lo esencial y mapa normativo</div>
+      </div>
+    </div>
+
+    <div class="cuatro" style="margin-top:auto">
+      <div class="tarjeta bloque"><h4>Bloque A · S6–S7</h4><h3>La máquina que califica</h3><p>Modelos, sesgos y discriminación indirecta.</p></div>
+      <div class="tarjeta bloque"><h4>Bloque B · S7–S8</h4><h3>La máquina que habla</h3><p>Qué es la IA y cómo funciona un LLM.</p></div>
+      <div class="tarjeta bloque"><h4>Bloque C · S9</h4><h3>El combustible</h3><p>Big Data, datificación y perfilamiento.</p></div>
+      <div class="tarjeta bloque borde-nar"><h4 class="nar" style="color:var(--nar2)">Bloque D · S10–S11</h4><h3>La máquina que contrata</h3><p>Contrato digital, blockchain y sus límites.</p></div>
+    </div>
+    <div class="pie" style="margin-top:20px"><span><a class="web" href="https://www.trifuerza.co"><b>www.trifuerza.co ↗</b></a> · Trifuerza Academy</span><span>Juan David Vanegas Roldán · Universidad del Rosario · Corte 2 · 2026-2</span></div>
+  </div>
+</section>
+
+<!-- ============================== 2 · S06 (1/2) ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:620px;height:620px;right:-300px;top:-220px;background:radial-gradient(circle, rgba(0,196,204,.13), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">01</span> Sesión 6 · 2 de septiembre</div>
+    <h2>Ciudadanía digital y democracia:<br><b>la máquina que te califica.</b></h2>
+    <p class="texto" style="margin-top:12px">Todos los días nos califican sistemas que no vemos: un puntaje decide si nos prestan dinero, una plataforma decide qué versión del mundo vemos en el celular, un filtro decide si una hoja de vida llega a ojos humanos. La sesión abre el corte con una pregunta de abogados: <b>¿qué derechos tengo frente a una decisión que no puedo ver ni discutir?</b> Lectura: Cathy O'Neil, <i>Armas de destrucción matemática</i> (introducción, cap. 1 y cap. 10).</p>
+
+    <h4 style="margin-top:14px">Los cinco frentes de la ciudadanía digital</h4>
+    <p class="texto" style="margin-bottom:6px">Es el conjunto de <b>derechos, deberes y capacidades</b> de una persona en un entorno donde buena parte de su vida pública y privada pasa por plataformas y sistemas automatizados.</p>
+    <div class="tarjeta" style="padding:2px 16px">
+      <div class="frase"><span>1</span><div><b style="color:var(--tinta)">Identidad y huella digital.</b> Búsquedas, ubicaciones, compras y "me gusta" dejan rastro y construyen un perfil que no controlamos y que otros usan para decidir.</div></div>
+      <div class="frase"><span>2</span><div><b style="color:var(--tinta)">Privacidad.</b> No es "no tener nada que esconder": es decidir qué se sabe de uno, quién lo sabe y para qué se usa. En Colombia tiene rango constitucional (art. 15).</div></div>
+      <div class="frase"><span>3</span><div><b style="color:var(--tinta)">Desinformación y sesgos.</b> Cámaras de eco, burbujas de filtro y contenido hecho para enganchar más que para informar. El algoritmo no miente: optimiza la atención.</div></div>
+      <div class="frase"><span>4</span><div><b style="color:var(--tinta)">Brechas digitales.</b> Conectividad, dispositivos y alfabetización digital. Es un problema de igualdad, no solo de infraestructura.</div></div>
+      <div class="frase"><span>5</span><div><b style="color:var(--tinta)">Marcos éticos.</b> Transparencia, responsabilidad, no discriminación e intervención humana: principios que hoy orientan, pero no siempre obligan.</div></div>
+    </div>
+
+    <div class="caja ejemplo" style="margin-top:12px"><span class="tit">Caso · Sarah Wysocki · Washington D. C., 2011</span>El distrito escolar evaluaba a los profesores con el programa <b>IMPACT</b>, que incluía un modelo de "valor agregado": medía el progreso de los alumnos en pruebas estandarizadas y se lo atribuía al docente. Wysocki tenía evaluaciones excelentes de directivos y padres, pero sacó un puntaje bajo y fue despedida. La sospecha (nunca confirmada) es que los resultados del año anterior de esos niños estaban inflados: con una línea de base falsamente alta, su "progreso" parecía negativo. Pidió que le explicaran el puntaje y nadie pudo: la fórmula era de un contratista privado. <b>¿Es eso una decisión motivada?</b> Un acto con efectos jurídicos que nadie explica ni controvierte choca con el debido proceso.</div>
+
+    <h4 style="margin-top:14px">¿Qué es un modelo?</h4>
+    <div class="dos" style="grid-template-columns:1.45fr 1fr">
+      <p class="texto">Para O'Neil, un modelo es una <b>representación simplificada de un proceso</b> que sirve para predecir o decidir. Lo que deja por fuera revela las prioridades de quien lo construyó: no hay modelos neutrales, hay juicios a la vista y juicios escondidos. El <b>modelo sano</b> es como las estadísticas del béisbol: todos ven los números, cada partido lo corrige y mide lo que importa. El <b>dañino</b> no se ve, no recibe retroalimentación honesta y mide algo distinto de lo que dice medir.</p>
+      <div class="tarjeta" style="padding:14px 16px;display:flex;align-items:center"><div class="cita">"Los modelos son opiniones encerradas en matemáticas."<small>Cathy O'Neil</small></div></div>
+    </div>
+
+    <div class="dos" style="margin-top:12px">
+      <div class="tarjeta bloque"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-target"/></svg></div><h3>El sustituto (proxy)</h3></div><p>Cuando lo que se quiere saber no se puede medir, se usa un sustituto: el <b>código postal</b> en lugar de la solvencia, la nota estandarizada en lugar del aprendizaje, el <b>barrio</b> en lugar de la peligrosidad. Es la puerta por la que entra la discriminación, casi siempre sin que nadie la escriba.</p></div>
+      <div class="caja ojo"><span class="tit">El punto más fuerte para un abogado</span>Los cuestionarios de riesgo de reincidencia de EE. UU. (tipo <b>LSI-R</b>) preguntan por el primer contacto con la policía, familiares con antecedentes o el entorno del condenado: preguntas que ningún juez haría en voz alta, pero que entran a la sentencia como un puntaje. Es la <b>prueba prohibida entrando por la ventana</b>.</div>
+    </div>
+    <div class="pie"><span><b>Derecho y Tecnología · Corte 2</b> · S06 · Ciudadanía digital</span><span>Juan David Vanegas Roldán · <a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 2</span></div>
+  </div>
+</section>
+
+<!-- ============================== 3 · S06 (2/2) ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:600px;height:600px;left:-300px;top:360px;background:radial-gradient(circle, rgba(0,196,204,.12), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">01</span> Sesión 6 · Armas de destrucción matemática</div>
+    <h2>Opacidad, escala y daño,<br><b>reforzados por un bucle.</b></h2>
+    <div class="tres" style="margin-top:14px">
+      <div class="tarjeta bloque borde-acc"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-eye"/></svg></div><h3>1 · Opacidad</h3></div><p>El evaluado no puede ver su puntaje, ni entender de dónde sale, ni discutirlo ante alguien que responda.</p></div>
+      <div class="tarjeta bloque borde-acc"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-users"/></svg></div><h3>2 · Escala</h3></div><p>No decide un caso: decide miles o millones, repitiendo el mismo sesgo idéntico en cada uno.</p></div>
+      <div class="tarjeta bloque borde-nar"><div class="cab"><div class="ic-caja nar"><svg class="ico"><use href="#i-alert"/></svg></div><h3>3 · Daño</h3></div><p>Perjuicios reales y concentrados, que suelen caer sobre quien ya estaba en desventaja.</p></div>
+    </div>
+    <p class="texto" style="margin-top:8px">Los tres a la vez hacen un <b>arma de destrucción matemática</b>; el <b>bucle de retroalimentación</b> la vuelve casi irreversible:</p>
+    <div class="flujo cuatro" style="margin-top:8px">
+      <div class="tarjeta"><span class="n">1 · Predice</span><p>"Este barrio es de alto riesgo"</p></div>
+      <div class="tarjeta"><span class="n">2 · Actúa</span><p>Se patrulla más allí que en otros lugares</p></div>
+      <div class="tarjeta"><span class="n">3 · Registra</span><p>Aparecen más infracciones porque se mira más</p></div>
+      <div class="tarjeta"><span class="n">4 · Se confirma</span><p>El dato nuevo "prueba" que el modelo tenía razón</p></div>
+    </div>
+
+    <div class="tarjeta bloque" style="margin-top:12px"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-globe"/></svg></div><h3>El ciudadano como objetivo (cap. 10)</h3></div><p>Las plataformas son <b>editores invisibles</b>. Experimentos documentados en redes movieron la participación electoral y el ánimo de los usuarios: un actor privado puede influir en una elección y <b>nadie puede auditarlo</b>. Con la <b>microsegmentación</b>, a cada votante le llega una campaña distinta y desaparece el mensaje común que se pueda confrontar en público.</p></div>
+
+    <h4 style="margin-top:14px">El método: la ficha de auditoría (sirve para cualquier sistema)</h4>
+    <div class="dos" style="gap:0 22px">
+      <div><div class="frase"><span>1</span><div><b style="color:var(--tinta)">¿Qué decide sobre mí?</b> La consecuencia concreta.</div></div><div class="frase"><span>2</span><div><b style="color:var(--tinta)">¿Qué optimiza de verdad quien lo opera?</b> Tiempo de pantalla, morosidad evitada…</div></div><div class="frase"><span>3</span><div><b style="color:var(--tinta)">¿Qué datos entran y cuál es un sustituto?</b> La pregunta clave.</div></div></div>
+      <div><div class="frase"><span>4</span><div><b style="color:var(--tinta)">¿Puedo ver mi puntaje, saber por qué y discutirlo?</b> Opacidad.</div></div><div class="frase"><span>5</span><div><b style="color:var(--tinta)">¿A cuántos afecta y cada cuánto?</b> Escala.</div></div><div class="frase"><span>6</span><div><b style="color:var(--tinta)">Si se equivoca, ¿quién paga y se corrige o se acumula?</b> Daño y bucle.</div></div></div>
+    </div>
+
+    <h4 style="margin-top:14px">Puente jurídico: lo que tenemos y lo que no</h4>
+    <table class="tabla">
+      <tr><th style="width:24%">Herramienta</th><th>Qué da y dónde se queda corta</th></tr>
+      <tr><td>Hábeas data</td><td>Art. 15 C. P., Ley 1581/2012 y Ley 1266/2008: conocer, actualizar y rectificar. <b>Límite:</b> corrige un dato falso; si los datos son verdaderos y lo que perjudica es el modelo, ¿qué derecho ejerzo?</td></tr>
+      <tr><td>Art. 29 C. P.</td><td>Una decisión con efectos jurídicos que no se puede explicar ni controvertir difícilmente está <b>motivada</b>.</td></tr>
+      <tr><td>T-323 de 2024</td><td>Un juez usó ChatGPT para motivar una tutela. La Corte no prohibió la herramienta; fijó transparencia y responsabilidad: <b>la máquina asiste, no decide.</b></td></tr>
+      <tr><td>CONPES 4144 de 2025</td><td>Política Nacional de IA: orienta, pero no es ley ni crea derechos exigibles por tutela.</td></tr>
+      <tr><td>Art. 22 RGPD (UE)</td><td>No ser objeto de decisiones <b>únicamente automatizadas</b> con efectos jurídicos. <b>Colombia no tiene un equivalente general.</b></td></tr>
+    </table>
+
+    <div class="caja ejemplo" style="margin-top:12px"><span class="tit">Pregunta tipo examen</span>Escoja un sistema automatizado que opere en Colombia con efectos jurídicos: identifique su <b>sustituto</b>, evalúelo con los <b>tres criterios de O'Neil</b> y proponga la vía para controvertirlo hoy (o sustente la laguna).</div>
+    <div class="pie"><span><b>Derecho y Tecnología · Corte 2</b> · S06 · Armas de destrucción matemática</span><span>Juan David Vanegas Roldán · <a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 3</span></div>
+  </div>
+</section>
+
+<!-- ============================== 4 · S07 (1/3) ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:640px;height:640px;right:-300px;top:120px;background:radial-gradient(circle, rgba(0,196,204,.14), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">02</span> Sesión 7 · 9 de septiembre</div>
+    <h2>El sesgo no es un error:<br><b>se hereda, se sustituye y se obedece.</b></h2>
+    <p class="texto" style="margin-top:12px">Nadie programó el sesgo, y por eso es tan difícil de imputar. No existe una línea de código que diga "rechace a las mujeres" ni "desconfíe de ese barrio". La sesión responde la pregunta que dejó abierta la S6 (¿qué hago si los datos son verdaderos y lo que me daña es el modelo?) y luego abre otra más grande: <b>¿qué pasa cuando la máquina ya no califica, sino que habla?</b></p>
+
+    <h4 style="margin-top:14px">Las tres puertas del sesgo</h4>
+    <div class="tres">
+      <div class="tarjeta bloque borde-acc"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-data"/></svg></div><h3>1 · Se hereda: los datos</h3></div><p>El mundo era desigual y el dato lo registró fielmente. El modelo aprende el pasado y lo llama predicción.</p><p><b>Responde:</b> quien eligió el conjunto de entrenamiento.</p></div>
+      <div class="tarjeta bloque borde-acc"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-pen"/></svg></div><h3>2 · Se sustituye: el diseño</h3></div><p>Alguien escogió el objetivo, las variables y la definición de éxito. Ahí entran los sustitutos.</p><p><b>Responde:</b> quien construyó el modelo.</p></div>
+      <div class="tarjeta bloque borde-nar"><div class="cab"><div class="ic-caja nar"><svg class="ico"><use href="#i-user"/></svg></div><h3>3 · Se obedece: el uso</h3></div><p>La persona que "revisa" la salida de la máquina termina firmándola sin discutirla.</p><p><b>Responde:</b> la institución que lo adoptó.</p></div>
+    </div>
+    <p class="texto" style="margin-top:8px">La pregunta jurídica cambia según la puerta: no es lo mismo un <b>dato viciado</b>, un <b>sustituto discriminatorio</b> y una <b>firma automática</b>.</p>
+
+    <h4 style="margin-top:14px">Puerta 1: tres formas de heredar</h4>
+    <table class="tabla">
+      <tr><th style="width:24%">Sesgo</th><th>Qué pasa</th></tr>
+      <tr><td>Histórico</td><td>Los datos son correctos, pero el mundo que describen era desigual. El modelo optimiza para repetirlo.</td></tr>
+      <tr><td>De representación</td><td>Un grupo aparece poco o no aparece. El modelo funciona peor con quien menos vio.</td></tr>
+      <tr><td>De medición</td><td>La etiqueta no es la cosa: "arrestos" no es "delitos"; "contratado" no es "buen empleado".</td></tr>
+    </table>
+    <div class="caja clave" style="margin-top:10px"><span class="tit">Lo incómodo</span>En los tres casos los datos pueden ser <b>verdaderos</b>. Ninguno se corrige con hábeas data, que solo rectifica datos falsos.</div>
+
+    <h4 style="margin-top:14px">Tres casos para diagnosticar</h4>
+    <div class="caja ejemplo"><span class="tit">Amazon · 2018 · Puerta 1</span>Amazon entrenó una herramienta experimental para puntuar hojas de vida con las candidaturas de los diez años anteriores, cuando la mayoría de contratados en cargos técnicos eran hombres. El sistema aprendió a penalizar la palabra <b>"women's"</b> (como en "capitana del club de ajedrez femenino") y a degradar a egresadas de universidades femeninas. Amazon desechó el proyecto; Reuters lo reveló en octubre de 2018. Nadie escribió la regla: el modelo proyectó un pasado desigual como si fuera mérito.</div>
+    <div class="dos" style="margin-top:10px">
+      <div class="caja ejemplo"><span class="tit">Gender Shades · 2018 · Puertas 1 y 2</span>Joy Buolamwini y Timnit Gebru evaluaron tres sistemas comerciales de clasificación de género por fotografía. Error máximo con hombres de piel clara: <b>0,8 %</b>; con mujeres de piel oscura: <b>34,7 %</b>. No fue diseñado para fallar con ellas: fue diseñado <b>sin</b> ellas.</div>
+      <div class="caja ejemplo"><span class="tit">Salta, Argentina · 2018</span>El gobierno provincial anunció, con apoyo de Microsoft, una plataforma para predecir qué adolescentes quedarían embarazadas. Los datos se recogieron puerta a puerta en barrios pobres; investigadores de la UBA señalaron errores metodológicos graves. Bastó con decidir <b>dónde tocar puertas</b>.</div>
+    </div>
+    <div class="pie"><span><b>Derecho y Tecnología · Corte 2</b> · S07 · Las tres puertas del sesgo</span><span>Juan David Vanegas Roldán · <a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 4</span></div>
+  </div>
+</section>
+
+<!-- ============================== 5 · S07 (2/3) ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:640px;height:640px;left:-300px;top:-180px;background:radial-gradient(circle, rgba(0,196,204,.14), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">02</span> Sesión 7 · Discriminación y derecho colombiano</div>
+    <h2>El sesgo es <b>discriminación indirecta.</b></h2>
+    <table class="tabla" style="margin-top:14px">
+      <tr><th style="width:15%">Tipo</th><th>Cómo se ve</th><th style="width:30%">Cómo se juzga</th></tr>
+      <tr><td>Directa</td><td>Menciona el criterio prohibido (sexo, raza, origen, religión).</td><td>Es visible: fácil de atacar.</td></tr>
+      <tr><td>Indirecta</td><td>Un criterio neutro (barrio, colegio, contrato) golpea de más a un grupo protegido.</td><td><b>Art. 13 C. P.:</b> se juzga el efecto.</td></tr>
+    </table>
+
+    <div class="dos" style="margin-top:12px">
+      <div class="tarjeta bloque"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-layers"/></svg></div><h3>Codificación redundante</h3></div><p>En el laboratorio de clase se apagó la variable "género" de un modelo de crédito y la brecha casi no se movió: barrio, colegio y tipo de contrato la seguían transportando. <b>Borrar el atributo no lo elimina, solo lo esconde.</b> Al quitar los sustitutos, el modelo perdió el atajo, no la precisión.</p></div>
+      <div class="caja ojo"><span class="tit">Trampa frecuente</span>"Nuestro algoritmo no usa el sexo ni la raza" no prueba nada. Es una defensa sobre la <b>entrada</b>, cuando el derecho pregunta por el <b>resultado</b>.</div>
+    </div>
+    <p class="texto" style="margin-top:10px"><b class="nar">Puerta 3 · sesgo de automatización:</b> tendencia documentada a aceptar la sugerencia de un sistema y dejar de buscar la información que la contradice.</p>
+    <div class="flujo cuatro" style="margin-top:10px">
+      <div class="tarjeta"><span class="n">Se dice</span><p>"Un humano revisa"</p></div>
+      <div class="tarjeta"><span class="n">Pasa</span><p>Recibe el puntaje ya hecho</p></div>
+      <div class="tarjeta"><span class="n">Pasa</span><p>Apartarse exige motivar</p></div>
+      <div class="tarjeta borde-nar"><span class="n" style="color:var(--nar2)">Resultado</span><p>Revisa en el papel, firma en la práctica</p></div>
+    </div>
+
+    <h4 style="margin-top:14px">Lo que el derecho colombiano ya dijo</h4>
+    <div class="dos">
+      <div class="tarjeta bloque borde-acc"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-scale"/></svg></div><h3>T-067 de 2025 · Transparencia algorítmica</h3></div><p>Un ciudadano pidió el código fuente de <b>CoronApp</b>, app estatal hecha con recursos públicos en la pandemia; se lo negaron por seguridad, datos personales y propiedad intelectual. La Corte revocó las negativas: restringir la información pública exige <b>justificación concreta</b>.</p></div>
+      <div class="tarjeta bloque borde-acc"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-scale"/></svg></div><h3>T-323 de 2024 y PretorIA</h3></div><p>La T-323 admite la IA como <b>apoyo</b> judicial. <b>PretorIA</b>, de la Corte Constitucional, clasifica, busca y resume tutelas para la selección: no decide, prepara. Dejusticia pidió un marco de derechos humanos. ¿Y si lo no clasificado nunca llega al juez?</p></div>
+    </div>
+
+    <h4 style="margin-top:14px">El mapa de vías (reto de clase)</h4>
+    <table class="tabla">
+      <tr><th style="width:52%">Situación</th><th>Vía jurídica</th></tr>
+      <tr><td>Me reportan una obligación que ya pagué</td><td>Ley 1266 de 2008 · hábeas data financiero</td></tr>
+      <tr><td>Una entidad pública me niega la lógica de la app con que me clasificó</td><td>T-067 de 2025 · acceso a la información pública</td></tr>
+      <tr><td>Me sancionan con un puntaje que no me explican</td><td>Art. 29 C. P. · debido proceso y motivación</td></tr>
+      <tr><td>Un modelo "neutro" rechaza al 70 % de las mujeres y al 20 % de los hombres</td><td>Art. 13 C. P. · discriminación indirecta</td></tr>
+      <tr><td>Un juez motivó con IA generativa sin decirlo</td><td>T-323 de 2024</td></tr>
+      <tr><td>Una plataforma privada me niega un servicio con decisión totalmente automatizada</td><td><b>No hay norma colombiana específica.</b> Ahí sigue la laguna.</td></tr>
+    </table>
+    <p class="texto" style="margin-top:10px"><b class="nar">La laguna se está cerrando, pero no está cerrada:</b> el CONPES 4144 de 2025 orienta y en 2025 se radicó un <b>proyecto de ley de IA</b> de modelo europeo. Verifiquen su estado antes de citarlo.</p>
+    <div class="pie"><span><b>Derecho y Tecnología · Corte 2</b> · S07 · Discriminación indirecta</span><span>Juan David Vanegas Roldán · <a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 5</span></div>
+  </div>
+</section>
+
+<!-- ============================== 6 · S07 (3/3) IA ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:620px;height:620px;right:-300px;top:-200px;background:radial-gradient(circle, rgba(0,196,204,.14), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">02</span> Sesión 7 · ¿Qué es la inteligencia artificial?</div>
+    <h2>De la máquina que califica<br><b>a la máquina que habla.</b></h2>
+
+    <div class="dos" style="margin-top:14px;grid-template-columns:1fr 1fr">
+      <div class="tarjeta" style="padding:6px 14px">
+        <h4 style="margin-top:6px">Línea de tiempo</h4>
+        <div class="hito"><b>1950</b><span>Turing cambia "¿piensan las máquinas?" por el juego de imitación.</span></div>
+        <div class="hito"><b>1956</b><span>Conferencia de Dartmouth: nace el término "inteligencia artificial".</span></div>
+        <div class="hito"><b>1966</b><span>ELIZA: reglas simples a las que la gente le confiaba intimidades (el "efecto ELIZA").</span></div>
+        <div class="hito"><b>1974–90</b><span>Los inviernos de la IA: promesas incumplidas y cortes de financiación, dos veces.</span></div>
+        <div class="hito"><b>1997</b><span>Deep Blue vence a Kaspárov: fuerza bruta y reglas, no comprensión.</span></div>
+        <div class="hito"><b>2012</b><span>ImageNet: el aprendizaje profundo se impone en visión por computador.</span></div>
+        <div class="hito"><b>2017</b><span>"Attention Is All You Need": nace la arquitectura transformer.</span></div>
+        <div class="hito"><b>2022</b><span>ChatGPT: no un salto técnico aislado, sino el momento en que la interfaz llega a todos.</span></div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div class="tarjeta bloque"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-target"/></svg></div><h3>Estrecha vs. general</h3></div><p>La IA <b>estrecha</b> hace una tarea (traducir, clasificar, generar texto) y existe. La <b>general</b>, con capacidad humana en tareas arbitrarias, es una hipótesis. No se regula una promesa: se regula un sistema desplegado.</p></div>
+        <div class="tarjeta bloque"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-layers"/></svg></div><h3>Programa, modelo y herramienta</h3></div><p><b>Programa:</b> reglas escritas por alguien, auditables línea a línea. <b>Modelo:</b> millones de parámetros ajustados con datos; nadie escribió las reglas. <b>Herramienta:</b> el modelo empaquetado con interfaz, filtros y condiciones de uso. Cada capa tiene un responsable distinto.</p></div>
+        <div class="tarjeta bloque"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-search"/></svg></div><h3>General vs. especializado</h3></div><p>El general habla de todo con la misma soltura, incluso donde no es confiable. El especializado tiene un dominio acotado y un error medible: <b>se le puede exigir una tasa de error</b>.</p></div>
+      </div>
+    </div>
+
+    <div class="tarjeta bloque" style="margin-top:12px"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-msg"/></svg></div><h3>"Solo añade una palabra a la vez" (Stephen Wolfram)</h3></div><p>Un modelo de lenguaje no planea la frase: en cada punto calcula un <b>ranking de probabilidad de la palabra siguiente</b>, escoge una y repite. Si siempre eligiera la más probable, el texto saldría plano; por eso se introduce azar, regulado por la <b>temperatura</b>. Con el ejemplo de Galileo dejando caer objetos desde la torre de Pisa, Wolfram advierte que nunca hay un "modelo sin modelo": toda estructura trae supuestos que alguien fijó. Es la idea de O'Neil dicha desde la física.</p></div>
+
+    <div class="caja clave" style="margin-top:12px"><span class="tit">El puente del corte</span>Si el modelo aprendió del texto que ya escribimos, hereda todo lo que ese texto daba por sentado. En un puntaje, el sesgo vive en una tabla que se puede pedir; en un modelo de lenguaje vive <b>en la lengua misma</b> y sale en prosa amable, en primera persona y con seguridad. En el simulador de clase bastó cambiar "colegio del norte" por "colegio del sur" para que cambiara la clasificación: el colegio era el sustituto, ahora dentro del lenguaje.</div>
+
+    <div class="dos" style="margin-top:12px">
+      <div class="tarjeta bloque borde-acc"><h3>El modelo que califica: decide</h3><p>Hay acto, efecto jurídico y destinatario: el <b>art. 29</b> tiene de dónde agarrarse.</p></div>
+      <div class="tarjeta bloque borde-nar"><h3>El modelo que habla: sugiere</h3><p>Produce un texto, sin acto ni notificación: un párrafo que alguien copió, adoptó y firmó como propio. El <b>sesgo de automatización</b> es el puente entre sugerir y decidir.</p></div>
+    </div>
+
+    <div class="caja ojo" style="margin-top:12px"><span class="tit">En una frase</span>Un LLM es un modelo más, con las mismas tres puertas del sesgo y una ventaja peligrosa: <b>habla bien</b>.</div>
+    <div class="pie"><span><b>Derecho y Tecnología · Corte 2</b> · S07 · ¿Qué es la IA?</span><span>Juan David Vanegas Roldán · <a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 6</span></div>
+  </div>
+</section>
+
+<!-- ============================== 7 · S08 (1/2) ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:640px;height:640px;left:-300px;top:300px;background:radial-gradient(circle, rgba(242,140,40,.11), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">03</span> Sesión 8 · 16 de septiembre</div>
+    <h2>Adentro del modelo:<br><b>cómo funciona un LLM.</b></h2>
+    <p class="texto" style="margin-top:12px">Un modelo de lenguaje <b>no es una base de datos de respuestas ni un programa con reglas</b>: es una enorme función matemática ajustada con ejemplos. Entender eso cambia por completo la pregunta sobre quién responde por lo que dice. Lecturas: Wolfram, "Neural Nets" y "What Really Lets ChatGPT Work?", y el video de 3Blue1Brown.</p>
+
+    <div class="dos" style="margin-top:14px">
+      <div class="tarjeta bloque"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-chip"/></svg></div><h3>Redes neuronales sin matemáticas</h3></div><p>Una cadena de capas de pequeñas unidades ("neuronas") conectadas. Cada conexión tiene un número, un <b>peso</b>, que dice cuánto influye una unidad sobre la siguiente. La información entra por un extremo, se multiplica y suma según esos pesos y sale por el otro como respuesta.</p><p><b>Lo importante para un abogado:</b> nadie escribe esos pesos a mano; se ajustan solos en el entrenamiento y un modelo grande tiene <b>miles de millones</b>. No hay una línea de código que explique por qué dijo lo que dijo: el "conocimiento" está repartido en todos los pesos a la vez.</p></div>
+      <div class="tarjeta bloque"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-code"/></svg></div><h3>Tokens: cómo "lee" un modelo</h3></div><p>No lee palabras ni letras: lee <b>tokens</b>, fragmentos que pueden ser una palabra completa, una sílaba o un signo. "Inconstitucional" puede partirse en varios tokens.</p><p>Cada token se convierte en una lista de números (un <b>vector</b>) que ubica su significado en un espacio de muchas dimensiones, donde las palabras que aparecen en contextos parecidos quedan cerca.</p>
+        <svg class="figura" viewBox="0 0 300 64" style="margin-top:10px">
+          <rect x="0" y="6" width="58" height="26" rx="6" fill="#33D6DD"/><text x="29" y="24" text-anchor="middle" font-size="11" font-weight="700" fill="#0B1220">In</text>
+          <rect x="64" y="6" width="94" height="26" rx="6" fill="#33D6DD"/><text x="111" y="24" text-anchor="middle" font-size="11" font-weight="700" fill="#0B1220">constitu</text>
+          <rect x="164" y="6" width="70" height="26" rx="6" fill="#33D6DD"/><text x="199" y="24" text-anchor="middle" font-size="11" font-weight="700" fill="#0B1220">cional</text>
+          <text x="244" y="24" font-size="10" fill="#94A0B2">tokens</text>
+          <text x="0" y="54" font-size="10" fill="#C9D1DC" font-family="Consolas, monospace">→ [0.12, −0.87, 0.44, …]  vector</text>
+        </svg>
+        <p style="font-size:10px;color:var(--tenue);margin-top:2px">Partición ilustrativa: cada modelo corta distinto.</p>
+      </div>
+    </div>
+
+    <h4 style="margin-top:14px">Cómo aprende un modelo</h4>
+    <div class="flujo cuatro">
+      <div class="tarjeta"><span class="n">1 · Preentrenamiento</span><p>Lee cantidades enormes de texto y aprende a predecir el siguiente token.</p></div>
+      <div class="tarjeta"><span class="n">2 · Ajuste</span><p>Se afina con ejemplos de preguntas y buenas respuestas.</p></div>
+      <div class="tarjeta"><span class="n">3 · Retroalimentación humana</span><p>Personas califican respuestas y el modelo se ajusta a sus preferencias.</p></div>
+      <div class="tarjeta borde-acc"><span class="n">4 · Inferencia</span><p>Ya entrenado, genera texto token por token cuando alguien le escribe.</p></div>
+    </div>
+    <p class="texto" style="margin-top:10px">En el preentrenamiento el modelo intenta adivinar el siguiente token de millones de textos; cada vez que se equivoca, sus pesos se corrigen un poco en la dirección que habría reducido el error. Repetido una cantidad descomunal de veces, eso produce un sistema que capta gramática, estilo, hechos <b>y también los prejuicios</b> de los textos de los que aprendió.</p>
+
+    <h4 style="margin-top:14px">Alucinaciones y sesgos</h4>
+    <div class="dos">
+      <div class="tarjeta bloque borde-nar"><div class="cab"><div class="ic-caja nar"><svg class="ico"><use href="#i-alert"/></svg></div><h3>Una respuesta fluida, segura y falsa</h3></div><p>No es una mentira ni un fallo ocasional: es la consecuencia natural de un sistema que produce <b>lo plausible, no lo verdadero</b>. El modelo no consulta un registro de hechos; genera la continuación más probable. Si una sentencia inventada "suena" como una real, puede aparecer con número, fecha y magistrado ponente.</p></div>
+      <div class="caja ojo"><span class="tit">Para la práctica profesional</span>Ya existen casos en varios países de abogados sancionados por presentar escritos con <b>jurisprudencia inventada</b> por herramientas de IA. La regla es simple: <b>toda cita producida con IA se verifica en la fuente oficial antes de firmar</b>. La responsabilidad sigue siendo de quien firma.</div>
+    </div>
+
+    <div class="caja clave" style="margin-top:12px"><span class="tit">Por qué importa jurídicamente</span>Como el sesgo y la alucinación nacen de cómo se entrena y cómo genera el modelo, no basta con "corregir un dato" ni con "arreglar una línea": hay que preguntar <b>quién entrenó, quién empaquetó y quién adoptó</b> el sistema.</div>
+    <div class="pie"><span><b>Derecho y Tecnología · Corte 2</b> · S08 · Cómo funciona un LLM</span><span>Juan David Vanegas Roldán · <a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 7</span></div>
+  </div>
+</section>
+
+<!-- ============================== 8 · S08 (2/2) ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:640px;height:640px;right:-300px;top:-160px;background:radial-gradient(circle, rgba(0,196,204,.14), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">03</span> Sesión 8 · La incompletitud</div>
+    <h2>Por qué el modelo nunca será<br><b>del todo predecible.</b></h2>
+    <p class="texto" style="margin-top:12px">La imprevisibilidad de los modelos de lenguaje <b>no es un defecto técnico</b> que se vaya a corregir con la próxima versión: el derecho, la lógica y la física ya lo sabían: ningún sistema formal lo suficientemente rico puede ser <b>completo y cerrado a la vez</b>.</p>
+
+    <h4 style="margin-top:10px">En el derecho</h4>
+    <div class="dos">
+      <div class="tarjeta bloque"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-doc"/></svg></div><h3>Escuela de la Exégesis · siglo XIX</h3></div><p>El sueño del código completo: el juez como "boca de la ley" que solo aplica lo que el legislador ya previó.</p></div>
+      <div class="tarjeta bloque"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-building"/></svg></div><h3>Pandectística · siglo XIX</h3></div><p>El derecho como sistema conceptual cerrado del que, con lógica, se deducen todas las soluciones.</p></div>
+      <div class="tarjeta bloque borde-acc"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-layers"/></svg></div><h3>Kelsen · la pirámide y el marco</h3></div><p>La norma superior no determina por completo a la inferior: fija un <b>marco</b> de interpretaciones posibles dentro del cual el aplicador escoge.</p></div>
+      <div class="tarjeta bloque borde-acc"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-eye"/></svg></div><h3>Hart · la textura abierta</h3></div><p>Toda regla tiene un <b>núcleo</b> de casos claros y una <b>penumbra</b> de casos dudosos donde el lenguaje no alcanza y el juez debe decidir.</p></div>
+    </div>
+
+    <h4 style="margin-top:10px">En la lógica y la física</h4>
+    <table class="tabla">
+      <tr><td style="width:22%">Gödel (1931)</td><td>En cualquier sistema formal consistente que contenga la aritmética hay enunciados verdaderos que no pueden demostrarse dentro del propio sistema.</td></tr>
+      <tr><td>Turing (1936)</td><td>No existe un procedimiento general que decida, para cualquier programa, si terminará o no (el <b>problema de la parada</b>).</td></tr>
+      <tr><td>Heisenberg (1927)</td><td>Hay límites a la precisión con que pueden conocerse a la vez ciertas magnitudes físicas. Se usa como <b>analogía</b>, no como argumento técnico sobre la IA.</td></tr>
+    </table>
+
+    <svg class="figura" viewBox="0 0 686 104" style="margin-top:10px">
+      <rect x="0" y="0" width="686" height="104" rx="14" fill="#0E1626" stroke="#1F2A3C"/>
+      <ellipse cx="170" cy="56" rx="140" ry="44" fill="none" stroke="#2B3850" stroke-dasharray="4 4"/>
+      <ellipse cx="170" cy="56" rx="96" ry="30" fill="#0B2A33" stroke="#1E6E78"/>
+      <ellipse cx="170" cy="56" rx="44" ry="15" fill="#33D6DD"/>
+      <text x="170" y="60" text-anchor="middle" font-size="10.5" font-weight="800" fill="#0B1220">núcleo</text>
+      <text x="170" y="36" text-anchor="middle" font-size="10" fill="#B2F0F2">penumbra</text>
+      <text x="170" y="18" text-anchor="middle" font-size="10" fill="#94A0B2">marco</text>
+      <g font-size="11" fill="#C9D1DC">
+        <text x="344" y="28"><tspan font-weight="700" fill="#33D6DD">Núcleo:</tspan> respuestas muy probables · casos claros</text>
+        <text x="344" y="48"><tspan font-weight="700" fill="#B2F0F2">Penumbra:</tspan> respuestas posibles · casos dudosos</text>
+        <text x="344" y="68"><tspan font-weight="700" fill="#94A0B2">Marco:</tspan> lo fija quien diseña (o el legislador)</text>
+        <text x="344" y="88" font-size="10" fill="#94A0B2">La temperatura decide cuánto se adentra en la penumbra.</text>
+      </g>
+    </svg>
+
+    <div class="caja clave" style="margin-top:10px"><span class="tit">La conexión</span>Así como la norma no determina por completo la sentencia (Kelsen) y el lenguaje de la regla tiene penumbra (Hart), el modelo de lenguaje opera con un <b>núcleo</b> de respuestas muy probables, una <b>penumbra</b> de respuestas posibles y un <b>marco</b> que fija quien lo diseña. Esa variabilidad es <b>estructural</b>, y Wolfram mismo reconoce que no hay una teoría última que explique por qué estos modelos funcionan tan bien.</div>
+
+    <div class="dos" style="margin-top:10px">
+      <div class="tarjeta bloque"><div class="cab"><div class="ic-caja nar"><svg class="ico"><use href="#i-bolt"/></svg></div><h3>El debate del agua y la energía</h3></div><p>"Cada consulta gasta una botella de agua": el debate es real, pero mal planteado. El agua sirve sobre todo para <b>refrigerar centros de datos</b>, y la industria adopta enfriamiento en seco o de circuito cerrado. El fondo es la <b>energía</b>: cuánta y cómo se genera. Es planeación energética, licencias ambientales y ubicación de infraestructura.</p></div>
+      <div class="tarjeta bloque"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-scale"/></svg></div><h3>Responsabilidad bajo opacidad</h3></div><p>Si ni sus creadores explican una respuesta concreta, ¿quién responde por el daño? Las capas de la S7: <b>quien entrenó</b>, <b>quien empaquetó</b> y <b>quien adoptó</b> el sistema. El Reglamento europeo de IA clasifica por <b>niveles de riesgo</b> y obliga a proveedores y a quienes despliegan (Corte 3).</p></div>
+    </div>
+    <div class="pie"><span><b>Derecho y Tecnología · Corte 2</b> · S08 · La incompletitud</span><span>Juan David Vanegas Roldán · <a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 8</span></div>
+  </div>
+</section>
+
+<!-- ============================== 9 · S09 (1/2) ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:640px;height:640px;left:-300px;top:-160px;background:radial-gradient(circle, rgba(0,196,204,.13), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">04</span> Sesión 9 · 23 de septiembre</div>
+    <h2>Más datos que lectores:<br><b>Big Data y perfilamiento.</b></h2>
+    <p class="texto" style="margin-top:12px">Si la IA es el motor, los datos son el combustible. La sesión siguió la vida de un dato en <b>ocho etapas</b>, y en cada una aparece una pregunta jurídica distinta. Lectura: Mayer-Schönberger y Cukier, <i>Big Data</i>, cap. 5 "Datificación" y cap. 8 "Riesgos".</p>
+
+    <div class="cuatro" style="margin-top:12px">
+      <div class="tarjeta bloque"><h4>Etapa 1</h4><h3>Nace</h3><p>Qué es un dato y por qué importa.</p></div>
+      <div class="tarjeta bloque"><h4>Etapa 2</h4><h3>Crece</h3><p>Big Data y datificación.</p></div>
+      <div class="tarjeta bloque"><h4>Etapa 3</h4><h3>Se desborda</h3><p>Más datos que lectores.</p></div>
+      <div class="tarjeta bloque"><h4>Etapa 4</h4><h3>Se guarda</h3><p>Dónde vive y quién lo custodia.</p></div>
+      <div class="tarjeta bloque borde-nar"><h4 style="color:var(--nar2)">Etapa 5</h4><h3>Tiene dueño</h3><p>¿Propiedad o derecho de la personalidad?</p></div>
+      <div class="tarjeta bloque borde-nar"><h4 style="color:var(--nar2)">Etapa 6</h4><h3>Da poder</h3><p>Perfilamiento y vigilancia.</p></div>
+      <div class="tarjeta bloque borde-nar"><h4 style="color:var(--nar2)">Etapa 7</h4><h3>Se defiende</h3><p>Hábeas data y SIC.</p></div>
+      <div class="tarjeta bloque borde-nar"><h4 style="color:var(--nar2)">Etapa 8</h4><h3>Se abre</h3><p>Datos abiertos y transparencia.</p></div>
+    </div>
+
+    <div class="tarjeta bloque" style="margin-top:12px"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-data"/></svg></div><h3>Nace: qué es un dato</h3></div><p>Un <b>registro de un hecho</b>: una cifra, una fecha, una ubicación, una imagen. Solo dice poco; combinado con otros se vuelve <b>información</b>, y procesado e interpretado, <b>conocimiento</b>. Hoy su valor no está en cada registro aislado, sino en la posibilidad de <b>cruzarlo con millones de otros</b>.</p></div>
+
+    <h4 style="margin-top:14px">Crece: los tres desplazamientos del Big Data</h4>
+    <div class="tres">
+      <div class="tarjeta bloque borde-acc"><h3>De la muestra al todo</h3><p>Ya no hace falta encuestar a mil personas para inferir lo que piensan millones: se pueden analizar los datos de casi todos.</p></div>
+      <div class="tarjeta bloque borde-acc"><h3>De la exactitud al desorden</h3><p>Se acepta que los datos sean imperfectos, porque la cantidad compensa la imprecisión.</p></div>
+      <div class="tarjeta bloque borde-acc"><h3>De la causalidad a la correlación</h3><p>Importa menos saber por qué ocurre algo y más saber qué va junto con qué.</p></div>
+    </div>
+    <div class="caja ejemplo" style="margin-top:10px"><span class="tit">Datificación (cap. 5)</span>Convertir en datos aspectos de la vida que antes no se medían: la postura al sentarse, los pasos que damos, las amistades, el estado de ánimo de lo que escribimos. Una vez datificado, <b>cualquier aspecto de la vida puede analizarse, predecirse y venderse</b>.</div>
+
+    <h4 style="margin-top:14px">Se desborda: más datos que lectores</h4>
+    <p class="texto">La ciencia ya produce más datos de los que cualquier humano puede leer. El observatorio <b>Vera C. Rubin</b> genera del orden de 10 terabytes por noche; el radiotelescopio <b>SKA</b> podrá producir muchísimo más de lo que es posible almacenar; y en el Gran Colisionador de Hadrones del <b>CERN</b>, sistemas automáticos de "disparo" (<i>trigger</i>) deciden en fracciones de segundo qué colisiones se guardan y cuáles se descartan para siempre: se conserva una mínima fracción de lo que ocurre.</p>
+    <div class="caja clave" style="margin-top:10px"><span class="tit">Por qué importa jurídicamente</span>Cuando hay más datos que lectores, <b>la máquina decide qué se mira</b>. El filtro que escoge qué colisión guardar es inofensivo en física; el mismo principio aplicado a expedientes judiciales, quejas ciudadanas u hojas de vida es una decisión con efectos sobre derechos. Es la misma pregunta que dejó PretorIA.</div>
+    <div class="pie"><span><b>Derecho y Tecnología · Corte 2</b> · S09 · Big Data</span><span>Juan David Vanegas Roldán · <a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 9</span></div>
+  </div>
+</section>
+
+<!-- ============================== 10 · S09 (2/2) ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:620px;height:620px;right:-300px;top:-220px;background:radial-gradient(circle, rgba(0,196,204,.13), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">04</span> Sesión 9 · Dueño, poder, defensa y apertura</div>
+    <h2>Transparencia para el poder,<br><b>privacidad para las personas.</b></h2>
+
+    <div class="dos" style="margin-top:14px">
+      <div class="tarjeta bloque"><div class="cab"><div class="ic-caja nar"><svg class="ico"><use href="#i-user"/></svg></div><h3>Tiene dueño: ¿el dato es propiedad?</h3></div><p>El Código Civil distingue entre las <b>personas</b> (arts. 73 y siguientes) y los <b>bienes</b> del patrimonio. ¿Los datos personales son bienes que se venden o atributos de la personalidad, inseparables de su titular? El derecho colombiano se inclina por lo segundo: el dato personal es <b>derecho fundamental</b> (art. 15 C. P.) y su tratamiento exige autorización, finalidad y garantías.</p><p>Los <b>datos biométricos</b> (huella, rostro, iris, voz) son el caso límite: son <b>sensibles</b> según la Ley 1581 y, a diferencia de una contraseña, no se pueden cambiar si se filtran.</p></div>
+      <div class="caja ejemplo"><span class="tit">Caso · Worldcoin y la SIC</span>El proyecto Worldcoin escaneaba el <b>iris</b> de personas a cambio de criptomonedas. La Superintendencia de Industria y Comercio intervino mediante la <b>Resolución 78798 del 3 de octubre de 2025</b>, decisión que luego fue confirmada en 2026. El caso concentra todo el capítulo: dato biométrico, consentimiento a cambio de dinero, finalidad poco clara y <b>una autoridad que sí actuó</b>.</div>
+    </div>
+
+    <h4 style="margin-top:14px">Da poder: perfilamiento y vigilancia</h4>
+    <p class="texto"><b>Perfilar</b> es usar datos para evaluar, clasificar o predecir aspectos de una persona: su solvencia, sus gustos, su salud, su probabilidad de delinquir o de votar por alguien. Quien tiene los datos puede <b>anticipar, influir y excluir</b>.</p>
+    <div class="tres" style="margin-top:10px">
+      <div class="tarjeta bloque borde-nar"><h3>Efecto mosaico</h3><p>Datos inofensivos por separado que, combinados, revelan algo íntimo: una rutina, una enfermedad, una orientación política.</p></div>
+      <div class="tarjeta bloque borde-nar"><h3>Castigar predicciones (cap. 8)</h3><p>Sancionar por lo que una predicción dice que harás, no por lo que hiciste. Choca con el libre albedrío, la presunción de inocencia y la idea de responsabilidad.</p></div>
+      <div class="tarjeta bloque borde-nar"><h3>Dictadura de los datos</h3><p>Confiar ciegamente en los números aunque midan algo distinto de lo que creemos.</p></div>
+    </div>
+    <div class="tarjeta bloque" style="margin-top:10px"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-chip"/></svg></div><h3>La IA depende de los datos</h3></div><p>Sin datos masivos no hay modelos de lenguaje. Los sesgos de los datos se vuelven sesgos del modelo, y las preguntas sobre qué datos se usaron para entrenar (con qué autorización, de quién, con qué derechos de autor) son hoy de las disputas jurídicas más intensas del sector.</p></div>
+
+    <h4 style="margin-top:14px">Se defiende y se abre</h4>
+    <div class="dos">
+      <div class="tarjeta bloque borde-acc"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-shield"/></svg></div><h3>Herramientas de defensa</h3></div><p><b>Art. 15 C. P.</b> · <b>Ley 1581 de 2012</b> (principios de finalidad, libertad, veracidad, transparencia, acceso y circulación restringida, seguridad y confidencialidad) · <b>Ley 1266 de 2008</b> (dato financiero) · la <b>SIC</b> como autoridad de protección de datos. Se estudia a fondo en la sesión 14.</p></div>
+      <div class="tarjeta bloque borde-acc"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-search"/></svg></div><h3>Datos abiertos para vigilar al poder</h3></div><p>El Estado debe abrir sus datos para permitir el control ciudadano: <b>datos.gov.co</b>, el <b>SECOP</b> (contratación pública), el <b>RUP</b> (registro de proponentes) o el <b>SINUPOT</b> (información urbanística de Bogotá).</p></div>
+    </div>
+    <div class="caja ojo" style="margin-top:10px"><span class="tit">La tensión</span>Los datos públicos también contienen información personal: un contrato estatal muestra el nombre del contratista; un expediente público, la vida de alguien. El trabajo jurídico es <b>ponderar</b>: qué se publica, qué se anonimiza y qué se reserva.</div>
+
+    <div class="pie"><span><b>Derecho y Tecnología · Corte 2</b> · S09 · Perfilamiento</span><span>Juan David Vanegas Roldán · <a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 10</span></div>
+  </div>
+</section>
+
+<!-- ============================== 11 · S10 (1/2) ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:640px;height:640px;right:-300px;top:120px;background:radial-gradient(circle, rgba(242,140,40,.11), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">05</span> Sesión 10 · 30 de septiembre</div>
+    <h2>Contratos digitales:<br><b>la ley como código.</b></h2>
+    <p class="texto" style="margin-top:12px">Un PDF firmado y enviado por correo no es, en sentido estricto, un contrato digital: es un <b>contrato de papel que viaja por internet</b>. La sesión distingue entre digitalizar un documento y diseñar un contrato que nace digital, y se pregunta qué pasa cuando las cláusulas dejan de ser solo texto y se vuelven reglas que un sistema puede leer, vigilar y ejecutar. Lectura: Vanegas Roldán, <i>La revolución de los contratos digitales</i>.</p>
+
+    <h4 style="margin-top:14px">Contrato digitalizado vs. contrato digital</h4>
+    <table class="tabla">
+      <tr><th style="width:20%">Dimensión</th><th class="nar">Contrato digitalizado</th><th class="acc">Contrato digital</th></tr>
+      <tr><td>Naturaleza</td><td>Texto escaneado o en PDF</td><td><b>Datos estructurados + texto jurídico</b></td></tr>
+      <tr><td>Lectura</td><td>Solo lo lee una persona</td><td>Lo leen personas y sistemas</td></tr>
+      <tr><td>Obligaciones</td><td>Enterradas en párrafos</td><td>Identificadas, con responsable y plazo</td></tr>
+      <tr><td>Seguimiento</td><td>Manual, en la memoria o en una agenda</td><td>Automático: alertas, vencimientos, estados</td></tr>
+      <tr><td>Firma</td><td>Manuscrita escaneada</td><td>Firma electrónica con trazabilidad</td></tr>
+    </table>
+    <div class="caja clave" style="margin-top:10px"><span class="tit">La diferencia de fondo</span>El contrato digital trata el acuerdo como un <b>sistema vivo</b> que se sigue en el tiempo, no como un documento que se archiva el día de la firma. El valor no está en generar el documento, sino en <b>vigilar su cumplimiento</b>.</div>
+
+    <h4 style="margin-top:14px">La ley como código, la ley como máquina</h4>
+    <p class="texto"><b>Lawrence Lessig</b> popularizó la idea de que, en el mundo digital, <b>"el código es ley"</b>: la arquitectura de un sistema regula la conducta tanto como una norma, porque permite unas acciones e impide otras. La idea inversa también es poderosa: buena parte del derecho ya tiene estructura de algoritmo. Una norma con supuesto de hecho y consecuencia se parece a un "si… entonces…", y el silogismo jurídico (sesión 1) es, en esencia, un procedimiento.</p>
+    <div class="tres" style="margin-top:10px">
+      <div class="tarjeta bloque borde-acc"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-code"/></svg></div><h3>Código es ley</h3></div><p>La arquitectura regula: lo que el sistema no permite hacer, en la práctica está prohibido, aunque ninguna norma lo diga.</p></div>
+      <div class="tarjeta bloque borde-acc"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-loop"/></svg></div><h3>Ley como máquina</h3></div><p>La norma como procedimiento: supuesto → consecuencia. Plazos, condiciones y obligaciones pueden ser reglas ejecutables.</p></div>
+      <div class="tarjeta bloque borde-nar"><div class="cab"><div class="ic-caja nar"><svg class="ico"><use href="#i-alert"/></svg></div><h3>El límite</h3></div><p>No todo se traduce: "buena fe", "diligencia" o "fuerza mayor" son conceptos abiertos (la textura abierta de Hart). Requieren juicio humano.</p></div>
+    </div>
+
+    <h4 style="margin-top:14px">Los componentes de un contrato digital</h4>
+    <div class="flujo" style="grid-template-columns:repeat(5,1fr)">
+      <div class="tarjeta"><span class="n">1 · Partes</span><p>Identidad verificada de quienes se obligan.</p></div>
+      <div class="tarjeta"><span class="n">2 · Cláusulas</span><p>Objeto y texto jurídico con variables parametrizadas.</p></div>
+      <div class="tarjeta"><span class="n">3 · Obligaciones</span><p>Quién debe qué, a quién y cuándo.</p></div>
+      <div class="tarjeta"><span class="n">4 · Firma</span><p>Electrónica, con evidencia de integridad.</p></div>
+      <div class="tarjeta borde-acc"><span class="n">5 · Seguimiento</span><p>Alertas, estados, cumplimiento e historial.</p></div>
+    </div>
+    <p class="texto" style="margin-top:10px">Un buen diseño separa el <b>núcleo</b> del contrato (reglas claras, deterministas, auditables) de los <b>bordes</b> (tareas de apoyo donde la IA puede ayudar: resumir, sugerir redacciones, detectar riesgos). Lo que define derechos y obligaciones no debería depender de un modelo probabilístico: por todo lo visto en la sesión 8, <b>un contrato no puede "alucinar" una cláusula</b>.</p>
+    <div class="pie"><span><b>Derecho y Tecnología · Corte 2</b> · S10 · Contratos digitales</span><span>Juan David Vanegas Roldán · <a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 11</span></div>
+  </div>
+</section>
+
+<!-- ============================== 12 · S10 (2/2) ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:640px;height:640px;left:-300px;top:-180px;background:radial-gradient(circle, rgba(0,196,204,.14), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">05</span> Sesión 10 · Componentes y validez</div>
+    <h2>Cómo se construye<br><b>y por qué vale.</b></h2>
+
+    <h4 style="margin-top:16px">Dos ideas que suelen confundirse</h4>
+    <div class="dos">
+      <div class="tarjeta bloque"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-doc"/></svg></div><h3>Contrato estructurado</h3></div><p>El contrato tradicional, con su texto jurídico completo, más una <b>capa de datos</b> que identifica partes, obligaciones, plazos y condiciones para que un sistema les haga seguimiento. <b>El texto manda; los datos ayudan.</b></p></div>
+      <div class="tarjeta bloque"><div class="cab"><div class="ic-caja nar"><svg class="ico"><use href="#i-link"/></svg></div><h3>Contrato inteligente (smart contract)</h3></div><p>Un <b>programa</b> que se ejecuta automáticamente cuando se cumplen ciertas condiciones, normalmente sobre una blockchain. <b>El código manda.</b> Se estudia a fondo en la sesión 11.</p></div>
+    </div>
+
+    <div class="tarjeta" style="margin-top:12px;padding:6px 16px">
+      <h4 style="margin-top:8px">Cómo se construye bien</h4>
+      <div class="frase"><span>1</span><div>Partir del <b style="color:var(--tinta)">flujo real</b> de la relación: qué pasa antes, durante y después de la firma.</div></div>
+      <div class="frase"><span>2</span><div>Convertir cada obligación en un <b style="color:var(--tinta)">evento</b> con responsable, plazo y consecuencia.</div></div>
+      <div class="frase"><span>3</span><div>Mantener el <b style="color:var(--tinta)">texto jurídico como fuente</b> y los datos como reflejo fiel de ese texto.</div></div>
+      <div class="frase"><span>4</span><div>Usar <b style="color:var(--tinta)">lenguaje claro y diseño</b> (legal design) para que las partes entiendan lo que firman.</div></div>
+      <div class="frase"><span>5</span><div>Garantizar <b style="color:var(--tinta)">trazabilidad</b>: quién hizo qué, cuándo y desde dónde.</div></div>
+    </div>
+
+    <h4 style="margin-top:14px">Validez y valor probatorio: el marco colombiano</h4>
+    <table class="tabla">
+      <tr><th style="width:27%">Norma</th><th>Qué dice</th></tr>
+      <tr><td>Consensualidad<br><span class="tenue" style="font-weight:400">Art. 1500 C. C. · art. 824 C. Co.</span></td><td>Por regla general, los contratos se perfeccionan por el <b>acuerdo de voluntades</b>. Que el acuerdo conste en un medio digital no lo hace menos contrato.</td></tr>
+      <tr><td>Ley 527 de 1999</td><td><b>Equivalencia funcional:</b> un mensaje de datos cumple las funciones del escrito, la firma y el original cuando reúne requisitos de accesibilidad, identificación e integridad, y es <b>admisible como prueba</b>.</td></tr>
+      <tr><td>Decreto 2364 de 2012<br><span class="tenue" style="font-weight:400">hoy compilado en el Decreto 1074 de 2015</span></td><td>Regula la <b>firma electrónica</b> y la considera confiable cuando permite identificar al firmante y garantiza la integridad del mensaje.</td></tr>
+    </table>
+    <div class="caja ojo" style="margin-top:12px"><span class="tit">Trampa frecuente</span>No confundir <b>firma electrónica</b> (cualquier método que identifique al firmante y vincule su voluntad, como un código enviado al celular) con <b>firma digital</b> (una especie de firma electrónica basada en certificados emitidos por entidades de certificación). La Ley 527 y la firma electrónica se estudian en detalle en la sesión 13.</div>
+
+    <div class="tarjeta sintesis" style="margin-top:12px">
+      <h4>Síntesis de la sesión 10</h4>
+      <div class="frase"><span><svg class="ico" style="width:13px;height:13px;margin-top:2px"><use href="#i-check"/></svg></span><div>Digitalizar ≠ digital: el contrato digital es datos estructurados + texto jurídico, y su valor está en el seguimiento.</div></div>
+      <div class="frase"><span><svg class="ico" style="width:13px;height:13px;margin-top:2px"><use href="#i-check"/></svg></span><div>"El código es ley" (la arquitectura regula) y "la ley como máquina" (la norma como procedimiento), con el límite de los conceptos abiertos.</div></div>
+      <div class="frase"><span><svg class="ico" style="width:13px;height:13px;margin-top:2px"><use href="#i-check"/></svg></span><div>Componentes: partes, cláusulas parametrizadas, obligaciones con plazo, firma electrónica y seguimiento.</div></div>
+      <div class="frase"><span><svg class="ico" style="width:13px;height:13px;margin-top:2px"><use href="#i-check"/></svg></span><div>Validez: consensualidad, Ley 527/99 (equivalencia funcional) y firma electrónica.</div></div>
+    </div>
+    <div class="pie"><span><b>Derecho y Tecnología · Corte 2</b> · S10 · Componentes y validez</span><span>Juan David Vanegas Roldán · <a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 12</span></div>
+  </div>
+</section>
+
+<!-- ============================== 13 · S11 (1/2) ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:620px;height:620px;right:-300px;top:-200px;background:radial-gradient(circle, rgba(0,196,204,.14), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">06</span> Sesión 11 · 7 de octubre · Cierre del corte</div>
+    <h2>Blockchain:<br><b>el problema del tercero de confianza.</b></h2>
+    <p class="texto" style="margin-top:12px">Durante siglos el comercio ha dependido de <b>terceros de confianza</b>: bancos, notarios, registros públicos, cámaras de comercio. Ellos certifican que algo pasó, que alguien es dueño de algo o que un pago se hizo. En 2008, un autor con el seudónimo de <b>Satoshi Nakamoto</b> propuso un sistema para intercambiar valor sin ese tercero. Lectura: Nakamoto, <i>Bitcoin</i>, secciones 1 y 2.</p>
+
+    <div class="tarjeta bloque" style="margin-top:12px"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-copy2"/></svg></div><h3>El doble gasto</h3></div><p>Un archivo digital se puede copiar infinitas veces. Si el dinero fuera un archivo, ¿qué impediría gastarlo dos veces? La respuesta tradicional es un intermediario que lleva el registro (el banco). Las secciones 1 y 2 del whitepaper plantean un <b>sistema de pago electrónico entre pares</b> en el que la confianza en un intermediario se reemplaza por una <b>prueba criptográfica</b> y por el <b>consenso de una red</b>.</p></div>
+
+    <h4 style="margin-top:14px">Cómo funciona una blockchain</h4>
+    <svg class="figura" viewBox="0 0 686 92">
+      <g font-size="10" fill="#C9D1DC">
+        <rect x="0" y="6" width="124" height="80" rx="10" fill="#0E1626" stroke="#1E6E78"/>
+        <text x="62" y="28" text-anchor="middle" font-size="10" font-weight="800" fill="#33D6DD" letter-spacing="1">1 · TRANSACCIÓN</text>
+        <text x="62" y="48" text-anchor="middle">Alguien firma</text><text x="62" y="62" text-anchor="middle">digitalmente una</text><text x="62" y="76" text-anchor="middle">transferencia</text>
+        <rect x="140" y="6" width="124" height="80" rx="10" fill="#0E1626" stroke="#1E6E78"/>
+        <text x="202" y="28" text-anchor="middle" font-size="10" font-weight="800" fill="#33D6DD" letter-spacing="1">2 · BLOQUE</text>
+        <text x="202" y="48" text-anchor="middle">Varias transacciones</text><text x="202" y="62" text-anchor="middle">se agrupan en</text><text x="202" y="76" text-anchor="middle">un bloque</text>
+        <rect x="280" y="6" width="124" height="80" rx="10" fill="#0E1626" stroke="#1E6E78"/>
+        <text x="342" y="28" text-anchor="middle" font-size="10" font-weight="800" fill="#33D6DD" letter-spacing="1">3 · HASH</text>
+        <text x="342" y="48" text-anchor="middle">Una "huella" que</text><text x="342" y="62" text-anchor="middle">incluye la del</text><text x="342" y="76" text-anchor="middle">bloque anterior</text>
+        <rect x="420" y="6" width="124" height="80" rx="10" fill="#0E1626" stroke="#1E6E78"/>
+        <text x="482" y="28" text-anchor="middle" font-size="10" font-weight="800" fill="#33D6DD" letter-spacing="1">4 · CONSENSO</text>
+        <text x="482" y="48" text-anchor="middle">La red valida</text><text x="482" y="62" text-anchor="middle">el bloque (p. ej.,</text><text x="482" y="76" text-anchor="middle">prueba de trabajo)</text>
+        <rect x="560" y="6" width="126" height="80" rx="10" fill="#33D6DD"/>
+        <text x="623" y="28" text-anchor="middle" font-size="10" font-weight="800" fill="#0B1220" letter-spacing="1">5 · CADENA</text>
+        <text x="623" y="48" text-anchor="middle" fill="#0B1220">Alterar un bloque</text><text x="623" y="62" text-anchor="middle" fill="#0B1220">rompe todas las</text><text x="623" y="76" text-anchor="middle" fill="#0B1220">huellas siguientes</text>
+        <path d="M126 46h12M266 46h12M406 46h12M546 46h12" stroke="#94A0B2" stroke-width="1.5"/>
+      </g>
+    </svg>
+    <p class="texto" style="margin-top:10px">Un <b>hash</b> convierte cualquier contenido en una cadena de longitud fija; si cambia una sola letra, el hash cambia por completo. Como cada bloque contiene el hash del anterior, la cadena funciona como un <b>libro contable</b> donde borrar o modificar una página deja huella evidente. Y ese libro está <b>distribuido</b>: miles de copias en distintos nodos, sin un único dueño del registro.</p>
+
+    <h4 style="margin-top:14px">Tipos de blockchain</h4>
+    <div class="tres">
+      <div class="tarjeta bloque"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-globe"/></svg></div><h3>Pública</h3></div><p>Cualquiera puede leer, participar y validar. Ejemplos: Bitcoin, Ethereum. Máxima descentralización.</p></div>
+      <div class="tarjeta bloque"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-lock"/></svg></div><h3>Privada</h3></div><p>Controlada por una entidad; solo participantes autorizados. Útil para trazabilidad interna; menos descentralizada.</p></div>
+      <div class="tarjeta bloque"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-users"/></svg></div><h3>De consorcio</h3></div><p>Permisionada y gobernada por un grupo: varias organizaciones (p. ej., de un mismo sector) comparten la validación.</p></div>
+    </div>
+
+    <h4 style="margin-top:14px">Cripto vs. criptomoneda · IPO vs. ICO</h4>
+    <p class="texto">"Cripto" viene de <b>criptografía</b>, la técnica que asegura la red: no toda aplicación de blockchain es una moneda. Una <b>criptomoneda o criptoactivo</b> es una representación digital de valor registrada en una blockchain. En Colombia <b>no son moneda de curso legal</b>: el peso es la única unidad monetaria; las autoridades financieras han advertido sus riesgos y han abierto espacios controlados de prueba (<i>sandbox</i>) para algunos servicios.</p>
+    <table class="tabla" style="margin-top:8px">
+      <tr><th style="width:16%"></th><th class="acc">IPO · oferta pública inicial</th><th class="nar">ICO · oferta inicial de monedas</th></tr>
+      <tr><td>Qué se ofrece</td><td>Acciones de una sociedad</td><td>Tokens emitidos sobre una blockchain</td></tr>
+      <tr><td>Derechos</td><td>Participación en la sociedad (voto, dividendos)</td><td>Los que defina el proyecto; a veces ninguno exigible</td></tr>
+      <tr><td>Supervisión</td><td>Regulación de valores y supervisor financiero</td><td>Zona gris; en muchos países se tratan como valores si funcionan como inversión</td></tr>
+      <tr><td>Riesgo</td><td>Información obligatoria y auditada</td><td>Asimetría de información alta; muchos fraudes documentados</td></tr>
+    </table>
+    <div class="pie"><span><b>Derecho y Tecnología · Corte 2</b> · S11 · Blockchain</span><span>Juan David Vanegas Roldán · <a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 13</span></div>
+  </div>
+</section>
+
+<!-- ============================== 14 · S11 (2/2) ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:640px;height:640px;left:-300px;top:300px;background:radial-gradient(circle, rgba(242,140,40,.11), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">06</span> Sesión 11 · Smart contracts</div>
+    <h2>Por qué un smart contract<br><b>no es un contrato.</b></h2>
+    <p class="texto" style="margin-top:12px">Un smart contract es un <b>programa almacenado en una blockchain</b> que se ejecuta automáticamente cuando se cumplen ciertas condiciones: "si llega el pago, transfiere el token". El nombre es engañoso. Desde la teoría general del contrato hay al menos <b>cinco razones</b> para decir que, por sí solo, no es un contrato:</p>
+
+    <div class="tarjeta" style="margin-top:12px;padding:4px 16px">
+      <div class="frase"><span>1</span><div><b style="color:var(--tinta)">No es el acuerdo, es su ejecución.</b> El contrato es el acuerdo de voluntades (art. 1495 C. C.). El código, en el mejor de los casos, es una herramienta para cumplir parte de ese acuerdo.</div></div>
+      <div class="frase"><span>2</span><div><b style="color:var(--tinta)">No interpreta.</b> El código ejecuta lo escrito, no lo querido. El derecho privilegia la intención común de las partes sobre la literalidad.</div></div>
+      <div class="frase"><span>3</span><div><b style="color:var(--tinta)">No conoce vicios.</b> Error, fuerza o dolo vician el consentimiento; el programa se ejecuta igual aunque una parte haya sido engañada o coaccionada.</div></div>
+      <div class="frase"><span>4</span><div><b style="color:var(--tinta)">La inmutabilidad choca con el derecho.</b> Nulidad, resolución, revisión por imprevisión: el derecho prevé deshacer o ajustar contratos. Una cadena inmutable no se deja.</div></div>
+      <div class="frase"><span>5</span><div><b style="color:var(--tinta)">Depende de oráculos.</b> Para saber si algo pasó en el mundo real (una entrega, un clima, un precio), el código necesita una fuente externa: <b style="color:var(--tinta)">el tercero de confianza vuelve a entrar</b>.</div></div>
+    </div>
+
+    <div class="caja ejemplo" style="margin-top:12px"><span class="tit">Caso · The DAO · 2016</span>The DAO era una organización de inversión descentralizada sobre Ethereum. Alguien aprovechó una falla en su código para retirar una enorme cantidad de fondos. El programa hizo <b>exactamente lo que su código permitía</b>. La comunidad terminó modificando la cadena para revertir el efecto, lo que <b>dividió la red en dos</b>. Lección: "el código es ley" funciona hasta que el resultado es inaceptable, y entonces vuelven las categorías jurídicas de siempre: <b>buena fe, enriquecimiento sin causa, abuso</b>.</div>
+
+    <div class="caja clave" style="margin-top:12px"><span class="tit">El lugar correcto del smart contract</span>La tecnología no es inútil. Su lugar es el de <b>mecanismo de ejecución dentro de un contrato</b> que sigue existiendo en sentido jurídico, con su texto, sus reglas de interpretación y sus remedios. Es la misma lógica de la sesión 10: núcleo jurídico claro y tecnología al servicio del cumplimiento.</div>
+
+
+    <div class="caja ejemplo" style="margin-top:12px"><span class="tit">Pregunta tipo examen</span>Una plataforma ofrece un "smart contract de arrendamiento" que <b>bloquea automáticamente la cerradura inteligente</b> del inmueble si el canon no se paga a tiempo. Analice si se trata de un contrato, qué elementos del acuerdo quedan por fuera del código y qué problemas jurídicos genera la ejecución automática frente al régimen de arrendamiento y al debido proceso entre particulares.</div>
+
+    <div class="tarjeta sintesis" style="margin-top:12px">
+      <h4>Síntesis de la sesión 11</h4>
+      <div class="frase"><span><svg class="ico" style="width:13px;height:13px;margin-top:2px"><use href="#i-check"/></svg></span><div>Blockchain resuelve el doble gasto sin tercero de confianza: bloques encadenados por hash, registro distribuido y consenso.</div></div>
+      <div class="frase"><span><svg class="ico" style="width:13px;height:13px;margin-top:2px"><use href="#i-check"/></svg></span><div>Tipos: pública, privada y de consorcio. Cripto = criptografía; la criptomoneda no es moneda de curso legal en Colombia.</div></div>
+      <div class="frase"><span><svg class="ico" style="width:13px;height:13px;margin-top:2px"><use href="#i-check"/></svg></span><div>IPO ofrece acciones supervisadas; ICO ofrece tokens con alta asimetría de información.</div></div>
+      <div class="frase"><span><svg class="ico" style="width:13px;height:13px;margin-top:2px"><use href="#i-check"/></svg></span><div>Un smart contract ejecuta, no acuerda: no interpreta, no conoce vicios, es inmutable y depende de oráculos. Caso The DAO.</div></div>
+    </div>
+    <div class="pie"><span><b>Derecho y Tecnología · Corte 2</b> · S11 · Smart contracts</span><span>Juan David Vanegas Roldán · <a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 14</span></div>
+  </div>
+</section>
+
+<!-- ============================== 15 · PREGUNTAS ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:640px;height:640px;right:-300px;top:-160px;background:radial-gradient(circle, rgba(0,196,204,.14), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">07</span> Para ponerse a prueba</div>
+    <h2>Preguntas de repaso<br><b>antes del parcial.</b></h2>
+    <p class="texto" style="margin-top:8px">Piensen la respuesta antes de leerla.</p>
+    <div class="dos" style="margin-top:10px;gap:8px 10px">
+      <div class="tarjeta qa"><h3><span>1.</span>¿Cuáles son los tres criterios de un arma de destrucción matemática y qué los refuerza?</h3><p>Opacidad, escala y daño, reforzados por el bucle de retroalimentación: el modelo genera los datos que confirman su propia predicción.</p></div>
+      <div class="tarjeta qa"><h3><span>2.</span>¿Por qué el hábeas data no sirve frente al caso Amazon?</h3><p>Porque los datos eran verdaderos. El problema era el modelo que aprendió de un pasado desigual. La vía es la discriminación indirecta (art. 13).</p></div>
+      <div class="tarjeta qa"><h3><span>3.</span>¿Cuáles son las tres puertas del sesgo y quién responde en cada una?</h3><p>Se hereda (datos: quien eligió el entrenamiento), se sustituye (diseño: quien construyó el modelo) y se obedece (uso: la institución que lo adoptó).</p></div>
+      <div class="tarjeta qa"><h3><span>4.</span>Si un banco prueba que su modelo no usa "sexo", ¿queda descartada la discriminación?</h3><p>No. Por la codificación redundante, barrio, contrato o colegio transportan la misma información. Se juzga el efecto, no la entrada.</p></div>
+      <div class="tarjeta qa"><h3><span>5.</span>¿Qué aportó la sentencia T-067 de 2025?</h3><p>Frente a herramientas digitales del Estado, restringir el acceso a su código o lógica exige justificación concreta, no invocaciones genéricas.</p></div>
+      <div class="tarjeta qa"><h3><span>6.</span>Diferencie programa, modelo y herramienta.</h3><p>Programa: reglas escritas por alguien. Modelo: parámetros ajustados con datos. Herramienta: el modelo empaquetado como producto. Cada capa, un responsable.</p></div>
+      <div class="tarjeta qa"><h3><span>7.</span>¿Por qué las alucinaciones son estructurales?</h3><p>Porque el modelo genera la continuación más probable, no consulta un registro de hechos: produce lo plausible, no necesariamente lo verdadero.</p></div>
+      <div class="tarjeta qa"><h3><span>8.</span>Relacione Kelsen y Hart con la imprevisibilidad de un LLM.</h3><p>Marco de interpretaciones y penumbra del lenguaje; el modelo tiene núcleo probable, penumbra posible y un marco fijado por su diseño.</p></div>
+      <div class="tarjeta qa"><h3><span>9.</span>¿Cuáles son los tres desplazamientos del Big Data?</h3><p>De la muestra al todo, de la exactitud al desorden y de la causalidad a la correlación (Mayer-Schönberger y Cukier).</p></div>
+      <div class="tarjeta qa"><h3><span>10.</span>¿Por qué los datos biométricos merecen protección reforzada?</h3><p>Son sensibles (Ley 1581) y, a diferencia de una contraseña, no pueden cambiarse si se comprometen. Caso Worldcoin ante la SIC.</p></div>
+      <div class="tarjeta qa"><h3><span>11.</span>¿Contrato digitalizado o contrato digital?</h3><p>El digitalizado es un escaneo o PDF; el digital nace con datos estructurados que identifican obligaciones, plazos y responsables para seguirlos.</p></div>
+      <div class="tarjeta qa"><h3><span>12.</span>¿Qué es la equivalencia funcional de la Ley 527 de 1999?</h3><p>El mensaje de datos cumple las funciones del escrito, la firma y el original si reúne los requisitos legales, y es admisible como prueba.</p></div>
+      <div class="tarjeta qa"><h3><span>13.</span>¿Qué problema resuelve Bitcoin según las secciones 1 y 2?</h3><p>El doble gasto sin tercero de confianza: la confianza en un intermediario se reemplaza por prueba criptográfica y consenso de la red.</p></div>
+      <div class="tarjeta qa"><h3><span>14.</span>Tres razones por las que un smart contract no es un contrato.</h3><p>Ejecuta pero no es el acuerdo; ejecuta lo escrito y no interpreta lo querido; no reconoce vicios; es inmutable frente a nulidad o resolución; depende de oráculos.</p></div>
+    </div>
+    <div class="tarjeta qa borde-acc" style="margin-top:8px"><h3><span>15.</span>¿Cuál es la diferencia entre decidir y sugerir, y por qué importa?</h3><p>El modelo que califica produce una decisión con efectos jurídicos controvertibles (art. 29). El que habla produce un texto que alguien adopta como propio, sin acto que impugnar. El sesgo de automatización convierte la sugerencia en decisión de hecho.</p></div>
+    <div class="pie"><span><b>Derecho y Tecnología · Corte 2</b> · Preguntas de repaso</span><span>Juan David Vanegas Roldán · <a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 15</span></div>
+  </div>
+</section>
+
+<!-- ============================== 16 · LO ESENCIAL ============================== -->
+<section class="pagina cruces">
+  <svg class="constelacion" data-paleta="academy" data-semilla="31" data-zona="440,40,770,150" data-nodos="8" viewBox="0 0 794 1123" aria-hidden="true" style="opacity:.55"></svg>
+  <div class="brillo" style="width:800px;height:800px;right:-340px;bottom:-340px;background:radial-gradient(circle, rgba(0,196,204,.2), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">08</span> Para repasar</div>
+    <h2>Lo esencial<br><b>en diez frases.</b></h2>
+
+    <div class="tarjeta" style="margin-top:14px;padding:2px 18px">
+      <div class="frase"><span>01</span><div>Un <b style="color:var(--tinta)">modelo</b> es una realidad recortada: el recorte contiene las prioridades de quien modela. El <b style="color:var(--tinta)">sustituto</b> es la puerta de la discriminación.</div></div>
+      <div class="frase"><span>02</span><div>Arma de destrucción matemática = <b style="color:var(--tinta)">opacidad + escala + daño</b>, reforzadas por el bucle de retroalimentación.</div></div>
+      <div class="frase"><span>03</span><div>El hábeas data corrige <b style="color:var(--tinta)">datos</b>, no modelos. El art. 29 exige motivación. Colombia no tiene equivalente al art. 22 del RGPD.</div></div>
+      <div class="frase"><span>04</span><div>El sesgo <b style="color:var(--tinta)">se hereda, se sustituye y se obedece</b>. Casi todo es discriminación indirecta (art. 13): se juzga el efecto.</div></div>
+      <div class="frase"><span>05</span><div><b style="color:var(--tinta)">T-067/2025</b>: el Estado debe justificar su opacidad. <b style="color:var(--tinta)">T-323/2024</b>: la IA asiste, no decide. Frente a privados, la laguna sigue.</div></div>
+      <div class="frase"><span>06</span><div>Un LLM es una red de <b style="color:var(--tinta)">pesos</b> ajustados con datos que predice el siguiente token. Alucina porque produce lo plausible, no lo verdadero.</div></div>
+      <div class="frase"><span>07</span><div>Su imprevisibilidad es <b style="color:var(--tinta)">incompletitud</b>: marco (Kelsen), penumbra (Hart), límites formales (Gödel, Turing).</div></div>
+      <div class="frase"><span>08</span><div>Big Data: del todo, del desorden, de la correlación. <b style="color:var(--tinta)">Transparencia para el poder, privacidad para las personas.</b></div></div>
+      <div class="frase"><span>09</span><div>El contrato digital es <b style="color:var(--tinta)">texto jurídico + datos estructurados</b>, con núcleo determinista e IA en los bordes; vale por consensualidad y Ley 527/99.</div></div>
+      <div class="frase"><span>10</span><div>Un smart contract <b style="color:var(--tinta)">ejecuta, no acuerda</b>: vive dentro de un contrato, no en su lugar.</div></div>
+    </div>
+
+    <h4 style="margin-top:14px">Mapa normativo del corte</h4>
+    <table class="tabla">
+      <tr><th style="width:24%">Fuente</th><th>Qué dice, en una línea</th><th style="width:12%">Sesión</th></tr>
+      <tr><td>Arts. 13, 15 y 29 C. P.</td><td>Igualdad (discriminación indirecta) · intimidad y hábeas data · debido proceso</td><td>S6, S7, S9</td></tr>
+      <tr><td>Leyes 1266/2008 y 1581/2012</td><td>Hábeas data financiero · régimen general de datos personales y datos sensibles</td><td>S6, S7, S9</td></tr>
+      <tr><td>Ley 527 de 1999</td><td>Mensajes de datos, equivalencia funcional y valor probatorio</td><td>S10</td></tr>
+      <tr><td>Decreto 2364 de 2012</td><td>Firma electrónica (compilado en el Decreto 1074 de 2015)</td><td>S10</td></tr>
+      <tr><td>Arts. 1495 y 1500 C. C. · 824 C. Co.</td><td>Definición de contrato y consensualidad civil y mercantil</td><td>S10, S11</td></tr>
+      <tr><td>T-323/2024 · T-067/2025</td><td>Asistir no es decidir · la opacidad del Estado debe justificarse</td><td>S6, S7</td></tr>
+      <tr><td>CONPES 4144 de 2025</td><td>Política Nacional de IA (orienta, no obliga)</td><td>S6, S7</td></tr>
+      <tr><td>Res. SIC 78798 de 2025</td><td>Intervención en el caso Worldcoin (datos biométricos)</td><td>S9</td></tr>
+      <tr><td>Art. 22 RGPD · Reglamento UE de IA</td><td>No ser objeto de decisiones solo automatizadas · sistemas por niveles de riesgo</td><td>S6, S7, S8</td></tr>
+    </table>
+    <p class="texto" style="margin-top:10px">Este mapa recoge la regla de cada fuente, no su texto. <span class="tenue">Lean las sentencias completas en la relatoría de la Corte Constitucional y verifiquen el estado de los proyectos de ley antes de citarlos.</span> El Corte 3 empieza el 21 de octubre con <b class="nar">IA práctica para el abogado</b>.</p>
+
+    <div class="pie" style="border-top:1px solid var(--borde);padding-top:16px">
+      <span class="logo"><img src="../public/marcas/trifuerza/logo-horizontal-claro.png" alt="Trifuerza" style="height:22px"><span class="sep" style="height:18px"></span><span class="linea" style="font-size:10.5px">Academy</span></span>
+      <span>Juan David Vanegas Roldán · <a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 16</span>
+    </div>
+  </div>
+</section>
+
+<script>window.TERMINOS_PROPUESTA = {
+  tech: ['LLM', 'token', 'pesos', 'hash', 'blockchain', 'Big Data', '{ }'],
+  law: ['§', 'Art. 13 C. P.', 'Art. 29 C. P.', 'T-323/2024', 'T-067/2025', 'Ley 527', 'hábeas data'],
+  design: ['sesgo', 'proxy', 'opacidad', 'escala', 'daño', '✦', '△'],
+};</script>
+<script src="kit/constelacion.js"></script>
+<script src="kit/pdf-limpio.js"></script>
+</body>
+</html>

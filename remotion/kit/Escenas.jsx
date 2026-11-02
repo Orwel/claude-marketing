@@ -30,7 +30,7 @@ const Fila = ({ t, icono, texto, detalle, derecha, resaltar, estilo }) => (
     {icono ? <Ico nombre={icono} tamano={26} color={t.acentoTexto} /> : null}
     <div style={{ flex: 1, minWidth: 0 }}>
       <div style={{ ...txt(t, 'enfasis'), fontSize: 24, color: t.tinta, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{texto}</div>
-      {detalle ? <div style={{ ...txt(t), fontSize: 17, color: t.tenue, marginTop: 3, fontFamily: detalle.mono ? t.mono : undefined }}>{detalle.texto ?? detalle}</div> : null}
+      {detalle ? <div style={{ ...txt(t), fontSize: 17, color: t.tenue, marginTop: 3, ...(detalle.mono ? { fontFamily: t.mono } : {}) }}>{detalle.texto ?? detalle}</div> : null}
     </div>
     {derecha}
   </div>
@@ -277,7 +277,7 @@ export const Avisos = ({ b, ancho, alto }) => {
                   <span>{n.hora ?? 'ahora'}</span>
                 </div>
                 <div style={{ ...txt(t, 'enfasis'), fontSize: 23, color: t.tinta, marginTop: 2 }}>{n.titulo}</div>
-                {n.texto ? <div style={{ ...txt(t), fontSize: 19, color: t.tenue, fontFamily: n.mono ? t.mono : undefined }}>{n.texto}</div> : null}
+                {n.texto ? <div style={{ ...txt(t), fontSize: 19, color: t.tenue, ...(n.mono ? { fontFamily: t.mono } : {}) }}>{n.texto}</div> : null}
               </div>
             </div>
           );

@@ -1,0 +1,67 @@
+{
+  "slug": "c32-ctp-de-la-empresa",
+  "titulo": "Contrappto: los contratos son de la empresa",
+  "plantilla": "Carrusel",
+  "tipo": "carrusel",
+  "formato": "carrusel",
+  "segundos": 6,
+  "cuentas": [
+    "contrappto"
+  ],
+  "pie": "Agenda una demo de 20 min",
+  "laminas": [
+    {
+      "metafora": "burbujas",
+      "datos": {
+        "items": [
+          "¿Quién tiene el contrato de X?",
+          "Lo tenía el que se fue",
+          "Búscalo en su correo"
+        ]
+      },
+      "antetitulo": "Te suena",
+      "titulo": "El contrato vivía en el correo *de quien lo hizo.*"
+    },
+    {
+      "metafora": "caja",
+      "datos": {
+        "etiqueta": "Todo en un solo lugar"
+      },
+      "antetitulo": "Con Contrappto",
+      "titulo": "Los contratos son *de la empresa.*",
+      "texto": "No de quien los hizo."
+    },
+    {
+      "metafora": "tablero",
+      "datos": {
+        "titulo": "Contratos de la empresa",
+        "alerta": 4
+      },
+      "antetitulo": "Aunque el responsable ya no esté",
+      "titulo": "Ves todo lo firmado, *siempre.*"
+    },
+    {
+      "metafora": "pasos",
+      "datos": {
+        "items": [
+          "Agendas",
+          "20 minutos",
+          "Ves tu tablero"
+        ]
+      },
+      "antetitulo": "Siguiente paso",
+      "titulo": "Te mostramos el tablero *en 20 minutos.*"
+    }
+  ],
+  "variantes": {
+    "contrappto": {
+      "copy": "«¿Quién tiene el contrato?» «Lo tenía el que se fue.»\n\nCon Contrappto los contratos son de la empresa, no de quien los hizo. Ves todo lo firmado aunque el responsable ya no esté.\n\nAgenda una demo de 20 minutos."
+    }
+  },
+  "verificar": [
+    {
+      "dato": "Propiedad y trazabilidad de contratos en Contrappto: confirmar contra el producto.",
+      "estado": "pendiente"
+    }
+  ]
+}

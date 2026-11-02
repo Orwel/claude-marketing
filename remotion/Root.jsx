@@ -4,6 +4,14 @@ import { MARCAS, PIEZAS, idComposicion } from './catalogo.js';
 import { formatoDe, lineaMontaje } from './montaje/linea.js';
 import { Animado } from './plantillas/Animado.jsx';
 import { Brochure } from './plantillas/Brochure.jsx';
+import { Capas } from './plantillas/Capas.jsx';
+import { Tinta } from './plantillas/Tinta.jsx';
+import { Archivo } from './plantillas/Archivo.jsx';
+import { Escalera3D } from './tinta/Escalera3D.jsx';
+import { DURACION_N01, PantallaCarga } from './n01/PantallaCarga.jsx';
+import { CiudadValla, DURACION_N01V2 } from './n01/CiudadValla.jsx';
+import { Grabado } from './plantillas/Grabado.jsx';
+import { PortadaEditorial } from './tinta/PortadaEditorial.jsx';
 import { Carrusel } from './plantillas/Carrusel.jsx';
 import { Portada, PortadaAnterior } from './plantillas/Portada.jsx';
 import { Montaje } from './plantillas/Montaje.jsx';
@@ -35,7 +43,7 @@ async function conVoz({ props }) {
 }
 
 const FPS = 30;
-const PLANTILLAS = { Animado, Vertical, Brochure };
+const PLANTILLAS = { Animado, Vertical, Brochure, Capas, Tinta, Archivo, Grabado };
 
 /**
  * Una composicion por cada pieza × cuenta. Se agrupan por mes en el Studio,
@@ -46,6 +54,13 @@ export const Root = () => {
   return (
     <>
       <Folder name="lab">
+ <Composition id="portada-jd-kafka" component={PortadaEditorial} fps={FPS} width={1080} height={1920} durationInFrames={1}
+          defaultProps={{ titular: ['Kafka', 'era', '*abogado.*'], etiqueta: 'kafkiano', serie: 'Derecho que nadie te explica', firma: 'N.º 01', trazos: 'kafka/trazos-kafka.json', logo: 'marcas/trifuerza/logo-horizontal-oscuro.png' }} />
+        <Composition id="n01v2--juanda" component={CiudadValla} fps={FPS} width={1080} height={1920} durationInFrames={DURACION_N01V2} defaultProps={{}} />
+        {/* Prueba de plano de 5 s: «No era un problema técnico. Era una patente.» */}
+        <Composition id="n01v2-prueba" component={CiudadValla} fps={FPS} width={1080} height={1920} durationInFrames={150} defaultProps={{ desde: 390 }} />
+        <Composition id="n01--juanda" component={PantallaCarga} fps={FPS} width={1080} height={1920} durationInFrames={DURACION_N01} defaultProps={{}} />
+        <Composition id="lab-kafka-escalera" component={Escalera3D} fps={FPS} width={1080} height={1920} durationInFrames={180} defaultProps={{}} />
         {['trifuerza', 'moneda', 'mundo'].map((escena) => (
           <Composition key={escena} id={`lab-arcade-${escena}`} component={LabArcade} fps={FPS} width={1080} height={1920} durationInFrames={90} defaultProps={{ marca: MARCAS.juanda, escena }} />
         ))}
@@ -229,17 +244,6 @@ function composicionesClase() {
             <Composition key={`${id}--${nombre}-16x9`} id={`${id}--${nombre}-16x9`} component={Viaje} {...base} durationInFrames={cuadrosViaje(clase, lista)} defaultProps={{ clase, lista, musica: `trailer/musica-${nombre}.wav` }} />,
             <Composition key={`${id}--${nombre}-9x16`} id={`${id}--${nombre}-9x16`} component={Viaje} fps={FPS} width={1080} height={1920} durationInFrames={cuadrosViaje(clase, lista)} defaultProps={{ clase, lista, musica: `trailer/musica-${nombre}.wav` }} />,
           ]),
-        // Versiones en dólares para pauta en toda Latinoamérica (29-oct): mismas escenas y pista, precio en USD aproximado.
-        ...[['viaje2USD', 'viaje-v2-usd', 'viaje-v2'], ['viajePrecio2USD', 'viaje-precio-v2-usd', 'viaje-precio-v2'], ['promoGanchoUSD', 'promo-gancho-usd', 'promo-gancho'], ['promoPrecioUSD', 'promo-precio-usd', 'promo-precio']]
-          .filter(([lista]) => clase.venta[lista])
-          .flatMap(([lista, nombre, pista]) => [
-            <Composition key={`${id}--${nombre}-16x9`} id={`${id}--${nombre}-16x9`} component={Viaje} {...base} durationInFrames={cuadrosViaje(clase, lista)} defaultProps={{ clase, lista, musica: `trailer/musica-${pista}.wav`, sello: clase.venta.insigniaUSD }} />,
-            <Composition key={`${id}--${nombre}-9x16`} id={`${id}--${nombre}-9x16`} component={Viaje} fps={FPS} width={1080} height={1920} durationInFrames={cuadrosViaje(clase, lista)} defaultProps={{ clase, lista, musica: `trailer/musica-${pista}.wav`, sello: clase.venta.insigniaUSD }} />,
-          ]),
-        ...(clase.venta.carruselViaje8USD ? [
-          <Composition key={`${id}--carrusel-viaje-8-usd`} id={`${id}--carrusel-viaje-8-usd`} component={Viaje} fps={FPS} width={1080} height={1350} durationInFrames={cuadrosViaje(clase, 'carruselViaje8USD')}
-            defaultProps={{ clase, lista: 'carruselViaje8USD', musica: 'trailer/musica-lamina.wav' }} />,
-        ] : []),
         // Carrusel de posts (4:5) al estilo del viaje: una composición por lámina (venta.carruselViaje).
         ...(clase.venta.carruselViaje ?? []).map((_, i) => (
           <Composition key={`${id}--carrusel-viaje-${i + 1}`} id={`${id}--carrusel-viaje-${i + 1}`} component={Viaje} fps={FPS} width={1080} height={1350} durationInFrames={cuadrosViaje(clase, `carruselViaje.${i}`)}

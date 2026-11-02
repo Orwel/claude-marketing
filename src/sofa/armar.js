@@ -274,6 +274,22 @@ const piezas = readdirSync(CARPETA_PIEZAS)
 const aCuadros = (s) => Math.round(s * FPS);
 const DURACIONES = { titulo: 2.8, nivel: 1.5, final: 2.4 };
 
+/**
+ * Locucion grabada aparte sobre una escena sin metraje (titulo, final): `voz: { archivo, en }` con el audio en
+ * public/ y, al lado, `<archivo>.json` con las palabras y sus tiempos ({ text, startMs, endMs }). La escena se
+ * alarga hasta que la voz termina y se lee la ultima pagina (sofa-emprendedores, 19-oct-2026: "Conoce Bélula…").
+ */
+function conVoz(escena) {
+  if (!escena.voz) return escena;
+  const audio = path.join(RAIZ, 'public', escena.voz.archivo);
+  const palabras = JSON.parse(readFileSync(audio.replace(/\.\w+$/, '.json'), 'utf8'));
+  const en = escena.voz.en ?? 0.5;
+  const subtitulos = palabras.map((p) => ({ ...p, quien: p.quien ?? 'jd', startMs: Math.round(p.startMs + en * 1000), endMs: Math.round(p.endMs + en * 1000) }));
+  const fin = Math.max(en + duracionDe(audio), subtitulos.at(-1).endMs / 1000 + 0.9);
+  console.log(`  ${escena.tipo} con voz ${escena.voz.archivo}: «${palabras.map((p) => p.text.trim()).join(' ')}»`);
+  return { ...escena, cuadros: Math.max(escena.cuadros, aCuadros(fin)), subtitulos };
+}
+
 for (const { ruta, pieza } of piezas) {
   console.log(`\n▶ ${pieza.slug} · ${pieza.titulo}`);
   const avisos = [];
@@ -316,15 +332,15 @@ for (const { ruta, pieza } of piezas) {
       escenas.push({ ...e, inicio, cuadros });
       cursor += cuadros;
     } else {
-      const cuadros = aCuadros(e.segundos ?? DURACIONES[e.tipo] ?? 2);
-      escenas.push({ ...e, inicio, cuadros });
-      cursor += cuadros;
+      const generada = conVoz({ ...e, inicio, cuadros: aCuadros(e.segundos ?? DURACIONES[e.tipo] ?? 2) });
+      escenas.push(generada);
+      cursor += generada.cuadros;
     }
   }
-  // Tarjeta final con la firma y el CTA, como en todos los videos del estudio.
-  const final = aCuadros(DURACIONES.final);
-  escenas.push({ tipo: 'final', inicio: cursor, cuadros: final });
-  cursor += final;
+  // Tarjeta final con la firma y el CTA, como en todos los videos del estudio (`pieza.final.voz`: locucion encima).
+  const final = conVoz({ ...(pieza.final ?? {}), tipo: 'final', inicio: cursor, cuadros: aCuadros(pieza.final?.segundos ?? DURACIONES.final) });
+  escenas.push(final);
+  cursor += final.cuadros;
   for (const a of avisos) console.log(`  ⚠ ${a}`);
   const generado = { escenas, total: cursor, avisos };
   writeFileSync(ruta, JSON.stringify({ ...pieza, generado }, null, 2) + '\n');

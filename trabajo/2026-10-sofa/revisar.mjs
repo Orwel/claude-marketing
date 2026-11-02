@@ -11,6 +11,7 @@ for (const f of readdirSync('piezas/2026-10').filter((x) => x.startsWith('sofa-'
   const problemas = [];
   for (const [n, e] of l.escenas.entries()) {
     if (!e.paginas) continue;
+    e.golpes ??= []; // titulo y final con locucion: dialogo sin golpes
     const enGolpe = new Set(e.golpes.flatMap((g) => g.palabras.map((w) => w.startMs)));
     const enCaja = new Set(e.paginas.flatMap((pg) => pg.tokens.map((t) => t.startMs)));
     for (const s of normalizar(e.subtitulos)) {

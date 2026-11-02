@@ -6,6 +6,7 @@ import { Vidrio as VidrioBase } from '../graficos/base.jsx';
 import { useMarca } from '../marca.js';
 import { conAlfa, partirPalabras } from '../util.js';
 import { Escena } from '../kit/Escenas.jsx';
+import { Certificado as Hoja } from '../componentes/Certificado.jsx';
 
 /**
  * Beats graficos de la plantilla Montaje. Reglas del estudio (prompt de
@@ -340,4 +341,30 @@ export const Pantalla = ({ b, ancho, alto }) => {
   );
 };
 
-export const BEATS = { lista: Lista, pasos: Pasos, cifra: Cifra, comparativa: Comparativa, cita: Cita, tarjeta: Tarjeta, libro: Libro, correos: Correos, espejismo: Espejismo, pantalla: Pantalla, escena: Escena };
+/**
+ * El certificado de Trifuerza Academy, tal cual el real, con el sello de "gratis":
+ * para cuando se nombra la clase. Los datos salen de la marca (montaje.certificado).
+ */
+export const CertificadoBeat = ({ ancho, alto }) => {
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const marca = useMarca();
+  const c = marca.montaje?.certificado;
+  if (!c) return null;
+  const a = resorte(frame, 0, fps);
+  const ancho2 = Math.min(ancho, alto * (1154 / 815));
+  const sello = spring({ frame: frame - 26, fps, config: { damping: 9, stiffness: 240, mass: 0.6 } });
+  const sobreAcento = marca.claro || marca.id === 'contrappto' ? '#FFFFFF' : marca.colores.fondo;
+  return (
+    <div style={{ width: ancho, height: alto, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+      <div style={{ position: 'relative', ...subir(a, 40), filter: 'drop-shadow(0 24px 48px rgba(0,0,0,.45))' }}>
+        <Hoja c={c} ancho={ancho2} desde={2} />
+        <div style={{ position: 'absolute', right: -18, top: -28, transform: `rotate(${8 - (1 - sello) * 30}deg) scale(${Math.max(0, sello)})`, padding: '12px 22px', borderRadius: 999, background: marca.colores.acento, boxShadow: `0 12px 30px ${conAlfa(marca.colores.acento, 0.45)}`, whiteSpace: 'nowrap' }}>
+          <span style={{ ...fuente(marca.fuentes.enfasis), fontSize: 28, color: sobreAcento, textTransform: 'uppercase', letterSpacing: '0.04em' }}>{c.sello}</span>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const BEATS = { certificado: CertificadoBeat, lista: Lista, pasos: Pasos, cifra: Cifra, comparativa: Comparativa, cita: Cita, tarjeta: Tarjeta, libro: Libro, correos: Correos, espejismo: Espejismo, pantalla: Pantalla, escena: Escena };

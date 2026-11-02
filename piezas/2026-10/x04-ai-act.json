@@ -2865,5 +2865,13 @@
       "en": "próximo",
       "estilo": "serif"
     }
-  ]
+  ],
+  "variantes": {
+    "juanda": {
+      "portada": "El AI Act y los *niveles de riesgo*"
+    },
+    "trifuerza": {
+      "portada": "El AI Act y los *niveles de riesgo*"
+    }
+  }
 }

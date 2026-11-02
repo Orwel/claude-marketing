@@ -1,0 +1,192 @@
+{
+  "slug": "stories-juanda",
+  "titulo": "Stories animadas de juanda",
+  "plantilla": "Carrusel",
+  "tipo": "historias",
+  "formato": "vertical",
+  "segundos": 7,
+  "cuentas": [
+    "juanda"
+  ],
+  "laminas": [
+    {
+      "id": "h01-encuesta-inventa",
+      "metafora": "espejismo",
+      "antetitulo": "Encuesta",
+      "titulo": "¿Sabes por qué la IA *se inventa sentencias?*",
+      "texto": "Responde aquí abajo."
+    },
+    {
+      "id": "h02-caja-preguntas",
+      "metafora": "burbujas",
+      "datos": {
+        "items": [
+          "¿Puedo subir documentos?",
+          "¿Cuál compro?",
+          "¿Me reemplaza?"
+        ]
+      },
+      "antetitulo": "Clase del 27",
+      "titulo": "¿Qué quieres que *responda en vivo?*",
+      "texto": "Déjame tu pregunta."
+    },
+    {
+      "id": "h03-encuesta-usas",
+      "metafora": "autocompletar",
+      "datos": {
+        "frase": "En mi trabajo uso IA para",
+        "opciones": [
+          [
+            "redactar",
+            44
+          ],
+          [
+            "resumir",
+            31
+          ],
+          [
+            "nada todavía",
+            25
+          ]
+        ]
+      },
+      "antetitulo": "Encuesta",
+      "titulo": "¿Has usado IA *para el trabajo?*"
+    },
+    {
+      "id": "h04-manana-registro",
+      "metafora": "calendario",
+      "datos": {
+        "dia": 5,
+        "etiqueta": "Abre el registro"
+      },
+      "antetitulo": "Clase en vivo · 27 oct",
+      "titulo": "Mañana abre *el registro.*"
+    },
+    {
+      "id": "h05-registro-abierto",
+      "metafora": "boleto",
+      "datos": {
+        "fecha": "MAR 27 OCT · 7:00 P.M.",
+        "insignia": "ABIERTO"
+      },
+      "antetitulo": "Ya puedes inscribirte",
+      "titulo": "Registro *abierto.*",
+      "pie": "Link en mi perfil"
+    },
+    {
+      "id": "h06-certificado",
+      "metafora": "certificado",
+      "antetitulo": "Gratis",
+      "titulo": "Y te llevas *certificado.*",
+      "pie": "Link en mi perfil"
+    },
+    {
+      "id": "h07-dato-cita",
+      "metafora": "lupa",
+      "antetitulo": "Dato",
+      "titulo": "Una cita inventada *se ve perfecta.*",
+      "texto": "Por eso se verifica siempre."
+    },
+    {
+      "id": "h08-regla",
+      "metafora": "balanza",
+      "antetitulo": "La regla",
+      "titulo": "Transforma bien. *Recuerda mal.*"
+    },
+    {
+      "id": "h09-faltan-15",
+      "metafora": "reloj",
+      "datos": {
+        "numero": 15
+      },
+      "antetitulo": "Clase en vivo",
+      "titulo": "Faltan *15 días.*",
+      "pie": "Link en mi perfil"
+    },
+    {
+      "id": "h10-faltan-7",
+      "metafora": "reloj",
+      "datos": {
+        "numero": 7
+      },
+      "antetitulo": "Clase en vivo",
+      "titulo": "Falta *una semana.*",
+      "pie": "Link en mi perfil"
+    },
+    {
+      "id": "h11-pasado-manana",
+      "metafora": "calendario",
+      "datos": {
+        "hoy": 25,
+        "etiqueta": "Pasado mañana"
+      },
+      "antetitulo": "Martes 27 · 7 p.m.",
+      "titulo": "Es *pasado mañana.*",
+      "pie": "Link en mi perfil"
+    },
+    {
+      "id": "h12-manana",
+      "metafora": "reloj",
+      "datos": {
+        "numero": 1,
+        "unidad": "día"
+      },
+      "antetitulo": "Clase en vivo",
+      "titulo": "Es *mañana.*",
+      "texto": "Revisa tu correo: ahí llega el acceso."
+    },
+    {
+      "id": "h13-hoy",
+      "metafora": "boleto",
+      "datos": {
+        "fecha": "MAR 27 OCT · 7:00 P.M.",
+        "insignia": "HOY"
+      },
+      "antetitulo": "Hoy · 7:00 p.m.",
+      "titulo": "Nos vemos *esta noche.*",
+      "pie": "Link en mi perfil"
+    },
+    {
+      "id": "h14-en-30-min",
+      "metafora": "reloj",
+      "datos": {
+        "numero": 30,
+        "unidad": "minutos"
+      },
+      "antetitulo": "Clase en vivo",
+      "titulo": "Empezamos *en 30 minutos.*"
+    },
+    {
+      "id": "h15-en-vivo",
+      "metafora": "vivo",
+      "datos": {
+        "texto": "EN VIVO"
+      },
+      "antetitulo": "Ya empezamos",
+      "titulo": "Entra *ahora.*",
+      "pie": "Link en mi perfil"
+    },
+    {
+      "id": "h16-gracias",
+      "metafora": "certificado",
+      "antetitulo": "Gracias",
+      "titulo": "Gracias por estar. *Revisa tu correo.*",
+      "texto": "Ahí te llega lo que sigue."
+    }
+  ],
+  "verificar": [
+    {
+      "dato": "Clase en vivo «Fundamentos para la Inteligencia Artificial»: martes 27 de octubre de 2026, 7:00 p.m. hora Colombia, gratis.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Certificado gratuito: quién lo emite (¿Trifuerza Academy?) y qué condiciones tiene.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Registro: link en el perfil, abre el lunes 5 de octubre.",
+      "estado": "pendiente"
+    }
+  ]
+}

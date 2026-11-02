@@ -1,0 +1,60 @@
+{
+  "slug": "c06-no-se-ve",
+  "titulo": "El problema es que no se ve",
+  "plantilla": "Carrusel",
+  "tipo": "carrusel",
+  "formato": "carrusel",
+  "segundos": 6,
+  "cuentas": [
+    "juanda"
+  ],
+  "pie": "¿Tú para qué la usas?",
+  "laminas": [
+    {
+      "metafora": "espejismo",
+      "antetitulo": "La tesis",
+      "titulo": "El problema no es que se equivoque. *Es que no se ve.*"
+    },
+    {
+      "metafora": "lupa",
+      "datos": {
+        "etiqueta": "Se ve real"
+      },
+      "antetitulo": "Por qué engaña",
+      "titulo": "Formato correcto, fecha verosímil, *sala que existe.*",
+      "texto": "Una sentencia inventada se ve mejor que las reales."
+    },
+    {
+      "metafora": "semaforo",
+      "antetitulo": "Qué hacer",
+      "titulo": "Entender el mecanismo es *decidir cuándo verificar.*"
+    },
+    {
+      "metafora": "brujula",
+      "datos": {
+        "etiqueta": "Tu criterio"
+      },
+      "antetitulo": "Si no",
+      "titulo": "Dependes de que un vendedor te diga *qué botón apretar.*"
+    },
+    {
+      "metafora": "burbujas",
+      "datos": {
+        "items": [
+          "Para redactar",
+          "Para resumir expedientes",
+          "Todavía no la uso"
+        ]
+      },
+      "antetitulo": "Te leo",
+      "titulo": "¿Tú ya la usas? *¿Para qué?*",
+      "texto": "Cuéntamelo en los comentarios."
+    }
+  ],
+  "variantes": {
+    "juanda": {
+      "copy": "El problema no es que la inteligencia artificial se equivoque. Es que no se ve cuándo lo hace.\n\nUna sentencia inventada trae número con el formato correcto, fecha verosímil y una sala que existe. Se ve mejor que las reales.\n\nPor eso entender el mecanismo no es curiosidad técnica: es lo que te permite decidir cuándo verificar.\n\n¿Tú ya la usas en tu trabajo? ¿Para qué exactamente?"
+    }
+  },
+  "verificar": []
+}

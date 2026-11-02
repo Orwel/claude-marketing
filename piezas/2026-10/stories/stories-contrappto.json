@@ -1,0 +1,76 @@
+{
+  "slug": "stories-contrappto",
+  "titulo": "Stories animadas de contrappto",
+  "plantilla": "Carrusel",
+  "tipo": "historias",
+  "formato": "vertical",
+  "segundos": 7,
+  "cuentas": [
+    "contrappto"
+  ],
+  "laminas": [
+    {
+      "id": "h30-fecha",
+      "metafora": "alarma",
+      "datos": {
+        "etiqueta": "Vencimiento",
+        "aviso": "Vence en 5 días"
+      },
+      "antetitulo": "Contrappto",
+      "titulo": "No se te pasa *una fecha.*"
+    },
+    {
+      "id": "h31-encuesta-donde",
+      "metafora": "burbujas",
+      "datos": {
+        "items": [
+          "En el correo",
+          "En un Excel",
+          "En una carpeta"
+        ]
+      },
+      "antetitulo": "Encuesta",
+      "titulo": "¿Dónde viven hoy *tus contratos?*"
+    },
+    {
+      "id": "h32-firma-verificada",
+      "metafora": "firmas",
+      "datos": {
+        "numero": 200
+      },
+      "antetitulo": "Contrappto",
+      "titulo": "Firma con *verificación de identidad.*"
+    },
+    {
+      "id": "h33-tablero",
+      "metafora": "tablero",
+      "datos": {
+        "titulo": "Contratos de la empresa",
+        "alerta": 3
+      },
+      "antetitulo": "Contrappto",
+      "titulo": "Todo lo firmado, *en un tablero.*",
+      "pie": "contrappto.com"
+    },
+    {
+      "id": "h34-demo",
+      "metafora": "pasos",
+      "datos": {
+        "items": [
+          "Agendas",
+          "20 minutos",
+          "Ves tu tablero"
+        ]
+      },
+      "antetitulo": "¿Más de 50 contratos al año?",
+      "titulo": "Demo de *20 minutos.*",
+      "pie": "contrappto.com"
+    }
+  ],
+  "verificar": [
+    {
+      "dato": "Firma con verificación de identidad, tablero y alertas de Contrappto: confirmar contra el producto.",
+      "estado": "pendiente"
+    }
+  ]
+}

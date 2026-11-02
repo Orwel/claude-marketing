@@ -1,0 +1,282 @@
+{
+  "slug": "brochure-trifuerza-legal",
+  "titulo": "Brochure de Trifuerza Legal en video",
+  "pilar": "Trifuerza Legal",
+  "plantilla": "Brochure",
+  "formatos": [
+    "vertical",
+    "horizontal"
+  ],
+  "estado": "borrador · no publicar hasta verificar",
+  "cuentas": [
+    "trifuerza"
+  ],
+  "bpm": 100,
+  "transicion": "barrido",
+  "pista": true,
+  "volumenPista": 0.85,
+  "_fuente": "Mismo contenido que brochures/trifuerza-legal.html: BMC de Trifuerza Legal del FigJam (24-sep-2026) y módulos de trifuerza.co/legal.",
+  "marca": {
+    "_por": "Trifuerza Legal tiene su mundo visual dentro de la cuenta trifuerza: dorado sobre casi negro (ver ESTANDAR / APRENDIZAJES 28-sep).",
+    "colores": {
+      "fondo": "#030712",
+      "fondo2": "#0B1220",
+      "tinta": "#F9FAFB",
+      "tenue": "#9CA3AF",
+      "acento": "#C9A227",
+      "secundario": "#C9A227",
+      "alerta": "#E8C547",
+      "linea": "#1F2937"
+    },
+    "web": {
+      "titulo": "Trifuerza Legal",
+      "acentoTexto": "#E8C547",
+      "panel": "#111827",
+      "borde": "#1F2937",
+      "fondo": "#030712"
+    }
+  },
+  "escenas": [
+    {
+      "tipo": "portada",
+      "segundos": 4.5,
+      "antetitulo": "Trifuerza Legal",
+      "titulo": "No se te pasa *un término.*",
+      "texto": "Gestión integral para firmas de abogados."
+    },
+    {
+      "tipo": "capitulo",
+      "segundos": 6,
+      "antetitulo": "La promesa",
+      "titulo": "La Rama vigilada *todos los días*",
+      "kit": {
+        "escena": "tabla",
+        "ventana": "Trifuerza Legal",
+        "paso": 6,
+        "items": [
+          {
+            "icono": "Scale",
+            "texto": "Demanda laboral",
+            "detalle": "Rad. ••••• / 20••",
+            "mono": true,
+            "estado": "Activo",
+            "critico": true
+          },
+          {
+            "icono": "Scale",
+            "texto": "Proceso ejecutivo",
+            "detalle": "Rad. ••••• / 20••",
+            "mono": true,
+            "estado": "Al día",
+            "tono": "ok"
+          },
+          {
+            "icono": "Scale",
+            "texto": "Acción de tutela",
+            "detalle": "Rad. ••••• / 20••",
+            "mono": true,
+            "estado": "Al día",
+            "tono": "ok"
+          },
+          {
+            "alerta": true,
+            "texto": "Nueva actuación en radicado crítico",
+            "detalle": "Sincronizado hace 2 min"
+          }
+        ],
+        "itemsCuadros": [
+          4,
+          10,
+          16,
+          50
+        ]
+      }
+    },
+    {
+      "tipo": "capitulo",
+      "segundos": 5,
+      "antetitulo": "Alertas",
+      "titulo": "Te avisa por *Telegram y correo*",
+      "texto": "Apenas hay una actuación nueva, antes de que corra el término.",
+      "kit": {
+        "escena": "avisos",
+        "alto": 460,
+        "items": [
+          {
+            "app": "telegram",
+            "titulo": "Nueva actuación · Demanda laboral",
+            "texto": "Rad. ••••• / 20••",
+            "mono": true
+          },
+          {
+            "app": "correo",
+            "titulo": "Trifuerza Legal: actuación registrada",
+            "texto": "Revísala antes de que corra el término"
+          }
+        ]
+      }
+    },
+    {
+      "tipo": "capitulo",
+      "segundos": 5.5,
+      "antetitulo": "Tareas",
+      "titulo": "La actuación se vuelve *tarea del equipo*",
+      "kit": {
+        "escena": "kanban",
+        "alto": 520,
+        "ventana": "Trifuerza Legal",
+        "paso": 18,
+        "items": [
+          {
+            "texto": "Contestar requerimiento",
+            "de": 0,
+            "a": 1
+          },
+          {
+            "texto": "Memorial de pruebas",
+            "de": 1,
+            "a": 2
+          },
+          {
+            "texto": "Poder especial",
+            "de": 0,
+            "a": 2
+          }
+        ]
+      }
+    },
+    {
+      "tipo": "tarjetas",
+      "segundos": 6,
+      "antetitulo": "Módulos",
+      "titulo": "Todo en *una sola plataforma*",
+      "items": [
+        {
+          "icono": "Users",
+          "titulo": "CRM",
+          "texto": "Clientes y formularios de ingreso."
+        },
+        {
+          "icono": "Scale",
+          "titulo": "Judicial",
+          "texto": "Procesos de la Rama, vigilados."
+        },
+        {
+          "icono": "SquareCheckBig",
+          "titulo": "Tareas",
+          "texto": "Kanban ligado a cada proceso."
+        },
+        {
+          "icono": "FileText",
+          "titulo": "Documentos",
+          "texto": "Plantillas y versiones."
+        },
+        {
+          "icono": "PenTool",
+          "titulo": "Firma",
+          "texto": "Con identidad verificada."
+        },
+        {
+          "icono": "HardDrive",
+          "titulo": "Drive",
+          "texto": "Archivos de cada caso."
+        }
+      ]
+    },
+    {
+      "tipo": "tarjetas",
+      "segundos": 5.5,
+      "antetitulo": "Para quién",
+      "titulo": "Del litigante independiente *a la firma*",
+      "items": [
+        {
+          "icono": "User",
+          "titulo": "Litigante independiente",
+          "texto": "Todo tu ejercicio en un solo lugar."
+        },
+        {
+          "icono": "Users",
+          "titulo": "Oficina pequeña",
+          "texto": "El socio ve quién hace qué."
+        },
+        {
+          "icono": "Briefcase",
+          "titulo": "Firma mediana",
+          "texto": "Roles y reportes para el cliente."
+        },
+        {
+          "icono": "GraduationCap",
+          "titulo": "Consultorio jurídico",
+          "texto": "Muchos estudiantes, un solo control."
+        }
+      ]
+    },
+    {
+      "tipo": "planes",
+      "segundos": 7,
+      "antetitulo": "Planes",
+      "titulo": "Un plan base. *Creces con lo que uses.*",
+      "planes": [
+        {
+          "nombre": "Plan Firma",
+          "precio": "$249.000",
+          "periodo": "al mes, por firma de abogados",
+          "destacado": true,
+          "items": [
+            "200 procesos",
+            "5 usuarios",
+            "20 firmas electrónicas"
+          ]
+        },
+        {
+          "nombre": "+ Usuarios",
+          "precio": "$35.000",
+          "periodo": "por usuario adicional",
+          "items": [
+            "Sin cambiar de plan"
+          ]
+        },
+        {
+          "nombre": "+ Procesos",
+          "precio": "$29.000",
+          "periodo": "por cada 50 procesos más",
+          "items": [
+            "Solo cuando los necesites"
+          ]
+        }
+      ],
+      "nota": "Precio fundador: 30 % menos por 12 meses para las primeras 20 firmas."
+    },
+    {
+      "tipo": "cierre",
+      "segundos": 5,
+      "texto": "No se te pasa *un término.*",
+      "cta": "Solicita tu demo",
+      "web": "trifuerza.co/legal"
+    }
+  ],
+  "variantes": {
+    "trifuerza": {
+      "copy": "Trifuerza Legal vigila la Rama Judicial todos los días y te avisa por Telegram y correo apenas hay una actuación nueva. CRM, tareas, documentos y firma en la misma plataforma. Solicita tu demo en trifuerza.co/legal.",
+      "cta": "Solicita tu demo"
+    }
+  },
+  "verificar": [
+    {
+      "dato": "Plan base Firma $249.000/mes por firma de abogados, hasta 200 procesos (decisión de Juan David, 3-oct-2026). Confirmar usuarios (5) y firmas electrónicas (20) incluidos; add-ons: usuario $35.000, 50 procesos $29.000.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Precio fundador: 30 % por 12 meses, primeras 20 cuentas; falta fecha de cierre.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Consulta diaria a la Rama y alertas por Telegram y correo.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Firma con identidad verificada y reportes para clientes en Firma+.",
+      "estado": "pendiente"
+    }
+  ]
+}

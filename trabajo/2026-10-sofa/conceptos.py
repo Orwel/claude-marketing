@@ -355,21 +355,27 @@ piezas.append(dict(base("juanda", "Comenta VIDEO", "juego", serie="SOFA 2026 · 
     verificar=[{"dato": "La Universidad del Rosario autorizó nombrarla (1-oct-2026)", "estado": "verificado"}]))
 
 # ───────────────────────────── SOFA10 · emprendedores (Trifuerza.co)
+# 19-oct-2026: cambio de estrategia. Bélula ganó la página web: el video ya no pide votos. Sale todo lo del concurso
+# ("¿quieres que se gane una página web gratis? Vótalo", el cierre de la votación y Lucía, que era otra concursante) y
+# entran las locuciones de Juan David (Drive `Bodega Arboleda 7` = intro, `10` = outro) y el clip siguiente del stand
+# (140135_450: los productos y el dragón). Lo cortado lo cubre la musica, los barridos y una cortinilla.
 TORNEO = {"participantes": ["Bélula", "Corte del dragón", "Janía Abril", "Cacher Studio"]}
-piezas.append(dict(base("trifuerza", "Vota: link en el perfil", "torneo", serie="SOFA 2026 · TRIFUERZA TECHNOLOGY", intro=TORNEO), slug="sofa-emprendedores", codigo="SOFA10", titulo="Emprendedores del SOFA: ¿quién se gana la página web?", niveles=4, escenas=[
-    titulo(parte="PARTE 1", alto=360),
-    clip("DJI_20261012_140032_602_video.mp4", 0.3, 21.8, P("Bélula", "Artesana de criaturas fantásticas", "bosque", "#58D35A", [("ARTESANÍA", 1), ("FANTASÍA", 1), ("PÁGINA WEB", 0.1)], "Expositora · SOFA 2026", resumen="Amuletos y seres fantásticos"), R(B("140032_602"), 10, (0.35, 0.49)),
-         lados={"jd": "derecha", "p2": "izquierda"}, foco={"jd": {"x": 0.65, "y": 0.33, "escala": 1.3}, "p2": {"x": 0.22, "y": 0.5, "escala": 1.35}}, turnos=[T(0.3, "jd"), T(7.0, "p2")],
-         golpes=[G("amuletos", "AMULETOS", "pastilla"), G("dragones", "DRAGONES", "golpe")], fx=[F("luciernagas", "amuletos", 3), F("fuego", "dragones", 2.4, color="#58D35A")]),
-    clip("DJI_20261012_140032_602_video.mp4", 35.7, 53.2, P("Bélula", "Artesana de criaturas fantásticas", "bosque", "#58D35A", [], "Expositora · SOFA 2026"),
-         lados={"jd": "derecha", "p2": "izquierda"}, foco={"jd": {"x": 0.65, "y": 0.33, "escala": 1.3}, "p2": {"x": 0.3, "y": 0.45, "escala": 1.35}}, turnos=[T(35.7, "p2"), T(43.3, "jd", True), T(47.3, "jd")],
-         golpes=[G("terapeuta", "MI TERAPEUTA", "pastilla"), G("gratis", "PÁGINA WEB GRATIS", "xp"), G("vótalo", "¡VÓTALO!", "golpe")], fx=[F("aura", "Céfira", 2.4, color="#58D35A"), F("estrellas", "gratis", 2.5, lado="centro", quien=None, color="#F2C85B")]),
-    nivel(2, "La corte del dragón", "mision"),
-    clip("DJI_20261012_141027_595_video.mp4", 1.6, 21.8, P("Lucía", "La corte del dragón artesano", "mazmorra", "#B388FF", [("TALLERES", 1), ("MEDIEVAL", 0.9), ("PÁGINA WEB", 0.1)], "Expositora · SOFA 2026", resumen="Talleres con ideas medievales"), R(B("141027_595"), 12, (0.65, 0.5)),
-         foco={"jd": {"x": 0.3, "y": 0.32, "escala": 1.3}, "p2": {"x": 0.62, "y": 0.42, "escala": 1.35}}, turnos=[T(1.6, "jd"), T(3.3, "p2"), T(7.3, "jd"), T(9.8, "p2", True), T(20.3, "jd")],
-         golpes=[G("medievales", "IDEAS MEDIEVALES", "pastilla"), G("recuerdo", "UN RECUERDO BONITO", "xp")], fx=[F("estrellas", "dragón", 2.4, color="#B388FF"), F("corte", "medievales", 1.2, color="#F4EFE6")]),
-    cierre_web],
-    verificar=[{"dato": "Concurso: un comercio del SOFA se gana una página web por votación (lo dice Juan David en cámara); mecánica y enlace por confirmar antes de publicar", "estado": "pendiente"}, {"dato": "Bélula (oído «Vélula»; el letrero del stand dice BÉLU…), Céfira, Lucía: escritura por confirmar", "estado": "pendiente"}]))
+BELULA = lambda stats=(), resumen=None: P("Bélula", "Artesana de criaturas fantásticas", "bosque", "#58D35A", list(stats), "Expositora · SOFA 2026", resumen=resumen)
+piezas.append(dict(base("trifuerza", "ESCRIBENOS POR DM", "torneo", serie="SOFA 2026 · TRIFUERZA TECHNOLOGY", intro={"ganador": "Bélula", "premio": "PÁGINA WEB · TRIFUERZA"}), slug="sofa-emprendedores", codigo="SOFA10", titulo="Conoce Bélula: ganadores de una página web hecha por Trifuerza", niveles=3, escenas=[
+    titulo(voz={"archivo": "sofa/voces/arboleda-7.wav", "en": 0.6}),
+    clip("DJI_20261012_140032_602_video.mp4", 0.3, 44.6, BELULA([("ARTESANÍA", 1), ("FANTASÍA", 1), ("PÁGINA WEB", 1)], "Amuletos y seres fantásticos"), R(B("140032_602"), 10, (0.35, 0.49)),
+         lados={"jd": "derecha", "p2": "izquierda"}, foco={"jd": {"x": 0.65, "y": 0.33, "escala": 1.3}, "p2": {"x": 0.22, "y": 0.5, "escala": 1.35}}, turnos=[T(0.3, "jd"), T(7.0, "p2"), T(43.3, "jd", True)],
+         golpes=[G("amuletos", "AMULETOS", "pastilla"), G("dragones", "DRAGONES", "golpe"), G("gnomos", "GNOMOS", "golpe"), G("sustentable", "NEGOCIO SUSTENTABLE", "xp"), G("terapeuta", "MI TERAPEUTA", "pastilla")],
+         fx=[F("luciernagas", "amuletos", 3), F("fuego", "dragones", 2.4, color="#58D35A"), F("estrellas", "gnomos", 2.4, color="#58D35A"), F("aura", "Céfira", 2.4, color="#58D35A")]),
+    nivel(2, "La tienda de Bélula", "mision"),
+    clip("DJI_20261012_140135_450_video.mp4", 5.0, 16.1, BELULA(), lados={"jd": "centro", "p2": "centro"},
+         foco={"jd": {"x": 0.5, "y": 0.45, "escala": 1.1}, "p2": {"x": 0.5, "y": 0.45, "escala": 1.1}}, turnos=[T(5.0, "jd"), T(9.0, "p2"), T(15.3, "jd", True)],
+         correcciones=[{"de": "chéverees", "a": "chéveres"}, {"de": "labora", "a": "elaboras"}, {"de": "son gracias", "a": "sí, gracias"}],
+         golpes=[G("mano", "HECHO A MANO", "xp")], fx=[F("estrellas", "productos", 2.6, quien=None, lado="centro", color="#58D35A")])],
+    final={"voz": {"archivo": "sofa/voces/arboleda-10.wav", "en": 0.9}},
+    verificar=[{"dato": "Bélula ganó la página web hecha por Trifuerza (lo dice Juan David en la locución; estrategia del 19-oct-2026)", "estado": "pendiente"},
+               {"dato": "Clip 140135_450: Whisper oyó «lo que labora» y «son gracias»; en pantalla va «lo que elaboras» y «sí, gracias». Confirmar al oído", "estado": "pendiente"},
+               {"dato": "Bélula (oído «Vélula»; el letrero del stand dice BÉLU…), Céfira: escritura por confirmar", "estado": "pendiente"}]))
 
 # ───────────────────────────── SOFA11 · emprendedores parte 2 (Trifuerza.co)
 TIENDA = {"productos": ["Pesebres a mano", "Madera y resina", "Piezas 3D de terror", "Coleccionables", "Amuletos", "Talleres medievales"]}
@@ -458,7 +464,7 @@ ACERCAR = {
     ("sofa-mecanica", 7): {"jd": {"x": 0.47, "y": 0.39, "escala": 1.3}}, ("sofa-mecanica-2", 5): {"jd": {"x": 0.47, "y": 0.39, "escala": 1.3}},
     ("sofa-mecanica-2", 2): {"jd": {"x": 0.67, "y": 0.4, "escala": 1.6}, "p2": {"x": 0.37, "y": 0.44, "escala": 1.65}},
     ("sofa-demanda-2", 1): {"jd": {"x": 0.48, "y": 0.35, "escala": 1.3}}, ("sofa-demanda-2", 7): {"jd": {"x": 0.44, "y": 0.32, "escala": 1.3}},
-    ("sofa-emprendedores", 5): {"jd": {"x": 0.47, "y": 0.33, "escala": 1.3}}, ("sofa-emprendedores-2", 6): {"jd": {"x": 0.47, "y": 0.33, "escala": 1.3}},
+    ("sofa-emprendedores-2", 6): {"jd": {"x": 0.47, "y": 0.33, "escala": 1.3}},
     ("sofa-indies", 1): {"jd": {"x": 0.62, "y": 0.4, "escala": 1.3}}, ("sofa-indies-2", 1): {"jd": {"x": 0.3, "y": 0.4, "escala": 1.3}},
 }
 for p in piezas:
@@ -468,6 +474,11 @@ for p in piezas:
 
 # Chiptune con perrengue por video (14-oct-2026, src/audio/chip.js: groove del juego del Claustro). SOFA01/02 sin `chip`.
 CHIP = {}  # variantes descartadas el 14-oct-2026 ("este metodo no nos funciono"): vuelve el chiptune original
+# SOFA10 (19-oct-2026): musica celta grabada, no 8 bits (Juan David: "suena muy pixelada... una cancion celta bonita
+# libre de derechos"). "Celtic Impulse" de Kevin MacLeod (incompetech.com, CC BY 4.0: hay que darle credito en el copy).
+for p in piezas:
+    if p["slug"] == "sofa-emprendedores":
+        p["cancion"] = {"archivo": "trabajo/musica-libre/celtic-impulse.mp3", "titulo": "Celtic Impulse", "autor": "Kevin MacLeod (incompetech.com)", "licencia": "CC BY 4.0"}
 for p in piezas:
     if p["slug"] in CHIP:
         p["chip"] = CHIP[p["slug"]]

@@ -196,5 +196,10 @@
         }
       ]
     }
-  ]
+  ],
+  "variantes": {
+    "trifuerza": {
+      "portada": "Tecnología, diseño *y derecho.*"
+    }
+  }
 }

@@ -1,0 +1,161 @@
+{
+  "slug": "brochure-contrappto",
+  "titulo": "Brochure de Contrappto en video",
+  "pilar": "Producto (Contrappto)",
+  "plantilla": "Brochure",
+  "formatos": ["vertical", "horizontal"],
+  "estado": "borrador · no publicar hasta verificar",
+  "cuentas": ["contrappto"],
+  "bpm": 108,
+  "transicion": "barrido",
+  "pista": true,
+  "volumenPista": 0.85,
+  "_fuente": "Mismo contenido que brochures/contrappto.html: modelo de negocio cerrado el 17-sep-2026 (contrappto/docs/BUSINESS/modelo-de-planes.md) y la propaganda Enterprise del FigJam (zona 'Propaganda por cuenta').",
+  "escenas": [
+    {
+      "tipo": "portada",
+      "segundos": 4.5,
+      "antetitulo": "Contratos vivos",
+      "titulo": "Contratos que no se archivan. *Se ejecutan.*",
+      "texto": "Crea, firma y da seguimiento a tus acuerdos en un solo lugar.",
+      "fondo3d": true
+    },
+    {
+      "tipo": "capitulo",
+      "segundos": 5.5,
+      "antetitulo": "El problema",
+      "titulo": "Firmaste el contrato. *¿Y después?*",
+      "kit": {
+        "escena": "versus",
+        "alto": 520,
+        "antes": { "titulo": "Hoy", "detalle": "En el correo de quien lo hizo, con una fecha que nadie recuerda.", "chips": ["Excel", "Correo", "PDF sin verificar"] },
+        "despues": { "titulo": "Con Contrappto", "detalle": "Un sistema que las dos partes ven igual, de la firma al cierre.", "icono": "ShieldCheck", "chips": ["Estados claros", "Avisos", "Trazabilidad"] }
+      }
+    },
+    {
+      "tipo": "capitulo",
+      "segundos": 5.5,
+      "antetitulo": "01 · Crea",
+      "titulo": "Créalo *respondiendo preguntas*",
+      "texto": "Sin plantillas en Word.",
+      "kit": {
+        "escena": "chat",
+        "ventana": "Contrappto asistente",
+        "paso": 18,
+        "items": [
+          { "de": "app", "texto": "¿Qué tipo de contrato vas a crear?" },
+          { "de": "tu", "texto": "Arrendamiento de vivienda" },
+          { "de": "app", "texto": "¿Cuál es el valor del canon mensual?" },
+          { "de": "tu", "texto": "$1.800.000" },
+          { "de": "app", "texto": "¿Se reajusta cada año?" }
+        ]
+      }
+    },
+    {
+      "tipo": "capitulo",
+      "segundos": 5.5,
+      "antetitulo": "02 · Firma",
+      "titulo": "Cada firma con *identidad verificada*",
+      "texto": "Y un código único que cualquiera puede comprobar.",
+      "kit": {
+        "escena": "firma",
+        "alto": 460,
+        "documento": "Arrendamiento · Apartamento 301",
+        "listo": "✓ Firmado por las dos partes",
+        "items": [{ "texto": "Creado" }, { "texto": "Enviado" }, { "texto": "Visto" }, { "texto": "Firmado" }]
+      }
+    },
+    {
+      "tipo": "capitulo",
+      "segundos": 5.5,
+      "antetitulo": "03 · Cumple",
+      "titulo": "Cada pago, *validado por las partes*",
+      "kit": {
+        "escena": "tabla",
+        "ventana": "Contrappto ejecución",
+        "paso": 8,
+        "items": [
+          { "icono": "Wallet", "texto": "Canon de agosto", "detalle": "Validado por el arrendador", "estado": "Validado", "tono": "ok" },
+          { "icono": "Wallet", "texto": "Canon de septiembre", "detalle": "Validado por el arrendador", "estado": "Validado", "tono": "ok" },
+          { "icono": "Wallet", "texto": "Canon de octubre", "detalle": "Registrado · esperando validación", "estado": "Pendiente", "tono": "pendiente" },
+          { "icono": "TrendingUp", "texto": "Reajuste anual", "detalle": "Apartamento 301 cumple un año", "estado": "En 30 días" }
+        ]
+      }
+    },
+    {
+      "tipo": "capitulo",
+      "segundos": 5,
+      "antetitulo": "04 · Avisa",
+      "titulo": "Te avisa *antes* de cada fecha",
+      "texto": "Antes, el día y después. Por la app, el correo o WhatsApp.",
+      "kit": {
+        "escena": "avisos",
+        "alto": 520,
+        "items": [
+          { "app": "app", "titulo": "Pago del canon en 3 días", "texto": "Vence el 8 de octubre" },
+          { "app": "correo", "titulo": "Reajuste en 30 días", "texto": "Apartamento 301 cumple un año" },
+          { "app": "whatsapp", "titulo": "Plazo para avisar la no renovación", "texto": "Quedan 15 días" }
+        ]
+      }
+    },
+    {
+      "tipo": "capitulo",
+      "segundos": 6,
+      "antetitulo": "Enterprise",
+      "titulo": "Un documento, *doscientas firmas*",
+      "texto": "Contratación masiva con identidad verificada.",
+      "kit": {
+        "escena": "masiva",
+        "escala": 1.12,
+        "alto": 560,
+        "ventana": "Contratación masiva",
+        "pie": "Contrato laboral · plantilla aprobada",
+        "unidad": "firmas",
+        "items": [{ "n": 10 }, { "n": 50 }, { "n": 120 }, { "n": 200 }]
+      }
+    },
+    {
+      "tipo": "tarjetas",
+      "segundos": 5.5,
+      "antetitulo": "Enterprise",
+      "titulo": "Los contratos son *de la empresa*, no de quien los hizo",
+      "items": [
+        { "icono": "UserRoundCog", "titulo": "Se reasignan", "texto": "Si alguien se va, sus contratos se quedan." },
+        { "icono": "Landmark", "titulo": "Firma como empresa", "texto": "Por su representante legal o apoderado." },
+        { "icono": "Users", "titulo": "Equipo con roles", "texto": "Cada acción, a nombre de una persona." },
+        { "icono": "LayoutDashboard", "titulo": "Toda la cartera", "texto": "Contratos y fechas en una sola vista." }
+      ]
+    },
+    {
+      "tipo": "planes",
+      "segundos": 7,
+      "antetitulo": "Planes",
+      "titulo": "Gratis para empezar. *Pro para no fallar.*",
+      "planes": [
+        { "nombre": "Free", "precio": "$0", "periodo": "para siempre", "items": ["2 contratos vivos", "Firma verificada"] },
+        { "nombre": "Pro", "precio": "$69.000", "periodo": "al mes · o $690.000 al año", "destacado": true, "items": ["20 contratos vivos", "Alertas y WhatsApp", "Asistente con IA"] },
+        { "nombre": "Enterprise", "desde": true, "precio": "$199.000", "periodo": "al mes · 50 contratos", "items": ["Contratación masiva", "Equipo y roles", "Alta acompañada"] }
+      ],
+      "nota": "Pago anual: 12 meses por el precio de 10. La contraparte no paga."
+    },
+    {
+      "tipo": "cierre",
+      "segundos": 5,
+      "texto": "Tu contrato, *vivo*",
+      "cta": "Agenda una demo de 20 minutos",
+      "web": "contrappto.com"
+    }
+  ],
+  "variantes": {
+    "contrappto": {
+      "copy": "Firmar es el comienzo, no el final. Contrappto crea, firma con identidad verificada y te avisa antes de cada fecha. Si contratas a más de cincuenta personas al año, te mostramos el tablero en veinte minutos.",
+      "cta": "Agenda una demo de 20 minutos"
+    }
+  },
+  "verificar": [
+    { "dato": "Precios y cupos de Free, Pro y Enterprise (modelo de planes del 17-sep-2026). Ver brochures/verificar.json.", "estado": "pendiente" },
+    { "dato": "Enterprise: reasignación, firma como empresa, roles y aprobación de lote ya en producción (Frente B).", "estado": "pendiente" },
+    { "dato": "Avisos por WhatsApp y asistente con IA en Pro.", "estado": "pendiente" },
+    { "dato": "Pagos validados por la contraparte (Validar/Rechazar) y código único verificable.", "estado": "pendiente" }
+  ]
+}

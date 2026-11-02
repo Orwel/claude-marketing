@@ -1,0 +1,84 @@
+{
+  "slug": "c08-como-funciona",
+  "titulo": "Cómo funciona un modelo de lenguaje",
+  "plantilla": "Carrusel",
+  "tipo": "carrusel",
+  "formato": "carrusel",
+  "segundos": 6,
+  "cuentas": [
+    "juanda",
+    "trifuerza"
+  ],
+  "pie": "Guárdalo",
+  "laminas": [
+    {
+      "metafora": "caja",
+      "datos": {
+        "etiqueta": "Sin tecnicismos"
+      },
+      "antetitulo": "En cinco láminas",
+      "titulo": "Cómo funciona *un modelo de lenguaje.*"
+    },
+    {
+      "metafora": "autocompletar",
+      "datos": {
+        "frase": "El arrendatario debe pagar",
+        "opciones": [
+          [
+            "el canon",
+            64
+          ],
+          [
+            "la multa",
+            18
+          ],
+          [
+            "a tiempo",
+            12
+          ],
+          [
+            "otro",
+            6
+          ]
+        ]
+      },
+      "antetitulo": "1",
+      "titulo": "Predice la *siguiente palabra.*",
+      "texto": "Una y otra vez, hasta armar la respuesta."
+    },
+    {
+      "metafora": "balanza",
+      "datos": {
+        "izq": "Probable",
+        "der": "Cierto"
+      },
+      "antetitulo": "2",
+      "titulo": "Gana lo *probable*, no lo cierto.",
+      "texto": "Por eso suena seguro aunque se equivoque."
+    },
+    {
+      "metafora": "rompecabezas",
+      "datos": {
+        "etiqueta": "Tu documento"
+      },
+      "antetitulo": "3",
+      "titulo": "Con tu documento, *acierta más.*",
+      "texto": "Trabaja sobre lo que le das, no sobre lo que recuerda."
+    },
+    {
+      "metafora": "semaforo",
+      "antetitulo": "4",
+      "titulo": "Tú decides *qué verificar.*",
+      "texto": "La responsabilidad no se delega."
+    }
+  ],
+  "variantes": {
+    "juanda": {
+      "copy": "Cómo funciona un modelo de lenguaje, sin tecnicismos:\n\n1. Predice la siguiente palabra, una y otra vez.\n2. Gana lo probable, no lo cierto. Por eso suena seguro aunque se equivoque.\n3. Con tu documento acierta más: trabaja sobre lo que le das.\n4. Tú decides qué verificar.\n\nGuárdalo para la próxima vez que lo uses."
+    },
+    "trifuerza": {
+      "copy": "Cómo funciona un modelo de lenguaje, sin tecnicismos:\n\n1. Predice la siguiente palabra, una y otra vez.\n2. Gana lo probable, no lo cierto. Por eso suena seguro aunque se equivoque.\n3. Con tu documento acierta más: trabaja sobre lo que le das.\n4. Tú decides qué verificar.\n\nGuárdalo para la próxima vez que lo uses."
+    }
+  },
+  "verificar": []
+}

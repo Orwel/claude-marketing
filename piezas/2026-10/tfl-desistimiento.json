@@ -1073,5 +1073,10 @@
       "en": "triunfar",
       "estilo": "serif"
     }
-  ]
+  ],
+  "variantes": {
+    "trifuerza": {
+      "portada": "Nunca más un *desistimiento tácito*"
+    }
+  }
 }

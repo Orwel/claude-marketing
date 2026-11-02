@@ -2,6 +2,7 @@ import { icons } from 'lucide-react';
 import React, { useMemo } from 'react';
 import { AbsoluteFill, Audio, Img, interpolate, OffthreadVideo, Sequence, spring, staticFile, useCurrentFrame, useVideoConfig } from 'remotion';
 import { Barrido } from '../componentes/Barrido.jsx';
+import { Certificado } from '../componentes/Certificado.jsx';
 import { Fondo } from '../componentes/Fondo.jsx';
 import { Etiqueta, Firma } from '../componentes/Firma.jsx';
 import { fuente, useFuentes } from '../fuentes.js';
@@ -62,7 +63,8 @@ const DISENOS = {
     panel: { x: 720, y: 170, w: 1110, h: 640 },
     subtitulos: { lleno: 880, tarjeta: 880, ancho: 1110, x: 720 },
     gancho: { y: 200, ancho: 1110, x: 720 },
-    lowerThird: { x: 720, y: 880 },
+    // Sobre la tarjeta del video, abajo: en (720, 880) caia encima de los subtitulos (29-sep-2026).
+    lowerThird: { x: 110, y: 868 },
     marcaDeAgua: { derecha: 60, arriba: 50, alto: 60 },
     cta: { y: 880, x: 720 },
     siempreTarjeta: true,
@@ -91,7 +93,7 @@ export const Montaje = ({ pieza, marca, red }) => {
       <AbsoluteFill style={{ backgroundColor: marca.colores.fondo }}>
         {/* Con el video a pantalla completa el fondo no se ve: no se dibuja (el grano y los desenfoques son caros sin GPU). */}
         {d.siempreTarjeta || p > 0 ? <Fondo /> : null}
-        {d.siempreTarjeta ? <Titular pieza={pieza} variante={variante} d={d} oculto={conPanel} /> : null}
+        {d.siempreTarjeta ? <Titular pieza={pieza} variante={variante} d={d} oculto={conPanel} finGancho={variante.gancho && finGancho > 20 ? finGancho : 0} /> : null}
         <Escenario linea={linea} d={d} p={p * (1 - q)} q={q} grado={cfg.grado} />
 
         {!d.siempreTarjeta ? (
@@ -377,13 +379,16 @@ const Final = ({ cta }) => {
 };
 
 /** En 16:9, la columna derecha lleva el titulo de la pieza mientras no hay un beat. */
-const Titular = ({ pieza, variante, d, oculto }) => {
+const Titular = ({ pieza, variante, d, oculto, finGancho = 0 }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const marca = useMarca();
   const a = resorte(frame, 6, fps);
+  // Mientras el gancho ocupa la parte de arriba, el titular espera debajo de el y sube cuando sale
+  // (29-sep-2026: se encimaban en los videos 16:9 de Contrappto).
+  const y = finGancho ? mezclar(d.panel.y + 330, d.panel.y + 120, avance(frame, finGancho, 12)) : d.panel.y + 120;
   return (
-    <div style={{ position: 'absolute', left: d.panel.x, top: d.panel.y + 120, width: d.panel.w, ...subir(a), opacity: Math.min(1, a * 1.4) * (1 - oculto) }}>
+    <div style={{ position: 'absolute', left: d.panel.x, top: y, width: d.panel.w, ...subir(a), opacity: Math.min(1, a * 1.4) * (1 - oculto) }}>
       <div style={{ width: 70, height: 6, borderRadius: 3, background: marca.colores.acento, marginBottom: 34 }} />
       <Texto texto={variante.titular ?? pieza.titulo} tamano={70} familia="titulo" />
     </div>
@@ -486,6 +491,9 @@ const Outro = ({ texto, zona }) => {
           );
         })}
       </div>
+      {marca.montaje?.certificado ? (
+        <OutroCertificado c={marca.montaje.certificado} zona={zona} verbo={verbo} clave={clave} sobreAcento={sobreAcento} />
+      ) : (
       <div style={{ position: 'absolute', left: zona.x, top: zona.y, width: zona.w, height: zona.h, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 30 }}>
         <div style={subir(firma, 20)}>
           <Firma tamano={0.75} />
@@ -506,7 +514,57 @@ const Outro = ({ texto, zona }) => {
           })}
         </div>
       </div>
+      )}
     </AbsoluteFill>
+  );
+};
+
+/**
+ * Outro con el certificado de Trifuerza Academy (Juan David, 6-oct-2026): el
+ * certificado real ocupa la mitad de arriba y el "Comenta CLASE" se monta sobre
+ * su borde inferior, como una cinta. Arriba a la derecha, un sello ladeado con
+ * "gratis y con certificado". Ambos a la vez, porque uno de los dos cierres
+ * grabados dice "comenta clase" al principio y el otro al final.
+ */
+const OutroCertificado = ({ c, zona, verbo, clave, sobreAcento }) => {
+  const frame = useCurrentFrame();
+  const { fps, width } = useVideoConfig();
+  const marca = useMarca();
+  const { colores } = marca;
+  // La cinta del CTA muerde solo el borde de abajo (~30 px): los datos del panel siguen legibles.
+  const ancho = Math.round(Math.min(zona.w * 0.86, (zona.h - 110) * (1154 / 815)));
+  const alto = ancho * (815 / 1154);
+  const tarjeta = spring({ frame: frame - 2, fps, config: { damping: 15, stiffness: 150, mass: 0.8 } });
+  const cinta = spring({ frame: frame - 18, fps, config: { damping: 10, stiffness: 200, mass: 0.7 } });
+  const sello = spring({ frame: frame - 30, fps, config: { damping: 9, stiffness: 240, mass: 0.6 } });
+  const latir = 1 + 0.035 * Math.sin(Math.max(0, frame - 36) / 5);
+  const rebote = Math.abs(Math.sin(Math.max(0, frame - 24) / 7)) * 10;
+  const flota = Math.sin(frame / 22) * 4;
+  const Comentario = icons.MessageCircle;
+  const Insignia = icons.BadgeCheck;
+  const izquierda = zona.x + (zona.w - ancho) / 2;
+  return (
+    <>
+      <div style={{ position: 'absolute', left: izquierda, top: zona.y, transform: `translateY(${(1 - tarjeta) * 60 + flota}px) rotate(${(1 - tarjeta) * -6}deg) scale(${0.85 + 0.15 * tarjeta})`, opacity: Math.min(1, tarjeta * 1.5), filter: 'drop-shadow(0 26px 50px rgba(0,0,0,.5))' }}>
+        <Certificado c={c} ancho={ancho} desde={4} />
+      </div>
+      {/* Anclado por la derecha: con el sello largo, anclado por la izquierda se salia del cuadro. */}
+      <div style={{ position: 'absolute', right: Math.max(40, width - izquierda - ancho - 10), top: zona.y - 12, transform: `rotate(${-4 + (1 - sello) * 30}deg) scale(${Math.max(0, sello)})`, transformOrigin: 'right center' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '14px 24px', borderRadius: 999, background: colores.acento, boxShadow: `0 14px 34px ${conAlfa(colores.acento, 0.45)}`, whiteSpace: 'nowrap' }}>
+          <Insignia size={34} color={sobreAcento} strokeWidth={2.4} />
+          <span style={{ ...fuente(marca.fuentes.enfasis ?? marca.fuentes.titulo), fontSize: 30, color: sobreAcento, textTransform: 'uppercase', letterSpacing: '0.04em' }}>{c.sello}</span>
+        </div>
+      </div>
+      <div style={{ position: 'absolute', left: zona.x, width: zona.w, top: zona.y + alto - 30, display: 'flex', justifyContent: 'center', transform: `translateY(${(1 - cinta) * 40}px)`, opacity: Math.min(1, cinta * 1.5) }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 20, padding: '12px 14px 12px 30px', borderRadius: 999, background: colores.fondo, border: `2px solid ${conAlfa(colores.acento, 0.5)}`, boxShadow: '0 18px 44px rgba(0,0,0,.45)' }}>
+          <div style={{ transform: `translateY(${-rebote}px) rotate(${-8 + rebote * 0.5}deg)` }}>
+            <Comentario size={60} color={colores.acento} strokeWidth={2.4} />
+          </div>
+          <span style={{ ...fuente(marca.fuentes.titulo), fontSize: 66, color: colores.tinta, lineHeight: 1 }}>{verbo}</span>
+          <span style={{ ...fuente(marca.fuentes.titulo), display: 'inline-block', fontSize: 76, lineHeight: 1, padding: '16px 40px', borderRadius: 999, background: colores.acento, color: sobreAcento, letterSpacing: '0.02em', transform: `scale(${latir})`, boxShadow: `0 12px 34px ${conAlfa(colores.acento, 0.5)}` }}>{clave}</span>
+        </div>
+      </div>
+    </>
   );
 };
 

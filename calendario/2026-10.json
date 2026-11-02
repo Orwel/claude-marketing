@@ -1,0 +1,1351 @@
+{
+  "_nota": "Calendario de publicación de octubre 2026. Base: FigJam «Parrilla · Octubre 2026 v2 · Evento 27-oct», ampliada a Trifuerza.co y Contrappto con todo lo editado en Drive. Campos: d fecha, h hora (America/Bogota), c cuenta (jd | tf | ctp), r red (ig | li), f formato, p pieza (código del MP4 en Edited o id de pieza nueva), t tema, n nota. Metricool lo lee de aquí; nada con verificar[] pendiente se programa.",
+  "zonaHoraria": "America/Bogota",
+  "evento": {
+    "nombre": "Fundamentos para la Inteligencia Artificial · clase en vivo",
+    "fecha": "2026-10-27T19:00:00-05:00",
+    "gratis": true,
+    "certificado": "gratuito · condiciones por confirmar",
+    "registro": null,
+    "abreRegistro": "2026-10-05",
+    "palabraClave": "CLASE",
+    "publico": "todo público (no solo abogados)"
+  },
+  "articulos": {
+    "A1": "Mata contra Avianca: seis sentencias que no existían y lo que no debe pasarte",
+    "A2": "¿Puedo subir el contrato de mi cliente a una IA? Tres cosas que revisar antes",
+    "A3": "El AI Act en cinco minutos: qué le importa a una empresa colombiana",
+    "A4": "Lo que me preguntaron en la clase del 27 (y lo que respondí)"
+  },
+  "publicaciones": [
+    {
+      "d": "2026-09-29",
+      "h": "07:00",
+      "c": "jd",
+      "r": "li",
+      "f": "video",
+      "p": "c01-anuncio-clase",
+      "t": "Anuncio de la clase del 27 (carrusel en video)",
+      "n": "Movido del lun 28."
+    },
+    {
+      "d": "2026-09-29",
+      "h": "12:30",
+      "c": "jd",
+      "r": "ig",
+      "f": "reel",
+      "p": "X01",
+      "t": "Quién soy"
+    },
+    {
+      "d": "2026-09-29",
+      "h": "18:00",
+      "c": "jd",
+      "r": "ig",
+      "f": "story",
+      "p": "h01-encuesta-inventa",
+      "t": "Encuesta: ¿por qué se inventa sentencias?",
+      "n": "Ponle el sticker de encuesta."
+    },
+    {
+      "d": "2026-09-29",
+      "h": "19:00",
+      "c": "tf",
+      "r": "ig",
+      "f": "reel",
+      "p": "TF_TRI",
+      "t": "La Trifuerza"
+    },
+    {
+      "d": "2026-09-30",
+      "h": "07:00",
+      "c": "jd",
+      "r": "li",
+      "f": "video",
+      "p": "c03-buscador-vs-modelo",
+      "t": "Un buscador no es un modelo de lenguaje"
+    },
+    {
+      "d": "2026-09-30",
+      "h": "08:00",
+      "c": "tf",
+      "r": "li",
+      "f": "video",
+      "p": "TF_TRI",
+      "t": "La Trifuerza"
+    },
+    {
+      "d": "2026-09-30",
+      "h": "11:00",
+      "c": "ctp",
+      "r": "ig",
+      "f": "reel",
+      "p": "CTP_FAC",
+      "t": "Contratos fáciles, rápidos y gratis"
+    },
+    {
+      "d": "2026-09-30",
+      "h": "12:00",
+      "c": "jd",
+      "r": "ig",
+      "f": "carrusel",
+      "p": "c01-anuncio-clase",
+      "t": "Seis sentencias que no existían · clase del 27"
+    },
+    {
+      "d": "2026-09-30",
+      "h": "13:00",
+      "c": "jd",
+      "r": "ig",
+      "f": "story",
+      "p": "h02-caja-preguntas",
+      "t": "¿Qué quieres que responda en vivo?",
+      "n": "Ponle la caja de preguntas."
+    },
+    {
+      "d": "2026-10-01",
+      "h": "07:00",
+      "c": "jd",
+      "r": "li",
+      "f": "video",
+      "p": "c02-temario",
+      "t": "Temario de la clase"
+    },
+    {
+      "d": "2026-10-01",
+      "h": "07:30",
+      "c": "ctp",
+      "r": "li",
+      "f": "video",
+      "p": "CTP_FUN",
+      "t": "Contratos más rápidos y con seguimiento",
+      "n": "Reemplaza a CTP_FAC (movido)"
+    },
+    {
+      "d": "2026-10-01",
+      "h": "12:00",
+      "c": "jd",
+      "r": "ig",
+      "f": "carrusel",
+      "p": "c02-temario",
+      "t": "Temario de la clase"
+    },
+    {
+      "d": "2026-10-01",
+      "h": "18:00",
+      "c": "jd",
+      "r": "ig",
+      "f": "story",
+      "p": "h07-dato-cita",
+      "t": "Una cita inventada se ve perfecta"
+    },
+    {
+      "d": "2026-10-01",
+      "h": "19:00",
+      "c": "tf",
+      "r": "ig",
+      "f": "reel",
+      "p": "TFL_DES",
+      "t": "Nunca más un desistimiento tácito"
+    },
+    {
+      "d": "2026-10-02",
+      "h": "07:00",
+      "c": "jd",
+      "r": "li",
+      "f": "video",
+      "p": "c04-cinco-preguntas",
+      "t": "Las cinco preguntas que llegaron"
+    },
+    {
+      "d": "2026-10-02",
+      "h": "08:00",
+      "c": "tf",
+      "r": "li",
+      "f": "video",
+      "p": "TFL_DES",
+      "t": "Nunca más un desistimiento tácito"
+    },
+    {
+      "d": "2026-10-02",
+      "h": "11:00",
+      "c": "ctp",
+      "r": "ig",
+      "f": "reel",
+      "p": "CTP_FUN",
+      "t": "Contratos más rápidos y con seguimiento"
+    },
+    {
+      "d": "2026-10-02",
+      "h": "12:00",
+      "c": "jd",
+      "r": "ig",
+      "f": "carrusel",
+      "p": "c03-buscador-vs-modelo",
+      "t": "Un buscador no es un modelo de lenguaje"
+    },
+    {
+      "d": "2026-10-02",
+      "h": "13:00",
+      "c": "ctp",
+      "r": "ig",
+      "f": "story",
+      "p": "h31-encuesta-donde",
+      "t": "Encuesta: ¿dónde viven tus contratos?",
+      "n": "Ponle el sticker de encuesta."
+    },
+    {
+      "d": "2026-10-03",
+      "h": "12:00",
+      "c": "jd",
+      "r": "ig",
+      "f": "carrusel",
+      "p": "c11-confidencialidad",
+      "t": "Tres cosas antes de subir un contrato a una IA",
+      "n": "Sin CTA: sábado limpio. Reemplaza al reel R1, que no se produjo."
+    },
+    {
+      "d": "2026-10-03",
+      "h": "18:00",
+      "c": "jd",
+      "r": "ig",
+      "f": "story",
+      "p": "h08-regla",
+      "t": "Transforma bien, recuerda mal"
+    },
+    {
+      "d": "2026-10-03",
+      "h": "19:00",
+      "c": "tf",
+      "r": "ig",
+      "f": "carrusel",
+      "p": "c20-academy-clase",
+      "t": "Trifuerza Academy: clase con certificado"
+    },
+    {
+      "d": "2026-10-04",
+      "h": "18:00",
+      "c": "jd",
+      "r": "ig",
+      "f": "story",
+      "p": "h04-manana-registro",
+      "t": "Mañana abre el registro"
+    },
+    {
+      "d": "2026-10-05",
+      "h": "07:00",
+      "c": "jd",
+      "r": "li",
+      "f": "texto",
+      "t": "Abre el registro",
+      "n": "Link en el primer comentario. Copy en FigJam."
+    },
+    {
+      "d": "2026-10-05",
+      "h": "08:00",
+      "c": "jd",
+      "r": "ig",
+      "f": "story",
+      "p": "h05-registro-abierto",
+      "t": "Registro abierto",
+      "n": "Ponle el sticker de link."
+    },
+    {
+      "d": "2026-10-05",
+      "h": "08:00",
+      "c": "tf",
+      "r": "li",
+      "f": "video",
+      "p": "c20-academy-clase",
+      "t": "Trifuerza Academy: clase con certificado"
+    },
+    {
+      "d": "2026-10-05",
+      "h": "11:00",
+      "c": "ctp",
+      "r": "ig",
+      "f": "carrusel",
+      "p": "c30-ctp-tres-pruebas",
+      "t": "Tres pruebas en pantalla"
+    },
+    {
+      "d": "2026-10-05",
+      "h": "12:00",
+      "c": "jd",
+      "r": "ig",
+      "f": "reel",
+      "p": "X02",
+      "t": "Quién soy y la clase de IA",
+      "n": "CTA: comenta CLASE."
+    },
+    {
+      "d": "2026-10-06",
+      "h": "07:00",
+      "c": "jd",
+      "r": "li",
+      "f": "video",
+      "p": "WEBINAR",
+      "t": "V1 · La IA que nadie entiende del todo"
+    },
+    {
+      "d": "2026-10-06",
+      "h": "07:30",
+      "c": "ctp",
+      "r": "li",
+      "f": "video",
+      "p": "c30-ctp-tres-pruebas",
+      "t": "Tres pruebas en pantalla"
+    },
+    {
+      "d": "2026-10-06",
+      "h": "12:00",
+      "c": "jd",
+      "r": "ig",
+      "f": "reel",
+      "p": "WEBINAR",
+      "t": "V1 · La IA que nadie entiende del todo",
+      "n": "CTA: comenta CLASE."
+    },
+    {
+      "d": "2026-10-06",
+      "h": "13:00",
+      "c": "tf",
+      "r": "ig",
+      "f": "story",
+      "p": "h20-academy-clase",
+      "t": "Academy: clase con certificado"
+    },
+    {
+      "d": "2026-10-06",
+      "h": "19:00",
+      "c": "tf",
+      "r": "ig",
+      "f": "carrusel",
+      "p": "c23-tech-ley-diseno",
+      "t": "Software que cumple la ley desde el diseño"
+    },
+    {
+      "d": "2026-10-07",
+      "h": "07:30",
+      "c": "ctp",
+      "r": "li",
+      "f": "video",
+      "p": "DEMO_CTP1",
+      "t": "Demo 1 · Doscientas personas, un documento",
+      "n": "Juanda lo reparte desde su perfil."
+    },
+    {
+      "d": "2026-10-07",
+      "h": "08:00",
+      "c": "tf",
+      "r": "li",
+      "f": "video",
+      "p": "DEMO_TFL1",
+      "t": "Nadie pierde un proceso por no saber derecho"
+    },
+    {
+      "d": "2026-10-07",
+      "h": "09:00",
+      "c": "jd",
+      "r": "li",
+      "f": "articulo",
+      "p": "A1",
+      "t": "Mata contra Avianca",
+      "n": "Artículo: se publica a mano."
+    },
+    {
+      "d": "2026-10-07",
+      "h": "11:00",
+      "c": "ctp",
+      "r": "ig",
+      "f": "reel",
+      "p": "DEMO_CTP1",
+      "t": "Demo 1 · Volumen"
+    },
+    {
+      "d": "2026-10-07",
+      "h": "12:00",
+      "c": "jd",
+      "r": "ig",
+      "f": "carrusel",
+      "p": "c05-registro-abierto",
+      "t": "Registro abierto: lo que te llevas"
+    },
+    {
+      "d": "2026-10-07",
+      "h": "13:00",
+      "c": "ctp",
+      "r": "ig",
+      "f": "story",
+      "p": "h30-fecha",
+      "t": "No se te pasa una fecha"
+    },
+    {
+      "d": "2026-10-08",
+      "h": "07:00",
+      "c": "jd",
+      "r": "li",
+      "f": "video",
+      "p": "V02",
+      "t": "V2 · Seis sentencias falsas"
+    },
+    {
+      "d": "2026-10-08",
+      "h": "07:30",
+      "c": "ctp",
+      "r": "li",
+      "f": "video",
+      "p": "CTP_FAC",
+      "t": "Contratos fáciles, rápidos y gratis",
+      "n": "Movido del jue 1 oct"
+    },
+    {
+      "d": "2026-10-08",
+      "h": "12:00",
+      "c": "jd",
+      "r": "ig",
+      "f": "reel",
+      "p": "V02",
+      "t": "V2 · Seis sentencias falsas",
+      "n": "CTA: comenta CLASE."
+    },
+    {
+      "d": "2026-10-08",
+      "h": "18:00",
+      "c": "jd",
+      "r": "ig",
+      "f": "story",
+      "p": "h06-certificado",
+      "t": "Y te llevas certificado"
+    },
+    {
+      "d": "2026-10-08",
+      "h": "19:00",
+      "c": "tf",
+      "r": "ig",
+      "f": "reel",
+      "p": "DEMO_TFL1",
+      "t": "Nadie pierde un proceso por no saber derecho"
+    },
+    {
+      "d": "2026-10-09",
+      "h": "07:00",
+      "c": "jd",
+      "r": "li",
+      "f": "video",
+      "p": "c06-no-se-ve",
+      "t": "El problema es que no se ve"
+    },
+    {
+      "d": "2026-10-09",
+      "h": "08:00",
+      "c": "tf",
+      "r": "li",
+      "f": "video",
+      "p": "c23-tech-ley-diseno",
+      "t": "Software que cumple la ley desde el diseño"
+    },
+    {
+      "d": "2026-10-09",
+      "h": "11:00",
+      "c": "ctp",
+      "r": "ig",
+      "f": "reel",
+      "p": "V05",
+      "t": "V5 · Tu empresa manda contratos por correo",
+      "n": "Cierre: demo de 20 minutos."
+    },
+    {
+      "d": "2026-10-09",
+      "h": "12:00",
+      "c": "jd",
+      "r": "ig",
+      "f": "carrusel",
+      "p": "c04-cinco-preguntas",
+      "t": "Las cinco preguntas que llegaron"
+    },
+    {
+      "d": "2026-10-09",
+      "h": "13:00",
+      "c": "tf",
+      "r": "ig",
+      "f": "story",
+      "p": "h22-tech-encuesta",
+      "t": "Encuesta: ¿tu software cumple la ley?",
+      "n": "Ponle el sticker de encuesta."
+    },
+    {
+      "d": "2026-10-10",
+      "h": "12:00",
+      "c": "jd",
+      "r": "ig",
+      "f": "reel",
+      "p": "V03",
+      "t": "V3 · ¿Me va a reemplazar?",
+      "n": "Sin CTA."
+    },
+    {
+      "d": "2026-10-10",
+      "h": "18:00",
+      "c": "jd",
+      "r": "ig",
+      "f": "story",
+      "p": "h03-encuesta-usas",
+      "t": "Encuesta: ¿usas IA en el trabajo?",
+      "n": "Ponle el sticker de encuesta."
+    },
+    {
+      "d": "2026-10-10",
+      "h": "19:00",
+      "c": "tf",
+      "r": "ig",
+      "f": "carrusel",
+      "p": "c11-confidencialidad",
+      "t": "Tres cosas antes de subir un contrato a una IA"
+    },
+    {
+      "d": "2026-10-11",
+      "h": "12:00",
+      "c": "jd",
+      "r": "ig",
+      "f": "carrusel",
+      "p": "c08-como-funciona",
+      "t": "Cómo funciona un modelo de lenguaje",
+      "n": "Domingo: carrusel para guardar."
+    },
+    {
+      "d": "2026-10-12",
+      "h": "11:00",
+      "c": "jd",
+      "r": "ig",
+      "f": "story",
+      "p": "h09-faltan-15",
+      "t": "Faltan 15 días",
+      "n": "Festivo: solo stories."
+    },
+    {
+      "d": "2026-10-13",
+      "h": "07:00",
+      "c": "jd",
+      "r": "li",
+      "f": "video",
+      "p": "c07-contexto",
+      "t": "No cambió el modelo, cambió el contexto"
+    },
+    {
+      "d": "2026-10-13",
+      "h": "07:30",
+      "c": "ctp",
+      "r": "li",
+      "f": "video",
+      "p": "V05",
+      "t": "V5 · Tu empresa manda contratos por correo"
+    },
+    {
+      "d": "2026-10-13",
+      "h": "11:00",
+      "c": "ctp",
+      "r": "ig",
+      "f": "reel",
+      "p": "CTP_COB",
+      "t": "Tu contrato cobra solo"
+    },
+    {
+      "d": "2026-10-13",
+      "h": "12:00",
+      "c": "jd",
+      "r": "ig",
+      "f": "reel",
+      "p": "V04",
+      "t": "V4 · Alucinar no es una falla",
+      "n": "CTA: comenta CLASE."
+    },
+    {
+      "d": "2026-10-13",
+      "h": "19:00",
+      "c": "tf",
+      "r": "ig",
+      "f": "reel",
+      "p": "V02",
+      "t": "V2 · Seis sentencias falsas"
+    },
+    {
+      "d": "2026-10-14",
+      "h": "07:30",
+      "c": "ctp",
+      "r": "li",
+      "f": "video",
+      "p": "DEMO_CTP2",
+      "t": "Demo 2 · El contrato no puede vivir en el correo"
+    },
+    {
+      "d": "2026-10-14",
+      "h": "08:00",
+      "c": "tf",
+      "r": "li",
+      "f": "video",
+      "p": "V02",
+      "t": "V2 · Seis sentencias falsas"
+    },
+    {
+      "d": "2026-10-14",
+      "h": "09:00",
+      "c": "jd",
+      "r": "li",
+      "f": "articulo",
+      "p": "A2",
+      "t": "¿Puedo subir el contrato de mi cliente a una IA?",
+      "n": "Artículo: se publica a mano."
+    },
+    {
+      "d": "2026-10-14",
+      "h": "11:00",
+      "c": "ctp",
+      "r": "ig",
+      "f": "reel",
+      "p": "DEMO_CTP2",
+      "t": "Demo 2 · Trazabilidad"
+    },
+    {
+      "d": "2026-10-14",
+      "h": "12:00",
+      "c": "jd",
+      "r": "ig",
+      "f": "carrusel",
+      "p": "c06-no-se-ve",
+      "t": "El problema es que no se ve"
+    },
+    {
+      "d": "2026-10-14",
+      "h": "13:00",
+      "c": "tf",
+      "r": "ig",
+      "f": "story",
+      "p": "h21-legal-termino",
+      "t": "Legal: no se te pasa un término"
+    },
+    {
+      "d": "2026-10-15",
+      "h": "07:00",
+      "c": "jd",
+      "r": "li",
+      "f": "video",
+      "p": "V05",
+      "t": "V5 · ¿Puedo subirle información confidencial?"
+    },
+    {
+      "d": "2026-10-15",
+      "h": "07:30",
+      "c": "ctp",
+      "r": "li",
+      "f": "video",
+      "p": "CTP_COB",
+      "t": "Tu contrato cobra solo"
+    },
+    {
+      "d": "2026-10-15",
+      "h": "08:00",
+      "c": "tf",
+      "r": "li",
+      "f": "video",
+      "p": "V03",
+      "t": "V3 · No te reemplaza la IA"
+    },
+    {
+      "d": "2026-10-15",
+      "h": "12:00",
+      "c": "jd",
+      "r": "ig",
+      "f": "reel",
+      "p": "V05",
+      "t": "V5 · ¿Puedo subirle información confidencial?",
+      "n": "CTA: comenta CLASE."
+    },
+    {
+      "d": "2026-10-15",
+      "h": "13:00",
+      "c": "ctp",
+      "r": "ig",
+      "f": "story",
+      "p": "h33-tablero",
+      "t": "Todo lo firmado, en un tablero"
+    },
+    {
+      "d": "2026-10-15",
+      "h": "19:00",
+      "c": "tf",
+      "r": "ig",
+      "f": "carrusel",
+      "p": "c21-legal-terminos",
+      "t": "Trifuerza Legal: no se te pasa un término"
+    },
+    {
+      "d": "2026-10-16",
+      "h": "07:00",
+      "c": "jd",
+      "r": "li",
+      "f": "video",
+      "p": "c08-como-funciona",
+      "t": "Cómo funciona un modelo de lenguaje"
+    },
+    {
+      "d": "2026-10-16",
+      "h": "08:00",
+      "c": "tf",
+      "r": "li",
+      "f": "video",
+      "p": "c21-legal-terminos",
+      "t": "Trifuerza Legal: no se te pasa un término"
+    },
+    {
+      "d": "2026-10-16",
+      "h": "11:00",
+      "c": "ctp",
+      "r": "ig",
+      "f": "carrusel",
+      "p": "c31-ctp-objeciones",
+      "t": "Tres objeciones y su respuesta"
+    },
+    {
+      "d": "2026-10-16",
+      "h": "12:00",
+      "c": "jd",
+      "r": "ig",
+      "f": "carrusel",
+      "p": "c07-contexto",
+      "t": "No cambió el modelo, cambió el contexto"
+    },
+    {
+      "d": "2026-10-17",
+      "h": "12:00",
+      "c": "jd",
+      "r": "ig",
+      "f": "reel",
+      "p": "V06",
+      "t": "V6 · ¿Necesito saber programar?",
+      "n": "Sin CTA."
+    },
+    {
+      "d": "2026-10-17",
+      "h": "13:00",
+      "c": "tf",
+      "r": "ig",
+      "f": "story",
+      "p": "h23-tech-piezas",
+      "t": "Technology: no empieza de cero"
+    },
+    {
+      "d": "2026-10-17",
+      "h": "19:00",
+      "c": "tf",
+      "r": "ig",
+      "f": "reel",
+      "p": "V03",
+      "t": "V3 · No te reemplaza la IA"
+    },
+    {
+      "d": "2026-10-19",
+      "h": "07:00",
+      "c": "jd",
+      "r": "li",
+      "f": "video",
+      "p": "c09-quedan-8-dias",
+      "t": "Quedan 8 días · temario completo",
+      "n": "Link en el primer comentario."
+    },
+    {
+      "d": "2026-10-19",
+      "h": "08:00",
+      "c": "tf",
+      "r": "li",
+      "f": "video",
+      "p": "c24-tech-como-cotizamos",
+      "t": "Technology: cómo cotizamos"
+    },
+    {
+      "d": "2026-10-19",
+      "h": "11:00",
+      "c": "ctp",
+      "r": "ig",
+      "f": "reel",
+      "p": "CTP_EMP",
+      "t": "Contrappto para Empresas"
+    },
+    {
+      "d": "2026-10-19",
+      "h": "12:00",
+      "c": "jd",
+      "r": "ig",
+      "f": "carrusel",
+      "p": "c09-quedan-8-dias",
+      "t": "Quedan 8 días · temario completo"
+    },
+    {
+      "d": "2026-10-20",
+      "h": "07:00",
+      "c": "jd",
+      "r": "li",
+      "f": "video",
+      "p": "V07",
+      "t": "V7 · Transforma bien, recuerda mal"
+    },
+    {
+      "d": "2026-10-20",
+      "h": "07:30",
+      "c": "ctp",
+      "r": "li",
+      "f": "video",
+      "p": "c31-ctp-objeciones",
+      "t": "Tres objeciones y su respuesta"
+    },
+    {
+      "d": "2026-10-20",
+      "h": "08:00",
+      "c": "tf",
+      "r": "li",
+      "f": "video",
+      "p": "V04",
+      "t": "V4 · La IA alucina"
+    },
+    {
+      "d": "2026-10-20",
+      "h": "12:00",
+      "c": "jd",
+      "r": "ig",
+      "f": "reel",
+      "p": "V07",
+      "t": "V7 · Transforma bien, recuerda mal",
+      "n": "CTA: comenta CLASE. Candidato a pauta."
+    },
+    {
+      "d": "2026-10-20",
+      "h": "13:00",
+      "c": "tf",
+      "r": "ig",
+      "f": "story",
+      "p": "h24-academy-faltan-7",
+      "t": "Academy: falta una semana"
+    },
+    {
+      "d": "2026-10-20",
+      "h": "18:00",
+      "c": "jd",
+      "r": "ig",
+      "f": "story",
+      "p": "h10-faltan-7",
+      "t": "Falta una semana"
+    },
+    {
+      "d": "2026-10-20",
+      "h": "19:00",
+      "c": "tf",
+      "r": "ig",
+      "f": "reel",
+      "p": "V04",
+      "t": "V4 · La IA alucina"
+    },
+    {
+      "d": "2026-10-21",
+      "h": "07:30",
+      "c": "ctp",
+      "r": "li",
+      "f": "video",
+      "p": "DEMO_CTP3",
+      "t": "Demo 3 · Los contratos no avisan"
+    },
+    {
+      "d": "2026-10-21",
+      "h": "08:00",
+      "c": "tf",
+      "r": "li",
+      "f": "video",
+      "p": "c22-legal-un-lugar",
+      "t": "Trifuerza Legal: todo en un solo lugar"
+    },
+    {
+      "d": "2026-10-21",
+      "h": "09:00",
+      "c": "jd",
+      "r": "li",
+      "f": "articulo",
+      "p": "A3",
+      "t": "El AI Act en cinco minutos",
+      "n": "Artículo: se publica a mano."
+    },
+    {
+      "d": "2026-10-21",
+      "h": "11:00",
+      "c": "ctp",
+      "r": "ig",
+      "f": "reel",
+      "p": "DEMO_CTP3",
+      "t": "Demo 3 · Vencimientos"
+    },
+    {
+      "d": "2026-10-21",
+      "h": "12:00",
+      "c": "jd",
+      "r": "ig",
+      "f": "reel",
+      "p": "X04",
+      "t": "El AI Act y los niveles de riesgo"
+    },
+    {
+      "d": "2026-10-22",
+      "h": "07:00",
+      "c": "jd",
+      "r": "li",
+      "f": "video",
+      "p": "V08",
+      "t": "V8 · El prompt de tu colega"
+    },
+    {
+      "d": "2026-10-22",
+      "h": "07:30",
+      "c": "ctp",
+      "r": "li",
+      "f": "video",
+      "p": "CTP_EMP",
+      "t": "Contrappto para Empresas"
+    },
+    {
+      "d": "2026-10-22",
+      "h": "08:00",
+      "c": "tf",
+      "r": "li",
+      "f": "video",
+      "p": "X04",
+      "t": "El AI Act y los niveles de riesgo"
+    },
+    {
+      "d": "2026-10-22",
+      "h": "12:00",
+      "c": "jd",
+      "r": "ig",
+      "f": "reel",
+      "p": "V08",
+      "t": "V8 · El prompt de tu colega",
+      "n": "CTA: comenta CLASE."
+    },
+    {
+      "d": "2026-10-22",
+      "h": "13:00",
+      "c": "ctp",
+      "r": "ig",
+      "f": "story",
+      "p": "h34-demo",
+      "t": "Demo de 20 minutos"
+    },
+    {
+      "d": "2026-10-22",
+      "h": "19:00",
+      "c": "tf",
+      "r": "ig",
+      "f": "reel",
+      "p": "DEMO_TFL2",
+      "t": "Cinco abogados, doscientos procesos, un tablero"
+    },
+    {
+      "d": "2026-10-23",
+      "h": "07:00",
+      "c": "jd",
+      "r": "li",
+      "f": "video",
+      "p": "c10-quedan-4-dias",
+      "t": "Quedan 4 días: las preguntas",
+      "n": "Link en el primer comentario."
+    },
+    {
+      "d": "2026-10-23",
+      "h": "08:00",
+      "c": "tf",
+      "r": "li",
+      "f": "video",
+      "p": "DEMO_TFL2",
+      "t": "Cinco abogados, doscientos procesos, un tablero"
+    },
+    {
+      "d": "2026-10-23",
+      "h": "11:00",
+      "c": "ctp",
+      "r": "ig",
+      "f": "reel",
+      "p": "CTP_FLU",
+      "t": "Mejora tus flujos contractuales"
+    },
+    {
+      "d": "2026-10-23",
+      "h": "12:00",
+      "c": "jd",
+      "r": "ig",
+      "f": "carrusel",
+      "p": "c10-quedan-4-dias",
+      "t": "Quedan 4 días: las preguntas"
+    },
+    {
+      "d": "2026-10-23",
+      "h": "19:00",
+      "c": "tf",
+      "r": "ig",
+      "f": "reel",
+      "p": "V07",
+      "t": "V7 · Transforma bien, recuerda mal"
+    },
+    {
+      "d": "2026-10-24",
+      "h": "12:00",
+      "c": "jd",
+      "r": "ig",
+      "f": "reel",
+      "p": "V09",
+      "t": "V9 · Le di todo el contexto",
+      "n": "Sin CTA."
+    },
+    {
+      "d": "2026-10-24",
+      "h": "19:00",
+      "c": "tf",
+      "r": "ig",
+      "f": "carrusel",
+      "p": "c22-legal-un-lugar",
+      "t": "Trifuerza Legal: todo en un solo lugar"
+    },
+    {
+      "d": "2026-10-25",
+      "h": "12:00",
+      "c": "jd",
+      "r": "ig",
+      "f": "carrusel",
+      "p": "c12-transforma-recuerda",
+      "t": "Transforma bien, recuerda mal"
+    },
+    {
+      "d": "2026-10-25",
+      "h": "18:00",
+      "c": "jd",
+      "r": "ig",
+      "f": "story",
+      "p": "h11-pasado-manana",
+      "t": "Es pasado mañana"
+    },
+    {
+      "d": "2026-10-25",
+      "h": "19:00",
+      "c": "tf",
+      "r": "ig",
+      "f": "reel",
+      "p": "X04",
+      "t": "El AI Act y los niveles de riesgo",
+      "n": "Domingo: pieza de autoridad."
+    },
+    {
+      "d": "2026-10-26",
+      "h": "07:00",
+      "c": "jd",
+      "r": "li",
+      "f": "texto",
+      "t": "Mañana es la clase",
+      "n": "Link en el primer comentario. Copy en FigJam."
+    },
+    {
+      "d": "2026-10-26",
+      "h": "08:00",
+      "c": "tf",
+      "r": "li",
+      "f": "video",
+      "p": "c11-confidencialidad",
+      "t": "Tres cosas antes de subir un contrato a una IA"
+    },
+    {
+      "d": "2026-10-26",
+      "h": "11:00",
+      "c": "ctp",
+      "r": "ig",
+      "f": "carrusel",
+      "p": "c32-ctp-de-la-empresa",
+      "t": "Los contratos son de la empresa"
+    },
+    {
+      "d": "2026-10-26",
+      "h": "12:00",
+      "c": "jd",
+      "r": "ig",
+      "f": "reel",
+      "p": "V10",
+      "t": "V10 · La IA no arregla el desorden",
+      "n": "CTA: comenta CLASE."
+    },
+    {
+      "d": "2026-10-26",
+      "h": "18:00",
+      "c": "jd",
+      "r": "ig",
+      "f": "story",
+      "p": "h12-manana",
+      "t": "Es mañana"
+    },
+    {
+      "d": "2026-10-27",
+      "h": "07:00",
+      "c": "jd",
+      "r": "li",
+      "f": "texto",
+      "t": "Hoy · último llamado",
+      "n": "Copy en FigJam."
+    },
+    {
+      "d": "2026-10-27",
+      "h": "07:30",
+      "c": "ctp",
+      "r": "li",
+      "f": "video",
+      "p": "CTP_FLU",
+      "t": "Mejora tus flujos contractuales"
+    },
+    {
+      "d": "2026-10-27",
+      "h": "08:00",
+      "c": "jd",
+      "r": "ig",
+      "f": "story",
+      "p": "h13-hoy",
+      "t": "Hoy, 7 p.m."
+    },
+    {
+      "d": "2026-10-27",
+      "h": "09:00",
+      "c": "jd",
+      "r": "ig",
+      "f": "reel",
+      "p": "V11",
+      "t": "V11 · Lo que no se puede delegar"
+    },
+    {
+      "d": "2026-10-27",
+      "h": "13:00",
+      "c": "tf",
+      "r": "ig",
+      "f": "story",
+      "p": "h20-academy-clase",
+      "t": "Academy: hoy es la clase",
+      "n": "Repite la story del 6."
+    },
+    {
+      "d": "2026-10-27",
+      "h": "18:30",
+      "c": "jd",
+      "r": "ig",
+      "f": "story",
+      "p": "h14-en-30-min",
+      "t": "Empezamos en 30 minutos"
+    },
+    {
+      "d": "2026-10-27",
+      "h": "19:00",
+      "c": "jd",
+      "r": "ig",
+      "f": "story",
+      "p": "h15-en-vivo",
+      "t": "Estamos en vivo"
+    },
+    {
+      "d": "2026-10-28",
+      "h": "07:30",
+      "c": "ctp",
+      "r": "li",
+      "f": "video",
+      "p": "V10",
+      "t": "V10 · La IA no arregla el desorden"
+    },
+    {
+      "d": "2026-10-28",
+      "h": "08:00",
+      "c": "tf",
+      "r": "li",
+      "f": "video",
+      "p": "V07",
+      "t": "V7 · Transforma bien, recuerda mal"
+    },
+    {
+      "d": "2026-10-28",
+      "h": "09:00",
+      "c": "jd",
+      "r": "li",
+      "f": "articulo",
+      "p": "A4",
+      "t": "Lo que me preguntaron en la clase",
+      "n": "Artículo: se publica a mano."
+    },
+    {
+      "d": "2026-10-28",
+      "h": "11:00",
+      "c": "ctp",
+      "r": "ig",
+      "f": "reel",
+      "p": "V10",
+      "t": "V10 · La IA no arregla el desorden"
+    },
+    {
+      "d": "2026-10-28",
+      "h": "12:00",
+      "c": "jd",
+      "r": "ig",
+      "f": "reel",
+      "p": "X05",
+      "t": "Me leí Control, de Freddy Vega"
+    },
+    {
+      "d": "2026-10-28",
+      "h": "18:00",
+      "c": "jd",
+      "r": "ig",
+      "f": "story",
+      "p": "h16-gracias",
+      "t": "Gracias por estar"
+    },
+    {
+      "d": "2026-10-28",
+      "h": "19:00",
+      "c": "tf",
+      "r": "ig",
+      "f": "reel",
+      "p": "V08",
+      "t": "V8 · El prompt de tu colega"
+    },
+    {
+      "d": "2026-10-29",
+      "h": "07:00",
+      "c": "jd",
+      "r": "li",
+      "f": "video",
+      "p": "V12",
+      "t": "V12 · Armas de destrucción matemática"
+    },
+    {
+      "d": "2026-10-29",
+      "h": "07:30",
+      "c": "ctp",
+      "r": "li",
+      "f": "video",
+      "p": "c32-ctp-de-la-empresa",
+      "t": "Los contratos son de la empresa"
+    },
+    {
+      "d": "2026-10-29",
+      "h": "08:00",
+      "c": "tf",
+      "r": "li",
+      "f": "video",
+      "p": "V09",
+      "t": "V9 · Le di todo el contexto"
+    },
+    {
+      "d": "2026-10-29",
+      "h": "11:00",
+      "c": "ctp",
+      "r": "ig",
+      "f": "carrusel",
+      "p": "c33-ctp-vencimientos",
+      "t": "No se te pasa una fecha"
+    },
+    {
+      "d": "2026-10-29",
+      "h": "12:00",
+      "c": "jd",
+      "r": "ig",
+      "f": "reel",
+      "p": "V12",
+      "t": "V12 · Armas de destrucción matemática"
+    },
+    {
+      "d": "2026-10-29",
+      "h": "19:00",
+      "c": "tf",
+      "r": "ig",
+      "f": "carrusel",
+      "p": "c24-tech-como-cotizamos",
+      "t": "Technology: cómo cotizamos"
+    },
+    {
+      "d": "2026-10-30",
+      "h": "07:00",
+      "c": "jd",
+      "r": "li",
+      "f": "texto",
+      "t": "Cierre de mes: qué aprendí de la clase",
+      "n": "Invita al curso de Academy."
+    },
+    {
+      "d": "2026-10-30",
+      "h": "07:30",
+      "c": "ctp",
+      "r": "li",
+      "f": "video",
+      "p": "V11",
+      "t": "V11 · La trazabilidad sí se puede tener"
+    },
+    {
+      "d": "2026-10-30",
+      "h": "08:00",
+      "c": "tf",
+      "r": "li",
+      "f": "video",
+      "p": "V08",
+      "t": "V8 · El prompt de tu colega"
+    },
+    {
+      "d": "2026-10-30",
+      "h": "11:00",
+      "c": "ctp",
+      "r": "ig",
+      "f": "reel",
+      "p": "V11",
+      "t": "V11 · La trazabilidad sí se puede tener",
+      "n": "Cierre: demo, nunca comenta CLASE."
+    },
+    {
+      "d": "2026-10-30",
+      "h": "12:00",
+      "c": "jd",
+      "r": "ig",
+      "f": "carrusel",
+      "p": "c13-comprar-herramienta",
+      "t": "Antes de pagar una herramienta de IA"
+    },
+    {
+      "d": "2026-10-30",
+      "h": "19:00",
+      "c": "tf",
+      "r": "ig",
+      "f": "reel",
+      "p": "V09",
+      "t": "V9 · Le di todo el contexto"
+    },
+    {
+      "d": "2026-10-31",
+      "h": "12:00",
+      "c": "jd",
+      "r": "ig",
+      "f": "reel",
+      "p": "X03",
+      "t": "Lo que hace mágico al realismo mágico"
+    },
+    {
+      "d": "2026-10-31",
+      "h": "19:00",
+      "c": "tf",
+      "r": "ig",
+      "f": "carrusel",
+      "p": "c25-tech-no-desde-cero",
+      "t": "Technology: no empezamos de cero"
+    }
+  ],
+  "paraNoviembre": [
+    "V10-TF ig y li",
+    "V12-TF ig y li",
+    "juanda LinkedIn: V03, V04, V06, V09, V10, V11, X01, X02, X03, X04, X05 (LinkedIn de lun a vie ya está lleno; más de un post al día le quita alcance)",
+    "c05, c12, c13 en LinkedIn",
+    "c25 y c33 en LinkedIn",
+    "la-ia-que-nadie-entiende-b"
+  ]
+}

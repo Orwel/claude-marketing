@@ -1,0 +1,680 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Resumen · Contratos civiles y mercantiles · Corte 2</title>
+<link rel="stylesheet" href="kit/fuentes.css">
+<link rel="stylesheet" href="kit/resumen.css">
+<style>
+  /* Fichas de contrato: partes arriba, luego esenciales / naturales / accidentales. */
+  .ficha { padding: 11px 13px; }
+  .ficha h3 { font-size: 13px; display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+  .ficha h3 small { font-size: 9px; font-weight: 600; color: var(--tenue); letter-spacing: .04em; }
+  .partes { display: flex; flex-wrap: wrap; gap: 5px; margin: 7px 0 8px; }
+  .parte { font-size: 10px; font-weight: 700; padding: 3px 9px; border-radius: 999px; background: #0B2A33; color: var(--acc3); border: 1px solid #1E6E78; }
+  .parte.b { background: #2A1B0E; color: var(--nar2); border-color: #7A4A1E; }
+  .parte.c { background: var(--panel2); color: var(--suave); border-color: var(--borde2); font-weight: 600; }
+  .elem { display: grid; grid-template-columns: 74px 1fr; gap: 3px 8px; font-size: 10.6px; line-height: 1.42; color: var(--suave); }
+  .elem dt { font-size: 8.6px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; padding-top: 2px; }
+  .elem dt.e { color: var(--acc2); } .elem dt.n { color: var(--tenue); } .elem dt.a { color: var(--nar2); } .elem dt.d { color: var(--rojo); }
+  .elem dd b { color: var(--tinta); font-weight: 600; }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+    <symbol id="i-swap" viewBox="0 0 24 24"><path d="M17 3l4 4-4 4M21 7H9M7 21l-4-4 4-4M3 17h12"/></symbol>
+    <symbol id="i-key" viewBox="0 0 24 24"><circle cx="7.5" cy="15.5" r="4.5"/><path d="m10.7 12.3 9.8-9.8M17 6l3 3M14 9l2 2"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11 12 3l9 8v10H3z"/><path d="M9 21v-6h6v6"/></symbol>
+    <symbol id="i-store" viewBox="0 0 24 24"><path d="M3 9 5 3h14l2 6M3 9v12h18V9M3 9h18M9 21v-6h6v6"/></symbol>
+    <symbol id="i-gift" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="13" rx="1"/><path d="M12 8v13M3 12h18M12 8S10 3 7.5 4 9 8 12 8Zm0 0s2-5 4.5-4S15 8 12 8Z"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+    <symbol id="i-coin" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M14.5 9.5c-.4-.9-1.4-1.5-2.5-1.5-1.4 0-2.5.8-2.5 2s1.1 1.7 2.5 2 2.5.8 2.5 2-1.1 2-2.5 2c-1.1 0-2.1-.6-2.5-1.5M12 6v2M12 16v2"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0ZM12 9v4M12 17h.01"/></symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6M8 13h8M8 17h6"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></symbol>
+    <symbol id="i-scale" viewBox="0 0 24 24"><path d="M12 3v18M7 21h10M5 7h14M5 7l-3 7a3 3 0 0 0 6 0L5 7ZM19 7l-3 7a3 3 0 0 0 6 0l-3-7Z"/></symbol>
+  </defs>
+</svg>
+
+<!-- ============================== PORTADA ============================== -->
+<section class="pagina cruces">
+  <svg class="constelacion" data-paleta="academy" data-semilla="41" data-zona="500,96,785,410" data-nodos="17" data-cliente="S06–S10" viewBox="0 0 794 1123" aria-hidden="true"></svg>
+  <div class="brillo" style="width:760px;height:760px;right:-300px;top:-300px;background:radial-gradient(circle, rgba(0,196,204,.22), transparent 62%)"></div>
+  <div class="brillo" style="width:520px;height:520px;left:-260px;bottom:-200px;background:radial-gradient(circle, rgba(242,140,40,.13), transparent 62%)"></div>
+  <div class="contenido">
+    <div style="display:flex;justify-content:space-between;align-items:center">
+      <div class="logo"><img src="../public/marcas/trifuerza/logo-horizontal-claro.png" alt="Trifuerza"><span class="sep"></span><span class="linea">Academy</span></div>
+      <span class="etiqueta">Los Libertadores · Contratos civiles y mercantiles · 2026-2</span>
+    </div>
+    <div style="margin-top:58px">
+      <span class="etiqueta">Resumen del 2.º corte (S06–S10)</span>
+      <h1 style="margin-top:22px">Los contratos<br><b>en particular.</b></h1>
+      <p class="lead" style="margin-top:18px;max-width:440px">Compraventa, permuta y donación, arrendamiento, mandato y comisión, y los contratos reales: mutuo, comodato y depósito. Sesiones 6 a 10 · 16 de septiembre a 14 de octubre.</p>
+      <p style="margin-top:14px;font-size:12px;color:var(--tenue);letter-spacing:.04em">Prof. <b style="color:var(--tinta);font-weight:600">Juan David Vanegas Roldán</b></p>
+    </div>
+
+    <div class="caja clave" style="margin-top:26px;padding:16px 18px"><span class="tit">La matriz del corte</span><span style="font-size:13px">Primero, <b>¿quiénes son las partes y cuáles son los elementos esenciales?</b> (sin ellos el contrato no existe o es otro). Luego, cinco preguntas: <b>¿cómo se perfecciona? ¿qué obligaciones genera? ¿quién soporta el riesgo? ¿qué grado de culpa se exige? ¿qué remedios hay ante el incumplimiento?</b> Con esa matriz se responde incluso sobre contratos que no se vieron en clase.</span></div>
+
+    <div class="tarjeta" style="margin-top:16px;padding:16px 22px">
+      <h4>Contenido</h4>
+      <div class="indice" style="margin-top:6px">
+        <div><span>01</span>Elementos esenciales y partes</div>
+        <div><span>06</span>S10 · Mutuo, comodato y depósito</div>
+        <div><span>02</span>S06 · La compraventa</div>
+        <div><span>07</span>Matriz comparada del corte</div>
+        <div><span>03</span>S07 · Permuta y donación</div>
+        <div><span>08</span>Preguntas de repaso</div>
+        <div><span>04</span>S08 · El arrendamiento</div>
+        <div><span>09</span>Lo esencial</div>
+        <div><span>05</span>S09 · Mandato y comisión</div>
+        <div><span></span></div>
+      </div>
+    </div>
+
+    <div class="kpis" style="margin-top:auto">
+      <div class="tarjeta kpi"><b class="acc">Título y modo</b><span>el contrato obliga; la tradición transfiere</span></div>
+      <div class="tarjeta kpi"><b>Tres regímenes</b><span>civil, mercantil y de consumo</span></div>
+      <div class="tarjeta kpi borde-nar"><b class="nar">Art. 1501</b><span>elementos esenciales, naturales y accidentales</span></div>
+    </div>
+    <div class="pie" style="margin-top:20px"><span><a class="web" href="https://www.trifuerza.co"><b>www.trifuerza.co ↗</b></a> · Trifuerza Academy</span><span>Juan David Vanegas Roldán · Los Libertadores · Corte 2 · 2026-2</span></div>
+  </div>
+</section>
+
+<!-- ============================== FICHAS (1/2) ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:620px;height:620px;right:-300px;top:-220px;background:radial-gradient(circle, rgba(0,196,204,.13), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">01</span> Elementos y partes</div>
+    <h2>La ficha de cada contrato:<br><b>quiénes son las partes y qué no puede faltar.</b></h2>
+    <p class="texto" style="margin-top:10px">El art. 1501 del Código Civil distingue tres clases de elementos. Los <b>esenciales</b> son aquellos sin los cuales el contrato no produce efecto o <b>degenera en otro distinto</b>. Los <b>naturales</b> le pertenecen sin cláusula especial, pero se pueden modificar. Los <b>accidentales</b> solo existen si las partes los pactan. Identificar los esenciales y nombrar bien a las partes es el primer paso para calificar cualquier contrato.</p>
+
+    <div class="dos" style="margin-top:12px">
+      <div class="tarjeta ficha borde-acc"><h3>Compraventa<small>C.C. 1849 · C. Co. 905</small></h3>
+        <div class="partes"><span class="parte">Vendedor</span><span class="parte b">Comprador</span></div>
+        <dl class="elem"><dt class="e">Esenciales</dt><dd><b>Consentimiento</b> sobre la <b>cosa</b> y el <b>precio en dinero</b>; en inmuebles, servidumbres y herencias, <b>escritura pública</b> (art. 1857).</dd><dt class="d">Si falta</dt><dd>Sin precio real: no hay venta (suele ser donación). Precio en otra cosa: <b>permuta</b>. Sin escritura en inmuebles: <b>inexistente</b>.</dd><dt class="n">Naturales</dt><dd>Saneamiento por <b>evicción</b> y por <b>vicios redhibitorios</b>; riesgo del comprador (art. 1876); entrega con accesorios y frutos.</dd><dt class="a">Accidentales</dt><dd>Arras, pacto comisorio, retroventa, venta a prueba, reserva de dominio, plazos de pago.</dd></dl>
+      </div>
+      <div class="tarjeta ficha"><h3>Permuta<small>C.C. 1955 a 1958</small></h3>
+        <div class="partes"><span class="parte">Permutante</span><span class="parte">Permutante</span></div>
+        <dl class="elem"><dt class="e">Esenciales</dt><dd><b>Consentimiento</b> sobre <b>dos cosas</b>, ninguna de ellas dinero; <b>escritura pública</b> si al menos una es inmueble (art. 1956).</dd><dt class="d">Si falta</dt><dd>Si el dinero vale más que la cosa entregada: <b>compraventa</b> (art. 1850).</dd><dt class="n">Naturales</dt><dd>Las de la compraventa en doble posición: cada permutante es <b>vendedor de lo que da</b> y sanea frente al otro.</dd><dt class="a">Accidentales</dt><dd>Entrega de cosa futura (lote por apartamentos), plazos, garantías y condición resolutoria expresa.</dd></dl>
+      </div>
+    </div>
+    <div class="dos" style="margin-top:12px">
+      <div class="tarjeta ficha borde-nar"><h3>Donación entre vivos<small>C.C. 1443</small></h3>
+        <div class="partes"><span class="parte">Donante</span><span class="parte b">Donatario</span></div>
+        <dl class="elem"><dt class="e">Esenciales</dt><dd><b>Empobrecimiento</b> del donante, <b>enriquecimiento</b> del donatario, <b>animus donandi</b> y <b>aceptación</b> notificada. Sobre 50 salarios mínimos, <b>insinuación</b> notarial; en inmuebles, escritura y registro.</dd><dt class="d">Si falta</dt><dd>Sin aceptación: no hay contrato. Con contraprestación equivalente: es <b>oneroso</b> (venta o permuta). Sin insinuación: <b>nula en el exceso</b>.</dd><dt class="n">Naturales</dt><dd><b>Irrevocabilidad</b> (salvo ingratitud, modo o inoficiosidad); el donante <b>no sanea</b> salvo mala fe; deber de gratitud.</dd><dt class="a">Accidentales</dt><dd><b>Modo o carga</b>, reserva de usufructo, cláusula de reversión o sustitución, plazo o condición.</dd></dl>
+      </div>
+      <div class="tarjeta ficha"><h3>Arrendamiento<small>C.C. 1973 · Ley 820 · C. Co. 518</small></h3>
+        <div class="partes"><span class="parte">Arrendador</span><span class="parte b">Arrendatario</span><span class="parte c">Subarrendatario o cesionario</span><span class="parte c">Codeudor o fiador</span></div>
+        <dl class="elem"><dt class="e">Esenciales</dt><dd><b>Cosa</b> no consumible en el comercio, <b>canon</b> determinado o determinable y <b>goce temporal</b>.</dd><dt class="d">Si falta</dt><dd>Sin canon: <b>comodato</b>. Goce perpetuo: se acerca al <b>usufructo</b> o a la enajenación.</dd><dt class="n">Naturales</dt><dd>Reparaciones <b>necesarias</b> del arrendador y <b>locativas</b> del arrendatario; prohibición de ceder y subarrendar (art. 1985); en vivienda, término de un año y prórroga.</dd><dt class="a">Accidentales</dt><dd>Autorización para subarrendar, término y prórrogas, cláusula penal, garantías (póliza), destinación específica.</dd></dl>
+      </div>
+    </div>
+    <div class="caja clave" style="margin-top:12px"><span class="tit">Cómo usar la ficha en un caso</span>1) Nombre a las <b>partes</b> con su término técnico. 2) Verifique los <b>esenciales</b>: si falta uno, el contrato no existe o es otro. 3) Aplique los <b>naturales</b> salvo que se hayan excluido. 4) Revise qué <b>accidentales</b> pactaron.</div>
+    <div class="caja ojo" style="margin-top:10px"><span class="tit">El nombre no decide</span>El juez califica por los <b>elementos esenciales</b> que realmente existen, no por el título del documento: un "comodato" con pago es arrendamiento, una "venta" con precio irrisorio es donación y una plataforma que ejecuta por su cuenta puede ser comisionista.</div>
+    <div class="pie"><span><b>Contratos civiles y mercantiles · Corte 2</b> · Elementos y partes (1/2)</span><span>Juan David Vanegas Roldán · <a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 2</span></div>
+  </div>
+</section>
+
+<!-- ============================== FICHAS (2/2) ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:620px;height:620px;left:-300px;top:300px;background:radial-gradient(circle, rgba(242,140,40,.12), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">01</span> Elementos y partes</div>
+    <h2>Gestión y contratos reales:<br><b>las partes cambian de nombre.</b></h2>
+
+    <div class="dos" style="margin-top:12px">
+      <div class="tarjeta ficha borde-acc"><h3>Mandato<small>C.C. 2142 · C. Co. 1262</small></h3>
+        <div class="partes"><span class="parte">Mandante o comitente</span><span class="parte b">Mandatario, apoderado o procurador</span><span class="parte c">Tercero</span></div>
+        <dl class="elem"><dt class="e">Esenciales</dt><dd><b>Encargo</b> de gestionar uno o más negocios <b>por cuenta y riesgo</b> del mandante, y su <b>aceptación</b> (expresa o tácita).</dd><dt class="d">Si falta</dt><dd>Si el negocio es en interés del propio gestor, no hay mandato. Si solo se acerca a las partes: <b>corretaje</b>.</dd><dt class="n">Naturales</dt><dd>Gratuidad en lo civil (remunerado en lo mercantil, art. 1264); <b>revocabilidad</b>; rendición de cuentas; extinción por muerte.</dd><dt class="a">Accidentales</dt><dd><b>Representación</b> (actuar en nombre del mandante), facultad de delegar, remuneración civil, irrevocabilidad en interés del mandatario.</dd></dl>
+      </div>
+      <div class="tarjeta ficha"><h3>Mutuo<small>C.C. 2221 · C. Co. 1163</small></h3>
+        <div class="partes"><span class="parte">Mutuante</span><span class="parte b">Mutuario</span></div>
+        <dl class="elem"><dt class="e">Esenciales</dt><dd><b>Entrega</b> (tradición) de <b>cosas fungibles</b> y obligación de <b>restituir otro tanto</b> del mismo género y calidad. Contrato real.</dd><dt class="d">Si falta</dt><dd>Sin entrega: no hay mutuo (hay promesa o apertura de crédito). Si se debe devolver la misma cosa: <b>comodato</b>.</dd><dt class="n">Naturales</dt><dd>Gratuidad en lo civil e <b>intereses presumidos</b> en lo mercantil; riesgo del mutuario; no exigible antes de 10 días si no hay plazo.</dd><dt class="a">Accidentales</dt><dd>Intereses remuneratorios y moratorios (con el límite legal), plazo, cuotas, garantías y corrección monetaria.</dd></dl>
+      </div>
+    </div>
+    <div class="dos" style="margin-top:12px">
+      <div class="tarjeta ficha borde-nar"><h3>Comodato<small>C.C. 2200</small></h3>
+        <div class="partes"><span class="parte">Comodante</span><span class="parte b">Comodatario</span></div>
+        <dl class="elem"><dt class="e">Esenciales</dt><dd><b>Entrega</b> de una <b>especie no fungible</b> para usarla, <b>gratuidad</b> y restitución de <b>la misma</b> cosa. Contrato real.</dd><dt class="d">Si falta</dt><dd>Si se paga por el uso: <b>arrendamiento</b> (art. 1501). La gratuidad es de la <b>esencia</b>, no de la naturaleza.</dd><dt class="n">Naturales</dt><dd>Culpa <b>levísima</b> del comodatario; uso según lo pactado; restitución al plazo o al terminar el uso; retención por expensas.</dd><dt class="a">Accidentales</dt><dd>Reserva de pedirla en cualquier momento (<b>comodato precario</b>), plazo, destino específico.</dd></dl>
+      </div>
+      <div class="tarjeta ficha"><h3>Depósito<small>C.C. 2236 · C. Co. 1170</small></h3>
+        <div class="partes"><span class="parte">Depositante</span><span class="parte b">Depositario</span><span class="parte c">Secuestre (en el secuestro)</span></div>
+        <dl class="elem"><dt class="e">Esenciales</dt><dd><b>Entrega</b> de una <b>cosa corporal</b> con la finalidad de <b>custodia</b> y restitución en especie. Contrato real.</dd><dt class="d">Si falta</dt><dd>Si se faculta usar el dinero y devolver otro tanto: <b>depósito irregular</b> (cercano al mutuo). Si es para garantizar: <b>prenda</b>.</dd><dt class="n">Naturales</dt><dd>Gratuidad en lo civil (remunerado en lo mercantil); <b>prohibición de usar</b>; culpa grave; restitución a voluntad del depositante.</dd><dt class="a">Accidentales</dt><dd>Remuneración, permiso de uso, lugar y forma de custodia, seguro.</dd></dl>
+      </div>
+    </div>
+
+    <h4 style="margin-top:14px">Las partes en las figuras mercantiles del mandato</h4>
+    <table class="tabla">
+      <tr><th style="width:18%">Figura</th><th style="width:30%">Partes</th><th>Elemento esencial que la distingue</th></tr>
+      <tr><td>Comisión</td><td><b>Comitente</b> y <b>comisionista</b></td><td>Comisionista <b>profesional</b> que actúa en nombre propio por cuenta ajena (C. Co. 1287)</td></tr>
+      <tr><td>Preposición</td><td><b>Preponente</b> y <b>factor</b></td><td>Encargo de <b>administrar un establecimiento</b> de comercio o un ramo de él (C. Co. 1332)</td></tr>
+      <tr><td>Agencia comercial</td><td><b>Empresario</b> (agenciado) y <b>agente</b></td><td>Promoción de negocios ajenos de forma <b>estable e independiente</b> en una zona (C. Co. 1317)</td></tr>
+      <tr><td>Corretaje</td><td><b>Interesados</b> y <b>corredor</b></td><td>Solo <b>pone en relación</b> a las partes, sin vínculo con ninguna; no es mandato (C. Co. 1340)</td></tr>
+    </table>
+    <div class="pie"><span><b>Contratos civiles y mercantiles · Corte 2</b> · Elementos y partes (2/2)</span><span>Juan David Vanegas Roldán · <a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 3</span></div>
+  </div>
+</section>
+
+<!-- ============================== S06 (1/3) ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:620px;height:620px;right:-300px;top:-220px;background:radial-gradient(circle, rgba(0,196,204,.13), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">02</span> Sesión 6 · 16 de septiembre</div>
+    <h2>La compraventa:<br><b>el contrato que mueve la propiedad.</b></h2>
+    <p class="texto" style="margin-top:12px">Es el instrumento con el que la sociedad traslada la riqueza: alguien entrega una cosa y otro paga un precio en <b>dinero</b>. Por eso el Código Civil la regula primero y con más detalle, y su régimen se aplica a figuras vecinas como la permuta. C.C. arts. 1849 a 1954 · C. Co. arts. 905 a 967 · Ley 1480 de 2011.</p>
+
+    <div class="caja clave" style="margin-top:12px"><span class="tit">Título y modo: la clave del sistema colombiano</span>El contrato <b>no transfiere el dominio</b>. La compraventa es el <b>título</b>: genera la obligación del vendedor de dar. La propiedad pasa con el <b>modo</b>, que es la tradición: entrega real o simbólica en muebles (art. 754) y <b>registro</b> en la Oficina de Registro de Instrumentos Públicos en inmuebles (art. 756).</div>
+    <div class="caja ejemplo" style="margin-top:10px"><span class="tit">Consecuencia práctica</span>Firma la escritura del apartamento el lunes y la registra el viernes. Entre lunes y viernes tiene un derecho personal contra el vendedor, pero <b>no es dueño</b>. Si el vendedor le vende a un tercero que registra antes, el tercero es el propietario y a usted le queda la acción de perjuicios. Por eso se registra de inmediato.</div>
+
+    <div class="dos" style="margin-top:12px">
+      <div class="tarjeta bloque"><h3>Dos definiciones</h3><p><b>C.C. art. 1849:</b> una parte se obliga a <b>dar</b> una cosa y la otra a pagarla en dinero. <b>C. Co. art. 905:</b> se obliga a <b>transmitir la propiedad</b>; redacción más pragmática, pero el sistema título–modo rige también allí. Si la contraprestación no es dinero, hay permuta.</p></div>
+      <div class="tarjeta bloque"><h3>Caracteres</h3><p><b>Bilateral</b> (opera la condición resolutoria tácita, art. 1546, y la excepción de contrato no cumplido, art. 1609), <b>oneroso</b> (culpa leve), <b>conmutativo</b> por regla general (aleatorio si se compra la suerte, art. 1869), <b>principal</b>, <b>consensual</b> salvo inmuebles, servidumbres y herencias (art. 1857) y de <b>ejecución instantánea</b>.</p></div>
+    </div>
+
+    <h4 style="margin-top:14px">La cosa: cuatro condiciones</h4>
+    <div class="cuatro">
+      <div class="tarjeta bloque"><h3>Existir o esperarse</h3><p>La venta de cosa futura vale, bajo condición de que llegue a existir (art. 1869).</p></div>
+      <div class="tarjeta bloque"><h3>Determinada</h3><p>Cuerpo cierto individualizado, o género por cantidad y calidad.</p></div>
+      <div class="tarjeta bloque"><h3>En el comercio</h3><p>Si no lo está (uso público, cuerpo humano), hay objeto ilícito y nulidad absoluta (art. 1521).</p></div>
+      <div class="tarjeta bloque"><h3>Ajena al comprador</h3><p>Comprar lo propio no vale y el precio se repite (art. 1872).</p></div>
+    </div>
+
+    <div class="caja ojo" style="margin-top:12px"><span class="tit">Error frecuente: la venta de cosa ajena no es nula</span>"La venta de cosa ajena vale" (art. 1871). El contrato se formó bien; el problema está en la ejecución: el vendedor no puede transferir lo que no tiene. Frente al dueño es <b>inoponible</b> (puede reivindicar). Si el dueño ratifica, se sanea (art. 1874); si el vendedor adquiere después, el comprador fue dueño desde la tradición (art. 1875); si el dueño reivindica y gana, hay <b>evicción</b>.</div>
+    <div class="pie"><span><b>Contratos civiles y mercantiles · Corte 2</b> · S06 · Título, modo y la cosa</span><span>Juan David Vanegas Roldán · <a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 4</span></div>
+  </div>
+</section>
+
+<!-- ============================== S06 (2/3) ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:620px;height:620px;left:-300px;top:300px;background:radial-gradient(circle, rgba(242,140,40,.12), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">02</span> Sesión 6 · Precio, capacidad y perfeccionamiento</div>
+    <h2>El precio, quién puede vender<br><b>y cuándo nace el contrato.</b></h2>
+
+    <h4 style="margin-top:14px">El precio: tres requisitos</h4>
+    <div class="tres">
+      <div class="tarjeta bloque"><h3>En dinero</h3><p>Si el precio es <b>mixto</b>, el art. 1850 compara: es venta si el dinero vale más que la cosa, permuta si la cosa vale más. Importa porque define el régimen y si opera la lesión enorme.</p></div>
+      <div class="tarjeta bloque"><h3>Real y serio</h3><p>El precio <b>simulado</b> o <b>irrisorio</b> no es contraprestación: no hay venta y suele encubrir una donación. No confundir con el precio <b>bajo pero real</b>, que sí es venta y puede dar lesión enorme en inmuebles.</p></div>
+      <div class="tarjeta bloque"><h3>Determinado o determinable</h3><p>Puede fijarlo un tercero (art. 1865); nunca el arbitrio de una sola parte. En lo mercantil, a falta de pacto, rige el precio medio corriente del día y lugar de entrega (art. 920 C. Co.).</p></div>
+    </div>
+    <div class="caja ejemplo" style="margin-top:10px"><span class="tit">Aplicación contemporánea</span>La cláusula que permite a un proveedor digital cambiar el precio unilateralmente sin criterio objetivo choca con el art. 1865 (arbitrio de una parte) y, si hay consumidor, con el régimen de cláusulas abusivas de la Ley 1480 de 2011.</div>
+
+    <div class="dos" style="margin-top:12px">
+      <div class="tarjeta bloque"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-user"/></svg></div><h3>Capacidad y prohibiciones (arts. 1851 a 1856)</h3></div>
+        <p>Rige la capacidad general (arts. 1502 y 1503, con la Ley 1996 de 2019). Además hay prohibiciones por la <b>posición</b> frente al negocio, para evitar conflictos de interés:</p>
+        <ul class="lista" style="margin-top:6px">
+          <li><svg class="ico"><use href="#i-x"/></svg><span>Entre cónyuges no divorciados, y entre padre e hijo de familia.</span></li>
+          <li><svg class="ico"><use href="#i-x"/></svg><span>Tutores y curadores con bienes de sus pupilos; mandatarios con lo que se les encargó vender.</span></li>
+          <li><svg class="ico"><use href="#i-x"/></svg><span>Empleados públicos, jueces y abogados con bienes de su ministerio o litigio.</span></li>
+        </ul>
+        <p style="margin-top:6px">La sanción es la nulidad, absoluta o relativa según el criterio del art. 1741.</p>
+      </div>
+      <div class="tarjeta bloque"><div class="cab"><div class="ic-caja nar"><svg class="ico"><use href="#i-doc"/></svg></div><h3>Perfeccionamiento (art. 1857)</h3></div>
+        <p>La venta es perfecta cuando hay acuerdo en <b>cosa y precio</b>. Excepción: bienes raíces, servidumbres y sucesión hereditaria exigen <b>escritura pública</b>, solemnidad <i>ad substantiam actus</i>: sin escritura el contrato es <b>inexistente</b> (art. 898 C. Co.).</p>
+        <p style="margin-top:6px"><b>La promesa de compraventa</b> es otro contrato: su objeto es una obligación de <b>hacer</b> (celebrar el prometido). Requisitos del art. 89 de la Ley 153 de 1887: por escrito; contrato prometido no ineficaz; plazo o condición que fije la época; y determinación tal que solo falte la tradición o las formalidades. Si falta uno, nulidad absoluta.</p>
+      </div>
+    </div>
+
+    <div class="caja ojo" style="margin-top:12px"><span class="tit">Caso</span>Firman promesa de compraventa de una casa por documento privado, con fecha de escritura. El promitente vendedor no llega. El comprador puede pedir el <b>cumplimiento</b> (el juez puede firmar la escritura en su rebeldía) o la <b>resolución</b>, con perjuicios (art. 1546). Y si vendieron la casa por documento privado sin más: no hay compraventa, pero puede haber una promesa válida.</div>
+    <div class="pie"><span><b>Contratos civiles y mercantiles · Corte 2</b> · S06 · Precio y perfeccionamiento</span><span>Juan David Vanegas Roldán · <a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 5</span></div>
+  </div>
+</section>
+
+<!-- ============================== S06 (3/3) ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:620px;height:620px;right:-300px;top:-180px;background:radial-gradient(circle, rgba(0,196,204,.13), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">02</span> Sesión 6 · Obligaciones, riesgos y regímenes</div>
+    <h2>Entregar, sanear, pagar<br><b>y el límite de la lesión enorme.</b></h2>
+
+    <div class="dos" style="margin-top:12px">
+      <div class="tarjeta bloque borde-acc"><h3 class="acc">Saneamiento por evicción · problema de título</h3><p>El comprador es privado de la cosa por <b>sentencia</b> y por causa <b>anterior</b> a la venta. Dos momentos: <b>amparar</b> (el comprador debe <b>citar</b> al vendedor al proceso; si no, no responde) e <b>indemnizar</b> (precio, costas, frutos y, si hubo mala fe, el mayor valor). Es elemento natural: puede excluirse, pero no libera al vendedor de mala fe.</p></div>
+      <div class="tarjeta bloque borde-nar"><h3 class="nar">Vicios redhibitorios · problema de calidad</h3><p>El vicio debe existir al vender, ser <b>grave</b> y <b>oculto</b>. Acción <b>redhibitoria</b> (deshacer la venta: 6 meses muebles, 1 año inmuebles) o <b>estimatoria</b> (rebaja: 1 año y 18 meses), desde la entrega (art. 1923). Si el vendedor conocía el vicio, también perjuicios.</p></div>
+    </div>
+    <p class="texto" style="margin-top:8px">El vendedor además debe <b>entregar</b> la cosa con accesorios y frutos (arts. 1880 y 1884). El comprador debe <b>pagar</b> en el lugar y tiempo pactados, o los de la entrega (art. 1929), y <b>recibir</b>. Si no paga, el vendedor elige precio o resolución, con perjuicios (art. 1930). El <b>pacto comisorio</b> (art. 1935) no resuelve de forma automática: el comprador puede pagar dentro de las 24 horas siguientes a la notificación de la demanda.</p>
+
+    <div class="dos" style="margin-top:10px">
+      <div class="tarjeta bloque"><h3>Riesgo (art. 1876)</h3><p>El cuerpo cierto perece para el <b>comprador</b> desde el perfeccionamiento, aunque no se haya entregado. Se atenúa si el vendedor está en mora, la venta es condicional, son cosas de género o se vendió a dos personas.</p></div>
+      <div class="tarjeta bloque"><h3>Pactos accesorios</h3><p><b>Arras</b> (se presumen de retractación, arts. 1859 a 1861) · <b>venta a prueba</b> (art. 1879) · <b>retroventa</b> (máximo 4 años; se abusa como garantía encubierta) · <b>reserva de dominio</b> (art. 952 C. Co., base del crédito de consumo).</p></div>
+    </div>
+
+    <h4 style="margin-top:14px">Lesión enorme (arts. 1946 a 1954): solo inmuebles</h4>
+    <table class="tabla">
+      <tr><th style="width:18%">Sufre lesión</th><th style="width:44%">Cuándo</th><th>Ejemplo · justo precio $400</th></tr>
+      <tr><td>El vendedor</td><td>Recibe menos de la <b>mitad</b> del justo precio</td><td>Vendió en $190</td></tr>
+      <tr><td>El comprador</td><td>El justo precio es menor que la mitad de lo que paga</td><td>Pagó $850</td></tr>
+    </table>
+    <p class="texto" style="margin-top:6px">El demandado puede evitar la rescisión completando el justo precio menos una décima parte, o restituyendo el exceso más una décima parte (art. 1948). Prescribe en <b>4 años</b>. Es <b>irrenunciable</b> (art. 1950). No procede en muebles, ventas judiciales ni compraventa mercantil.</p>
+
+    <table class="tabla" style="margin-top:10px">
+      <tr><th style="width:17%"></th><th>Civil</th><th class="nar">Mercantil</th><th class="acc">De consumo</th></tr>
+      <tr><td>Norma</td><td>C.C. 1849 y ss.</td><td>C. Co. 905 y ss.</td><td>Ley 1480 de 2011</td></tr>
+      <tr><td>Lesión enorme</td><td>Sí, en inmuebles</td><td>No procede</td><td>No aplica</td></tr>
+      <tr><td>Defectos</td><td>Vicios redhibitorios</td><td>Garantía de buen funcionamiento (art. 932)</td><td>Garantía legal irrenunciable</td></tr>
+    </table>
+    <p class="texto" style="margin-top:6px">Es mercantil si se adquiere a título oneroso para enajenar, y si es mercantil para una sola parte rige la ley comercial (C. Co. arts. 20 a 22). En la venta internacional de mercaderías puede aplicar la <b>Convención de Viena</b> de 1980 (Ley 518 de 1999).</p>
+    <div class="caja ojo" style="margin-top:10px"><span class="tit">Saneamiento civil frente a garantía legal</span>El saneamiento del Código Civil es un <b>elemento natural</b>: opera por defecto y admite pacto dentro de límites. La <b>garantía legal</b> de la Ley 1480 rige solo en relaciones de consumo, es <b>irrenunciable</b>, tiene plazos propios y se reclama ante la Superintendencia de Industria y Comercio.</div>
+    <div class="pie"><span><b>Contratos civiles y mercantiles · Corte 2</b> · S06 · Obligaciones y regímenes</span><span>Juan David Vanegas Roldán · <a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 6</span></div>
+  </div>
+</section>
+
+<!-- ============================== S07 (1/2) ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:620px;height:620px;left:-300px;top:-180px;background:radial-gradient(circle, rgba(0,196,204,.13), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">03</span> Sesión 7 · 23 de septiembre</div>
+    <h2>Permuta y donación:<br><b>el trueque y el acto gratuito.</b></h2>
+    <p class="texto" style="margin-top:12px">Compraventa, permuta y donación producen el mismo efecto —traslado del dominio— y se distinguen por lo que recibe quien entrega: <b>dinero</b>, <b>otra cosa</b> o <b>nada</b>. Las tres son títulos: sigue haciendo falta la tradición.</p>
+
+    <table class="tabla" style="margin-top:10px">
+      <tr><th>Contrato</th><th>Contraprestación</th><th>Utilidad</th><th>Obligaciones</th></tr>
+      <tr><td>Compraventa</td><td>Precio en dinero</td><td>Onerosa</td><td>Bilateral</td></tr>
+      <tr><td>Permuta</td><td>Otra cosa</td><td>Onerosa</td><td>Bilateral</td></tr>
+      <tr><td>Donación</td><td>Ninguna</td><td>Gratuita</td><td>Unilateral</td></tr>
+    </table>
+
+    <div class="caja clave" style="margin-top:12px"><span class="tit">La permuta vive de la compraventa (art. 1958)</span>Las reglas de la compraventa se aplican en todo lo que no se oponga a su naturaleza: <b>cada permutante es vendedor de lo que da</b>, y el justo precio de su cosa es el precio que paga por lo que recibe. Tres consecuencias: <b>doble saneamiento</b> (ambos entregan, sanean evicción y responden por vicios), <b>escritura pública</b> si al menos una cosa es inmueble (arts. 1956 y 1857) y <b>lesión enorme</b> cuando hay inmuebles.</div>
+
+    <div class="dos" style="margin-top:12px">
+      <div class="tarjeta bloque"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-swap"/></svg></div><h3>¿Venta o permuta? (art. 1850)</h3></div><p>Entrego un carro de $60 y recibo una moto de $20 más $40 en efectivo: dinero ($40) &gt; cosa ($20) → <b>compraventa</b>. Si recibo una moto de $45 más $15: la cosa vale más → <b>permuta</b>.</p></div>
+      <div class="tarjeta bloque"><div class="cab"><div class="ic-caja nar"><svg class="ico"><use href="#i-home"/></svg></div><h3>Lote por apartamentos</h3></div><p>El dueño de un lote lo transfiere al constructor y recibe unidades del proyecto: permuta de cosa presente por cosa <b>futura</b>. Hay que cuidar la determinación (área, ubicación, planos), los plazos y qué pasa si el proyecto no se construye, y las garantías (fiducia, hipoteca, condición resolutoria).</p></div>
+    </div>
+    <div class="caja ejemplo" style="margin-top:10px"><span class="tit">No confundir</span><b>Permuta</b>: contrato que crea obligaciones recíprocas de dar (fuente de obligaciones). <b>Dación en pago</b>: se extingue una obligación que ya existía entregando una cosa distinta, con aceptación del acreedor (modo de extinguirlas).</div>
+
+    <h4 style="margin-top:14px">La donación (art. 1443)</h4>
+    <p class="texto">"Acto por el cual una persona transfiere, gratuita e irrevocablemente, una parte de sus bienes a otra persona que la acepta". <b>Transfiere</b> (desplazamiento actual), <b>gratuita</b>, <b>irrevocable</b> como principio y <b>aceptada</b>: sin aceptación no hay contrato. Es contrato unilateral, gratuito y principal. La ley desconfía de ella por dos razones: protege al <b>donante</b>, que puede empobrecerse por impulso, y a los <b>herederos forzosos</b>, cuyas legítimas pueden vaciarse.</p>
+    <div class="cuatro" style="margin-top:10px">
+      <div class="tarjeta bloque"><h3>Empobrecimiento</h3><p>Sale un bien del patrimonio del donante. Un servicio gratuito no es donación.</p></div>
+      <div class="tarjeta bloque"><h3>Enriquecimiento</h3><p>Correlativo, en el donatario. La condonación aceptada puede serlo.</p></div>
+      <div class="tarjeta bloque"><h3>Animus donandi</h3><p>Intención de beneficiar sin estar obligado a hacerlo.</p></div>
+      <div class="tarjeta bloque"><h3>Aceptación</h3><p>Requisito de existencia, notificada al donante.</p></div>
+    </div>
+    <div class="pie"><span><b>Contratos civiles y mercantiles · Corte 2</b> · S07 · Permuta y donación</span><span>Juan David Vanegas Roldán · <a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 7</span></div>
+  </div>
+</section>
+
+<!-- ============================== S07 (2/2) ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:620px;height:620px;right:-300px;top:260px;background:radial-gradient(circle, rgba(242,140,40,.12), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">03</span> Sesión 7 · Insinuación, clases y revocación</div>
+    <h2>La donación, controlada<br><b>antes y después.</b></h2>
+
+    <div class="caja clave" style="margin-top:14px"><span class="tit">Insinuación (art. 1458 · Decreto 1712 de 1989)</span>Autorización previa que hoy otorga el <b>notario</b> por escritura pública cuando la donación excede <b>50 salarios mínimos</b>. Sin ella, la donación vale hasta el tope y es <b>nula en el exceso</b> (nulidad parcial y absoluta). Inmueble: escritura pública y registro. Mueble sobre el tope: escritura e insinuación. Mueble de escaso valor: consensual con entrega.</div>
+
+    <h4 style="margin-top:14px">Clases de donación</h4>
+    <div class="tres">
+      <div class="tarjeta bloque"><h3>Entre vivos / por causa de muerte</h3><p>La primera es irrevocable y produce efectos ya; la segunda se consolida con la muerte y sigue las reglas testamentarias.</p></div>
+      <div class="tarjeta bloque"><h3>Modal o con carga</h3><p>El donatario debe destinar el bien a un fin o cumplir una obligación. Si incumple, se revoca. No es onerosa si la carga vale menos que el bien.</p></div>
+      <div class="tarjeta bloque"><h3>Remuneratoria (art. 1490)</h3><p>Paga servicios que no daban acción. Solo es donación en lo que excede su valor.</p></div>
+      <div class="tarjeta bloque"><h3>Con reserva de usufructo</h3><p>Se transfiere la nuda propiedad y se conserva el uso vitalicio: planeación patrimonial familiar.</p></div>
+      <div class="tarjeta bloque"><h3>Pura y simple</h3><p>Sin condición, plazo ni carga.</p></div>
+      <div class="tarjeta bloque"><h3>Con sustitución o reversión</h3><p>Prevé qué pasa si el donatario muere antes. Cuidado con los pactos sucesorios prohibidos.</p></div>
+    </div>
+
+    <div class="dos" style="margin-top:12px">
+      <div class="tarjeta bloque"><h3>Efectos</h3><p>El donante entrega y hace la tradición, pero por la gratuidad <b>no responde por evicción ni vicios</b>, salvo mala fe (donar a sabiendas cosa ajena) o pacto expreso. El donatario cumple la carga, si la hay, y tiene un deber de <b>gratitud</b>. Ojo tributario: para el donatario suele ser ganancia ocasional.</p></div>
+      <div class="tarjeta bloque"><h3>Las cuatro grietas de la irrevocabilidad</h3>
+        <ul class="lista" style="margin-top:6px">
+          <li><svg class="ico"><use href="#i-check"/></svg><span><b>Ingratitud</b> grave (art. 1485): la ejerce el donante; deshace la donación.</span></li>
+          <li><svg class="ico"><use href="#i-check"/></svg><span><b>Incumplimiento del modo</b>: resolución de la donación modal.</span></li>
+          <li><svg class="ico"><use href="#i-check"/></svg><span><b>Inoficiosa donación</b> (art. 1243 y ss.): los legitimarios, al abrirse la sucesión; la <b>reduce</b>.</span></li>
+          <li><svg class="ico"><use href="#i-check"/></svg><span><b>Falta de insinuación</b>: nulidad del exceso.</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <table class="tabla" style="margin-top:12px">
+      <tr><th style="width:18%"></th><th>Compraventa</th><th>Permuta</th><th class="acc">Donación</th></tr>
+      <tr><td>Forma</td><td>Consensual, salvo inmuebles</td><td>Consensual, salvo si hay un inmueble</td><td>Solemne sobre el tope o en inmuebles</td></tr>
+      <tr><td>Control previo</td><td>No</td><td>No</td><td>Insinuación notarial</td></tr>
+      <tr><td>Saneamiento</td><td>Pleno</td><td>Pleno y recíproco</td><td>Atenuado: mala fe o pacto</td></tr>
+      <tr><td>Lesión enorme</td><td>Sí, en inmuebles</td><td>Sí, en inmuebles</td><td>No aplica</td></tr>
+      <tr><td>Revocabilidad</td><td>No</td><td>No</td><td>Excepcional</td></tr>
+    </table>
+    <div class="caja ejemplo" style="margin-top:10px"><span class="tit">Caso</span>Un padre dona una finca a su hijo, que años después lo agrede y abandona: <b>revocación por ingratitud</b>. Si en cambio la finca era casi todo su patrimonio y hay otros dos hijos: al morir el padre, ellos ejercen la <b>acción de inoficiosa donación</b>. Una mira la conducta; la otra, el equilibrio de la sucesión.</div>
+    <div class="pie"><span><b>Contratos civiles y mercantiles · Corte 2</b> · S07 · Donación</span><span>Juan David Vanegas Roldán · <a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 8</span></div>
+  </div>
+</section>
+
+<!-- ============================== S08 (1/2) ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:620px;height:620px;left:-300px;top:-160px;background:radial-gradient(circle, rgba(0,196,204,.14), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">04</span> Sesión 8 · 30 de septiembre</div>
+    <h2>El arrendamiento:<br><b>ceder el uso, no la propiedad.</b></h2>
+    <p class="texto" style="margin-top:12px">Una parte concede el <b>goce</b> de una cosa y la otra paga un precio (art. 1973). Toda su lógica sale de un hecho: el arrendatario es <b>mero tenedor</b>. Por eso no puede prescribir, quien lo defiende de perturbaciones de derecho es el arrendador, y al terminar debe <b>restituir</b> (proceso de restitución de inmueble arrendado). Es bilateral, oneroso, consensual (en vivienda se admite el verbal), principal y de <b>tracto sucesivo</b>: el incumplimiento lo termina hacia el futuro.</p>
+
+    <div class="tres" style="margin-top:12px">
+      <div class="tarjeta bloque"><h3>La cosa</h3><p>No consumible (hay que devolverla) y en el comercio.</p></div>
+      <div class="tarjeta bloque"><h3>El canon</h3><p>Determinado o determinable, en dinero o frutos. Sin precio no es arriendo: probablemente es comodato.</p></div>
+      <div class="tarjeta bloque"><h3>La temporalidad</h3><p>El goce perpetuo lo desnaturaliza y lo acerca al usufructo.</p></div>
+    </div>
+    <div class="caja ojo" style="margin-top:10px"><span class="tit">Cuidado con el nombre</span>Muchos "comodatos" son arrendamientos disfrazados para eludir la Ley 820 o el derecho a la renovación. Si hay contraprestación por el uso —aunque se llame "cuota" o "aporte"— hay arrendamiento, y el juez atiende a la realidad.</div>
+
+    <div class="dos" style="margin-top:12px">
+      <div class="tarjeta bloque"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-key"/></svg></div><h3>Obligaciones del arrendador</h3></div>
+        <ul class="lista" style="margin-top:6px">
+          <li><svg class="ico"><use href="#i-check"/></svg><span><b>Entregar</b> la cosa en estado de servir.</span></li>
+          <li><svg class="ico"><use href="#i-check"/></svg><span><b>Mantenerla</b> en ese estado durante todo el contrato: reparaciones <b>necesarias</b> (estructura, cubierta, redes).</span></li>
+          <li><svg class="ico"><use href="#i-check"/></svg><span><b>Librar de turbaciones</b>: no perturbar y defender frente a turbaciones de derecho de terceros.</span></li>
+        </ul>
+      </div>
+      <div class="tarjeta bloque"><div class="cab"><div class="ic-caja nar"><svg class="ico"><use href="#i-user"/></svg></div><h3>Obligaciones del arrendatario</h3></div>
+        <ul class="lista" style="margin-top:6px">
+          <li><svg class="ico"><use href="#i-check"/></svg><span><b>Pagar</b> el canon; si el arrendador no recibe, <b>consignar</b>: no pagar no es defensa.</span></li>
+          <li><svg class="ico"><use href="#i-check"/></svg><span><b>Usar</b> según lo pactado o la destinación natural.</span></li>
+          <li><svg class="ico"><use href="#i-check"/></svg><span><b>Cuidar</b> y asumir las reparaciones <b>locativas</b> (chapas, vidrios, pintura).</span></li>
+          <li><svg class="ico"><use href="#i-check"/></svg><span><b>Restituir</b> en el estado recibido, salvo el desgaste natural.</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <table class="tabla" style="margin-top:12px">
+      <tr><th style="width:18%"></th><th class="acc">Cesión</th><th class="nar">Subarriendo</th></tr>
+      <tr><td>Qué ocurre</td><td>El arrendatario transfiere su posición contractual</td><td>Celebra un nuevo arriendo con un tercero sobre la misma cosa</td></tr>
+      <tr><td>Frente al arrendador</td><td>El cesionario pasa a ser arrendatario</td><td>El arrendatario original sigue obligado</td></tr>
+      <tr><td>Regla común</td><td colspan="2">Ambos requieren <b>autorización expresa</b> del arrendador (art. 1985), porque el contrato se celebra en consideración a la persona. Publicar el apartamento arrendado en una plataforma de corta estancia plantea este problema: conviene una cláusula expresa.</td></tr>
+    </table>
+
+    <div class="caja clave" style="margin-top:12px"><span class="tit">Si el arrendador vende (art. 2020)</span>Debe respetar el arriendo quien adquiere a título <b>gratuito</b>, y quien adquiere a título <b>oneroso</b> solo si el arrendamiento consta en <b>escritura pública inscrita</b>. Consejo para toda la vida: los arriendos largos o con inversiones del arrendatario se elevan a escritura y se registran. Otras causales de terminación: destrucción de la cosa, vencimiento, extinción del derecho del arrendador, sentencia, mutuo disenso o desahucio. La <b>tácita reconducción</b> renueva por períodos cortos si el arrendatario sigue pagando con aquiescencia del arrendador.</div>
+    <div class="pie"><span><b>Contratos civiles y mercantiles · Corte 2</b> · S08 · Arrendamiento</span><span>Juan David Vanegas Roldán · <a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 9</span></div>
+  </div>
+</section>
+
+<!-- ============================== S08 (2/2) ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:620px;height:620px;right:-300px;top:-180px;background:radial-gradient(circle, rgba(242,140,40,.12), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">04</span> Sesión 8 · Vivienda urbana y local comercial</div>
+    <h2>Un contrato, tres regímenes:<br><b>civil, vivienda y local comercial.</b></h2>
+
+    <div class="dos" style="margin-top:14px">
+      <div class="tarjeta bloque borde-acc"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-home"/></svg></div><h3>Vivienda urbana · Ley 820 de 2003</h3></div>
+        <ul class="lista" style="margin-top:6px">
+          <li><svg class="ico"><use href="#i-check"/></svg><span>Canon máximo: <b>1 %</b> del valor comercial (art. 18), que no puede exceder <b>dos veces</b> el avalúo catastral (art. 19).</span></li>
+          <li><svg class="ico"><use href="#i-check"/></svg><span>Reajuste anual hasta el <b>100 % del IPC</b> del año anterior (art. 20).</span></li>
+          <li><svg class="ico"><use href="#i-check"/></svg><span>Término supletivo de <b>un año</b>, con prórroga automática.</span></li>
+          <li><svg class="ico"><use href="#i-check"/></svg><span><b>Prohibidos los depósitos</b> en dinero y cauciones reales; sí codeudor, fiador o póliza.</span></li>
+          <li><svg class="ico"><use href="#i-check"/></svg><span>Causales especiales del arrendador (habitarlo, demolerlo, repararlo): <b>preaviso de 3 meses</b> e <b>indemnización de 3 cánones</b> consignada antes (art. 22).</span></li>
+        </ul>
+      </div>
+      <div class="tarjeta bloque borde-nar"><div class="cab"><div class="ic-caja nar"><svg class="ico"><use href="#i-store"/></svg></div><h3>Local comercial · C. Co. arts. 518 a 524</h3></div>
+        <p>Protege al empresario como titular de una <b>clientela</b> construida en un lugar (establecimiento de comercio, arts. 515 y 516). Tras <b>dos años consecutivos</b> con el <b>mismo establecimiento</b>, tiene <b>derecho a la renovación</b> (art. 518), salvo:</p>
+        <ul class="lista" style="margin-top:6px">
+          <li><svg class="ico"><use href="#i-x"/></svg><span>Incumplimiento del arrendatario.</span></li>
+          <li><svg class="ico"><use href="#i-x"/></svg><span>El propietario lo necesita para vivir o para una empresa <b>sustancialmente distinta</b>.</span></li>
+          <li><svg class="ico"><use href="#i-x"/></svg><span>Hay que reconstruirlo, repararlo o demolerlo.</span></li>
+        </ul>
+        <p style="margin-top:6px">Para las dos últimas: <b>desahucio de 6 meses</b> (art. 520). Además: preferencia (art. 521), indemnización (art. 522), subarriendo hasta la mitad (art. 523) e <b>imperatividad</b>: toda renuncia es ineficaz (art. 524).</p>
+      </div>
+    </div>
+
+    <div class="caja ojo" style="margin-top:12px"><span class="tit">Renovación no es prórroga</span>La <b>prórroga</b> continúa el contrato en las mismas condiciones. La <b>renovación</b> es el derecho a celebrar uno nuevo: el canon puede discutirse y, sin acuerdo, lo fijan peritos o el juez. El empresario tiene derecho a continuar, no a continuar pagando lo mismo.</div>
+
+    <table class="tabla" style="margin-top:12px">
+      <tr><th style="width:17%"></th><th>Código Civil</th><th class="acc">Ley 820 de 2003</th><th class="nar">C. Co. 518 a 524</th></tr>
+      <tr><td>Ámbito</td><td>Rurales, muebles, bodegas sin establecimiento</td><td>Vivienda urbana</td><td>Local con establecimiento de comercio</td></tr>
+      <tr><td>Límite al canon</td><td>No hay</td><td>1 % del valor comercial</td><td>No hay; se discute al renovar</td></tr>
+      <tr><td>Depósitos</td><td>Admitidos</td><td>Prohibidos</td><td>Admitidos</td></tr>
+      <tr><td>Preaviso especial</td><td>Lo pactado</td><td>3 meses e indemnización de 3 cánones</td><td>Desahucio de 6 meses</td></tr>
+      <tr><td>Renunciabilidad</td><td>Amplia</td><td>Limitada</td><td>Nula (art. 524)</td></tr>
+    </table>
+
+    <div class="dos" style="margin-top:12px">
+      <div class="caja ejemplo"><span class="tit">Caso: la panadería</span>Tres años en el local. El dueño avisa con dos meses que pondrá su propia panadería. No prospera: el aviso debía ser de <b>seis meses</b> y la empresa no es <b>sustancialmente distinta</b>.</div>
+      <div class="tarjeta bloque"><h3>Figuras vecinas</h3><p><b>Comodato</b>: sin precio. <b>Usufructo</b>: derecho real, no personal. <b>Leasing</b>: opción de compra y financiación. <b>Hospedaje</b>: alojamiento más servicios, sin renovación ni protección de vivienda.</p></div>
+    </div>
+    <div class="pie"><span><b>Contratos civiles y mercantiles · Corte 2</b> · S08 · Los tres regímenes</span><span>Juan David Vanegas Roldán · <a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 10</span></div>
+  </div>
+</section>
+
+<!-- ============================== S09 (1/2) ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:620px;height:620px;left:-300px;top:280px;background:radial-gradient(circle, rgba(0,196,204,.13), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">05</span> Sesión 9 · 7 de octubre</div>
+    <h2>Mandato:<br><b>gestionar por cuenta y riesgo de otro.</b></h2>
+    <p class="texto" style="margin-top:12px">"Una persona confía la gestión de uno o más negocios a otra, que se hace cargo de ellos <b>por cuenta y riesgo</b> de la primera" (art. 2142). Esa expresión permite identificar un mandato aunque se llame de otro modo: los efectos económicos caen en el patrimonio de quien encarga. Abogados, administradores de sociedades, comisionistas, inmobiliarias: todos comparten deberes de <b>diligencia, lealtad y rendición de cuentas</b>.</p>
+
+    <div class="tres" style="margin-top:12px">
+      <div class="tarjeta bloque"><h3>Consensual</h3><p>Por cualquier medio inteligible (art. 2149); la aceptación puede ser tácita (art. 2150). Otra cosa es el <b>poder</b> para ciertos actos, que sí exige forma.</p></div>
+      <div class="tarjeta bloque"><h3>Gratuito o remunerado</h3><p>En lo civil se presume gratuito (y es unilateral); en lo mercantil se presume <b>remunerado</b> (art. 1264 C. Co.) y es bilateral.</p></div>
+      <div class="tarjeta bloque"><h3>Intuitu personae</h3><p>Se extingue con la muerte de cualquiera y el mandante puede revocarlo libremente.</p></div>
+    </div>
+    <div class="caja ojo" style="margin-top:10px"><span class="tit">El silencio que obliga (art. 2151)</span>Quien por profesión u oficio se encarga de negocios ajenos debe responder pronto si acepta o no el encargo: <b>su silencio se mira como aceptación</b>. Excepción al principio de que el silencio no obliga.</div>
+
+    <h4 style="margin-top:14px">Mandato y representación: dos planos</h4>
+    <table class="tabla">
+      <tr><th style="width:24%"></th><th class="acc">Con representación</th><th class="nar">Sin representación</th></tr>
+      <tr><td>Quién declara</td><td>El mandatario, en nombre del mandante</td><td>El mandatario, en nombre propio</td></tr>
+      <tr><td>Obligado ante el tercero</td><td>El mandante</td><td>El mandatario, que luego repite contra el mandante</td></tr>
+      <tr><td>Ejemplo</td><td>Poder para litigar o para vender</td><td>Comisión mercantil; compra de acciones por un cliente</td></tr>
+    </table>
+    <p class="texto" style="margin-top:6px">El art. 2177 permite contratar a nombre propio o del mandante. <b>Mandato</b> es el contrato (relación interna), <b>poder</b> es el acto que faculta para representar, <b>representación</b> es el efecto frente a terceros (puede ser legal, sin mandato).</p>
+
+    <div class="dos" style="margin-top:10px">
+      <div class="tarjeta bloque"><h3>Clases</h3><p><b>General o especial</b>: aun el general es solo para <b>administrar</b>; vender, hipotecar o transigir exige facultad <b>expresa</b>. <b>Con o sin representación</b>. <b>Civil o mercantil</b>. <b>Judicial</b> (exige abogado) o extrajudicial.</p></div>
+      <div class="caja clave"><span class="tit">Regla práctica</span>Antes de contratar con un apoderado verifique: que el poder <b>exista</b>, que esté <b>vigente</b>, que tenga la <b>facultad expresa</b> para ese acto y que tenga la <b>forma</b> que la ley exige. Un poder para "administrar" no habilita para vender un inmueble.</div>
+    </div>
+    <div class="caja ejemplo" style="margin-top:12px"><span class="tit">Para identificar el contrato</span>La inmobiliaria que arrienda su apartamento, el comisionista de bolsa que compra acciones por usted y el abogado que lo representa en un proceso tienen algo en común: gestionan un interés ajeno <b>por cuenta y riesgo</b> de otro. Por eso a todos se les aplica el núcleo del mandato: diligencia, lealtad y rendición de cuentas.</div>
+    <div class="pie"><span><b>Contratos civiles y mercantiles · Corte 2</b> · S09 · Mandato</span><span>Juan David Vanegas Roldán · <a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 11</span></div>
+  </div>
+</section>
+
+<!-- ============================== S09 (2/2) ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:620px;height:620px;right:-300px;top:-160px;background:radial-gradient(circle, rgba(242,140,40,.12), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">05</span> Sesión 9 · Deberes, extralimitación y figuras mercantiles</div>
+    <h2>Ceñirse, rendir cuentas<br><b>y las cuatro especializaciones.</b></h2>
+
+    <div class="dos" style="margin-top:14px">
+      <div class="tarjeta bloque"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-user"/></svg></div><h3>Deberes del mandatario</h3></div>
+        <ul class="lista" style="margin-top:6px">
+          <li><svg class="ico"><use href="#i-check"/></svg><span><b>Ejecutar</b> con diligencia: culpa leve, más estricta si es remunerado (art. 2155).</span></li>
+          <li><svg class="ico"><use href="#i-check"/></svg><span><b>Ceñirse</b> a los términos (art. 2157); si es perjudicial y no puede consultar, actuar como más convenga.</span></li>
+          <li><svg class="ico"><use href="#i-check"/></svg><span><b>Rendir cuentas</b> con soportes (art. 2181); la exoneración no cubre dolo ni mala fe.</span></li>
+          <li><svg class="ico"><use href="#i-check"/></svg><span>Puede <b>delegar</b> si no se le prohibió, respondiendo por el delegado.</span></li>
+          <li><svg class="ico"><use href="#i-x"/></svg><span>No puede comprar para sí lo que debía vender (conflicto de interés).</span></li>
+        </ul>
+      </div>
+      <div class="tarjeta bloque"><div class="cab"><div class="ic-caja nar"><svg class="ico"><use href="#i-coin"/></svg></div><h3>Deberes del mandante (art. 2184)</h3></div>
+        <ul class="lista" style="margin-top:6px">
+          <li><svg class="ico"><use href="#i-check"/></svg><span>Proveer lo necesario para ejecutar.</span></li>
+          <li><svg class="ico"><use href="#i-check"/></svg><span>Reembolsar gastos razonables y anticipos con intereses.</span></li>
+          <li><svg class="ico"><use href="#i-check"/></svg><span>Pagar la remuneración pactada o usual.</span></li>
+          <li><svg class="ico"><use href="#i-check"/></svg><span>Indemnizar pérdidas sufridas sin culpa por causa del mandato.</span></li>
+          <li><svg class="ico"><use href="#i-check"/></svg><span>Cumplir lo contratado dentro de los límites (art. 2186).</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="caja clave" style="margin-top:12px"><span class="tit">Extralimitación: no hay nulidad, hay inoponibilidad (art. 2186)</span>Fuera de los límites, el mandante <b>no queda obligado</b>: el acto es válido entre mandatario y tercero, pero inoponible al mandante, salvo que lo <b>ratifique</b> (expresa o tácitamente, con efecto retroactivo). El mandatario responde personalmente al tercero. <i>Caso:</i> poder para vender por mínimo $200 millones; vende por $150. El mandante puede desconocer la venta o ratificarla.</div>
+
+    <div class="dos" style="margin-top:12px">
+      <div class="tarjeta bloque"><h3>Extinción (art. 2189)</h3><p>Desempeño del negocio, plazo o condición, <b>revocación</b> (libre; el mandato irrevocable se admite en operaciones de garantía), <b>renuncia</b> (debe seguir atendiendo un tiempo razonable), muerte, insolvencia o interdicción.</p></div>
+      <div class="caja ojo"><span class="tit">Tercero de buena fe (art. 2199)</span>Lo actuado tras la extinción sigue obligando frente a terceros que la ignoraban. La revocación de un poder se hace <b>por escrito</b>, se notifica y, si el poder fue público o registrado, se deja constancia por el mismo medio.</div>
+    </div>
+
+    <h4 style="margin-top:14px">El mandato en el comercio</h4>
+    <table class="tabla">
+      <tr><th style="width:18%">Figura</th><th style="width:14%">¿Mandato?</th><th>Nota distintiva</th><th style="width:13%">Norma</th></tr>
+      <tr><td>Comisión</td><td>Sí, especie</td><td>Profesional que actúa <b>en nombre propio por cuenta ajena</b>: mandato sin representación</td><td>C. Co. 1287</td></tr>
+      <tr><td>Preposición</td><td>Sí, forma</td><td>El <b>factor</b> administra un establecimiento; facultades amplias presuntas; límites oponibles solo si se registran</td><td>C. Co. 1332</td></tr>
+      <tr><td>Agencia comercial</td><td>Sí, cualificado</td><td>Promueve negocios ajenos de forma <b>estable e independiente</b> en una zona; prestación del art. 1324 (corte 3)</td><td>C. Co. 1317</td></tr>
+      <tr><td>Corretaje</td><td><b>No</b></td><td>Solo <b>acerca</b> a las partes, sin vínculo con ninguna; cobra si el negocio se celebra</td><td>C. Co. 1340</td></tr>
+    </table>
+    <p class="texto" style="margin-top:6px"><b>Plataformas digitales:</b> si gestionan pagos pueden parecer comisionistas; si solo conectan, corredores. Decide la realidad de las prestaciones, no sus propios términos y condiciones.</p>
+    <div class="caja ejemplo" style="margin-top:10px"><span class="tit">Preposición: la ley protege la apariencia</span>El administrador de un almacén celebra un contrato excediendo instrucciones internas que el tercero desconocía. Por regla general <b>obliga al preponente</b>: las facultades del factor se presumen amplias y sus límites solo se oponen si se inscribieron en el registro mercantil.</div>
+    <div class="pie"><span><b>Contratos civiles y mercantiles · Corte 2</b> · S09 · Deberes y figuras mercantiles</span><span>Juan David Vanegas Roldán · <a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 12</span></div>
+  </div>
+</section>
+
+<!-- ============================== S10 (1/2) ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:620px;height:620px;left:-300px;top:-180px;background:radial-gradient(circle, rgba(0,196,204,.14), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">06</span> Sesión 10 · 14 de octubre</div>
+    <h2>Los contratos reales:<br><b>no existen hasta que se entrega.</b></h2>
+    <p class="texto" style="margin-top:12px">El art. 1500 define el contrato real como el que requiere la "tradición" de la cosa para ser perfecto. Solo en el mutuo la entrega transfiere el dominio; en el comodato y el depósito es mera entrega. Pero en los tres <b>sin entrega no hay contrato</b>, y como quien entregó ya cumplió, solo queda obligado quien recibió: son <b>unilaterales</b>. También son reales la prenda con tenencia y la anticresis.</p>
+    <div class="caja ejemplo" style="margin-top:10px"><span class="tit">Consecuencia</span>El banco aprueba el crédito y firma el pagaré, pero no desembolsa: <b>todavía no hay mutuo</b>. Hay una promesa de mutuo o una apertura de crédito, cuyo incumplimiento genera responsabilidad, pero no obliga a restituir un dinero que nunca salió.</div>
+
+    <div class="dos" style="margin-top:12px">
+      <div class="tarjeta bloque borde-acc"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-coin"/></svg></div><h3>Mutuo · préstamo de consumo</h3></div><p>Se entregan cosas <b>fungibles</b> con cargo de restituir otras tantas del mismo género y calidad (art. 2221), y la tradición <b>transfiere el dominio</b> (art. 2222): no tendría sentido prestar dinero prohibiendo gastarlo. Por eso el <b>riesgo es del mutuario</b>: si le roban el dinero, la deuda sigue (el género no perece). Sin plazo, no puede exigirse antes de 10 días (art. 2225). Principio nominalista, con corrección monetaria o tasas variables pactadas.</p></div>
+      <div class="tarjeta bloque"><h3>Intereses: civil frente a mercantil</h3>
+        <table class="tabla" style="margin-top:6px">
+          <tr><th></th><th>Civil</th><th class="nar">Mercantil</th></tr>
+          <tr><td>Intereses</td><td>Deben pactarse</td><td>Se presumen (art. 1163)</td></tr>
+          <tr><td>Pagados sin pacto</td><td>No se repiten (art. 2233)</td><td>Se deben</td></tr>
+          <tr><td>Exceso</td><td>Reducción al corriente (art. 2231)</td><td><b>Pérdida de todos</b> (art. 884)</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="tres" style="margin-top:12px">
+      <div class="tarjeta bloque"><h3>Remuneratorio y moratorio</h3><p>El primero paga el uso del dinero; el segundo indemniza el retardo y <b>sustituye</b> (no se suma) al remuneratorio por el mismo período.</p></div>
+      <div class="tarjeta bloque"><h3>Límite y usura</h3><p>A falta de pacto, el bancario corriente (certificado por la Superintendencia Financiera); moratorio hasta 1,5 veces. Superarlo hace perder <b>todos</b> los intereses y puede ser delito de usura (C.P. art. 305).</p></div>
+      <div class="tarjeta bloque"><h3>Anatocismo (art. 886)</h3><p>Los intereses no producen intereses, salvo desde la demanda o por acuerdo posterior al vencimiento, y sobre intereses de al menos un año.</p></div>
+    </div>
+    <div class="caja ojo" style="margin-top:12px"><span class="tit">El "gota a gota"</span>Cobra tasas muy superiores al límite: pérdida de todos los intereses (art. 884), posible usura y, según cómo cobre, otras conductas. El mutuo no es nulo: <b>el capital se debe</b>; lo que cae es la remuneración.</div>
+    <div class="caja ejemplo" style="margin-top:10px"><span class="tit">Intereses pagados sin pacto</span>En un mutuo civil sin intereses pactados, el deudor los pagó igualmente. No puede repetirlos ni imputarlos al capital (art. 2233): se explica como cumplimiento de una <b>obligación natural</b>.</div>
+    <div class="pie"><span><b>Contratos civiles y mercantiles · Corte 2</b> · S10 · Mutuo e intereses</span><span>Juan David Vanegas Roldán · <a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 13</span></div>
+  </div>
+</section>
+
+<!-- ============================== S10 (2/2) ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:620px;height:620px;right:-300px;top:260px;background:radial-gradient(circle, rgba(242,140,40,.12), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">06</span> Sesión 10 · Comodato y depósito</div>
+    <h2>Prestar para usar<br><b>y entregar para guardar.</b></h2>
+
+    <div class="dos" style="margin-top:14px">
+      <div class="tarjeta bloque borde-acc"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-key"/></svg></div><h3>Comodato · préstamo de uso (art. 2200)</h3></div><p>Se entrega <b>gratuitamente</b> una especie para que se use y se devuelva <b>la misma</b>. La gratuidad es <b>esencial</b>: si se cobra por el uso, degenera en arrendamiento (art. 1501). El comodatario es tenedor, usa según lo pactado, responde hasta de la <b>culpa levísima</b> (art. 2203) y restituye. El comodante no puede pedirla antes del plazo salvo necesidad imprevista y urgente (art. 2205) y debe indemnizar expensas extraordinarias; el comodatario tiene derecho de retención (art. 2218).</p>
+        <p style="margin-top:6px"><b>Comodato precario</b> (arts. 2219 y 2220): el comodante puede pedirla en cualquier momento, o no se fijó uso ni tiempo. Es el título de quien ocupa el inmueble de un familiar por tolerancia.</p></div>
+      <div class="tarjeta bloque borde-nar"><div class="cab"><div class="ic-caja nar"><svg class="ico"><use href="#i-lock"/></svg></div><h3>Depósito · custodia (art. 2236)</h3></div><p>Se confía una cosa corporal para <b>guardarla y restituirla</b>. Es el único que protege el interés de quien entrega. Naturalmente gratuito en lo civil; en lo mercantil se presume remunerado (art. 1170 C. Co.). El depositario <b>no puede usar</b> la cosa sin permiso (si la usa responde con más rigor y debe el provecho), responde solo de <b>culpa grave</b> (art. 2247) y restituye cuando lo pida el depositante, aun antes del plazo (art. 2251).</p>
+        <p style="margin-top:6px"><b>Variantes:</b> depósito <b>necesario</b> por calamidad (art. 2260) y en hoteles; <b>secuestro</b> de cosa litigiosa (art. 2273); <b>almacenes generales</b> (certificado de depósito y bono de prenda); <b>depósito irregular</b> de dinero, base del depósito bancario.</p></div>
+    </div>
+
+    <div class="caja clave" style="margin-top:12px"><span class="tit">La culpa se gradúa por el beneficio (art. 1604)</span>Culpa <b>grave</b> en los contratos útiles solo al acreedor, <b>leve</b> en los de beneficio recíproco y <b>levísima</b> en los que solo benefician al deudor. A mayor beneficio, mayor exigencia: <b>comodato → levísima</b> (máximo), <b>mutuo con intereses → leve</b>, <b>depósito gratuito → grave</b> (mínimo).</div>
+
+    <table class="tabla" style="margin-top:12px">
+      <tr><th style="width:20%"></th><th class="acc">Mutuo</th><th>Comodato</th><th class="nar">Depósito</th></tr>
+      <tr><td>Objeto</td><td>Cosas fungibles</td><td>Especie no fungible</td><td>Cosa corporal</td></tr>
+      <tr><td>¿Transfiere dominio?</td><td>Sí</td><td>No</td><td>No</td></tr>
+      <tr><td>¿Quién usa?</td><td>El mutuario, libremente</td><td>El comodatario, según destino</td><td>Nadie: solo se custodia</td></tr>
+      <tr><td>Se restituye</td><td>Otro tanto del género</td><td>La misma cosa</td><td>La misma cosa</td></tr>
+      <tr><td>Gratuidad</td><td>Natural en civil; onerosa en mercantil</td><td>Esencial</td><td>Natural en civil; remunerado en mercantil</td></tr>
+      <tr><td>Culpa</td><td>Leve</td><td>Levísima</td><td>Grave</td></tr>
+      <tr><td>Riesgo fortuito</td><td>Del mutuario (es dueño)</td><td>Del comodante</td><td>Del depositante</td></tr>
+    </table>
+    <p class="texto" style="margin-top:8px"><b>Deslindes:</b> comodato y arrendamiento (el precio) · mutuo y depósito irregular (crédito para quien recibe o custodia para quien entrega) · depósito y prenda (custodia o garantía) · comodato precario y ocupación de hecho (el precarista es tenedor; quien ocupa sin título puede llegar a poseer).</p>
+    <div class="pie"><span><b>Contratos civiles y mercantiles · Corte 2</b> · S10 · Comodato y depósito</span><span>Juan David Vanegas Roldán · <a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 14</span></div>
+  </div>
+</section>
+
+<!-- ============================== MATRIZ ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:620px;height:620px;left:-300px;top:260px;background:radial-gradient(circle, rgba(0,196,204,.13), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">07</span> Matriz comparada</div>
+    <h2>Todo el corte<br><b>en una tabla.</b></h2>
+    <p class="texto" style="margin-top:12px">El parcial conviene estudiarlo por <b>preguntas transversales</b>, no contrato por contrato. Esta matriz cruza los ocho contratos del corte con sus partes y las cinco preguntas.</p>
+
+    <table class="tabla" style="margin-top:12px;font-size:10.3px">
+      <tr><th style="width:13%">Contrato</th><th style="width:14%">Partes</th><th style="width:16%">Se perfecciona</th><th style="width:19%">Obligaciones</th><th style="width:13%">Riesgo</th><th style="width:10%">Culpa</th><th>Remedio típico</th></tr>
+      <tr><td>Compraventa</td><td>Vendedor / comprador</td><td>Consenso; escritura en inmuebles</td><td>Bilateral: entregar y sanear / pagar y recibir</td><td>Comprador desde el contrato (art. 1876)</td><td>Leve</td><td>Cumplimiento o resolución; evicción; redhibitoria; lesión</td></tr>
+      <tr><td>Permuta</td><td>Permutantes</td><td>Consenso; escritura si hay un inmueble</td><td>Bilateral: cada uno vende lo que da</td><td>Como en la venta</td><td>Leve</td><td>Los de la compraventa</td></tr>
+      <tr><td>Donación</td><td>Donante / donatario</td><td>Aceptación; escritura e insinuación sobre el tope</td><td>Unilateral: el donante entrega</td><td>—</td><td>Grave del donante</td><td>Revocación; inoficiosidad; nulidad del exceso</td></tr>
+      <tr><td>Arrendamiento</td><td>Arrendador / arrendatario</td><td>Consenso</td><td>Bilateral y de tracto sucesivo</td><td>Arrendador (dueño)</td><td>Leve</td><td>Terminación; restitución; renovación del local</td></tr>
+      <tr><td>Mandato</td><td>Mandante / mandatario</td><td>Consenso; aceptación tácita</td><td>Unilateral si es gratuito; bilateral si es remunerado</td><td>Del mandante (por su cuenta y riesgo)</td><td>Leve, más estricta si es remunerado</td><td>Rendición de cuentas; inoponibilidad; revocación</td></tr>
+      <tr><td>Mutuo</td><td>Mutuante / mutuario</td><td>Entrega (real)</td><td>Unilateral: restituir otro tanto</td><td>Mutuario (dueño)</td><td>Leve</td><td>Restitución; pérdida de intereses</td></tr>
+      <tr><td>Comodato</td><td>Comodante / comodatario</td><td>Entrega (real)</td><td>Unilateral: usar bien y restituir</td><td>Comodante, salvo culpa</td><td>Levísima</td><td>Restitución; recalificación en arriendo</td></tr>
+      <tr><td>Depósito</td><td>Depositante / depositario</td><td>Entrega (real)</td><td>Unilateral: custodiar y restituir</td><td>Depositante, salvo culpa grave</td><td>Grave</td><td>Restitución a voluntad del depositante</td></tr>
+    </table>
+
+    <h4 style="margin-top:16px">Las preguntas que resuelven casos</h4>
+    <div class="dos">
+      <div class="tarjeta bloque"><h3>¿Qué contrato es, de verdad?</h3><p>Mira la <b>contraprestación</b> (dinero, cosa, nada, uso pagado o gratuito) y <b>quién se beneficia</b>. El nombre que le pusieron las partes no decide: el juez atiende a la realidad de las prestaciones (comodatos que son arriendos, ventas que son donaciones, plataformas que son comisionistas).</p></div>
+      <div class="tarjeta bloque"><h3>¿Qué régimen aplica?</h3><p><b>Civil, mercantil o de consumo</b> en la compraventa; <b>Código Civil, Ley 820 o C. Co. 518</b> en el arriendo; gratuito o remunerado en mandato y depósito. Define plazos, lesión enorme, intereses y si las normas son renunciables.</p></div>
+    </div>
+    <div class="caja clave" style="margin-top:12px"><span class="tit">Tres distinciones que se preguntan siempre</span><b>Evicción</b> (título) frente a <b>vicio redhibitorio</b> (calidad) frente a <b>garantía legal</b> (consumo, irrenunciable). <b>Prórroga</b> frente a <b>renovación</b>. <b>Mandato</b> (contrato) frente a <b>representación</b> (efecto) frente a <b>poder</b> (acto que faculta).</div>
+    <div class="pie"><span><b>Contratos civiles y mercantiles · Corte 2</b> · Matriz comparada</span><span>Juan David Vanegas Roldán · <a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 15</span></div>
+  </div>
+</section>
+
+<!-- ============================== PREGUNTAS ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:620px;height:620px;right:-300px;top:-180px;background:radial-gradient(circle, rgba(242,140,40,.12), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">08</span> Preguntas de repaso</div>
+    <h2>Responde antes<br><b>de mirar la respuesta.</b></h2>
+    <div class="tarjeta" style="margin-top:14px;padding:4px 16px">
+      <div class="mito"><div class="r"><b>1.</b> Vende una casa por documento privado. ¿Qué tiene el comprador?</div><div class="r">No hay compraventa (inexistente, art. 1857). Puede haber una <b>promesa</b> válida si cumple el art. 89 de la Ley 153 de 1887.</div></div>
+      <div class="mito"><div class="r"><b>2.</b> Vendió en $200 millones un lote que valía $500 millones. ¿Qué puede hacer?</div><div class="r">Pedir rescisión por <b>lesión enorme</b> (menos de la mitad). El comprador puede completar el justo precio menos una décima parte. Prescribe en 4 años.</div></div>
+      <div class="mito"><div class="r"><b>3.</b> El motor del carro falla por un defecto anterior y no visible. ¿Qué acción tiene?</div><div class="r"><b>Vicio redhibitorio</b>: redhibitoria (deshacer) o estimatoria (rebaja), en los plazos del art. 1923; perjuicios si el vendedor lo conocía.</div></div>
+      <div class="mito"><div class="r"><b>4.</b> Entrega un carro de $50 y recibe una moto de $30 más $20. ¿Qué contrato es?</div><div class="r"><b>Permuta</b>: la cosa vale más que el dinero (art. 1850).</div></div>
+      <div class="mito"><div class="r"><b>5.</b> Dona un inmueble de $300 millones sin insinuación. ¿Qué pasa?</div><div class="r">Es <b>nula en el exceso</b> sobre 50 salarios mínimos (art. 1458), y requiere escritura y registro.</div></div>
+      <div class="mito"><div class="r"><b>6.</b> El arrendador no recibe el canon. ¿Puede el arrendatario dejar de pagar?</div><div class="r">No: debe <b>consignar</b>. Si no, cae en mora y en el proceso de restitución no será oído.</div></div>
+      <div class="mito"><div class="r"><b>7.</b> Apartamento con valor comercial de $400 millones. ¿Canon máximo?</div><div class="r"><b>$4 millones</b>: el 1 % (Ley 820, art. 18), con un valor comercial que no supere dos veces el avalúo catastral.</div></div>
+      <div class="mito"><div class="r"><b>8.</b> ¿Un poder general para administrar permite vender un inmueble?</div><div class="r">No. Los actos de disposición requieren <b>facultad expresa</b> y la forma del acto.</div></div>
+      <div class="mito"><div class="r"><b>9.</b> El apoderado excede el poder. ¿El acto es nulo?</div><div class="r">No: es <b>inoponible</b> al mandante, que puede ratificarlo con efecto retroactivo (art. 2186).</div></div>
+      <div class="mito"><div class="r"><b>10.</b> ¿En qué se diferencian comisión y corretaje?</div><div class="r">El comisionista <b>ejecuta</b> en nombre propio por cuenta ajena (mandato); el corredor solo <b>acerca</b> a las partes (no es mandato).</div></div>
+      <div class="mito"><div class="r"><b>11.</b> Le prestan $10 millones y se los roban. ¿Debe pagarlos?</div><div class="r">Sí: el mutuo transfiere el dominio y el riesgo es del mutuario; el género no perece.</div></div>
+      <div class="mito"><div class="r"><b>12.</b> ¿Por qué el comodatario responde de culpa levísima y el depositario de grave?</div><div class="r">Art. 1604: el comodato beneficia solo al comodatario (máxima exigencia); el depósito gratuito, solo al depositante (mínima).</div></div>
+    </div>
+    <div class="tarjeta" style="margin-top:10px;padding:4px 16px">
+      <div class="mito"><div class="r"><b>13.</b> Panadería con tres años en el local; el dueño avisa con dos meses que pondrá su panadería. ¿Prospera?</div><div class="r">No: el desahucio es de <b>6 meses</b> (art. 520) y la empresa no es sustancialmente distinta. La renovación es irrenunciable (art. 524).</div></div>
+      <div class="mito"><div class="r"><b>14.</b> Le prestan un apartamento gratis y le cobran la administración. ¿Sigue siendo comodato?</div><div class="r">Si es reembolso de un gasto que causa el comodatario, puede subsistir; si funciona como pago por el uso, es <b>arrendamiento</b> (art. 1501).</div></div>
+    </div>
+    <div class="pie"><span><b>Contratos civiles y mercantiles · Corte 2</b> · Preguntas de repaso</span><span>Juan David Vanegas Roldán · <a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 16</span></div>
+  </div>
+</section>
+
+<!-- ============================== LO ESENCIAL ============================== -->
+<section class="pagina cruces">
+  <svg class="constelacion" data-paleta="academy" data-semilla="43" data-zona="40,900,760,995" data-nodos="9" viewBox="0 0 794 1123" aria-hidden="true" style="opacity:.55"></svg>
+  <div class="brillo" style="width:800px;height:800px;right:-340px;bottom:-340px;background:radial-gradient(circle, rgba(0,196,204,.2), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo">Para repasar</div>
+    <h2>Lo esencial<br><b>en doce frases.</b></h2>
+    <div class="tarjeta" style="margin-top:16px;padding:4px 18px">
+      <div class="frase"><span>01</span><div>Sin sus <b style="color:var(--tinta)">elementos esenciales</b> el contrato no existe o <b style="color:var(--tinta)">degenera</b> en otro (art. 1501); el contrato es título y la tradición, el modo.</div></div>
+      <div class="frase"><span>02</span><div>La venta de cosa ajena <b style="color:var(--tinta)">vale</b>: es inoponible al dueño y activa la evicción.</div></div>
+      <div class="frase"><span>03</span><div>Precio en dinero, real y determinado; si es mixto, decide qué vale más (art. 1850).</div></div>
+      <div class="frase"><span>04</span><div>Inmuebles: <b style="color:var(--tinta)">escritura pública</b> o el contrato no existe; la promesa es otro contrato.</div></div>
+      <div class="frase"><span>05</span><div><b style="color:var(--tinta)">Lesión enorme</b>: solo inmuebles, umbral de la mitad, 4 años e irrenunciable.</div></div>
+      <div class="frase"><span>06</span><div>La permuta aplica la compraventa; la donación exige <b style="color:var(--tinta)">aceptación</b> e insinuación sobre 50 salarios mínimos.</div></div>
+      <div class="frase"><span>07</span><div>El arrendatario es <b style="color:var(--tinta)">tenedor</b>: reparaciones necesarias para el arrendador, locativas para él.</div></div>
+      <div class="frase"><span>08</span><div>Vivienda urbana: canon del 1 %, IPC y sin depósitos. Local: <b style="color:var(--tinta)">renovación</b> tras dos años, irrenunciable.</div></div>
+      <div class="frase"><span>09</span><div>Mandato = <b style="color:var(--tinta)">por cuenta y riesgo</b> de otro; mandato y representación son planos distintos.</div></div>
+      <div class="frase"><span>10</span><div>La extralimitación da <b style="color:var(--tinta)">inoponibilidad</b>, no nulidad; se sanea con ratificación.</div></div>
+      <div class="frase"><span>11</span><div>Mutuo, comodato y depósito son <b style="color:var(--tinta)">reales</b>: sin entrega no hay contrato. Intereses mercantiles excesivos: se pierden todos.</div></div>
+      <div class="frase"><span>12</span><div>Culpa según el beneficio: comodato <b style="color:var(--tinta)">levísima</b>, mutuo con intereses leve, depósito gratuito grave.</div></div>
+    </div>
+    <div class="tarjeta" style="margin-top:14px;padding:14px 18px">
+      <h4>Normas de referencia</h4>
+      <p class="texto" style="font-size:10.4px">Código Civil, arts. 754, 756, 1443 a 1493, 1500, 1604, 1849 a 1958, 1973 a 2035, 2142 a 2275 · Código de Comercio, arts. 20 a 22, 515 a 524, 833, 884, 886, 905 a 967, 1163, 1170, 1262 a 1346 · Ley 153 de 1887, art. 89 · Ley 820 de 2003 · Ley 1480 de 2011 · Ley 518 de 1999 · Decreto 1712 de 1989 · Código Penal, art. 305. <span class="tenue">Consulte siempre el texto oficial vigente.</span></p>
+    </div>
+    <div class="caja clave" style="margin-top:12px"><span class="tit">Cómo estudiar para el parcial</span>No memorice contrato por contrato: tome un caso, identifique el contrato por su <b>contraprestación</b>, ubique el <b>régimen</b> (civil, mercantil, consumo o ley especial) y recorra las cinco preguntas de la matriz: perfeccionamiento, obligaciones, riesgo, culpa y remedios. Cite siempre el artículo.</div>
+    <p class="texto" style="margin-top:12px">El corte 3 sigue con los contratos de colaboración: <b class="nar">distribución, suministro, franquicia y agencia comercial</b>.</p>
+    <div class="pie" style="border-top:1px solid var(--borde);padding-top:16px">
+      <span class="logo"><img src="../public/marcas/trifuerza/logo-horizontal-claro.png" alt="Trifuerza" style="height:22px"><span class="sep" style="height:18px"></span><span class="linea" style="font-size:10.5px">Academy</span></span>
+      <span>Juan David Vanegas Roldán · <a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 17</span>
+    </div>
+  </div>
+</section>
+
+<script>window.TERMINOS_PROPUESTA = {
+  tech: ['escritura', 'registro', 'tradición', 'consignación', 'pagaré', '{ }'],
+  law: ['§', 'art. 1849', 'art. 1604', 'Ley 820', 'art. 518', 'art. 2142'],
+  design: ['compraventa', 'donación', 'mandato', 'mutuo', 'comodato', '△'],
+};</script>
+<script src="kit/constelacion.js"></script>
+<script src="kit/pdf-limpio.js"></script>
+</body>
+</html>

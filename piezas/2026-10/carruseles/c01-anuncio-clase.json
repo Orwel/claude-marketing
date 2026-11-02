@@ -1,0 +1,57 @@
+{
+  "slug": "c01-anuncio-clase",
+  "titulo": "Anuncio de la clase del 27: seis sentencias que no existían",
+  "plantilla": "Carrusel",
+  "tipo": "carrusel",
+  "formato": "carrusel",
+  "segundos": 6,
+  "cuentas": ["juanda"],
+  "pie": "Link en mi perfil",
+  "laminas": [
+    {
+      "metafora": "espejismo",
+      "antetitulo": "Nueva York, 2023",
+      "titulo": "Seis sentencias. *Ninguna existía.*",
+      "texto": "Un abogado con treinta años de ejercicio las presentó ante un juez federal."
+    },
+    {
+      "metafora": "chat",
+      "datos": { "pregunta": "¿Estos casos son reales?", "respuesta": "Sí, son reales.", "remate": "No lo eran." },
+      "antetitulo": "Lo que pasó",
+      "titulo": "Le preguntó si eran reales. *Le dijo que sí.*",
+      "texto": "No las inventó él. Las inventó la herramienta, y él no supo distinguirlo."
+    },
+    {
+      "metafora": "autocompletar",
+      "datos": { "frase": "Según la jurisprudencia, el caso", "opciones": [["que suena bien", 58], ["que existe", 24], ["que aplica", 12], ["otro", 6]] },
+      "antetitulo": "El error de fondo",
+      "titulo": "Un modelo de lenguaje no busca: *construye lo que suena bien.*",
+      "texto": "Confundirlo con una base de datos es lo que sanciona, no la tecnología."
+    },
+    {
+      "metafora": "boleto",
+      "datos": { "fecha": "MAR 27 OCT · 7:00 P.M." },
+      "antetitulo": "Clase en vivo",
+      "titulo": "El 27 de octubre explico cómo funciona *por dentro.*",
+      "texto": "Por qué se inventa cosas, cuándo confiar y qué subir antes de usarla en tu trabajo."
+    },
+    {
+      "metafora": "certificado",
+      "antetitulo": "Gratis · para todo público",
+      "titulo": "Sin requisitos técnicos y *con certificado.*",
+      "texto": "Deja tu correo en el link del perfil y te llega el acceso."
+    }
+  ],
+  "variantes": {
+    "juanda": {
+      "copy": "En 2023, un abogado con treinta años de ejercicio presentó ante un juez federal seis sentencias. Ninguna existía.\n\nNo las inventó él: las inventó la herramienta que usó. Y cuando le preguntó si eran reales, le dijo que sí.\n\nEse caso es el que más me piden explicar en clase. No por morbo: porque a cualquiera le pudo pasar.\n\nEl martes 27 de octubre, a las 7 de la noche, doy una clase en vivo sobre cómo funciona la inteligencia artificial por dentro. Por qué se inventa cosas, cuándo confiar y qué criterio usar antes de subir un documento de tu trabajo.\n\nGratis, para todo público, sin requisitos técnicos y con certificado. Link en mi perfil.",
+      "copyLinkedin": "En 2023, un abogado de Nueva York con treinta años de ejercicio presentó ante un juez federal seis sentencias que respaldaban su caso. Ninguna existía.\n\nNo las inventó él. Las inventó la herramienta que usó, y él no supo distinguirlo. Cuando le preguntó si los casos eran reales, le respondió que sí.\n\nEse caso es el que más me piden explicar cuando doy clase. Y no por morbo: porque todos sabemos que nos pudo pasar.\n\nEl martes 27 de octubre, a las 7 de la noche, voy a dar una clase en vivo sobre cómo funciona de verdad la inteligencia artificial. Por qué se inventa cosas, cuándo puedes confiar y cuándo no, y qué criterio usar antes de subir un documento de tu trabajo.\n\nGratis, para todo público, sin requisitos técnicos y con certificado. El registro abre el lunes 5 de octubre."
+    }
+  },
+  "verificar": [
+    { "dato": "Caso Mata contra Avianca (2023, juez federal de Nueva York): seis sentencias inexistentes citadas; el abogado tenía unos treinta años de ejercicio y la herramienta le confirmó que eran reales.", "estado": "pendiente" },
+    { "dato": "Clase en vivo: martes 27 de octubre de 2026, 7:00 p.m. hora Colombia, gratis, para todo público, sin requisitos técnicos.", "estado": "pendiente" },
+    { "dato": "Certificado gratuito: quién lo emite y qué condiciones tiene (asistencia completa, etc.).", "estado": "pendiente" },
+    { "dato": "Registro: link en el perfil y fecha de apertura (lun 5 oct).", "estado": "pendiente" }
+  ]
+}

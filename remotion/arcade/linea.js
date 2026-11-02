@@ -375,7 +375,8 @@ export function lineaArcade(pieza) {
   const g = pieza.generado;
   if (!g) throw new Error(`${pieza.slug}: sin armar (npm run sofa-armar)`);
   const escenas = g.escenas.map((e) => {
-    if (e.tipo !== 'clip' && e.tipo !== 'cierre') return { ...e };
+    // Titulo o final con locucion (`voz`): sus palabras salen en el mismo cuadro de dialogo que las entrevistas.
+    if (e.tipo !== 'clip' && e.tipo !== 'cierre') return e.subtitulos?.length ? { ...e, paginas: paginar(e.subtitulos) } : { ...e };
     const golpes = golpesDe(e);
     const ficha = e.ficha ? { inicio: Math.round((e.fichaEn ?? 0.3) * FPS), fin: Math.round((e.fichaEn ?? 0.3) * FPS) + Math.round((e.fichaDura ?? 2.4) * FPS) } : null;
     const juego = juegoDe(e);
@@ -429,7 +430,8 @@ export function sonidosDe(e) {
   if (e.tipo === 'titulo') {
     s.push({ cuadro: 2, tipo: 'inicio' }, { cuadro: 26, tipo: 'moneda' });
     const SONIDO_MOTIVO = { protesto: [[14, 'golpe'], [40, 'daño']], tesoro: [[10, 'moneda'], [22, 'moneda'], [34, 'moneda'], [48, 'moneda']], plataformas: [[20, 'salto'], [44, 'salto'], [60, 'moneda']], torneo: [[12, 'blip'], [24, 'blip'], [36, 'blip'], [56, 'fanfarria']], tienda: [[10, 'seleccion'], [30, 'blip'], [42, 'blip'], [54, 'moneda']], cartuchos: [[16, 'blip'], [30, 'blip'], [44, 'blip'], [58, 'seleccion']], arcade: [[12, 'moneda'], [40, 'seleccion']] };
-    for (const [c, tipo] of SONIDO_MOTIVO[e.motivo] ?? []) s.push({ cuadro: c, tipo });
+    // Con locucion encima no va la fanfarria del motivo: taparia la frase.
+    for (const [c, tipo] of SONIDO_MOTIVO[e.motivo] ?? []) if (!(e.voz && tipo === 'fanfarria')) s.push({ cuadro: c, tipo });
   }
   if (e.tipo === 'nivel') {
     const SONIDO_ESTILO = { vs: [[0, 'nivel'], [22, 'golpe']], seleccion: [[0, 'blip'], [8, 'blip'], [16, 'blip'], [30, 'seleccion']], encuentro: [[0, 'daño'], [18, 'ficha']], mundo2d: [[0, 'nivel'], [26, 'salto']], jefe: [[0, 'daño'], [10, 'daño'], [20, 'daño']], resultado: [[0, 'nivel'], [16, 'xp'], [26, 'xp'], [36, 'xp']], mision: [[0, 'seleccion'], [20, 'tecla'], [26, 'tecla'], [32, 'tecla']] };
@@ -437,6 +439,7 @@ export function sonidosDe(e) {
   }
   if (e.tipo === 'juego') s.push({ cuadro: 0, tipo: 'seleccion' });
   if (e.tipo === 'final') s.push({ cuadro: 2, tipo: 'fanfarria' });
+  if ((e.tipo === 'titulo' || e.tipo === 'final') && e.paginas) for (const p of e.paginas) s.push({ cuadro: Math.round((p.startMs / 1000) * FPS), tipo: 'texto' });
   if (e.tipo === 'clip' || e.tipo === 'cierre') {
     if (e.ficha) s.push({ cuadro: e.ficha.inicio, tipo: 'ficha' }, { cuadro: e.ficha.inicio + 10, tipo: 'tecla' }, { cuadro: e.ficha.inicio + 16, tipo: 'tecla' }, { cuadro: e.ficha.inicio + 22, tipo: 'tecla' });
     for (const g of e.golpes) s.push({ cuadro: g.inicio + 2, tipo: g.estilo === 'xp' ? 'xp' : g.estilo === 'daño' ? 'daño' : 'golpe' });

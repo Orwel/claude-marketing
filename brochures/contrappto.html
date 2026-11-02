@@ -1,0 +1,510 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Contrappto · Brochure</title>
+<!--
+  Brochure de Contrappto (A4, 7 páginas). Se imprime a PDF con `npm run brochure`.
+  Contenido: modelo de negocio cerrado el 17-sep-2026 (contrappto/docs/BUSINESS/modelo-de-planes.md)
+  y la propaganda Enterprise del FigJam de Trifuerza. Tono de producto, tercero neutral, sin jerga.
+  Lo que hay que confirmar antes de repartirlo está en brochures/verificar.json.
+-->
+<style>
+  @font-face { font-family: 'Sora'; src: url('../public/fuentes/Sora.woff2') format('woff2'); font-weight: 100 800; }
+  :root {
+    --fondo: #07141D; --fondo2: #0F2533; --elevado: #17354A; --linea: #224A62;
+    --tinta: #F0F6FC; --tenue: #9BB0BD; --acento: #0090DE; --cielo: #85B7EB; --ambar: #FFB038;
+    --ok: #10B981; --okt: #34D399; --error: #EF4444;
+  }
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--fondo); }
+  body { font-family: 'Sora', sans-serif; color: var(--tinta); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .pagina { position: relative; width: 210mm; height: 297mm; overflow: hidden; padding: 64px 60px 56px; page-break-after: always; background: var(--fondo); }
+  .pagina:last-child { page-break-after: auto; }
+  /* Rejilla de la marca (fondoEstilo: rejilla) y el resplandor del hero de contrappto.com. */
+  .rejilla::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(133,183,235,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(133,183,235,.06) 1px, transparent 1px); background-size: 44px 44px; mask-image: radial-gradient(ellipse at 70% 20%, #000 10%, transparent 75%); -webkit-mask-image: radial-gradient(ellipse at 70% 20%, #000 10%, transparent 75%); }
+  .brillo { position: absolute; border-radius: 50%; filter: blur(0); pointer-events: none; }
+  .contenido { position: relative; z-index: 2; height: 100%; display: flex; flex-direction: column; }
+
+  .logo { display: flex; align-items: center; gap: 12px; font-weight: 800; font-size: 22px; letter-spacing: -.02em; }
+  .logo img { width: 38px; }
+  .pie { margin-top: auto; display: flex; justify-content: space-between; align-items: center; font-size: 10.5px; color: var(--tenue); letter-spacing: .04em; }
+  .pie b { color: var(--tinta); font-weight: 600; }
+  .num { font-variant-numeric: tabular-nums; }
+
+  .pastilla { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 999px; font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--cielo); background: rgba(0,144,222,.12); border: 1px solid rgba(0,144,222,.35); }
+  .pastilla i { width: 7px; height: 7px; border-radius: 50%; background: var(--okt); box-shadow: 0 0 0 4px rgba(52,211,153,.18); }
+  .antetitulo { font-size: 11.5px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--ambar); margin-bottom: 14px; }
+  h1 { font-size: 58px; line-height: 1.02; font-weight: 800; letter-spacing: -.035em; }
+  h2 { font-size: 38px; line-height: 1.08; font-weight: 800; letter-spacing: -.03em; }
+  h3 { font-size: 17px; font-weight: 700; letter-spacing: -.01em; }
+  p { line-height: 1.55; }
+  .lead { font-size: 15.5px; color: var(--tenue); line-height: 1.6; }
+  .tenue { color: var(--tenue); }
+  /* Resaltado tipo marcador, como en los videos de la cuenta. */
+  .marcador { background: linear-gradient(transparent 58%, rgba(0,144,222,.55) 58%, rgba(0,144,222,.55) 92%, transparent 92%); padding: 0 4px; margin: 0 -4px; }
+  .ambar { color: var(--ambar); }
+  .cielo { color: var(--cielo); }
+
+  /* Tarjeta de vidrio del método web. */
+  .vidrio { background: linear-gradient(160deg, rgba(23,53,74,.85), rgba(15,37,51,.92)); border: 1px solid rgba(133,183,235,.16); border-radius: 22px; box-shadow: 0 24px 60px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.04); }
+  .ventana { border-radius: 18px; overflow: hidden; background: #0A1B26; border: 1px solid rgba(133,183,235,.16); box-shadow: 0 30px 70px rgba(0,0,0,.5), 0 0 60px rgba(0,144,222,.12); }
+  .barra { height: 36px; display: flex; align-items: center; gap: 7px; padding: 0 16px; background: rgba(15,37,51,.95); border-bottom: 1px solid var(--linea); font-size: 12.5px; font-weight: 600; }
+  .barra span.p { width: 9px; height: 9px; border-radius: 50%; }
+  .barra .t { margin-left: 10px; }
+  .estado { display: inline-block; padding: 3px 10px; border-radius: 999px; font-size: 9.5px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; white-space: nowrap; }
+  .e-ok { color: var(--okt); background: rgba(16,185,129,.14); border: 1px solid rgba(16,185,129,.35); }
+  .e-act { color: #BAE6FD; background: rgba(14,165,233,.14); border: 1px solid rgba(14,165,233,.35); }
+  .e-pend { color: #FCD34D; background: rgba(251,191,36,.14); border: 1px solid rgba(251,191,36,.35); }
+  .ico { width: 20px; height: 20px; stroke: currentColor; fill: none; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+
+  /* ---------- Portada ---------- */
+  .hojas { position: absolute; right: -40px; top: 120px; width: 420px; height: 560px; perspective: 900px; }
+  .hoja { position: absolute; width: 190px; height: 260px; border-radius: 12px; background: linear-gradient(150deg, rgba(0,144,222,.55), rgba(0,144,222,.14)); border: 1px solid rgba(230,241,251,.4); box-shadow: 0 0 50px rgba(0,144,222,.4); }
+  .hoja i { position: absolute; left: 14%; height: 3px; border-radius: 2px; background: rgba(230,241,251,.5); }
+  .portada-card { position: absolute; left: 0; right: 0; bottom: 70px; }
+  .pasos-linea { display: flex; align-items: center; margin-top: 18px; }
+  .pasos-linea .nodo { display: flex; flex-direction: column; align-items: center; gap: 7px; font-size: 10.5px; color: var(--tenue); width: 86px; text-align: center; }
+  .pasos-linea .nodo b { width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; border: 2px solid rgba(240,246,252,.2); }
+  .pasos-linea .nodo.si b { background: var(--acento); border-color: var(--acento); }
+  .pasos-linea .nodo.ahora b { background: var(--ok); border-color: var(--ok); box-shadow: 0 0 22px rgba(16,185,129,.55); }
+  .pasos-linea .nodo.si, .pasos-linea .nodo.ahora { color: var(--tinta); }
+  .pasos-linea .tramo { flex: 1; height: 3px; border-radius: 2px; background: rgba(240,246,252,.14); margin-bottom: 22px; }
+  .pasos-linea .tramo.lleno { background: var(--acento); }
+  .aviso { display: flex; gap: 12px; align-items: center; padding: 12px 14px; border-radius: 16px; background: rgba(15,37,51,.97); border: 1px solid rgba(255,176,56,.35); box-shadow: 0 16px 40px rgba(0,0,0,.4); }
+  .aviso .ic { width: 38px; height: 38px; border-radius: 12px; display: grid; place-items: center; background: var(--ambar); color: #07141D; flex: none; }
+  .aviso small { display: block; font-size: 9.5px; color: var(--tenue); }
+  .aviso strong { font-size: 13px; }
+
+  /* ---------- Problema ---------- */
+  .tres { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .dolor { padding: 22px 20px; }
+  .dolor .n { font-size: 34px; font-weight: 800; color: var(--ambar); letter-spacing: -.04em; line-height: 1; margin-bottom: 14px; }
+  .dolor h3 { margin-bottom: 8px; }
+  .dolor p { font-size: 12.5px; color: var(--tenue); }
+  .partes { display: grid; grid-template-columns: 1fr 1.25fr 1fr; align-items: center; gap: 0; margin-top: 26px; }
+  .persona { text-align: center; }
+  .persona .av { width: 74px; height: 74px; margin: 0 auto 10px; border-radius: 50%; display: grid; place-items: center; background: rgba(240,246,252,.06); border: 1.5px solid rgba(133,183,235,.25); color: var(--cielo); }
+  .persona .av .ico { width: 34px; height: 34px; }
+  .persona b { display: block; font-size: 14px; }
+  .persona small { font-size: 11px; color: var(--tenue); }
+  .centro { position: relative; text-align: center; padding: 22px 16px; border-radius: 20px; background: radial-gradient(circle at 50% 0%, rgba(0,144,222,.35), rgba(15,37,51,.95) 70%); border: 1.5px solid rgba(0,144,222,.5); box-shadow: 0 0 50px rgba(0,144,222,.25); }
+  .centro img { width: 44px; margin-bottom: 6px; }
+  .centro b { display: block; font-size: 16px; }
+  .centro small { font-size: 11px; color: var(--cielo); }
+  .conector { position: absolute; top: 50%; width: 46px; height: 2px; background: repeating-linear-gradient(90deg, var(--acento) 0 6px, transparent 6px 11px); }
+
+  /* ---------- Ciclo ---------- */
+  .ciclo { display: flex; flex-direction: column; gap: 12px; margin-top: 26px; }
+  .etapa { display: grid; grid-template-columns: 54px 1fr 236px; gap: 18px; align-items: center; padding: 16px 18px; }
+  .etapa .bola { width: 54px; height: 54px; border-radius: 16px; display: grid; place-items: center; background: rgba(0,144,222,.16); border: 1px solid rgba(0,144,222,.45); color: var(--cielo); }
+  .etapa .bola .ico { width: 26px; height: 26px; }
+  .etapa h3 { font-size: 17px; margin-bottom: 4px; }
+  .etapa h3 span { color: var(--tenue); font-weight: 600; font-size: 12px; margin-right: 8px; letter-spacing: .1em; }
+  .etapa p { font-size: 12px; color: var(--tenue); line-height: 1.5; }
+  .mini { border-radius: 12px; background: #0A1B26; border: 1px solid rgba(133,183,235,.14); padding: 10px 12px; font-size: 10.5px; }
+  .burbuja { padding: 6px 10px; border-radius: 12px; margin-bottom: 5px; max-width: 88%; line-height: 1.35; }
+  .burbuja.ellos { background: rgba(240,246,252,.08); border-bottom-left-radius: 4px; }
+  .burbuja.tu { background: rgba(0,144,222,.85); margin-left: auto; border-bottom-right-radius: 4px; }
+  .fila { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 5px 0; border-bottom: 1px solid rgba(133,183,235,.08); }
+  .fila:last-child { border-bottom: 0; }
+  .codigo { font-family: ui-monospace, Consolas, monospace; font-size: 10.5px; color: var(--cielo); letter-spacing: .06em; }
+
+  /* ---------- Para quién ---------- */
+  .segmento { padding: 24px 22px; display: flex; flex-direction: column; gap: 12px; }
+  .segmento .plan { align-self: flex-start; }
+  .segmento h3 { font-size: 19px; }
+  .segmento p { font-size: 12.5px; color: var(--tenue); }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .chip { font-size: 10.5px; padding: 5px 10px; border-radius: 999px; background: rgba(240,246,252,.06); border: 1px solid rgba(133,183,235,.16); color: var(--tinta); }
+  .casos { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 18px; }
+  .caso { padding: 20px; display: flex; gap: 14px; }
+  .caso .ic { width: 42px; height: 42px; border-radius: 12px; display: grid; place-items: center; background: rgba(255,176,56,.14); border: 1px solid rgba(255,176,56,.4); color: var(--ambar); flex: none; }
+  .caso h3 { font-size: 14.5px; margin-bottom: 4px; }
+  .caso p { font-size: 11.5px; color: var(--tenue); line-height: 1.5; }
+
+  /* ---------- Enterprise ---------- */
+  .cita { font-size: 34px; font-weight: 800; letter-spacing: -.03em; line-height: 1.1; }
+  .masiva { display: grid; grid-template-columns: 150px 1fr; gap: 18px; align-items: center; padding: 18px 20px; }
+  .masiva .grande { font-size: 64px; font-weight: 800; color: var(--cielo); letter-spacing: -.05em; line-height: 1; }
+  .rejilla-docs { display: grid; grid-template-columns: repeat(14, 1fr); gap: 4px; }
+  .rejilla-docs i { aspect-ratio: .78; border-radius: 3px; background: rgba(0,144,222,.3); border: 1px solid rgba(0,144,222,.7); }
+  .rejilla-docs i.no { background: rgba(240,246,252,.04); border-color: rgba(240,246,252,.08); }
+  .tablero td, .tablero th { padding: 8px 12px; font-size: 11px; text-align: left; border-bottom: 1px solid rgba(133,183,235,.08); }
+  .tablero th { font-size: 9.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--tenue); font-weight: 600; }
+  .tablero table { width: 100%; border-collapse: collapse; }
+  .lista { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 22px; }
+  .lista div { display: flex; gap: 10px; font-size: 12px; line-height: 1.45; }
+  .lista .ico { color: var(--okt); width: 18px; height: 18px; margin-top: 1px; }
+
+  /* ---------- Planes ---------- */
+  .planes { display: grid; grid-template-columns: 1fr 1.08fr 1fr; gap: 14px; margin-top: 26px; align-items: stretch; }
+  .plan-card { padding: 24px 20px; display: flex; flex-direction: column; }
+  .plan-card.destacado { background: linear-gradient(170deg, rgba(0,144,222,.32), rgba(15,37,51,.95) 55%); border: 1.5px solid rgba(0,144,222,.65); box-shadow: 0 0 60px rgba(0,144,222,.25), 0 24px 60px rgba(0,0,0,.4); }
+  .plan-card .nombre { font-size: 13px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--cielo); }
+  .plan-card .precio { white-space: nowrap; font-size: 31px; font-weight: 800; letter-spacing: -.04em; margin-top: 12px; line-height: 1; }
+  .plan-card .precio small { font-size: 12px; font-weight: 500; color: var(--tenue); letter-spacing: 0; }
+  .plan-card .anual { font-size: 11px; color: var(--tenue); margin-top: 6px; min-height: 16px; }
+  .plan-card .para { font-size: 11.5px; color: var(--tinta); margin: 14px 0; padding: 10px 12px; border-radius: 12px; background: rgba(240,246,252,.05); line-height: 1.45; }
+  .plan-card ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+  .plan-card li { display: flex; gap: 8px; font-size: 11.5px; line-height: 1.4; }
+  .plan-card li .ico { width: 15px; height: 15px; color: var(--okt); margin-top: 1px; }
+  .plan-card .boton { margin-top: auto; padding-top: 18px; }
+  .btn { display: block; text-align: center; padding: 11px 14px; border-radius: 12px; font-size: 12px; font-weight: 700; border: 1.5px solid rgba(240,246,252,.25); }
+  .btn.lleno { background: var(--acento); border-color: var(--acento); box-shadow: 0 0 28px rgba(0,144,222,.45); }
+  .reglas { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 18px; }
+  .regla { padding: 16px 18px; border-radius: 16px; border: 1px dashed rgba(133,183,235,.3); font-size: 11.5px; color: var(--tenue); line-height: 1.5; }
+  .regla b { display: block; color: var(--tinta); font-size: 13px; margin-bottom: 4px; }
+  .cupos { margin-top: 16px; }
+  .cupos table { width: 100%; border-collapse: collapse; font-size: 11px; }
+  .cupos td, .cupos th { padding: 8px 12px; border-bottom: 1px solid rgba(133,183,235,.1); text-align: center; }
+  .cupos th { font-size: 9.5px; text-transform: uppercase; letter-spacing: .1em; color: var(--tenue); font-weight: 600; }
+  .cupos td:first-child, .cupos th:first-child { text-align: left; }
+
+  /* ---------- Cierre ---------- */
+  .objecion { padding: 20px 22px; display: grid; grid-template-columns: 1fr 1.35fr; gap: 20px; align-items: center; }
+  .objecion .q { font-size: 18px; font-weight: 700; letter-spacing: -.02em; }
+  .objecion .q span { color: var(--ambar); }
+  .objecion p { font-size: 12.5px; color: var(--tenue); }
+  .cta { margin-top: 26px; padding: 34px 34px; border-radius: 26px; background: radial-gradient(circle at 85% 0%, rgba(255,176,56,.25), transparent 55%), linear-gradient(150deg, #0B6EA8, #07141D 75%); border: 1.5px solid rgba(0,144,222,.6); box-shadow: 0 0 80px rgba(0,144,222,.3); }
+  .cta .btn-grande { display: inline-flex; align-items: center; gap: 10px; margin-top: 22px; padding: 15px 24px; border-radius: 14px; background: var(--ambar); color: #07141D; font-weight: 800; font-size: 15px; box-shadow: 0 0 36px rgba(255,176,56,.5); }
+</style>
+</head>
+<body>
+
+<!-- Íconos (trazos de lucide, MIT) -->
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></symbol>
+    <symbol id="i-msg" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></symbol>
+    <symbol id="i-pen" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></symbol>
+    <symbol id="i-scan" viewBox="0 0 24 24"><path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><path d="M9 9h.01M15 9h.01"/></symbol>
+    <symbol id="i-list" viewBox="0 0 24 24"><rect x="3" y="5" width="6" height="6" rx="1"/><path d="m3 17 2 2 4-4M13 6h8M13 12h8M13 18h8"/></symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M8 16H3v5"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></symbol>
+    <symbol id="i-brief" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></symbol>
+    <symbol id="i-building" viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4M8 6h.01M16 6h.01M12 6h.01M12 10h.01M12 14h.01M16 10h.01M16 14h.01M8 10h.01M8 14h.01"/></symbol>
+    <symbol id="i-key" viewBox="0 0 24 24"><circle cx="7.5" cy="15.5" r="5.5"/><path d="m21 2-9.6 9.6M15.5 7.5l3 3L22 7l-3-3"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.7 9a1 1 0 0 1-.6 0C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.2-2.7a1.2 1.2 0 0 1 1.6 0C14.5 3.8 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></symbol>
+    <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+    <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 3l1.9 5.8L20 11l-6.1 2.2L12 19l-1.9-5.8L4 11l6.1-2.2z"/></symbol>
+  </defs>
+</svg>
+
+<!-- ============================== 1 · PORTADA ============================== -->
+<section class="pagina rejilla">
+  <div class="brillo" style="width:620px;height:620px;right:-220px;top:-200px;background:radial-gradient(circle, rgba(0,144,222,.42), transparent 65%)"></div>
+  <div class="brillo" style="width:420px;height:420px;left:-180px;bottom:-120px;background:radial-gradient(circle, rgba(255,176,56,.16), transparent 65%)"></div>
+  <div class="hojas">
+    <div class="hoja" style="left:150px;top:10px;transform:rotateX(18deg) rotateY(-28deg) rotateZ(8deg);opacity:.55"><i style="top:20%;right:14%"></i><i style="top:34%;right:30%"></i><i style="top:48%;right:14%"></i><i style="top:62%;right:30%"></i></div>
+    <div class="hoja" style="left:40px;top:170px;transform:rotateX(-12deg) rotateY(32deg) rotateZ(-10deg);opacity:.75"><i style="top:20%;right:14%"></i><i style="top:34%;right:30%"></i><i style="top:48%;right:14%"></i><i style="top:62%;right:30%"></i></div>
+    <div class="hoja" style="left:210px;top:300px;transform:rotateX(22deg) rotateY(-14deg) rotateZ(14deg);opacity:.45"><i style="top:20%;right:14%"></i><i style="top:34%;right:30%"></i><i style="top:48%;right:14%"></i><i style="top:62%;right:30%"></i></div>
+  </div>
+  <div class="contenido">
+    <div class="logo"><img src="../public/marcas/contrappto/icono.png" alt="">contrappto</div>
+    <div style="margin-top:110px;max-width:470px">
+      <span class="pastilla"><i></i>Contratos vivos · Colombia</span>
+      <h1 style="margin-top:22px">Contratos que no se archivan.<br><span class="marcador">Se ejecutan.</span></h1>
+      <p class="lead" style="margin-top:22px;max-width:420px">Crea, firma y da seguimiento a tus acuerdos en un solo lugar: identidad verificada en cada firma, avisos antes de cada fecha y un tablero donde ves en qué va cada contrato.</p>
+    </div>
+    <div class="portada-card">
+      <div class="ventana">
+        <div class="barra"><span class="p" style="background:#F87171"></span><span class="p" style="background:#FBBF24"></span><span class="p" style="background:#34D399"></span><span class="t">contra<span class="cielo">ppto</span></span><span style="margin-left:auto" class="estado e-ok">En ejecución</span></div>
+        <div style="padding:20px 22px;display:grid;grid-template-columns:1.1fr 1fr;gap:22px;align-items:center">
+          <div>
+            <div style="font-size:11px;color:var(--tenue)">Contrato de arrendamiento</div>
+            <div style="font-size:18px;font-weight:700;margin-top:2px">Apartamento 301</div>
+            <div class="pasos-linea">
+              <div class="nodo si"><b><svg class="ico" style="width:15px;height:15px"><use href="#i-check"/></svg></b>Creado</div><div class="tramo lleno"></div>
+              <div class="nodo si"><b><svg class="ico" style="width:15px;height:15px"><use href="#i-check"/></svg></b>Firmado</div><div class="tramo lleno"></div>
+              <div class="nodo ahora"><b><svg class="ico" style="width:15px;height:15px"><use href="#i-refresh"/></svg></b>En ejecución</div><div class="tramo"></div>
+              <div class="nodo"><b></b>Finalizado</div>
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <div class="aviso"><div class="ic"><svg class="ico"><use href="#i-bell"/></svg></div><div><small>contrappto · ahora</small><strong>Reajuste del canon en 30 días</strong></div></div>
+            <div class="aviso" style="border-color:rgba(16,185,129,.4)"><div class="ic" style="background:var(--ok);color:#fff"><svg class="ico"><use href="#i-shield"/></svg></div><div><small>Firma verificada</small><strong>Las dos partes firmaron</strong></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pie"><span><b>contrappto.com</b></span><span>Crea · Firma · Cumple · Renegocia</span></div>
+  </div>
+</section>
+
+<!-- ============================== 2 · EL PROBLEMA ============================== -->
+<section class="pagina rejilla">
+  <div class="brillo" style="width:520px;height:520px;left:-200px;top:-160px;background:radial-gradient(circle, rgba(255,176,56,.14), transparent 65%)"></div>
+  <div class="contenido">
+    <div class="antetitulo">El problema</div>
+    <h2>Firmaste el contrato.<br><span class="ambar">¿Y después?</span></h2>
+    <p class="lead" style="margin-top:16px;max-width:560px">Firmar es el comienzo, no el final. Lo que pasa después —pagos, plazos, renovaciones, cambios— es donde se pierde plata, y casi siempre vive en un correo o en una hoja de cálculo.</p>
+
+    <div class="tres" style="margin-top:30px">
+      <div class="vidrio dolor"><div class="n">01</div><h3>Vive en el correo de quien lo hizo</h3><p>Si esa persona se va, el contrato se va con ella. Nadie sabe cuál es la última versión.</p></div>
+      <div class="vidrio dolor"><div class="n">02</div><h3>Nadie sabe quién firmó ni qué</h3><p>Un PDF con un garabato no dice quién estaba detrás. Y cuando hay que probarlo, no hay cómo.</p></div>
+      <div class="vidrio dolor"><div class="n">03</div><h3>La fecha se pasa y cuesta plata</h3><p>El reajuste, la renovación automática o el aviso de no renovar llegan cuando ya es tarde.</p></div>
+    </div>
+
+    <div class="vidrio" style="margin-top:26px;padding:26px 30px 30px">
+      <div class="antetitulo" style="color:var(--cielo)">La solución</div>
+      <h2 style="font-size:30px">El contrato como sistema, <span class="marcador">no como archivo.</span></h2>
+      <p class="lead" style="margin-top:12px">Contrappto lleva el contrato de principio a fin: cada parte ve en qué etapa está, qué sigue y cuándo vence. Y lo hace desde el medio.</p>
+      <div class="partes">
+        <div class="persona"><div class="av"><svg class="ico"><use href="#i-user"/></svg></div><b>Parte A</b><small>Arrendador, empresa, contratante</small></div>
+        <div style="position:relative">
+          <div class="conector" style="left:-46px"></div><div class="conector" style="right:-46px"></div>
+          <div class="centro"><img src="../public/marcas/contrappto/icono.png" alt=""><b>Tercero neutral</b><small>No es abogado de ninguna de las partes</small></div>
+        </div>
+        <div class="persona"><div class="av"><svg class="ico"><use href="#i-user"/></svg></div><b>Parte B</b><small>Arrendatario, empleado, contratista</small></div>
+      </div>
+    </div>
+
+    <div style="margin-top:24px;margin-bottom:22px;display:grid;grid-template-columns:repeat(4,1fr);gap:12px">
+      <div style="text-align:center"><div style="font-size:26px;font-weight:800" class="cielo">1</div><div class="tenue" style="font-size:11px">versión del contrato, la misma para las dos partes</div></div>
+      <div style="text-align:center"><div style="font-size:26px;font-weight:800" class="cielo">100 %</div><div class="tenue" style="font-size:11px">de las firmas con identidad verificada</div></div>
+      <div style="text-align:center"><div style="font-size:26px;font-weight:800" class="cielo">3</div><div class="tenue" style="font-size:11px">canales de aviso: app, correo y WhatsApp</div></div>
+      <div style="text-align:center"><div style="font-size:26px;font-weight:800" class="cielo">0</div><div class="tenue" style="font-size:11px">plantillas en Word para llenar a mano</div></div>
+    </div>
+    <div class="pie"><span><b>contrappto</b> · El problema</span><span class="num">02</span></div>
+  </div>
+</section>
+
+<!-- ============================== 3 · CÓMO FUNCIONA ============================== -->
+<section class="pagina rejilla">
+  <div class="brillo" style="width:560px;height:560px;right:-240px;top:200px;background:radial-gradient(circle, rgba(0,144,222,.3), transparent 65%)"></div>
+  <div class="contenido">
+    <div class="antetitulo">Cómo funciona</div>
+    <h2>Todo el ciclo de vida<br>del contrato, <span class="marcador">en un solo lugar</span></h2>
+
+    <div class="ciclo">
+      <div class="vidrio etapa">
+        <div class="bola"><svg class="ico"><use href="#i-msg"/></svg></div>
+        <div><h3><span>01</span>Créalo respondiendo preguntas</h3><p>Eliges el tipo de contrato y un asistente te guía pregunta a pregunta. También puedes partir de un PDF que ya tengas y dejar que la IA lo lea.</p></div>
+        <div class="mini"><div class="burbuja ellos">¿Cuál es el valor del canon mensual?</div><div class="burbuja tu">$1.800.000</div><div class="burbuja ellos">¿Se reajusta cada año?</div></div>
+      </div>
+      <div class="vidrio etapa">
+        <div class="bola"><svg class="ico"><use href="#i-scan"/></svg></div>
+        <div><h3><span>02</span>Fírmalo con identidad verificada</h3><p>Cada firmante comprueba quién es antes de firmar. El contrato queda con un código único que cualquiera puede verificar.</p></div>
+        <div class="mini"><div class="fila"><span>Arrendador</span><span class="estado e-ok">Firmó</span></div><div class="fila"><span>Arrendatario</span><span class="estado e-ok">Firmó</span></div><div class="fila"><span class="tenue">Código</span><span class="codigo">CTP-••••-••••</span></div></div>
+      </div>
+      <div class="vidrio etapa">
+        <div class="bola"><svg class="ico"><use href="#i-list"/></svg></div>
+        <div><h3><span>03</span>Cúmplelo paso a paso</h3><p>Las obligaciones se vuelven tareas con fecha. Cada pago o entrega queda registrado y la otra parte lo valida.</p></div>
+        <div class="mini"><div class="fila"><span>Canon de septiembre</span><span class="estado e-ok">Validado</span></div><div class="fila"><span>Canon de octubre</span><span class="estado e-pend">Pendiente</span></div><div class="fila"><span>Reajuste anual</span><span class="estado e-act">En 30 días</span></div></div>
+      </div>
+      <div class="vidrio etapa">
+        <div class="bola" style="background:rgba(255,176,56,.14);border-color:rgba(255,176,56,.45);color:var(--ambar)"><svg class="ico"><use href="#i-bell"/></svg></div>
+        <div><h3><span>04</span>Te avisa antes de cada fecha</h3><p>Antes, el día y después de cada vencimiento, por la app, el correo o WhatsApp. Tú decides qué aviso recibe cada persona.</p></div>
+        <div class="mini"><div class="fila"><span style="display:flex;gap:6px;align-items:center"><svg class="ico" style="width:13px;height:13px;color:var(--ambar)"><use href="#i-cal"/></svg>Pago en 3 días</span><span class="tenue">App</span></div><div class="fila"><span style="display:flex;gap:6px;align-items:center"><svg class="ico" style="width:13px;height:13px;color:var(--ambar)"><use href="#i-mail"/></svg>Vence el contrato</span><span class="tenue">Correo</span></div><div class="fila"><span style="display:flex;gap:6px;align-items:center"><svg class="ico" style="width:13px;height:13px;color:var(--ambar)"><use href="#i-msg"/></svg>Plazo de no renovar</span><span class="tenue">WhatsApp</span></div></div>
+      </div>
+      <div class="vidrio etapa">
+        <div class="bola"><svg class="ico"><use href="#i-refresh"/></svg></div>
+        <div><h3><span>05</span>Renegócialo o ciérralo</h3><p>Otrosí, prórroga, cesión o terminación, firmados igual que el original. Al final, el contrato se cierra con todo su historial.</p></div>
+        <div class="mini"><div class="chips"><span class="chip">Otrosí</span><span class="chip">Prórroga</span><span class="chip">Cesión</span><span class="chip">Terminación</span></div><div style="margin-top:8px" class="tenue">Historial completo, versión por versión</div></div>
+      </div>
+    </div>
+    <div class="pie"><span><b>contrappto</b> · Cómo funciona</span><span class="num">03</span></div>
+  </div>
+</section>
+
+<!-- ============================== 4 · PARA QUIÉN ============================== -->
+<section class="pagina rejilla">
+  <div class="brillo" style="width:520px;height:520px;left:-220px;top:300px;background:radial-gradient(circle, rgba(0,144,222,.26), transparent 65%)"></div>
+  <div class="contenido">
+    <div class="antetitulo">Para quién es</div>
+    <h2>Del primer arriendo<br>a <span class="marcador">cientos de contratos</span></h2>
+    <p class="lead" style="margin-top:14px;max-width:560px">Contrappto crece contigo. El plan depende de cuántos contratos tienes vivos al mismo tiempo, no de cuántos haces.</p>
+
+    <div class="tres" style="margin-top:28px">
+      <div class="vidrio segmento">
+        <span class="estado e-act plan">Free</span>
+        <h3>Personas</h3>
+        <p>Arriendas, prestas o vendes una o dos veces, y quieres hacerlo bien desde el principio.</p>
+        <div class="chips"><span class="chip">Un arriendo</span><span class="chip">Un préstamo</span><span class="chip">Una venta</span></div>
+      </div>
+      <div class="vidrio segmento" style="border-color:rgba(0,144,222,.55)">
+        <span class="estado e-ok plan">Pro</span>
+        <h3>Independientes y pequeños negocios</h3>
+        <p>Llevas varios contratos a la vez y necesitas que nada se te pase.</p>
+        <div class="chips"><span class="chip">Arrendadores</span><span class="chip">Brokers</span><span class="chip">Freelancers</span><span class="chip">Abogados independientes</span></div>
+      </div>
+      <div class="vidrio segmento" style="border-color:rgba(255,176,56,.45)">
+        <span class="estado e-pend plan">Enterprise</span>
+        <h3>Empresas y alto volumen</h3>
+        <p>Contratas a muchas personas con el mismo documento y necesitas ver toda la operación.</p>
+        <div class="chips"><span class="chip">RRHH</span><span class="chip">Constructoras</span><span class="chip">Inmobiliarias</span></div>
+      </div>
+    </div>
+
+    <div class="antetitulo" style="margin-top:34px;color:var(--cielo)">Casos de uso</div>
+    <div class="casos" style="margin-top:0">
+      <div class="vidrio caso"><div class="ic"><svg class="ico"><use href="#i-home"/></svg></div><div><h3>Arrendamientos</h3><p>Canon, reajuste anual y aviso de no renovación con sus fechas. Cada pago validado por las dos partes.</p></div></div>
+      <div class="vidrio caso"><div class="ic"><svg class="ico"><use href="#i-brief"/></svg></div><div><h3>Prestación de servicios</h3><p>Entregables con fecha, cuentas de cobro y un registro de qué se entregó y cuándo.</p></div></div>
+      <div class="vidrio caso"><div class="ic"><svg class="ico"><use href="#i-users"/></svg></div><div><h3>Contratación de personal</h3><p>El mismo documento para todo un equipo, cada firma con identidad verificada.</p></div></div>
+      <div class="vidrio caso"><div class="ic"><svg class="ico"><use href="#i-key"/></svg></div><div><h3>Confidencialidad y compraventa</h3><p>Acuerdos de una sola vez que quedan guardados, verificables y fáciles de encontrar.</p></div></div>
+    </div>
+
+    <div class="vidrio" style="margin-top:22px;padding:20px 24px;display:flex;gap:16px;align-items:center">
+      <svg class="ico cielo" style="width:30px;height:30px"><use href="#i-sparkle"/></svg>
+      <p style="font-size:13px"><b>Ser contraparte es gratis y no gasta tu cupo.</b> <span class="tenue">Quien recibe un contrato para firmar entra sin pagar; el cupo solo cuenta los contratos que tú creas.</span></p>
+    </div>
+    <div class="pie"><span><b>contrappto</b> · Para quién es</span><span class="num">04</span></div>
+  </div>
+</section>
+
+<!-- ============================== 5 · ENTERPRISE ============================== -->
+<section class="pagina rejilla">
+  <div class="brillo" style="width:640px;height:640px;right:-260px;top:-220px;background:radial-gradient(circle, rgba(255,176,56,.16), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo">Enterprise</div>
+    <div class="cita">Los contratos son de la empresa,<br><span class="marcador">no de quien los hizo.</span></div>
+    <p class="lead" style="margin-top:14px;max-width:560px">Contrata a cientos con el mismo documento y ve toda la operación en un tablero. Lo que se muestra, no se afirma:</p>
+
+    <div class="ventana" style="margin-top:22px">
+      <div class="barra"><span class="p" style="background:#F87171"></span><span class="p" style="background:#FBBF24"></span><span class="p" style="background:#34D399"></span><span class="t">Contratación <span class="cielo">masiva</span></span><span style="margin-left:auto;font-size:10.5px" class="tenue">Contrato laboral · plantilla aprobada</span></div>
+      <div class="masiva">
+        <div style="text-align:center"><div class="grande">200</div><div class="tenue" style="font-size:11px">firmas verificadas<br>con un solo documento</div></div>
+        <div class="rejilla-docs">
+          <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+          <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+          <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+          <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="no"></i><i class="no"></i><i class="no"></i><i class="no"></i><i class="no"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="ventana tablero" style="margin-top:14px">
+      <div class="barra"><span class="p" style="background:#F87171"></span><span class="p" style="background:#FBBF24"></span><span class="p" style="background:#34D399"></span><span class="t">Tablero de la <span class="cielo">empresa</span></span></div>
+      <table>
+        <tr><th>Contrato</th><th>Responsable</th><th>Firmas</th><th>Vence</th><th>Estado</th></tr>
+        <tr><td>Contrato laboral · Lote obra norte</td><td class="tenue">Equipo RRHH</td><td>186 / 200</td><td class="tenue">—</td><td><span class="estado e-act">Firmando</span></td></tr>
+        <tr><td>Arrendamiento · Bodega 4</td><td class="tenue">Reasignado</td><td>2 / 2</td><td>en 28 días</td><td><span class="estado e-pend">Por vencer</span></td></tr>
+        <tr><td>Prestación de servicios · Diseño</td><td class="tenue">Compras</td><td>2 / 2</td><td>15 · mar</td><td><span class="estado e-ok">En ejecución</span></td></tr>
+      </table>
+    </div>
+
+    <div class="antetitulo" style="margin-top:26px;color:var(--cielo)">Lo que no se logra comprando varias cuentas Pro</div>
+    <div class="lista">
+      <div><svg class="ico"><use href="#i-check"/></svg><span>Si alguien se va, sus contratos se reasignan: la empresa no pierde nada.</span></div>
+      <div><svg class="ico"><use href="#i-check"/></svg><span>La empresa firma como empresa, por su representante legal o apoderado.</span></div>
+      <div><svg class="ico"><use href="#i-check"/></svg><span>Equipo con roles: cada acción queda a nombre de una persona identificada.</span></div>
+      <div><svg class="ico"><use href="#i-check"/></svg><span>Aprobación antes de enviar un lote de contratos.</span></div>
+      <div><svg class="ico"><use href="#i-check"/></svg><span>Toda la cartera y sus fechas en una sola vista.</span></div>
+      <div><svg class="ico"><use href="#i-check"/></svg><span>Alta acompañada por el equipo de Contrappto.</span></div>
+    </div>
+    <div class="antetitulo" style="margin-top:28px;color:var(--cielo)">Cómo arranca una empresa</div>
+    <div class="tres">
+      <div class="vidrio" style="padding:18px 20px"><div style="font-size:26px;font-weight:800" class="ambar">1</div><h3 style="font-size:14px;margin-top:6px">Demo de 20 minutos</h3><p class="tenue" style="font-size:11.5px;margin-top:4px">Vemos tu operación y te mostramos el tablero con un caso como el tuyo.</p></div>
+      <div class="vidrio" style="padding:18px 20px"><div style="font-size:26px;font-weight:800" class="ambar">2</div><h3 style="font-size:14px;margin-top:6px">Alta acompañada</h3><p class="tenue" style="font-size:11.5px;margin-top:4px">Creamos la organización, el equipo y sus roles, y dejamos lista tu plantilla.</p></div>
+      <div class="vidrio" style="padding:18px 20px"><div style="font-size:26px;font-weight:800" class="ambar">3</div><h3 style="font-size:14px;margin-top:6px">Primer lote</h3><p class="tenue" style="font-size:11.5px;margin-top:4px">Se aprueba, se envía y ves las firmas entrar una por una.</p></div>
+    </div>
+    <div class="pie"><span><b>contrappto</b> · Enterprise</span><span class="num">05</span></div>
+  </div>
+</section>
+
+<!-- ============================== 6 · PLANES ============================== -->
+<section class="pagina rejilla">
+  <div class="brillo" style="width:600px;height:600px;left:50%;top:80px;margin-left:-300px;background:radial-gradient(circle, rgba(0,144,222,.28), transparent 65%)"></div>
+  <div class="contenido">
+    <div class="antetitulo">Planes y precios</div>
+    <h2>Gratis para empezar.<br><span class="marcador">Pro para no fallar.</span></h2>
+    <p class="lead" style="margin-top:14px;max-width:560px">Crear y firmar es gratis. Pagas cuando quieres que Contrappto siga el contrato por ti: plazos, alertas e IA después de la firma.</p>
+
+    <div class="planes">
+      <div class="vidrio plan-card">
+        <div class="nombre">Free</div>
+        <div class="precio"><small style="display:block;margin-bottom:4px">&nbsp;</small>$0</div>
+        <div class="anual">Para siempre</div>
+        <div class="para">Para quien arrienda, presta o vende una o dos veces.</div>
+        <ul>
+          <li><svg class="ico"><use href="#i-check"/></svg>2 contratos vivos</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Crear con el asistente guiado</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Firma con identidad verificada</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Código único de verificación</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Avisos de firma y de contrato por vencer</li>
+        </ul>
+        <div class="boton"><span class="btn">Crear mi contrato</span></div>
+      </div>
+      <div class="vidrio plan-card destacado">
+        <div class="nombre" style="display:flex;justify-content:space-between">Pro <span class="estado e-pend" style="letter-spacing:.06em">Recomendado</span></div>
+        <div class="precio"><small style="display:block;margin-bottom:4px">&nbsp;</small>$69.000 <small>/ mes</small></div>
+        <div class="anual">o $690.000 al año</div>
+        <div class="para">Para arrendadores, brokers, freelancers y abogados independientes.</div>
+        <ul>
+          <li><svg class="ico"><use href="#i-check"/></svg><span><b>20 contratos vivos</b></span></li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Envío en lote de hasta 4 contratos</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Seguimiento de obligaciones y plazos</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Alertas antes, el día y después de cada fecha</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Avisos por WhatsApp</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Asistente con IA y contratos creados con IA</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Adjuntos, portada e historial de versiones</li>
+        </ul>
+        <div class="boton"><span class="btn lleno">Empezar con Pro</span></div>
+      </div>
+      <div class="vidrio plan-card" style="border-color:rgba(255,176,56,.45)">
+        <div class="nombre" style="color:var(--ambar)">Enterprise</div>
+        <div class="precio"><small style="display:block;margin-bottom:4px">desde</small>$199.000 <small>/ mes</small></div>
+        <div class="anual">50 contratos · o $1.990.000 al año</div>
+        <div class="para">Para RRHH, constructoras, inmobiliarias y empresas con alto volumen.</div>
+        <ul>
+          <li><svg class="ico"><use href="#i-check"/></svg>Todo lo de Pro</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Contratación masiva</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Organización con equipo y roles</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Aprobación antes de enviar</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Verificaciones de identidad incluidas</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Alta acompañada</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Escalones a la medida</li>
+        </ul>
+        <div class="boton"><span class="btn" style="border-color:var(--ambar);color:var(--ambar)">Agendar una demo</span></div>
+      </div>
+    </div>
+
+    <div class="reglas">
+      <div class="regla"><b>12 meses por el precio de 10</b>El pago anual equivale a diez mensualidades, en todos los planes.</div>
+      <div class="regla"><b>Sin cobro por contrato</b>Pagas por contratos vivos. Cuando uno termina, el lugar vuelve a tu cupo.</div>
+      <div class="regla"><b>La contraparte no paga</b>Quien firma tu contrato entra gratis y no consume cupo.</div>
+    </div>
+    <div class="pie"><span><b>contrappto</b> · Precios en pesos colombianos</span><span class="num">06</span></div>
+  </div>
+</section>
+
+<!-- ============================== 7 · PREGUNTAS Y CIERRE ============================== -->
+<section class="pagina rejilla">
+  <div class="brillo" style="width:600px;height:600px;right:-240px;bottom:-200px;background:radial-gradient(circle, rgba(0,144,222,.34), transparent 65%)"></div>
+  <div class="contenido">
+    <div class="antetitulo">Lo que siempre nos preguntan</div>
+    <h2>Tres preguntas,<br><span class="marcador">tres respuestas cortas</span></h2>
+
+    <div style="display:flex;flex-direction:column;gap:14px;margin-top:28px">
+      <div class="vidrio objecion"><div class="q"><span>«</span>Ya tenemos abogado<span>»</span></div><p>Contrappto no reemplaza al abogado. Reemplaza el Excel y el correo donde hoy viven los contratos. Tu abogado redacta; Contrappto hace que se cumpla.</p></div>
+      <div class="vidrio objecion"><div class="q"><span>«</span>¿Es válido?<span>»</span></div><p>Cada firma pasa por verificación de identidad, no es un garabato en un PDF. Y el contrato queda con un código que cualquiera puede comprobar.</p></div>
+      <div class="vidrio objecion"><div class="q"><span>«</span>¿Y nuestros datos?<span>»</span></div><p>Son tuyos y salen cuando quieras. Si no puedes exportar lo que es tuyo, no compraste: alquilaste.</p></div>
+    </div>
+
+    <div class="cta">
+      <div class="antetitulo" style="color:#FFD28A">Veinte minutos</div>
+      <div style="font-size:34px;font-weight:800;letter-spacing:-.03em;line-height:1.1">Si contratas a más de cincuenta<br>personas al año, te mostramos<br>el tablero en veinte minutos.</div>
+      <span class="btn-grande">Agenda una demo de 20 minutos <svg class="ico"><use href="#i-arrow"/></svg></span>
+      <div style="margin-top:18px;font-size:13px;color:#CFE3F2">¿Lo tuyo son uno o dos contratos? Crea el primero gratis en <b style="color:#fff">contrappto.com</b></div>
+    </div>
+
+    <div style="margin-top:auto;margin-bottom:26px;display:grid;grid-template-columns:repeat(4,1fr);gap:12px">
+      <div class="vidrio" style="padding:16px;text-align:center"><svg class="ico cielo" style="width:28px;height:28px"><use href="#i-pen"/></svg><div style="font-weight:800;font-size:16px;margin-top:6px">Crea</div></div>
+      <div class="vidrio" style="padding:16px;text-align:center"><svg class="ico cielo" style="width:28px;height:28px"><use href="#i-scan"/></svg><div style="font-weight:800;font-size:16px;margin-top:6px">Firma</div></div>
+      <div class="vidrio" style="padding:16px;text-align:center"><svg class="ico cielo" style="width:28px;height:28px"><use href="#i-list"/></svg><div style="font-weight:800;font-size:16px;margin-top:6px">Cumple</div></div>
+      <div class="vidrio" style="padding:16px;text-align:center"><svg class="ico cielo" style="width:28px;height:28px"><use href="#i-refresh"/></svg><div style="font-weight:800;font-size:16px;margin-top:6px">Renegocia</div></div>
+    </div>
+    <div class="pie" style="margin-top:0"><span class="logo" style="font-size:16px"><img src="../public/marcas/contrappto/icono.png" alt="" style="width:26px">contrappto</span><span><b>contrappto.com</b></span></div>
+  </div>
+</section>
+
+</body>
+</html>

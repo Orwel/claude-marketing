@@ -1,0 +1,162 @@
+{
+  "slug": "ctp-n25",
+  "titulo": "Llega a tu celular",
+  "plantilla": "Capas",
+  "formato": "vertical",
+  "cuentas": [
+    "contrappto"
+  ],
+  "transicion": "barrido",
+  "pista": true,
+  "musica": "optimista",
+  "bpm": 112,
+  "_referencia": "Teaser N25 del artefacto «Videos». Misma vista explotada de ctp-capas, más corta. referencias/pinterest-2026-11.md #8 (telefono con capas que se separan). Capturas de public/app/2026-10/contrappto.mp4 sin datos de clientes.",
+  "escala": 0.9,
+  "base": {
+    "archivo": "capas/contrappto/base.png",
+    "ancho": 720,
+    "alto": 1276,
+    "tapar": [
+      {
+        "x": 0.125,
+        "y": 0.094,
+        "w": 0.84,
+        "h": 0.05,
+        "fondo": "#0B141A",
+        "texto": "Contrato de arriendo vacacional",
+        "tamano": 30
+      }
+    ]
+  },
+  "capas": [
+    {
+      "archivo": "capas/contrappto/asesor.png",
+      "ancho": 662,
+      "alto": 626,
+      "escala": 0.8,
+      "destino": {
+        "x": -290,
+        "y": -260,
+        "z": 160
+      },
+      "giro": -3,
+      "etiqueta": "Le preguntas *a tu contrato*"
+    },
+    {
+      "archivo": "capas/contrappto/corriendo.png",
+      "ancho": 660,
+      "alto": 552,
+      "escala": 0.8,
+      "destino": {
+        "x": 300,
+        "y": 132,
+        "z": 240
+      },
+      "giro": 3,
+      "etiqueta": "Las fechas *corren solas*"
+    },
+    {
+      "archivo": "capas/contrappto/renegociacion.png",
+      "ancho": 664,
+      "alto": 152,
+      "escala": 0.9,
+      "origen": {
+        "x": 28,
+        "y": 628
+      },
+      "destino": {
+        "x": 300,
+        "y": 516,
+        "z": 200
+      },
+      "giro": -2,
+      "etiqueta": "Cada cambio, *firmado*"
+    },
+    {
+      "archivo": "capas/contrappto/creacion.png",
+      "ancho": 680,
+      "alto": 650,
+      "escala": 0.75,
+      "destino": {
+        "x": -290,
+        "y": 348,
+        "z": 320
+      },
+      "giro": 2,
+      "etiqueta": "Lo armas *respondiendo preguntas*"
+    },
+    {
+      "archivo": "capas/contrappto/estados.png",
+      "ancho": 680,
+      "alto": 84,
+      "escala": 0.9,
+      "origen": {
+        "x": 20,
+        "y": 196
+      },
+      "destino": {
+        "x": 0,
+        "y": -540,
+        "z": 300
+      }
+    },
+    {
+      "archivo": "capas/contrappto/fecha.png",
+      "ancho": 640,
+      "alto": 210,
+      "escala": 0.75,
+      "destino": {
+        "x": 300,
+        "y": -330,
+        "z": 400
+      },
+      "giro": 2
+    }
+  ],
+  "escenas": [
+    {
+      "tipo": "gancho",
+      "segundos": 2.5,
+      "texto": "Tus contratos, *en tu celular*"
+    },
+    {
+      "tipo": "explota",
+      "segundos": 3,
+      "texto": "Firmas, fechas y pagos"
+    },
+    {
+      "tipo": "recorrido",
+      "segundos": 6.4
+    },
+    {
+      "tipo": "cierra",
+      "segundos": 2,
+      "texto": "*Muy pronto*"
+    },
+    {
+      "tipo": "cta",
+      "segundos": 3.4,
+      "texto": "En *App Store* y *Play Store*"
+    }
+  ],
+  "boton": "Muy pronto",
+  "variantes": {
+    "contrappto": {
+      "copy": "Tus contratos, en tu celular: los armas, los firmas y te avisan cuando algo vence.\n\nMuy pronto en App Store y Play Store. Activa las notificaciones para enterarte el día que salga."
+    }
+  },
+  "verificar": [
+    {
+      "dato": "No publicar fecha de lanzamiento hasta que las tiendas aprueben.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "El Asesor Legal IA (preguntarle al contrato) es del Plan Pro: ¿se puede mostrar en una pieza general sin decir el plan?",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Las capturas son de la grabación del 2026-10; confirmar que la interfaz no ha cambiado.",
+      "estado": "pendiente"
+    }
+  ]
+}

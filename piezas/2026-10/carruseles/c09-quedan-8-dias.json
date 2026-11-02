@@ -1,0 +1,85 @@
+{
+  "slug": "c09-quedan-8-dias",
+  "titulo": "Quedan 8 días",
+  "plantilla": "Carrusel",
+  "tipo": "carrusel",
+  "formato": "carrusel",
+  "segundos": 6,
+  "cuentas": [
+    "juanda"
+  ],
+  "pie": "Link en mi perfil",
+  "laminas": [
+    {
+      "metafora": "reloj",
+      "datos": {
+        "numero": 8
+      },
+      "antetitulo": "Clase en vivo · gratis",
+      "titulo": "Quedan *8 días.*",
+      "texto": "Este es el temario completo, sin relleno."
+    },
+    {
+      "metafora": "autocompletar",
+      "datos": {
+        "frase": "La IA responde con",
+        "opciones": [
+          [
+            "lo más probable",
+            66
+          ],
+          [
+            "lo verdadero",
+            20
+          ],
+          [
+            "lo último",
+            9
+          ],
+          [
+            "otro",
+            5
+          ]
+        ]
+      },
+      "antetitulo": "1",
+      "titulo": "Cómo funciona un modelo, *sin tecnicismos.*"
+    },
+    {
+      "metafora": "lupa",
+      "antetitulo": "2",
+      "titulo": "Por qué alucina y *cómo detectarlo.*"
+    },
+    {
+      "metafora": "balanza",
+      "antetitulo": "3",
+      "titulo": "La regla: transforma bien, *recuerda mal.*"
+    },
+    {
+      "metafora": "certificado",
+      "antetitulo": "4",
+      "titulo": "Confidencialidad, criterio de compra *y certificado.*",
+      "texto": "Martes 27 de octubre, 7:00 p.m."
+    }
+  ],
+  "variantes": {
+    "juanda": {
+      "copy": "Ocho días para la clase en vivo. Este es el temario completo, sin relleno:\n\n1. Cómo funciona un modelo de lenguaje, sin tecnicismos.\n2. Por qué alucina y cómo detectarlo.\n3. La regla: transforma bien, recuerda mal.\n4. Confidencialidad, criterio de compra y lo que no se delega.\n\nGratis y con certificado. Link en mi perfil.",
+      "copyLinkedin": "Ocho días para la clase. Este es el temario completo, sin relleno:\n\n1. Cómo funciona un modelo de lenguaje, sin tecnicismos.\n2. Por qué alucina y cómo detectarlo.\n3. La regla: transforma bien, recuerda mal.\n4. Confidencialidad, criterio de compra y lo que no se delega.\n\nMartes 27 de octubre, 7 p.m. Gratis y con certificado. El link está en el primer comentario."
+    }
+  },
+  "verificar": [
+    {
+      "dato": "Clase en vivo «Fundamentos para la Inteligencia Artificial»: martes 27 de octubre de 2026, 7:00 p.m. hora Colombia, gratis.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Certificado gratuito: quién lo emite (¿Trifuerza Academy?) y qué condiciones tiene.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Registro: link en el perfil, abre el lunes 5 de octubre.",
+      "estado": "pendiente"
+    }
+  ]
+}

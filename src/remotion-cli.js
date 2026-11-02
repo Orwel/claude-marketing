@@ -9,8 +9,9 @@ import { RAIZ } from './config.js';
  */
 const CLI = path.join(RAIZ, 'node_modules', '@remotion', 'cli', 'remotion-cli.js');
 
-export function remotion(argumentos, { silencioso = false } = {}) {
+export function remotion(argumentos, { silencioso = false, timeout } = {}) {
   return execFileSync(process.execPath, [CLI, ...argumentos], {
+    timeout,
     cwd: RAIZ,
     encoding: 'utf8',
     stdio: silencioso ? ['ignore', 'pipe', 'pipe'] : 'inherit',

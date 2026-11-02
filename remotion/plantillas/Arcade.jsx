@@ -64,10 +64,10 @@ export const Arcade = ({ pieza, marca }) => {
         {linea.escenas.map((e, i) => (
           <Sequence key={i} from={e.inicio} durationInFrames={Math.max(1, e.cuadros)} name={`${e.tipo} ${e.personaje?.nombre ?? e.texto ?? ''}`}>
             {e.tipo === 'clip' || e.tipo === 'cierre' ? <EscenaClip e={e} pieza={pieza} nombres={nombres} /> : null}
-            {e.tipo === 'titulo' ? <EscenaTitulo e={e} pieza={pieza} /> : null}
+            {e.tipo === 'titulo' ? <EscenaTitulo e={e} pieza={pieza} nombres={nombres} /> : null}
             {e.tipo === 'nivel' ? <EscenaNivel e={{ ...e, todos }} pieza={pieza} /> : null}
             {e.tipo === 'juego' ? <EscenaJuego e={e} /> : null}
-            {e.tipo === 'final' ? <EscenaFinal pieza={pieza} /> : null}
+            {e.tipo === 'final' ? <EscenaFinal e={e} pieza={pieza} nombres={nombres} /> : null}
           </Sequence>
         ))}
 
@@ -234,7 +234,7 @@ const CTA = ({ texto }) => {
 
 /* --------------------------------------------------------------- titulo */
 /** Pantalla de titulo: Trifuerza voxel girando, el nombre de la serie, la pregunta del video y "PRESS START" que parpadea. */
-const EscenaTitulo = ({ e, pieza }) => {
+const EscenaTitulo = ({ e, pieza, nombres }) => {
   const frame = useCurrentFrame();
   const { fps, width, height } = useVideoConfig();
   const marca = useMarca();
@@ -268,6 +268,13 @@ const EscenaTitulo = ({ e, pieza }) => {
       <div style={{ position: 'absolute', left: 60, right: 60, top: 300, textAlign: 'center' }}>
         <div style={{ ...fuentePixel(22), color: marca.colores.tinta, textShadow: sombraPixel(PIXEL.negro, 3), letterSpacing: '0.1em', opacity: Math.min(1, frame / 8) }}>{e.serie ?? pieza.serie ?? 'SOFA 2026 · BOGOTÁ'}</div>
       </div>
+      {/* Con locucion (`voz`) la frase dicha ocupa la zona del titulo en el cuadro de dialogo: dos textos ahi no se leen. */}
+      {e.voz ? (
+        <>
+          <Sequence from={Math.round((e.voz.en ?? 0.5) * fps)} name="voz"><Audio src={staticFile(e.voz.archivo)} /></Sequence>
+          <Dialogo paginas={e.paginas ?? []} nombres={nombres} />
+        </>
+      ) : (
       <div style={{ position: 'absolute', left: 50, right: 50, top: 1180, textAlign: 'center', transform: `scale(${0.7 + 0.3 * a})`, opacity: a }}>
         <MarcoPixel ancho={980} alto={e.alto ?? 300} fondo="rgba(8,13,26,.9)" borde="#F4EFE6" interior={conAlfa(marca.colores.acento, 0.6)} relleno={30} estilo={{ margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 22 }}>
@@ -277,6 +284,7 @@ const EscenaTitulo = ({ e, pieza }) => {
           </div>
         </MarcoPixel>
       </div>
+      )}
       <div style={{ position: 'absolute', left: 0, right: 0, top: 1545, textAlign: 'center', opacity: b * (Math.floor(frame / 12) % 2 ? 0.25 : 1) }}>
         <span style={{ ...fuentePixel(30), color: PIXEL.oro, textShadow: sombraPixel(PIXEL.negro, 4) }}>PRESS START</span>
       </div>
@@ -332,17 +340,20 @@ const EscenaJuego = ({ e }) => {
 
 /* ---------------------------------------------------------------- final */
 /** Tarjeta final: "CONTINUE?" con cuenta regresiva, firma de la cuenta y el CTA. */
-const EscenaFinal = ({ pieza }) => {
+const EscenaFinal = ({ e, pieza, nombres }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const marca = useMarca();
   const a = Math.min(1, spring({ frame, fps, config: { damping: 14, stiffness: 200 } }));
-  const cuenta = Math.max(0, 9 - Math.floor(frame / 8));
+  // La cuenta regresiva dura lo que dura la tarjeta: con locucion la tarjeta es larga y no debe quedarse en 0.
+  const paso = e.voz ? Math.max(8, Math.floor(e.cuadros / 10)) : 8;
+  const cuenta = Math.max(0, 9 - Math.floor(frame / paso));
   const cta = 'cta' in (pieza.variantes?.[marca.id] ?? {}) ? pieza.variantes[marca.id].cta : pieza.cta ?? marca.montaje?.cta;
   return (
     <AbsoluteFill>
       <Fondo />
-      <AbsoluteFill style={{ justifyContent: 'center', alignItems: 'center', gap: 50 }}>
+      {/* Con locucion, el bloque sube para dejar libre la zona del dialogo (ZONA_TEXTO). */}
+      <AbsoluteFill style={{ justifyContent: e.voz ? 'flex-start' : 'center', paddingTop: e.voz ? 420 : 0, alignItems: 'center', gap: e.voz ? 40 : 50 }}>
         <div style={{ ...fuentePixel(44), color: marca.colores.tinta, textShadow: sombraPixel(marca.colores.acento, 5), opacity: a }}>CONTINUE?</div>
         <div style={{ ...fuentePixel(110), color: PIXEL.oro, textShadow: sombraPixel(PIXEL.negro, 8), transform: `scale(${1 + 0.1 * Math.max(0, 1 - (frame % 8) / 4)})` }}>{cuenta}</div>
         <div style={{ opacity: a, transform: `translateY(${(1 - a) * 16}px)` }}><Firma tamano={1.1} /></div>
@@ -350,6 +361,12 @@ const EscenaFinal = ({ pieza }) => {
           <div style={{ padding: '22px 40px', background: marca.colores.acento, border: '5px solid #F4EFE6', boxShadow: '8px 8px 0 rgba(0,0,0,.55)', ...fuentePixel(26), color: '#0B1426', opacity: Math.floor(frame / 10) % 2 ? 0.85 : 1 }}>{cta}</div>
         ) : null}
       </AbsoluteFill>
+      {e.voz ? (
+        <>
+          <Sequence from={Math.round((e.voz.en ?? 0.5) * fps)} name="voz"><Audio src={staticFile(e.voz.archivo)} /></Sequence>
+          <Dialogo paginas={e.paginas ?? []} nombres={nombres} />
+        </>
+      ) : null}
     </AbsoluteFill>
   );
 };

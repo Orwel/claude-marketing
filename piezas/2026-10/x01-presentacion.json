@@ -510,7 +510,8 @@
   ],
   "variantes": {
     "juanda": {
-      "cta": null
+      "cta": null,
+      "portada": "Abogado que *programa.*"
     }
   }
 }

@@ -1,0 +1,77 @@
+{
+  "slug": "c30-ctp-tres-pruebas",
+  "titulo": "Contrappto: tres pruebas en pantalla",
+  "plantilla": "Carrusel",
+  "tipo": "carrusel",
+  "formato": "carrusel",
+  "segundos": 6,
+  "cuentas": [
+    "contrappto"
+  ],
+  "pie": "Agenda una demo de 20 min",
+  "laminas": [
+    {
+      "metafora": "firmas",
+      "datos": {
+        "numero": 200
+      },
+      "antetitulo": "Contrappto para empresas",
+      "titulo": "Un documento. *Doscientas firmas.*",
+      "texto": "Cada una con verificación de identidad."
+    },
+    {
+      "metafora": "tablero",
+      "datos": {
+        "titulo": "Contratos de la empresa",
+        "alerta": 3
+      },
+      "antetitulo": "Prueba 2",
+      "titulo": "Quién firmó, qué firmó *y cuándo vence.*",
+      "texto": "Todo en un tablero."
+    },
+    {
+      "metafora": "alarma",
+      "datos": {
+        "etiqueta": "Vencimiento",
+        "aviso": "Vence en 5 días",
+        "detalle": "Contrato 017 · renovar"
+      },
+      "antetitulo": "Prueba 3",
+      "titulo": "La alerta llega *antes del vencimiento.*",
+      "texto": "No después."
+    },
+    {
+      "metafora": "balanza",
+      "datos": {
+        "izq": "Empresa",
+        "der": "Contraparte"
+      },
+      "antetitulo": "Tercero neutral",
+      "titulo": "No es abogado de *ninguna de las partes.*",
+      "texto": "Es el sistema donde viven los contratos."
+    },
+    {
+      "metafora": "pasos",
+      "datos": {
+        "items": [
+          "Agendas",
+          "20 minutos",
+          "Ves tu tablero"
+        ]
+      },
+      "antetitulo": "¿Contratas a más de 50 personas al año?",
+      "titulo": "Te mostramos el tablero *en 20 minutos.*"
+    }
+  ],
+  "variantes": {
+    "contrappto": {
+      "copy": "Tres cosas que se muestran en pantalla, no se prometen:\n\n1. Un documento, doscientas firmas, cada una con verificación de identidad.\n2. El tablero donde ves quién firmó, qué firmó y cuándo vence.\n3. La alerta que llega antes del vencimiento, no después.\n\nSi contratas a más de cincuenta personas al año, agenda una demo de 20 minutos."
+    }
+  },
+  "verificar": [
+    {
+      "dato": "Firma con verificación de identidad, envío masivo, tablero y alertas de vencimiento de Contrappto: confirmar contra el producto.",
+      "estado": "pendiente"
+    }
+  ]
+}

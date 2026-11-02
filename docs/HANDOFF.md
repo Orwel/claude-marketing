@@ -23,7 +23,7 @@ Lo que este repo necesita saber de ella:
 
 | Decisión | Por qué |
 |---|---|
-| Publicación por Metricool (desde 28-sep-2026) | Reemplaza la publicación a mano. Calendario en `calendario/AAAA-MM.json`; se programa con el conector de Metricool solo lo que Juan David aprobó y sin `verificar[]` pendiente. El video entra como enlace de Drive (Drive vinculado en Metricool). Artículos de LinkedIn y stories con sticker siguen a mano. Blotato, Graph API, Gemini y Veo siguen fuera; `archivo/agente-anterior/` es solo consulta. |
+| Publicación a mano, guiada por el calendario (28-sep-2026) | Juan David publica o programa él mismo (Instagram en Meta Business Suite, LinkedIn con su programador). Todo sale de `calendario/AAAA-MM.json`: fecha, hora, cuenta, red, formato y archivo. Metricool pago, Blotato, Graph API, Gemini y Veo quedaron fuera; `archivo/agente-anterior/` es solo consulta. |
 | Tres capas: marca, pieza, plantilla | Cambiar de cuenta es cambiar un JSON de marca; republicar es cambiar la variante. La plantilla nunca tiene un color ni un texto de una cuenta. |
 | Drive como carpeta de trabajo | Google Drive para escritorio sincroniza `G:\Mi unidad\Redes sociales`. La ruta va en `.env` (`CARPETA_REDES`), nunca en el código. |
 | Carpeta por mes `AAAA-MM mes` | `2026-10 octubre`: se ordena bien en Drive aunque cambie el año. Dentro: `videos grabados` y `videos editados`. |
@@ -81,6 +81,45 @@ y el gráfico ocupa arriba) y `encima` (sobre el video, a la altura del pecho). 
 Entre grabaciones distintas y antes del cierre va un barrido diagonal. Con `pista: true`, `render`
 genera música y efectos sincronizados (`sintetizarVertical` en `src/audio/pista.js`). Modelo:
 `piezas/2026-10/la-ia-que-nadie-entiende-webinar.json`.
+
+### Videos del SOFA (plantilla Arcade)
+
+`remotion/plantillas/Arcade.jsx` + `remotion/arcade/` (`linea.js` línea de tiempo sin React, `Capas.jsx`
+HUD/diálogo RPG/ficha/chispas/golpes/efectos/barrido pixel/gameplay, `Pixel.jsx` marcos, iconos y fuentes
+pixel, `Tres.jsx` escenas 3D con three.js: Trifuerza voxel, moneda, mapa de niveles). Pipeline en
+`src/sofa/` (`armar.js`, `render.js`, `gameplay.js`, `voz.js`) y música 8 bits en `src/audio/arcade.js`.
+three.js renderiza sin GPU (SwiftShader) a ~0,3 s por cuadro en escenas de cubos: vale para intros y
+transiciones, no para un video entero. Detalles de uso en la skill `producir-pieza`.
+Segunda vuelta (13-oct-2026): `Sprites.jsx` (pixel art 2D con divs, el caballero del Claustro), `Intros.jsx`
+(pantallas de título por tema: protesto, tesoro, plataformas, torneo, tienda, cartuchos, arcade) y
+`Cortinillas.jsx` (transiciones de nivel: vs, seleccion, encuentro, mundo2d, jefe, resultado, mision); el mapa
+voxel ya no se usa. Diálogo y golpes comparten `ZONA_TEXTO`; sin chispas ni TIP. Retratos por detección de
+caras (`trabajo/2026-10-sofa/caras.py`, OpenCV 4). Las piezas se generan desde `trabajo/2026-10-sofa/conceptos.py`.
+
+### Carruseles y stories animados (plantilla Carrusel)
+
+`piezas/AAAA-MM/carruseles/*.json` (`tipo: "carrusel"`, 4:5) y `piezas/AAAA-MM/stories/*.json`
+(`tipo: "historias"`, 9:16, una lámina = una story). Cada lámina: `metafora` + `datos`, `antetitulo`,
+`titulo` (con `*énfasis*`), `texto`, `pie` (CTA). Las metáforas animadas viven en `remotion/metaforas/`
+(espejismo, lupa, candado, certificado, firmas, tablero, rompecabezas, boleto, reloj, calendario,
+semaforo, autocompletar, burbujas, balanza, brujula, caja, alarma, vivo, pasos, chat): dibujan en un
+lienzo SVG de 900×560 y la lámina las escala. `pieza.colores` cambia el acento (Trifuerza Legal: dorado).
+
+`npm run carrusel -- 2026-10 [slug] [--cuenta=x] [--rehacer]` empaqueta una vez y deja un MP4 por
+lámina en `Edited/Carruseles/<Cuenta>/<slug>/`, más un PNG del cuadro final de cada una: LinkedIn admite
+un solo video por publicación, así que allá va el mismo carrusel en imágenes (nunca un video con todas las
+láminas unidas: lo pidió Juan David). Las stories van a `Edited/Stories/<Cuenta>/`. Sin audio: Instagram
+les pone música al publicar.
+
+### Brochures (PDF y video)
+
+- **PDF:** `brochures/contrappto.html` y `brochures/trifuerza-legal.html` (A4, 7 páginas, mismo método
+  visual de las webs). `npm run brochure -- [nombre] [--mes=AAAA-MM]` los imprime con Chrome headless y
+  los copia a `<Mes>/Edited/Brochures`. Datos por confirmar: `brochures/verificar.json`.
+- **Video:** plantilla `remotion/plantillas/Brochure.jsx` (escenas `portada`, `capitulo` = titular + escena
+  del kit, `tarjetas`, `planes`, `cierre`). Piezas `brochure-contrappto` y `brochure-trifuerza-legal`, en
+  vertical y horizontal (`formatos`). `pieza.marca` mezcla un mundo visual de producto sobre la cuenta
+  (Legal: dorado sobre #030712 dentro de trifuerza). `npm run render -- <slug>` los deja en `Edited/Brochures`.
 
 ### Cómo se escribe una pieza
 

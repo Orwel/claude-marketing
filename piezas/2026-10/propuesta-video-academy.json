@@ -1,0 +1,223 @@
+{
+  "slug": "propuesta-video-academy",
+  "titulo": "Propuesta Academy Libertadores en video",
+  "pilar": "Propuestas de servicios",
+  "plantilla": "Brochure",
+  "formatos": [
+    "horizontal"
+  ],
+  "estado": "propuesta privada · no se publica en redes",
+  "cuentas": [
+    "trifuerza"
+  ],
+  "bpm": 112,
+  "musica": "optimista",
+  "transicion": "barrido",
+  "pista": true,
+  "volumenPista": 0.85,
+  "drive": {
+    "carpeta": "propuestas",
+    "nombre": "Propuesta_Libertadores_Academy_v1 - Video"
+  },
+  "_fuente": "Contenido de brochures/propuesta-libertadores-academy.html (5-oct-2026). Sin precio: arranca con diagnóstico.",
+  "marca": {
+    "colores": {
+      "fondo": "#050B16",
+      "fondo2": "#0B1426",
+      "tinta": "#F9FAFB",
+      "tenue": "#9CA3AF",
+      "acento": "#00C4CC",
+      "secundario": "#F28C28",
+      "alerta": "#33D6DD",
+      "linea": "#1F2937"
+    },
+    "web": {
+      "titulo": "Trifuerza Academy",
+      "acentoTexto": "#33D6DD",
+      "panel": "#111827",
+      "borde": "#1F2937",
+      "fondo": "#050B16"
+    },
+    "firma": {
+      "linea": "Academy"
+    }
+  },
+  "escenas": [
+    {
+      "tipo": "portada",
+      "segundos": 5.5,
+      "antetitulo": "Propuesta · Trifuerza Academy",
+      "titulo": "La escuela digital *propia* de la universidad.",
+      "texto": "Fundación Universitaria Los Libertadores"
+    },
+    {
+      "tipo": "metafora",
+      "segundos": 6.5,
+      "antetitulo": "La oportunidad",
+      "titulo": "El mejor contenido *se dicta una vez*",
+      "texto": "Cada semestre se preparan clases de gran valor que, al terminar el periodo, se pierden.",
+      "metafora": "reloj",
+      "datos": {
+        "numero": 1,
+        "unidad": "sola vez"
+      }
+    },
+    {
+      "tipo": "metafora",
+      "segundos": 6,
+      "antetitulo": "Clases en vivo",
+      "titulo": "El aula, *sin paredes*",
+      "texto": "El docente transmite desde el navegador, y la clase se graba con OBS para volver a usarla.",
+      "metafora": "vivo",
+      "datos": {
+        "texto": "EN VIVO"
+      }
+    },
+    {
+      "tipo": "metafora",
+      "segundos": 6.5,
+      "antetitulo": "Toda la comunidad",
+      "titulo": "Una clase *con preguntas en vivo*",
+      "texto": "Chat, preguntas y asistencia registrada para el certificado.",
+      "metafora": "burbujas",
+      "datos": {
+        "items": [
+          "¿Queda grabada?",
+          "¿El certificado llega al correo?",
+          "¿Aplica en procesos laborales?"
+        ]
+      }
+    },
+    {
+      "tipo": "metafora",
+      "segundos": 6.5,
+      "antetitulo": "Del curso al certificado",
+      "titulo": "Cada lección *suma al progreso*",
+      "texto": "Lecciones, evaluaciones y avance por estudiante, hasta llegar al certificado.",
+      "metafora": "pasos",
+      "datos": {
+        "items": [
+          "Lección",
+          "Evaluación",
+          "Progreso",
+          "Certificado"
+        ]
+      }
+    },
+    {
+      "tipo": "metafora",
+      "segundos": 6,
+      "antetitulo": "Certificación oficial",
+      "titulo": "Con el sello de *Los Libertadores*",
+      "texto": "Cualquier empleador lo verifica escaneando el QR.",
+      "metafora": "certificado",
+      "datos": {
+        "titulo": "Certificado",
+        "subtitulo": "Conciliación en derecho",
+        "nombre": "Nombre del estudiante"
+      }
+    },
+    {
+      "tipo": "metafora",
+      "segundos": 6.5,
+      "antetitulo": "Nuevos ingresos",
+      "titulo": "Los cursos también *se venden*",
+      "texto": "El mismo curso, abierto al público: egresados, profesionales y empresas pagan por formarse con la universidad.",
+      "metafora": "boleto",
+      "datos": {
+        "insignia": "CURSO",
+        "titulo": "Conciliación",
+        "titulo2": "en derecho",
+        "fecha": "ACCESO DE POR VIDA",
+        "talon": "COMPRAR",
+        "sello": "OFICIAL"
+      }
+    },
+    {
+      "tipo": "tarjetas",
+      "segundos": 6,
+      "antetitulo": "Un curso, muchas vidas",
+      "titulo": "El mismo contenido, *cuatro fuentes de valor*",
+      "items": [
+        {
+          "icono": "GraduationCap",
+          "titulo": "Estudiantes",
+          "texto": "Semestre tras semestre."
+        },
+        {
+          "icono": "Users",
+          "titulo": "Egresados",
+          "texto": "Educación continua."
+        },
+        {
+          "icono": "Building",
+          "titulo": "Empresas",
+          "texto": "Formación por grupos."
+        },
+        {
+          "icono": "Globe",
+          "titulo": "Mundo hispano",
+          "texto": "Precios por país."
+        }
+      ]
+    },
+    {
+      "tipo": "capitulo",
+      "segundos": 6.5,
+      "antetitulo": "Dos caminos",
+      "titulo": "Complemento o *plataforma integral*",
+      "kit": {
+        "escena": "versus",
+        "alto": 560,
+        "antes": {
+          "titulo": "Camino A",
+          "detalle": "Escuela digital que convive con el sistema actual.",
+          "chips": [
+            "En vivo",
+            "Cursos cortos",
+            "Venta externa"
+          ]
+        },
+        "despues": {
+          "titulo": "Camino B",
+          "detalle": "El sistema de aprendizaje propio de la universidad.",
+          "icono": "Landmark",
+          "chips": [
+            "Asignaturas",
+            "Calificaciones",
+            "Sin licencia anual"
+          ]
+        }
+      }
+    },
+    {
+      "tipo": "metafora",
+      "segundos": 6.5,
+      "antetitulo": "Siguiente paso",
+      "titulo": "Primero entender, *después construir*",
+      "texto": "Un diagnóstico define el alcance, el camino y la inversión antes de cotizar.",
+      "metafora": "pasos",
+      "datos": {
+        "items": [
+          "Diagnóstico",
+          "Piloto",
+          "Despliegue",
+          "Crecimiento"
+        ]
+      }
+    },
+    {
+      "tipo": "cierre",
+      "segundos": 5,
+      "texto": "Su conocimiento, *con casa propia.*",
+      "cta": "Conócenos en www.trifuerza.co",
+      "web": "Propuesta para Los Libertadores"
+    }
+  ],
+  "verificar": [
+    {
+      "dato": "Mismos datos y precios que el PDF de la propuesta; ver brochures/verificar.json.",
+      "estado": "pendiente"
+    }
+  ]
+}

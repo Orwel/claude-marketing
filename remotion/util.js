@@ -155,4 +155,6 @@ export const FORMATOS = {
   vertical: { ancho: 1080, alto: 1920 },
   horizontal: { ancho: 1920, alto: 1080 },
   cuadrado: { ancho: 1080, alto: 1350 },
+  // Carrusel de Instagram: 1:1, como se ve en la cuadricula del perfil.
+  carrusel: { ancho: 1080, alto: 1080 },
 };

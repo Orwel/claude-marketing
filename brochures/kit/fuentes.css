@@ -1,0 +1,13 @@
+/*
+  Fuentes estáticas para las propuestas. Las variables (public/fuentes/Inter.woff2, Fraunces.woff2) Chrome
+  las incrusta en el PDF como Type3 (glifos dibujados), que en algunos visores del celular se ven menos
+  nítidos y no se pueden buscar. Estas instancias fijas (fontTools, 4-oct-2026) entran como fuente real.
+*/
+@font-face { font-family: 'Inter'; src: url('../../public/fuentes/estaticas/Inter-300.woff2') format('woff2'); font-weight: 300; }
+@font-face { font-family: 'Inter'; src: url('../../public/fuentes/estaticas/Inter-400.woff2') format('woff2'); font-weight: 400; }
+@font-face { font-family: 'Inter'; src: url('../../public/fuentes/estaticas/Inter-500.woff2') format('woff2'); font-weight: 500; }
+@font-face { font-family: 'Inter'; src: url('../../public/fuentes/estaticas/Inter-600.woff2') format('woff2'); font-weight: 600; }
+@font-face { font-family: 'Inter'; src: url('../../public/fuentes/estaticas/Inter-700.woff2') format('woff2'); font-weight: 700; }
+@font-face { font-family: 'Inter'; src: url('../../public/fuentes/estaticas/Inter-800.woff2') format('woff2'); font-weight: 800; }
+@font-face { font-family: 'Inter'; src: url('../../public/fuentes/estaticas/Inter-900.woff2') format('woff2'); font-weight: 900; }
+@font-face { font-family: 'Fraunces'; src: url('../../public/fuentes/estaticas/Fraunces.woff2') format('woff2'); font-weight: 400 900; }

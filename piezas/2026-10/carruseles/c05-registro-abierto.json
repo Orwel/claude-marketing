@@ -1,0 +1,70 @@
+{
+  "slug": "c05-registro-abierto",
+  "titulo": "Registro abierto: lo que te llevas",
+  "plantilla": "Carrusel",
+  "tipo": "carrusel",
+  "formato": "carrusel",
+  "segundos": 6,
+  "cuentas": [
+    "juanda"
+  ],
+  "pie": "Link en mi perfil",
+  "laminas": [
+    {
+      "metafora": "boleto",
+      "datos": {
+        "fecha": "MAR 27 OCT · 7:00 P.M.",
+        "insignia": "ABIERTO"
+      },
+      "antetitulo": "Ya puedes inscribirte",
+      "titulo": "Registro *abierto.*",
+      "texto": "Clase en vivo sobre cómo funciona la IA por dentro."
+    },
+    {
+      "metafora": "espejismo",
+      "antetitulo": "Te llevas 1",
+      "titulo": "Entender *por qué alucina.*",
+      "texto": "Y por qué eso no se va a arreglar."
+    },
+    {
+      "metafora": "semaforo",
+      "antetitulo": "Te llevas 2",
+      "titulo": "Un criterio para *verificar.*",
+      "texto": "Qué revisar siempre y qué no."
+    },
+    {
+      "metafora": "brujula",
+      "datos": {
+        "etiqueta": "Antes de pagar"
+      },
+      "antetitulo": "Te llevas 3",
+      "titulo": "Con qué comparar *herramientas.*",
+      "texto": "Para que no dependas de lo que diga el vendedor."
+    },
+    {
+      "metafora": "certificado",
+      "antetitulo": "Y además",
+      "titulo": "Tu *certificado* gratuito.",
+      "texto": "Solo dejas tu correo. Link en mi perfil."
+    }
+  ],
+  "variantes": {
+    "juanda": {
+      "copy": "Ya está abierto el registro de la clase en vivo del martes 27 de octubre, 7 de la noche.\n\nQué te llevas:\n— Por qué la IA se inventa sentencias y por qué eso no se va a arreglar.\n— Cuándo confiar y cuándo verificar siempre.\n— Con qué criterio comparar herramientas antes de pagar.\n— Certificado gratuito.\n\nSolo dejas tu correo. Link en mi perfil."
+    }
+  },
+  "verificar": [
+    {
+      "dato": "Clase en vivo «Fundamentos para la Inteligencia Artificial»: martes 27 de octubre de 2026, 7:00 p.m. hora Colombia, gratis.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Certificado gratuito: quién lo emite (¿Trifuerza Academy?) y qué condiciones tiene.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Registro: link en el perfil, abre el lunes 5 de octubre.",
+      "estado": "pendiente"
+    }
+  ]
+}

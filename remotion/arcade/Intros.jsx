@@ -154,10 +154,12 @@ export const Plataformas = () => {
 
 /* -------------------------------------------------------------- torneo */
 /** Cuadro de torneo: cuatro tarjetas con los emprendimientos, lineas que suben al trofeo y "VOTA". */
-export const Torneo = ({ participantes = [] }) => {
+export const Torneo = ({ participantes = [], ganador, premio = 'PÁGINA WEB GRATIS' }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const marca = useMarca();
+  // Con `ganador` el torneo ya se resolvio: una sola tarjeta, en dorado, unida al trofeo (SOFA10, 19-oct-2026).
+  if (ganador) return <TorneoGanado ganador={ganador} premio={premio} />;
   const lista = [...participantes, '?', '?', '?', '?'].slice(0, 4);
   const trofeo = res(frame, 4, fps, { damping: 8, stiffness: 240 });
   const linea = Math.min(1, Math.max(0, (frame - 30) / 18));
@@ -190,6 +192,38 @@ export const Torneo = ({ participantes = [] }) => {
           </div>
         );
       })}
+    </AbsoluteFill>
+  );
+};
+
+const TorneoGanado = ({ ganador, premio }) => {
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const marca = useMarca();
+  const trofeo = res(frame, 4, fps, { damping: 8, stiffness: 240 });
+  const tarjeta = escalonado(res(frame, 16, fps, { damping: 12, stiffness: 260 }), 5);
+  const linea = Math.min(1, Math.max(0, (frame - 30) / 16));
+  const latido = 1 + 0.04 * Math.sin(frame / 4);
+  const brillo = 0.6 + 0.4 * Math.abs(Math.sin(frame / 10));
+  return (
+    <AbsoluteFill>
+      <AbsoluteFill style={{ background: 'linear-gradient(180deg, #0B1426 0%, #1C2B4A 100%)' }} />
+      <div style={{ position: 'absolute', left: 0, right: 0, top: 400, display: 'flex', justifyContent: 'center', transform: `scale(${trofeo * latido})` }}>
+        <div style={{ position: 'relative' }}>
+          <div style={{ position: 'absolute', left: -120, top: -80, width: 400, height: 340, background: `radial-gradient(ellipse at center, ${conAlfa(PIXEL.oro, 0.35 * brillo)} 0%, rgba(0,0,0,0) 65%)`, mixBlendMode: 'screen' }} />
+          <Sprite fig={TROFEO2D} px={16} />
+        </div>
+      </div>
+      <div style={{ position: 'absolute', left: 0, right: 0, top: 580, textAlign: 'center', ...fuentePixel(20), color: PIXEL.oro, textShadow: sombraPixel(PIXEL.negro, 3), opacity: trofeo }}>{premio}</div>
+      <svg width={1080} height={1920} style={{ position: 'absolute', inset: 0, pointerEvents: 'none' }}>
+        <line x1={540} y1={860} x2={540} y2={860 - 200 * linea} stroke={PIXEL.oro} strokeWidth={10} />
+      </svg>
+      <div style={{ position: 'absolute', left: 540 - 170, width: 340, top: 860 + (1 - tarjeta) * 60, opacity: tarjeta }}>
+        <MarcoPixel ancho={340} alto={240} fondo="rgba(8,13,26,.92)" borde={PIXEL.oro} interior={conAlfa(PIXEL.oro, 0.6)} relleno={16} estilo={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 14 }}>
+          <IconoPixel nombre="estrella" tamano={76} />
+          <div style={{ ...fuentePixel(22), color: '#F4EFE6', textAlign: 'center', lineHeight: 1.4 }}>{ganador.toUpperCase()}</div>
+        </MarcoPixel>
+      </div>
     </AbsoluteFill>
   );
 };

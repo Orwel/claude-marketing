@@ -1,0 +1,72 @@
+{
+  "slug": "c25-tech-no-desde-cero",
+  "titulo": "Trifuerza Technology: no empezamos de cero",
+  "plantilla": "Carrusel",
+  "tipo": "carrusel",
+  "formato": "carrusel",
+  "segundos": 6,
+  "cuentas": [
+    "trifuerza"
+  ],
+  "pie": "Agenda un diagnóstico",
+  "laminas": [
+    {
+      "metafora": "rompecabezas",
+      "datos": {
+        "etiqueta": "Ya construido"
+      },
+      "antetitulo": "Trifuerza Technology",
+      "titulo": "Tu proyecto *no empieza de cero.*"
+    },
+    {
+      "metafora": "tablero",
+      "datos": {
+        "titulo": "Piezas listas",
+        "filas": [
+          "Inicio de sesión",
+          "Firma",
+          "Avisos",
+          "CRM",
+          "Monitoreo"
+        ],
+        "alerta": -1,
+        "textoListo": "Probado"
+      },
+      "antetitulo": "Lo que ya existe",
+      "titulo": "Login, firma, avisos, CRM *y monitoreo.*"
+    },
+    {
+      "metafora": "reloj",
+      "datos": {
+        "numero": 1,
+        "unidad": "responsable"
+      },
+      "antetitulo": "Menos riesgo",
+      "titulo": "Más rápido que *empezar de cero.*",
+      "texto": "Y un solo responsable de principio a fin."
+    },
+    {
+      "metafora": "pasos",
+      "datos": {
+        "items": [
+          "Diagnóstico",
+          "Propuesta",
+          "Construcción"
+        ]
+      },
+      "antetitulo": "Siguiente paso",
+      "titulo": "Empieza por *un diagnóstico.*"
+    }
+  ],
+  "variantes": {
+    "trifuerza": {
+      "copy": "Tu proyecto no empieza de cero.\n\nInicio de sesión, firma, avisos, CRM y monitoreo ya están construidos y probados en nuestros productos. Reutilizarlos es entregar más rápido y con menos riesgo.\n\nEmpieza por un diagnóstico."
+    }
+  },
+  "verificar": [
+    {
+      "dato": "Piezas reutilizables (login, firma, avisos, CRM, monitoreo): confirmar cuáles se ofrecen a clientes.",
+      "estado": "pendiente"
+    }
+  ]
+}

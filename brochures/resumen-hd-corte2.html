@@ -1,0 +1,757 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Resumen · Humanidades Digitales · Corte 2 · Producción: contenido humanístico y taller técnico</title>
+<link rel="stylesheet" href="kit/fuentes.css">
+<link rel="stylesheet" href="kit/resumen.css">
+<style>
+  /* Ajustes solo de este resumen: letra de tabla y de bloque en 11 px mínimo (regla de los resúmenes de clase). */
+  .contenido > * { flex-shrink: 0; }
+  .tabla { font-size: 11px; }
+  .tabla td { padding: 5px 9px; }
+  .tabla th { padding: 6px 9px; }
+  .bloque p { font-size: 11.2px; }
+  .bloque { padding: 12px 14px; }
+  .cita { font-family: 'Fraunces', serif; font-style: italic; font-size: 18px; line-height: 1.3; color: var(--tinta); }
+  .cita small { display: block; font-family: 'Inter', sans-serif; font-style: normal; font-size: 9.5px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--acc2); margin-top: 6px; }
+  .flujo { display: grid; gap: 8px; }
+  .flujo .tarjeta { padding: 9px 11px; }
+  .flujo .n { font-size: 9.5px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--acc2); }
+  .flujo h3 { font-size: 12.3px; margin-top: 3px; }
+  .flujo p { font-size: 11px; color: var(--suave); line-height: 1.42; margin-top: 3px; }
+  .cinco { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
+  .seis { display: grid; grid-template-columns: repeat(6, 1fr); gap: 7px; }
+  .sintesis { padding: 10px 16px; border-color: #1E6E78; }
+  .sintesis h4 { margin-bottom: 2px; }
+  .sintesis .frase { padding: 5px 0; font-size: 11.1px; }
+  .hito { display: grid; grid-template-columns: 62px 1fr; gap: 8px; font-size: 11px; line-height: 1.42; color: var(--suave); padding: 5px 0; border-bottom: 1px solid var(--borde); }
+  .hito b { color: var(--acc2); font-weight: 700; }
+  .hito:last-child { border-bottom: 0; }
+  .qa { padding: 10px 13px; }
+  .qa h3 { font-size: 11.5px; line-height: 1.35; }
+  .qa h3 span { color: var(--acc2); margin-right: 4px; }
+  .qa p { font-size: 11px; color: var(--suave); line-height: 1.45; margin-top: 4px; }
+  .portada-pregunta { font-family: 'Fraunces', serif; font-style: italic; font-size: 18px; line-height: 1.35; }
+  .codigo { font-family: ui-monospace, Consolas, monospace; font-size: 11px; line-height: 1.5; color: var(--suave); background: var(--panel2); border: 1px solid var(--borde); border-radius: 12px; padding: 10px 13px; white-space: pre; }
+  .codigo .c { color: var(--tenue); }
+  .codigo .k { color: var(--acc2); }
+  .estado-chip { display: inline-block; padding: 2px 8px; border-radius: 6px; font-size: 10px; font-weight: 800; letter-spacing: .05em; background: var(--acc2); color: var(--negro); }
+  .estado-chip.nar { background: var(--nar); }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6M8 13h8M8 17h6"/></symbol>
+    <symbol id="i-pen" viewBox="0 0 24 24"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0ZM12 9v4M12 17h.01"/></symbol>
+    <symbol id="i-scale" viewBox="0 0 24 24"><path d="M12 3v18M7 21h10M5 7h14M5 7l-3 7a3 3 0 0 0 6 0ZM19 7l-3 7a3 3 0 0 0 6 0Z"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></symbol>
+    <symbol id="i-data" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></symbol>
+    <symbol id="i-chip" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></symbol>
+    <symbol id="i-msg" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2Z"/></symbol>
+    <symbol id="i-loop" viewBox="0 0 24 24"><path d="M17 2l4 4-4 4"/><path d="M3 11V9a3 3 0 0 1 3-3h15M7 22l-4-4 4-4"/><path d="M21 13v2a3 3 0 0 1-3 3H3"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 2 10 5-10 5L2 7Z"/><path d="m2 17 10 5 10-5M2 12l10 5 10-5"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2 20a7 7 0 0 1 14 0M16 4.5a3.5 3.5 0 0 1 0 7M18 13.5a7 7 0 0 1 4 6.5"/></symbol>
+    <symbol id="i-building" viewBox="0 0 24 24"><path d="M4 21V5l8-3 8 3v16M4 21h16M9 9h.01M15 9h.01M9 13h.01M15 13h.01M10 21v-4h4v4"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2 3 14h9l-1 8 10-12h-9Z"/></symbol>
+    <symbol id="i-cube" viewBox="0 0 24 24"><path d="m12 2 9 5v10l-9 5-9-5V7Z"/><path d="m3 7 9 5 9-5M12 12v10"/></symbol>
+    <symbol id="i-plug" viewBox="0 0 24 24"><path d="M9 2v6M15 2v6M6 8h12v4a6 6 0 0 1-12 0ZM12 18v4"/></symbol>
+    <symbol id="i-game" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="11" rx="5"/><path d="M7 11v4M5 13h4M15.5 12h.01M18 14h.01"/></symbol>
+    <symbol id="i-branch" viewBox="0 0 24 24"><circle cx="6" cy="5" r="2.5"/><circle cx="6" cy="19" r="2.5"/><circle cx="18" cy="8" r="2.5"/><path d="M6 7.5v9M18 10.5c0 4-6 3-11.5 6.5"/></symbol>
+    <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5 21c0-9 5-15 16-17-1 11-7 16-16 17Z"/><path d="M5 21 14 12"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  </defs>
+</svg>
+
+<!-- ============================== 1 · PORTADA ============================== -->
+<section class="pagina cruces">
+  <svg class="constelacion" data-paleta="academy" data-semilla="41" data-zona="500,96,785,410" data-nodos="17" data-cliente="Corte 2" viewBox="0 0 794 1123" aria-hidden="true"></svg>
+  <div class="brillo" style="width:760px;height:760px;right:-300px;top:-300px;background:radial-gradient(circle, rgba(0,196,204,.22), transparent 62%)"></div>
+  <div class="brillo" style="width:520px;height:520px;left:-260px;bottom:-200px;background:radial-gradient(circle, rgba(242,140,40,.13), transparent 62%)"></div>
+  <div class="contenido">
+    <div style="display:flex;justify-content:space-between;align-items:center">
+      <div class="logo"><img src="../public/marcas/trifuerza/logo-horizontal-claro.png" alt="Trifuerza"><span class="sep"></span><span class="linea">Academy</span></div>
+      <span class="etiqueta">Fundación Universitaria Los Libertadores · Humanidades Digitales · 2026-2</span>
+    </div>
+    <div style="margin-top:58px">
+      <span class="etiqueta">Resumen del 2.º corte (S6–S9)</span>
+      <h1 style="margin-top:22px">Producción:<br>el juego que<br><b>dice algo.</b></h1>
+      <p class="lead" style="margin-top:18px;max-width:450px">Clasificar, vigilar, apropiarse y retener: cuatro preguntas humanísticas mientras el juego del equipo pasa de piezas sueltas a un enlace público. Sesiones 6 a 9 · 14 de septiembre a 5 de octubre, más el anexo sobre cómo se hace un juego con IA.</p>
+      <p class="texto" style="margin-top:10px"><b>Prof. Juan David Vanegas Roldán</b></p>
+    </div>
+
+    <div class="caja clave" style="margin-top:28px;padding:16px 20px">
+      <span class="tit">La pregunta del corte</span>
+      <div class="portada-pregunta">De todos los estados que su juego le asigna al jugador, ¿de cuáles se puede salir, y quién escribió esa flecha?</div>
+    </div>
+
+    <div class="tarjeta" style="margin-top:18px;padding:18px 22px">
+      <h4>Contenido</h4>
+      <div class="indice" style="margin-top:6px">
+        <div><span>01</span>S6 · Objetos, estados y la máquina que clasifica</div>
+        <div><span>05</span>Anexo · Hacer un juego con IA: Claude, Blender y MCP</div>
+        <div><span>02</span>S7 · Distopías, vigilancia y diseño de niveles</div>
+        <div><span>06</span>Preguntas de repaso</div>
+        <div><span>03</span>S8 · Propiedad intelectual, piratería y despliegue</div>
+        <div><span>07</span>Lo esencial y mapa de fuentes</div>
+        <div><span>04</span>S9 · IA, costo ambiental y economía de la atención</div>
+        <div><span>08</span>Hito del 19 de octubre</div>
+      </div>
+    </div>
+
+    <div class="cuatro" style="margin-top:auto">
+      <div class="tarjeta bloque"><h4>S6 · 14 sep</h4><h3>Clasificar</h3><p>POO, máquinas de estados y persistencia.</p></div>
+      <div class="tarjeta bloque"><h4>S7 · 21 sep</h4><h3>Vigilar</h3><p>Distopía, hábeas data y el primer nivel.</p></div>
+      <div class="tarjeta bloque"><h4>S8 · 28 sep</h4><h3>Apropiarse</h3><p>Derecho de autor, licencias y GitHub Pages.</p></div>
+      <div class="tarjeta bloque borde-nar"><h4 style="color:var(--nar2)">S9 · 5 oct</h4><h3>Retener</h3><p>Balance, dark patterns e IA en el juego.</p></div>
+    </div>
+    <div class="pie" style="margin-top:20px"><span><a class="web" href="https://www.trifuerza.co"><b>www.trifuerza.co</b> ↗</a> · Trifuerza Academy</span><span>Juan David Vanegas Roldán · Los Libertadores · Corte 2 · 2026-2</span></div>
+  </div>
+</section>
+
+<!-- ============================== 2 · S6 (1/2) ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:620px;height:620px;right:-300px;top:-220px;background:radial-gradient(circle, rgba(0,196,204,.13), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">01</span> Sesión 6 · 14 de septiembre</div>
+    <h2>Clasificar el mundo:<br><b>la casilla no describe, reparte.</b></h2>
+    <p class="texto" style="margin-top:12px">Modelar el mundo como objetos con atributos es lo que hace moverse al personaje. Es también, gesto por gesto, lo que hace un sistema cuando decide que alguien es <b>moroso, sospechoso o apto</b>. No son dos temas: es el mismo visto desde adentro y desde afuera. Lectura: Geoffrey Bowker y Susan Leigh Star, <i>Sorting Things Out: Classification and Its Consequences</i> (MIT Press, 1999), introducción.</p>
+
+    <h4 style="margin-top:12px">Bowker y Star: clasificar es trabajo político disfrazado de técnico</h4>
+    <div class="tres">
+      <div class="tarjeta bloque borde-acc"><h3>Toda categoría deja residuo</h3><p>Lo que no cabe en ninguna casilla deja de existir para el sistema: no hay reporte, ni presupuesto, ni política pública.</p></div>
+      <div class="tarjeta bloque borde-acc"><h3>La clasificación se vuelve invisible</h3><p>Cuando el formulario funciona, nadie pregunta quién eligió las opciones. La decisión se congela en "así son las cosas".</p></div>
+      <div class="tarjeta bloque borde-nar"><h3>Clasificar es distribuir</h3><p>Detrás de cada categoría hay recursos, permisos, sospecha o cuidado. La casilla no describe: <b>reparte</b>.</p></div>
+    </div>
+
+    <div class="dos" style="margin-top:10px">
+      <div class="caja ejemplo"><span class="tit">Caso · La CIE</span>La Clasificación Internacional de Enfermedades registra de qué se muere el mundo. Un certificado obliga a elegir entre las causas disponibles; si la real no tiene casilla, se escribe otra, y esa es la que entra a la estadística. Cuando una revisión parte o funde categorías, <b>aparecen y desaparecen epidemias</b> sin que cambie ningún cuerpo: cambió el instrumento.</div>
+      <div class="caja ejemplo"><span class="tit">Caso · Sudáfrica y el apartheid</span>Antes que policías, el régimen necesitaba un esquema de clasificación racial (<i>Population Registration Act</i>, 1950; derogada en 1991). Categorías pocas y obligatorias; de la casilla colgaba dónde vivir, con quién casarse, qué trabajo tener. Reclasificarse era posible y brutal: <b>la transición existía, pero costaba</b>.</div>
+    </div>
+
+    <h4 style="margin-top:12px">El mismo gesto en un formulario cualquiera</h4>
+    <table class="tabla">
+      <tr><th style="width:18%">Campo</th><th style="width:36%">Opciones que da</th><th>Lo que queda sin nombre</th></tr>
+      <tr><td>Estado civil</td><td>Soltero · Casado · Divorciado · Viudo</td><td>Unión marital de hecho, separado sin sentencia, casado en otro país sin registro aquí</td></tr>
+      <tr><td>Ocupación</td><td>Empleado · Independiente · Desempleado · Estudiante</td><td>Cuidadora no remunerada, informalidad por horas, estudiante que sostiene una casa</td></tr>
+      <tr><td>Nombre</td><td>Nombre · Apellido · Apellido</td><td>Nombres indígenas sin esa estructura, un solo apellido</td></tr>
+    </table>
+    <p class="texto" style="margin-top:6px"><b>Y sin embargo:</b> sin categorías no hay estadística ni derechos exigibles. El problema no es clasificar, es <b>clasificar y olvidar que se clasificó</b>. Bowker y Star no piden abolir las listas: piden que se puedan discutir.</p>
+
+    <div class="caja clave" style="margin-top:10px"><span class="tit">La pregunta central de la sesión</span>Un atributo describe; un <b>estado gobierna</b>: mientras dura, habilita unas acciones y bloquea otras. Si un algoritmo te asigna un estado, ¿quién dispara la entrada?, ¿existe la transición de vuelta?, ¿cuánto dura?, ¿sabes que estás ahí? Un estado con entrada y sin salida se llama <b>estado absorbente</b>; el peor diseño es el <b>estado invisible</b>.</div>
+
+    <h4 style="margin-top:12px">Aterrizaje colombiano: el estado "reportado"</h4>
+    <div class="dos" style="grid-template-columns:1fr 1.25fr">
+      <p class="texto">Las centrales de riesgo no prestan ni niegan créditos: <b>guardan y distribuyen un estado</b> que el banco lee. Lo que sorprende: pagar no borra el estado, solo arranca el reloj. El legislador tuvo que <b>escribir a mano la transición de salida</b>, porque el sistema no la tenía.</p>
+      <table class="tabla">
+        <tr><th style="width:30%">Regla</th><th>Ley 1266 de 2008, art. 13 (mod. Ley 2157 de 2021, art. 3)</th></tr>
+        <tr><td>Tras el pago</td><td>Permanece el doble del tiempo de la mora, con tope de cuatro años desde el pago</td></tr>
+        <tr><td>Caducidad</td><td>Ocho años desde que la obligación entró en mora, pagada o no</td></tr>
+      </table>
+    </div>
+    <div class="pie"><span><b>Humanidades Digitales · Corte 2</b> · S6 · Clasificar es poder</span><span>Juan David Vanegas Roldán · <a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 2</span></div>
+  </div>
+</section>
+
+<!-- ============================== 3 · S6 (2/2) ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:600px;height:600px;left:-300px;top:360px;background:radial-gradient(circle, rgba(0,196,204,.12), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">01</span> Sesión 6 · Componente técnico</div>
+    <h2>Objetos, estados y memoria:<br><b>el protagonista se mueve.</b></h2>
+
+    <div class="cuatro flujo" style="margin-top:12px">
+      <div class="tarjeta"><span class="n">Clase</span><p>El molde: qué es un Enemigo en su juego. No está en la pantalla.</p></div>
+      <div class="tarjeta"><span class="n">Instancia</span><p>Cada Enemigo concreto en pantalla, con su posición y su vida.</p></div>
+      <div class="tarjeta"><span class="n">Atributo</span><p>Lo que el objeto tiene: vida, velocidad, daño. Cambia en la partida.</p></div>
+      <div class="tarjeta"><span class="n">Método</span><p>Lo que sabe hacer: moverse, recibir un golpe, morir.</p></div>
+    </div>
+    <div class="dos" style="margin-top:10px;grid-template-columns:1fr 1.1fr">
+<div class="codigo"><span class="k">class</span> Enemigo:
+    vida = 3
+    <span class="k">def</span> recibir_golpe(self):
+        self.vida = self.vida - 1
+
+<span class="k">class</span> EnemigoBlindado(Enemigo):
+    vida = 6        <span class="c"># sobrescribe</span>
+    armadura = 2    <span class="c"># agrega uno propio</span></div>
+      <div class="tarjeta bloque"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-layers"/></svg></div><h3>Herencia: se recibe por pertenecer</h3></div><p><b>Gana:</b> se escribe una vez lo común y un error corregido en el padre queda corregido en todos los hijos. <b>Arriesga:</b> los hijos heredan también los supuestos del padre que nadie recuerda. En un <i>scoring</i>, la persona "hereda" barrio, familia e historial sin haberlos elegido: <b>lo heredado se vuelve invisible y deja de discutirse</b>.</p></div>
+    </div>
+    <table class="tabla" style="margin-top:8px">
+      <tr><th style="width:15%">Concepto</th><th>En Construct 3</th><th>En Godot</th></tr>
+      <tr><td>Clase</td><td>Object type ("Enemigo" en el panel de proyecto)</td><td>Escena guardada (enemigo.tscn)</td></tr>
+      <tr><td>Atributo</td><td>Instance variables</td><td>Variables exportadas del script</td></tr>
+      <tr><td>Herencia</td><td>Families: comportamiento compartido</td><td>Escenas heredadas y <i>extends</i></td></tr>
+    </table>
+
+    <h4 style="margin-top:12px">Máquina de estados finitos (Nystrom, <i>Game Programming Patterns</i>, cap. "State")</h4>
+    <p class="texto">Tres cosas: una lista cerrada de estados, la regla de que solo uno está activo y unas transiciones que dicen de dónde a dónde se pasa y qué evento lo dispara. Sin ella, el control se escribe con banderas sueltas (con siete hay 128 combinaciones) y el personaje termina saltando mientras muere. Con ella, <b>los estados imposibles no se pueden escribir</b>.</p>
+    <svg class="figura" viewBox="0 0 686 60" style="margin-top:8px">
+      <rect x="0" y="14" width="92" height="30" rx="7" fill="#33D6DD"/><text x="46" y="34" text-anchor="middle" font-size="11" font-weight="800" fill="#0B1220">QUIETO</text>
+      <text x="108" y="34" text-anchor="middle" font-size="14" fill="#94A0B2">⇄</text>
+      <rect x="124" y="14" width="112" height="30" rx="7" fill="#33D6DD"/><text x="180" y="34" text-anchor="middle" font-size="11" font-weight="800" fill="#0B1220">CAMINANDO</text>
+      <text x="252" y="34" text-anchor="middle" font-size="14" fill="#94A0B2">⇄</text>
+      <rect x="268" y="14" width="104" height="30" rx="7" fill="#33D6DD"/><text x="320" y="34" text-anchor="middle" font-size="11" font-weight="800" fill="#0B1220">SALTANDO</text>
+      <text x="392" y="34" text-anchor="middle" font-size="14" fill="#94A0B2">→</text>
+      <rect x="410" y="14" width="88" height="30" rx="7" fill="#B2F0F2"/><text x="454" y="34" text-anchor="middle" font-size="11" font-weight="800" fill="#0B1220">HERIDO</text>
+      <text x="530" y="27" text-anchor="middle" font-size="9.5" fill="#94A0B2">vida = 0</text><text x="530" y="40" text-anchor="middle" font-size="14" fill="#94A0B2">→</text>
+      <rect x="562" y="14" width="124" height="30" rx="7" fill="#F28C28"/><text x="624" y="34" text-anchor="middle" font-size="11" font-weight="800" fill="#0B1220">MUERTO (sin salida)</text>
+    </svg>
+    <div class="dos" style="margin-top:8px">
+      <div class="caja ojo"><span class="tit">Estado absorbente</span>MUERTO no tiene flecha de salida: la máquina se queda ahí hasta que algo externo la reinicia (la pantalla de reintentar). En un juego es una decisión de diseño; en un sistema que clasifica personas es un <b>problema de derechos fundamentales</b>.</div>
+      <div class="caja ejemplo"><span class="tit">El entregable: la tabla de transiciones</span>Estado actual · evento que dispara · estado destino · <b>qué queda bloqueado</b>. Cada fila es un criterio de aceptación de sí o no: "desde saltando, al tocar el piso, pasa a quieto" se prueba en diez segundos.</div>
+    </div>
+
+    <h4 style="margin-top:12px">Persistencia y virtualización</h4>
+    <div class="dos">
+      <div class="tarjeta bloque"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-data"/></svg></div><h3>Dónde está el puntaje al cerrar la pestaña</h3></div><p>Un dato vive un cuadro, una sesión o persiste. En web lo simple es <b>localStorage</b>: vive en el navegador del jugador, es texto visible y editable, y hay que <b>programar el borrado</b>. Un sistema no olvida por defecto: que un dato caduque es una regla escrita contra la tendencia del sistema. <b>Undertale</b> (Toby Fox, 2015) hace de la memoria un recurso narrativo: el juego recuerda aunque el jugador "borre todo".</p></div>
+      <div class="tarjeta bloque"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-chip"/></svg></div><h3>Una computadora que simula a otra</h3></div><p><b>Máquina virtual</b>: computador completo simulado. <b>Hipervisor</b>: reparte el hardware y aísla las máquinas. <b>Emulador</b>: imita otro hardware traduciendo sus instrucciones. <b>Contenedor</b>: empaqueta una app compartiendo el sistema anfitrión. GitHub Pages corre sobre infraestructura así: comodidad y <b>dependencia</b>. La emulación es, en la práctica, la técnica de conservación del juego viejo (se retoma en S8).</p></div>
+    </div>
+    <div class="pie"><span><b>Humanidades Digitales · Corte 2</b> · S6 · POO y máquinas de estados</span><span>Juan David Vanegas Roldán · <a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 3</span></div>
+  </div>
+</section>
+
+<!-- ============================== 4 · S7 (1/3) ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:640px;height:640px;right:-300px;top:120px;background:radial-gradient(circle, rgba(0,196,204,.14), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">02</span> Sesión 7 · 21 de septiembre</div>
+    <h2>La distopía no predice:<br><b>extrapola.</b></h2>
+    <p class="texto" style="margin-top:12px">Una distopía toma una tendencia que ya existe, le quita los frenos y muestra qué pasa. No es profecía: es un <b>experimento mental</b> barato, la única forma de discutir un daño sin víctimas, antes de que sea irreversible. <i>1984</i> (Orwell) es el Estado que todo lo ve; <i>Un mundo feliz</i> (Huxley), el control por placer y distracción. Un videojuego es una <b>distopía jugable</b>: el jugador no observa el mecanismo, lo opera.</p>
+
+    <div class="dos" style="margin-top:12px">
+      <div class="tarjeta bloque borde-acc"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-users"/></svg></div><h3>Black Mirror · «Nosedive» (T3E1, 2016)</h3></div><p>Todos califican a todos de una a cinco estrellas y el promedio decide dónde vivir o en qué vuelo subir. Nada es inventado: solo se quitó el compartimento, <b>un puntaje para todo</b>. No hay cárcel: el castigo es la exclusión progresiva y la ejerce el vecino. Bajar de puntaje reduce el acceso, eso produce frustración visible y baja más el puntaje: un <b>ciclo de retroalimentación</b>.</p></div>
+      <div class="tarjeta bloque borde-acc"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-eye"/></svg></div><h3>Black Mirror · «Hated in the Nation» (T3E6)</h3></div><p>Abejas robóticas que polinizan y a la vez vigilan: <b>infraestructura de doble uso</b>. La finalidad declarada de un sistema casi nunca agota sus usos posibles (de ahí el principio de finalidad). Nadie mata, todos escriben: <b>responsabilidad diluida</b>. Y la inversión final: el sistema devuelve la mirada sobre los señaladores.</p></div>
+    </div>
+    <div class="dos" style="margin-top:10px">
+      <div class="caja ojo"><span class="tit">Trampa frecuente</span>La distopía se degrada en estética: neón, lluvia y corporaciones malvadas sin argumento. Si el juego se ve distópico pero el jugador no toma <b>ninguna decisión incómoda</b>, hicieron decoración.</div>
+      <div class="caja clave"><span class="tit">Pregunta guía para el equipo</span>¿Qué tendencia actual lleva su juego al extremo? <b>Si no la pueden nombrar, su mundo todavía no tiene tesis.</b></div>
+    </div>
+
+    <h4 style="margin-top:12px">De la idea crítica al verbo jugable</h4>
+    <table class="tabla">
+      <tr><th style="width:24%">Idea crítica</th><th style="width:30%">Letrero (no sirve)</th><th>Verbo jugable (sirve)</th></tr>
+      <tr><td>La reputación reemplaza al derecho</td><td>Un NPC explica que el puntaje es injusto</td><td>Solo puedes pedir favores a quien tenga puntaje suficiente; subes el tuyo delatando a otro</td></tr>
+      <tr><td>La vigilancia es asimétrica</td><td>Un cartel dice «Te estamos viendo»</td><td>Ves el mundo por cámaras que no controlas; el ángulo cambia cuando otro decide</td></tr>
+      <tr><td>El error no se puede apelar</td><td>El personaje se queja del sistema</td><td>Hay un botón de apelación que siempre devuelve la misma respuesta genérica</td></tr>
+    </table>
+
+    <h4 style="margin-top:12px">Sesgo algorítmico: el modelo que predice su propio pasado (O'Neil, cap. 5)</h4>
+    <div class="cinco flujo">
+      <div class="tarjeta"><span class="n">1</span><p>Datos históricos de arrestos</p></div>
+      <div class="tarjeta"><span class="n">2</span><p>El modelo señala una zona</p></div>
+      <div class="tarjeta"><span class="n">3</span><p>Se envía más patrulla</p></div>
+      <div class="tarjeta"><span class="n">4</span><p>Más patrulla, más arrestos</p></div>
+      <div class="tarjeta borde-nar"><span class="n" style="color:var(--nar2)">5</span><p>Los datos "confirman" la zona</p></div>
+    </div>
+    <p class="texto" style="margin-top:8px">Cathy O'Neil lo llama <b>ciclo de retroalimentación pernicioso</b>: el modelo no predice dónde hay delito, predice dónde hay policía, y como acierta, todos concluyen que funciona. Con <b>PredPol</b> (luego Geolitica) y <b>COMPAS</b> (ProPublica, 2016, disputado por la empresa) se ve además que "sesgo" no tiene una sola definición matemática: si afirman que un sistema es injusto, digan <b>según qué criterio</b>.</p>
+    <div class="caja clave" style="margin-top:10px"><span class="tit">El concepto que más les sirve: el proxy</span>Un <b>proxy</b> es la variable que el modelo usa en lugar de la que de verdad quiere medir (código postal en vez de peligrosidad). No es neutro: arrastra la historia urbana. Quitar la variable prohibida no basta, porque el modelo la reconstruye por correlación (<b>codificación redundante</b>) y además queda invisible. La pregunta de auditoría: <b>¿cuál de estos datos es un sustituto de algo que no se puede pedir?</b></div>
+    <div class="pie"><span><b>Humanidades Digitales · Corte 2</b> · S7 · Distopía y sesgo</span><span>Juan David Vanegas Roldán · <a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 4</span></div>
+  </div>
+</section>
+
+<!-- ============================== 5 · S7 (2/3) ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:640px;height:640px;left:-300px;top:-180px;background:radial-gradient(circle, rgba(0,196,204,.14), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">02</span> Sesión 7 · Vigilancia y decisiones delegadas</div>
+    <h2>Del panóptico al algoritmo,<br><b>y quién decide a quién atropellar.</b></h2>
+
+    <div class="dos" style="margin-top:14px">
+      <div class="tarjeta bloque"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-building"/></svg></div><h3>Bentham y Foucault</h3></div><p>Jeremy Bentham diseñó el <b>panóptico</b>: una cárcel circular con un vigilante central que ve a todos sin ser visto. Michel Foucault lo volvió metáfora del poder moderno: no hace falta vigilar todo el tiempo si la gente cree que puede estar siendo vigilada; <b>el control se interioriza</b>. Hoy la vigilancia es distribuida: celulares, cámaras, redes y datos de compra.</p></div>
+      <div class="tarjeta bloque"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-data"/></svg></div><h3>Zuboff: el excedente conductual</h3></div><p>En <i>The Age of Surveillance Capitalism</i> (2019), la materia prima es lo que haces mientras no compras nada: datos que <b>exceden</b> lo necesario para prestar el servicio. Hay asimetría de conocimiento y el objetivo avanza <b>de predecir a inducir</b> conducta: ahí la discusión pasa de privacidad a autonomía. El libro tiene críticas serias: cítenlo como tesis potente y discutida.</p></div>
+    </div>
+
+    <h4 style="margin-top:12px">La respuesta colombiana: Ley 1581 de 2012 (hábeas data)</h4>
+    <table class="tabla">
+      <tr><th style="width:22%">Principio (art. 4)</th><th>Qué significa en la práctica</th></tr>
+      <tr><td>Finalidad</td><td>El tratamiento obedece a una finalidad legítima que se informa al titular. Nada de recoger datos "por si acaso": es la respuesta al doble uso de las abejas.</td></tr>
+      <tr><td>Libertad</td><td>Consentimiento previo, expreso e informado. Nada de casillas premarcadas ni de consentimiento enterrado en un párrafo.</td></tr>
+      <tr><td>Acceso y circulación restringida</td><td>Salvo información pública, los datos no pueden estar en internet sin control técnico de acceso.</td></tr>
+    </table>
+    <p class="texto" style="margin-top:6px">La ley enuncia también legalidad, veracidad, transparencia, seguridad y confidencialidad. Autoridad de control: <b>Superintendencia de Industria y Comercio</b>. Base constitucional: art. 15 (conocer, actualizar y rectificar).</p>
+    <div class="dos" style="margin-top:8px">
+      <div class="caja ejemplo"><span class="tit">Sentencia C-748 de 2011</span>Control previo de la ley estatutaria. La Corte avaló el núcleo (dato sensible, prohibición general y principios del art. 4), condicionó varias normas y declaró inexequibles los arts. 29, 30 y 31 del proyecto <b>por vicios de trámite</b>. Antes de citar una consideración puntual, ábranla en el sitio de la Corte.</div>
+      <div class="caja ejemplo"><span class="tit">Dato sensible (arts. 5 y 6)</span>El que afecta la intimidad o puede generar discriminación: origen racial o étnico, orientación política, convicciones religiosas, sindicatos, salud, vida sexual y <b>datos biométricos</b>. Su tratamiento está prohibido salvo excepciones tasadas, y nadie puede ser obligado a autorizarlo.</div>
+    </div>
+
+    <h4 style="margin-top:12px">Moral Machine · MIT Media Lab · Awad et al., <i>Nature</i> 563 (2018)</h4>
+    <div class="dos" style="grid-template-columns:1fr 1.4fr">
+      <div class="kpis" style="grid-template-columns:1fr 1fr;gap:8px">
+        <div class="tarjeta kpi" style="padding:10px 12px"><b>40 M</b><span>decisiones registradas</span></div>
+        <div class="tarjeta kpi" style="padding:10px 12px"><b>233</b><span>países y territorios</span></div>
+        <div class="tarjeta kpi" style="padding:10px 12px"><b>+2 M</b><span>personas con encuesta demográfica</span></div>
+        <div class="tarjeta kpi" style="padding:10px 12px"><b>3</b><span>conglomerados culturales</span></div>
+      </div>
+      <div class="tarjeta bloque"><p style="margin-top:0">A quién debe atropellar un carro autónomo sin frenos. Casi todos prefieren salvar <b>humanos antes que animales</b>, a <b>más personas antes que a menos</b> y a <b>jóvenes antes que mayores</b>, pero la fuerza de esas preferencias cambia entre los conglomerados occidental, oriental y meridional. Conclusión incómoda: <b>no hay una moral universal que se pueda programar sin elegir la de alguien</b>. Advertencia de los propios autores: la muestra es autoseleccionada, sesgada hacia hombres jóvenes con internet.</p></div>
+    </div>
+    <div class="caja clave" style="margin-top:10px"><span class="tit">Discusión con el proyecto en la mano</span>¿Es legítimo que un juego obligue a tomar una decisión que no se quiere tomar? Un dilema que se puede esquivar es un menú; pero incomodar no es manipular. Y la segunda: <b>¿se puede hacer sentir la vigilancia sin explicarla?</b> Sin texto ni tutorial, solo con cámara, luz, sonido y paredes. Esa respuesta se construye en el bloque técnico.</div>
+    <div class="pie"><span><b>Humanidades Digitales · Corte 2</b> · S7 · Vigilancia y hábeas data</span><span>Juan David Vanegas Roldán · <a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 5</span></div>
+  </div>
+</section>
+
+<!-- ============================== 6 · S7 (3/3) ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:620px;height:620px;right:-300px;top:-200px;background:radial-gradient(circle, rgba(0,196,204,.14), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">02</span> Sesión 7 · Componente técnico</div>
+    <h2>El espacio como argumento:<br><b>si necesita tutorial, el nivel falló.</b></h2>
+    <p class="texto" style="margin-top:12px">Un nivel es una secuencia de enunciados: aquí se pasa, aquí no, esto es peligroso, esto recompensa. Una puerta cerrada dice que hay algo detrás; una escalera decorativa que no se sube <b>enseña una regla falsa</b>. Consistencia antes que realismo: si lo naranja es interactivo, todo lo interactivo es naranja.</p>
+
+    <div class="dos" style="margin-top:10px">
+      <div>
+        <h4>Enseñar en un lugar seguro antes de exigir</h4>
+        <div class="tarjeta" style="padding:2px 14px">
+          <div class="frase"><span>1</span><div><b style="color:var(--tinta)">Presentación sin riesgo:</b> puede fallar cien veces sin perder nada.</div></div>
+          <div class="frase"><span>2</span><div><b style="color:var(--tinta)">Aplicación con costo bajo:</b> fallar cuesta un poco; aprende a hacerlo bien.</div></div>
+          <div class="frase"><span>3</span><div><b style="color:var(--tinta)">Combinación:</b> la mecánica nueva se junta con una vieja.</div></div>
+          <div class="frase"><span>4</span><div><b style="color:var(--tinta)">Exigencia:</b> fallar cuesta, y es justo porque el nivel enseñó primero.</div></div>
+        </div>
+      </div>
+      <div>
+        <h4>Guiar la mirada sin tomar el control</h4>
+        <div class="tarjeta" style="padding:2px 14px">
+          <div class="frase"><span>L</span><div><b style="color:var(--tinta)">Luz:</b> el ojo va a la zona más brillante.</div></div>
+          <div class="frase"><span>C</span><div><b style="color:var(--tinta)">Contraste:</b> prueba en escala de grises; si el objeto desaparece, no se verá jugando.</div></div>
+          <div class="frase"><span>F</span><div><b style="color:var(--tinta)">Color con función:</b> un color solo para lo interactivo.</div></div>
+          <div class="frase"><span>M</span><div><b style="color:var(--tinta)">Línea y movimiento:</b> lo único que se mueve atrae la mirada.</div></div>
+        </div>
+      </div>
+    </div>
+    <p class="texto" style="margin-top:6px">Otros principios: <b>flujo</b> (la dificultad sube gradual), <b>ritmo</b> (alternar tensión y descanso) y <b>bloquear primero</b> con cajas grises (<i>greyboxing</i>) antes de poner arte.</p>
+
+    <h4 style="margin-top:10px">Henry Jenkins, «Game Design as Narrative Architecture» (2004)</h4>
+    <p class="texto">El diseñador no escribe una historia: <b>construye un espacio donde puede ocurrir</b>. Toma la idea de Don Carson (Disney Imagineering): el relato está incorporado en el entorno físico.</p>
+    <div class="cuatro" style="margin-top:6px">
+      <div class="tarjeta bloque"><h3>Espacios evocadores</h3><p>Activan una historia que el jugador ya conoce de otro medio.</p></div>
+      <div class="tarjeta bloque"><h3>Historias representadas</h3><p>Avanzar en el espacio es avanzar en la trama.</p></div>
+      <div class="tarjeta bloque borde-acc"><h3>Narrativa incrustada</h3><p>El espacio guarda lo que ya ocurrió. La más barata para ustedes.</p></div>
+      <div class="tarjeta bloque"><h3>Narrativa emergente</h3><p>La historia la produce el jugador combinando posibilidades.</p></div>
+    </div>
+    <div class="caja ejemplo" style="margin-top:8px"><span class="tit">Contar sin decir</span>Pongan la consecuencia, no la causa. Una puerta encadenada <b>por dentro</b> dice que alguien se encerró; con tablas <b>por fuera</b>, que alguien encerró a otro. Rastro de uso, ausencia (el hueco en el tablero de fotos), la repetición que se rompe y la escala que humilla: la arquitectura del poder es literal.</div>
+
+    <div class="dos" style="margin-top:10px">
+      <div class="tarjeta bloque borde-acc"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-doc"/></svg></div><h3>Papers, Please (Lucas Pope, 2013)</h3></div><p>Inspector de migración en Arstotzka: gana por persona procesada y con eso alimenta a su familia. <b>La mecánica es la tesis</b>: la complicidad no se narra, se practica, y la pantalla partida obliga a dejar de mirar la cara para mirar el sello. Lo hizo una persona. Referencias: <i>Orwell</i> (2016), <i>Return of the Obra Dinn</i> (2018), <i>Gone Home</i> (2013).</p></div>
+      <div class="tarjeta bloque"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-eye"/></svg></div><h3>La vigilancia es un problema de planta</h3></div><p>Líneas de visión (corredor recto, total exposición), <b>puntos ciegos</b> (sin refugio no hay tensión, solo castigo), asimetría de la mirada, circulación forzada, sonido como espacio y la cámara del juego: una vista cenital ya dice que el jugador es observado.</p></div>
+    </div>
+    <div class="caja clave" style="margin-top:10px"><span class="tit">Git: Pull Requests reales</span>Rama con nombre que diga qué hace, commits pequeños en imperativo, PR que describe <b>qué cambia y cómo se prueba</b>, enlazado al Issue ("Closes #14"). Nadie aprueba su propio PR y una revisión que dice "ok" no es revisión. Al cerrar: quince minutos de retrospectiva (bitácora 13.5).</div>
+    <div class="pie"><span><b>Humanidades Digitales · Corte 2</b> · S7 · Diseño de niveles</span><span>Juan David Vanegas Roldán · <a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 6</span></div>
+  </div>
+</section>
+
+<!-- ============================== 7 · S8 (1/3) ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:640px;height:640px;left:-300px;top:300px;background:radial-gradient(circle, rgba(242,140,40,.11), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">03</span> Sesión 8 · 28 de septiembre</div>
+    <h2>¿De quién es el juego?<br><b>El derecho de autor protege la forma.</b></h2>
+    <p class="texto" style="margin-top:12px">Ese día el juego deja de ser un archivo y pasa a ser un enlace. Mientras estaba en un computador, usar un sprite ajeno era un problema privado; publicado, es <b>reproducción y puesta a disposición del público</b>. Marco colombiano: <b>Ley 23 de 1982</b> y <b>Decisión Andina 351 de 1993</b>.</p>
+
+    <div class="caja clave" style="margin-top:10px"><span class="tit">La dicotomía idea / expresión</span>Ley 23 de 1982, art. 6: las ideas o contenido conceptual "no son objeto de apropiación". Decisión 351, art. 7: se protege exclusivamente la <b>forma</b> en que las ideas se describen o incorporan. Nadie es dueño de "un juego de plataformas"; sí de su código, sus sprites y su música.</div>
+
+    <h4 style="margin-top:12px">Un videojuego es una obra compleja: varias apiladas</h4>
+    <table class="tabla">
+      <tr><th style="width:20%">Capa</th><th style="width:34%">Cómo se protege</th><th>Qué implica para el equipo</th></tr>
+      <tr><td>Código fuente y objeto</td><td>Obra literaria (Decisión 351, art. 23)</td><td>Nace protegido, sin registro ni aviso de copyright</td></tr>
+      <tr><td>Arte, sprites, tilesets</td><td>Obra artística</td><td>Si lo bajaron de internet no es suyo, y publicarlo es reproducirlo</td></tr>
+      <tr><td>Música y sonido</td><td>Obra musical + fonograma (derecho conexo)</td><td>Composición y grabación se licencian por separado</td></tr>
+      <tr><td>Personajes</td><td>Protegibles si su desarrollo los vuelve expresión</td><td>"Un detective cansado" no es de nadie; uno con nombre, diseño y voz, sí</td></tr>
+      <tr><td>Mecánicas y reglas</td><td>No por derecho de autor; eventualmente por patente</td><td>Pueden copiar una mecánica, casi nunca cómo se ve</td></tr>
+      <tr><td>Marca y título</td><td>Signos distintivos (Decisión 486 de 2000)</td><td>El nombre se registra ante la SIC, no ante la DNDA</td></tr>
+    </table>
+    <p class="texto" style="margin-top:6px">El software se protege <b>como obra literaria</b> (Decisión 351, art. 23; Decreto 1360 de 1989). La protección no exige formalidad (art. 52) y el registro ante la Dirección Nacional de Derecho de Autor es <b>declarativo</b>: sirve como prueba (art. 53). El símbolo © es informativo, no crea derechos.</p>
+
+    <div class="dos" style="margin-top:10px">
+      <div class="tarjeta bloque borde-acc"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-user"/></svg></div><h3>Derechos morales</h3></div><p>Paternidad, integridad, inédito o divulgación; la Ley 23 (art. 30) agrega modificar y retirar la obra. Son <b>perpetuos, inalienables e irrenunciables</b> y siempre de la persona natural. "El autor renuncia a sus derechos morales" es ineficaz en Colombia.</p></div>
+      <div class="tarjeta bloque borde-nar"><div class="cab"><div class="ic-caja nar"><svg class="ico"><use href="#i-scale"/></svg></div><h3>Derechos patrimoniales</h3></div><p>Reproducción, comunicación pública, distribución, transformación (Decisión 351, art. 13). <b>Se ceden y se licencian</b>. Duración tras la Ley 1915 de 2018: vida del autor más 80 años (persona natural); 70 años desde la publicación (persona jurídica).</p></div>
+    </div>
+
+    <h4 style="margin-top:12px">Su juego es una obra en colaboración (Ley 23 de 1982, arts. 8 y 18)</h4>
+    <div class="dos" style="grid-template-columns:1fr 1fr">
+      <p class="texto">Producida conjuntamente por varias personas naturales <b>cuyos aportes no pueden separarse</b>. Si el sonido es una canción que existe sola, tiene su propio autor y régimen. La <b>obra colectiva</b> es otra cosa: la coordina y publica una persona natural o jurídica bajo su nombre, como un estudio.</p>
+      <div class="caja ojo"><span class="tit">COAUTORIA.md, antes de que haya plata o pelea</span>La cesión de patrimoniales debe constar <b>por escrito como condición de validez</b> (art. 183 Ley 23, redacción de la Ley 1955 de 2019). Acuerden quiénes son coautores, qué hizo cada uno, que licenciar o retirar requiere acuerdo de todos, qué pasa si alguien se va y bajo qué licencia se publica.</div>
+    </div>
+    <div class="pie"><span><b>Humanidades Digitales · Corte 2</b> · S8 · Derecho de autor</span><span>Juan David Vanegas Roldán · <a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 7</span></div>
+  </div>
+</section>
+
+<!-- ============================== 8 · S8 (2/3) ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:640px;height:640px;right:-300px;top:-160px;background:radial-gradient(circle, rgba(0,196,204,.14), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">03</span> Sesión 8 · Patentes, clones y memoria</div>
+    <h2>¿Se puede ser dueño<br><b>de una forma de jugar?</b></h2>
+    <table class="tabla" style="margin-top:14px">
+      <tr><th style="width:16%"></th><th class="acc">Derecho de autor</th><th class="nar">Patente de invención</th></tr>
+      <tr><td>Protege</td><td>La forma de expresión de una obra</td><td>Una solución técnica a un problema técnico</td></tr>
+      <tr><td>Requisito</td><td>Originalidad</td><td>Novedad mundial, nivel inventivo y aplicación industrial</td></tr>
+      <tr><td>Nace</td><td>Con la creación, sin trámite</td><td>Por concesión tras examen (en Colombia, la SIC)</td></tr>
+      <tr><td>Dura</td><td>Vida del autor + 80 años</td><td>20 años desde la solicitud, pagando tasas</td></tr>
+      <tr><td>Juegos</td><td>Reglas excluidas: no son expresión</td><td>La Decisión 486 excluye planes, reglas y métodos de juegos; EE. UU. filtra distinto</td></tr>
+    </table>
+
+    <div class="dos" style="margin-top:10px">
+      <div class="caja ejemplo"><span class="tit">Caso · Sistema Nemesis · Warner Bros.</span>En <i>Shadow of Mordor</i> (2014) los orcos que sobreviven ascienden y <b>recuerdan</b> la pelea anterior. Patente estadounidense <b>US 10.926.179</b>, concedida el 23 de febrero de 2021. En 2025 Warner cerró Monolith; la patente sigue viva (expiración estimada: 2036). El inventor ya no existe y la mecánica sigue bloqueada.</div>
+      <div class="caja ejemplo"><span class="tit">Caso · Minijuegos de carga · Namco</span><b>US 5.718.632</b>: jugar un juego pequeño mientras carga el grande (nació con <i>Ridge Racer</i> y <i>Galaxian</i> en PlayStation). Concedida en 1998, expiró el 27 de noviembre de 2015. Efecto observable: <b>veinte años sin minijuegos en las pantallas de carga</b>.</div>
+    </div>
+    <div class="caja ejemplo" style="margin-top:10px"><span class="tit">Caso · Flappy Bird y Tetris v. Xio (Nueva Jersey, 2012)</span>Los clones de <i>Flappy Bird</i> casi nunca eran ilegales: tocar para subir y esquivar tuberías es mecánica. En <i>Tetris Holding v. Xio</i>, el tribunal aceptó que las reglas no se protegen y aun así falló contra el clon <i>Mino</i>: el tablero de 20 × 10, la sombra de la pieza y la previsualización son <b>expresión</b>, y la copió toda junta. Regla: <b>tomen la mecánica, no la apariencia</b>.</div>
+
+    <h4 style="margin-top:12px">Piratería y preservación: el mismo acto, dos descripciones</h4>
+    <div class="dos">
+      <div class="tarjeta bloque borde-nar"><h3>La copia como sustracción</h3><p>Escena del crack y DRM como respuesta industrial. En Colombia es penal: art. 271 del Código Penal (Ley 1032 de 2006), prisión de cuatro a ocho años y multa; el art. 272 trata la elusión de medidas tecnológicas. El estudio de cinco personas siente cada copia.</p></div>
+      <div class="tarjeta bloque borde-acc"><h3>La copia como archivo</h3><p>Un juego con servidor propio desaparece cuando lo apagan; uno retirado de la tienda no se puede comprar. La emulación es hoy el principal método de conservación de software histórico. El derecho lo resuelve mal <b>porque lo pensó para libros</b>.</p></div>
+    </div>
+    <table class="tabla" style="margin-top:10px">
+      <tr><th style="width:24%">Hecho</th><th>Qué enseña</th></tr>
+      <tr><td>P.T. · Konami, 2014–2015</td><td>Demo gratuita retirada; desde mayo de 2015 ni quien la tenía podía volver a descargarla. El titular estaba en su derecho (art. 30 Ley 23). ¿Alcanza con eso?</td></tr>
+      <tr><td>Video Game History Foundation, 2023</td><td>Alrededor del <b>87 %</b> de los juegos publicados en EE. UU. antes de 2010 está fuera de circulación legal.</td></tr>
+      <tr><td>Nintendo c. Tropic Haze, 2024</td><td>Acuerdo sobre el emulador <i>Yuzu</i> (2,4 millones de dólares); ningún juez lo declaró ilegal.</td></tr>
+      <tr><td>Stop Destroying Videogames</td><td>Iniciativa Ciudadana Europea para que no se desactiven juegos vendidos sin dejarlos jugables. Verifiquen su estado antes de citarla.</td></tr>
+    </table>
+    <div class="caja clave" style="margin-top:10px"><span class="tit">La pregunta de la noche</span>Si un juego solo existe mientras una empresa lo sostenga, <b>¿en qué sentido es una obra?</b> ¿Qué compró quien compró: una licencia revocable o un ejemplar?</div>
+    <div class="pie"><span><b>Humanidades Digitales · Corte 2</b> · S8 · Patentes y preservación</span><span>Juan David Vanegas Roldán · <a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 8</span></div>
+  </div>
+</section>
+
+<!-- ============================== 9 · S8 (3/3) ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:640px;height:640px;left:-300px;top:-160px;background:radial-gradient(circle, rgba(0,196,204,.13), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">03</span> Sesión 8 · Licencias y despliegue</div>
+    <h2>Licencias libres, TASL<br><b>y una URL pública.</b></h2>
+    <p class="texto" style="margin-top:12px">Creative Commons no es lo contrario del derecho de autor: <b>funciona gracias a él</b>. El autor conserva la titularidad y da permiso por adelantado. Lectura: Lawrence Lessig, <i>Free Culture</i> (2004), caps. 1 y 10, publicado con licencia CC.</p>
+    <table class="tabla" style="margin-top:8px">
+      <tr><th style="width:17%">Cláusula</th><th style="width:38%">Qué exige o prohíbe</th><th>Para su juego</th></tr>
+      <tr><td>BY</td><td>Reconocer al autor, la licencia y los cambios</td><td>En todas las CC vigentes: obliga a la pantalla de créditos</td></tr>
+      <tr><td>NC</td><td>Prohíbe el uso principalmente comercial</td><td>Zona gris si en itch.io piden pago o donaciones</td></tr>
+      <tr><td>ND</td><td>No distribuir material modificado</td><td><b>No entra al proyecto</b>: todo asset se recorta, reescala o comprime</td></tr>
+      <tr><td>SA</td><td>La derivada lleva la misma licencia</td><td>Contagia: puede arrastrar todo el juego a CC BY-SA</td></tr>
+      <tr><td>CC0</td><td>Renuncia a todo lo renunciable</td><td>La más segura; acreditar sigue siendo buena práctica</td></tr>
+    </table>
+    <div class="dos" style="margin-top:10px">
+      <table class="tabla">
+        <tr><th style="width:36%">Fuente</th><th>Licencia</th></tr>
+        <tr><td>Kenney</td><td>CC0 (dominio público)</td></tr>
+        <tr><td>OpenGameArt · Freesound</td><td>Varía por archivo: revisar uno por uno</td></tr>
+        <tr><td>itch.io (assets)</td><td>La define cada autor en su página</td></tr>
+        <tr><td>Lospec (paletas)</td><td>Sin licencia uniforme: no asumir dominio público</td></tr>
+      </table>
+      <div class="caja ojo"><span class="tit">Regla de oro</span>Si no encuentran la licencia, <b>asuman que no pueden usarlo</b>: no es "gratis", es de alguien que no dijo nada. Lo mismo vale para fuentes y código: MIT y BSD son permisivas; <b>GPL</b> es copyleft fuerte y puede obligar a liberar su código.</div>
+    </div>
+
+    <h4 style="margin-top:12px">TASL: Título, Autor, Source (fuente) y Licencia</h4>
+<div class="codigo">Sprite de nave · "Space Shooter Redux" por Kenney
+  Fuente: https://kenney.nl/assets/space-shooter-redux
+  Licencia: CC0 1.0 · Modificado: recoloreado y reescalado a 32x32</div>
+    <p class="texto" style="margin-top:6px">Las tres fallas que se buscan en la sección 16: enlace a la página principal en vez de a la obra, licencia sin cláusulas ni versión, y columna de modificaciones vacía.</p>
+
+    <h4 style="margin-top:12px">GitHub Pages, paso a paso</h4>
+    <div class="seis flujo">
+      <div class="tarjeta"><span class="n">1</span><p>Repositorio público (GitHub Free)</p></div>
+      <div class="tarjeta"><span class="n">2</span><p>Subir el build, no el .zip, con index.html</p></div>
+      <div class="tarjeta"><span class="n">3</span><p>Build en la raíz o en /docs</p></div>
+      <div class="tarjeta"><span class="n">4</span><p>Settings → Pages → rama y carpeta</p></div>
+      <div class="tarjeta"><span class="n">5</span><p>usuario.github.io/repositorio/</p></div>
+      <div class="tarjeta borde-acc"><span class="n">6</span><p>Cada push vuelve a publicar</p></div>
+    </div>
+    <table class="tabla" style="margin-top:8px">
+      <tr><th style="width:30%">Síntoma</th><th>Causa habitual y arreglo</th></tr>
+      <tr><td>404 en la raíz</td><td>No hay index.html en la carpeta servida: mover el build</td></tr>
+      <tr><td>Falta una imagen solo en línea</td><td>El servidor distingue mayúsculas y Windows no: nombres en minúsculas, siempre</td></tr>
+      <tr><td>"SharedArrayBuffer is not defined" (Godot)</td><td>Pages no envía cabeceras COOP/COEP: exportar en un solo hilo (desde Godot 4.3)</td></tr>
+    </table>
+    <p class="texto" style="margin-top:6px">Verificación: incógnito → equipo de otro integrante → celular con datos → consola sin errores. Créditos accesibles <b>desde el menú principal</b> (derecho moral de paternidad y condición BY), <b>CREDITS.txt</b> y <b>LICENSE</b> en el repositorio: un juego sin licencia declarada es "todos los derechos reservados". Y un <b>presupuesto de peso</b> escrito para el build.</p>
+    <div class="pie"><span><b>Humanidades Digitales · Corte 2</b> · S8 · Licencias y GitHub Pages</span><span>Juan David Vanegas Roldán · <a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 9</span></div>
+  </div>
+</section>
+
+<!-- ============================== 10 · S9 (1/3) ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:620px;height:620px;right:-300px;top:-220px;background:radial-gradient(circle, rgba(0,196,204,.13), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">04</span> Sesión 9 · 5 de octubre</div>
+    <h2>Balance, dificultad y peso:<br><b>el canal entre dos fracasos.</b></h2>
+    <p class="texto" style="margin-top:12px">Última clase antes de la entrega. El hilo de la noche: <b>qué se le extrae a alguien para que la experiencia sea fluida</b>: electricidad, agua, litio y trabajo en un caso; atención en el otro. Ninguna extracción aparece en la pantalla.</p>
+
+    <div class="dos" style="margin-top:10px;grid-template-columns:1.2fr 1fr">
+      <div class="tarjeta bloque"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-target"/></svg></div><h3>Flujo (Csíkszentmihályi, <i>Flow</i>, 1990)</h3></div><p>Reto muy superior a la habilidad: <b>ansiedad</b>, y se abandona. Habilidad muy superior al reto: <b>aburrimiento</b>, y se abandona igual. Entre los dos hay un canal que se mueve porque el jugador aprende: la dificultad es <b>una rampa, no un valor</b>; la curva sube en dientes de sierra. Jenova Chen lo llevó a juegos en su tesis en la USC (2006) y en <i>flOw</i>.</p></div>
+      <div class="caja ojo"><span class="tit">Una perilla a la vez</span>Si cambian tres valores y el juego mejora, no saben cuál sirvió. Anoten el valor anterior antes de tocarlo. Siempre. Y el flujo describe, no calcula: no hay fórmula de la dificultad correcta.</div>
+    </div>
+
+    <h4 style="margin-top:12px">"Está difícil" no es un diagnóstico: las perillas del balance</h4>
+    <table class="tabla">
+      <tr><th style="width:20%">Perilla</th><th style="width:34%">Qué cambia</th><th>Síntoma que la delata en el playtest</th></tr>
+      <tr><td>Vida y daño</td><td>Errores tolerados antes de perder</td><td>Muere sin entender qué lo mató</td></tr>
+      <tr><td>Ritmo de aparición</td><td>Obstáculos a la vez y cada cuánto</td><td>Se paraliza: no hay momento sin amenaza</td></tr>
+      <tr><td>Costo del error</td><td>Dónde reaparece</td><td>Cierra el juego tras la tercera muerte</td></tr>
+      <tr><td>Ventana de entrada</td><td>Perdón del control (<i>coyote time</i>, memoria de tecla)</td><td>"El control no responde" cuando falló por dos cuadros</td></tr>
+      <tr><td>Legibilidad</td><td>Contraste, tamaño, señal previa</td><td>No ve la trampa hasta pisarla: es un defecto, no dificultad</td></tr>
+    </table>
+
+    <div class="dos" style="margin-top:10px">
+      <div class="tarjeta bloque borde-nar"><div class="cab"><div class="ic-caja nar"><svg class="ico"><use href="#i-loop"/></svg></div><h3>Bucles de retroalimentación</h3></div><p><b>Positivo:</b> amplifica la ventaja y cierra partidas, pero la decide temprano (Monopoly). <b>Negativo:</b> corrige la ventaja (los objetos de <i>Mario Kart</i> según la posición) y mantiene la tensión; si se pasa, la habilidad deja de importar. El negativo es <b>razón variable</b>: lo que mantiene viva una carrera mantiene viva una tragamonedas.</p></div>
+<div class="codigo"><span class="c">// balance.json: una sola fuente de verdad</span>
+{
+  "vida_jugador": 3,     <span class="c">// era 5 · nadie perdía</span>
+  "enemigos_por_oleada": [2, 3, 5, 5, 8],
+  "coyote_time_ms": 120,
+  "costo_error": "ultimo_punto"
+}
+<span class="c">// Un commit por ajuste: el balance</span>
+<span class="c">// deja de ser opinión y tiene historia.</span></div>
+    </div>
+
+    <div class="dos" style="margin-top:10px">
+      <div class="tarjeta bloque"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-users"/></svg></div><h3>El observador silencioso (bitácora 13.6)</h3></div><p>Ustedes ya perdieron la capacidad de ser malos en su juego. No den pistas, no expliquen controles, no defiendan el diseño. No pregunten "¿te gustó?" sino "<b>¿qué te confundió?</b>"; no "¿estaba balanceado?" sino "<b>¿en qué momento pensaste en rendirte?</b>". Con tres a cinco personas aparecen la mayoría de los problemas (regla de usabilidad de Nielsen Norman Group, no de videojuegos).</p></div>
+      <div class="tarjeta bloque"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-leaf"/></svg></div><h3>El peso del build es político</h3></div><p>Cien megas no los juega quien tiene datos contados ni el evaluador desde el celular, y cada megabyte se transfiere millones de veces si el juego funciona. PNG solo con transparencia, audio en OGG, imágenes al tamaño real, atlas de sprites y fuera los archivos fuente. Midan antes y después: carpeta exportada, pestaña Red del navegador y <b>celular ajeno con datos</b>. Es la única palanca ambiental que está en sus manos.</p></div>
+    </div>
+    <div class="caja clave" style="margin-top:10px"><span class="tit">Criterio de aceptación sugerido</span>"El juego carga y es jugable en un teléfono de gama media con datos móviles." Se responde con sí o con no.</div>
+    <div class="pie"><span><b>Humanidades Digitales · Corte 2</b> · S9 · Balance y playtest</span><span>Juan David Vanegas Roldán · <a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 10</span></div>
+  </div>
+</section>
+
+<!-- ============================== 11 · S9 (2/3) ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:640px;height:640px;left:-300px;top:300px;background:radial-gradient(circle, rgba(242,140,40,.11), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">04</span> Sesión 9 · El costo material de la IA</div>
+    <h2>"La nube" es un lugar,<br><b>y tiene dirección.</b></h2>
+    <p class="texto" style="margin-top:12px">Kate Crawford abre <i>Atlas of AI</i> (Yale, 2021) con el capítulo "Earth" en una mina, no en un laboratorio: la IA <b>no es artificial ni inmaterial</b>; es una industria extractiva que se presenta como servicio etéreo (conexión con Blum, <i>Tubos</i>).</p>
+
+    <h4 style="margin-top:12px">Electricidad: cifras que sí se pueden citar (AIE, <i>Energy and AI</i>, abril de 2025)</h4>
+    <table class="tabla">
+      <tr><th style="width:33%">Dato</th><th style="width:30%">Cifra</th><th>Precisión necesaria</th></tr>
+      <tr><td>Consumo de los centros de datos, 2024</td><td>~415 TWh</td><td>Cerca del 1,5 % del consumo eléctrico mundial</td></tr>
+      <tr><td>Crecimiento anual desde 2017</td><td>~12 % al año</td><td>Más de cuatro veces el ritmo del consumo total</td></tr>
+      <tr><td>Proyección a 2030</td><td>~945 TWh</td><td>Algo más que todo el consumo actual de Japón</td></tr>
+      <tr><td>Concentración geográfica</td><td>EE. UU. 45 % · China 25 % · Europa 15 %</td><td>El consumo está donde están los servidores</td></tr>
+    </table>
+    <div class="caja ojo" style="margin-top:8px"><span class="tit">La trampa de la cifra real</span><b>Centro de datos no es lo mismo que IA</b>: en esos 415 TWh están también el correo, el streaming y la banca. Escribir "la IA consume el 1,5 % de la electricidad mundial" es mentir con una cifra verdadera.</div>
+
+    <div class="dos" style="margin-top:10px">
+      <div class="tarjeta bloque"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-bolt"/></svg></div><h3>Strubell, Ganesh y McCallum (ACL 2019)</h3></div><p>Estimaron las emisiones de entrenar modelos de lenguaje: un Transformer grande, 192 lbs de CO₂e; BERT base, 1 438 (del orden de un vuelo Nueva York–San Francisco por pasajero); una búsqueda de arquitectura neuronal, 626 155 (cerca de cinco vidas útiles de un automóvil). Esa última es un procedimiento extremo y de 2019. <b>El argumento es de política</b>: reportar el costo energético junto a la exactitud.</p></div>
+      <div class="tarjeta bloque borde-nar"><div class="cab"><div class="ic-caja nar"><svg class="ico"><use href="#i-alert"/></svg></div><h3>Agua: aquí no hay cifra</h3></div><p>La "media botella por conversación" viene de Li et al., "Making AI Less Thirsty" (2023), y está discutida: las estimaciones difieren en más de un orden de magnitud según el enfriamiento, el lugar y si se cuenta el agua de la generación eléctrica. Lo que no está en disputa: el agua se consume en un sitio concreto, a veces con estrés hídrico, y <b>el vecindario que la aporta no es el que usa el servicio</b>.</p></div>
+    </div>
+    <div class="caja clave" style="margin-top:10px"><span class="tit">Regla para la bitácora, y para la vida</span>Cuando una cifra les guste demasiado para su argumento, desconfíen. Si no la pueden verificar en la fuente primaria, <b>conviértanla en pregunta</b>: ¿cuánta agua consume el centro de datos que atiende a Colombia, y quién lo audita?</div>
+
+    <h4 style="margin-top:12px">Minerales y trabajo humano: la parte de la cadena que nadie fotografía</h4>
+    <div class="dos" style="gap:0 22px">
+      <div><div class="frase"><span>1</span><div><b style="color:var(--tinta)">Litio:</b> salmuera evaporada en piscinas, agua disputada con agricultura y comunidades (Crawford, de Nevada al cono sur).</div></div><div class="frase"><span>2</span><div><b style="color:var(--tinta)">Tierras raras:</b> el pasivo del refinamiento se queda en Baotou, Mongolia Interior.</div></div><div class="frase"><span>3</span><div><b style="color:var(--tinta)">Cobalto:</b> minería artesanal en la R. D. del Congo, con menores (Amnistía Internacional, 2016).</div></div></div>
+      <div><div class="frase"><span>4</span><div><b style="color:var(--tinta)">Etiquetado:</b> TIME (18 de enero de 2023) reveló trabajadores en Kenia, vía Sama, por menos de dos dólares la hora.</div></div><div class="frase"><span>5</span><div><b style="color:var(--tinta)">Ghost work</b> (Gray y Suri, 2019): trabajo humano por tarea, invisible por diseño.</div></div><div class="frase"><span>6</span><div><b style="color:var(--tinta)">Loros estocásticos</b> (Bender, Gebru et al., FAccT 2021): el costo no se reparte como el beneficio, y datos grandes no son datos buenos.</div></div></div>
+    </div>
+    <p class="texto" style="margin-top:8px"><b>Aterrizaje en la bitácora (§15, 4 % de la nota):</b> no dejar de usar IA, sino <b>declarar</b> herramienta y tarea, <b>verificar</b> dónde se comprobó y <b>decidir</b> qué no se delegó.</p>
+    <div class="pie"><span><b>Humanidades Digitales · Corte 2</b> · S9 · Costo ambiental de la IA</span><span>Juan David Vanegas Roldán · <a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 11</span></div>
+  </div>
+</section>
+
+<!-- ============================== 12 · S9 (3/3) ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:640px;height:640px;right:-300px;top:-160px;background:radial-gradient(circle, rgba(0,196,204,.14), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">04</span> Sesión 9 · Economía de la atención</div>
+    <h2>Diseñar para enganchar<br><b>o para respetar.</b></h2>
+    <p class="texto" style="margin-top:12px">Herbert Simon lo anticipó en 1971: la abundancia de información crea <b>pobreza de atención</b>. Plataformas y juegos gratuitos compiten por ese tiempo de mirar, y los videojuegos llevan cuarenta años siendo su laboratorio.</p>
+
+    <h4 style="margin-top:10px">Programas de refuerzo (Ferster y Skinner, <i>Schedules of Reinforcement</i>, 1957)</h4>
+    <table class="tabla">
+      <tr><th style="width:18%">Programa</th><th style="width:26%">Cómo se entrega</th><th style="width:30%">Qué produce</th><th>Dónde lo han visto</th></tr>
+      <tr><td>Razón fija</td><td>Cada N intentos</td><td>Ráfagas con pausa tras el premio</td><td>Diez sellos y el café es gratis</td></tr>
+      <tr><td>Intervalo fijo</td><td>Cada X tiempo</td><td>Actividad justo antes del corte</td><td>La vida que se recarga a las ocho</td></tr>
+      <tr><td>Razón variable</td><td>N impredecible</td><td><b>Tasa alta, estable y difícil de apagar</b></td><td>Tragamonedas, caja de botín, gacha</td></tr>
+      <tr><td>Intervalo variable</td><td>X impredecible</td><td>Revisión periódica compulsiva</td><td>Deslizar para actualizar</td></tr>
+    </table>
+    <div class="dos" style="margin-top:8px">
+      <div class="tarjeta bloque"><h3>El manual y la denuncia</h3><p>Natasha Dow Schüll (<i>Addiction by Design</i>, 2012) documenta en Las Vegas que la meta industrial es el <i>time on device</i>. Nir Eyal (<i>Hooked</i>, 2014) enseña el mismo mecanismo como buena práctica: <b>disparador, acción, recompensa variable, inversión</b>.</p></div>
+      <div class="tarjeta bloque"><h3>Cookie Clicker y Candy Crush</h3><p><i>Cookie Clicker</i> (2013) prueba que el bucle solo, sin contenido, ya retiene: <b>el número que sube</b>. <i>Candy Crush</i> (2012) muestra cómo monetizarlo con fricción calculada: vidas que se recargan y niveles que se pierden por poco justo donde hay una puerta de pago.</p></div>
+    </div>
+
+    <h4 style="margin-top:10px">Dark patterns (Harry Brignull, 2010 · deceptive.design)</h4>
+    <table class="tabla">
+      <tr><th style="width:22%">Patrón</th><th>Cómo se ve en un videojuego</th></tr>
+      <tr><td>Urgencia y escasez falsas</td><td>Oferta con reloj que se reinicia; "quedan 3" de un objeto digital infinito</td></tr>
+      <tr><td>Confusión de moneda</td><td>Gemas en paquetes que nunca cuadran con los precios reales</td></tr>
+      <tr><td>Diseño adictivo</td><td>Racha diaria que se pierde entera si fallan un día</td></tr>
+      <tr><td>Obstrucción y preselección</td><td>Comprar en dos toques, desactivar avisos en seis; casilla de compartir datos ya marcada</td></tr>
+    </table>
+
+    <h4 style="margin-top:10px">Cajas de botín ante el derecho</h4>
+    <div class="tarjeta" style="padding:4px 14px">
+      <div class="hito"><b>2018</b><span><b style="color:var(--tinta)">Bélgica:</b> la Comisión de Juegos de Azar las encuadra en su ley de juegos de azar; varias editoras retiran la mecánica.</span></div>
+      <div class="hito"><b>2019–22</b><span><b style="color:var(--tinta)">Países Bajos:</b> sanción de diez millones de euros a EA por FIFA Ultimate Team, anulada en 2022 por el Raad van State (prueba de integración en el juego).</span></div>
+      <div class="hito"><b>UE</b><span>La Ley de Servicios Digitales (art. 25) prohíbe los dark patterns en plataformas en línea.</span></div>
+      <div class="hito"><b>Colombia</b><span>Sin norma específica encontrada: Estatuto del Consumidor (Ley 1480 de 2011, información veraz y publicidad engañosa) y régimen de juegos de suerte y azar.</span></div>
+    </div>
+    <p class="texto" style="margin-top:6px"><b>CIE-11 (6C51):</b> trastorno por videojuegos, en vigor desde 2022; objetado por Aarseth y otros (2017): <b>debate abierto</b>.</p>
+    <div class="caja clave" style="margin-top:8px"><span class="tit">¿Su juego es crítica o es cómplice?</span><b>Prueba de transparencia:</b> ¿la mecánica sigue funcionando si el jugador sabe cómo opera? Si solo funciona porque no la entiende, es explotación. <b>Prueba del retratado:</b> ¿se la explicarían sin incomodarse a la persona cuya situación representan?</div>
+    <div class="pie"><span><b>Humanidades Digitales · Corte 2</b> · S9 · Economía de la atención</span><span>Juan David Vanegas Roldán · <a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 12</span></div>
+  </div>
+</section>
+
+<!-- ============================== 13 · ANEXO IA (1/2) ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:640px;height:640px;left:-300px;top:-160px;background:radial-gradient(circle, rgba(0,196,204,.14), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">05</span> Anexo de la sesión 9 · Hacer un juego con IA</div>
+    <h2>Claude, Blender y MCP:<br><b>delegar, declarar, decidir.</b></h2>
+    <p class="texto" style="margin-top:12px">Ya hay IA en sus repositorios, bocetos y bitácoras. Lo que falta es nombrar <b>en qué lugar del juego vive, cuánto cuesta ahí y quién responde</b> si sale mal. Steam no pregunta "¿usaron IA?": pregunta <b>dónde</b>.</p>
+    <div class="tres" style="margin-top:8px">
+      <div class="tarjeta bloque borde-acc"><h4>Lugar 1</h4><h3>En el proceso</h3><p>Un asistente que escribe código, un agente que edita la escena. El cómputo se gasta mientras se desarrolla.</p></div>
+      <div class="tarjeta bloque borde-acc"><h4>Lugar 2</h4><h3>En lo que se entrega</h3><p>Fondos, voces o textos generados que viajan con el juego. Steam los llama <i>pre-generated</i> y se declaran.</p></div>
+      <div class="tarjeta bloque borde-nar"><h4 style="color:var(--nar2)">Lugar 3</h4><h3>Mientras se juega</h3><p>Un NPC que improvisa con un modelo. <i>Live-generated</i>: se declara y exige salvaguardas contra contenido ilegal.</p></div>
+    </div>
+
+    <h4 style="margin-top:12px">Un chat responde; un agente actúa</h4>
+    <p class="texto">Un chat produce texto que ustedes copian. Un agente <b>lee el proyecto, usa herramientas, cambia archivos y mira el resultado</b>. El estándar abierto que le da esas herramientas es el <b>Model Context Protocol (MCP)</b>: una forma común de conectar un modelo con un editor, una consola o un programa de modelado. Un <b>servidor MCP</b> es el conector; el cliente (por ejemplo, Claude Desktop o Claude Code) lo registra y el modelo puede usar sus herramientas.</p>
+    <div class="seis flujo" style="margin-top:8px">
+      <div class="tarjeta borde-nar"><span class="n" style="color:var(--nar2)">Humano</span><p>Da una instrucción concreta</p></div>
+      <div class="tarjeta"><span class="n">Agente</span><p>Lee el proyecto</p></div>
+      <div class="tarjeta"><span class="n">MCP</span><p>Llama herramientas</p></div>
+      <div class="tarjeta"><span class="n">Cambio</span><p>Código, escena o modelo</p></div>
+      <div class="tarjeta borde-nar"><span class="n" style="color:var(--nar2)">Humano</span><p>Revisa el diff</p></div>
+      <div class="tarjeta"><span class="n">Commit</span><p>Con autoría clara</p></div>
+    </div>
+    <p class="texto" style="margin-top:6px">Sin puente, un proyecto de Godot ya es casi todo texto (.gd y .tscn) que el agente lee y Git compara; con puente, el agente ve la escena, la consola de errores y capturas. <b>Los dos pasos en naranja son humanos</b>: si los quitan, ya no hay trabajo suyo que defender. Y no confundan piezas: el <b>add-on</b> vive dentro del programa (Blender), el <b>servidor MCP</b> expone sus funciones al modelo y un <b>plugin</b> del cliente empaqueta habilidades e instrucciones para un flujo (como el de Unity para Claude Code).</p>
+
+    <h4 style="margin-top:12px">Flujo de trabajo con Claude + Blender (ejemplo de clase)</h4>
+    <div class="tarjeta" style="padding:2px 16px">
+      <div class="frase"><span>1</span><div><b style="color:var(--tinta)">Idea y documento de diseño con Claude (chat):</b> usarlo para atacar la idea, no para escribirla: qué tiene de genérico, qué recortar del alcance, si el tema está traducido a mecánica (bitácora §15.1).</div></div>
+      <div class="frase"><span>2</span><div><b style="color:var(--tinta)">Código con Claude Code:</b> tareas pequeñas y verificables sobre el repositorio ("mueve estos valores a balance.json"), leyendo cada diff antes de aceptarlo.</div></div>
+      <div class="frase"><span>3</span><div><b style="color:var(--tinta)">Modelado con blender-mcp:</b> conector de la comunidad (github.com/ahujasid/blender-mcp) que une el asistente con Blender 3.0 o superior: manipula la escena, toma capturas del visor, <b>ejecuta Python</b> y descarga recursos de Poly Haven, Sketchfab, Hyper3D y Hunyuan3D.</div></div>
+      <div class="frase"><span>4</span><div><b style="color:var(--tinta)">Exportar al motor:</b> Blender exporta a formatos de intercambio como glTF o FBX, que leen Godot, Unity o Three.js en la web. Si el juego es 2D (Construct 3), el modelo se puede renderizar en Blender como imágenes y usarse como sprites.</div></div>
+      <div class="frase"><span>5</span><div><b style="color:var(--tinta)">Declarar y acreditar:</b> cada pieza va a la §15 (dónde vivió la IA) y a la §16 (TASL): lo descargado conserva la licencia de su fuente y lo generado se registra con su herramienta.</div></div>
+    </div>
+    <div class="caja ojo" style="margin-top:10px"><span class="tit">Antes de instalar cualquier conector</span>Tres preguntas de dos minutos: <b>quién lo mantiene, qué permisos pide y si lo probaron en una copia</b>. blender-mcp ejecuta código Python arbitrario dentro de Blender: solo con proyectos propios. Un puente con permisos de escritura es superficie de riesgo; nunca se prueba en la rama principal.</div>
+    <div class="pie"><span><b>Humanidades Digitales · Corte 2</b> · Anexo · Juegos con IA</span><span>Juan David Vanegas Roldán · <a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 13</span></div>
+  </div>
+</section>
+
+<!-- ============================== 14 · ANEXO IA (2/2) ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:620px;height:620px;right:-300px;top:-200px;background:radial-gradient(circle, rgba(0,196,204,.14), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">05</span> Anexo · Conectores, costo y responsabilidad</div>
+    <h2>El mapa de herramientas<br><b>y quién responde.</b></h2>
+    <table class="tabla" style="margin-top:14px">
+      <tr><th style="width:14%">Programa</th><th>Qué ofrece (según su documentación)</th><th style="width:13%">Origen</th><th style="width:26%">Ojo</th></tr>
+      <tr><td>Unity</td><td>Servidor MCP propio (AI Assistant, Unity 6 o superior) y <b>plugin para Claude Code</b> con 29 habilidades, según el blog de Unity</td><td>Oficial</td><td>Personal: gratis bajo USD 200 000 anuales</td></tr>
+      <tr><td>Blender</td><td>blender-mcp: escena, capturas, Python y recursos externos</td><td>Comunidad</td><td>Ejecuta Python arbitrario</td></tr>
+      <tr><td>Godot</td><td>Varios servidores MCP para el editor y GDScript; al menos uno de pago</td><td>Comunidad</td><td>Madurez no evaluada: probar en una copia</td></tr>
+      <tr><td>Construct 3</td><td>No se verificó que exista un servidor MCP</td><td>—</td><td>No lo den por hecho</td></tr>
+    </table>
+
+    <h4 style="margin-top:12px">Cómo escala el consumo según dónde pongan la IA</h4>
+    <table class="tabla">
+      <tr><th style="width:15%">Lugar</th><th style="width:44%">Cómo crece el consumo</th><th>La palanca que sí controlan</th></tr>
+      <tr><td>Proceso</td><td>Con los ciclos de pedir, probar y corregir (razonamiento, no medición)</td><td>Cambios pequeños; no regenerar todo</td></tr>
+      <tr><td>Entregado</td><td>Una vez por pieza más cada intento descartado, y se descarga en cada partida</td><td>Contar los descartes; reutilizar; comprimir</td></tr>
+      <tr><td>En vivo</td><td>Jugadores × sesiones × turnos: <b>el único que crece con el éxito del juego</b></td><td>No ponerla, limitarla a un momento o escribir a mano</td></tr>
+    </table>
+    <div class="caja ejemplo" style="margin-top:8px"><span class="tit">Lugar 3 en la práctica · Mantella (mod de Skyrim y Fallout 4)</span>Voz del jugador → Whisper (voz a texto) → modelo de lenguaje → xVASynth (texto a voz) → el NPC responde, recordando conversaciones y contexto. El cómputo ocurre cada vez que alguien habla, y no garantiza <b>que lo dicho sea cierto</b>.</div>
+
+    <h4 style="margin-top:12px">Dos reglas publicadas</h4>
+    <div class="dos">
+      <div class="tarjeta bloque"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-game"/></svg></div><h3>Steam · Valve (Content Survey)</h3></div><p>Contenido pre-generado y generado en vivo; para el segundo, describir las salvaguardas. El contenido sexual para adultos generado en vivo no se permite.</p></div>
+      <div class="tarjeta bloque"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-scale"/></svg></div><h3>Crea Digital 2026 · MinTIC y CoCrea</h3></div><p>IA permitida como apoyo; la autoría y la legalidad siguen siendo de quien recibe el dinero. Cita a la DNDA: lo generado <b>totalmente</b> con IA no es obra protegible. Sustituirla o no declararla hace perder el estímulo.</p></div>
+    </div>
+
+    <h4 style="margin-top:12px">Qué se delega y con qué cuidado (criterio del curso, no norma)</h4>
+    <table class="tabla">
+      <tr><th style="width:36%">Tarea</th><th style="width:16%">Riesgo</th><th>Cómo se hace bien</th></tr>
+      <tr><td>Código repetitivo, refactor, pruebas</td><td>Bajo si se ejecuta</td><td>Correr el juego, leer el diff, commit solo si funciona</td></tr>
+      <tr><td>Datos históricos, jurídicos o técnicos</td><td>Alto</td><td>Verificar en la fuente primaria o convertir en pregunta</td></tr>
+      <tr><td>Arte, voz y música que se entregan</td><td>Alto</td><td>Declararlo y mostrar el trabajo propio encima</td></tr>
+      <tr><td>El argumento y la auditoría ética</td><td><b class="nar">No se delega</b></td><td>Es lo que sustentan el 19 de octubre</td></tr>
+    </table>
+    <div class="caja clave" style="margin-top:10px"><span class="tit">El diff es la evidencia</span>El mensaje del commit separa quién hizo qué (IA: refactor · Equipo: elección del valor · Verificado: nivel 1 completo). Dos pruebas para la §15: <b>sustitución</b> (si quitan lo que hizo la IA, ¿qué queda del equipo?) y <b>apagón</b> (si el servicio cambia o desaparece, ¿el juego sigue siendo un juego?).</div>
+    <div class="pie"><span><b>Humanidades Digitales · Corte 2</b> · Anexo · Conectores y responsabilidad</span><span>Juan David Vanegas Roldán · <a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 14</span></div>
+  </div>
+</section>
+
+<!-- ============================== 15 · PREGUNTAS ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:640px;height:640px;right:-300px;top:-160px;background:radial-gradient(circle, rgba(0,196,204,.14), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">06</span> Para ponerse a prueba</div>
+    <h2>Preguntas de repaso<br><b>antes de la sustentación.</b></h2>
+    <p class="texto" style="margin-top:8px">Salen de las guías de cada sesión. Piensen la respuesta antes de leerla.</p>
+    <div class="dos" style="margin-top:10px;gap:8px 10px">
+      <div class="tarjeta qa"><h3><span>1.</span>Diferencie clase, instancia y atributo con un ejemplo de su juego.</h3><p>La clase es el molde (Enemigo); la instancia, cada enemigo en pantalla; el atributo, lo que tiene (vida, velocidad) y cambia en la partida.</p></div>
+      <div class="tarjeta qa"><h3><span>2.</span>¿Qué problema resuelve una máquina de estados?</h3><p>Garantiza un solo estado a la vez con transiciones explícitas: los estados imposibles (saltar estando muerto) no se pueden escribir.</p></div>
+      <div class="tarjeta qa"><h3><span>3.</span>Según Bowker y Star, ¿por qué ninguna clasificación es neutral?</h3><p>Toda categoría deja residuo, se vuelve invisible y reparte recursos, permisos o sospecha: decide qué es visible y qué desaparece.</p></div>
+      <div class="tarjeta qa"><h3><span>4.</span>¿Por qué la emulación importa para la preservación cultural?</h3><p>Los soportes y consolas se degradan y los servidores se apagan; simular la máquina vieja es la única forma de seguir jugando la obra.</p></div>
+      <div class="tarjeta qa"><h3><span>5.</span>¿Por qué una distopía es un experimento mental y no una profecía?</h3><p>Extrapola una tendencia presente quitándole los frenos para nombrar la consecuencia mientras aún es reversible; no busca acertar la fecha.</p></div>
+      <div class="tarjeta qa"><h3><span>6.</span>Explique el panóptico y por qué el control se interioriza.</h3><p>Un vigilante central ve sin ser visto; como nadie sabe si lo miran, se comporta como si siempre lo hicieran (Bentham, Foucault).</p></div>
+      <div class="tarjeta qa"><h3><span>7.</span>¿Qué demostró Moral Machine?</h3><p>Que las preferencias morales cambian según la cultura: no hay una moral universal programable sin elegir la de alguien.</p></div>
+      <div class="tarjeta qa"><h3><span>8.</span>¿Cómo convierte Papers, Please una mecánica en argumento ético?</h3><p>Paga por persona procesada y de eso vive la familia: la complicidad con la burocracia no se narra, se practica en las reglas.</p></div>
+      <div class="tarjeta qa"><h3><span>9.</span>¿Por qué el videojuego es una obra compleja?</h3><p>Apila código (obra literaria), arte, música y fonograma, textos, personajes y signos distintivos, cada capa con su régimen.</p></div>
+      <div class="tarjeta qa"><h3><span>10.</span>Diferencie derechos morales y patrimoniales.</h3><p>Los morales (paternidad, integridad) son perpetuos e irrenunciables; los patrimoniales (reproducir, distribuir) se ceden por escrito.</p></div>
+      <div class="tarjeta qa"><h3><span>11.</span>¿Qué significa cada letra de TASL?</h3><p>Título, Autor, Source (fuente con enlace directo a la obra) y Licencia (nombre y versión con enlace), más si se modificó.</p></div>
+      <div class="tarjeta qa"><h3><span>12.</span>Nombre tres dark patterns con un ejemplo de cada uno.</h3><p>Urgencia falsa (oferta con reloj), confusión de moneda (gemas), diseño adictivo (racha diaria que se pierde).</p></div>
+      <div class="tarjeta qa"><h3><span>13.</span>¿Qué es el flujo y cómo se relaciona con la curva de dificultad?</h3><p>El canal entre ansiedad y aburrimiento; como la habilidad crece, la dificultad debe ser una rampa en dientes de sierra.</p></div>
+      <div class="tarjeta qa"><h3><span>14.</span>¿Por qué la nube tiene un costo ambiental?</h3><p>Corre en centros de datos con electricidad, agua, minerales y trabajo humano concretos, en lugares que no son los del usuario.</p></div>
+    </div>
+    <div class="tarjeta qa borde-acc" style="margin-top:8px"><h3><span>15.</span>¿Qué es MCP y qué cambia cuando un agente se conecta a Blender o a un editor?</h3><p>Es el estándar abierto que conecta un modelo con herramientas externas. El agente deja de responder texto y pasa a actuar (crear escenas, ejecutar código), así que la revisión humana del diff y la declaración en la §15 se vuelven la evidencia de quién decidió.</p></div>
+    <div class="pie"><span><b>Humanidades Digitales · Corte 2</b> · Preguntas de repaso</span><span>Juan David Vanegas Roldán · <a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 15</span></div>
+  </div>
+</section>
+
+<!-- ============================== 16 · LO ESENCIAL ============================== -->
+<section class="pagina cruces">
+  <svg class="constelacion" data-paleta="academy" data-semilla="31" data-zona="440,40,770,150" data-nodos="8" viewBox="0 0 794 1123" aria-hidden="true" style="opacity:.55"></svg>
+  <div class="brillo" style="width:800px;height:800px;right:-340px;bottom:-340px;background:radial-gradient(circle, rgba(0,196,204,.2), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">07</span> Para repasar</div>
+    <h2>Lo esencial<br><b>en diez frases.</b></h2>
+
+    <div class="tarjeta" style="margin-top:14px;padding:2px 18px">
+      <div class="frase"><span>01</span><div>Clasificar es <b style="color:var(--tinta)">decidir qué es visible</b>: la casilla no describe, reparte (Bowker y Star).</div></div>
+      <div class="frase"><span>02</span><div>Un atributo describe; un <b style="color:var(--tinta)">estado gobierna</b>. Un estado sin salida es absorbente: en un juego es diseño, en una persona es un problema de derechos.</div></div>
+      <div class="frase"><span>03</span><div>La distopía <b style="color:var(--tinta)">extrapola</b>; el juego la vuelve verbo. Si no llega a verbo, se queda en letrero.</div></div>
+      <div class="frase"><span>04</span><div>El modelo sesgado <b style="color:var(--tinta)">predice su propio pasado</b>; borrar la variable no basta porque el proxy la reconstruye.</div></div>
+      <div class="frase"><span>05</span><div>Un nivel bien hecho <b style="color:var(--tinta)">enseña sin tutorial</b>: lugar seguro, costo bajo, combinación, exigencia. El espacio cuenta lo que nadie dice.</div></div>
+      <div class="frase"><span>06</span><div>El derecho de autor protege <b style="color:var(--tinta)">la forma, no la idea</b>; su juego es una obra en colaboración y la cesión va por escrito.</div></div>
+      <div class="frase"><span>07</span><div><b style="color:var(--tinta)">ND no entra, SA contagia</b>; sin licencia visible no se usa. TASL en créditos y CREDITS.txt.</div></div>
+      <div class="frase"><span>08</span><div>La dificultad es <b style="color:var(--tinta)">una rampa</b>; se ajusta mirando a otros jugar, una perilla a la vez y con commit.</div></div>
+      <div class="frase"><span>09</span><div>"La nube" <b style="color:var(--tinta)">es un lugar</b>; centro de datos no es lo mismo que IA, y la cifra que no se verifica se vuelve pregunta.</div></div>
+      <div class="frase"><span>10</span><div>Con IA se <b style="color:var(--tinta)">delega, se declara y se decide</b>: el agente actúa por MCP, el humano revisa el diff y responde.</div></div>
+    </div>
+
+    <h4 style="margin-top:14px">Mapa de fuentes del corte</h4>
+    <table class="tabla">
+      <tr><th style="width:30%">Fuente</th><th>Qué aporta, en una línea</th><th style="width:10%">Sesión</th></tr>
+      <tr><td>Bowker y Star (1999) · Nystrom (2014)</td><td>Clasificación como poder · patrón State</td><td>S6</td></tr>
+      <tr><td>Ley 1266/2008 · Ley 2157/2021</td><td>Permanencia y caducidad del dato negativo</td><td>S6</td></tr>
+      <tr><td>O'Neil · Zuboff · Jenkins · Awad et al.</td><td>Ciclo pernicioso · excedente conductual · arquitectura narrativa · Moral Machine</td><td>S7</td></tr>
+      <tr><td>Ley 1581/2012 · C-748/2011</td><td>Principios del hábeas data · dato sensible</td><td>S7</td></tr>
+      <tr><td>Ley 23/1982 · Decisión 351/1993 · Decisión 486/2000</td><td>Derecho de autor, software como obra literaria · exclusión de métodos de juego</td><td>S8</td></tr>
+      <tr><td>Crawford · AIE 2025 · Strubell (2019)</td><td>Costo material, eléctrico y de entrenamiento de la IA</td><td>S9</td></tr>
+      <tr><td>Ferster y Skinner · Brignull · Ley 1480/2011</td><td>Razón variable · dark patterns · publicidad engañosa</td><td>S9</td></tr>
+      <tr><td>Model Context Protocol · blender-mcp · Steam</td><td>Agentes conectados · declaración de contenido con IA</td><td>Anexo</td></tr>
+    </table>
+    <div class="caja clave" style="margin-top:10px"><span class="tit">Hito del 19 de octubre · sustentación y cierre del Corte 2</span>El juego se abre desde un enlace y se juega <b>al menos un nivel de principio a fin</b>: mecánica central, arte propio y sonido, sin que nadie explique nada. Se entregan el enlace, el repositorio con el historial de todos y la bitácora con auditoría de retención, tabla 13.6 y peso antes y después.</div>
+    <p class="texto" style="margin-top:8px">Este resumen recoge la idea de cada fuente, no su texto. <span class="tenue">Verifiquen normas, cifras y estados de iniciativas en la fuente oficial antes de citarlos en la bitácora.</span> El Corte 3 empieza el 26 de octubre con <b class="nar">humanismo digital, IA y autoría</b>.</p>
+
+    <div class="pie" style="border-top:1px solid var(--borde);padding-top:16px">
+      <span class="logo"><img src="../public/marcas/trifuerza/logo-horizontal-claro.png" alt="Trifuerza" style="height:22px"><span class="sep" style="height:18px"></span><span class="linea" style="font-size:10.5px">Academy</span></span>
+      <span>Juan David Vanegas Roldán · <a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 16</span>
+    </div>
+  </div>
+</section>
+
+<script>window.TERMINOS_PROPUESTA = {
+  tech: ['POO', 'estado', 'localStorage', 'MCP', 'glTF', 'GitHub Pages', 'Blender', '{ }'],
+  law: ['§', 'Ley 1581', 'Ley 23/1982', 'Decisión 351', 'CC BY 4.0', 'TASL', 'hábeas data'],
+  design: ['nivel', 'flujo', 'proxy', 'playtest', 'dark pattern', 'panóptico', '△'],
+};</script>
+<script src="kit/constelacion.js"></script>
+<script src="kit/pdf-limpio.js"></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+/*
+  Resúmenes de clase de Trifuerza Academy (A4, PDF). Mismo mundo visual que las propuestas Academy
+  (fondo #050B16, turquesa y naranja), pero pensado para estudiar: más texto por página, tablas y
+  cajas de "clave", "ojo" y "ejemplo". Las cajas de color sólido llevan letra negra (regla de las
+  propuestas: nunca texto claro sobre fondo vivo). Sin sombras ni blur: pdf-limpio.js aplana el resto.
+*/
+:root {
+  --fondo: #050B16; --panel: #0E1626; --panel2: #0A111E; --borde: #1F2A3C; --borde2: #2B3850;
+  --tinta: #F3F5F8; --suave: #C9D1DC; --tenue: #94A0B2;
+  --acc: #00C4CC; --acc2: #33D6DD; --acc3: #B2F0F2; --nar: #F28C28; --nar2: #FDBA74;
+  --negro: #0B1220; --rojo: #F87171; --verde: #34D399; --ambar: #FBBF24;
+}
+@page { size: A4; margin: 0; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: var(--fondo); }
+body { font-family: 'Inter', sans-serif; color: var(--tinta); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.pagina { position: relative; width: 210mm; height: 297mm; overflow: hidden; padding: 52px 54px 40px; page-break-after: always; background: var(--fondo); }
+.pagina:last-child { page-break-after: auto; }
+.cruces::before { content: ''; position: absolute; inset: 0; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48'%3E%3Cpath d='M24 20v8M20 24h8' stroke='white' stroke-opacity='.045' stroke-width='1.2'/%3E%3C/svg%3E"); }
+.brillo { position: absolute; border-radius: 50%; pointer-events: none; }
+.contenido { position: relative; z-index: 2; height: 100%; display: flex; flex-direction: column; }
+
+.logo { display: flex; align-items: center; gap: 12px; }
+.logo img { height: 30px; }
+.logo .sep { width: 1px; height: 24px; background: var(--borde2); }
+.logo .linea { font-size: 12.5px; font-weight: 600; letter-spacing: .32em; text-transform: uppercase; color: var(--acc2); }
+.pie { margin-top: auto; display: flex; justify-content: space-between; align-items: center; font-size: 9.5px; color: var(--tenue); letter-spacing: .04em; padding-top: 12px; border-top: 1px solid var(--borde); }
+.pie b { color: var(--suave); font-weight: 600; }
+a.web { color: inherit; text-decoration: none; border-bottom: 1px solid currentColor; }
+
+.etiqueta { display: inline-flex; align-items: center; gap: 8px; padding: 6px 13px; border-radius: 10px; font-size: 11px; color: var(--suave); background: var(--panel); border: 1px solid var(--borde2); }
+.antetitulo { font-size: 10.5px; font-weight: 600; letter-spacing: .26em; text-transform: uppercase; color: var(--acc); margin-bottom: 10px; display: flex; align-items: center; gap: 12px; }
+.antetitulo::before { content: ''; width: 26px; height: 1px; background: var(--acc); }
+.antetitulo .num { color: var(--tenue); letter-spacing: .1em; }
+h1 { font-size: 54px; line-height: 1.03; font-weight: 300; letter-spacing: -.04em; }
+h1 b, h2 b { font-weight: 700; }
+h2 { font-size: 29px; line-height: 1.1; font-weight: 300; letter-spacing: -.03em; }
+h3 { font-size: 13.5px; font-weight: 600; letter-spacing: -.01em; }
+h4 { font-size: 10px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--acc2); margin-bottom: 6px; }
+p { line-height: 1.55; }
+.lead { font-size: 13px; color: var(--suave); font-weight: 300; line-height: 1.6; }
+.texto { font-size: 11.9px; color: var(--suave); line-height: 1.6; }
+.texto b, .bloque b, .lista b, td b { color: var(--tinta); font-weight: 600; }
+.acc { color: var(--acc2); }
+.nar { color: var(--nar2); }
+.serif { font-family: 'Fraunces', serif; font-style: italic; font-weight: 400; }
+.tenue { color: var(--tenue); }
+.mono { font-family: ui-monospace, Consolas, monospace; letter-spacing: .02em; }
+
+.tarjeta { background: var(--panel); border: 1px solid var(--borde); border-radius: 14px; }
+.tarjeta.borde-acc { border-color: #1E6E78; }
+.tarjeta.borde-nar { border-color: #7A4A1E; }
+.bloque { padding: 14px 16px; }
+.bloque p { font-size: 11.3px; color: var(--suave); margin-top: 5px; line-height: 1.5; }
+.bloque .cab { display: flex; align-items: center; gap: 10px; }
+.ico { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+.ic-caja { width: 32px; height: 32px; border-radius: 10px; display: grid; place-items: center; background: #0B2A33; border: 1px solid #1E6E78; color: var(--acc2); flex: none; }
+.ic-caja .ico { width: 16px; height: 16px; }
+.ic-caja.nar { background: #2A1B0E; border-color: #7A4A1E; color: var(--nar2); }
+
+.dos { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.tres { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.cuatro { display: grid; grid-template-columns: repeat(4, 1fr); gap: 9px; }
+.lista { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+.lista li { display: flex; gap: 8px; font-size: 11.2px; line-height: 1.45; color: var(--suave); }
+.lista li .ico { width: 14px; height: 14px; color: var(--acc2); margin-top: 1px; }
+.lista.no li .ico { color: var(--rojo); }
+
+/* Cajas de estudio: sólidas, letra negra. */
+.caja { border-radius: 12px; padding: 12px 15px; color: var(--negro); font-size: 11.3px; line-height: 1.5; }
+.caja b { font-weight: 700; }
+.caja .tit { display: block; font-size: 9.5px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; margin-bottom: 3px; }
+.caja.clave { background: var(--acc2); }
+.caja.ojo { background: var(--nar); }
+.caja.ejemplo { background: var(--panel); border: 1px dashed #2E8F99; color: var(--suave); }
+.caja.ejemplo .tit { color: var(--acc2); }
+.caja.ejemplo b { color: var(--tinta); }
+
+.tabla { width: 100%; border-collapse: collapse; font-size: 10.8px; }
+.tabla th { text-align: left; font-size: 9.5px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--tenue); padding: 7px 9px; border-bottom: 1px solid var(--borde2); background: var(--panel2); }
+.tabla th.acc { color: var(--acc2); }
+.tabla th.nar { color: var(--nar2); }
+.tabla td { padding: 7px 9px; border-bottom: 1px solid var(--borde); color: var(--suave); vertical-align: top; line-height: 1.45; }
+.tabla td:first-child { color: var(--tinta); font-weight: 600; }
+.tabla tr:last-child td { border-bottom: 0; }
+
+.chip { display: inline-block; padding: 3px 9px; border-radius: 999px; font-size: 9px; font-weight: 700; letter-spacing: .05em; white-space: nowrap; background: #0B2A33; color: var(--acc3); border: 1px solid #1E6E78; }
+.chip.nar { background: #2A1B0E; color: var(--nar2); border-color: #7A4A1E; }
+.chip.gris { background: var(--panel2); color: var(--tenue); border-color: var(--borde2); }
+
+.kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.kpi { padding: 15px 17px; }
+.kpi b { display: block; font-size: 24px; font-weight: 700; letter-spacing: -.035em; }
+.kpi span { font-size: 10.3px; color: var(--tenue); }
+.indice { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 22px; }
+.indice div { display: flex; gap: 10px; font-size: 11px; color: var(--suave); padding: 6px 0; border-bottom: 1px solid var(--borde); }
+.indice div span { color: var(--acc2); font-weight: 700; width: 18px; }
+
+.paso { display: grid; grid-template-columns: 30px 1fr; gap: 10px; align-items: start; }
+.paso .n { width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; border: 1.5px solid #1E8A93; color: var(--acc2); font-weight: 700; font-size: 12px; background: #0B2A33; }
+.paso h3 { font-size: 12.8px; margin-bottom: 1px; }
+.paso p { font-size: 11.2px; color: var(--suave); line-height: 1.45; }
+.frase { font-size: 11.3px; color: var(--suave); line-height: 1.5; display: grid; grid-template-columns: 22px 1fr; gap: 8px; padding: 7px 0; border-bottom: 1px solid var(--borde); }
+.frase span { color: var(--acc2); font-weight: 700; }
+.frase:last-child { border-bottom: 0; }
+.mito { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 9px 0; border-bottom: 1px solid var(--borde); font-size: 11.1px; line-height: 1.45; }
+.mito:last-child { border-bottom: 0; }
+.mito .m { color: var(--rojo); }
+.mito .r { color: var(--suave); }
+.mito .r b { color: var(--tinta); }
+.figura { display: block; width: 100%; }
+.figura text { font-family: 'Inter', sans-serif; }
+
+/* Constelación (réplica de trifuerza.co) */
+.constelacion { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; }
+.constelacion text { font-family: ui-monospace, Consolas, monospace; }
+.constelacion .cliente { font-family: 'Inter', sans-serif; font-weight: 800; letter-spacing: -.02em; }
+@media screen and (prefers-reduced-motion: no-preference) {
+  .constelacion .nodo { animation: titila 5s ease-in-out infinite alternate; }
+  .constelacion .cruce { animation: corre 6s linear infinite; }
+  .constelacion .anillo { animation: anillo 3.2s ease-out infinite; transform-box: fill-box; transform-origin: center; }
+}
+@keyframes titila { from { opacity: 1; } to { opacity: .35; } }
+@keyframes corre { to { stroke-dashoffset: -90; } }
+@keyframes anillo { from { transform: scale(.4); opacity: .9; } to { transform: scale(3.2); opacity: 0; } }
+@media print {
+  .constelacion .nodo, .constelacion .cruce, .constelacion .anillo { animation: none !important; }
+  .constelacion .pulso, .constelacion .anillo { display: none; }
+}

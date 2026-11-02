@@ -1,0 +1,586 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Resumen · Derecho corporativo en Colombia</title>
+<link rel="stylesheet" href="kit/fuentes.css">
+<link rel="stylesheet" href="kit/resumen.css">
+<style>
+  /* Tabla de cap table del ejemplo numérico: cifras alineadas a la derecha. */
+  .tabla td.n, .tabla th.n { text-align: right; font-variant-numeric: tabular-nums; }
+  .barra { display: flex; height: 26px; border-radius: 8px; overflow: hidden; margin-top: 8px; font-size: 10px; font-weight: 800; color: #0B1220; }
+  .barra div { display: grid; place-items: center; }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+    <symbol id="i-building" viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4M8 6h.01M16 6h.01M12 6h.01M12 10h.01M12 14h.01M16 10h.01M16 14h.01M8 10h.01M8 14h.01"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2 21a7 7 0 0 1 14 0M16 4.5a3.5 3.5 0 0 1 0 7M22 21a7 7 0 0 0-4-6.3"/></symbol>
+    <symbol id="i-coin" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M14.5 9.5c-.4-.9-1.4-1.5-2.5-1.5-1.4 0-2.5.8-2.5 2s1.1 1.7 2.5 2 2.5.8 2.5 2-1.1 2-2.5 2c-1.1 0-2.1-.6-2.5-1.5M12 6v2M12 16v2"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6M8 13h8M8 17h6"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0ZM12 9v4M12 17h.01"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18M7 15l4-4 3 3 5-6"/></symbol>
+    <symbol id="i-swap" viewBox="0 0 24 24"><path d="M17 3l4 4-4 4M21 7H9M7 21l-4-4 4-4M3 17h12"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 2 10 5-10 5L2 7l10-5ZM2 17l10 5 10-5M2 12l10 5 10-5"/></symbol>
+    <symbol id="i-scale" viewBox="0 0 24 24"><path d="M12 3v18M7 21h10M5 7h14M5 7l-3 7a3 3 0 0 0 6 0L5 7ZM19 7l-3 7a3 3 0 0 0 6 0l-3-7Z"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></symbol>
+  </defs>
+</svg>
+
+<!-- ============================== PORTADA ============================== -->
+<section class="pagina cruces">
+  <svg class="constelacion" data-paleta="academy" data-semilla="13" data-zona="470,110,785,420" data-nodos="17" data-cliente="S.A.S." viewBox="0 0 794 1123" aria-hidden="true"></svg>
+  <div class="brillo" style="width:760px;height:760px;right:-300px;top:-300px;background:radial-gradient(circle, rgba(0,196,204,.2), transparent 62%)"></div>
+  <div class="brillo" style="width:520px;height:520px;left:-260px;bottom:-200px;background:radial-gradient(circle, rgba(242,140,40,.14), transparent 62%)"></div>
+  <div class="contenido">
+    <div style="display:flex;justify-content:space-between;align-items:center">
+      <div class="logo"><img src="../public/marcas/trifuerza/logo-horizontal-claro.png" alt="Trifuerza"><span class="sep"></span><span class="linea">Academy</span></div>
+      <span class="etiqueta">Resumen de clase · Octubre 2026</span>
+    </div>
+    <div style="margin-top:64px">
+      <span class="etiqueta">Derecho societario · Colombia</span>
+      <h1 style="margin-top:22px">Derecho<br><b>corporativo.</b></h1>
+      <p class="lead" style="margin-top:18px;max-width:430px">De la clasificación de las personas jurídicas a la SAS y la anónima: capital, acciones, capitalización y dilución, bolsa, grupos empresariales, levantamiento del velo, fusiones y escisiones.</p>
+      <p style="margin-top:16px;font-size:12px;color:var(--tenue);letter-spacing:.04em">Por <b style="color:var(--tinta);font-weight:600">Juan David Vanegas Roldán</b></p>
+    </div>
+
+    <div class="tarjeta" style="margin-top:34px;padding:18px 22px">
+      <h4>Contenido</h4>
+      <div class="indice" style="margin-top:6px">
+        <div><span>01</span>Clasificación de las personas jurídicas</div>
+        <div><span>07</span>Capitalización y dilución: un ejemplo</div>
+        <div><span>02</span>Tipos de sociedades</div>
+        <div><span>08</span>Salir a bolsa</div>
+        <div><span>03</span>SAS, SA y SCA: diferencias</div>
+        <div><span>09</span>Situación de control y grupos</div>
+        <div><span>04</span>Cómo se constituye una sociedad</div>
+        <div><span>10</span>Levantamiento del velo corporativo</div>
+        <div><span>05</span>RUES, homonimia y código CIIU</div>
+        <div><span>11</span>Fusiones, adquisiciones y escisiones</div>
+        <div><span>06</span>Capital: autorizado, suscrito y pagado</div>
+        <div><span>12</span>Lo esencial</div>
+      </div>
+    </div>
+
+    <div class="kpis" style="margin-top:auto">
+      <div class="tarjeta kpi"><b class="acc">Persona jurídica</b><span>distinta de sus socios (C. Co., art. 98)</span></div>
+      <div class="tarjeta kpi"><b>Ley 1258</b><span>de 2008: la SAS, el tipo más usado</span></div>
+      <div class="tarjeta kpi borde-nar"><b class="nar">¿A dónde va el dinero?</b><span>la pregunta que ordena todo el curso</span></div>
+    </div>
+    <div class="pie" style="margin-top:22px"><span><a class="web" href="https://www.trifuerza.co"><b>www.trifuerza.co ↗</b></a> · Trifuerza Academy</span><span>Juan David Vanegas Roldán · Código de Comercio, Ley 222 de 1995 y Ley 1258 de 2008</span></div>
+  </div>
+</section>
+
+<!-- ============================== CLASIFICACIÓN ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:620px;height:620px;right:-300px;top:-220px;background:radial-gradient(circle, rgba(0,196,204,.13), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">01</span> Clasificación</div>
+    <h2>Antes de hablar de sociedades:<br><b>el mapa de las personas jurídicas.</b></h2>
+    <p class="texto" style="margin-top:12px">Una <b>persona jurídica</b> es un sujeto de derechos distinto de las personas que la crean: tiene nombre, domicilio, patrimonio propio y puede contratar, demandar y ser demandada. Se clasifican primero por su <b>origen</b> (públicas o privadas) y luego, las privadas, por su <b>finalidad</b> (con o sin ánimo de lucro).</p>
+
+    <svg class="figura" viewBox="0 0 686 262" style="margin-top:12px">
+      <g font-size="10">
+        <rect x="243" y="0" width="200" height="40" rx="11" fill="#0E1626" stroke="#2B3850"/>
+        <text x="343" y="25" text-anchor="middle" font-size="13" font-weight="700" fill="#F3F5F8">Personas jurídicas</text>
+        <path d="M343 40v16H120v16M343 56h223v16" fill="none" stroke="#2B3850" stroke-width="1.5"/>
+        <rect x="10" y="72" width="220" height="62" rx="11" fill="#0E1626" stroke="#1E6E78"/>
+        <text x="120" y="92" text-anchor="middle" font-size="12" font-weight="700" fill="#B2F0F2">De derecho público</text>
+        <text x="120" y="108" text-anchor="middle" fill="#C9D1DC">Nación, departamentos, municipios,</text>
+        <text x="120" y="122" text-anchor="middle" fill="#C9D1DC">entidades y empresas del Estado</text>
+        <rect x="456" y="72" width="220" height="62" rx="11" fill="#0E1626" stroke="#1E6E78"/>
+        <text x="566" y="92" text-anchor="middle" font-size="12" font-weight="700" fill="#B2F0F2">De derecho privado</text>
+        <text x="566" y="108" text-anchor="middle" fill="#C9D1DC">creadas por particulares</text>
+        <text x="566" y="122" text-anchor="middle" fill="#C9D1DC">según el Código Civil o de Comercio</text>
+        <path d="M566 134v16H430v16M566 150h104v16" fill="none" stroke="#2B3850" stroke-width="1.5"/>
+        <rect x="300" y="166" width="230" height="90" rx="11" fill="#0E1626" stroke="#2B3850"/>
+        <text x="415" y="186" text-anchor="middle" font-size="12" font-weight="700" fill="#F3F5F8">Sin ánimo de lucro (ESAL)</text>
+        <text x="415" y="204" text-anchor="middle" fill="#C9D1DC">fundaciones, asociaciones y</text>
+        <text x="415" y="218" text-anchor="middle" fill="#C9D1DC">corporaciones, cooperativas y</text>
+        <text x="415" y="232" text-anchor="middle" fill="#C9D1DC">entidades del sector solidario.</text>
+        <text x="415" y="248" text-anchor="middle" fill="#94A0B2">No reparten utilidades.</text>
+        <rect x="540" y="166" width="140" height="90" rx="11" fill="#F28C28"/>
+        <text x="610" y="190" text-anchor="middle" font-size="12" font-weight="800" fill="#0B1220">Con ánimo de</text>
+        <text x="610" y="205" text-anchor="middle" font-size="12" font-weight="800" fill="#0B1220">lucro</text>
+        <text x="610" y="225" text-anchor="middle" fill="#0B1220">las sociedades:</text>
+        <text x="610" y="239" text-anchor="middle" fill="#0B1220">reparten utilidades</text>
+        <path d="M120 134v26" stroke="#2B3850" stroke-width="1.5"/>
+        <rect x="10" y="160" width="220" height="96" rx="11" fill="#0A111E" stroke="#1F2A3C"/>
+        <text x="120" y="180" text-anchor="middle" font-size="11" font-weight="700" fill="#B2F0F2">Con participación estatal</text>
+        <text x="120" y="198" text-anchor="middle" fill="#C9D1DC">Empresas industriales y comerciales</text>
+        <text x="120" y="212" text-anchor="middle" fill="#C9D1DC">del Estado · sociedades de</text>
+        <text x="120" y="226" text-anchor="middle" fill="#C9D1DC">economía mixta (capital público</text>
+        <text x="120" y="240" text-anchor="middle" fill="#C9D1DC">y privado, como Ecopetrol)</text>
+      </g>
+    </svg>
+
+    <h4 style="margin-top:16px">Las sociedades, según qué importa más: la persona o el capital</h4>
+    <div class="tres">
+      <div class="tarjeta bloque"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-users"/></svg></div><h3>De personas</h3></div><p>Importa <b>quién</b> es el socio (intuitu personae). Su participación se llama <b>parte de interés</b>; cederla exige reformar los estatutos. Responsabilidad amplia. <b>Colectiva y comandita simple.</b></p></div>
+      <div class="tarjeta bloque"><div class="cab"><div class="ic-caja nar"><svg class="ico"><use href="#i-layers"/></svg></div><h3>Intermedia</h3></div><p>Mezcla las dos: el capital se divide en <b>cuotas</b>, los socios responden hasta sus aportes, pero ceder cuotas exige reforma estatutaria. <b>Limitada.</b></p></div>
+      <div class="tarjeta bloque borde-acc"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-coin"/></svg></div><h3>De capital</h3></div><p>Importa <b>cuánto</b> aporta cada uno (intuitu pecuniae). El capital se divide en <b>acciones</b> que circulan libremente y la responsabilidad se limita al aporte. <b>Anónima, SAS y comandita por acciones.</b></p></div>
+    </div>
+
+    <div class="caja clave" style="margin-top:14px"><span class="tit">El foco de este resumen</span>Hoy, en la práctica empresarial colombiana, las sociedades con ánimo de lucro que se crean son casi siempre <b>de capital</b>: sobre todo la <b>SAS</b>, y la <b>anónima</b> para empresas grandes o que van a bolsa. Por eso el resumen se concentra en ellas, con sus acciones, su capital y cómo se mueven.</div>
+    <div class="caja ejemplo" style="margin-top:12px"><span class="tit">Comercial o civil</span>La sociedad es <b>comercial</b> si su objeto incluye actos de comercio, y <b>civil</b> si no; pero cualquier sociedad que adopte una forma comercial (SAS, SA, limitada) se rige por la ley mercantil (C. Co., art. 100).</div>
+    <div class="pie"><span><b>Derecho corporativo</b> · Clasificación</span><span><a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 2</span></div>
+  </div>
+</section>
+
+<!-- ============================== TIPOS ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:620px;height:620px;left:-300px;top:300px;background:radial-gradient(circle, rgba(242,140,40,.12), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">02</span> Tipos societarios</div>
+    <h2>Los tipos del Código de Comercio<br><b>y la SAS.</b></h2>
+    <p class="texto" style="margin-top:12px">El Código de Comercio (Decreto 410 de 1971) regula cinco tipos. En 2008 la <b>Ley 1258</b> creó la <b>sociedad por acciones simplificada (SAS)</b>, que por su flexibilidad se convirtió en la forma preferida para crear empresa. La regla que decide qué tipo elegir es casi siempre la misma: <b>¿hasta dónde responden los socios?</b></p>
+
+    <table class="tabla" style="margin-top:12px">
+      <tr><th style="width:18%">Tipo</th><th style="width:16%">Socios</th><th style="width:26%">Capital y participación</th><th>Responsabilidad de los socios</th></tr>
+      <tr><td>Colectiva</td><td>Dos o más</td><td>Partes de interés</td><td>Solidaria e <b>ilimitada</b> por las operaciones sociales</td></tr>
+      <tr><td>Comandita simple</td><td>Gestores y comanditarios</td><td>Partes de interés</td><td>Gestores: ilimitada · comanditarios: hasta su aporte</td></tr>
+      <tr><td>Limitada</td><td>Mínimo 2, máximo 25</td><td>Cuotas de igual valor, pagadas por completo al constituir</td><td>Hasta sus aportes (con excepciones, por ejemplo tributarias)</td></tr>
+      <tr><td>Anónima (SA)</td><td>Mínimo 5 accionistas</td><td>Acciones libremente negociables</td><td>Hasta el monto de sus aportes</td></tr>
+      <tr><td>Comandita por acciones (SCA)</td><td>Gestores y mínimo 5 comanditarios</td><td>El capital de los comanditarios en acciones</td><td>Gestores: ilimitada · comanditarios: hasta su aporte</td></tr>
+      <tr><td>SAS · Ley 1258 de 2008</td><td>Una o más personas, naturales o jurídicas</td><td>Acciones; reglas de capital flexibles</td><td>Hasta el monto de sus aportes, incluso frente a obligaciones laborales y tributarias de la sociedad (art. 1), salvo fraude</td></tr>
+    </table>
+
+    <div class="dos" style="margin-top:14px">
+      <div class="tarjeta bloque"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-check"/></svg></div><h3>Por qué la SAS se volvió la regla</h3></div>
+        <ul class="lista" style="margin-top:8px">
+          <li><svg class="ico"><use href="#i-check"/></svg><span>Se constituye por <b>documento privado</b>, sin notaría (salvo aportes de inmuebles).</span></li>
+          <li><svg class="ico"><use href="#i-check"/></svg><span>Puede tener <b>un solo accionista</b>.</span></li>
+          <li><svg class="ico"><use href="#i-check"/></svg><span>Objeto <b>indeterminado</b> (cualquier actividad lícita) y término <b>indefinido</b>, si así se pacta.</span></li>
+          <li><svg class="ico"><use href="#i-check"/></svg><span>Sin junta directiva obligatoria; estatutos a la medida.</span></li>
+          <li><svg class="ico"><use href="#i-check"/></svg><span>Hasta <b>2 años</b> para pagar el capital suscrito.</span></li>
+        </ul>
+      </div>
+      <div class="tarjeta bloque"><div class="cab"><div class="ic-caja nar"><svg class="ico"><use href="#i-alert"/></svg></div><h3>Sus límites</h3></div>
+        <ul class="lista no" style="margin-top:8px">
+          <li><svg class="ico"><use href="#i-x"/></svg><span><b>No puede inscribir</b> sus acciones ni otros valores en el Registro Nacional de Valores ni negociarlos en bolsa (art. 4). Para salir a bolsa, primero se transforma en SA.</span></li>
+          <li><svg class="ico"><use href="#i-x"/></svg><span>Algunas actividades vigiladas (bancos, aseguradoras) exigen por ley la forma de SA.</span></li>
+          <li><svg class="ico"><use href="#i-x"/></svg><span>La flexibilidad tiene un precio: estatutos mal redactados generan conflictos entre accionistas.</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="caja ojo" style="margin-top:12px"><span class="tit">Revisor fiscal</span>En la SA es obligatorio siempre. En la SAS y la limitada solo cuando la sociedad supera ciertos topes de activos o ingresos (Ley 43 de 1990, art. 13, parágrafo 2), o si los estatutos lo exigen.</div>
+    <div class="pie"><span><b>Derecho corporativo</b> · Tipos societarios</span><span><a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 3</span></div>
+  </div>
+</section>
+
+<!-- ============================== SAS / SA / SCA ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:620px;height:620px;right:-300px;top:-160px;background:radial-gradient(circle, rgba(0,196,204,.13), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">03</span> Las tres sociedades por acciones</div>
+    <h2>SAS, SA y SCA,<br><b>lado a lado.</b></h2>
+
+    <table class="tabla" style="margin-top:14px">
+      <tr><th style="width:18%"></th><th class="acc" style="width:28%">SAS</th><th class="nar" style="width:28%">Anónima (SA)</th><th>Comandita por acciones (SCA)</th></tr>
+      <tr><td>Norma</td><td>Ley 1258 de 2008 (y el C. Co. en lo no regulado)</td><td>C. Co., arts. 373 y siguientes</td><td>C. Co., arts. 343 a 352 (y reglas de la SA)</td></tr>
+      <tr><td>Accionistas</td><td>Uno o más</td><td>Mínimo 5; ninguno puede llegar al 95 % o más (causal de disolución)</td><td>Uno o más gestores y mínimo 5 comanditarios</td></tr>
+      <tr><td>Constitución</td><td>Documento privado inscrito en la Cámara de Comercio</td><td>Escritura pública inscrita en la Cámara de Comercio</td><td>Escritura pública inscrita en la Cámara de Comercio</td></tr>
+      <tr><td>Capital al constituir</td><td>Libre proporción entre autorizado, suscrito y pagado; pago en máximo 2 años</td><td>Suscrito ≥ 50 % del autorizado; pagado ≥ 1/3 del suscrito; saldo en máximo 1 año</td><td>Igual que la SA para las acciones</td></tr>
+      <tr><td>Responsabilidad</td><td>Hasta los aportes</td><td>Hasta los aportes</td><td>Gestores ilimitada; comanditarios hasta su aporte</td></tr>
+      <tr><td>Administración</td><td>Libre: puede bastar un representante legal; junta directiva opcional</td><td>Asamblea, junta directiva (mínimo 3 miembros) y representante legal</td><td>La administran los <b>gestores</b>; los comanditarios no</td></tr>
+      <tr><td>Bolsa de valores</td><td><b>No</b> puede negociar sus acciones en bolsa</td><td><b>Sí</b>: es el vehículo para salir a bolsa</td><td>Posible en teoría; en la práctica es rara</td></tr>
+      <tr><td>Uso típico</td><td>Emprendimientos, pymes, filiales de grupos, vehículos de inversión</td><td>Empresas grandes, entidades financieras, emisores en bolsa</td><td>Hoy casi en desuso; útil cuando un gestor quiere control con capital de inversionistas</td></tr>
+    </table>
+
+    <div class="dos" style="margin-top:14px">
+      <div class="tarjeta bloque"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-doc"/></svg></div><h3>Herramientas propias de la SAS</h3></div>
+        <ul class="lista" style="margin-top:8px">
+          <li><svg class="ico"><use href="#i-check"/></svg><span><b>Acciones de clases distintas</b>: con voto múltiple, con dividendo fijo, de pago (para remunerar trabajo).</span></li>
+          <li><svg class="ico"><use href="#i-check"/></svg><span><b>Restricción de negociación</b> de acciones hasta por 10 años, prorrogables.</span></li>
+          <li><svg class="ico"><use href="#i-check"/></svg><span><b>Acuerdos de accionistas</b> obligatorios para la sociedad si se depositan en ella (art. 24).</span></li>
+          <li><svg class="ico"><use href="#i-check"/></svg><span><b>Exclusión</b> de accionistas por causales de los estatutos.</span></li>
+        </ul>
+      </div>
+      <div class="tarjeta bloque"><div class="cab"><div class="ic-caja nar"><svg class="ico"><use href="#i-shield"/></svg></div><h3>Lo que protege la estructura de la SA</h3></div>
+        <ul class="lista" style="margin-top:8px">
+          <li><svg class="ico"><use href="#i-check"/></svg><span><b>Derecho de preferencia</b> en la suscripción de nuevas acciones, por ley.</span></li>
+          <li><svg class="ico"><use href="#i-check"/></svg><span>Junta directiva y revisor fiscal: más control sobre los administradores.</span></li>
+          <li><svg class="ico"><use href="#i-check"/></svg><span>Reglas de mayorías y de capital más rígidas, pensadas para muchos accionistas que no se conocen.</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="caja clave" style="margin-top:12px"><span class="tit">Para recordar</span>SAS = <b>flexibilidad</b> y control para pocos socios. SA = <b>estructura</b> para muchos accionistas y para el mercado de valores. SCA = <b>dos clases de socios</b>: quien manda y responde con todo, y quien pone capital y arriesga solo su aporte.</div>
+    <div class="pie"><span><b>Derecho corporativo</b> · SAS, SA y SCA</span><span><a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 4</span></div>
+  </div>
+</section>
+
+<!-- ============================== CONSTITUCIÓN ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:620px;height:620px;left:-300px;top:-180px;background:radial-gradient(circle, rgba(242,140,40,.12), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">04</span> Constitución</div>
+    <h2>Cómo nace una sociedad,<br><b>paso a paso.</b></h2>
+    <p class="texto" style="margin-top:12px">La sociedad nace con el <b>contrato social</b> (o el acto unilateral, si es SAS de un solo accionista) y adquiere personalidad jurídica, separada de sus socios, con la <b>inscripción en el registro mercantil</b> de la Cámara de Comercio de su domicilio. Antes de esa inscripción, quienes actúan a nombre de la sociedad responden personalmente.</p>
+
+    <div class="tarjeta" style="margin-top:14px;padding:18px 20px">
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div class="paso"><div class="n">1</div><div><h3>Consultar el nombre en el RUES</h3><p>Verificar que no exista otra sociedad con el mismo nombre (homonimia) y, aparte, que no choque con una marca registrada.</p></div></div>
+        <div class="paso"><div class="n">2</div><div><h3>Definir actividad y código CIIU</h3><p>La actividad principal y las secundarias, con su código. Influyen en impuestos (como el ICA) y en las responsabilidades ante la DIAN.</p></div></div>
+        <div class="paso"><div class="n">3</div><div><h3>Redactar los estatutos</h3><p>Nombre con la sigla del tipo, domicilio, término, objeto, capital (autorizado, suscrito y pagado), clases y valor nominal de las acciones, órganos, representación legal y reglas entre accionistas.</p></div></div>
+        <div class="paso"><div class="n">4</div><div><h3>Firmar el documento</h3><p>SAS: documento privado con firmas autenticadas o con presentación personal. SA, SCA y limitada: escritura pública ante notario. En cualquier tipo, si se aportan inmuebles, escritura pública.</p></div></div>
+        <div class="paso"><div class="n">5</div><div><h3>Inscribir en la Cámara de Comercio</h3><p>Con el formulario de registro, el pre-RUT y el pago de los derechos de registro y del impuesto de registro. La Cámara expide el certificado de existencia y representación legal.</p></div></div>
+        <div class="paso"><div class="n">6</div><div><h3>RUT y NIT ante la DIAN</h3><p>Formalizar el RUT, obtener el NIT, habilitar la facturación electrónica y abrir la cuenta bancaria a nombre de la sociedad.</p></div></div>
+        <div class="paso"><div class="n">7</div><div><h3>Libros y primeros actos</h3><p>Libro de registro de accionistas y libro de actas; nombrar contador (y revisor fiscal si aplica); registrar los títulos de las acciones.</p></div></div>
+      </div>
+    </div>
+
+    <div class="dos" style="margin-top:14px">
+      <div class="caja clave"><span class="tit">Separación patrimonial</span>Inscrita la sociedad, su patrimonio es distinto del de los socios: los acreedores de la sociedad cobran a la sociedad, y los acreedores personales del socio solo pueden perseguir sus acciones, no los bienes de la empresa.</div>
+      <div class="caja ojo"><span class="tit">Sociedad de hecho</span>Si varias personas hacen negocios en común sin constituir formalmente la sociedad, hay una <b>sociedad de hecho</b>: no es persona jurídica y los socios responden solidaria e ilimitadamente (C. Co., arts. 498 y siguientes).</div>
+    </div>
+    <h4 style="margin-top:14px">Errores frecuentes al constituir</h4>
+    <div class="tres">
+      <div class="tarjeta bloque"><h3>Estatutos de plantilla</h3><p>Copiar unos estatutos genéricos deja sin resolver lo importante: salida de socios, derecho de preferencia, mayorías y qué pasa si un socio no paga.</p></div>
+      <div class="tarjeta bloque"><h3>Capital simbólico</h3><p>Un capital de $1.000 se ve barato, pero resta credibilidad ante bancos y clientes y puede ser indicio de infracapitalización.</p></div>
+      <div class="tarjeta bloque"><h3>Olvidar la renovación</h3><p>La matrícula mercantil se renueva cada año (hasta el 31 de marzo). No hacerlo genera sanciones y puede llevar a la disolución por inactividad.</p></div>
+    </div>
+    <div class="pie"><span><b>Derecho corporativo</b> · Constitución</span><span><a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 5</span></div>
+  </div>
+</section>
+
+<!-- ============================== RUES Y CIIU ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:620px;height:620px;right:-300px;top:260px;background:radial-gradient(circle, rgba(0,196,204,.13), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">05</span> Herramientas de consulta</div>
+    <h2>RUES, homonimia<br><b>y código CIIU.</b></h2>
+
+    <div class="dos" style="margin-top:14px">
+      <div class="tarjeta bloque borde-acc"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-search"/></svg></div><h3>El RUES</h3></div><p>El <b>Registro Único Empresarial y Social</b> reúne los registros de todas las Cámaras de Comercio del país: mercantil, de entidades sin ánimo de lucro, de proponentes y otros. Se consulta gratis en <b>www.rues.org.co</b>.</p>
+        <ul class="lista" style="margin-top:8px">
+          <li><svg class="ico"><use href="#i-check"/></svg><span>Buscar empresas por nombre, NIT o matrícula.</span></li>
+          <li><svg class="ico"><use href="#i-check"/></svg><span>Ver estado de la matrícula, renovación y Cámara donde está inscrita.</span></li>
+          <li><svg class="ico"><use href="#i-check"/></svg><span>Consultar la disponibilidad de un nombre antes de constituir.</span></li>
+          <li><svg class="ico"><use href="#i-check"/></svg><span>Pedir certificados de existencia y representación legal (con costo, en la Cámara).</span></li>
+        </ul>
+      </div>
+      <div class="tarjeta bloque borde-nar"><div class="cab"><div class="ic-caja nar"><svg class="ico"><use href="#i-doc"/></svg></div><h3>El control de homonimia</h3></div><p>Las Cámaras de Comercio <b>no pueden matricular</b> una sociedad o establecimiento con un nombre <b>idéntico</b> a otro ya inscrito (C. Co., art. 35). Es un control <b>literal</b>: no revisa nombres parecidos ni marcas.</p>
+        <p style="margin-top:8px">Por eso, que la Cámara acepte el nombre <b>no garantiza</b> que se pueda usar en el mercado: si alguien tiene registrada esa marca ante la SIC, puede impedir su uso como marca o nombre comercial. Buscar siempre en los dos: <b>RUES</b> y <b>base de marcas de la SIC</b>.</p>
+      </div>
+    </div>
+
+    <h4 style="margin-top:16px">Actividad económica y código CIIU</h4>
+    <p class="texto">La <b>Clasificación Industrial Internacional Uniforme (CIIU)</b> es un estándar de la ONU que ordena todas las actividades económicas. En Colombia se usa la <b>Revisión 4 adaptada para Colombia (CIIU Rev. 4 A.C.)</b> del DANE. La Cámara de Comercio y la DIAN identifican la actividad de cada empresa con un código de cuatro dígitos.</p>
+    <table class="tabla" style="margin-top:10px">
+      <tr><th style="width:16%">Código</th><th style="width:44%">Actividad (ejemplos)</th><th>Para qué importa</th></tr>
+      <tr><td>6201</td><td>Desarrollo de sistemas informáticos (planificación, análisis, diseño, programación y pruebas)</td><td rowspan="4">Define la tarifa del <b>impuesto de industria y comercio (ICA)</b> en cada municipio, las responsabilidades en el RUT, algunos permisos y estadísticas. Se registra una actividad <b>principal</b> y hasta tres <b>secundarias</b>.</td></tr>
+      <tr><td>6910</td><td>Actividades jurídicas</td></tr>
+      <tr><td>5611</td><td>Expendio a la mesa de comidas preparadas (restaurantes)</td></tr>
+      <tr><td>8559</td><td>Otros tipos de educación n.c.p. (cursos libres)</td></tr>
+    </table>
+
+    <div class="dos" style="margin-top:14px">
+      <div class="caja clave"><span class="tit">Objeto social y CIIU no son lo mismo</span>El <b>objeto social</b> (en los estatutos) dice lo que la sociedad <b>puede</b> hacer; el <b>código CIIU</b> (en el registro y el RUT) dice lo que <b>efectivamente</b> hace. En la SAS el objeto puede ser indeterminado, pero el CIIU siempre debe ser concreto.</div>
+      <div class="caja ejemplo"><span class="tit">Ejercicio</span>Antes de constituir "Aurora Digital S.A.S.": (1) consulta en el RUES si existe ese nombre exacto; (2) busca "Aurora" en la base de marcas de la SIC para servicios de software; (3) elige el CIIU 6201 como principal.</div>
+    </div>
+    <div class="tarjeta bloque" style="margin-top:12px"><div class="cab"><div class="ic-caja nar"><svg class="ico"><use href="#i-alert"/></svg></div><h3>Nombre, marca y dominio: tres cosas distintas</h3></div><p>La <b>razón social</b> se protege en la Cámara (homonimia literal), la <b>marca</b> en la SIC (riesgo de confusión, por clases) y el <b>dominio web</b> con el registrador. Conviene revisar los tres antes de elegir el nombre.</p></div>
+    <div class="pie"><span><b>Derecho corporativo</b> · RUES y CIIU</span><span><a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 6</span></div>
+  </div>
+</section>
+
+<!-- ============================== CAPITAL ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:620px;height:620px;left:-300px;top:-160px;background:radial-gradient(circle, rgba(0,196,204,.14), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">06</span> El capital</div>
+    <h2>Autorizado, suscrito y pagado:<br><b>tres capas del mismo capital.</b></h2>
+    <p class="texto" style="margin-top:12px">En las sociedades por acciones el capital se expresa en tres niveles. Entenderlos es la base para todo lo que sigue: ventas de acciones, capitalizaciones y dilución.</p>
+
+    <svg class="figura" viewBox="0 0 686 150" style="margin-top:12px">
+      <rect x="0" y="0" width="686" height="150" rx="14" fill="#0A111E" stroke="#2B3850"/>
+      <text x="16" y="24" font-size="12" font-weight="800" fill="#F3F5F8">Capital AUTORIZADO · el techo que fijan los estatutos</text>
+      <rect x="16" y="36" width="440" height="100" rx="10" fill="#0E1626" stroke="#1E6E78"/>
+      <text x="30" y="58" font-size="11.5" font-weight="700" fill="#B2F0F2">Capital SUSCRITO · lo que los accionistas se obligaron a pagar</text>
+      <rect x="30" y="70" width="190" height="54" rx="8" fill="#33D6DD"/>
+      <text x="125" y="93" text-anchor="middle" font-size="11.5" font-weight="800" fill="#0B1220">Capital PAGADO</text>
+      <text x="125" y="110" text-anchor="middle" font-size="10" fill="#0B1220">lo que ya entró a la caja</text>
+      <text x="240" y="93" font-size="10.5" fill="#C9D1DC">Por pagar: una cuenta</text>
+      <text x="240" y="109" font-size="10.5" fill="#C9D1DC">por cobrar a los accionistas</text>
+      <text x="472" y="80" font-size="10.5" fill="#C9D1DC">Acciones en reserva:</text>
+      <text x="472" y="96" font-size="10.5" fill="#C9D1DC">la sociedad puede emitirlas</text>
+      <text x="472" y="112" font-size="10.5" fill="#C9D1DC">después sin reformar estatutos</text>
+    </svg>
+
+    <div class="tres" style="margin-top:14px">
+      <div class="tarjeta bloque borde-acc"><h3 class="acc">Autorizado</h3><p>El <b>máximo</b> de capital que la sociedad puede emitir sin reformar sus estatutos. No es dinero: es un límite. Aumentarlo exige reforma estatutaria.</p></div>
+      <div class="tarjeta bloque borde-acc"><h3 class="acc">Suscrito</h3><p>La parte del autorizado que los accionistas se <b>comprometieron a pagar</b> al recibir acciones. Determina el porcentaje de cada uno y su voto.</p></div>
+      <div class="tarjeta bloque borde-acc"><h3 class="acc">Pagado</h3><p>La parte del suscrito que <b>efectivamente se entregó</b> a la sociedad (en dinero, bienes o, en ciertos casos, trabajo). El resto es una deuda del accionista con la sociedad.</p></div>
+    </div>
+
+    <table class="tabla" style="margin-top:14px">
+      <tr><th style="width:24%">Regla</th><th class="nar" style="width:38%">Anónima (C. Co., art. 376)</th><th class="acc">SAS (Ley 1258, art. 9)</th></tr>
+      <tr><td>Suscrito al constituir</td><td>Por lo menos el <b>50 %</b> del autorizado</td><td>Libre</td></tr>
+      <tr><td>Pagado al constituir</td><td>Por lo menos <b>un tercio</b> del suscrito</td><td>Libre</td></tr>
+      <tr><td>Plazo para pagar el resto</td><td>Máximo <b>1 año</b></td><td>Máximo <b>2 años</b></td></tr>
+    </table>
+
+    <div class="dos" style="margin-top:14px">
+      <div class="tarjeta bloque"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-coin"/></svg></div><h3>Valor nominal y prima</h3></div><p>El <b>valor nominal</b> es el valor de cada acción en los estatutos (por ejemplo, $1.000). Si una acción nueva se coloca por más, la diferencia es la <b>prima en colocación de acciones</b>: entra a la sociedad, pero no aumenta el capital, sino el patrimonio.</p></div>
+      <div class="tarjeta bloque"><div class="cab"><div class="ic-caja nar"><svg class="ico"><use href="#i-chart"/></svg></div><h3>Capital no es patrimonio</h3></div><p>El capital es lo que aportaron los accionistas. El <b>patrimonio</b> suma además la prima, las reservas y las utilidades (o resta las pérdidas). Una sociedad con capital de $100 millones puede valer mucho más o mucho menos.</p></div>
+    </div>
+    <div class="caja ojo" style="margin-top:12px"><span class="tit">Reserva legal</span>Las sociedades anónimas deben destinar el <b>10 %</b> de las utilidades líquidas de cada año a una reserva legal, hasta completar el <b>50 %</b> del capital suscrito (C. Co., art. 452).</div>
+    <div class="pie"><span><b>Derecho corporativo</b> · El capital</span><span><a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 7</span></div>
+  </div>
+</section>
+
+<!-- ============================== EJEMPLO NUMÉRICO ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:620px;height:620px;right:-300px;top:-200px;background:radial-gradient(circle, rgba(242,140,40,.12), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">07</span> Un ejemplo de principio a fin</div>
+    <h2>Venta de acciones, capitalización<br><b>y dilución, con números.</b></h2>
+    <p class="texto" style="margin-top:10px"><b>Aurora S.A.S.</b> tiene un capital autorizado de 200.000 acciones y un capital suscrito de <b>$100.000.000</b>: 100.000 acciones de valor nominal <b>$1.000</b>. La pregunta clave en cada paso: <b>¿a dónde va el dinero?</b></p>
+
+    <div class="tarjeta bloque" style="margin-top:10px">
+      <h3><span class="chip">Paso 1</span>&nbsp; Constitución: Ana 60 % y Bruno 40 %, con el 30 % pagado</h3>
+      <table class="tabla" style="margin-top:6px">
+        <tr><th>Accionista</th><th class="n">Acciones</th><th class="n">Suscrito</th><th class="n">Pagado (30 %)</th><th class="n">Por pagar</th><th class="n">%</th></tr>
+        <tr><td>Ana</td><td class="n">60.000</td><td class="n">$60.000.000</td><td class="n">$18.000.000</td><td class="n">$42.000.000</td><td class="n">60 %</td></tr>
+        <tr><td>Bruno</td><td class="n">40.000</td><td class="n">$40.000.000</td><td class="n">$12.000.000</td><td class="n">$28.000.000</td><td class="n">40 %</td></tr>
+      </table>
+      <p>Los <b>$30 millones</b> pagados entran a la sociedad. Los $70 millones restantes son una cuenta por cobrar a Ana y Bruno (en la SAS, máximo 2 años para pagarlos).</p>
+    </div>
+
+    <div class="tarjeta bloque" style="margin-top:10px">
+      <h3><span class="chip nar">Paso 2</span>&nbsp; Bruno vende sus 40.000 acciones a Carla por $50.000.000</h3>
+      <p>Es una <b>compraventa (cesión) de acciones</b> entre accionistas: el precio lo pagan Carla a Bruno y va al <b>patrimonio personal de Bruno</b>, no a la sociedad. El capital de Aurora no cambia: siguen 100.000 acciones y $100 millones suscritos. Carla queda con el 40 % y asume el saldo por pagar de esas acciones (la ley hace responder también a Bruno, solidariamente, por lo no pagado). Se perfecciona con el endoso o la carta de traspaso y la <b>inscripción en el libro de registro de accionistas</b>; antes de eso no produce efectos frente a la sociedad. Si los estatutos pactan <b>derecho de preferencia</b>, Bruno debe ofrecerlas primero a Ana.</p>
+    </div>
+
+    <div class="tarjeta bloque" style="margin-top:10px">
+      <h3><span class="chip">Paso 3</span>&nbsp; Capitalización: Daniel suscribe 25.000 acciones nuevas a $2.000 cada una</h3>
+      <p>La sociedad emite acciones de su capital autorizado (reglamento de colocación) y firma con Daniel un <b>contrato de suscripción</b>. Daniel paga <b>$50.000.000 a la sociedad</b>: $25 millones aumentan el capital suscrito (25.000 × $1.000) y $25 millones son <b>prima en colocación</b>. El dinero <b>se queda en Aurora</b> para financiar su crecimiento.</p>
+      <table class="tabla" style="margin-top:6px">
+        <tr><th>Accionista</th><th class="n">Acciones antes</th><th class="n">% antes</th><th class="n">Acciones después</th><th class="n">% después</th></tr>
+        <tr><td>Ana</td><td class="n">60.000</td><td class="n">60 %</td><td class="n">60.000</td><td class="n"><b>48 %</b></td></tr>
+        <tr><td>Carla</td><td class="n">40.000</td><td class="n">40 %</td><td class="n">40.000</td><td class="n"><b>32 %</b></td></tr>
+        <tr><td>Daniel</td><td class="n">—</td><td class="n">—</td><td class="n">25.000</td><td class="n"><b>20 %</b></td></tr>
+        <tr><td>Total</td><td class="n">100.000</td><td class="n">100 %</td><td class="n">125.000</td><td class="n">100 %</td></tr>
+      </table>
+      <div class="barra"><div style="width:48%;background:#33D6DD">Ana 48 %</div><div style="width:32%;background:#B2F0F2">Carla 32 %</div><div style="width:20%;background:#F28C28">Daniel 20 %</div></div>
+    </div>
+
+    <div class="caja ojo" style="margin-top:10px"><span class="tit">La dilución</span>Ana no vendió nada, pero pasó del 60 % al <b>48 %</b>: <b>perdió la mayoría</b> porque ahora hay más acciones en circulación. Para evitarlo existe el <b>derecho de preferencia</b> en la suscripción de acciones nuevas (legal en la SA; en la SAS, según los estatutos): si Ana lo hubiera ejercido, habría podido suscribir el 60 % de la nueva emisión y conservar su porcentaje.</div>
+    <div class="pie"><span><b>Derecho corporativo</b> · Ejemplo numérico</span><span><a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 8</span></div>
+  </div>
+</section>
+
+<!-- ============================== A DÓNDE VA EL DINERO ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:620px;height:620px;left:-300px;top:260px;background:radial-gradient(circle, rgba(0,196,204,.13), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">08</span> Operaciones de capital y bolsa</div>
+    <h2>¿A dónde va el dinero?<br><b>Y cómo se llega a la bolsa.</b></h2>
+
+    <table class="tabla" style="margin-top:14px">
+      <tr><th style="width:26%">Operación</th><th style="width:38%">Qué pasa</th><th>¿A dónde va el dinero?</th></tr>
+      <tr><td>Compraventa o cesión de acciones</td><td>Un accionista vende sus acciones a otra persona</td><td>Al <b>vendedor</b>. La sociedad no recibe nada; su capital no cambia</td></tr>
+      <tr><td>Suscripción de acciones nuevas (capitalización)</td><td>La sociedad emite acciones y un inversionista las paga</td><td>A la <b>sociedad</b>: aumenta el capital (y la prima, si se coloca sobre el nominal)</td></tr>
+      <tr><td>Pago del capital suscrito pendiente</td><td>El accionista paga lo que debía de sus acciones</td><td>A la <b>sociedad</b>: aumenta el capital pagado, no el suscrito</td></tr>
+      <tr><td>Capitalización de utilidades</td><td>En vez de repartir dividendos en dinero, se entregan acciones</td><td>Se <b>queda</b> en la sociedad: las utilidades se vuelven capital</td></tr>
+      <tr><td>Capitalización de acreencias</td><td>Un acreedor (un banco, un socio que prestó) recibe acciones a cambio de su crédito</td><td>No entra dinero nuevo: la <b>deuda se convierte en capital</b></td></tr>
+      <tr><td>Readquisición de acciones</td><td>La sociedad compra sus propias acciones, con utilidades líquidas y autorización de la asamblea</td><td>Sale de la sociedad hacia el accionista que vende</td></tr>
+    </table>
+
+    <h4 style="margin-top:16px">Salir a bolsa: el camino</h4>
+    <div class="tarjeta" style="padding:16px 20px">
+      <div style="display:flex;flex-direction:column;gap:11px">
+        <div class="paso"><div class="n">1</div><div><h3>Ser sociedad anónima</h3><p>Si es SAS, primero se <b>transforma</b> en SA (C. Co., art. 167): cambia de tipo sin liquidarse y conserva su personalidad jurídica.</p></div></div>
+        <div class="paso"><div class="n">2</div><div><h3>Prepararse para el mercado</h3><p>Estados financieros auditados, junta directiva con miembros independientes, prácticas de gobierno corporativo (Código País de la Superintendencia Financiera) y políticas de revelación de información.</p></div></div>
+        <div class="paso"><div class="n">3</div><div><h3>Inscribirse en el RNVE y en la bolsa</h3><p>Inscribir las acciones en el <b>Registro Nacional de Valores y Emisores</b> de la Superintendencia Financiera y en la Bolsa de Valores de Colombia, con un <b>prospecto</b> que informe a los inversionistas.</p></div></div>
+        <div class="paso"><div class="n">4</div><div><h3>Oferta pública inicial (OPI o IPO)</h3><p>Si es <b>primaria</b>, la sociedad emite acciones nuevas y el dinero entra a ella: es una gran capitalización. Si es <b>secundaria</b>, los accionistas actuales venden y el dinero va a ellos.</p></div></div>
+      </div>
+    </div>
+    <div class="caja clave" style="margin-top:12px"><span class="tit">El hilo conductor</span>Una IPO primaria es el mismo Paso 3 del ejemplo, pero con miles de inversionistas: la sociedad recibe el dinero y los accionistas fundadores se <b>diluyen</b>. Por eso se negocian antes acuerdos de accionistas para conservar el control.</div>
+    <div class="dos" style="margin-top:12px">
+      <div class="tarjeta bloque"><h3>OPA</h3><p>Quien quiera adquirir una participación significativa en una sociedad inscrita en bolsa debe hacerlo, en ciertos casos, mediante una <b>oferta pública de adquisición</b> dirigida a todos los accionistas (Decreto 2555 de 2010).</p></div>
+      <div class="tarjeta bloque"><h3>Bonos: financiarse sin diluirse</h3><p>Una sociedad también puede ir al mercado emitiendo <b>bonos</b> (deuda) en vez de acciones: recibe el dinero, pero debe devolverlo con intereses y no entrega participación.</p></div>
+    </div>
+    <div class="pie"><span><b>Derecho corporativo</b> · Operaciones de capital y bolsa</span><span><a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 9</span></div>
+  </div>
+</section>
+
+<!-- ============================== CONTROL Y GRUPOS ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:620px;height:620px;right:-300px;top:-180px;background:radial-gradient(circle, rgba(242,140,40,.12), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">09</span> Situación de control y grupos</div>
+    <h2>Quién manda de verdad:<br><b>matrices, filiales y grupos.</b></h2>
+    <p class="texto" style="margin-top:12px">Una sociedad es <b>subordinada</b> (o controlada) cuando su poder de decisión está sometido a la voluntad de otra persona, llamada <b>matriz</b> o controlante (C. Co., art. 260, modificado por la Ley 222 de 1995). Es <b>filial</b> si la controla directamente y <b>subsidiaria</b> si la controla a través de una filial. La matriz puede ser una sociedad, una persona natural u otra entidad.</p>
+
+    <h4 style="margin-top:14px">Cuándo se presume el control (art. 261)</h4>
+    <div class="tres">
+      <div class="caja clave" style="padding:13px 14px"><span class="tit">1 · Capital</span>Más del <b>50 %</b> del capital es de la matriz, directamente o por medio de sus subordinadas.</div>
+      <div class="caja clave" style="padding:13px 14px"><span class="tit">2 · Votos</span>Tiene los votos para la <b>mayoría decisoria</b> en la asamblea o para elegir la mayoría de la junta directiva.</div>
+      <div class="caja clave" style="padding:13px 14px"><span class="tit">3 · Influencia dominante</span>Ejerce influencia dominante en las decisiones por un <b>acto o negocio</b> con la sociedad o sus socios.</div>
+    </div>
+
+    <div class="dos" style="margin-top:14px">
+      <div class="tarjeta bloque borde-nar"><div class="cab"><div class="ic-caja nar"><svg class="ico"><use href="#i-layers"/></svg></div><h3>Grupo empresarial (Ley 222, art. 28)</h3></div><p>Hay grupo cuando, además del control, existe <b>unidad de propósito y dirección</b>: las sociedades persiguen un objetivo común definido por la matriz. Todo grupo supone control, pero no todo control es grupo.</p></div>
+      <div class="tarjeta bloque"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-doc"/></svg></div><h3>Obligaciones y efectos</h3></div>
+        <ul class="lista" style="margin-top:6px">
+          <li><svg class="ico"><use href="#i-check"/></svg><span><b>Inscribir</b> la situación de control o de grupo en el registro mercantil dentro de los 30 días siguientes (Ley 222, art. 30).</span></li>
+          <li><svg class="ico"><use href="#i-check"/></svg><span>Presentar <b>estados financieros consolidados</b>.</span></li>
+          <li><svg class="ico"><use href="#i-check"/></svg><span>En la insolvencia de la subordinada, se presume que la causó la matriz, que puede responder subsidiariamente (Ley 1116 de 2006, art. 61).</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="caja ojo" style="margin-top:12px"><span class="tit">La imbricación está prohibida</span>Las subordinadas <b>no pueden tener acciones o cuotas de su matriz</b> (C. Co., art. 262). Si las tuvieran, se formaría un círculo de participaciones recíprocas (imbricación) que infla artificialmente el capital y permite a los administradores controlarse a sí mismos. Los negocios que violen la prohibición son ineficaces.</div>
+
+    <h4 style="margin-top:14px">Ejemplos en Colombia</h4>
+    <div class="tarjeta" style="padding:4px 16px">
+      <div class="frase" style="grid-template-columns:150px 1fr"><span>Grupo Empresarial Antioqueño</span><div>Durante décadas, Grupo Sura, Grupo Argos y Grupo Nutresa se tuvieron participaciones cruzadas (el "enroque"), que protegía el control frente a compradores externos. No era imbricación prohibida porque no eran matriz y subordinadas entre sí. Desde 2023 se deshizo con la venta de Nutresa y un intercambio de acciones entre Sura y Argos.</div></div>
+      <div class="frase" style="grid-template-columns:150px 1fr"><span>Grupo Aval</span><div>Holding financiero que controla bancos y otras entidades, con situación de control inscrita y estados consolidados.</div></div>
+      <div class="frase" style="grid-template-columns:150px 1fr"><span>Grupo Ecopetrol</span><div>Matriz de economía mixta, controlada por la Nación, con filiales y subsidiarias en Colombia y el exterior.</div></div>
+    </div>
+    <div class="caja ejemplo" style="margin-top:12px"><span class="tit">Ejercicio</span>Ana tiene el 48 % de Aurora y un acuerdo de accionistas con Daniel (20 %) para votar juntos. ¿Hay control? Sí puede haberlo: no por capital (no supera el 50 %), pero sí por <b>votos</b> o por <b>influencia dominante</b> derivada del acuerdo. Si Aurora fuera matriz de otra sociedad, Ana debería revisar si hay grupo empresarial que inscribir.</div>
+    <div class="pie"><span><b>Derecho corporativo</b> · Control y grupos</span><span><a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 10</span></div>
+  </div>
+</section>
+
+<!-- ============================== VELO CORPORATIVO ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:620px;height:620px;left:-300px;top:-180px;background:radial-gradient(circle, rgba(0,196,204,.14), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">10</span> Levantamiento del velo</div>
+    <h2>Cuando la sociedad es una máscara,<br><b>el juez mira detrás.</b></h2>
+    <p class="texto" style="margin-top:12px">La separación entre la sociedad y sus socios (C. Co., art. 98) es la regla y es legítima: limitar el riesgo es precisamente para lo que sirven las sociedades. Pero si la sociedad se usa como <b>instrumento de fraude</b>, el ordenamiento permite <b>desestimar la personalidad jurídica</b> ("levantar el velo") y hacer responder directamente a quienes estaban detrás.</p>
+
+    <div class="caja clave" style="margin-top:14px"><span class="tit">La regla de la SAS (Ley 1258, art. 42)</span>Cuando se utilice la sociedad en <b>fraude a la ley</b> o en <b>perjuicio de terceros</b>, los accionistas y los administradores que hubieren realizado, participado o facilitado los actos defraudatorios <b>responden solidariamente</b> por las obligaciones nacidas de esos actos y por los perjuicios. La acción se tramita ante la <b>Superintendencia de Sociedades</b> (con funciones jurisdiccionales). Además, los actos son nulos absolutamente.</div>
+
+    <h4 style="margin-top:16px">Señales típicas que llevan a levantar el velo</h4>
+    <div class="dos">
+      <div class="tarjeta bloque"><h3>Confusión de patrimonios</h3><p>Los socios usan las cuentas de la sociedad como propias, o al revés; no hay contabilidad separada.</p></div>
+      <div class="tarjeta bloque"><h3>Vaciamiento patrimonial</h3><p>Se trasladan los bienes a otra sociedad o a los socios justo antes de un embargo o una demanda.</p></div>
+      <div class="tarjeta bloque"><h3>Sociedad de papel</h3><p>Se crea solo para recibir un contrato, una deuda o un pago y luego desaparecer, sin operación real.</p></div>
+      <div class="tarjeta bloque"><h3>Infracapitalización</h3><p>Se emprende un negocio de alto riesgo con un capital insignificante para trasladar las pérdidas a los acreedores.</p></div>
+    </div>
+
+    <h4 style="margin-top:16px">Otras vías por las que el socio o el administrador termina respondiendo</h4>
+    <table class="tabla">
+      <tr><th style="width:30%">Norma</th><th>Qué permite</th></tr>
+      <tr><td>Ley 1116 de 2006 (insolvencia)</td><td>Responsabilidad de la matriz (art. 61) y de socios, administradores y revisores fiscales que causaron el déficit patrimonial (art. 82).</td></tr>
+      <tr><td>Ley 222 de 1995, art. 24</td><td>Responsabilidad de los administradores por los perjuicios que causen por dolo o culpa.</td></tr>
+      <tr><td>Estatuto Tributario, art. 794</td><td>Solidaridad de los socios por impuestos de la sociedad, a prorrata de sus aportes; no aplica a accionistas de sociedades anónimas y asimiladas (como la SAS).</td></tr>
+      <tr><td>Ley 1258 de 2008, art. 43</td><td>Abuso del derecho de voto: el accionista que vota para dañar a la sociedad o a otros responde por los perjuicios.</td></tr>
+    </table>
+    <div class="caja ojo" style="margin-top:12px"><span class="tit">Es la excepción</span>El velo no se levanta porque la sociedad no pueda pagar: el riesgo de insolvencia lo asumen los acreedores. Se levanta cuando hay <b>abuso o fraude</b> probado.</div>
+    <div class="caja ejemplo" style="margin-top:12px"><span class="tit">Caso típico</span>Un contratista pierde una demanda contra su SAS. Antes del embargo, los accionistas trasladan las máquinas a una SAS nueva con los mismos dueños y siguen el negocio. El acreedor puede pedir ante la Superintendencia de Sociedades la <b>desestimación</b> y cobrar a los accionistas que participaron.</div>
+    <div class="pie"><span><b>Derecho corporativo</b> · Levantamiento del velo</span><span><a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 11</span></div>
+  </div>
+</section>
+
+<!-- ============================== FUSIONES ============================== -->
+<section class="pagina cruces">
+  <div class="brillo" style="width:620px;height:620px;right:-300px;top:260px;background:radial-gradient(circle, rgba(242,140,40,.12), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo"><span class="num">11</span> Reorganizaciones</div>
+    <h2>Fusiones, adquisiciones<br><b>y escisiones.</b></h2>
+
+    <svg class="figura" viewBox="0 0 686 132" style="margin-top:14px">
+      <g font-size="11" font-weight="800">
+        <rect x="0" y="0" width="222" height="132" rx="12" fill="#0E1626" stroke="#1F2A3C"/>
+        <text x="111" y="20" text-anchor="middle" fill="#B2F0F2">Fusión por absorción</text>
+        <rect x="18" y="38" width="44" height="34" rx="6" fill="#33D6DD"/><text x="40" y="60" text-anchor="middle" fill="#0B1220">A</text>
+        <text x="72" y="60" fill="#94A0B2">+</text>
+        <rect x="86" y="38" width="44" height="34" rx="6" fill="#F28C28"/><text x="108" y="60" text-anchor="middle" fill="#0B1220">B</text>
+        <text x="142" y="60" fill="#94A0B2">→</text>
+        <rect x="160" y="34" width="48" height="42" rx="6" fill="#33D6DD"/><text x="184" y="60" text-anchor="middle" fill="#0B1220">A</text>
+        <text x="111" y="100" text-anchor="middle" font-weight="400" font-size="10" fill="#C9D1DC">B se disuelve sin liquidarse;</text>
+        <text x="111" y="114" text-anchor="middle" font-weight="400" font-size="10" fill="#C9D1DC">A absorbe su patrimonio</text>
+        <rect x="232" y="0" width="222" height="132" rx="12" fill="#0E1626" stroke="#1F2A3C"/>
+        <text x="343" y="20" text-anchor="middle" fill="#B2F0F2">Fusión por creación</text>
+        <rect x="250" y="38" width="44" height="34" rx="6" fill="#33D6DD"/><text x="272" y="60" text-anchor="middle" fill="#0B1220">A</text>
+        <text x="304" y="60" fill="#94A0B2">+</text>
+        <rect x="318" y="38" width="44" height="34" rx="6" fill="#F28C28"/><text x="340" y="60" text-anchor="middle" fill="#0B1220">B</text>
+        <text x="374" y="60" fill="#94A0B2">→</text>
+        <rect x="392" y="34" width="48" height="42" rx="6" fill="#F3F5F8"/><text x="416" y="60" text-anchor="middle" fill="#0B1220">C</text>
+        <text x="343" y="100" text-anchor="middle" font-weight="400" font-size="10" fill="#C9D1DC">A y B se disuelven sin liquidarse;</text>
+        <text x="343" y="114" text-anchor="middle" font-weight="400" font-size="10" fill="#C9D1DC">nace C con ambos patrimonios</text>
+        <rect x="464" y="0" width="222" height="132" rx="12" fill="#0E1626" stroke="#1F2A3C"/>
+        <text x="575" y="20" text-anchor="middle" fill="#FDBA74">Escisión</text>
+        <rect x="484" y="34" width="52" height="42" rx="6" fill="#33D6DD"/><text x="510" y="60" text-anchor="middle" fill="#0B1220">A</text>
+        <text x="546" y="60" fill="#94A0B2">→</text>
+        <rect x="566" y="36" width="40" height="38" rx="6" fill="#33D6DD"/><text x="586" y="60" text-anchor="middle" fill="#0B1220">A</text>
+        <rect x="614" y="36" width="52" height="38" rx="6" fill="#F28C28"/><text x="640" y="60" text-anchor="middle" fill="#0B1220">A2</text>
+        <text x="575" y="100" text-anchor="middle" font-weight="400" font-size="10" fill="#C9D1DC">A separa parte de su patrimonio</text>
+        <text x="575" y="114" text-anchor="middle" font-weight="400" font-size="10" fill="#C9D1DC">hacia una o más sociedades</text>
+      </g>
+    </svg>
+
+    <div class="dos" style="margin-top:14px">
+      <div class="tarjeta bloque"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-layers"/></svg></div><h3>Fusión (C. Co., arts. 172 a 180)</h3></div><p>Una o más sociedades se <b>disuelven sin liquidarse</b> para ser absorbidas por otra o para crear una nueva. La absorbente adquiere sus derechos y obligaciones. Pasos: <b>compromiso de fusión</b> aprobado por el máximo órgano de cada sociedad, <b>aviso a los acreedores</b> (que pueden exigir garantías en los 30 días siguientes), autorizaciones si aplican, escritura pública e inscripción.</p></div>
+      <div class="tarjeta bloque"><div class="cab"><div class="ic-caja nar"><svg class="ico"><use href="#i-swap"/></svg></div><h3>Escisión (Ley 222 de 1995, arts. 3 a 11)</h3></div><p>Una sociedad transfiere parte de su patrimonio (escisión <b>parcial</b>, y sigue existiendo) o todo (escisión <b>total</b>, y se disuelve sin liquidarse) a una o más sociedades, existentes o nuevas. Los accionistas reciben acciones de las beneficiarias. Sirve para separar negocios, preparar una venta o una sucesión.</p></div>
+    </div>
+
+    <div class="tarjeta bloque" style="margin-top:12px"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-coin"/></svg></div><h3>Adquisiciones: comprar la empresa o comprar sus activos</h3></div>
+      <table class="tabla" style="margin-top:8px">
+        <tr><th style="width:24%"></th><th class="acc" style="width:38%">Compra de acciones (share deal)</th><th class="nar">Compra de activos o del establecimiento (asset deal)</th></tr>
+        <tr><td>Qué se compra</td><td>La sociedad entera, con todo su pasado</td><td>Bienes concretos o el establecimiento de comercio (C. Co., arts. 525 y siguientes)</td></tr>
+        <tr><td>A quién se paga</td><td>A los <b>accionistas</b> que venden</td><td>A la <b>sociedad</b> que vende</td></tr>
+        <tr><td>Riesgo principal</td><td>Contingencias ocultas (impuestos, demandas, laborales): se cubren con due diligence, declaraciones y garantías</td><td>Trámites de transferencia y obligaciones con acreedores del establecimiento</td></tr>
+      </table>
+    </div>
+    <div class="dos" style="margin-top:12px">
+      <div class="caja ojo"><span class="tit">Control de integraciones</span>Si las empresas superan ciertos umbrales de ingresos o activos, la fusión o adquisición debe informarse o someterse a autorización previa de la <b>SIC</b> (Ley 1340 de 2009), para proteger la competencia.</div>
+      <div class="caja ejemplo"><span class="tit">Derecho de retiro</span>Si la fusión, escisión o transformación aumenta la responsabilidad de los socios o desmejora sus derechos patrimoniales, los ausentes o disidentes pueden <b>retirarse</b> y recibir el reembolso de sus acciones (Ley 222, art. 12).</div>
+    </div>
+    <div class="tarjeta bloque" style="margin-top:12px"><div class="cab"><div class="ic-caja"><svg class="ico"><use href="#i-doc"/></svg></div><h3>Transformación</h3></div><p>Cambiar de tipo societario (por ejemplo, de limitada a SAS, o de SAS a SA para salir a bolsa) sin disolverse ni liquidarse: la persona jurídica sigue siendo la misma, con sus contratos y obligaciones (C. Co., art. 167).</p></div>
+    <div class="pie"><span><b>Derecho corporativo</b> · Reorganizaciones</span><span><a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 12</span></div>
+  </div>
+</section>
+
+<!-- ============================== LO ESENCIAL ============================== -->
+<section class="pagina cruces">
+  <svg class="constelacion" data-paleta="academy" data-semilla="37" data-zona="40,900,760,995" data-nodos="9" viewBox="0 0 794 1123" aria-hidden="true" style="opacity:.55"></svg>
+  <div class="brillo" style="width:800px;height:800px;right:-340px;bottom:-340px;background:radial-gradient(circle, rgba(0,196,204,.2), transparent 62%)"></div>
+  <div class="contenido">
+    <div class="antetitulo">Para repasar</div>
+    <h2>Lo esencial<br><b>en doce frases.</b></h2>
+
+    <div class="tarjeta" style="margin-top:16px;padding:4px 18px">
+      <div class="frase"><span>01</span><div>Las personas jurídicas son <b style="color:var(--tinta)">públicas o privadas</b>; las privadas, <b style="color:var(--tinta)">con o sin ánimo de lucro</b>. Las con ánimo de lucro son las sociedades.</div></div>
+      <div class="frase"><span>02</span><div>Hay sociedades <b style="color:var(--tinta)">de personas</b> (colectiva, comandita simple), <b style="color:var(--tinta)">intermedia</b> (limitada) y <b style="color:var(--tinta)">de capital</b> (SA, SAS, SCA).</div></div>
+      <div class="frase"><span>03</span><div>La <b style="color:var(--tinta)">SAS</b> se crea por documento privado, con uno o más accionistas, y responde solo hasta los aportes; no puede ir a bolsa.</div></div>
+      <div class="frase"><span>04</span><div>La <b style="color:var(--tinta)">SA</b> exige escritura pública, 5 accionistas, junta directiva y revisor fiscal; es el vehículo para la bolsa.</div></div>
+      <div class="frase"><span>05</span><div>La <b style="color:var(--tinta)">SCA</b> tiene gestores que responden ilimitadamente y comanditarios que responden hasta su aporte.</div></div>
+      <div class="frase"><span>06</span><div>Antes de constituir: nombre en el <b style="color:var(--tinta)">RUES</b> (homonimia), marca en la <b style="color:var(--tinta)">SIC</b> y actividad con su código <b style="color:var(--tinta)">CIIU</b>.</div></div>
+      <div class="frase"><span>07</span><div>Capital <b style="color:var(--tinta)">autorizado</b> (techo), <b style="color:var(--tinta)">suscrito</b> (comprometido) y <b style="color:var(--tinta)">pagado</b> (entregado).</div></div>
+      <div class="frase"><span>08</span><div>Si un accionista <b style="color:var(--tinta)">vende</b> sus acciones, el dinero va a él; si la sociedad <b style="color:var(--tinta)">emite</b> acciones, el dinero va a la sociedad.</div></div>
+      <div class="frase"><span>09</span><div>Toda capitalización <b style="color:var(--tinta)">diluye</b> a quien no suscribe; el derecho de preferencia lo protege.</div></div>
+      <div class="frase"><span>10</span><div>Hay <b style="color:var(--tinta)">control</b> con más del 50 %, con la mayoría de votos o por influencia dominante; hay <b style="color:var(--tinta)">grupo</b> si además hay unidad de propósito y dirección. La imbricación está prohibida.</div></div>
+      <div class="frase"><span>11</span><div>El <b style="color:var(--tinta)">velo corporativo</b> se levanta por fraude o abuso, no por simple insolvencia.</div></div>
+      <div class="frase"><span>12</span><div><b style="color:var(--tinta)">Fusión</b> une, <b style="color:var(--tinta)">escisión</b> separa, <b style="color:var(--tinta)">adquisición</b> compra acciones o activos; las grandes, con control de la SIC.</div></div>
+    </div>
+
+    <div class="tarjeta" style="margin-top:14px;padding:14px 18px">
+      <h4>Normas de referencia</h4>
+      <p class="texto" style="font-size:10.4px">Código de Comercio (Decreto 410 de 1971), arts. 98 a 525 · Ley 222 de 1995 · Ley 1258 de 2008 (SAS) · Ley 1116 de 2006 (insolvencia) · Ley 1340 de 2009 (competencia) · Ley 43 de 1990 · Estatuto Tributario, art. 794 · Decreto 2555 de 2010 (mercado de valores). <span class="tenue">Revisar siempre el texto vigente de cada norma antes de citarla.</span></p>
+    </div>
+
+    <div class="pie" style="border-top:1px solid var(--borde);padding-top:16px">
+      <span class="logo"><img src="../public/marcas/trifuerza/logo-horizontal-claro.png" alt="Trifuerza" style="height:22px"><span class="sep" style="height:18px"></span><span class="linea" style="font-size:10.5px">Academy</span></span>
+      <span>Juan David Vanegas Roldán · <a class="web" href="https://www.trifuerza.co">www.trifuerza.co ↗</a> · 13</span>
+    </div>
+  </div>
+</section>
+
+<script>window.TERMINOS_PROPUESTA = {
+  tech: ['RUES', 'CIIU', 'NIT', 'bolsa', 'IPO', '{ }'],
+  law: ['§', 'Ley 1258', 'Ley 222', 'C. Co.', 'art. 261', 'SIC'],
+  design: ['acciones', 'capital', 'control', 'fusión', '✦', '△'],
+};</script>
+<script src="kit/constelacion.js"></script>
+<script src="kit/pdf-limpio.js"></script>
+</body>
+</html>

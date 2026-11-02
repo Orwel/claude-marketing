@@ -25,8 +25,18 @@ export const Firma = ({ tamano = 1 }) => {
 
   // Logo oficial completo en imagen (Trifuerza.co, desde el Drive de marca): se usa tal cual, sin
   // recolorear ni recortar; la version (letras claras u oscuras) la elige la marca segun su fondo.
+  // Con `firma.linea` sale como en las propuestas PDF: logo, separador fino y la línea del servicio
+  // (TECHNOLOGY, ACADEMY, LEGAL) en versalitas espaciadas con el color de acento.
   if (firma.tipo === 'imagen') {
-    return <Img src={staticFile(firma.src)} style={{ height: 96 * tamano, width: 'auto' }} />;
+    const logo = <Img src={staticFile(firma.src)} style={{ height: 96 * tamano, width: 'auto' }} />;
+    if (!firma.linea) return logo;
+    return (
+      <div style={{ display: 'flex', alignItems: 'center', gap: 26 * tamano }}>
+        {logo}
+        <span style={{ width: 2 * tamano, height: 64 * tamano, background: colores.linea ?? colores.tenue, opacity: 0.8 }} />
+        <span style={{ ...fuente(marca.fuentes.enfasis), fontSize: 34 * tamano, letterSpacing: '0.32em', textTransform: 'uppercase', color: colores.alerta ?? colores.acento }}>{firma.linea}</span>
+      </div>
+    );
   }
 
   // Sin archivo de logo oficial: nombre en texto, nunca un logo redibujado.

@@ -1,0 +1,79 @@
+{
+  "slug": "c07-contexto",
+  "titulo": "No cambió el modelo, cambió el contexto",
+  "plantilla": "Carrusel",
+  "tipo": "carrusel",
+  "formato": "carrusel",
+  "segundos": 6,
+  "cuentas": [
+    "juanda"
+  ],
+  "pie": "Comenta CLASE",
+  "laminas": [
+    {
+      "metafora": "burbujas",
+      "datos": {
+        "items": [
+          "Resume este caso",
+          "Resume este caso (con el expediente)"
+        ]
+      },
+      "antetitulo": "Un experimento",
+      "titulo": "Le pregunté *lo mismo dos veces.*"
+    },
+    {
+      "metafora": "rompecabezas",
+      "datos": {
+        "completo": false
+      },
+      "antetitulo": "Sin expediente",
+      "titulo": "Respuesta genérica. Y cuando insistí, *inventó.*"
+    },
+    {
+      "metafora": "rompecabezas",
+      "datos": {
+        "etiqueta": "Expediente"
+      },
+      "antetitulo": "Con el expediente",
+      "titulo": "Fechas reales, partes reales, *el problema real.*"
+    },
+    {
+      "metafora": "balanza",
+      "datos": {
+        "izq": "Contexto",
+        "der": "Prompt"
+      },
+      "antetitulo": "La lección",
+      "titulo": "No cambió el modelo. *Cambió el contexto.*",
+      "texto": "Es como pedirle un concepto a un colega sin mostrarle el expediente."
+    },
+    {
+      "metafora": "boleto",
+      "datos": {
+        "fecha": "MAR 27 OCT · 7:00 P.M."
+      },
+      "antetitulo": "Lo muestro en vivo",
+      "titulo": "Martes 27, *7:00 p.m.*",
+      "texto": "Gratis y con certificado."
+    }
+  ],
+  "variantes": {
+    "juanda": {
+      "copy": "Le pregunté lo mismo dos veces.\n\nLa primera, sin adjuntarle nada: respuesta genérica, y cuando insistí en datos concretos, empezó a inventarlos.\n\nLa segunda, con el expediente: fechas reales, partes reales, el problema real.\n\nNo cambió el modelo. Cambió el contexto. Lo muestro en vivo el 27. Comenta CLASE."
+    }
+  },
+  "verificar": [
+    {
+      "dato": "Clase en vivo «Fundamentos para la Inteligencia Artificial»: martes 27 de octubre de 2026, 7:00 p.m. hora Colombia, gratis.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Certificado gratuito: quién lo emite (¿Trifuerza Academy?) y qué condiciones tiene.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Registro: link en el perfil, abre el lunes 5 de octubre.",
+      "estado": "pendiente"
+    }
+  ]
+}

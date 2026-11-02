@@ -6,7 +6,8 @@ zonas 5, 5B, 7, 8 y la parrilla del mes). Plan de trabajo: zona 5B.
 
 ## Antes de tocar nada
 - Lee `docs/HANDOFF.md` (arquitectura y decisiones) y `docs/APRENDIZAJES.md` (errores ya resueltos).
-- Para producir una pieza, sigue la skill `producir-pieza`.
+- Para producir una pieza, sigue la skill `producir-pieza`. Para un video artístico narrado desde una referencia
+  (Pinterest, Instagram, sin cara), la skill `video-artistico` y el catálogo `docs/ESTILOS.md`.
 - Tono y restricciones de marca: `docs/TONO.md`.
 
 ## Reglas

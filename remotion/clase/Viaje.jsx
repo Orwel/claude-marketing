@@ -169,17 +169,18 @@ const PrecioLanzamiento = ({ clase, e }) => {
     // En 4:5 (lámina del carrusel) todo el bloque se reduce para que quepa sin cambiar el diseño.
     <AbsoluteFill style={{ alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: vert ? 50 : 100, transform: `scale(${vert && H / W < 1.5 ? 0.8 : 1})` }}>
       <Kicker T={T} a={ent(0)}>{e.kicker}</Kicker>
-      <div style={{ marginTop: vert ? 60 : 36, opacity: ent(4), position: 'relative', display: 'inline-block' }}>
+      {/* Sin precio de lista (curso gratuito) no hay nada que tachar. */}
+      {e.antes && <div style={{ marginTop: vert ? 60 : 36, opacity: ent(4), position: 'relative', display: 'inline-block' }}>
         <span style={{ fontFamily: `'Space Grotesk'`, fontWeight: 700, fontSize: vert ? 120 : 110, letterSpacing: '-0.03em', color: T.tenue }}>{e.antes}</span>
         <span style={{ fontFamily: `'JetBrains Mono'`, fontWeight: 700, fontSize: vert ? 36 : 34, color: T.apagado, marginLeft: 14 }}>{e.moneda}</span>
         <div style={{ position: 'absolute', left: -12, top: '52%', height: vert ? 12 : 11, borderRadius: 6, width: `calc(${tacha * 100}% + ${24 * tacha}px)`, background: T.acento, transform: 'rotate(-6deg)', transformOrigin: 'left center', boxShadow: `0 0 20px ${T.acento}88` }} />
-      </div>
+      </div>}
       <div style={{ marginTop: vert ? 40 : 18, opacity: ent(26) }}>
         <Mono style={{ fontSize: vert ? 34 : 30, color: T.acento }}>{e.etiqueta}</Mono>
       </div>
       <div style={{ display: 'flex', alignItems: 'baseline', gap: 22, marginTop: vert ? 6 : 0, opacity: golpe, transform: `scale(${(0.7 + 0.3 * golpe) * pulso})` }}>
         <span style={{ fontFamily: `'Space Grotesk'`, fontWeight: 700, fontSize: vert ? 200 : 260, letterSpacing: '-0.045em', color: T.tinta, lineHeight: 1, textShadow: `0 0 ${70 * golpe}px ${T.acento}77` }}>{e.precio}</span>
-        <span style={{ fontFamily: `'JetBrains Mono'`, fontWeight: 700, fontSize: vert ? 46 : 60, color: T.acento }}>{e.moneda}</span>
+        {e.moneda && <span style={{ fontFamily: `'JetBrains Mono'`, fontWeight: 700, fontSize: vert ? 46 : 60, color: T.acento }}>{e.moneda}</span>}
       </div>
       {e.cta && <div style={{ marginTop: vert ? 70 : 40, background: T.acento, color: T.fondo, borderRadius: 999, padding: vert ? '26px 56px' : '22px 56px', fontFamily: `'Inter'`, fontWeight: 800,
         fontSize: vert ? 50 : 44, boxShadow: `0 24px 60px ${T.acento}55`, opacity: ent(44), transform: `translateY(${(1 - ent(44)) * 30}px)` }}>{e.cta}</div>}
@@ -205,7 +206,7 @@ const Insignia = ({ T, i }) => {
       background: T.acento, borderRadius: 20, padding: vert ? '14px 24px' : '12px 22px', boxShadow: `0 16px 40px #000a, 0 0 0 3px ${T.fondo}`, textAlign: 'center' }}>
       <div style={{ fontFamily: `'JetBrains Mono'`, fontWeight: 700, fontSize: vert ? 20 : 17, letterSpacing: '0.12em', textTransform: 'uppercase', color: T.fondo }}>{i.detalle}</div>
       <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'center', gap: 12, marginTop: 2 }}>
-        <span style={{ fontFamily: `'Space Grotesk'`, fontWeight: 700, fontSize: vert ? 30 : 26, color: `${T.fondo}aa`, textDecoration: 'line-through', textDecorationThickness: 3 }}>{i.antes}</span>
+        {i.antes && <span style={{ fontFamily: `'Space Grotesk'`, fontWeight: 700, fontSize: vert ? 30 : 26, color: `${T.fondo}aa`, textDecoration: 'line-through', textDecorationThickness: 3 }}>{i.antes}</span>}
         <span style={{ fontFamily: `'Space Grotesk'`, fontWeight: 700, fontSize: vert ? 52 : 46, color: T.fondo, letterSpacing: '-0.02em' }}>{i.precio}</span>
       </div>
     </div>

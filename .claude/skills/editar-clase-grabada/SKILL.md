@@ -28,11 +28,13 @@ Todo video de curso o clase grabada arranca con el logo de Trifuerza animado: el
 el título de la clase.
 
 - El archivo está en `public/intros/trifuerza-logo.mp4` (claude-mk). Hay una copia en
-  `~/.claude/skills/editar-clase-grabada/assets/intro-trifuerza.mp4` para usarla fuera del taller.
+  `~/.claude/skills/editar-clase-grabada/assets/intro-trifuerza.mp4` para usarla fuera del taller; esa copia
+  ya viene sin el cuadro 0 de Veo (la de `public/` lo trae, y `armar.js` lo salta).
 - Original: Gemini (Veo), `Downloads/Anima_este_logo_de_la_forma_ma.mp4`, 1280×720 a 24 fps, ~10 s.
   Tiene copia en `trabajo/intro-trifuerza/original-sin-nombre.mp4`.
 - Traía la estrella de 4 puntas de Gemini abajo a la derecha. Se quitó con
-  `python -I src/clase/quitar-marca.py entrada.mp4 salida.mp4 --caja x,y,ancho,alto --cuadro-limpio 7.5`,
+  `python -I src/clase/quitar-marca.py entrada.mp4 salida.mp4 --caja 1120,556,90,90 --cuadro-limpio 0.5`
+  (valores del original de 1280×720; en otro tamaño o posición, mide la caja de nuevo),
   que hace inpainting (OpenCV Telea) con una máscara sacada de un cuadro de fondo liso. Sirve para
   cualquier otro video de Veo con la misma marca. Nunca entregues un video con la estrella.
 - `armar.js` lo pone solo cuando la salida empieza en `inicio`: lo lleva a 1080p30 y lo funde a negro
@@ -174,4 +176,8 @@ npm run clase-subir -- <slug>
 - `Stop-Process` por PID: confirma con `StartTime` cuál es cuál. Una vez se mató la transcripción en vez de la medición.
 - `drawtext` de ffmpeg en Windows se rompe con las rutas de fuente: para rotular cuadros usa `hojas.py`.
 - Cursor: con umbral 0,72 confundía letras sueltas («7 h») con el cursor y las devolvía nítidas. Va en 0,85.
+- Los clips de Veo (Gemini) traen como **cuadro 0 la imagen de entrada** (el logo plano sobre negro); desde el
+  segundo cuadro ya es la animación. El navegador lo muestra como portada antes del play (pasó en la v2 de
+  Fundamentos de IA). Quítale el primer cuadro al clip y revisa siempre el cuadro 0 de la salida con
+  `ffmpeg -i salida.mp4 -frames:v 1 f0.png` antes de subirla.
 - El paquete de Remotion copia todo `public/` (8 GB). `armar.js` empaqueta con un `public` mínimo en la carpeta de trabajo.

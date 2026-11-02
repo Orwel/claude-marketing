@@ -49,6 +49,10 @@
     {
       "dato": "Contrappto: \"una aplicación de contratos digitales única en el mundo\"",
       "estado": "pendiente"
+    },
+    {
+      "dato": "Certificado de la clase del 27-oct: título (\"Certificado de asistencia\"), formato del número y condiciones para recibirlo. El diseño copia el certificado real de ponente.",
+      "estado": "pendiente"
     }
   ],
   "generado": {
@@ -140,6 +144,13 @@
         "itemsCuadros": [
           57
         ]
+      },
+      {
+        "tipo": "certificado",
+        "en": "únete",
+        "hasta": "envío",
+        "inicioMs": 15446,
+        "finMs": 21339
       }
     ],
     "montajes": {
@@ -748,6 +759,11 @@
           "en": "contratos"
         }
       ]
+    },
+    {
+      "tipo": "certificado",
+      "en": "únete",
+      "hasta": "envío"
     }
   ],
   "golpes": [
@@ -760,5 +776,10 @@
       "vez": 2,
       "estilo": "pastilla"
     }
-  ]
+  ],
+  "variantes": {
+    "juanda": {
+      "portada": "Mi clase de IA, *gratis.*"
+    }
+  }
 }

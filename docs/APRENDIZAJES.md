@@ -865,3 +865,156 @@ Videos: IMG_3770, IMG_3772 e IMG_3776 de octubre (iPhone). Salieron `la-ia-que-n
   lo cambia Juan David a mano. En tráileres y carruseles poner «hora y media de clase», no los minutos exactos.
 - **Storage class-media tiene tope de 50 MB:** el tráiler de 96 s a crf 20 pesa 51 MB; para la web, crf 23 preset slow
   (34 MB). La copia para Drive/Instagram queda a crf 20.
+
+## 29-oct-2026 · Fundamentos de IA pasa a ser gratis
+- Decisión de Juan David: **gratis para siempre, con registro en la plataforma y certificado gratuito**; incluye todo (video con
+  subtítulos, guía, presentación, quiz, certificado) y habrá más cursos gratuitos, de mejor calidad. Se dejó la ficha
+  `clases/fundamentos-de-ia.json` → `venta` así: las escenas `precio` de las listas vigentes (viaje2, viajePrecio2, promoGancho,
+  promoPrecio, carruselViaje) dicen «Curso gratuito · Gratis»; `venta.insignia` también; se borraron las versiones en dólares
+  (`*USD`) y sus composiciones de `Root.jsx`. Las listas viejas con precio (escenas, historia, carrusel, viaje, viajePrecio) siguen
+  con $49.000 y están obsoletas. `PrecioLanzamiento` e `Insignia` (Viaje.jsx) ya no dibujan tachado ni moneda cuando faltan `antes`/`moneda` (cuadro de prueba: trabajo/prueba-gratis/lamina8.png).
+- Juan David quiere abrir Remotion y editar él mismo: todo el texto de las promos vive en esa ficha y se ve en `npm run estudio`.
+
+## 2026-11-01 · referencias de Pinterest y plantilla Capas
+- **Dirección:** Juan David quiere videos hechos con IA que se vean «más artísticos, menos IA». Mandó 19 pins de
+  referencia; el análisis cuadro por cuadro y del audio está en `referencias/pinterest-2026-11.md`.
+- **Ver videos de Pinterest:** la página pide login y con el panel del navegador oculto el `<video>` no carga.
+  Lo que funciona: `fetch('/pin/<id>/')` desde co.pinterest.com, sacar del HTML la URL `v1.pinimg.com/videos/.../expMp4/..._720w.mp4`
+  (las `hevc`/`h265` no se decodifican), abrirla directo y armar una hoja de cuadros con canvas. El audio se mide
+  con `decodeAudioData` (volumen, golpes, BPM aprox.).
+- **Plantilla `Capas`** (`remotion/plantillas/Capas.jsx`, pieza `piezas/2026-11/ctp-capas.json`): telefono en 3D
+  con la app y sus partes que salen hacia la camara (vista explotada), recorrido por cada capa y CTA. Las capas son
+  recortes de `public/app/2026-10/contrappto.mp4` en `public/capas/contrappto/`, elegidos sin datos de clientes;
+  el titulo del contrato real («Quentin», «Airbnb 302») se tapa con `base.tapar`. Musica: receta de Brochure.
+- **Ojo en la grabacion de la app:** salen nombres reales (el titulo del contrato, «Firma de Quentin Dixneuf» en la
+  linea de tiempo, «Hola, Juan David Vanegas Roldán» en el panel). Revisar cada recorte antes de usarlo.
+- **Ver reels de Instagram sin iniciar sesion:** `instagram.com/p/<codigo>/embed/captioned/` trae el copy, los me
+  gusta, los seguidores de la cuenta y el `<video>` con su mp4 directo (fbcdn, firmado y con vencimiento). Se abre
+  el mp4 y se arma la hoja de cuadros y la medida del audio igual que con Pinterest. Sirve para posts sueltos; para
+  listar todo un perfil hace falta la API (Business Discovery). Analisis en `referencias/instagram-2026-11.md`.
+- **Voz clonada (01-nov-2026):** su voz oficial en ElevenLabs es «Juan Da Voice oficial» (`ZdAh80pu3q47gWzmqvOL`); hay un
+  clon viejo «Juan David Vanegas» que no se usa. Se genera con el conector de ElevenLabs (modelo eleven_v4, etiquetas
+  `[serious, calm]`, `[pause]`). El gancho de Kafka con esa voz: «del putas». Una muestra de 10 s cuesta ~93 créditos;
+  el guion de ~65 s, ~1.100. Locutar en una sola toma (`generations_count: 1`) una vez aprobada la muestra.
+- **Plantilla `Tinta` (01-nov-2026)** (`remotion/plantillas/Tinta.jsx`, pieza `piezas/2026-11/jd-kafka.json`): historia
+  narrada sin cara con ilustraciones a tinta dibujadas en SVG (pluma, arresto, escalera, puerta, revelacion, pregunta),
+  papel con fibras deterministas, rayado de grabado por `pattern` y una sola zona de texto con cada palabra dicha. El
+  audio entra ya mezclado (`pieza.audio`): voz de ElevenLabs a 1,07x (atempo) para dejarlo en ~40 s, «Dark Times» de
+  Kevin MacLeod desde 0:34 con sidechaincompress bajo la voz, silencio de 1,6 s cuando se cierra la puerta, loudnorm −16.
+  Los tiempos de cada frase salen de `silencedetect` sobre la voz (divididos por 1,07). `partirPalabras` separa la
+  puntuacion que sigue a un `*enfasis*`: la plantilla la pega a la palabra anterior.
+- **«Más artístico, menos IA» (01-nov-2026, Kafka):** la v1 con pictogramas SVG planos no le gustó: «míralo bien», el pin
+  era grabado de verdad. La v2 (plantilla `Archivo`, `remotion/plantillas/Archivo.jsx`) copia la **estructura** del pin
+  analizado cuadro por cuadro: material de archivo **real de dominio público** (Piranesi, manuscritos y foto de Kafka,
+  de Wikimedia Commons con `iiurlwidth=2400`; el API da 429 si se piden muchos seguidos) en sepia, acercamientos lentos a
+  detalles, ráfaga de cortes de ~0,57 s, destellos de luz blanca entre planos, una pausa larga con un árbol de luz que
+  crece de la cabeza y cierre en bucle. **El texto nunca pisa la imagen:** franja de papel arriba para el texto,
+  ventana de imagen en el medio, crédito del material abajo. Antes de rehacer algo «como la referencia», bajar el video
+  y sacar la hoja a 1 cuadro/s + `select='gt(scene,0.25)'` para los cortes: con 12 cuadros sueltos no se ve el ritmo.
+  (La v2 se aprobó primero, pero luego la cambió: la referencia vigente es la v4, plantilla Grabado.)
+- **Kafka v3 (01-nov-2026), plantilla `Grabado`** (`remotion/plantillas/Grabado.jsx`): la v2 de fotos de archivo quedó
+  «horrible» y «estática». Lo que pidió: **imitar el pin plano por plano** con nuestra historia, todo **dibujado y
+  animado**, y exprimir Remotion. Piezas: manuscrito real de Kafka convertido en tinta con alfa y escrito renglón por
+  renglón con una plumilla (clipPath que avanza); retratos vectorizados con `src/archivo/trazos.py` (Canny → polilíneas
+  + manchas oscuras) que se dibujan solos; **line boil** (temblor de 3 en 3 cuadros) en todo trazo; escalera infinita en
+  3D con three.js (`remotion/tinta/Escalera3D.jsx`: cajas con rayado de canvas y contornos `LineSegments2` de 4,5 px,
+  niebla del papel); árbol de luz desde la cabeza; destellos blancos en los cortes; texto arriba con velo de papel
+  cuando el dibujo sube. **Descartados:** pictogramas planos (v1), fotos quietas (v2) y el convertidor de foto a grabado
+  por rayado (`src/archivo/grabado.py`: parecía billete o fotocopia).
+- Render con three.js: `--gl=angle`; render.js reintenta con `--concurrency=3` si falla. Unos 8 min para 42 s.
+- **Kafka v3, ajustes (01-nov-2026):** «los muñecos» (siluetas genéricas) no van: las figuras se dibujan desde **fotos de
+  época de dominio público** con `src/archivo/trazos.py` (ahora con sombreado a lápiz: miles de trazos cortos por tono,
+  en franjas que se van sombreando; `--elipse` para aislar figuras cuando GrabCut se come la ropa oscura). Cierre con el
+  **logo de Trifuerza en negro** (`logo-horizontal-oscuro.png`) directo sobre el papel, no la firma de juanda. Se probó
+  en blanco sobre un resplandor neón y lo rechazó («el fondo no no no»): nada de cajas ni brillos detrás del logo. La pausa del silencio no puede ser abrupta: la música baja en ~1,7 s
+  y el negro entra en ~1,3 s. Su veredicto del resto: «quedó del putas».
+- **«Que los muñecos se muevan, no solo transiciones» (01-nov-2026):** las figuras dibujadas se animan como recortes
+  (cut-out) en `Retrato` de `Grabado.jsx`: respiración (scaleY desde los pies), cabezas recortadas con clipPath que giran
+  sobre el cuello (`partes`: caja y pivote en fracciones; la rejilla de `trabajo/kafka/rejilla-*.png` sirve para
+  medirlas), humo de cigarro en bucle y paneo de cámara. La puerta y la escalera se **construyen** en pantalla (arco
+  dovela por dovela, piso desde la puerta, rayado de arriba abajo; la torre 3D aparece pieza por pieza unos 17 m por
+  delante de la cámara: con 9 la cámara miraba al vacío). Logo de Trifuerza en negro puro: `filter: brightness(0)`
+  sobre `logo-horizontal-oscuro.png` (el «oscuro» trae letras azules).
+  La v4 (plantilla Grabado) quedó aprobada («Sí, queda así»): es la referencia para piezas narradas sin cara.
+
+## 01-nov-2026 · Método de movimiento y parrilla de noviembre
+- **Lo que falló al ver referencias:** se copiaba *qué* salía en cada cuadro y no *cómo se movía*. Desde ahora, antes de
+  animar: ficha de movimiento por plano (duración, cámara, curva, entradas, corte en el golpe) sacada a 24 fps y una
+  **prueba de plano de 5 s en pantalla dividida** con el original, para que Juan David la apruebe antes de la pieza completa.
+- **El estilo sale del tema:** cada pieza responde «¿de qué material está hecha esta historia?» (Kafka = papel y tinta;
+  firma = barro, cera, tinta y pantalla; IA = luz).
+- **Música de ctp-capas:** la receta «institucional» no le convence. Se prueban tres alternativas sobre el mismo corte,
+  montando solo el audio.
+- **Mata contra Avianca:** descartado para siempre.
+- `calendario/2026-11.json` agrega `r: tt` (TikTok) y `e` (listo · producir · grabar). Metricool gratis: una marca,
+  sin LinkedIn, 20 publicaciones al mes.
+- **Portadas (01-nov-2026):** un cuadro del video con el texto no basta; quiere portadas **trending y artísticas** como la
+  cuadrícula de feuxui (`referencias/instagram-2026-11.md`). Componente `remotion/tinta/PortadaEditorial.jsx`
+  (composición `portada-jd-kafka`): grotesca condensada gigante (Inter 800 con `scaleX(0.82)`), una línea en el acento,
+  retícula con cruces, grano, el objeto dibujado a lápiz cortado por abajo, etiqueta `[ENTRE CORCHETES]` con flecha y
+  serie «Pt. 01». Lo importante dentro de y 285–1635 (recorte 4:5 del perfil).
+- **Voz clonada que suena falsa en preguntas:** con `[warmly]` la pregunta final salió «risueña» (arrancaba en 193 Hz).
+  Para preguntas al público: `[serious, low voice, calm, matter-of-fact]`. Se miden las tomas con F0 por autocorrelación
+  (mediana, rango y subida inicial) y se escoge la más grave y estable; se reemplaza solo ese tramo con ffmpeg y se
+  remonta el audio sobre el MP4 (`-c:v copy`), sin re-renderizar la imagen.
+- **Cuadrícula del perfil de Instagram:** muestra un recorte **3:4 centrado** de la portada 1080×1920 (franja y 240–1680, a
+  todo el ancho). Se diseña para ese recuadro con márgenes de ~95 px, repartiendo los elementos como las cuentas de
+  referencia (tema arriba a la izquierda, número arriba a la derecha, titular, objeto que entra por un borde, logo y
+  flecha en círculo abajo). Encerrar todo en un marco pequeño «se ve forzadamente empaquetado» (lo dijo él). El logo,
+  visible: ~56 px de alto en negro.
+- **Disco lleno (ENOSPC) en `remotion bundle`:** cada paquete copia `public/` entero (~9 GB) y cada render deja
+  `%TEMP%\remotion-*-assets*`. Para portadas y piezas livianas, empaquetar con `--public-dir` apuntando a una carpeta
+  con solo lo necesario (`trabajo/publico-portada`: fuentes, trazos, logo; ~100 MB). Borrar los paquetes propios al
+  terminar y los temporales de Remotion cuando no haya renders corriendo.
+
+## 2026-11-01 · prueba Matrix con su cara (pins 20 y 21)
+- **Recorte de persona sin instalar rembg:** el modelo `u2net_human_seg.onnx` (176 MB, releases de rembg en GitHub) corre
+  directo con `onnxruntime`, que ya está instalado. `trabajo/2026-11-matrix/mascaras.py` saca máscara por cuadro
+  (~0,3 s/cuadro en CPU) con suavizado temporal para que el borde no tiemble. GrabCut de OpenCV sirve solo para un still.
+- **ASCII rápido:** atlas de glifos (VT323, celdas de 12x20) indexado con numpy en vez de dibujar carácter por carácter
+  con PIL: 300 cuadros 1080x1920 en pocos minutos (`render.py`).
+- **Peso:** el grano encarece el h264: 10 s a crf 16 = 102 MB; a crf 23, 16 MB sin diferencia visible en el celular.
+- **Gusto:** IMG_3776 (gabardina beige, casa de balcones verdes) es el clip que menos le gusta: no usarlo.
+  «Estilo Matrix» = fondo negro de verdad con lluvia de código, no un retoque de color sobre el plano.
+
+## 02-nov-2026 · N01 rechazado: «no quiero que sea como nada de lo que hemos hecho»
+- N01 (pantalla de carga de Namco) salió con el lenguaje de siempre: monitor con marco pixel, subtítulos arriba, barra abajo,
+  sprites de divs, cortes de mosaico. Veredicto: «horrible». Era la plantilla Arcade del SOFA con otro guion.
+- **El error de proceso:** se prometió una ficha de movimiento y una prueba de plano de 5 s contra una referencia, y se saltó:
+  se animó todo de una sin referencia ni aprobación. No volver a renderizar una pieza completa sin que apruebe un plano.
+- **Qué evitar en lo nuevo:** la caja/monitor centrado con texto encima y debajo, los subtítulos karaoke como protagonista,
+  sprites dibujados con divs, la barra de progreso y la cuadrícula de fondo. Cada pieza parte de un pin suyo concreto
+  (tableros `motion-graphics`, `arte-para-lo-digital`, `pixel-art` de jdvanegas52) y lo imita plano por plano.
+- **Sonido de N01: «insoportable».** El chiptune sintetizado por código (cuadradas, bombo de seno) no sirve fuera del
+  contexto SOFA. La música sale de la referencia: se mide el audio del pin (BPM, textura, dónde golpea) y se busca una
+  pista de librería con licencia verificada que se parezca; nada sintetizado por código para piezas nuevas.
+- **Reutilizar no es producir:** todo salió de componentes viejos (Pixel.jsx, Sprites.jsx, el caballero del Claustro,
+  MarcoPixel, CRT). Para piezas nuevas se parte de cero desde la referencia, no del catálogo del repo.
+
+## 02-nov-2026 · N01 v2 aprobado: «DEEEEL PUTAAAAS»
+- **Qué funcionó:** imitar un pin suyo concreto (px344 de Kirokaze) en vez de partir del catálogo del repo; prueba de 5 s
+  al lado del pin antes del video entero; escena a pantalla completa (ciudad, luna, torre con detalle, terraza, figura de
+  espaldas), la historia contada **dentro de la valla** con barrido de scanlines, movimiento a pasos de pixel.
+- **Técnica:** canvas de 270×480 pintado cuadro a cuadro en `useLayoutEffect` y ampliado ×4 con `imageRendering:
+  pixelated` (`remotion/n01/CiudadValla.jsx`). El canvas no espera a `useFuentes`: hay que `await cargarFuentes()` y
+  `document.fonts.load()` antes de `continueRender`, o salen cuadros con letra serif.
+- **Material gratis:** Warped City 2 de ansimuz (CC0, OpenGameArt) para cielo, ciudad, neones, dron y terraza; la
+  torre, la valla, la figura y el dinosaurio se dibujan encima. Música «Floating Cities» de Kevin MacLeod (CC BY 4.0,
+  crédito en el copy), mezclada con `src/archivo/mezcla.mjs --velocidad 1.07 --silencio 15.6,16.9`.
+- **Gusto confirmado:** compra assets solo si son muy buenos y baratos (5–10 USD); prefiere gratis y que se haga todo
+  sin pedirle pasos.
+- **Versión aprobada de N01 (02-nov-2026, «quedó bien»):** composición calcada del pin con dibujo propio (pantalla gigante
+  sin marco, edificios con toldo y letrero, piso en perspectiva con charcos y objetos), figura a **contraluz en pixel duro**
+  (silueta umbralizada, borde de luz menta de 1 px, sentada en un banquito: así no flota) y escenario con degradados
+  tramados (Bayer 4×4), cables, plantas y salpicaduras. Copia en `trabajo/n01/aprobado/`.
+- **Lo que no:** figuras de formas suavizadas en canvas («deforme», «no es pixel art»), trapecios duros («muy cuadrado»),
+  y la pregunta final con `[low voice]`: «muy sexual». Las preguntas van con el mismo `[serious, calm]` de la narración.
+
+## Banco de assets gratis (2026-11-02)
+- Está en `trabajo/assets/` (≈ 7 GB, ignorado por git): pixel, 3D, overlays, archivo y audio, con licencia exacta por
+  pack en `LICENCIA.md` y el índice en `LEEME.md`. Para elegir: `hoja-<categoria>-N.jpg` + `hoja-<categoria>.txt`.
+  Las hojas se rehacen con `python -I trabajo/hojas-assets.py trabajo/assets`.
+- **Mixkit no es todo libre:** cada clip trae su licencia y muchos son *Restricted* (solo uso personal). Mirarla siempre.
+- Pexels, Pixabay, Sonniss, loc.gov y Rawpixel bloquean la descarga automática (Cloudflare): no se esquiva; se baja a mano.
+  Videezy pide captcha tras unas 15 descargas y pide crédito «Videezy.com».
+- Kevin MacLeod está en Content ID de YouTube: crédito siempre en el copy.

@@ -1,0 +1,279 @@
+{
+  "_nota": "Datos de producto y precios de los brochures (PDF y video). Nada se reparte con uno en pendiente.",
+  "contrappto": [
+    {
+      "dato": "Precios: Free $0 (2 contratos vivos), Pro $69.000/mes o $690.000/año (20 contratos, lote de 4), Enterprise desde $199.000/mes · 50 contratos ($1.990.000/año). Fuente: contrappto/docs/BUSINESS/modelo-de-planes.md (17-sep-2026).",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Enterprise: organización con roles, aprobación antes de enviar un lote, reasignación de contratos y firma como empresa. El modelo los pone en el Frente B (después de los planes): confirmar que ya están en producción.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Crear con IA a partir de un PDF y asistente con IA (Pro). Hoy el cupo de IA no se aplica en el código (modelo §9).",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Avisos por WhatsApp (Pro): requiere opt-in de Meta; tarifa no confirmada.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Free: avisos de firma y de contrato por vencer. Pro: obligaciones y plazos antes, el día y después (decisión del 17-sep).",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "'100 % de las firmas con identidad verificada' y 'código único de verificación'.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Casos de uso: arrendamiento, prestación de servicios, contratación de personal, confidencialidad y compraventa existen como tipos de contrato en la app.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Los 2 suscriptores Pro actuales compraron 'ilimitado' a $49.000: decidir si conservan sus condiciones antes de repartir el brochure con el precio nuevo.",
+      "estado": "pendiente"
+    }
+  ],
+  "trifuerza-legal": [
+    {
+      "dato": "Plan base único (3-oct-2026, Juan David): Firma $249.000/mes por firma de abogados, hasta 200 procesos; se crece con add-ons de usuarios y procesos. Solo y Firma+ del BMC quedan descartados. Confirmar cuántos usuarios (5) y firmas electrónicas (20) trae el plan base: salieron del BMC.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Add-ons: firmas $69.000 por 20, usuario $35.000, Drive $39.000, 50 procesos $29.000, intake público $49.000, API $99.000. Comparar con la tabla legal_addons de producción (trifuerza.co/legal/precios lee de ahí). El add-on de 50 GB de almacenamiento se quitó (3-oct-2026): el espacio depende del Drive de cada firma.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Precio fundador: 30 % congelado 12 meses para las primeras 20 cuentas. Falta la fecha de cierre.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Pago anual 10 por 12 en Legal (mismo criterio de Contrappto).",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Consulta diaria a la Rama Judicial y alertas por correo y Telegram.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Firma electrónica con verificación de identidad (proveedor de Contrappto).",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Marca de la firma (logo y color en el panel) y reportes para clientes en Firma+.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Venta acompañada: demo, carga inicial de procesos con el cliente, arranque guiado; soporte por WhatsApp (firmas) y correo (independientes).",
+      "estado": "pendiente"
+    }
+  ],
+  "propuesta-sas-marca-web": [
+    {
+      "dato": "Tasa SIC 2026 solicitud de marca en línea: general $1.347.500 / MiPyme $970.000 (Res. SIC 6167 del 30-ene-2026, según snlegal.co). Confirmar contra la resolución oficial.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Honorarios dados por Juan David el 4-oct-2026: SAS $3.500.000 con asesoría jurídica incluida (subida el 5-oct-2026, antes $2.000.000); análisis marcario $1.300.000; solicitud de marca $2.000.000; web-app $3.000.000 (5-oct-2026; antes $2.000.000 y luego $3.500.000); adicional catálogo de productos $500.000; apelación $1.000.000; 15 % por todo con pago único ($8.330.000 sobre $9.800.000; 5-oct-2026, antes 10 %); si no, pago único por servicio (sin mitad y mitad; desde 4-oct-2026).",
+      "estado": "confirmado"
+    },
+    {
+      "dato": "Referencias de terceros: Cámara de Comercio $200.000-$1.500.000 según capital e impuesto de registro ≈0,7 % (buk.co / dian.com.co, no oficiales); dominio USD 10-40/año; Supabase Pro USD 25/mes. Están marcadas como referencia en el PDF.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "\"~30 marcas llevadas a registro\" (dicho por Juan David). Muro de 8 logos sacado de Propuesta registro marcario 2023-1.pdf (sección Marcas Registradas que Destacan): confirmar que todas siguen concedidas y que se pueden mostrar.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "\"La SIC suele resolver en 6 a 8 meses\": sale de la propuesta de registro marcario de 2023. Confirmar que sigue vigente.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Dado por Juan David el 4-oct-2026: naming $1.200.000 (solo el nombre, sin branding ni nada visual); web = landing + redes + panel básico con obligaciones anuales + BD + arquitectura + diseño animado + responsive + despliegue; adicionales blog $500.000, SEO $400.000, e-commerce $5.000.000. La lista de obligaciones anuales es un documento aparte incluido en la SAS. Supuesto mío: los adicionales quedan fuera del 10 %.",
+      "estado": "confirmado"
+    },
+    {
+      "dato": "Referencia de mercado web en Colombia 2026 (neolo.com / cangrejodigital.com): web corporativa $4-8 M, e-commerce $10-25 M, landing $1,5-3 M. No se afirma \"debajo del mercado\" para SAS ni marca: allí el mercado está en $0,5-2,5 M (SAS) y $1-2,5 M (marca), y Trifuerza está en el rango o por encima.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "IVA (4-oct-2026): factura Juan David como persona natural no responsable de IVA (art. 437 par. 3 ET; tope 3.500 UVT acumulado en el año). Si factura la SAS: jurídico 19 %; la web es defendible como suministro de página web excluido (art. 476 ET).",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Acuerdo de socios INCLUIDO en los $3.500.000 de la SAS (decisión 5-oct-2026): 3 socios que quieren variar utilidades según el aporte. Alcance protegido: una sesión de análisis con los tres socios y el acuerdo; contratos socio-sociedad y modelo tributario de dividendos vs. honorarios quedan fuera si se piden. Confirmar con contador el efecto tributario de dividendos y confirmar numeración de la Ley 1258 antes de citar artículos.",
+      "estado": "pendiente"
+    }
+  ],
+  "propuesta-libertadores": [
+    {
+      "dato": "Precios, puntos y sprints copiados de Propuesta_Final_Libertadores_v4 (1-jun-2026): $40.000.000, 95 pts, 12 semanas, infra ~$150.000/mes, opcionales 2,5 / 3 / 4 / 2,8 M. Confirmar que siguen vigentes.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Términos y condiciones y política de datos aparecen como entregable (Trifuerza redacta, la oficina jurídica de la universidad aprueba). Confirmar que van incluidos en los $40 M.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Asistencia técnica Contrappto posterior al soporte: no tiene precio ni condiciones. Definir valor antes de enviar (la propuesta solo dice 'a bajo costo').",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Desistimiento tácito por inactividad (semáforo, '11 meses sin actuación'): hoy cj-full-app solo marca crítica si el texto de la actuación dice 'desistimiento tácito'; el cálculo por días es trabajo del Sprint 2. La página lo dice; confirmar umbrales con art. 317 CGP.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Seguridad: 'copias de seguridad periódicas' depende del plan de Supabase contratado; 'trazabilidad de quién hizo qué' hoy solo existe en parte (leida_por en alertas). Confirmar o suavizar.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Pantallas: recreaciones con datos de mentira de cj-full-app (colores y textos reales). La app real muestra nombres de partes: no usar capturas sin recortar.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "LegisOffice no se nombra (decisión final de Juan David, 4-oct): se dice 'la herramienta actual'. Confirmar que la universidad entrega la exportación .csv.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Sistema de sustituciones: cj-full-app ya tiene reasignación y 'Transferencia masiva' en Estudiantes; el botón 'Sustituir' del panel de docentes es diseño propuesto.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Módulo PWA eliminado; app en App Store y Play Store a $6.000.000 (Juan David, 4-oct). App de toda la universidad: se cotiza tras diagnóstico.",
+      "estado": "confirmado"
+    },
+    {
+      "dato": "IVA (4-oct-2026): factura la SAS; desarrollo de software gravado al 19 %: $40.000.000 + $7.600.000 = $47.600.000. Módulos también + IVA. Si la universidad acepta contratar con persona natural no responsable de IVA, se reemite sin IVA y a nombre de Juan David. Confirmar con contador.",
+      "estado": "pendiente"
+    }
+  ],
+  "propuesta-libertadores-academy": [
+    {
+      "dato": "Sin precio por decisión de Juan David: la inversión se define tras el diagnóstico. No se promete duración del diagnóstico.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Existe hoy en tri-app2: catálogo, lecciones, evaluaciones, progreso, certificados con QR, eventos en vivo (LiveKit) con chat, preguntas y asistencia, recordatorios, Mercado Pago y precios por país, comentarios, CRM. No existe: marca blanca/multi-tenant, app en tiendas, aulas por grupo con calificaciones, integración con sistema académico, ingreso con cuenta institucional (todo eso va como 'se construye').",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Blackboard se nombra como comparación sana. Confirmar qué LMS usa hoy la universidad antes de enviar.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "El certificado real hoy imprime 'Puntuación: 100%' fijo (CERTIFICATE_DISPLAY_SCORE): el ejemplo muestra 92 %; corregirlo en tri-app2 antes del piloto.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Cursos de ejemplo (internos y de venta) y firmas del certificado (Decanatura, Dirección de Educación Continua) son ilustrativos.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "La plataforma solo transmite; las clases se graban con OBS y se suben (Juan David, 4-oct).",
+      "estado": "confirmado"
+    },
+    {
+      "dato": "IVA: plataforma por suscripción = computación en la nube (excluida, art. 476 ET, Decreto 1412 de 2017); desarrollo a la medida 19 %; cursos propios vendidos al público probablemente gravados salvo exclusión de educación virtual (MinTIC). Confirmar con contador.",
+      "estado": "pendiente"
+    }
+  ],
+  "resumen-pi-derecho-autor": [
+    {
+      "dato": "Plazos en Colombia: vida + 80 (Ley 23/1982, art. 11) y 70 años para persona jurídica desde la primera publicación (Ley 1915/2018). Revisar si la Ley 2615 de 2026 ('ley de la música') u otra norma de 2026 cambió algo.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Conexos: vida + 80 para intérpretes personas naturales; plazo de personas jurídicas (Ley 44/1993 decía 50 años; confirmar si Ley 1915 lo subió).",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Ley 1450/2011: art. 28 (obra por encargo/laboral, presunción con contrato escrito) y art. 30 (cesión por escrito, registro para oponibilidad, 5 años y territorio del país a falta de pacto, inexistencia de cesión general de obras futuras).",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Decisión 351: art. 7 (ideas), 11 (morales), 13 (patrimoniales), 18 (vida + 50), 22 (limitaciones), 30 (software: versiones sucesivas), 33-39 (conexos), 53 (registro declarativo).",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Berna: más de 180 países; Colombia adhirió por Ley 33 de 1987. Plazos comparados: España vida + 70, México vida + 100.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Registro DNDA: desde 2024 algunos trámites tienen tarifa (Ley 2294/2023). El resumen no dice que sea gratis; confirmar si se quiere precisar.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Términos de uso de Instagram: licencia no exclusiva, libre de regalías, transferible, sublicenciable y mundial; termina al borrar el contenido; uso de nombre/foto en contenido patrocinado. Cotejar con la versión vigente antes de la clase.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Código Penal arts. 270-272 (violación de derechos morales, patrimoniales y mecanismos de protección). SAYCO y ACINPRO como ejemplos de gestión colectiva.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Páginas nuevas (15-oct): EE. UU. — work made for hire, VARA 1990, registro para demandar (17 U.S.C. §411-412), fair use §107, vida + 70 y 95/120 años, DMCA 1998; Feist (1991); Warhol v. Goldsmith (2023).",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Decisiones CAN 345 de 1993 (obtentores) y 391 de 1996 (recursos genéticos); interpretación prejudicial obligatoria para jueces de única o última instancia. Tratados de Beijing (2012) y Marrakech (2013).",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "IA: Thaler v. Perlmutter (apelación D.C., 2025); Zarya of the Dawn (2023); informe de la Oficina de Copyright (2025, parte 2); Tribunal de Internet de Pekín (2023); Reino Unido CDPA 1988 s. 9(3).",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Guía de la SIC sobre publicidad con influenciadores: confirmar nombre y año antes de citarla.",
+      "estado": "pendiente"
+    }
+  ],
+  "resumen-pi-propiedad-industrial": [
+    {
+      "dato": "Decisión 486: arts. 14 (requisitos), 15 (no invenciones), 17 (gracia 1 año), 20 (excluidas), 21 (nuevo uso), 50 (20 años), 81-85 (modelo de utilidad 10 años), 113-128 (diseño 10 años), 134-136 (marca y causales), 146 (oposición 30 días hábiles + prórroga), 152-153 (10 años y renovación con gracia de 6 meses), 165 (no uso 3 años), 175 (lema), 190-201 (nombre, enseña, DO), 224-236 (notoria).",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Prioridad de París: 12 meses patentes y modelos de utilidad, 6 meses marcas y diseños. Niza: 45 clases (34 productos, 11 servicios).",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Colombia en el Protocolo de Madrid y en el PCT (más de 150 países; fase nacional a ~30 meses). Publicación de patentes a los 18 meses y examen de fondo pedido dentro de 6 meses.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Casos de videojuegos (EE. UU./Japón): patente de Namco sobre minijuegos en carga (vencida en 2015); Sega vs. Road Rage (2003, arreglo confidencial); patente Némesis de Warner Bros. (2021); Nintendo y The Pokémon Company vs. Pocketpair (Tokio, 2024, sin sentencia de fondo a mediados de 2026); Tetris Holding vs. Xio (2012).",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Ejemplos didácticos ('Kokakola', 'Glaciar', 'Dulce', Café de Colombia como denominación de origen): confirmar que le sirven para clase.",
+      "estado": "pendiente"
+    }
+  ],
+  "resumen-derecho-corporativo": [
+    {
+      "dato": "SA: mínimo 5 accionistas (art. 374) y causal de disolución al 95 % en un solo accionista (art. 457); capital: 50 % suscrito y 1/3 pagado, saldo en 1 año (arts. 376 y 387). SCA: mínimo 5 comanditarios (art. 343). Limitada: 2 a 25 socios.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "SAS (Ley 1258): art. 1 (responsabilidad incluso laboral y tributaria), art. 4 (no puede inscribirse en el RNVE), art. 9 (pago en 2 años), art. 24 (acuerdos de accionistas), art. 42 (desestimación), art. 43 (abuso del voto); restricción de negociación hasta 10 años.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Cesión de acciones no pagadas: responsabilidad solidaria del cedente y adquirentes (confirmar artículo del C. Co.); derecho de preferencia en la SAS solo si lo pactan los estatutos (confirmar).",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Ley 222/1995: art. 12 (retiro), 24 (administradores), 26-30 (control, grupos, registro en 30 días); arts. 3-11 (escisión). C. Co.: 172-180 (fusión), 167 (transformación), 262 (imbricación), 35 (homonimia), 452 (reserva legal), 498 (sociedad de hecho). Ley 1116: arts. 61 y 82. E.T. art. 794. Ley 43/1990 art. 13 par. 2.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Códigos CIIU 6201, 6910, 5611, 8559 (Rev. 4 A.C.); renovación de matrícula hasta el 31 de marzo.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Ejemplos de grupos: enroque del GEA y su desmonte desde 2023 (Nutresa, intercambio Sura-Argos), Grupo Aval, Grupo Ecopetrol. OPA según Decreto 2555 de 2010; Bolsa de Valores de Colombia (integración regional en curso).",
+      "estado": "pendiente"
+    }
+  ]
+}

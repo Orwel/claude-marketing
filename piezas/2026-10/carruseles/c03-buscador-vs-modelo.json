@@ -1,0 +1,90 @@
+{
+  "slug": "c03-buscador-vs-modelo",
+  "titulo": "Un buscador no es un modelo de lenguaje",
+  "plantilla": "Carrusel",
+  "tipo": "carrusel",
+  "formato": "carrusel",
+  "segundos": 6,
+  "cuentas": [
+    "juanda"
+  ],
+  "pie": "Comenta CLASE",
+  "laminas": [
+    {
+      "metafora": "lupa",
+      "datos": {
+        "etiqueta": "Esto no existe"
+      },
+      "antetitulo": "La confusión de fondo",
+      "titulo": "Un buscador te trae *lo que existe.*",
+      "texto": "Si no está, no aparece."
+    },
+    {
+      "metafora": "autocompletar",
+      "datos": {
+        "frase": "La corte decidió que",
+        "opciones": [
+          [
+            "el contrato es nulo",
+            54
+          ],
+          [
+            "no hay lugar",
+            27
+          ],
+          [
+            "se revoca",
+            13
+          ],
+          [
+            "otro",
+            6
+          ]
+        ]
+      },
+      "antetitulo": "En cambio",
+      "titulo": "Un modelo *construye* lo que suena bien.",
+      "texto": "Escoge la palabra más probable, no la verdadera."
+    },
+    {
+      "metafora": "espejismo",
+      "antetitulo": "Por eso",
+      "titulo": "Una cita inventada se ve *perfecta.*",
+      "texto": "Formato correcto, fecha verosímil, sala que existe."
+    },
+    {
+      "metafora": "balanza",
+      "antetitulo": "La regla",
+      "titulo": "Transforma bien. *Recuerda mal.*",
+      "texto": "Úsala para redactar y resumir lo que tú le das, no para recordar lo que no le diste."
+    },
+    {
+      "metafora": "boleto",
+      "datos": {
+        "fecha": "MAR 27 OCT · 7:00 P.M."
+      },
+      "antetitulo": "Lo explico en vivo",
+      "titulo": "Martes 27, *7:00 p.m.*",
+      "texto": "Clase gratuita, con certificado."
+    }
+  ],
+  "variantes": {
+    "juanda": {
+      "copy": "Un buscador te trae lo que existe. Un modelo de lenguaje te construye lo que suena bien.\n\nConfundir las dos cosas es lo que lleva a citar sentencias que no existen. Por eso la regla que uso: la IA transforma bien y recuerda mal.\n\nEl martes 27 de octubre lo explico en vivo, gratis y con certificado. Comenta CLASE y te mando el link."
+    }
+  },
+  "verificar": [
+    {
+      "dato": "Clase en vivo «Fundamentos para la Inteligencia Artificial»: martes 27 de octubre de 2026, 7:00 p.m. hora Colombia, gratis.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Certificado gratuito: quién lo emite (¿Trifuerza Academy?) y qué condiciones tiene.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Registro: link en el perfil, abre el lunes 5 de octubre.",
+      "estado": "pendiente"
+    }
+  ]
+}

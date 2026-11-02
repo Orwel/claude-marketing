@@ -1,0 +1,62 @@
+{
+  "slug": "c12-transforma-recuerda",
+  "titulo": "Transforma bien, recuerda mal",
+  "plantilla": "Carrusel",
+  "tipo": "carrusel",
+  "formato": "carrusel",
+  "segundos": 6,
+  "cuentas": [
+    "juanda"
+  ],
+  "pie": "Comenta CLASE",
+  "laminas": [
+    {
+      "metafora": "balanza",
+      "antetitulo": "La regla que más uso",
+      "titulo": "La IA transforma bien *y recuerda mal.*"
+    },
+    {
+      "metafora": "rompecabezas",
+      "datos": {
+        "etiqueta": "Tu texto"
+      },
+      "antetitulo": "Transforma",
+      "titulo": "Resumir, redactar, traducir, *ordenar lo que le das.*",
+      "texto": "Ahí brilla."
+    },
+    {
+      "metafora": "espejismo",
+      "antetitulo": "Recuerda",
+      "titulo": "Citas, fechas, radicados *de memoria.*",
+      "texto": "Ahí inventa, y con total seguridad."
+    },
+    {
+      "metafora": "boleto",
+      "datos": {
+        "fecha": "MAR 27 OCT · 7:00 P.M."
+      },
+      "antetitulo": "La explico completa",
+      "titulo": "En la clase del *27 de octubre.*",
+      "texto": "Gratis y con certificado."
+    }
+  ],
+  "variantes": {
+    "juanda": {
+      "copy": "La regla que más uso con la inteligencia artificial: transforma bien y recuerda mal.\n\nTransforma: resumir, redactar, traducir, ordenar lo que tú le das. Ahí brilla.\nRecuerda: citas, fechas, radicados de memoria. Ahí inventa, y con total seguridad.\n\nLa explico completa en la clase del 27. Comenta CLASE."
+    }
+  },
+  "verificar": [
+    {
+      "dato": "Clase en vivo «Fundamentos para la Inteligencia Artificial»: martes 27 de octubre de 2026, 7:00 p.m. hora Colombia, gratis.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Certificado gratuito: quién lo emite (¿Trifuerza Academy?) y qué condiciones tiene.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Registro: link en el perfil, abre el lunes 5 de octubre.",
+      "estado": "pendiente"
+    }
+  ]
+}

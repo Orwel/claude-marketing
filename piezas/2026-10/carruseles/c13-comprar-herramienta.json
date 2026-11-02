@@ -1,0 +1,63 @@
+{
+  "slug": "c13-comprar-herramienta",
+  "titulo": "Antes de pagar una herramienta de IA",
+  "plantilla": "Carrusel",
+  "tipo": "carrusel",
+  "formato": "carrusel",
+  "segundos": 6,
+  "cuentas": [
+    "juanda"
+  ],
+  "pie": "Guárdalo",
+  "laminas": [
+    {
+      "metafora": "brujula",
+      "datos": {
+        "etiqueta": "Criterio antes que marca"
+      },
+      "antetitulo": "Antes de pagar",
+      "titulo": "Cuatro preguntas antes de comprar *una herramienta de IA.*"
+    },
+    {
+      "metafora": "candado",
+      "antetitulo": "1",
+      "titulo": "¿Qué hace *con mis datos?*"
+    },
+    {
+      "metafora": "rompecabezas",
+      "datos": {
+        "etiqueta": "Mis documentos"
+      },
+      "antetitulo": "2",
+      "titulo": "¿Trabaja sobre *mis documentos?*",
+      "texto": "O responde de memoria."
+    },
+    {
+      "metafora": "lupa",
+      "datos": {
+        "etiqueta": "Fuente"
+      },
+      "antetitulo": "3",
+      "titulo": "¿Me muestra *de dónde sacó* la respuesta?"
+    },
+    {
+      "metafora": "pasos",
+      "datos": {
+        "items": [
+          "Probar",
+          "Medir",
+          "Comparar",
+          "Decidir"
+        ]
+      },
+      "antetitulo": "4",
+      "titulo": "¿La probé con *un caso real* antes de pagar?"
+    }
+  ],
+  "variantes": {
+    "juanda": {
+      "copy": "Cuatro preguntas antes de pagar una herramienta de IA:\n\n1. ¿Qué hace con mis datos?\n2. ¿Trabaja sobre mis documentos o responde de memoria?\n3. ¿Me muestra de dónde sacó la respuesta?\n4. ¿La probé con un caso real antes de pagar?\n\nGuárdalo para la próxima demo que te hagan."
+    }
+  },
+  "verificar": []
+}

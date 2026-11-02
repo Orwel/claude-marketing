@@ -830,7 +830,8 @@
   ],
   "variantes": {
     "contrappto": {
-      "cta": "Escríbeme"
+      "cta": "Escríbeme",
+      "portada": "Tu contrato *cobra solo*"
     }
   }
 }

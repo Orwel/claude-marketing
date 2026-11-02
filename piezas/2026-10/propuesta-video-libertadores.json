@@ -1,0 +1,289 @@
+{
+  "slug": "propuesta-video-libertadores",
+  "titulo": "Propuesta Consultorio Libertadores en video",
+  "pilar": "Propuestas de servicios",
+  "plantilla": "Brochure",
+  "formatos": [
+    "horizontal"
+  ],
+  "estado": "propuesta privada · no se publica en redes",
+  "cuentas": [
+    "trifuerza"
+  ],
+  "bpm": 96,
+  "musica": "institucional",
+  "transicion": "barrido",
+  "pista": true,
+  "volumenPista": 0.85,
+  "drive": {
+    "carpeta": "propuestas",
+    "nombre": "Propuesta_Libertadores_v5 - Video"
+  },
+  "_fuente": "Contenido de brochures/propuesta-libertadores.html (5-oct-2026).",
+  "marca": {
+    "colores": {
+      "fondo": "#030712",
+      "fondo2": "#0B1220",
+      "tinta": "#F9FAFB",
+      "tenue": "#9CA3AF",
+      "acento": "#C9A227",
+      "secundario": "#C9A227",
+      "alerta": "#E8C547",
+      "linea": "#1F2937"
+    },
+    "web": {
+      "titulo": "Trifuerza Technology",
+      "acentoTexto": "#E8C547",
+      "panel": "#111827",
+      "borde": "#1F2937",
+      "fondo": "#030712"
+    },
+    "firma": {
+      "linea": "Technology"
+    }
+  },
+  "escenas": [
+    {
+      "tipo": "portada",
+      "segundos": 5.5,
+      "antetitulo": "Propuesta · Consultorio Jurídico",
+      "titulo": "Una plataforma *propia* para el consultorio.",
+      "texto": "Fundación Universitaria Los Libertadores"
+    },
+    {
+      "tipo": "metafora",
+      "segundos": 6.5,
+      "antetitulo": "El problema",
+      "titulo": "Un caso *se cae en silencio*",
+      "texto": "Sin actuación durante meses, el proceso termina por desistimiento tácito: el usuario pierde su protección y la universidad responde.",
+      "metafora": "reloj",
+      "datos": {
+        "numero": 11,
+        "unidad": "meses"
+      }
+    },
+    {
+      "tipo": "metafora",
+      "segundos": 6,
+      "antetitulo": "Por qué una plataforma propia",
+      "titulo": "Ser dueño, *no arrendar*",
+      "texto": "Una herramienta hecha con el consultorio y con el código de la universidad, en vez de una licencia genérica que se paga cada año.",
+      "metafora": "balanza",
+      "datos": {
+        "izq": "Licencia cada año",
+        "der": "Plataforma propia"
+      }
+    },
+    {
+      "tipo": "metafora",
+      "segundos": 6.5,
+      "antetitulo": "Monitoreo judicial",
+      "titulo": "La Rama vigilada *todos los días*",
+      "texto": "Cada radicado se consulta a diario y los casos se ordenan por urgencia.",
+      "metafora": "tablero",
+      "datos": {
+        "titulo": "Consultorio · Casos",
+        "filas": [
+          "Ejecutivo singular",
+          "Fijación de cuota",
+          "Ordinario laboral",
+          "Restitución de inmueble"
+        ],
+        "alerta": 0,
+        "textoAlerta": "Riesgo",
+        "textoListo": "Al día"
+      }
+    },
+    {
+      "tipo": "metafora",
+      "segundos": 6,
+      "antetitulo": "Alertas",
+      "titulo": "Avisa *antes de que sea tarde*",
+      "texto": "Por Telegram y correo, al estudiante y a su docente asesor.",
+      "metafora": "alarma",
+      "datos": {
+        "etiqueta": "Aviso",
+        "aviso": "Riesgo de desistimiento",
+        "detalle": "Habla con tu docente asesor"
+      }
+    },
+    {
+      "tipo": "metafora",
+      "segundos": 6,
+      "antetitulo": "Control de términos",
+      "titulo": "Verde, amarillo *o rojo*",
+      "texto": "Cada caso con su semáforo de urgencia y alertas escalonadas del estudiante al docente.",
+      "metafora": "semaforo",
+      "datos": {
+        "items": [
+          "Al día: sin novedades",
+          "Atención: se acerca el plazo",
+          "Crítico: actúa ya"
+        ]
+      }
+    },
+    {
+      "tipo": "tarjetas",
+      "segundos": 6,
+      "antetitulo": "No solo la Rama",
+      "titulo": "Todos los casos *del consultorio*",
+      "items": [
+        {
+          "icono": "MessagesSquare",
+          "titulo": "Asesorías",
+          "texto": "Consultas y seguimiento de usuarios."
+        },
+        {
+          "icono": "Handshake",
+          "titulo": "Conciliaciones",
+          "texto": "Antes de llegar a un despacho."
+        },
+        {
+          "icono": "FileText",
+          "titulo": "Derechos de petición",
+          "texto": "Con sus términos de respuesta."
+        },
+        {
+          "icono": "Scale",
+          "titulo": "Tutelas",
+          "texto": "Desde que se preparan."
+        },
+        {
+          "icono": "Landmark",
+          "titulo": "Trámites",
+          "texto": "Administrativos y ante entidades."
+        },
+        {
+          "icono": "Smartphone",
+          "titulo": "Desde el celular",
+          "texto": "Accesible y portátil."
+        }
+      ]
+    },
+    {
+      "tipo": "tarjetas",
+      "segundos": 5.5,
+      "antetitulo": "Diseño premium",
+      "titulo": "Pensada *para cada usuario*",
+      "items": [
+        {
+          "icono": "GraduationCap",
+          "titulo": "Estudiantes",
+          "texto": "Sus casos y alertas, lo urgente primero."
+        },
+        {
+          "icono": "Users",
+          "titulo": "Docentes",
+          "texto": "Todos sus casos y estudiantes en una vista."
+        },
+        {
+          "icono": "Building",
+          "titulo": "Dirección",
+          "texto": "Estadísticas para informes y acreditación."
+        }
+      ]
+    },
+    {
+      "tipo": "metafora",
+      "segundos": 6.5,
+      "antetitulo": "Metodología",
+      "titulo": "3 sprints, *12 semanas*",
+      "texto": "Revisión conjunta al cierre de cada etapa; los tiempos pueden reducirse porque ya hay una base funcionando.",
+      "metafora": "pasos",
+      "datos": {
+        "items": [
+          "Fundamentos",
+          "Módulos",
+          "Transición"
+        ]
+      }
+    },
+    {
+      "tipo": "tarjetas",
+      "segundos": 6.5,
+      "antetitulo": "La transición",
+      "titulo": "Un puente, *no un salto*",
+      "items": [
+        {
+          "icono": "Table",
+          "titulo": "Copia .csv",
+          "texto": "La universidad entrega la base actual."
+        },
+        {
+          "icono": "UserPlus",
+          "titulo": "Usuarios",
+          "texto": "Cada estudiante crea el suyo; la universidad lo valida."
+        },
+        {
+          "icono": "Hash",
+          "titulo": "Radicados",
+          "texto": "Cada estudiante registra los de sus procesos."
+        },
+        {
+          "icono": "RefreshCw",
+          "titulo": "Sustituciones",
+          "texto": "Los casos pasan con su historial al terminar el semestre."
+        }
+      ]
+    },
+    {
+      "tipo": "metafora",
+      "segundos": 6,
+      "antetitulo": "Universidad blindada",
+      "titulo": "Legal y seguridad *desde el diseño*",
+      "texto": "Términos y condiciones, política de datos conforme a la Ley 1581 y acceso por roles.",
+      "metafora": "candado",
+      "datos": {
+        "etiqueta": "Datos protegidos"
+      }
+    },
+    {
+      "tipo": "metafora",
+      "segundos": 6.5,
+      "antetitulo": "Expectativas claras",
+      "titulo": "Un copiloto, *no un piloto automático*",
+      "texto": "La plataforma reduce el riesgo de olvidar un caso, pero el criterio de estudiantes y docentes sigue completando la pieza.",
+      "metafora": "rompecabezas",
+      "datos": {
+        "completo": true,
+        "etiqueta": "Tu criterio"
+      }
+    },
+    {
+      "tipo": "tarjetas",
+      "segundos": 6,
+      "antetitulo": "Inversión",
+      "titulo": "Se paga una vez, *se ahorra siempre*",
+      "items": [
+        {
+          "icono": "BadgeCheck",
+          "titulo": "Pago único",
+          "texto": "$40.000.000 + IVA, sin suscripción."
+        },
+        {
+          "icono": "Cloud",
+          "titulo": "Después",
+          "texto": "Solo los servidores en la nube."
+        },
+        {
+          "icono": "Smartphone",
+          "titulo": "Opcional",
+          "texto": "App en tiendas, documentos y firma electrónica."
+        }
+      ]
+    },
+    {
+      "tipo": "cierre",
+      "segundos": 5,
+      "texto": "La herramienta que *el consultorio merece.*",
+      "cta": "Conócenos en www.trifuerza.co",
+      "web": "Valores y alcance, en la propuesta"
+    }
+  ],
+  "verificar": [
+    {
+      "dato": "Mismos datos y precios que el PDF de la propuesta; ver brochures/verificar.json.",
+      "estado": "pendiente"
+    }
+  ]
+}

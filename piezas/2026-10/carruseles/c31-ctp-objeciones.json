@@ -1,0 +1,84 @@
+{
+  "slug": "c31-ctp-objeciones",
+  "titulo": "Contrappto: tres objeciones",
+  "plantilla": "Carrusel",
+  "tipo": "carrusel",
+  "formato": "carrusel",
+  "segundos": 6,
+  "cuentas": [
+    "contrappto"
+  ],
+  "pie": "Agenda una demo de 20 min",
+  "laminas": [
+    {
+      "metafora": "burbujas",
+      "datos": {
+        "items": [
+          "Ya tenemos abogado",
+          "¿Es válido?",
+          "¿Y nuestros datos?"
+        ]
+      },
+      "antetitulo": "Lo que nos dicen",
+      "titulo": "Tres objeciones *y su respuesta.*"
+    },
+    {
+      "metafora": "tablero",
+      "datos": {
+        "titulo": "Antes: correo y Excel",
+        "filas": [
+          "contrato_final.docx",
+          "contrato_final2.docx",
+          "FINAL_ok.pdf",
+          "firmado?.pdf",
+          "versión Juan.docx"
+        ],
+        "alerta": 2,
+        "textoListo": "Perdido",
+        "textoAlerta": "¿Cuál es?"
+      },
+      "antetitulo": "«Ya tenemos abogado»",
+      "titulo": "No reemplaza al abogado. *Reemplaza el Excel y el correo.*"
+    },
+    {
+      "metafora": "firmas",
+      "datos": {
+        "numero": 50,
+        "unidad": "firmas verificadas"
+      },
+      "antetitulo": "«¿Es válido?»",
+      "titulo": "Firma con verificación de identidad, *no un garabato en PDF.*"
+    },
+    {
+      "metafora": "candado",
+      "datos": {
+        "etiqueta": "Tus datos, exportables"
+      },
+      "antetitulo": "«¿Y nuestros datos?»",
+      "titulo": "Salen cuando quieras. *Son tuyos.*"
+    },
+    {
+      "metafora": "pasos",
+      "datos": {
+        "items": [
+          "Agendas",
+          "20 minutos",
+          "Ves tu tablero"
+        ]
+      },
+      "antetitulo": "¿Te quedó otra?",
+      "titulo": "Resuélvela *en una demo de 20 minutos.*"
+    }
+  ],
+  "variantes": {
+    "contrappto": {
+      "copy": "«Ya tenemos abogado.» Contrappto no reemplaza al abogado: reemplaza el Excel y el correo donde hoy viven los contratos.\n\n«¿Es válido?» Firma con verificación de identidad, no un garabato en PDF.\n\n«¿Y nuestros datos?» Salen cuando quieras. Son tuyos.\n\n¿Te quedó otra? Agenda una demo de 20 minutos."
+    }
+  },
+  "verificar": [
+    {
+      "dato": "Validez de la firma con verificación de identidad y exportación de datos: confirmar redacción con el producto y la norma aplicable.",
+      "estado": "pendiente"
+    }
+  ]
+}

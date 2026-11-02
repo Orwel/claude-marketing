@@ -1,0 +1,250 @@
+{
+  "slug": "jd-kafka",
+  "titulo": "Kafkiano",
+  "plantilla": "Grabado",
+  "formato": "vertical",
+  "cuentas": [
+    "juanda"
+  ],
+  "transicion": "barrido",
+  "_guion": "piezas/2026-11/guiones/jd-kafka.md (40 s). v3: todo dibujado y animado como el pin #2 (plumilla con line boil, escalera 3D en three.js, arbol de luz). v1 Tinta y v2 Archivo descartadas.",
+  "audio": "kafka/mezcla.wav",
+  "_audio": "public/kafka/voz.mp3 (ElevenLabs, eleven_v4) a 1,07x + «Dark Times» de Kevin MacLeod desde 0:34, con sidechain bajo la voz, silencio cuando se cierra la puerta y loudnorm -16 LUFS.",
+  "acentoDesde": 34.7,
+  "escenas": [
+    {
+      "tipo": "escritura",
+      "segundos": 5.6,
+      "img": "kafka/manuscrito-tinta.png",
+      "lineas": 12,
+      "altoLinea": 57,
+      "margenArriba": 20
+    },
+    {
+      "tipo": "ojo",
+      "segundos": 1.4,
+      "trazos": "ojo"
+    },
+    {
+      "tipo": "arresto",
+      "segundos": 4.26,
+      "golpe": 2.16,
+      "trazos": "guardias",
+      "partes": [
+        {
+          "caja": [
+            0.21,
+            0.0,
+            0.16,
+            0.23
+          ],
+          "pivote": [
+            0.29,
+            0.22
+          ],
+          "amp": 5,
+          "periodo": 2.6,
+          "fase": 0
+        },
+        {
+          "caja": [
+            0.36,
+            0.07,
+            0.16,
+            0.22
+          ],
+          "pivote": [
+            0.44,
+            0.28
+          ],
+          "amp": 4,
+          "periodo": 3.1,
+          "fase": 1.7
+        },
+        {
+          "caja": [
+            0.65,
+            0.06,
+            0.18,
+            0.23
+          ],
+          "pivote": [
+            0.73,
+            0.28
+          ],
+          "amp": 6,
+          "periodo": 2.2,
+          "fase": 3.1
+        }
+      ],
+      "humo": [
+        {
+          "x": 0.69,
+          "y": 0.22
+        }
+      ]
+    },
+    {
+      "tipo": "papeles",
+      "segundos": 2.14
+    },
+    {
+      "tipo": "escalera",
+      "segundos": 6.4,
+      "velo": true
+    },
+    {
+      "tipo": "puerta",
+      "segundos": 9.4,
+      "envejece": [
+        3.45,
+        7
+      ],
+      "cierra": [
+        7.0,
+        8.0
+      ],
+      "negro": [
+        7.3,
+        8.6
+      ],
+      "guardian": "guardian",
+      "espera": "espera"
+    },
+    {
+      "tipo": "arbol",
+      "segundos": 8.4,
+      "oscuro": true,
+      "trazos": "kafka",
+      "arbol": 1.8,
+      "velo": true
+    },
+    {
+      "tipo": "tintero",
+      "segundos": 4.08,
+      "logo": "marcas/trifuerza/logo-horizontal-oscuro.png"
+    }
+  ],
+  "frases": [
+    {
+      "desde": 0.0,
+      "hasta": 1.47,
+      "texto": "Kafka era *abogado*."
+    },
+    {
+      "desde": 2.19,
+      "hasta": 5.03,
+      "texto": "Y escribió la peor *pesadilla* de cualquier cliente."
+    },
+    {
+      "desde": 6.01,
+      "hasta": 8.75,
+      "texto": "En *El proceso*, a Josef K. lo detienen una mañana."
+    },
+    {
+      "desde": 9.16,
+      "hasta": 10.75,
+      "texto": "Nadie le dice de qué lo *acusan*."
+    },
+    {
+      "desde": 11.26,
+      "hasta": 13.1,
+      "texto": "Y aun así, el proceso *sigue*."
+    },
+    {
+      "desde": 13.63,
+      "hasta": 16.83,
+      "texto": "Busca abogados, sube a juzgados escondidos en *áticos*."
+    },
+    {
+      "desde": 17.26,
+      "hasta": 19.42,
+      "texto": "Cada paso le abre *tres trámites más*."
+    },
+    {
+      "desde": 20.03,
+      "hasta": 22.71,
+      "texto": "Un hombre espera toda la vida frente a la *puerta de la ley*."
+    },
+    {
+      "desde": 23.25,
+      "hasta": 26.77,
+      "texto": "Al final, el guardián le dice que esa entrada era *solo para él*."
+    },
+    {
+      "desde": 27.24,
+      "hasta": 27.8,
+      "texto": "Y la *cierra*."
+    },
+    {
+      "desde": 29.44,
+      "hasta": 30.54,
+      "texto": "Eso es lo *kafkiano*:"
+    },
+    {
+      "desde": 30.97,
+      "hasta": 34.19,
+      "texto": "no una ley injusta, sino una ley que *nadie te explica*."
+    },
+    {
+      "desde": 34.73,
+      "hasta": 37.31,
+      "texto": "Hacer el derecho *entendible* también es *justicia*."
+    },
+    {
+      "desde": 37.87,
+      "hasta": 41.6,
+      "texto": "¿Cuál ha sido tu trámite más *kafkiano*?"
+    }
+  ],
+  "variantes": {
+    "juanda": {
+      "copy": "Kafka estudió Derecho y trabajó años entre expedientes. Por eso su pesadilla da tanto miedo: es verosímil.\n\nEn El proceso, a Josef K. lo detienen sin decirle de qué lo acusan, y aun así el proceso sigue. Lo kafkiano no es una ley injusta: es una ley que nadie te explica.\n\n¿Cuál ha sido tu trámite más kafkiano? Te leo en los comentarios.\n\nImágenes: dibujos a partir de fotos de época y manuscritos de Franz Kafka, de dominio público (Wikimedia Commons).\nMúsica: «Dark Times» de Kevin MacLeod (incompetech.com), licencia CC BY 4.0.\n\n#Kafka #Derecho #Abogados #DerechoEntendible #Justicia",
+      "portada": "Portadas/Juanda.Trifuerza/jd-kafka-JD-ig.jpg (cuadro 1090)",
+      "publicar": "viernes 2026-11-06 10:00 (Metricool); alternativa miércoles 4 o jueves 5 a las 10:00. Etiqueta «Información de IA» activada."
+    }
+  },
+  "verificar": [
+    {
+      "dato": "Kafka se doctoró en Derecho (Praga, 1906) y trabajó en el Instituto de Seguros de Accidentes de Trabajo.",
+      "estado": "verificado",
+      "_confirmo": "Juan David, 2026-11-01"
+    },
+    {
+      "dato": "El proceso: a Josef K. lo detienen sin decirle de qué lo acusa; juzgados en áticos.",
+      "estado": "verificado"
+    },
+    {
+      "dato": "La parábola «Ante la ley» va en palabras propias, sin citar una traducción.",
+      "estado": "verificado"
+    },
+    {
+      "dato": "Crédito de la música en el copy: «Dark Times», Kevin MacLeod, CC BY 4.0.",
+      "estado": "verificado"
+    },
+    {
+      "dato": "Material de archivo: dominio público según Wikimedia Commons (Piranesi, manuscritos de Kafka, foto de 1923 de autor desconocido).",
+      "estado": "verificado"
+    }
+  ],
+  "trazos": {
+    "kafka": "kafka/trazos-kafka.json",
+    "ojo": "kafka/trazos-ojo.json",
+    "guardias": "kafka/trazos-guardias.json",
+    "guardian": "kafka/trazos-guardian.json",
+    "espera": "kafka/trazos-espera.json"
+  },
+  "destellos": [
+    0,
+    2.19,
+    5.6,
+    7.0,
+    11.26,
+    13.4,
+    17.26,
+    17.9,
+    18.5,
+    34.73,
+    37.6
+  ]
+}

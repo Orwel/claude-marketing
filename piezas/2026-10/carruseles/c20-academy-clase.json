@@ -1,0 +1,83 @@
+{
+  "slug": "c20-academy-clase",
+  "titulo": "Trifuerza Academy: clase en vivo con certificado",
+  "plantilla": "Carrusel",
+  "tipo": "carrusel",
+  "formato": "carrusel",
+  "segundos": 6,
+  "cuentas": [
+    "trifuerza"
+  ],
+  "pie": "Inscríbete · link en el perfil",
+  "laminas": [
+    {
+      "metafora": "boleto",
+      "datos": {
+        "fecha": "MAR 27 OCT · 7:00 P.M.",
+        "insignia": "ACADEMY"
+      },
+      "antetitulo": "Trifuerza Academy",
+      "titulo": "Fundamentos para la *Inteligencia Artificial.*"
+    },
+    {
+      "metafora": "calendario",
+      "datos": {
+        "etiqueta": "En vivo · 7:00 p.m."
+      },
+      "antetitulo": "Cuándo",
+      "titulo": "Martes 27 de octubre, *7:00 p.m.*",
+      "texto": "Hora Colombia."
+    },
+    {
+      "metafora": "autocompletar",
+      "datos": {
+        "frase": "Esta clase es",
+        "opciones": [
+          [
+            "práctica",
+            61
+          ],
+          [
+            "técnica",
+            19
+          ],
+          [
+            "larga",
+            12
+          ],
+          [
+            "otra",
+            8
+          ]
+        ]
+      },
+      "antetitulo": "Cómo es",
+      "titulo": "Práctica y *sin tecnicismos.*",
+      "texto": "Para usar la IA con criterio desde el día siguiente."
+    },
+    {
+      "metafora": "certificado",
+      "antetitulo": "Gratis",
+      "titulo": "Con *certificado.*"
+    }
+  ],
+  "variantes": {
+    "trifuerza": {
+      "copy": "Trifuerza Academy presenta la clase en vivo Fundamentos para la Inteligencia Artificial.\n\nMartes 27 de octubre, 7:00 p.m. (hora Colombia). Práctica, sin tecnicismos y con certificado. Gratis.\n\nInscríbete en el link del perfil."
+    }
+  },
+  "verificar": [
+    {
+      "dato": "Clase en vivo «Fundamentos para la Inteligencia Artificial»: martes 27 de octubre de 2026, 7:00 p.m. hora Colombia, gratis.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Certificado gratuito: quién lo emite (¿Trifuerza Academy?) y qué condiciones tiene.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Registro: link en el perfil, abre el lunes 5 de octubre.",
+      "estado": "pendiente"
+    }
+  ]
+}

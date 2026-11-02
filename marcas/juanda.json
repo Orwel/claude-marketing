@@ -52,6 +52,39 @@
     "logo": {
       "src": "marcas/trifuerza/logo-horizontal-claro.png",
       "alto": 58
+    },
+    "certificado": {
+      "_nota": "Copia del certificado real de Trifuerza Academy (ponente, 5-oct-2026) en versión de asistente para la clase del 27. Lo usan la outro (Comenta CLASE) y el beat 'certificado'. Título y número por confirmar: ver calendario/2026-10.json evento.certificado.",
+      "logo": "marcas/trifuerza/logo-horizontal-claro.png",
+      "isotipo": "marcas/trifuerza/isotipo.png",
+      "academia": "Trifuerza Academy",
+      "titulo": "Certificado de asistencia",
+      "nombre": "Tu nombre aquí",
+      "motivo": "por haber asistido a la clase",
+      "curso": "Fundamentos para la inteligencia artificial",
+      "fecha": "dictada el 27 de octubre de 2026",
+      "datos": [
+        { "etiqueta": "Fecha", "valor": "27 oct", "extra": "2026" },
+        { "etiqueta": "Hora", "valor": "7 p.m.", "extra": "Colombia" },
+        { "etiqueta": "Modalidad", "valor": "En vivo" }
+      ],
+      "firma": "Juan David Vanegas",
+      "cargo": "Fundador de Trifuerza",
+      "numero": "N.º TFE-20261027-ASIST",
+      "verificable": "Verificable en www.trifuerza.co/academy/verificar",
+      "sello": "Gratis y con certificado",
+      "colores": {
+        "panel": "#0B1222",
+        "resplandor1": "#B9701F",
+        "resplandor2": "#1F4FB8",
+        "etiqueta": "#8FA6F2",
+        "tenueOscuro": "#B8C0D4",
+        "hoja": "#F3F5F9",
+        "academia": "#2F5FD9",
+        "tinta": "#141821",
+        "tenue": "#5B6272",
+        "barra": "#F5A53A"
+      }
     }
   }
 }

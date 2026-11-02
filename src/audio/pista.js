@@ -262,6 +262,169 @@ export function sintetizarVertical(pieza, cuenta) {
   return aWav(mezcla);
 }
 
+/**
+ * Estilos de música para Brochure (`pieza.musica`). Todo tonal y sintetizado: sin licencias y sin ruido
+ * blanco (a Juan David no le gusta, 27-sep-2026). `patron` = índice del acorde por subdivisión del compás
+ * (3-5 = una octava arriba, -1 = silencio); `ecos` = [retardo en pulsos, nivel].
+ */
+const ESTILOS_BROCHURE = {
+  webinar: {
+    progresion: [[146.83, 174.61, 220.0], [116.54, 146.83, 174.61], [174.61, 220.0, 261.63], [130.81, 164.81, 196.0]],
+    timbre: 'seno', patron: [0, 1, 2, 1, 2, 0, 1, 2], octava: 4, ecos: [[0, 1], [0.75, 0.35], [1.5, 0.12]], nivel: 0.06,
+    pad: 0.05, bombo: [0, 4], palma: [], golpe: 1, tic: 5200,
+  },
+  // Institucional y sobrio (software para una universidad): Do, Sol/Si, La menor, Fa con campanas FM.
+  institucional: {
+    progresion: [[130.81, 164.81, 196.0], [123.47, 146.83, 196.0], [110.0, 130.81, 164.81], [87.31, 130.81, 174.61]],
+    timbre: 'campana', patron: [0, 2, 4, 2, 1, 2, 3, -1], octava: 4, ecos: [[0, 1], [1, 0.3]], nivel: 0.05,
+    pad: 0.042, bombo: [0], palma: [4], golpe: 0.8, tic: 3900,
+  },
+  // Optimista y de aprendizaje (Academy): Sol, Re, Mi menor, Do con marimba en semicorcheas.
+  optimista: {
+    progresion: [[196.0, 246.94, 293.66], [146.83, 185.0, 220.0], [164.81, 196.0, 246.94], [130.81, 164.81, 196.0]],
+    timbre: 'marimba', patron: [0, 1, 2, 3, 2, 1, 2, 4, 0, 2, 1, 3, 4, 2, 3, 1], octava: 2, ecos: [[0, 1], [0.75, 0.25]], nivel: 0.07,
+    pad: 0.035, bombo: [0, 3, 4], palma: [2, 6], golpe: 0.9, tic: 4800,
+  },
+  // Cálido y artesanal (emprendimiento, Dos Tierras): La menor, Fa, Do, Sol en guitarra pulsada.
+  calido: {
+    progresion: [[110.0, 130.81, 164.81], [87.31, 110.0, 130.81], [130.81, 164.81, 196.0], [98.0, 123.47, 146.83]],
+    timbre: 'cuerda', patron: [0, 2, 1, 3, 2, 4, 1, 2], octava: 2, ecos: [[0, 1]], nivel: 0.16,
+    pad: 0.028, bombo: [0, 5], palma: [4], golpe: 0.75, tic: 3100,
+  },
+};
+
+/** Una nota del arpegio con el timbre del estilo. */
+function voz(timbre, buffer, t0, f, nivel, sumar, nota) {
+  if (timbre === 'campana') {
+    // FM: la moduladora a 3,5× da el brillo metálico de una campana que se apaga.
+    return sumar(buffer, t0, 1.6, (x) => Math.sin(2 * Math.PI * f * x + 2.2 * Math.exp(-3 * x) * Math.sin(2 * Math.PI * f * 3.5 * x)) * Math.exp(-2.6 * x) * Math.min(1, x * 400) * nivel);
+  }
+  if (timbre === 'marimba') {
+    // Fundamental más el parcial 4×, que se apaga mucho antes: el golpe de madera.
+    return sumar(buffer, t0, 0.6, (x) => (nota(f, x) * Math.exp(-9 * x) + 0.35 * nota(f * 4, x) * Math.exp(-30 * x)) * Math.min(1, x * 500) * nivel);
+  }
+  if (timbre === 'cuerda') {
+    // Karplus-Strong: una línea de retardo que se promedia a sí misma suena a cuerda pulsada.
+    const tasa = 44100;
+    const largo = Math.max(2, Math.round(tasa / f));
+    const linea = new Float32Array(largo);
+    let semilla = Math.round(f * 1000);
+    for (let i = 0; i < largo; i++) { semilla = (semilla * 1664525 + 1013904223) >>> 0; linea[i] = (semilla / 4294967296) * 2 - 1; }
+    let i = 0;
+    return sumar(buffer, t0, 1.4, (x) => {
+      const actual = linea[i % largo];
+      linea[i % largo] = 0.497 * (actual + linea[(i + 1) % largo]);
+      i++;
+      return actual * nivel * Math.min(1, (1.4 - x) / 0.1);
+    });
+  }
+  return sumar(buffer, t0, 0.5, (x) => nota(f, x) * Math.exp(-7 * x) * Math.min(1, x * 300) * nivel);
+}
+
+/**
+ * Pista para la plantilla Brochure: sin voz, así que la música va al frente. Es la receta del
+ * webinar (pad, arpegio con eco, bombo suave y tic tonal), que a Juan David sí le gustó, y los
+ * efectos tonales de sintetizarVertical: nada de ruido blanco (27-sep-2026).
+ * Cada efecto sale de los mismos tiempos que la plantilla (tramosDe y los escalones de Brochure.jsx).
+ */
+export function sintetizarBrochure(pieza) {
+  const tramos = tramosDe(pieza, FPS);
+  const segundos = tramos.at(-1).fin / FPS;
+  const n = Math.ceil(segundos * TASA);
+  const musica = new Float32Array(n);
+  const efectos = new Float32Array(n);
+  const pulso = 60 / (pieza.bpm ?? 108);
+  const seg = (c) => c / FPS;
+  const sumar = (buffer, inicio, duracion, f) => {
+    const a = Math.floor(inicio * TASA);
+    const b = Math.min(n, a + Math.floor(duracion * TASA));
+    for (let i = Math.max(0, a); i < b; i++) buffer[i] += f((i - a) / TASA);
+  };
+  const nota = (f, x) => Math.sin(2 * Math.PI * f * x);
+
+  // Estilo musical por pieza (`pieza.musica`): cada propuesta suena a su negocio. Sin estilo, la receta
+  // del webinar (Re menor, Si bemol, Fa, Do) que ya usaban los brochures.
+  const estilo = ESTILOS_BROCHURE[pieza.musica] ?? ESTILOS_BROCHURE.webinar;
+  const progresion = estilo.progresion;
+  const compas = pulso * 4;
+  const inicioCierre = seg(tramos.at(-1).inicio);
+  const inicioRitmo = seg(tramos[1]?.inicio ?? 0);
+  for (let t = 0, c = 0; t < segundos; t += compas, c++) {
+    const acorde = progresion[c % progresion.length];
+    sumar(musica, t, compas + 0.4, (x) => {
+      const env = Math.min(1, x / 0.6) * Math.min(1, Math.max(0, (compas + 0.4 - x) / 0.5));
+      return acorde.reduce((s, f) => s + nota(f, x) + 0.5 * nota(f * 1.004, x) + 0.25 * nota(f * 2, x), 0) * env * estilo.pad;
+    });
+    for (let k = 0; k < estilo.patron.length; k++) {
+      if (estilo.patron[k] < 0) continue;
+      const f = acorde[estilo.patron[k] % 3] * estilo.octava * (estilo.patron[k] >= 3 ? 2 : 1);
+      const t0 = t + k * (compas / estilo.patron.length);
+      for (const [retardo, nivel] of estilo.ecos.map(([r, n]) => [r * pulso, n])) {
+        voz(estilo.timbre, musica, t0 + retardo, f, nivel * estilo.nivel, sumar, nota);
+      }
+    }
+    if (t < inicioRitmo) continue;
+    for (let k = 0; k < 8; k++) {
+      const tk = t + k * (pulso / 2);
+      // Bombo según el estilo; se calla el compás antes del cierre para que la subida respire.
+      if (estilo.bombo.includes(k) && (tk < inicioCierre - compas || tk >= inicioCierre)) {
+        sumar(musica, tk, 0.35, (x) => Math.sin(2 * Math.PI * (48 * x + (60 / 25) * (1 - Math.exp(-25 * x)))) * Math.exp(-10 * x) * 0.5 * estilo.golpe);
+      }
+      if (estilo.palma.includes(k)) sumar(musica, tk, 0.12, (x) => (nota(1180, x) + 0.6 * nota(1770, x)) * Math.exp(-38 * x) * 0.05);
+      sumar(musica, tk + pulso / 4, 0.04, (x) => nota(estilo.tic, x) * Math.exp(-120 * x) * 0.025);
+    }
+  }
+
+  const swish = (t0) =>
+    sumar(efectos, t0 - 0.1, 0.32, (x) => {
+      const p = x / 0.32;
+      const glide = (f) => 2 * Math.PI * f * (x + (0.32 / Math.LN2) * (2 ** p - 1) * 0.5);
+      return (Math.sin(glide(330)) + 0.6 * Math.sin(glide(495)) + 0.3 * Math.sin(glide(660))) * Math.sin(Math.PI * p) ** 2 * 0.08;
+    });
+  const pop = (t0) => sumar(efectos, t0, 0.09, (x) => Math.sin(2 * Math.PI * (620 * x + (300 * (1 - Math.exp(-40 * x))) / 40)) * Math.exp(-45 * x) * 0.22);
+  const whoosh = (t0) => {
+    sumar(efectos, t0 - 0.45, 0.47, (x) => {
+      const p = x / 0.47;
+      return (nota(220, x) + 0.7 * nota(329.63, x) + 0.5 * nota(440, x) + 0.25 * nota(659.26, x)) * p ** 3 * Math.min(1, (0.47 - x) / 0.02) * 0.12;
+    });
+    sumar(efectos, t0, 0.5, (x) => nota(55, x) * Math.exp(-8 * x) * 0.35);
+  };
+  const brillo = (t0) => [1567.98, 2093.0, 2637.02].forEach((f, k) => sumar(efectos, t0 + k * 0.03, 1.2, (x) => nota(f, x) * Math.exp(-4 * x) * Math.min(1, x * 400) * 0.045));
+
+  swish(0.1);
+  for (const tramo of tramos) {
+    const e = tramo.escena;
+    if (tramo.inicio > 0) whoosh(seg(tramo.inicio));
+    // Pops en las entradas escalonadas de Brochure.jsx: tarjetas cada 5 cuadros desde el 18, planes cada 10 desde el 16.
+    if (tramo.tipo === 'tarjetas') (e.items ?? []).forEach((_, i) => pop(seg(tramo.inicio + 18 + i * 5)));
+    if (tramo.tipo === 'planes') (e.planes ?? []).forEach((_, i) => pop(seg(tramo.inicio + 16 + i * 10)));
+    if (tramo.tipo === 'capitulo') swish(seg(tramo.inicio + (e.kit?.retraso ?? 14)));
+    // La metáfora entra 10 cuadros después del titular (ver Metafora en Brochure.jsx): un pop cuando aparece.
+    if (tramo.tipo === 'metafora') { swish(seg(tramo.inicio + 10)); pop(seg(tramo.inicio + 16)); }
+  }
+  // Cierre: tono que sube hasta el corte y brillo cuando aparece el botón (ver escenas/Cierre.jsx).
+  sumar(efectos, inicioCierre - 1.3, 1.3, (x) => {
+    const p = x / 1.3;
+    const fase = 2 * Math.PI * 220 * (1.3 / Math.log(4)) * (4 ** p - 1);
+    return (Math.sin(fase) + 0.4 * Math.sin(2 * fase)) * p ** 2 * 0.1;
+  });
+  const cierre = tramos.at(-1).escena;
+  const finTexto = 4 + partirPalabras(cierre.texto?.startsWith('$') ? '' : cierre.texto ?? '').length * 3 + 6;
+  pop(inicioCierre + seg(finTexto + 10));
+  brillo(inicioCierre + seg(finTexto + 12));
+  // Acorde final que se queda sonando.
+  sumar(musica, inicioCierre, segundos - inicioCierre, (x) => progresion[0].reduce((s, f) => s + nota(f, x) + 0.4 * nota(f * 2, x), 0) * Math.min(1, x / 0.05) * Math.exp(-0.7 * x) * 0.06);
+
+  const mezcla = new Float32Array(n);
+  for (let i = 0; i < n; i++) {
+    const t = i / TASA;
+    const entrada = Math.min(1, t / 0.4);
+    const salida = Math.min(1, Math.max(0, (segundos - t) / 1.2));
+    mezcla[i] = Math.tanh((musica[i] * 0.75 + efectos[i] * 0.85) * entrada * salida * 1.1) * 0.9;
+  }
+  return aWav(mezcla);
+}
+
 function aWav(mezcla) {
   const n = mezcla.length;
   const wav = Buffer.alloc(44 + n * 2);
@@ -288,6 +451,11 @@ export function escribirPista(pieza, cuenta) {
   mkdirSync(path.dirname(destino), { recursive: true });
   if (pieza.plantilla === 'Vertical') {
     writeFileSync(destino, sintetizarVertical(pieza, cuenta));
+    return destino;
+  }
+  // Capas usa la misma receta: pad y arpegio desde la segunda escena, cierre en la ultima.
+  if (pieza.plantilla === 'Brochure' || pieza.plantilla === 'Capas') {
+    writeFileSync(destino, sintetizarBrochure(pieza));
     return destino;
   }
   const manifiesto = path.join(RAIZ, 'public', 'voz', `${id}.json`);

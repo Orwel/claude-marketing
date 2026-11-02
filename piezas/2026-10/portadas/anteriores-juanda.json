@@ -1,0 +1,184 @@
+{
+  "slug": "anteriores-juanda",
+  "titulo": "Portadas nuevas para los reels anteriores de juanda.trifuerza",
+  "plantilla": "PortadasAnteriores",
+  "cuentas": [
+    "juanda"
+  ],
+  "_nota": "Portadas nuevas para reels ya publicados: la miniatura vieja trae textos que se enciman, asi que cada una lleva una metafora animada (remotion/metaforas) como ilustracion, en el estilo de los carruseles del evento, y el titulo centrado.",
+  "reels": [
+    {
+      "id": "Dd1zZd3vZ1X",
+      "titulo": "La IA que *nadie entiende* del todo",
+      "metafora": "caja",
+      "datos": {
+        "etiqueta": "Lo que pasa adentro"
+      }
+    },
+    {
+      "id": "DdbyJwHRIT_",
+      "titulo": "¿Apocalíptico u *optimista* frente a la IA?",
+      "metafora": "balanza",
+      "datos": {
+        "izq": "Optimista",
+        "der": "Apocalíptico"
+      }
+    },
+    {
+      "id": "Dc6x7obv-tB",
+      "titulo": "Un videojuego para *aprender redes*",
+      "metafora": "pasos",
+      "datos": {
+        "items": [
+          "Cables",
+          "Servidores",
+          "Chat",
+          "Tiempo real"
+        ]
+      }
+    },
+    {
+      "id": "Db8fofzyHoe",
+      "titulo": "¿Una clase que es *un videojuego?*",
+      "metafora": "burbujas",
+      "datos": {
+        "items": [
+          "¿Dónde está el tesoro?",
+          "¡Lo encontré!",
+          "¿Cómo viaja el mensaje?"
+        ]
+      }
+    },
+    {
+      "id": "Db8fh1yuUbi",
+      "titulo": "Nuestros *proyectos de videojuegos*",
+      "metafora": "caja",
+      "datos": {
+        "etiqueta": "trifuerza.co/videojuegos"
+      }
+    },
+    {
+      "id": "DaB7S1phP0l",
+      "titulo": "Claude crea *apps* en segundos",
+      "metafora": "autocompletar",
+      "datos": {
+        "frase": "Claude, créame una app de",
+        "opciones": [
+          [
+            "citas",
+            48
+          ],
+          [
+            "inventario",
+            27
+          ],
+          [
+            "tareas",
+            17
+          ],
+          [
+            "otra",
+            8
+          ]
+        ]
+      }
+    },
+    {
+      "id": "DZ1CO9svIh1",
+      "titulo": "Colombia no está quebrada: *está estancada*",
+      "metafora": "balanza",
+      "datos": {
+        "izq": "Estancada",
+        "der": "Quebrada"
+      }
+    },
+    {
+      "id": "DZvuIrypnOP",
+      "titulo": "Un *cerebro jurídico* para Claude",
+      "metafora": "rompecabezas",
+      "datos": {
+        "etiqueta": "Plugin jurídico"
+      }
+    },
+    {
+      "id": "DZkfZN4s5_o",
+      "titulo": "Benito Juárez y *una frase de 1867*",
+      "metafora": "balanza",
+      "datos": {
+        "izq": "Respeto",
+        "der": "Paz"
+      }
+    },
+    {
+      "id": "DZgWXnIhnzd",
+      "titulo": "Anonimiza tus documentos *antes de la IA*",
+      "metafora": "candado",
+      "datos": {
+        "etiqueta": "Anonimizado"
+      }
+    },
+    {
+      "id": "CQ4cKl1gSbs",
+      "titulo": "¿Qué ventajas tienen *los NFT?*",
+      "metafora": "certificado",
+      "datos": {
+        "titulo": "NFT",
+        "subtitulo": "certificado de autenticidad",
+        "nombre": "Tu obra"
+      }
+    },
+    {
+      "id": "CQj0GFAJSrT",
+      "titulo": "¿Es posible el *ataque del 51 %?*",
+      "metafora": "balanza",
+      "datos": {
+        "izq": "51 %",
+        "der": "49 %"
+      }
+    },
+    {
+      "id": "CQesmAuJjum",
+      "titulo": "¿Te suena *blockchain?*",
+      "metafora": "tablero",
+      "datos": {
+        "titulo": "Cadena de bloques",
+        "filas": [
+          "Bloque 1",
+          "Bloque 2",
+          "Bloque 3",
+          "Bloque 4",
+          "Bloque 5"
+        ],
+        "alerta": -1,
+        "textoListo": "Validado"
+      }
+    },
+    {
+      "id": "CQRZR3qpGu6",
+      "titulo": "El río Atrato, *sujeto de derechos*",
+      "metafora": "certificado",
+      "datos": {
+        "titulo": "Sujeto de derechos",
+        "subtitulo": "reconocido por la Corte",
+        "nombre": "Río Atrato"
+      }
+    },
+    {
+      "id": "CP6mWXPpv5d",
+      "titulo": "Todo lo que debes saber *de los NFT*",
+      "metafora": "firmas",
+      "datos": {
+        "numero": 1,
+        "unidad": "token único"
+      }
+    },
+    {
+      "id": "CPrETvXpL1m",
+      "titulo": "¿Se le puede ganar *a la piratería?*",
+      "metafora": "candado",
+      "datos": {
+        "etiqueta": "Protegido"
+      }
+    }
+  ]
+}
