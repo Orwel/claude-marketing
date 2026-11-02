@@ -3,10 +3,11 @@ import { AbsoluteFill, Audio, Img, Sequence, continueRender, delayRender, interp
 import { useFuentes } from '../fuentes.js';
 
 /**
- * «Zoom infinito» · la historia de Juan David pantalla adentro (jd-website, v2 del 2-nov-2026).
+ * «Zoom infinito» · la historia de Juan David pantalla adentro (jd-website, v3 del 2-nov-2026).
  * Una sola toma: la cámara entra por una ventana de una ciudad pixel y cada época vive dentro de una pantalla de la
  * anterior: web de 2008 → foro de 2010 → HTML a los 16 → personero 2012 → Derecho 2013 → Trifuerza 2020 →
- * desarrollador 2022 → y la vista previa del teléfono es otra vez la ciudad: el video cierra en bucle.
+ * desarrollador 2022 → y en la vista previa del teléfono vive el reino ya construido, con «trifuerza.co» (el cierre
+ * de la v1, que es el que a él le gustó).
  * El hilo (su esencia): siempre ha construido lugares para la gente; cada época es otra manera de hacerlo.
  *
  * Cómo funciona el zoom sin cortes: cada nivel declara un `objetivo` (rectángulo donde vive el nivel siguiente).
@@ -19,7 +20,7 @@ import { useFuentes } from '../fuentes.js';
  * derecha ~140 px los íconos. Por eso cada escena deja libre la franja de arriba para el rótulo (270–460) y pone lo
  * importante entre 480 y 1500.
  *
- * Material del banco (trabajo/assets): ciudad de Bongseng (licencia propia, uso comercial), Tiny Swords de Pixel Frog,
+ * Material del banco (trabajo/assets): Night City de CraftPix (OGA-BY 3.0: crédito «Fondo pixel: CraftPix.net»), Tiny Swords de Pixel Frog,
  * Justitia de Marcantonio Raimondi (Rijksmuseum, dominio público), sello de lacre de 1846 (Wikimedia Commons, dominio
  * público), papel Paper004 de ambientCG (CC0), música «8 bit lofi - Ice Cave» de TAD (CC0), whoosh de pyranostudios
  * (CC0), teclas de Cassie-OrbitGames (CC0), glitch de Packsmithy (CC BY 4.0: crédito «Packsmithy (packsmithy.com)»),
@@ -28,14 +29,15 @@ import { useFuentes } from '../fuentes.js';
 
 const W = 1080, H = 1920, FPS = 30;
 const NARANJA = '#F26B1D';
-const ART = 1.6; // la ciudad está pintada a 675×1200 y se amplía ×1,6
-const VENTANA = { x: 325 * ART, y: 288 * ART, w: 8 * ART, h: 4 * ART };
+// La ciudad (Night City de CraftPix, 576×324) se recorta en vertical: 182 px de ancho desde x = 228, ampliado ×5,93.
+const X0 = 228, ART = W / 182;
+const VENTANA = { x: (318 - X0) * ART, y: 218 * ART, w: 2 * ART, h: 2 * ART };
 
 // Tiempos en cuadros. Cada nivel: quieto (deriva lenta) hasta `quieto`, zambullida hasta `fin`.
 // `revela`: el contenido del hijo aparece cuando el objetivo mide entre `desde` y `hasta` px en pantalla (antes se
 // ve lo que el padre pinta ahí: la ventana encendida, el sello, la puerta del castillo).
 const NIVELES = [
-  { id: 'ciudad', ini: 0, quieto: 78, fin: 112, fondo: '#0b1426', objetivo: { ...VENTANA, revela: [40, 300] } },
+  { id: 'ciudad', ini: 0, quieto: 78, fin: 112, fondo: '#1d2a5c', objetivo: { ...VENTANA, revela: [40, 300] } },
   { id: 'web2008', ini: 112, quieto: 165, fin: 190, fondo: '#000033', objetivo: { x: 250, y: 1330, w: 580, h: 320, r: 6 } },
   { id: 'foro', ini: 190, quieto: 250, fin: 276, fondo: '#dfe3e8', objetivo: { x: 640, y: 1290, w: 360, h: 240, r: 4 } },
   { id: 'codigo', ini: 276, quieto: 325, fin: 348, fondo: '#050805' }, // objetivo: el cursor, se calcula abajo
@@ -43,7 +45,7 @@ const NIVELES = [
   { id: 'derecho', ini: 436, quieto: 498, fin: 524, fondo: '#efe6d2', objetivo: { x: 390, y: 1180, w: 300, h: 300, r: '50%', revela: [380, 1000] } },
   { id: 'trifuerza', ini: 524, quieto: 590, fin: 616, fondo: '#47aba9', objetivo: { x: 504, y: 920, w: 66, h: 56, r: '30px 30px 0 0', revela: [90, 500] } },
   { id: 'dev', ini: 616, quieto: 676, fin: 702, fondo: '#13141c', objetivo: { x: 640, y: 830, w: 330, h: 586.7, r: 26 } },
-  { id: 'ciudadFin', ini: 702, quieto: 99999, fin: 99999, fondo: '#0b1426' },
+  { id: 'reino', ini: 702, quieto: 99999, fin: 99999, fondo: '#47aba9' },
 ];
 export const DURACION_ZOOM = 810;
 
@@ -97,34 +99,44 @@ function useImagenes(rutas) {
   return listas ? rutas.map((r) => cache.get(r)) : null;
 }
 
-// --- Ciudad (primer y último nivel) ----------------------------------------------------------------------------
-function Ciudad({ cam, ini, final }) {
+// --- Ciudad de noche (primer nivel) ------------------------------------------------------------------------------
+function Ciudad({ cam, ini }) {
   const f = useCurrentFrame() - ini;
   const ref = useRef(null);
-  const ims = useImagenes(['ciudad/cielo.png', 'ciudad/edificios.png', 'ciudad/reflejo.png', 'ciudad/frente.png']);
+  const ims = useImagenes(['noche/l1.png', 'noche/l2.png', 'noche/l3.png', 'noche/l4.png', 'noche/l5.png']);
   useEffect(() => {
     if (!ims || !ref.current) return;
     const ctx = ref.current.getContext('2d');
     ctx.imageSmoothingEnabled = false;
     ctx.setTransform(1, 0, 0, 1, 0, 0);
-    ctx.fillStyle = '#0b1426'; ctx.fillRect(0, 0, W, H);
+    ctx.fillStyle = '#1d2a5c'; ctx.fillRect(0, 0, W, H);
     const k = cam.Z * ART;
-    const base = (dx = 0, dy = 0) => ctx.setTransform(k, 0, 0, k, cam.P.x * (1 - cam.Z) + dx * k, cam.P.y * (1 - cam.Z) + dy * k);
-    const [cielo, edif, reflejo, frente] = ims;
-    // Las nubes avanzan a pasos de pixel de arte (sin interpolar): así se mueve el pixel art del tablero.
-    const g = f + ini; // el cielo sigue el reloj global: al volver a la ciudad, sigue donde iba
-    base(-Math.floor(g / 6) % 675, 0); ctx.drawImage(cielo, 0, 0); ctx.drawImage(cielo, 675, 0);
-    base(); ctx.drawImage(edif, 0, 0);
-    // El reflejo tiembla un pixel cada pocos cuadros: el agua viva.
-    base(Math.floor(g / 5) % 2, 0); ctx.drawImage(reflejo, 0, 0);
-    base(); ctx.drawImage(frente, 0, 0);
-    // La ventana se enciende en naranja (el acento de juanda) y parpadea dos veces. Al final se vuelve a encender
-    // justo antes de cortar: el video empieza otra vez y la historia queda en bucle.
+    const base = (dx = 0) => ctx.setTransform(k, 0, 0, k, cam.P.x * (1 - cam.Z) + (dx - X0) * k, cam.P.y * (1 - cam.Z));
+    const [cielo, fondo, medio, cerca, frente] = ims;
+    // El cielo con nubes se desliza a pasos de un pixel de arte (sin interpolar), como el pixel art del tablero;
+    // las capas de edificios quedan quietas para que la ventana no se mueva del objetivo.
+    const paso = Math.floor(f / 8) % 576;
+    base(-paso); ctx.drawImage(cielo, 0, 0); ctx.drawImage(cielo, 576, 0);
+    base(); ctx.drawImage(fondo, 0, 0); ctx.drawImage(medio, 0, 0); ctx.drawImage(cerca, 0, 0); ctx.drawImage(frente, 0, 0);
+    // Ventanas que titilan: la ciudad está despierta (cada pocos cuadros una se apaga o se prende).
+    const titilan = [[262, 236], [345, 249], [289, 262], [372, 228], [241, 281], [330, 290]];
+    titilan.forEach(([x, y], n) => {
+      if (Math.floor((f + n * 7) / 18) % 3 === 0) { base(); ctx.fillStyle = '#0f1530'; ctx.fillRect(x, y, 2, 2); }
+    });
+    // La ventana se enciende en naranja (el acento de juanda) y parpadea dos veces antes de prenderse del todo.
     const o = VENTANA;
-    const t0 = final ? 92 : 34;
-    const on = f > t0 && !(f >= t0 + 6 && f < t0 + 9) && !(f >= t0 + 13 && f < t0 + 15);
-    // A ×300 la ventana ya la cubre el nivel siguiente; dejar de pintarla evita un borde naranja por precisión.
-    if (on && o.h * cam.Z < 900) { base(); ctx.fillStyle = NARANJA; ctx.fillRect(o.x / ART, o.y / ART, o.w / ART, o.h / ART); }
+    const on = f > 30 && !(f >= 36 && f < 39) && !(f >= 43 && f < 45);
+    // Cuando ya llena la pantalla la cubre el nivel siguiente; dejar de pintarla evita un borde por precisión.
+    if (on && o.h * cam.Z < 900) {
+      base(); ctx.fillStyle = NARANJA; ctx.fillRect(o.x / ART + X0, o.y / ART, o.w / ART, o.h / ART);
+      // Halo de la ventana: luz cálida que se derrama alrededor.
+      ctx.setTransform(1, 0, 0, 1, 0, 0);
+      const cx = cam.P.x * (1 - cam.Z) + (o.x + o.w / 2) * cam.Z, cy = cam.P.y * (1 - cam.Z) + (o.y + o.h / 2) * cam.Z;
+      const rad = 60 * cam.Z;
+      const gr = ctx.createRadialGradient(cx, cy, 0, cx, cy, rad);
+      gr.addColorStop(0, 'rgba(242,107,29,0.45)'); gr.addColorStop(1, 'rgba(242,107,29,0)');
+      ctx.fillStyle = gr; ctx.fillRect(cx - rad, cy - rad, rad * 2, rad * 2);
+    }
   });
   return <canvas ref={ref} width={W} height={H} style={{ position: 'absolute', inset: 0 }} />;
 }
@@ -327,6 +339,7 @@ function Construye({ src, x, y, ancho, f, desde }) {
 }
 
 function Trifuerza() {
+  // 2020: la isla en obra. Solo el peón trabaja y los edificios se van montando uno por uno.
   const f = useCurrentFrame() - NIVELES[6].ini;
   return (
     <AbsoluteFill style={{ background: '#47aba9', overflow: 'hidden' }}>
@@ -336,9 +349,32 @@ function Trifuerza() {
       <Construye src="ts/casa1.png" x={100} y={960} ancho={205} f={f} desde={14} />
       <Construye src="ts/casa2.png" x={780} y={1040} ancho={205} f={f} desde={22} />
       <Sprite src="ts/peon.png" x={400} y={1130} cuadros={8} f={f + 3} espejo />
+      <Img src={staticFile('ts/nube1.png')} style={{ position: 'absolute', left: -400 + f * 2, top: 380, width: 576 * TS, imageRendering: 'pixelated', opacity: 0.85 }} />
+    </AbsoluteFill>
+  );
+}
+
+function Reino() {
+  // Hasta hoy: el mismo reino ya construido y lleno de gente (el cierre de la v1, que fue el que más le gustó).
+  const f = useCurrentFrame() - NIVELES[8].ini;
+  const titulo = tramo(f, 20, 34);
+  return (
+    <AbsoluteFill style={{ background: '#47aba9', overflow: 'hidden' }}>
+      <Isla x={60} y={700} cols={7} filas={7} />
+      <Img src={staticFile('ts/castillo.png')} style={{ position: 'absolute', left: 220, top: 520, width: 320 * TS, imageRendering: 'pixelated' }} />
+      <Img src={staticFile('ts/torre.png')} style={{ position: 'absolute', left: 830, top: 640, width: 205, imageRendering: 'pixelated' }} />
+      <Img src={staticFile('ts/casa1.png')} style={{ position: 'absolute', left: 100, top: 960, width: 205, imageRendering: 'pixelated' }} />
+      <Img src={staticFile('ts/casa2.png')} style={{ position: 'absolute', left: 780, top: 1040, width: 205, imageRendering: 'pixelated' }} />
+      <Sprite src="ts/peon.png" x={400} y={1130} cuadros={8} f={f + 3} espejo />
       <Sprite src="ts/guerrero.png" x={120} y={1200} cuadros={8} f={f} />
       <Sprite src="ts/arquero.png" x={620} y={1230} cuadros={6} f={f + 5} />
-      <Img src={staticFile('ts/nube1.png')} style={{ position: 'absolute', left: -400 + f * 2, top: 380, width: 576 * TS, imageRendering: 'pixelated', opacity: 0.85 }} />
+      <Sprite src="ts/guerrero-corre.png" x={-260 + f * 7} y={1350} cuadros={6} f={f} vel={3} />
+      <Img src={staticFile('ts/nube1.png')} style={{ position: 'absolute', left: -300 + f * 2, top: 420, width: 576 * TS, imageRendering: 'pixelated', opacity: 0.9 }} />
+      <Img src={staticFile('ts/nube2.png')} style={{ position: 'absolute', left: 500 - f * 1.5, top: 1560, width: 576 * TS, imageRendering: 'pixelated', opacity: 0.85 }} />
+      {/* La marca dentro de la zona segura de Reels (por encima de 1500). */}
+      <div style={{ position: 'absolute', top: 1290, width: '100%', textAlign: 'center', opacity: titulo, transform: `translateY(${(1 - titulo) * 40}px)` }}>
+        <div style={{ fontFamily: 'Fraunces', fontStyle: 'italic', fontWeight: 700, fontSize: 128, color: '#fff', textShadow: '0 6px 0 #1d3557' }}>trifuerza<span style={{ color: NARANJA }}>.co</span></div>
+      </div>
     </AbsoluteFill>
   );
 }
@@ -373,14 +409,14 @@ function Dev() {
       <pre style={{ position: 'absolute', top: 580, left: 90, margin: 0, fontFamily: 'inherit', fontSize: 30, lineHeight: '56px', width: 530, whiteSpace: 'pre-wrap' }}>
         {lineas.map((l, k) => <div key={k}>{l}</div>)}
       </pre>
-      {/* El teléfono de vista previa: adentro vive otra vez la ciudad del principio. */}
+      {/* El teléfono de vista previa: adentro vive el reino ya construido. */}
       <div style={{ position: 'absolute', left: o.x - 18, top: o.y - 18, width: o.w + 36, height: o.h + 36, borderRadius: 44, background: '#05060a', boxShadow: '0 30px 80px rgba(0,0,0,0.6), 0 0 0 2px #2a2d3a' }} />
       <div style={{ position: 'absolute', left: 90, top: 1440, fontSize: 24, color: '#6b7189' }}>vista previa · localhost:3000</div>
     </AbsoluteFill>
   );
 }
 
-const ESCENAS = { ciudad: Ciudad, web2008: Web2008, foro: Foro, codigo: Codigo, personero: Personero, derecho: Derecho, trifuerza: Trifuerza, dev: Dev, ciudadFin: Ciudad };
+const ESCENAS = { ciudad: Ciudad, web2008: Web2008, foro: Foro, codigo: Codigo, personero: Personero, derecho: Derecho, trifuerza: Trifuerza, dev: Dev, reino: Reino };
 
 // --- La cámara ---------------------------------------------------------------------------------------------------
 function Escena({ i, Z, prof }) {
@@ -393,7 +429,7 @@ function Escena({ i, Z, prof }) {
   if (Comp === Ciudad) {
     return (
       <AbsoluteFill style={{ overflow: 'hidden' }}>
-        <Ciudad cam={{ Z, P }} ini={n.ini} final={n.id === 'ciudadFin'} />
+        <Ciudad cam={{ Z, P }} ini={n.ini} />
         <div style={{ position: 'absolute', left: 0, top: 0, width: W, height: H, transform: tr, transformOrigin: '0 0' }}>{hijo}</div>
       </AbsoluteFill>
     );
@@ -428,11 +464,11 @@ const ROTULOS = [
   { desde: 118, hasta: 160, a: 'A los 15', b: 'Hice mi primera página web' },
   { desde: 196, hasta: 244, a: '2010', b: 'Un foro me enseñó que una web es gente' },
   { desde: 282, hasta: 320, a: 'A los 16', b: 'Aprendí a escribir el código' },
-  { desde: 354, hasta: 404, a: '2012', b: 'Personero: me tocó representar a otros' },
+  { desde: 354, hasta: 404, a: '2012', b: 'Personero, elegido democráticamente' },
   { desde: 442, hasta: 492, a: '2013', b: 'Estudié Derecho: las reglas del juego' },
   { desde: 530, hasta: 584, a: '2020', b: 'Empecé a construir Trifuerza' },
   { desde: 622, hasta: 670, a: '2022', b: 'Me volví desarrollador de software' },
-  { desde: 712, hasta: 800, a: 'Hasta hoy', b: 'Tecnología con base en videojuegos' },
+  { desde: 708, hasta: 800, a: 'Hoy', b: 'Tecnología con base en videojuegos' },
 ];
 function Rotulo({ f }) {
   return ROTULOS.map((r) => {
@@ -445,17 +481,6 @@ function Rotulo({ f }) {
       </div>
     );
   });
-}
-
-function Firma({ f }) {
-  // Cierre: la marca dentro de la zona segura de abajo, sobre el agua de la ciudad.
-  const p = tramo(f, 730, 748) * (1 - tramo(f, 796, 808));
-  if (p <= 0) return null;
-  return (
-    <div style={{ position: 'absolute', top: 1330, width: '100%', textAlign: 'center', opacity: p, transform: `translateY(${(1 - p) * 30}px)` }}>
-      <div style={{ fontFamily: 'Fraunces', fontStyle: 'italic', fontWeight: 700, fontSize: 104, color: '#fff', textShadow: '0 6px 30px rgba(0,0,0,0.6)' }}>trifuerza<span style={{ color: NARANJA }}>.co</span></div>
-    </div>
-  );
 }
 
 export function ZoomWeb({ zonaSegura = false }) {
@@ -475,7 +500,6 @@ export function ZoomWeb({ zonaSegura = false }) {
       <AbsoluteFill style={{ opacity: vel > 0.25 ? 1 - 0.28 * vel : 1 }}><Escena i={i} Z={Z} prof={2} /></AbsoluteFill>
       {destello && <AbsoluteFill style={{ background: '#fff', opacity: 0.5 }} />}
       <Rotulo f={f} />
-      <Firma f={f} />
       {zonaSegura && (
         <AbsoluteFill style={{ pointerEvents: 'none' }}>
           <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 250, background: 'rgba(255,0,0,0.25)' }} />
@@ -485,7 +509,6 @@ export function ZoomWeb({ zonaSegura = false }) {
       )}
       <Audio src={staticFile('audio/musica.mp3')} volume={(fr) => interpolate(fr, [0, 20, DURACION_ZOOM - 40, DURACION_ZOOM], [0, 0.55, 0.55, 0])} />
       <Audio src={staticFile('audio/ciudad.mp3')} volume={(fr) => interpolate(fr, [0, 10, 90, 112], [0, 0.35, 0.35, 0], { extrapolateRight: 'clamp' })} />
-      <Sequence from={NIVELES[8].ini}><Audio src={staticFile('audio/ciudad.mp3')} volume={(fr) => interpolate(fr, [0, 20], [0, 0.3], { extrapolateRight: 'clamp' })} /></Sequence>
       {NIVELES.filter((m) => m.objetivo).map((m, k) => (
         <Sequence key={m.id} from={m.quieto - 4} durationInFrames={30}>
           <Audio src={staticFile('audio/whoosh.wav')} startFrom={Math.round((k % 5) * 1.05 * FPS)} volume={2.2} />
