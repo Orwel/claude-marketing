@@ -1,0 +1,97 @@
+{
+  "_": "Tableros de Pinterest que revisa src/archivo/tableros.mjs. Para sumar uno: agregar { usuario, slug, nombre }. `vistos` lo llena el script.",
+  "tableros": [
+    {
+      "usuario": "jdvanegas52",
+      "slug": "motion-graphics",
+      "nombre": "Motion graphics"
+    },
+    {
+      "usuario": "jdvanegas52",
+      "slug": "arte-para-lo-digital",
+      "nombre": "Arte para lo digital"
+    },
+    {
+      "usuario": "jdvanegas52",
+      "slug": "pixel-art",
+      "nombre": "Pixel art"
+    }
+  ],
+  "vistos": {
+    "motion-graphics": [
+      "e1_AfqPShxMGxQ6fWRjOoA3IO4rWHvX4Wqaq5TNzyYTqW2J_FaRT_LL",
+      "e1_AfqPShwGKpzOtYTcNKiJBlC2YB9tDVM6ab3Hg6DrqqT-H3hlGFg_",
+      "e1_AfqPShz1xWY-CSY0bPXUJrZowukfa4XTSEgMDilwI75vCZaJSnD8",
+      "e1_AfqPShyxsdQH8RA-9sA6wDKf99p_gGRWppPStYnKiLzOPNuIgJfY",
+      "e1_AfqPShyGkMdbdragTFpM1at6rU1-mS-ki6KqClSxJ9ktwGNpnx22",
+      "e1_AfqPShxwxQM-kJAhbfonyyuzQenexzz6bwmIIK8_0pDP4eDCqR0b",
+      "e1_AfqPShzIEaXEsEkBJsr2Y7nUbUyygFADNHSbT3NzqCzRGAij__26",
+      "e1_AfqPShy3DjQ0Q2cPpPWtPZCMWr8WgZ8VtbphmWBTRIF44stqK8AK",
+      "e1_AfqPShzPVuK_C1Y3c1sb1gFGiZqmV0FrvLa0wkfSomiIDI2w-fVD",
+      "e1_AfqPShwv5nBWYNMdk6Q-ViK5RVqGhnsw_IP6Ewjv2GClpwG118Mq",
+      "e1_AfqPShzbE6OYZDUW0Vk57nzlQtw7VEGSm6M0KKTjVk4i9NYQU6TF",
+      "e1_AfqPShxP0_3ToWsnSqSspeIellxAz6s_rk0NMYgY0BS90_I8iScD",
+      "e1_AfqPShw3jpZ-Tw4OgvMPmtdP8IwEsJypHfBcMOwhAwG8BFQuSvJ2",
+      "e1_AfqPShwVRI4A8kHVv4sjlxn-7Dz7kB3v_SQIRlYdgHAbdEP6z2cF",
+      "Dhcr8iFj",
+      "e1_AfqPShw2YzX53DjQrWzgAYdf3_2Gmhz2G3yQ74KJMAmSKp0oOIz_",
+      "e1_AfqPShz0mh25UeOGiqz9Y1Bdlh9ZWfm1oWjzDaCs_hfT1Xui2pSz",
+      "e1_AfqPShzzyVnxTGEFWmm8RH5TYHxTdyZoXYK6n4EgWbJUvPDgV6FI",
+      "e1_AfqPShyMILMgzHR9ZT4cEjFUu3MBf96waw9cCzTLz6QMrpw5BSq9",
+      "e1_AfqPShyp4v1CsoKPIRFQquyQgR5RTexq6HV6aAj_ec9p5mGKR9HR",
+      "e1_AfqPShyNDM5O4FeOduEMY3if9iEEo-dWMZgP4UF5GzteZt3NI8Bc",
+      "e1_AfqPShxDaAmweFhLgfwrp7vw6RFLovAJVl4qfXhJ1VoR6eQeMa55",
+      "e1_AfqPShyqavnyj5eaC4KWRMCXiDcKe9TsmKcvMrMWKyQVGQG7EHOw",
+      "e1_AfqPShycHhAbjIEYONKZ2oLIgAtVD_NXHWmfLWTvxeBlS91O0NAg",
+      "e1_AfqPShyk3RPkfiJQDJxZIAb16n3ML4AsLQtz1bNPvRvUWAFZYmHp"
+    ],
+    "arte-para-lo-digital": [
+      "e1_AfqPShzaETGUuFYxHZkH6QBT6fOD6PdbmSCOj12xx1YhMaMRmoHU",
+      "e1_AfqPShzrGcTQ4mAeyP_8OyE42C5Xz2Uo1kpcjp-Gl1_4tNwzGddA",
+      "e1_AfqPShznO9qWBIIi2mkczxM1_YDiZJtCYyiEdSgG6uZgcHgkmng0",
+      "e1_AfqPShxl9195fD25WJMr32WTQXJ0DWcctiFow76DaMAIqR59b37P",
+      "e1_AfqPShxk8BspKMNLtSk1_NRqzhO66qgDq-WTq1bp2ADoUGl5ciFo",
+      "e1_AfqPShziIanglnAkR-41TxQhTmpRuABJljGhGE1RRv2RRejtUf4i",
+      "e1_AfqPShxSvlzFi8DJpUMzQeoPrRM7zN3bR5qX_oswOI2cRKH6bzxT",
+      "e1_AfqPShwDGH0rA920m6Yll5YbqC0p8Jz_t5qByWFtlqe4V-IHsihD",
+      "e1_AfqPShwhUMl9gsgM8cU0gWMYBVALYfj6SM93cj5Buxee-nRMkyvS",
+      "e1_AfqPShyDiG5VnNVHP9QUikMogrRt1gMMLnE2UA81ENsgXjPTEL10",
+      "e1_AfqPShxlRzV_26uqyXRebCEVAVzxWeWu27hvXkCuYzCGb9Cpsecy",
+      "e1_AfqPShybAD88zFNak80ItKlLn4LZXIQHRrLg3Srnrgp_gvNJMYKY",
+      "e1_AfqPShyGNyhDygTpzTsen5ezrFzk8BYEr0yRQ1wFnDCAYryjkjkR",
+      "e1_AfqPShw1LxUnD_u2_B4RUlVR7lxEACwYOe_01LI8-SJTUtaRw4Bk",
+      "e1_AfqPShzCyKuFFFljJMtWiDkMuCe8yRme2z32J0iSumSy1_9sTAsV",
+      "bxBJ2SnR",
+      "e1_AfqPShyOx4EErN4VM6JSRBGMiHrNSxpnzKZ-6POJEHgMVBffbP7H",
+      "e1_AfqPShwgAdZOZfcr0hC4Fu9nxuxGBfDXZnkuTMxabETX4ovtRz4k",
+      "e1_AfqPShx3Lqfn135-IGcxKWTmlhGLhTq_BdPdvAjBvXpoNX3ct0Rp",
+      "e1_AfqPShz6FLdAuWv-YO_ADlvTYbwfG8VpGU3ODLVIV8ITaqx0Uens",
+      "e1_AfqPShyB3I5RkKFHquKDYR4loeQoR_TvEkFgZ4Ts1qTJOanXfyah"
+    ],
+    "pixel-art": [
+      "e1_AfqPShwpbkebD0_NRAdqr8hvu5YF-sjZn030nOAwdsGBI-zyaIF3",
+      "e1_AfqPShz4APnABQ894LcIGoh_Q68-zlStMC6Pl8MJzC8IU1Fqcm3O",
+      "e1_AfqPShxSteepUjy-DVtakjiVOGOkRoCGeTjZsIuN0_Z0VrJMzmAB",
+      "e1_AfqPShypGFWBEeceVFr5T5kK2Wn-MGQu_QQbQi6vKk3rryoaGwZL",
+      "e1_AfqPShzlTQ51Sk07EeWhiw4X3NIUB5N_7FZPYjtXnbbBXAf1Vdnc",
+      "e1_AfqPShzGEwW9kq1gBiz8tgMM0FPPyBfzEuIsGMychoYDEgBpAVXP",
+      "e1_AfqPShycm9Muruf_bZuiqRHqf5FBKiaH44fXjbSMRx4_6j0GtDjz",
+      "e1_AfqPShzqkG8zs7Z00jJjbCxmBegZhjvg_c2g-RxdCSkli8pwoLPx",
+      "e1_AfqPShywxCtSXB5RcEcsWP0NiRJgVTD0DiLTB4i3JQ3QJfrm-3vD",
+      "e1_AfqPShyCe5eW7bKJwpXEOthPFWmVMIFppcNc-mQLVH8gYtMLAWsD",
+      "e1_AfqPShwgQgildP3E8HPP2xlFCSF81ymnCGMcMR4iq9OY41vOj3y9",
+      "e1_AfqPShxtiye6B6SC3med7oJuIVE_0yihVAtjyinrMTZ3YNTviGhX",
+      "e1_AfqPShx1W31_3KHJIteP2rXYLKJYGoui0qqXezrdxAlwdXfrk68U",
+      "e1_AfqPShwz4leKZjxcbJsRyignbFm96xO4KDnpNY6TD8g95to_U7VC",
+      "cZyhsOWf",
+      "e1_AfqPShwXGAmpy4Wz9e2wvY-v3YkxMnBF309jgaiarK_iwFmxHcq1",
+      "e1_AfqPShxqbTtfAtbMuCXd4VhlF4GR1hqRMju1ncrhU818P8jg_eRV",
+      "e1_AfqPShyn3S_sF_W19KOZyJRkPE6iJvB-CfO7H8gpaVH1MGGPellY",
+      "e1_AfqPShx7R-cr9zB-2BhhohkgyGdgliY-_TUaeYJUMhYlYjSkhMkr",
+      "e1_AfqPShzHRp-WFtruEG64sy5id79eBx7dmX7_jBJZjfmmMpleqnOl",
+      "e1_AfqPShxQhmp1Ueu_dEYneru2bez70ptu3pM7DdZMM4Y6YYNSExCy",
+      "e1_AfqPShztawq-0CZMdiwVxjp6WuqOnbi4YT8mQ8q91yDuurQuIbyl",
+      "e1_AfqPShxuxUldQRfuY_XIoRCJVED127_s9BqrhogroO-0QIcn908Z"
+    ]
+  }
+}

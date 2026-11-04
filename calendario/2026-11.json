@@ -1,62 +1,55 @@
 {
-  "_nota": "Calendario de noviembre 2026 con los códigos del artefacto «Videos» (https://claude.ai/artifact/XHkQBZiBWUi7obCSngfLQb), que manda. TikTok recicla el MP4 de Instagram (trifuerza.co publica lo de juanda y trifuerza.co; Contrappto lo suyo) y LinkedIn se agrega al programar. Campos: d, h (America/Bogota), c (jd|tf|ctp), r, f, p, t, e (listo · producir · carrusel · evento), n. N08 son stories y N37 quedó omitido. Metricool gratis: una marca (juanda), sin LinkedIn, 20 publicaciones al mes.",
+  "_nota": "Calendario de noviembre 2026 con los códigos del artefacto «Videos» (https://claude.ai/artifact/XHkQBZiBWUi7obCSngfLQb), que manda. TikTok recicla el MP4 de Instagram (trifuerza.co publica lo de juanda y trifuerza.co; Contrappto lo suyo) y LinkedIn se agrega al programar. Campos: d, h (America/Bogota), c (jd|tf|ctp), r, f, p, t, e (listo · producir · carrusel · evento), n. N08 son stories y N37 quedó omitido. Campos nuevos (2-nov-2026): o = objetivo (seguidores · venta-academy · venta-technology · lista-espera), s = serie (docs/SERIES.md), x = otras redes con el mismo MP4 (tt = TikTok). Contrappto se lanza en febrero de 2027: sus piezas de lanzamiento están en `aplazadas`. Metricool Pro: todas las marcas y redes. Lo producido en octubre (SOFA, LinkedIn de octubre, V10 y V12 de Trifuerza, carruseles) ya se publicó en octubre: no va en noviembre (2-nov-2026). Campo pausa: piezas de Trifuerza Legal en pausa desde el 2-nov-2026. Contrappto usa el mismo MP4 en IG, TikTok y LinkedIn (2-nov-2026).",
   "zonaHoraria": "America/Bogota",
-  "tema": "Lanzamiento de Contrappto + webinar «Nociones contractuales básicas» (jue 19 nov) · serie de patentes en videojuegos",
+  "tema": "Serie de videojuegos y PI · webinar gratuito «Nociones contractuales básicas» (jue 26 nov) · Contrappto ya en la web (contrappto.com)",
   "descartado": [
-    "N37 y todo Mata contra Avianca (1-nov-2026)."
-  ],
-  "publicaciones": [
-    {
-      "d": "2026-11-02",
-      "h": "12:00",
-      "c": "jd",
-      "r": "ig",
-      "f": "reel",
-      "p": "jd-kafka",
-      "t": "Kafkiano",
-      "e": "listo"
-    },
-    {
-      "d": "2026-11-02",
-      "h": "19:00",
-      "c": "ctp",
-      "r": "ig",
-      "f": "reel",
-      "p": "N25",
-      "t": "Llega a tu celular (teaser)",
-      "e": "producir"
-    },
+    "N37 y todo Mata contra Avianca (1-nov-2026).",
+    "N30 «Las charlas en universidades»: no habrá charlas (2-nov-2026).",
     {
       "d": "2026-11-03",
-      "h": "07:00",
+      "h": "11:00",
       "c": "jd",
       "r": "li",
       "f": "video",
       "p": "V03",
       "t": "Pendiente de octubre",
-      "e": "listo"
-    },
-    {
-      "d": "2026-11-03",
-      "h": "19:00",
-      "c": "ctp",
-      "r": "ig",
-      "f": "reel",
-      "p": "ctp-capas",
-      "t": "Un contrato no es un PDF",
       "e": "listo",
-      "n": "Música en prueba."
-    },
+      "o": "seguidores",
+      "s": "",
+      "n": "Cancelado por Juan David el 4-nov-2026."
+    }
+  ],
+  "publicaciones": [
     {
       "d": "2026-11-04",
-      "h": "12:00",
+      "h": "10:00",
       "c": "jd",
       "r": "ig",
       "f": "reel",
       "p": "N01",
       "t": "La pantalla de carga prohibida",
-      "e": "producir",
-      "n": "Sin cara; él agrega tomas."
+      "e": "listo",
+      "n": "Listo (2-nov-2026, con CTA «sígueme» al final): Noviembre/Edited/Instagram/Juanda.Trifuerza/N01-JD-ig.mp4 · portada Portadas/Juanda.Trifuerza/N01-JD-ig.jpg · copy en piezas/2026-11/n01-publicar.md.",
+      "o": "seguidores",
+      "s": "copia-u-homenaje",
+      "x": [
+        "tt"
+      ],
+      "cara": "no"
+    },
+    {
+      "d": "2026-11-04",
+      "h": "13:00",
+      "c": "jd",
+      "r": "li",
+      "f": "video",
+      "p": "N01",
+      "t": "La pantalla de carga prohibida",
+      "e": "listo",
+      "n": "LinkedIn de trifuerza.co agregado el 4-nov (regla: juanda y trifuerza.co también van a LinkedIn y TikTok).",
+      "o": "seguidores",
+      "s": "copia-u-homenaje",
+      "cara": "no"
     },
     {
       "d": "2026-11-04",
@@ -66,28 +59,70 @@
       "f": "carrusel",
       "p": "N31",
       "t": "Lo que vas a aprender en el webinar",
-      "e": "carrusel"
+      "e": "listo",
+      "o": "venta-academy",
+      "s": "",
+      "n": "Listo 3-nov: láminas rehechas con el webinar del jueves 26 y el cierre «Entra a contrappto.com»; versión LinkedIn en la carpeta del carrusel. Copy en ctp-noviembre-publicar.md."
     },
     {
       "d": "2026-11-05",
-      "h": "12:00",
-      "c": "jd",
-      "r": "ig",
-      "f": "reel",
-      "p": "jd-ia-piensa",
-      "t": "Cómo piensa una IA",
-      "e": "producir"
+      "h": "11:00",
+      "c": "tf",
+      "r": "li",
+      "f": "video",
+      "p": "ACF1",
+      "t": "Deja de explicarle lo mismo a la IA en cada chat (cierra con Lectura, que abre el 10)",
+      "e": "listo",
+      "o": "venta-academy",
+      "s": "",
+      "n": "PROPUESTA (2-nov). Sin cámara: voz clonada oficial y pantalla simulada (aprobado por Juan David, 2-nov). Guion: piezas/2026-11/guiones/academy-huecos-nov.md. Producido: Noviembre/Edited/Linkedin/Trifuerza/ACF1-TF-li.mp4. Copy en piezas/2026-11/academy-acf1.json.",
+      "cara": "no"
     },
     {
       "d": "2026-11-05",
-      "h": "19:00",
+      "h": "18:00",
       "c": "tf",
       "r": "ig",
       "f": "reel",
-      "p": "N09",
-      "t": "El abogado que refresca la página a las 11 de la noche",
-      "e": "producir",
-      "n": "Sketch: idealmente con él."
+      "p": "ACF1",
+      "t": "Deja de explicarle lo mismo a la IA en cada chat (cierra con Lectura, que abre el 10)",
+      "e": "listo",
+      "o": "venta-academy",
+      "s": "",
+      "n": "PROPUESTA (2-nov). Sin cámara: voz clonada oficial y pantalla simulada (aprobado por Juan David, 2-nov). Guion: piezas/2026-11/guiones/academy-huecos-nov.md. Producido: Noviembre/Edited/Instagram/Trifuerza.co/ACF1-TF-ig.mp4 (portada: Edited/Portadas/Trifuerza.co/ACF1-TF-ig.jpg). Copy en piezas/2026-11/academy-acf1.json.",
+      "x": [
+        "tt"
+      ],
+      "cara": "no"
+    },
+    {
+      "d": "2026-11-06",
+      "h": "11:00",
+      "c": "tf",
+      "r": "li",
+      "f": "video",
+      "p": "ACL0",
+      "t": "Te prometen leer el triple de rápido (Lectura estratégica abre el 10)",
+      "e": "listo",
+      "o": "venta-academy",
+      "s": "",
+      "n": "PROPUESTA (2-nov): hueco de Trifuerza Legal (en pausa). Guion: piezas/2026-11/guiones/academy-huecos-nov.md. 4:5, gancho B («¿Lees los contratos de principio a fin?»). Fecha movida (2-nov, tarde): Lectura abre el mar 10 y Métodos el mar 24. SIN CARA (4-nov): gancho escrito sobre el libro, voz clonada y cierre de Lectura; CTA «Inscríbete gratis». Producido: Noviembre/Edited/Linkedin/Trifuerza/ACL0-TF-li.mp4. Copy en piezas/2026-11/academy-acl0.json. Si llegan sus tomas a Raw/, se monta la versión con su cara."
+    },
+    {
+      "d": "2026-11-06",
+      "h": "12:00",
+      "c": "tf",
+      "r": "ig",
+      "f": "reel",
+      "p": "ACL0",
+      "t": "Te prometen leer el triple de rápido (Lectura estratégica abre el 10)",
+      "e": "listo",
+      "o": "venta-academy",
+      "s": "",
+      "n": "PROPUESTA (2-nov): hueco de Trifuerza Legal (en pausa). Guion: piezas/2026-11/guiones/academy-huecos-nov.md. CTA: el martes 10 abre gratis, deja tu correo, link en la bio. Fecha movida (2-nov, tarde): Lectura abre el mar 10 y Métodos el mar 24. SIN CARA (4-nov): gancho escrito sobre el libro, voz clonada y cierre de Lectura; CTA «Inscríbete gratis». Producido: Noviembre/Edited/Instagram/Trifuerza.co/ACL0-TF-ig.mp4 (portada: Edited/Portadas/Trifuerza.co/ACL0-TF-ig.jpg). Copy en piezas/2026-11/academy-acl0.json. Si llegan sus tomas a Raw/, se monta la versión con su cara.",
+      "x": [
+        "tt"
+      ]
     },
     {
       "d": "2026-11-06",
@@ -97,17 +132,47 @@
       "f": "reel",
       "p": "N19",
       "t": "¿El contrato de palabra vale?",
-      "e": "producir"
+      "e": "listo",
+      "o": "uso-app",
+      "s": "casos-de-la-vida-real",
+      "x": [
+        "tt"
+      ],
+      "n": "Listo y revisado 3-nov (conversación; referencia mg056 papel que se arruga): cuadros cada 2 s, sin temblor ni cuadros congelados, texto en zona segura, «Contrapto» bien dicho. Archivo: Edited/Instagram/Contrappto/N19-CTP-ig.mp4 (el mismo para IG, TikTok y LinkedIn) · portada Portadas/Contrappto/N19-CTP-ig.jpg. Copy: ctp-noviembre-publicar.md."
     },
     {
       "d": "2026-11-07",
-      "h": "12:00",
+      "h": "10:00",
       "c": "jd",
       "r": "ig",
       "f": "reel",
       "p": "N02",
       "t": "El villano que te recuerda",
-      "e": "producir"
+      "e": "listo",
+      "o": "seguidores",
+      "s": "copia-u-homenaje",
+      "x": [
+        "tt"
+      ],
+      "n": "Listo (2-nov-2026, «mediados de la próxima década» y CTA al final): Noviembre/Edited/Instagram/Juanda.Trifuerza/N02-JD-ig.mp4 · portada N02-JD-ig.jpg · copy en piezas/2026-11/n02-publicar.md.",
+      "cara": "no"
+    },
+    {
+      "d": "2026-11-07",
+      "h": "12:00",
+      "c": "tf",
+      "r": "ig",
+      "f": "reel",
+      "p": "tf-panaderia",
+      "t": "Esto es una clase de contabilidad (videojuego 3D a la medida)",
+      "e": "listo",
+      "o": "venta-technology",
+      "s": "lo-que-estoy-construyendo",
+      "n": "Archivo: Instagram/Trifuerza.co/tf-panaderia-TF-ig.mp4 (+ portada). Guion: piezas/2026-11/guiones/tf-producto.md. Producto por dentro: grabación real de trifuerza.co en capas, sin cara ni voz. Copy: piezas/2026-11/tf-panaderia-publicar.md Con voz oficial y gameplay fluido (3-nov).",
+      "cara": "no",
+      "x": [
+        "tt"
+      ]
     },
     {
       "d": "2026-11-07",
@@ -117,7 +182,13 @@
       "f": "reel",
       "p": "ctp-firma",
       "t": "La historia de una firma",
-      "e": "producir"
+      "e": "listo",
+      "o": "uso-app",
+      "s": "",
+      "x": [
+        "tt"
+      ],
+      "n": "Listo 3-nov: se queda como pieza ilustrada (sketch/collage), re-renderizada con «Contrapto» bien dicho, webinar el jueves 26 y personajes sin temblor. Archivo: Edited/Instagram/Contrappto/ctp-firma-CTP-ig.mp4 · portada Portadas/Contrappto/ctp-firma-CTP-ig.jpg. Copy: ctp-noviembre-publicar.md."
     },
     {
       "d": "2026-11-08",
@@ -127,7 +198,39 @@
       "f": "reel",
       "p": "N33",
       "t": "«¿Y eso para qué, si ya existe ChatGPT?»",
-      "e": "producir"
+      "e": "listo",
+      "o": "uso-app",
+      "s": "casos-de-la-vida-real",
+      "x": [
+        "tt"
+      ],
+      "n": "Listo y revisado 3-nov (conversación; referencia mg059 revista «Frame war»): cuadros cada 2 s, sin temblor ni cuadros congelados, texto en zona segura, «Contrapto» bien dicho. Archivo: Edited/Instagram/Contrappto/N33-CTP-ig.mp4 (el mismo para IG, TikTok y LinkedIn) · portada Portadas/Contrappto/N33-CTP-ig.jpg. Copy: ctp-noviembre-publicar.md."
+    },
+    {
+      "d": "2026-11-08",
+      "h": "12:00",
+      "c": "tf",
+      "r": "ig",
+      "f": "carrusel",
+      "p": "ACL-P1",
+      "t": "Un documento largo en tres pasadas (previa de Lectura)",
+      "e": "listo",
+      "o": "venta-academy",
+      "s": "",
+      "n": "PROPUESTA (2-nov). Previa de Lectura (abre el 10). Mundo: el libro-territorio de Lectura (remotion/academy/LibroMapa.jsx). Producido: Noviembre/Edited/Carruseles/Trifuerza.co/academy-acl-p1-tres-pasadas/ (6 láminas academy-acl-p1-tres-pasadas-NN.mp4; LinkedIn: academy-acl-p1-tres-pasadas-linkedin.mp4). Copy en piezas/2026-11/carruseles/academy-acl-p1-tres-pasadas.json. Fecha movida (2-nov, tarde): Lectura abre el mar 10 y Métodos el mar 24. Re-renderizado con las fechas nuevas (2-nov, tarde)."
+    },
+    {
+      "d": "2026-11-08",
+      "h": "18:00",
+      "c": "jd",
+      "r": "ig",
+      "f": "story",
+      "p": "ACL-P2",
+      "t": "Antes de leer, mira el mapa (puente a Lectura)",
+      "e": "listo",
+      "o": "venta-academy",
+      "s": "",
+      "n": "PROPUESTA (2-nov). Mundo: el libro-territorio de Lectura (remotion/academy/LibroMapa.jsx). Producido: Noviembre/Edited/Stories/Juanda.Trifuerza/ACL-P2-1.mp4, ACL-P2-2.mp4. Sticker de enlace a trifuerza.co/academy en la 2. Fecha movida (2-nov, tarde): Lectura abre el mar 10 y Métodos el mar 24. Re-renderizado con las fechas nuevas (2-nov, tarde)."
     },
     {
       "d": "2026-11-08",
@@ -137,47 +240,232 @@
       "f": "reel",
       "p": "N20",
       "t": "Los 4 contratos que vas a usar este año",
-      "e": "producir"
+      "e": "listo",
+      "o": "uso-app",
+      "s": "",
+      "x": [
+        "tt"
+      ],
+      "n": "Listo 3-nov: se queda como pieza ilustrada (sketch/collage), re-renderizada con «Contrapto» bien dicho, webinar el jueves 26 y personajes sin temblor. Archivo: Edited/Instagram/Contrappto/N20-CTP-ig.mp4 · portada Portadas/Contrappto/N20-CTP-ig.jpg. Copy: ctp-noviembre-publicar.md."
     },
     {
       "d": "2026-11-09",
-      "h": "12:00",
+      "h": "11:00",
+      "c": "tf",
+      "r": "li",
+      "f": "video",
+      "p": "tf-archipielago",
+      "t": "La IA lee tu documento y lo vuelve un mapa",
+      "e": "producir",
+      "o": "venta-technology",
+      "s": "lo-que-estoy-construyendo",
+      "n": "Archivo: Instagram/Trifuerza.co/tf-archipielago-TF-ig.mp4 (+ portada). LinkedIn: el mismo MP4 vertical, con texto largo profesional. Guion: piezas/2026-11/guiones/tf-producto.md. Producto por dentro: grabación real de trifuerza.co en capas, sin cara ni voz. Copy: piezas/2026-11/tf-archipielago-publicar.md FALTA VOZ: créditos de ElevenLabs (texto de la narración listo en el kit).",
+      "cara": "no"
+    },
+    {
+      "d": "2026-11-09",
+      "h": "13:00",
       "c": "jd",
+      "r": "li",
+      "f": "video",
+      "p": "N02",
+      "t": "El villano que te recuerda",
+      "e": "listo",
+      "o": "seguidores",
+      "s": "copia-u-homenaje",
+      "n": "LinkedIn de trifuerza.co agregado el 4-nov (regla: juanda y trifuerza.co también van a LinkedIn y TikTok).",
+      "cara": "no"
+    },
+    {
+      "d": "2026-11-09",
+      "h": "13:00",
+      "c": "tf",
+      "r": "li",
+      "f": "video",
+      "p": "ACL1",
+      "t": "300 páginas para mañana (curso gratis de lectura estratégica)",
+      "e": "listo",
+      "o": "venta-academy",
+      "s": "",
+      "n": "PROPUESTA (2-nov): fecha por aprobar. Guion: piezas/2026-11/guiones/academy-lectura.md. Orgánico con caso; la versión anuncio (-P) solo en pauta. Fecha movida (2-nov, tarde): Lectura abre el mar 10 y Métodos el mar 24. SIN CARA (4-nov): gancho escrito sobre el libro, voz clonada y cierre de Lectura; CTA «Inscríbete gratis». Producido: Noviembre/Edited/Linkedin/Trifuerza/ACL1-TF-li.mp4. Copy en piezas/2026-11/academy-acl1.json. Si llegan sus tomas a Raw/, se monta la versión con su cara."
+    },
+    {
+      "d": "2026-11-09",
+      "h": "18:00",
+      "c": "tf",
+      "r": "ig",
+      "f": "story",
+      "p": "ACL-P3",
+      "t": "Leer más rápido no es leer mejor · mañana abre gratis (3 stories)",
+      "e": "listo",
+      "o": "venta-academy",
+      "s": "",
+      "n": "PROPUESTA (2-nov). Mundo: el libro-territorio de Lectura (remotion/academy/LibroMapa.jsx). Producido: Noviembre/Edited/Stories/Trifuerza.co/ACL-P3-1.mp4, ACL-P3-2.mp4, ACL-P3-3.mp4. Sticker de enlace en la 3. Fecha movida (2-nov, tarde): Lectura abre el mar 10 y Métodos el mar 24."
+    },
+    {
+      "d": "2026-11-09",
+      "h": "18:00",
+      "c": "tf",
       "r": "ig",
       "f": "reel",
-      "p": "jd-website",
-      "t": "Hice mi primera web a los 15",
-      "e": "producir"
+      "p": "ACL1",
+      "t": "300 páginas para mañana (curso gratis de lectura estratégica)",
+      "e": "listo",
+      "o": "venta-academy",
+      "s": "",
+      "n": "PROPUESTA (2-nov): fecha por aprobar. Guion: piezas/2026-11/guiones/academy-lectura.md. Orgánico con caso; la versión anuncio (-P) solo en pauta. Fecha movida (2-nov, tarde): Lectura abre el mar 10 y Métodos el mar 24. SIN CARA (4-nov): gancho escrito sobre el libro, voz clonada y cierre de Lectura; CTA «Inscríbete gratis». Producido: Noviembre/Edited/Instagram/Trifuerza.co/ACL1-TF-ig.mp4 (portada: Edited/Portadas/Trifuerza.co/ACL1-TF-ig.jpg). Copy en piezas/2026-11/academy-acl1.json. Si llegan sus tomas a Raw/, se monta la versión con su cara.",
+      "x": [
+        "tt"
+      ]
+    },
+    {
+      "d": "2026-11-09",
+      "h": "19:00",
+      "c": "ctp",
+      "r": "ig",
+      "f": "reel",
+      "p": "ctp-capas",
+      "t": "Un contrato no es un PDF",
+      "e": "listo",
+      "n": "Listo y revisado 3-nov (capas; referencia #8 teléfono en capas): cuadros cada 2 s, sin temblor ni cuadros congelados, texto en zona segura, «Contrapto» bien dicho. Archivo: Edited/Instagram/Contrappto/CAPAS-CTP-ig.mp4 (el mismo para IG, TikTok y LinkedIn) · portada Portadas/Contrappto/CAPAS-CTP-ig.jpg. Copy: ctp-noviembre-publicar.md. · Reprogramado el 4-nov con portada nueva (Metricool).",
+      "o": "uso-app",
+      "s": "",
+      "x": [
+        "tt"
+      ]
     },
     {
       "d": "2026-11-10",
-      "h": "12:00",
+      "h": "10:00",
       "c": "jd",
       "r": "ig",
       "f": "reel",
       "p": "N03",
       "t": "No lo demandaron por copiar a Pikachu",
-      "e": "producir"
+      "e": "listo",
+      "o": "seguidores",
+      "s": "copia-u-homenaje",
+      "x": [
+        "tt"
+      ],
+      "cara": "no",
+      "n": "Listo (2-nov-2026, con CTA al final): Noviembre/Edited/Instagram/Juanda.Trifuerza/N03-JD-ig.mp4 · portada N03-JD-ig.jpg · copy en piezas/2026-11/n03-publicar.md."
     },
     {
       "d": "2026-11-10",
-      "h": "19:00",
+      "h": "11:00",
+      "c": "ctp",
+      "r": "li",
+      "f": "video",
+      "p": "ctp-capas",
+      "t": "Un contrato no es un PDF",
+      "e": "listo",
+      "o": "uso-app",
+      "s": "",
+      "n": "Listo y revisado 3-nov (capas; referencia #8 teléfono en capas): cuadros cada 2 s, sin temblor ni cuadros congelados, texto en zona segura, «Contrapto» bien dicho. Archivo: Edited/Instagram/Contrappto/CAPAS-CTP-ig.mp4 (el mismo para IG, TikTok y LinkedIn) · portada Portadas/Contrappto/CAPAS-CTP-ig.jpg. Copy: ctp-noviembre-publicar.md. · Reprogramado el 4-nov con portada nueva (Metricool)."
+    },
+    {
+      "d": "2026-11-10",
+      "h": "11:00",
+      "c": "ctp",
+      "r": "li",
+      "f": "video",
+      "p": "LI-RRHH",
+      "t": "RRHH: el contrato laboral sin imprimir",
+      "e": "falta voz: créditos",
+      "o": "uso-app",
+      "s": "",
+      "n": "Conversación RRHH + candidato que cierra con la app (biometría, firma, otrosí). Guion listo en piezas/2026-11/guiones/ctp-li-rrhh.md. Falta voz: créditos de ElevenLabs (quedan 504, se necesitan ~650). Sin pantallas nuevas: no depende de Juan David más que de los créditos."
+    },
+    {
+      "d": "2026-11-10",
+      "h": "18:00",
       "c": "tf",
       "r": "ig",
-      "f": "reel",
-      "p": "N10",
-      "t": "POV: te enteraste del auto tres días después",
-      "e": "producir"
+      "f": "story",
+      "p": "ACL3",
+      "t": "Lectura estratégica: abre el curso gratis (3 stories)",
+      "e": "listo",
+      "o": "venta-academy",
+      "s": "",
+      "n": "PROPUESTA (2-nov). Mundo: el libro-territorio de Lectura (remotion/academy/LibroMapa.jsx). Producido: Noviembre/Edited/Stories/Trifuerza.co/ACL3-1.mp4, ACL3-2.mp4, ACL3-3.mp4. Sticker de encuesta en la 1 (Sí · No) y de enlace en la 3. Fecha movida (2-nov, tarde): Lectura abre el mar 10 y Métodos el mar 24."
+    },
+    {
+      "d": "2026-11-10",
+      "h": "18:00",
+      "c": "jd",
+      "r": "ig",
+      "f": "story",
+      "p": "ACL4",
+      "t": "Story puente: antes de leer, escribe la pregunta",
+      "e": "listo",
+      "o": "venta-academy",
+      "s": "",
+      "n": "PROPUESTA (2-nov). Mundo: el libro-territorio de Lectura (remotion/academy/LibroMapa.jsx). Producido: Noviembre/Edited/Stories/Juanda.Trifuerza/ACL4-1.mp4. Sticker de enlace a trifuerza.co/academy. Fecha movida (2-nov, tarde): Lectura abre el mar 10 y Métodos el mar 24."
     },
     {
       "d": "2026-11-11",
-      "h": "19:00",
+      "h": "10:00",
+      "c": "jd",
+      "r": "ig",
+      "f": "reel",
+      "p": "jd-legal-design-2",
+      "t": "Legal design: ¿cuándo se volvió invisible la forma?",
+      "e": "grabar",
+      "o": "seguidores",
+      "s": "derecho-que-nadie-te-explica",
+      "n": "Abre la serie (Hammurabi). Orden cambiado por Juan David el 2-nov-2026. Video: Edited/jd-legal-design-2--juanda.mp4 (45,2 s, sin mención a la clase); portada Portadas/Juanda.Trifuerza/jd-legal-design-2-JD-ig.jpg. Faltan tus 2 tomas habladas (tu cara = tu voz real; qué dices en cada una): kit piezas/2026-11/jd-legal-design-2-publicar.md.",
+      "x": [
+        "tt"
+      ],
+      "cara": "cameo-habla"
+    },
+    {
+      "d": "2026-11-11",
+      "h": "11:00",
+      "c": "ctp",
+      "r": "li",
+      "f": "video",
+      "p": "N21",
+      "t": "La cláusula que nadie lee y que te salva",
+      "e": "listo",
+      "o": "uso-app",
+      "s": "la-clausula-que-nadie-leyo",
+      "n": "Listo y revisado 3-nov (capas; referencia mg028 letra que se deforma): cuadros cada 2 s, sin temblor ni cuadros congelados, texto en zona segura, «Contrapto» bien dicho. Archivo: Edited/Instagram/Contrappto/N21-CTP-ig.mp4 (el mismo para IG, TikTok y LinkedIn) · portada Portadas/Contrappto/N21-CTP-ig.jpg. Copy: ctp-noviembre-publicar.md."
+    },
+    {
+      "d": "2026-11-11",
+      "h": "18:00",
       "c": "tf",
       "r": "ig",
       "f": "reel",
       "p": "tf-website",
-      "t": "De Jimdo a trifuerza.co",
-      "e": "producir"
+      "t": "3 reglas para que tu web venda",
+      "e": "producir",
+      "o": "venta-technology",
+      "s": "lo-que-estoy-construyendo",
+      "x": [
+        "tt"
+      ],
+      "cara": "habla",
+      "n": "Cambió el 2-nov: sin historia personal; útil para empresas, con trifuerza.co de ejemplo. Guion con marcas de locución y tomas: piezas/2026-11/guiones/tf-website.md"
+    },
+    {
+      "d": "2026-11-11",
+      "h": "18:00",
+      "c": "jd",
+      "r": "ig",
+      "f": "reel",
+      "p": "jd-legal-design-1",
+      "t": "Legal design: las Constituciones del Rosario (1666)",
+      "e": "grabar",
+      "n": "Las Constituciones del Rosario (2 de 3). Orden cambiado por Juan David el 2-nov-2026. Video: Edited/jd-legal-design-1--juanda.mp4 (59,6 s, con Madrid → Santafé de Bogotá); portada Portadas/Juanda.Trifuerza/jd-legal-design-1-JD-ig.jpg. Faltan tus 2 tomas habladas (tu cara = tu voz real; qué dices en cada una): kit piezas/2026-11/jd-legal-design-1-publicar.md. · Movido el 4-nov: Juan David graba sus dos frases (inicio y cierre) en la clase del Rosario del mié 11 y sale ese mismo día, editado después de clase.",
+      "o": "seguidores",
+      "s": "derecho-que-nadie-te-explica",
+      "x": [
+        "tt"
+      ],
+      "cara": "cameo-habla"
     },
     {
       "d": "2026-11-11",
@@ -187,27 +475,226 @@
       "f": "reel",
       "p": "N21",
       "t": "La cláusula que nadie lee y que te salva",
-      "e": "producir"
+      "e": "listo",
+      "o": "uso-app",
+      "s": "la-clausula-que-nadie-leyo",
+      "x": [
+        "tt"
+      ],
+      "n": "Listo y revisado 3-nov (capas; referencia mg028 letra que se deforma): cuadros cada 2 s, sin temblor ni cuadros congelados, texto en zona segura, «Contrapto» bien dicho. Archivo: Edited/Instagram/Contrappto/N21-CTP-ig.mp4 (el mismo para IG, TikTok y LinkedIn) · portada Portadas/Contrappto/N21-CTP-ig.jpg. Copy: ctp-noviembre-publicar.md."
     },
     {
       "d": "2026-11-12",
-      "h": "12:00",
+      "h": "10:00",
+      "c": "jd",
+      "r": "ig",
+      "f": "reel",
+      "p": "jd-ia-artefactos",
+      "t": "La IA no es el chat: proyectos, artefactos y conectores",
+      "e": "producir",
+      "o": "seguidores",
+      "s": "hazlo-mejor",
+      "x": [
+        "tt"
+      ],
+      "cara": "habla",
+      "n": "Guion con marcas de locución: piezas/2026-11/guiones/juanda-locucion.md · Movido del 2026-11-05 al 2026-11-12 (3-nov): Juan David graba del vie 6 al dom 8."
+    },
+    {
+      "d": "2026-11-12",
+      "h": "10:00",
       "c": "jd",
       "r": "ig",
       "f": "reel",
       "p": "N04",
       "t": "La flecha de Crazy Taxi",
-      "e": "producir"
+      "e": "listo",
+      "o": "seguidores",
+      "s": "copia-u-homenaje",
+      "x": [
+        "tt"
+      ],
+      "cara": "no",
+      "n": "Listo (2-nov-2026): Noviembre/Edited/Instagram/Juanda.Trifuerza/N04-JD-ig.mp4 · portada N04-JD-ig.jpg · copy en piezas/2026-11/n04-publicar.md."
     },
     {
       "d": "2026-11-12",
-      "h": "19:00",
+      "h": "11:00",
+      "c": "jd",
+      "r": "li",
+      "f": "video",
+      "p": "HM1",
+      "t": "Hazlo mejor: deja de escribir «por medio de la presente»",
+      "e": "producir",
+      "o": "seguidores",
+      "s": "hazlo-mejor",
+      "n": "Guion con marcas de locución: piezas/2026-11/guiones/juanda-locucion.md · Movido del 2026-11-05 al 2026-11-12 (3-nov): Juan David graba del vie 6 al dom 8.",
+      "cara": "habla"
+    },
+    {
+      "d": "2026-11-12",
+      "h": "11:00",
+      "c": "tf",
+      "r": "li",
+      "f": "video",
+      "p": "tf-senales-app",
+      "t": "3 señales de que tu empresa ya necesita una app",
+      "e": "producir",
+      "o": "venta-technology",
+      "s": "lo-que-estoy-construyendo",
+      "n": "Archivo: Instagram/Trifuerza.co/tf-senales-app-TF-ig.mp4 (+ portada). LinkedIn: el mismo MP4 vertical. Rehecho el 2-nov con producto (Contrappto funcionando en capas), sin muñequitos. Copy: piezas/2026-11/tf-senales-app-publicar.md FALTA VOZ: créditos de ElevenLabs (texto de la narración listo en el kit).",
+      "cara": "no"
+    },
+    {
+      "d": "2026-11-12",
+      "h": "11:00",
+      "c": "jd",
+      "r": "li",
+      "f": "video",
+      "p": "jd-legal-design-2",
+      "t": "Legal design: ¿cuándo se volvió invisible la forma?",
+      "e": "grabar",
+      "o": "seguidores",
+      "s": "derecho-que-nadie-te-explica",
+      "n": "Abre la serie (Hammurabi). Orden cambiado por Juan David el 2-nov-2026. Video: Edited/jd-legal-design-2--juanda.mp4 (45,2 s, sin mención a la clase); portada Portadas/Juanda.Trifuerza/jd-legal-design-2-JD-ig.jpg. Faltan tus 2 tomas habladas (tu cara = tu voz real; qué dices en cada una): kit piezas/2026-11/jd-legal-design-2-publicar.md. Versión LinkedIn: CTA «Si te sirve, sígueme; y si quieres que tus contratos se entiendan, escríbeme».",
+      "cara": "cameo-habla"
+    },
+    {
+      "d": "2026-11-12",
+      "h": "11:00",
+      "c": "ctp",
+      "r": "li",
+      "f": "video",
+      "p": "LI-INMO",
+      "t": "Inmobiliarias: veinte arriendos sin perseguir a nadie",
+      "e": "listo",
+      "o": "uso-app",
+      "s": "",
+      "n": "Listo y revisado 3-nov (capas; referencia mg036 fachada de ventanas): cuadros cada 2 s, sin temblor ni cuadros congelados, texto en zona segura, «Contrapto» bien dicho. Archivo: Edited/Instagram/Contrappto/LI-INMO-CTP-ig.mp4 (el mismo para IG, TikTok y LinkedIn) · portada Portadas/Contrappto/LI-INMO-CTP-ig.jpg. Copy: ctp-noviembre-publicar.md."
+    },
+    {
+      "d": "2026-11-12",
+      "h": "18:00",
       "c": "tf",
       "r": "ig",
       "f": "reel",
-      "p": "N14",
-      "t": "Lo que aprendes en una hora de IA aplicada",
-      "e": "producir"
+      "p": "tf-archipielago",
+      "t": "La IA lee tu documento y lo vuelve un mapa",
+      "e": "producir",
+      "o": "venta-technology",
+      "s": "lo-que-estoy-construyendo",
+      "n": "Archivo: Instagram/Trifuerza.co/tf-archipielago-TF-ig.mp4 (+ portada). Guion: piezas/2026-11/guiones/tf-producto.md. Producto por dentro: grabación real de trifuerza.co en capas, sin cara ni voz. Copy: piezas/2026-11/tf-archipielago-publicar.md FALTA VOZ: créditos de ElevenLabs (texto de la narración listo en el kit).",
+      "cara": "no",
+      "x": [
+        "tt"
+      ]
+    },
+    {
+      "d": "2026-11-13",
+      "h": "10:00",
+      "c": "jd",
+      "r": "ig",
+      "f": "reel",
+      "p": "jd-ux-ui",
+      "t": "¿Qué es UX/UI? (en 50 segundos)",
+      "e": "producir",
+      "o": "seguidores",
+      "s": "lo-que-estoy-construyendo",
+      "x": [
+        "tt"
+      ],
+      "n": "Reemplaza «Mi primera web a los 15» (tutorial útil). Guion con marcas de locución: piezas/2026-11/guiones/juanda-locucion.md · Movido del 2026-11-06 al 2026-11-13 (3-nov): Juan David graba del vie 6 al dom 8.",
+      "cara": "habla"
+    },
+    {
+      "d": "2026-11-13",
+      "h": "10:00",
+      "c": "jd",
+      "r": "ig",
+      "f": "reel",
+      "p": "jd-kafka",
+      "t": "Kafkiano",
+      "e": "listo",
+      "o": "seguidores",
+      "s": "derecho-que-nadie-te-explica",
+      "x": [
+        "tt"
+      ],
+      "n": "Listo con CTA «Si te interesa un derecho que se entienda, sígueme» (2-nov-2026): Noviembre/Edited/Instagram/Juanda.Trifuerza/jd-kafka--juanda.mp4 · copy en piezas/2026-11/jd-kafka-publicar.md. Juan David graba una toma suya en ambiente kafkiano (cierre con su voz real); ver jd-kafka.md «Tu toma».",
+      "cara": "cameo"
+    },
+    {
+      "d": "2026-11-13",
+      "h": "11:00",
+      "c": "jd",
+      "r": "li",
+      "f": "video",
+      "p": "jd-ia-artefactos",
+      "t": "La IA no es el chat: proyectos, artefactos y conectores",
+      "e": "producir",
+      "o": "seguidores",
+      "s": "hazlo-mejor",
+      "n": "Guion con marcas de locución: piezas/2026-11/guiones/juanda-locucion.md",
+      "cara": "habla"
+    },
+    {
+      "d": "2026-11-13",
+      "h": "11:00",
+      "c": "tf",
+      "r": "li",
+      "f": "video",
+      "p": "tf-panaderia",
+      "t": "Esto es una clase de contabilidad (videojuego 3D a la medida)",
+      "e": "listo",
+      "o": "venta-technology",
+      "s": "lo-que-estoy-construyendo",
+      "n": "Archivo: Instagram/Trifuerza.co/tf-panaderia-TF-ig.mp4 (+ portada). LinkedIn: el mismo MP4 vertical, con texto largo profesional. Guion: piezas/2026-11/guiones/tf-producto.md. Producto por dentro: grabación real de trifuerza.co en capas, sin cara ni voz. Copy: piezas/2026-11/tf-panaderia-publicar.md Con voz oficial y gameplay fluido (3-nov).",
+      "cara": "no"
+    },
+    {
+      "d": "2026-11-13",
+      "h": "11:00",
+      "c": "jd",
+      "r": "li",
+      "f": "video",
+      "p": "jd-legal-design-1",
+      "t": "Legal design: las Constituciones del Rosario (1666)",
+      "e": "grabar",
+      "o": "seguidores",
+      "s": "derecho-que-nadie-te-explica",
+      "n": "Las Constituciones del Rosario (2 de 3). Orden cambiado por Juan David el 2-nov-2026. Video: Edited/jd-legal-design-1--juanda.mp4 (59,6 s, con Madrid → Santafé de Bogotá); portada Portadas/Juanda.Trifuerza/jd-legal-design-1-JD-ig.jpg. Faltan tus 2 tomas habladas (tu cara = tu voz real; qué dices en cada una): kit piezas/2026-11/jd-legal-design-1-publicar.md. · Movido el 4-nov: Juan David graba sus dos frases (inicio y cierre) en la clase del Rosario del mié 11 y sale ese mismo día, editado después de clase.",
+      "cara": "cameo-habla"
+    },
+    {
+      "d": "2026-11-13",
+      "h": "13:00",
+      "c": "jd",
+      "r": "li",
+      "f": "video",
+      "p": "N04",
+      "t": "La flecha de Crazy Taxi",
+      "e": "listo",
+      "o": "seguidores",
+      "s": "copia-u-homenaje",
+      "cara": "no",
+      "n": "LinkedIn de trifuerza.co agregado el 4-nov (regla: juanda y trifuerza.co también van a LinkedIn y TikTok)."
+    },
+    {
+      "d": "2026-11-13",
+      "h": "18:00",
+      "c": "tf",
+      "r": "ig",
+      "f": "reel",
+      "p": "tf-videojuegos",
+      "t": "Esto no es una maqueta: apps, IA y videojuegos",
+      "e": "producir",
+      "o": "venta-technology",
+      "s": "lo-que-estoy-construyendo",
+      "x": [
+        "tt"
+      ],
+      "n": "Instagram/Trifuerza.co/tf-videojuegos-TF-ig.mp4 + portada. Vidrio y luz 3D con grabaciones reales (app, IA, juego), sin cara ni voz. Copy: piezas/2026-11/tf-videojuegos-publicar.md FALTA VOZ: créditos de ElevenLabs (texto de la narración listo en el kit).",
+      "cara": "no"
     },
     {
       "d": "2026-11-13",
@@ -217,17 +704,30 @@
       "f": "reel",
       "p": "N22",
       "t": "¿Firmar en el celular vale?",
-      "e": "producir"
+      "e": "listo",
+      "o": "uso-app",
+      "s": "",
+      "x": [
+        "tt"
+      ],
+      "n": "Listo y revisado 3-nov (capas; referencia mg016 hilos que se rompen): cuadros cada 2 s, sin temblor ni cuadros congelados, texto en zona segura, «Contrapto» bien dicho. Archivo: Edited/Instagram/Contrappto/N22-CTP-ig.mp4 (el mismo para IG, TikTok y LinkedIn) · portada Portadas/Contrappto/N22-CTP-ig.jpg. Copy: ctp-noviembre-publicar.md."
     },
     {
-      "d": "2026-11-13",
-      "h": "19:00",
-      "c": "tf",
+      "d": "2026-11-14",
+      "h": "10:00",
+      "c": "jd",
       "r": "ig",
+      "x": [
+        "tt"
+      ],
       "f": "reel",
-      "p": "N11",
-      "t": "El practicante contra la alerta",
-      "e": "producir"
+      "p": "jd-clase-videojuego",
+      "t": "La contabilidad es un videojuego: Panadería Tycoon",
+      "e": "producir",
+      "o": "seguidores",
+      "s": "lo-que-estoy-construyendo",
+      "cara": "habla",
+      "n": "Tu juego de contabilidad; la grabación del juego la hacemos nosotros. Guion con marcas de locución: piezas/2026-11/guiones/juanda-locucion.md"
     },
     {
       "d": "2026-11-14",
@@ -235,9 +735,16 @@
       "c": "tf",
       "r": "ig",
       "f": "reel",
-      "p": "N16",
-      "t": "¿Cuánto cuesta construir el sistema Némesis?",
-      "e": "producir"
+      "p": "tf-senales-app",
+      "t": "3 señales de que tu empresa ya necesita una app",
+      "e": "producir",
+      "o": "venta-technology",
+      "s": "lo-que-estoy-construyendo",
+      "x": [
+        "tt"
+      ],
+      "cara": "no",
+      "n": "Archivo: Instagram/Trifuerza.co/tf-senales-app-TF-ig.mp4 (+ portada). Rehecho el 2-nov con producto (Contrappto funcionando en capas), sin muñequitos. Copy: piezas/2026-11/tf-senales-app-publicar.md FALTA VOZ: créditos de ElevenLabs (texto de la narración listo en el kit)."
     },
     {
       "d": "2026-11-14",
@@ -247,7 +754,13 @@
       "f": "reel",
       "p": "N34",
       "t": "Le pedí a ChatGPT un contrato de prestación de servicios",
-      "e": "producir"
+      "e": "listo",
+      "o": "uso-app",
+      "s": "la-clausula-que-nadie-leyo",
+      "x": [
+        "tt"
+      ],
+      "n": "Listo y revisado 3-nov (capas; referencia #6 chat que se escribe en verde): cuadros cada 2 s, sin temblor ni cuadros congelados, texto en zona segura, «Contrapto» bien dicho. Archivo: Edited/Instagram/Contrappto/N34-CTP-ig.mp4 (el mismo para IG, TikTok y LinkedIn) · portada Portadas/Contrappto/N34-CTP-ig.jpg. Copy: ctp-noviembre-publicar.md."
     },
     {
       "d": "2026-11-15",
@@ -257,7 +770,26 @@
       "f": "reel",
       "p": "N23",
       "t": "Te incumplieron: ¿y ahora qué?",
-      "e": "producir"
+      "e": "listo",
+      "o": "uso-app",
+      "s": "casos-de-la-vida-real",
+      "x": [
+        "tt"
+      ],
+      "n": "Listo y revisado 3-nov (capas; referencia mg036 recuadros de seguimiento): cuadros cada 2 s, sin temblor ni cuadros congelados, texto en zona segura, «Contrapto» bien dicho. Archivo: Edited/Instagram/Contrappto/N23-CTP-ig.mp4 (el mismo para IG, TikTok y LinkedIn) · portada Portadas/Contrappto/N23-CTP-ig.jpg. Copy: ctp-noviembre-publicar.md."
+    },
+    {
+      "d": "2026-11-15",
+      "h": "12:00",
+      "c": "tf",
+      "r": "ig",
+      "f": "carrusel",
+      "p": "ACL2",
+      "t": "Leer rápido no es leer mejor",
+      "e": "listo",
+      "o": "venta-academy",
+      "s": "",
+      "n": "PROPUESTA (2-nov). Mundo: el libro-territorio de Lectura (remotion/academy/LibroMapa.jsx). Producido: Noviembre/Edited/Carruseles/Trifuerza.co/academy-acl2-leer-rapido/ (6 láminas; LinkedIn: academy-acl2-leer-rapido-linkedin.mp4). Copy en piezas/2026-11/carruseles/academy-acl2-leer-rapido.json. Fecha movida (2-nov, tarde): Lectura abre el mar 10 y Métodos el mar 24."
     },
     {
       "d": "2026-11-15",
@@ -267,38 +799,235 @@
       "f": "carrusel",
       "p": "N38",
       "t": "Firmar no es desconfiar",
-      "e": "carrusel"
+      "e": "listo",
+      "o": "uso-app",
+      "s": "casos-de-la-vida-real",
+      "n": "Listo 3-nov: láminas rehechas con el webinar del jueves 26 y el cierre «Entra a contrappto.com»; versión LinkedIn en la carpeta del carrusel. Copy en ctp-noviembre-publicar.md."
     },
     {
-      "d": "2026-11-17",
-      "h": "12:00",
+      "d": "2026-11-16",
+      "h": "10:00",
       "c": "jd",
       "r": "ig",
       "f": "reel",
       "p": "N05",
       "t": "Greed & Darkness: ¿homenaje o copia?",
-      "e": "producir"
+      "e": "listo",
+      "o": "seguidores",
+      "s": "copia-u-homenaje",
+      "x": [
+        "tt"
+      ],
+      "cara": "no",
+      "n": "Listo (2-nov-2026): Noviembre/Edited/Instagram/Juanda.Trifuerza/N05-JD-ig.mp4 · portada N05-JD-ig.jpg · copy en piezas/2026-11/n05-publicar.md."
     },
     {
-      "d": "2026-11-17",
-      "h": "19:00",
+      "d": "2026-11-16",
+      "h": "11:00",
+      "c": "jd",
+      "r": "li",
+      "f": "video",
+      "p": "HM2",
+      "t": "Hazlo mejor: tu documento se ve viejo por una sola razón",
+      "e": "producir",
+      "o": "seguidores",
+      "s": "hazlo-mejor",
+      "n": "Guion con marcas de locución: piezas/2026-11/guiones/juanda-locucion.md · Movido del 2026-11-09 al 2026-11-16 (3-nov): Juan David graba del vie 6 al dom 8.",
+      "cara": "habla"
+    },
+    {
+      "d": "2026-11-16",
+      "h": "11:00",
+      "c": "jd",
+      "r": "li",
+      "f": "video",
+      "p": "jd-kafka",
+      "t": "Kafkiano",
+      "e": "listo",
+      "o": "seguidores",
+      "s": "derecho-que-nadie-te-explica",
+      "n": "Mismo MP4 de Instagram (con CTA desde el 2-nov-2026): Noviembre/Edited/Instagram/Juanda.Trifuerza/jd-kafka--juanda.mp4. Juan David graba una toma suya en ambiente kafkiano (cierre con su voz real); ver jd-kafka.md «Tu toma».",
+      "cara": "cameo"
+    },
+    {
+      "d": "2026-11-16",
+      "h": "13:00",
+      "c": "tf",
+      "r": "li",
+      "f": "video",
+      "p": "tf-videojuegos",
+      "t": "Esto no es una maqueta: apps, IA y videojuegos",
+      "e": "producir",
+      "o": "venta-technology",
+      "s": "lo-que-estoy-construyendo",
+      "n": "LinkedIn de trifuerza.co agregado el 4-nov (regla: juanda y trifuerza.co también van a LinkedIn y TikTok).",
+      "cara": "no"
+    },
+    {
+      "d": "2026-11-16",
+      "h": "18:00",
       "c": "tf",
       "r": "ig",
       "f": "reel",
-      "p": "N12",
-      "t": "Pongo el radicado y me avisa",
-      "e": "producir"
+      "p": "tf-civitapp",
+      "t": "Una app para organizar a miles (Civitapp)",
+      "e": "producir",
+      "o": "venta-technology",
+      "s": "lo-que-estoy-construyendo",
+      "n": "Archivo: Instagram/Trifuerza.co/tf-civitapp-TF-ig.mp4 (+ portada). Guion: piezas/2026-11/guiones/tf-producto.md. Producto por dentro: grabación real de trifuerza.co en capas, sin cara ni voz. Copy: piezas/2026-11/tf-civitapp-publicar.md FALTA VOZ: créditos de ElevenLabs (texto de la narración listo en el kit).",
+      "cara": "no",
+      "x": [
+        "tt"
+      ]
+    },
+    {
+      "d": "2026-11-17",
+      "h": "11:00",
+      "c": "jd",
+      "r": "li",
+      "f": "video",
+      "p": "jd-ux-ui",
+      "t": "¿Qué es UX/UI? (en 50 segundos)",
+      "e": "producir",
+      "o": "seguidores",
+      "s": "lo-que-estoy-construyendo",
+      "n": "Reemplaza «Mi primera web a los 15» (tutorial útil). Guion con marcas de locución: piezas/2026-11/guiones/juanda-locucion.md · Movido del 2026-11-10 al 2026-11-17 (3-nov): Juan David graba del vie 6 al dom 8.",
+      "cara": "habla"
+    },
+    {
+      "d": "2026-11-17",
+      "h": "11:00",
+      "c": "tf",
+      "r": "li",
+      "f": "video",
+      "p": "tf-apps-ia",
+      "t": "400 pedidos por WhatsApp y una persona copiándolos a Excel",
+      "e": "producir",
+      "o": "venta-technology",
+      "s": "lo-que-estoy-construyendo",
+      "n": "Apps con IA (caso tipo, datos de ejemplo). Guion con marcas de locución y tomas: piezas/2026-11/guiones/tf-apps-ia.md. CTA: comentario + cotiza tu app. LinkedIn 4:5 y texto largo.",
+      "cara": "habla"
+    },
+    {
+      "d": "2026-11-17",
+      "h": "11:00",
+      "c": "ctp",
+      "r": "li",
+      "f": "video",
+      "p": "LI-EMPRESAS",
+      "t": "Empresas: firmar sus propios contratos con identidad verificada",
+      "e": "listo",
+      "o": "uso-app",
+      "s": "",
+      "n": "Listo y revisado 3-nov (capas; referencia mg086 documento palabra por palabra + glitch RGB): cuadros cada 2 s, sin temblor ni cuadros congelados, texto en zona segura, «Contrapto» bien dicho. Archivo: Edited/Instagram/Contrappto/LI-EMPRESAS-CTP-ig.mp4 (el mismo para IG, TikTok y LinkedIn) · portada Portadas/Contrappto/LI-EMPRESAS-CTP-ig.jpg. Copy: ctp-noviembre-publicar.md."
+    },
+    {
+      "d": "2026-11-17",
+      "h": "11:00",
+      "c": "jd",
+      "r": "li",
+      "f": "video",
+      "p": "jd-clase-videojuego",
+      "t": "La contabilidad es un videojuego: Panadería Tycoon",
+      "e": "producir",
+      "o": "seguidores",
+      "s": "lo-que-estoy-construyendo",
+      "cara": "habla",
+      "n": "LinkedIn de trifuerza.co agregado el 4-nov (regla: juanda y trifuerza.co también van a LinkedIn y TikTok)."
+    },
+    {
+      "d": "2026-11-17",
+      "h": "18:00",
+      "c": "tf",
+      "r": "ig",
+      "f": "reel",
+      "p": "tf-apps-ia",
+      "t": "400 pedidos por WhatsApp y una persona copiándolos a Excel",
+      "e": "producir",
+      "o": "venta-technology",
+      "s": "lo-que-estoy-construyendo",
+      "x": [
+        "tt"
+      ],
+      "n": "Apps con IA (caso tipo, datos de ejemplo). Guion con marcas de locución y tomas: piezas/2026-11/guiones/tf-apps-ia.md. CTA: comentario + cotiza tu app.",
+      "cara": "habla"
     },
     {
       "d": "2026-11-18",
-      "h": "07:00",
+      "h": "10:00",
       "c": "jd",
       "r": "ig",
+      "x": [
+        "tt"
+      ],
       "f": "reel",
-      "p": "N07",
-      "t": "Fray Cristóbal ya hacía legal design",
+      "p": "jd-homo-ludens",
+      "t": "¿Qué recuerda el videojuego de ti? (homo ludens)",
+      "e": "grabar",
+      "o": "seguidores",
+      "s": "lo-que-estoy-construyendo",
+      "cara": "habla",
+      "n": "Se graba en la clase del mié 11 (corte 3, sesión humanística: Vivir en mundos digitales) y se edita el mismo día. Guion: piezas/2026-11/guiones/jd-homo-ludens.md · Movido el 4-nov para dejarle el 11 a Fray Cristóbal (legal design 1)."
+    },
+    {
+      "d": "2026-11-18",
+      "h": "11:00",
+      "c": "ctp",
+      "r": "li",
+      "f": "video",
+      "p": "N24",
+      "t": "Tu contrato se renovó solo y no te diste cuenta",
+      "e": "listo",
+      "o": "uso-app",
+      "s": "la-clausula-que-nadie-leyo",
+      "n": "Listo y revisado 3-nov (relato (octubre); referencia DEMO_CTP3 de octubre: ventanas, estados y avisos): cuadros cada 2 s, sin temblor ni cuadros congelados, texto en zona segura, «Contrapto» bien dicho. Archivo: Edited/Instagram/Contrappto/N24-CTP-ig.mp4 (el mismo para IG, TikTok y LinkedIn) · portada Portadas/Contrappto/N24-CTP-ig.jpg. Copy: ctp-noviembre-publicar.md."
+    },
+    {
+      "d": "2026-11-18",
+      "h": "11:00",
+      "c": "tf",
+      "r": "li",
+      "f": "video",
+      "p": "tf-civitapp",
+      "t": "Una app para organizar a miles (Civitapp)",
       "e": "producir",
-      "n": "Semana de la clase de legal design."
+      "o": "venta-technology",
+      "s": "lo-que-estoy-construyendo",
+      "n": "Archivo: Instagram/Trifuerza.co/tf-civitapp-TF-ig.mp4 (+ portada). LinkedIn: el mismo MP4 vertical, con texto largo profesional. Guion: piezas/2026-11/guiones/tf-producto.md. Producto por dentro: grabación real de trifuerza.co en capas, sin cara ni voz. Copy: piezas/2026-11/tf-civitapp-publicar.md FALTA VOZ: créditos de ElevenLabs (texto de la narración listo en el kit).",
+      "cara": "no"
+    },
+    {
+      "d": "2026-11-18",
+      "h": "12:00",
+      "c": "tf",
+      "r": "ig",
+      "f": "reel",
+      "p": "ACF-FUND",
+      "t": "Deja de explicarle lo mismo a la IA (Fundamentos de IA, gratis y siempre disponible)",
+      "e": "listo",
+      "o": "venta-academy",
+      "s": "",
+      "x": [
+        "tt"
+      ],
+      "n": "PROPUESTA (2-nov). Evergreen pedido por Juan David: Fundamentos de IA como curso gratis siempre disponible; sirve también para pauta. Sin cámara: voz clonada oficial y pantalla simulada (aprobado por Juan David, 2-nov). Producido: Noviembre/Edited/Instagram/Trifuerza.co/ACF-FUND-TF-ig.mp4 (portada: Edited/Portadas/Trifuerza.co/ACF-FUND-TF-ig.jpg). Copy en piezas/2026-11/academy-acf-fund.json."
+    },
+    {
+      "d": "2026-11-18",
+      "h": "18:00",
+      "c": "tf",
+      "r": "ig",
+      "f": "reel",
+      "p": "tf-ruta",
+      "t": "Tu equipo comercial aprende contratos manejando un camión",
+      "e": "producir",
+      "o": "venta-technology",
+      "s": "lo-que-estoy-construyendo",
+      "n": "Archivo: Instagram/Trifuerza.co/tf-ruta-TF-ig.mp4 (+ portada). Guion: piezas/2026-11/guiones/tf-producto.md. Producto por dentro: grabación real de trifuerza.co en capas, sin cara ni voz. Copy: piezas/2026-11/tf-ruta-publicar.md FALTA VOZ: créditos de ElevenLabs (texto de la narración listo en el kit).",
+      "cara": "no",
+      "x": [
+        "tt"
+      ]
     },
     {
       "d": "2026-11-18",
@@ -306,19 +1035,100 @@
       "c": "ctp",
       "r": "ig",
       "f": "reel",
-      "p": "N26",
-      "t": "Mañana en vivo (recordatorio del webinar)",
-      "e": "producir"
+      "p": "S1",
+      "t": "El huésped que no se fue",
+      "e": "listo",
+      "o": "uso-app",
+      "s": "",
+      "x": [
+        "tt"
+      ],
+      "n": "Listo y revisado 3-nov (conversación; referencia px016 (pendiente el diorama; hoy con cabeza viva)): cuadros cada 2 s, sin temblor ni cuadros congelados, texto en zona segura, «Contrapto» bien dicho. Archivo: Edited/Instagram/Contrappto/S1-CTP-ig.mp4 (el mismo para IG, TikTok y LinkedIn) · portada Portadas/Contrappto/S1-CTP-ig.jpg. Copy: ctp-noviembre-publicar.md."
     },
     {
       "d": "2026-11-19",
-      "h": "12:00",
+      "h": "11:00",
+      "c": "jd",
+      "r": "li",
+      "f": "video",
+      "p": "jd-homo-ludens",
+      "t": "¿Qué recuerda el videojuego de ti? (homo ludens)",
+      "e": "grabar",
+      "o": "seguidores",
+      "s": "lo-que-estoy-construyendo",
+      "cara": "habla",
+      "n": "Se graba en la clase del mié 11 (corte 3, sesión humanística: Vivir en mundos digitales) y se edita el mismo día. Guion: piezas/2026-11/guiones/jd-homo-ludens.md · Movido el 4-nov para dejarle el 11 a Fray Cristóbal (legal design 1)."
+    },
+    {
+      "d": "2026-11-19",
+      "h": "11:00",
+      "c": "jd",
+      "r": "li",
+      "f": "video",
+      "p": "HM3",
+      "t": "Hazlo mejor: pídele las cosas a la IA así",
+      "e": "producir",
+      "o": "venta-academy",
+      "s": "hazlo-mejor",
+      "n": "Guion con marcas de locución: piezas/2026-11/guiones/juanda-locucion.md",
+      "cara": "habla"
+    },
+    {
+      "d": "2026-11-19",
+      "h": "11:00",
+      "c": "ctp",
+      "r": "li",
+      "f": "video",
+      "p": "LI-PYMES",
+      "t": "Pymes de servicios: del correo a un contrato que avanza",
+      "e": "listo",
+      "o": "uso-app",
+      "s": "",
+      "n": "Listo y revisado 3-nov (capas; referencia ad016 collage que se desarma): cuadros cada 2 s, sin temblor ni cuadros congelados, texto en zona segura, «Contrapto» bien dicho. Archivo: Edited/Instagram/Contrappto/LI-PYMES-CTP-ig.mp4 (el mismo para IG, TikTok y LinkedIn) · portada Portadas/Contrappto/LI-PYMES-CTP-ig.jpg. Copy: ctp-noviembre-publicar.md."
+    },
+    {
+      "d": "2026-11-19",
+      "h": "11:00",
+      "c": "tf",
+      "r": "li",
+      "f": "video",
+      "p": "tf-holograma",
+      "t": "Tu política de acoso, como videojuego (contrato en holograma)",
+      "e": "producir",
+      "o": "venta-technology",
+      "s": "lo-que-estoy-construyendo",
+      "n": "LinkedIn: el mismo MP4 vertical, texto largo profesional. Archivo: Instagram/Trifuerza.co/tf-holograma-TF-ig.mp4 (+ portada). Contrato en holograma: la política de acoso recorrida como videojuego. FALTA VOZ: créditos de ElevenLabs (texto listo en el kit). Copy: piezas/2026-11/tf-holograma-publicar.md",
+      "cara": "no"
+    },
+    {
+      "d": "2026-11-19",
+      "h": "13:00",
+      "c": "tf",
+      "r": "li",
+      "f": "video",
+      "p": "ACF-FUND",
+      "t": "Deja de explicarle lo mismo a la IA (Fundamentos de IA, gratis y siempre disponible)",
+      "e": "listo",
+      "o": "venta-academy",
+      "s": "",
+      "n": "LinkedIn de trifuerza.co agregado el 4-nov (regla: juanda y trifuerza.co también van a LinkedIn y TikTok)."
+    },
+    {
+      "d": "2026-11-19",
+      "h": "18:00",
       "c": "tf",
       "r": "ig",
-      "f": "carrusel",
-      "p": "N13",
-      "t": "¿Cuántas horas al mes pierdes revisando procesos?",
-      "e": "carrusel"
+      "f": "reel",
+      "p": "tf-academia",
+      "t": "Una plataforma de cursos con tu marca",
+      "e": "producir",
+      "o": "venta-technology",
+      "s": "lo-que-estoy-construyendo",
+      "n": "Archivo: Instagram/Trifuerza.co/tf-academia-TF-ig.mp4 (+ portada). Guion: piezas/2026-11/guiones/tf-producto.md. Producto por dentro: grabación real de trifuerza.co en capas, sin cara ni voz. Copy: piezas/2026-11/tf-academia-publicar.md FALTA VOZ: créditos de ElevenLabs (texto de la narración listo en el kit).",
+      "cara": "no",
+      "x": [
+        "tt"
+      ]
     },
     {
       "d": "2026-11-19",
@@ -328,17 +1138,106 @@
       "f": "reel",
       "p": "N24",
       "t": "Tu contrato se renovó solo y no te diste cuenta",
-      "e": "producir"
+      "e": "listo",
+      "o": "uso-app",
+      "s": "la-clausula-que-nadie-leyo",
+      "x": [
+        "tt"
+      ],
+      "n": "Listo y revisado 3-nov (relato (octubre); referencia DEMO_CTP3 de octubre: ventanas, estados y avisos): cuadros cada 2 s, sin temblor ni cuadros congelados, texto en zona segura, «Contrapto» bien dicho. Archivo: Edited/Instagram/Contrappto/N24-CTP-ig.mp4 (el mismo para IG, TikTok y LinkedIn) · portada Portadas/Contrappto/N24-CTP-ig.jpg. Copy: ctp-noviembre-publicar.md."
     },
     {
       "d": "2026-11-20",
-      "h": "19:00",
+      "h": "10:00",
+      "c": "jd",
+      "r": "ig",
+      "f": "reel",
+      "p": "jd-legal-design-3",
+      "t": "Legal design: el contrato que se juega",
+      "e": "grabar",
+      "o": "seguidores",
+      "s": "derecho-que-nadie-te-explica",
+      "n": "Legal design 3 de 3, montado (3-nov) con el holograma y el archipiélago: Edited/jd-legal-design-3--juanda.mp4 y portada Portadas/Juanda.Trifuerza/jd-legal-design-3-JD-ig.jpg. Solo faltan tus 7 tomas y el salón, en la clase del miércoles 18 en el Rosario (tu voz real): piezas/2026-11/jd-legal-design-3-publicar.md.",
+      "cara": "habla",
+      "x": [
+        "tt"
+      ]
+    },
+    {
+      "d": "2026-11-20",
+      "h": "11:00",
+      "c": "jd",
+      "r": "li",
+      "f": "video",
+      "p": "N05",
+      "t": "Greed & Darkness: ¿homenaje o copia?",
+      "e": "producir",
+      "o": "seguidores",
+      "s": "copia-u-homenaje",
+      "n": "Versión LinkedIn: 4:5 (Contrappto 16:9) y texto largo propio de LinkedIn.",
+      "cara": "no"
+    },
+    {
+      "d": "2026-11-20",
+      "h": "11:00",
+      "c": "tf",
+      "r": "li",
+      "f": "video",
+      "p": "tf-academia",
+      "t": "Una plataforma de cursos con tu marca",
+      "e": "producir",
+      "o": "venta-technology",
+      "s": "lo-que-estoy-construyendo",
+      "n": "Archivo: Instagram/Trifuerza.co/tf-academia-TF-ig.mp4 (+ portada). LinkedIn: el mismo MP4 vertical, con texto largo profesional. Guion: piezas/2026-11/guiones/tf-producto.md. Producto por dentro: grabación real de trifuerza.co en capas, sin cara ni voz. Copy: piezas/2026-11/tf-academia-publicar.md FALTA VOZ: créditos de ElevenLabs (texto de la narración listo en el kit).",
+      "cara": "no"
+    },
+    {
+      "d": "2026-11-20",
+      "h": "11:00",
+      "c": "tf",
+      "r": "li",
+      "f": "video",
+      "p": "tf-ruta",
+      "t": "Tu equipo comercial aprende contratos manejando un camión",
+      "e": "producir",
+      "o": "venta-technology",
+      "s": "lo-que-estoy-construyendo",
+      "n": "LinkedIn de trifuerza.co agregado el 4-nov (regla: juanda y trifuerza.co también van a LinkedIn y TikTok).",
+      "cara": "no"
+    },
+    {
+      "d": "2026-11-20",
+      "h": "18:00",
       "c": "tf",
       "r": "ig",
-      "f": "carrusel",
-      "p": "N15",
-      "t": "¿Sabes usar la IA en tu trabajo? 5 preguntas",
-      "e": "carrusel"
+      "f": "reel",
+      "p": "tf-holograma",
+      "t": "Tu política de acoso, como videojuego (contrato en holograma)",
+      "e": "producir",
+      "o": "venta-technology",
+      "s": "lo-que-estoy-construyendo",
+      "n": "Archivo: Instagram/Trifuerza.co/tf-holograma-TF-ig.mp4 (+ portada). Contrato en holograma: la política de acoso recorrida como videojuego. FALTA VOZ: créditos de ElevenLabs (texto listo en el kit). Copy: piezas/2026-11/tf-holograma-publicar.md",
+      "cara": "no",
+      "x": [
+        "tt"
+      ]
+    },
+    {
+      "d": "2026-11-21",
+      "h": "10:00",
+      "c": "jd",
+      "r": "ig",
+      "f": "reel",
+      "p": "jd-bases-de-datos",
+      "t": "Tu negocio ya tiene una base de datos (y es un Excel)",
+      "e": "producir",
+      "o": "seguidores",
+      "s": "",
+      "n": "Reemplaza «Me equivoqué con la IA» (tutorial útil). Guion con marcas de locución: piezas/2026-11/guiones/juanda-locucion.md",
+      "x": [
+        "tt"
+      ],
+      "cara": "habla"
     },
     {
       "d": "2026-11-21",
@@ -348,7 +1247,30 @@
       "f": "reel",
       "p": "N28",
       "t": "POV: «tranqui, después te pago»",
-      "e": "producir"
+      "e": "listo",
+      "o": "uso-app",
+      "s": "casos-de-la-vida-real",
+      "x": [
+        "tt"
+      ],
+      "n": "Listo y revisado 3-nov (conversación; referencia mg065 (Germán, cabeza viva)): cuadros cada 2 s, sin temblor ni cuadros congelados, texto en zona segura, «Contrapto» bien dicho. Archivo: Edited/Instagram/Contrappto/N28-CTP-ig.mp4 (el mismo para IG, TikTok y LinkedIn) · portada Portadas/Contrappto/N28-CTP-ig.jpg. Copy: ctp-noviembre-publicar.md."
+    },
+    {
+      "d": "2026-11-21",
+      "h": "12:00",
+      "c": "tf",
+      "r": "ig",
+      "f": "reel",
+      "p": "ACF2",
+      "t": "¿Qué IA uso? El motor y el carro (cierra con Métodos, que abre el 24)",
+      "e": "listo",
+      "o": "venta-academy",
+      "s": "",
+      "n": "PROPUESTA (2-nov). Sin cámara: voz clonada oficial y pantalla simulada (aprobado por Juan David, 2-nov). Guion: piezas/2026-11/guiones/academy-huecos-nov.md. Producido: Noviembre/Edited/Instagram/Trifuerza.co/ACF2-TF-ig.mp4 (portada: Edited/Portadas/Trifuerza.co/ACF2-TF-ig.jpg). Copy en piezas/2026-11/academy-acf2.json.",
+      "x": [
+        "tt"
+      ],
+      "cara": "no"
     },
     {
       "d": "2026-11-21",
@@ -358,7 +1280,613 @@
       "f": "reel",
       "p": "N36",
       "t": "Vendí el carro de palabra",
-      "e": "producir"
+      "e": "listo",
+      "o": "uso-app",
+      "s": "casos-de-la-vida-real",
+      "x": [
+        "tt"
+      ],
+      "n": "Listo y revisado 3-nov (conversación; referencia mg058 (carro de palabra, cabeza viva)): cuadros cada 2 s, sin temblor ni cuadros congelados, texto en zona segura, «Contrapto» bien dicho. Archivo: Edited/Instagram/Contrappto/N36-CTP-ig.mp4 (el mismo para IG, TikTok y LinkedIn) · portada Portadas/Contrappto/N36-CTP-ig.jpg. Copy: ctp-noviembre-publicar.md."
+    },
+    {
+      "d": "2026-11-22",
+      "h": "12:00",
+      "c": "tf",
+      "r": "ig",
+      "f": "carrusel",
+      "p": "ACE-P1",
+      "t": "La hoja en blanco: la técnica de estudio en 4 pasos (previa de Métodos)",
+      "e": "listo",
+      "o": "venta-academy",
+      "s": "",
+      "n": "PROPUESTA (2-nov). Previa de Métodos (abre el 24). Mundo: cuarto de estudio de noche (remotion/academy/). Producido: Noviembre/Edited/Carruseles/Trifuerza.co/academy-ace-p1-hoja-en-blanco/ (láminas academy-ace-p1-hoja-en-blanco-01…06.mp4; LinkedIn: academy-ace-p1-hoja-en-blanco-linkedin.mp4). Copy en piezas/2026-11/carruseles/academy-ace-p1-hoja-en-blanco.json. Fecha movida (2-nov, tarde): Lectura abre el mar 10 y Métodos el mar 24. Re-renderizado con las fechas nuevas (2-nov, tarde)."
+    },
+    {
+      "d": "2026-11-22",
+      "h": "18:00",
+      "c": "jd",
+      "r": "ig",
+      "f": "story",
+      "p": "ACE-P2",
+      "t": "Tres repasos cortos rinden más que una maratón (puente a Métodos)",
+      "e": "listo",
+      "o": "venta-academy",
+      "s": "",
+      "n": "PROPUESTA (2-nov). Mundo: cuarto de estudio de noche (remotion/academy/). Producido: Noviembre/Edited/Stories/Juanda.Trifuerza/ACE-P2-1.mp4, ACE-P2-2.mp4. Ponle el sticker de enlace a trifuerza.co/academy en la 2. Fecha movida (2-nov, tarde): Lectura abre el mar 10 y Métodos el mar 24. Re-renderizado con las fechas nuevas (2-nov, tarde)."
+    },
+    {
+      "d": "2026-11-23",
+      "h": "11:00",
+      "c": "jd",
+      "r": "li",
+      "f": "video",
+      "p": "HM4",
+      "t": "Hazlo mejor: tu formulario está espantando clientes",
+      "e": "producir",
+      "o": "seguidores",
+      "s": "hazlo-mejor",
+      "n": "Guion con marcas de locución: piezas/2026-11/guiones/juanda-locucion.md",
+      "cara": "habla"
+    },
+    {
+      "d": "2026-11-23",
+      "h": "11:00",
+      "c": "tf",
+      "r": "li",
+      "f": "video",
+      "p": "ACA-L",
+      "t": "De la nota del celular a un pedido para la IA (lista de espera del curso de apps de enero)",
+      "e": "grabar",
+      "o": "venta-academy",
+      "s": "",
+      "n": "PROPUESTA (2-nov). Guion: piezas/2026-11/guiones/academy-huecos-nov.md. 4:5, gancho B; enlace a la lista de espera en el primer comentario. La preventa es en enero y el curso en febrero. MONTADO SIN TUS TOMAS (noche 2→3-nov): mundo, voz clonada en las filas narradas, música, CTA escrito, portada y copy listos; faltan tus tomas a cámara (frases, duraciones y encuadre en piezas/2026-11/academy-tomas-kit.md). Borrador con huecos: Noviembre/Edited/Linkedin/Trifuerza/ACA-L-TF-li.mp4. Copy en piezas/2026-11/academy-aca-l.json."
+    },
+    {
+      "d": "2026-11-23",
+      "h": "13:00",
+      "c": "jd",
+      "r": "li",
+      "f": "video",
+      "p": "jd-bases-de-datos",
+      "t": "Tu negocio ya tiene una base de datos (y es un Excel)",
+      "e": "producir",
+      "o": "seguidores",
+      "s": "",
+      "n": "LinkedIn de trifuerza.co agregado el 4-nov (regla: juanda y trifuerza.co también van a LinkedIn y TikTok).",
+      "cara": "habla"
+    },
+    {
+      "d": "2026-11-23",
+      "h": "18:00",
+      "c": "tf",
+      "r": "ig",
+      "f": "story",
+      "p": "ACE-P3",
+      "t": "Que la IA te tome el examen · mañana abre gratis (3 stories)",
+      "e": "listo",
+      "o": "venta-academy",
+      "s": "",
+      "n": "PROPUESTA (2-nov). Mundo: cuarto de estudio de noche (remotion/academy/). Producido: Noviembre/Edited/Stories/Trifuerza.co/ACE-P3-1.mp4, ACE-P3-2.mp4, ACE-P3-3.mp4. Sticker de enlace en la 3. Fecha movida (2-nov, tarde): Lectura abre el mar 10 y Métodos el mar 24."
+    },
+    {
+      "d": "2026-11-23",
+      "h": "18:00",
+      "c": "tf",
+      "r": "ig",
+      "f": "reel",
+      "p": "ACA-L",
+      "t": "De la nota del celular a un pedido para la IA (lista de espera del curso de apps de enero)",
+      "e": "grabar",
+      "o": "venta-academy",
+      "s": "",
+      "n": "PROPUESTA (2-nov). Guion: piezas/2026-11/guiones/academy-huecos-nov.md. Enseña tres preguntas (qué hace, para quién, qué NO hace). CTA: en enero abrimos el curso, únete a la lista de espera, link en la bio. MONTADO SIN TUS TOMAS (noche 2→3-nov): mundo, voz clonada en las filas narradas, música, CTA escrito, portada y copy listos; faltan tus tomas a cámara (frases, duraciones y encuadre en piezas/2026-11/academy-tomas-kit.md). Borrador con huecos: Noviembre/Edited/Instagram/Trifuerza.co/ACA-L-TF-ig.mp4 (portada: Edited/Portadas/Trifuerza.co/ACA-L-TF-ig.jpg). Copy en piezas/2026-11/academy-aca-l.json.",
+      "x": [
+        "tt"
+      ]
+    },
+    {
+      "d": "2026-11-24",
+      "h": "10:00",
+      "c": "jd",
+      "r": "ig",
+      "f": "reel",
+      "p": "N06",
+      "t": "¿Se podría patentar Némesis en Colombia?",
+      "e": "listo",
+      "o": "seguidores",
+      "s": "copia-u-homenaje",
+      "x": [
+        "tt"
+      ],
+      "cara": "no",
+      "n": "Listo (2-nov-2026): Noviembre/Edited/Instagram/Juanda.Trifuerza/N06-JD-ig.mp4 · portada N06-JD-ig.jpg · copy (y el de LinkedIn) en piezas/2026-11/n06-publicar.md."
+    },
+    {
+      "d": "2026-11-24",
+      "h": "11:00",
+      "c": "tf",
+      "r": "li",
+      "f": "carrusel",
+      "p": "N18",
+      "t": "Antes de firmar una cotización de software: 5 preguntas",
+      "e": "listo",
+      "o": "venta-technology",
+      "s": "lo-que-estoy-construyendo",
+      "n": "Carruseles/Trifuerza.co/c26-tech-antes-de-firmar/ (PNG por lámina o -linkedin.mp4). Cotización que se corrige, 5 preguntas. Copy: piezas/2026-11/n18-cotizacion-publicar.md",
+      "cara": "no"
+    },
+    {
+      "d": "2026-11-24",
+      "h": "11:00",
+      "c": "jd",
+      "r": "li",
+      "f": "video",
+      "p": "jd-legal-design-3",
+      "t": "Legal design: el contrato que se juega",
+      "e": "grabar",
+      "o": "seguidores",
+      "s": "derecho-que-nadie-te-explica",
+      "n": "Versión LinkedIn del cierre de la serie: texto largo sobre la clase del 18 y CTA «Si quieres esto para los contratos de tu empresa, escríbeme por DM». Kit: piezas/2026-11/jd-legal-design-3-publicar.md.",
+      "cara": "habla"
+    },
+    {
+      "d": "2026-11-24",
+      "h": "11:00",
+      "c": "tf",
+      "r": "li",
+      "f": "video",
+      "p": "ACF2",
+      "t": "¿Qué IA uso? El motor y el carro (cierra con Métodos, que abre el 24)",
+      "e": "listo",
+      "o": "venta-academy",
+      "s": "",
+      "n": "LinkedIn de trifuerza.co agregado el 4-nov (regla: juanda y trifuerza.co también van a LinkedIn y TikTok).",
+      "cara": "no"
+    },
+    {
+      "d": "2026-11-24",
+      "h": "18:00",
+      "c": "tf",
+      "r": "ig",
+      "f": "story",
+      "p": "ACE3",
+      "t": "Métodos de estudio: abre el curso gratis (3 stories)",
+      "e": "listo",
+      "o": "venta-academy",
+      "s": "",
+      "n": "PROPUESTA (2-nov). Mundo: cuarto de estudio de noche (remotion/academy/). Producido: Noviembre/Edited/Stories/Trifuerza.co/ACE3-1.mp4, ACE3-2.mp4, ACE3-3.mp4. Sticker de encuesta en la 2 (A: Releo y subrayo · B: Me pregunto a mí mismo) y de enlace en la 3. Fecha movida (2-nov, tarde): Lectura abre el mar 10 y Métodos el mar 24."
+    },
+    {
+      "d": "2026-11-24",
+      "h": "18:00",
+      "c": "jd",
+      "r": "ig",
+      "f": "story",
+      "p": "ACE4",
+      "t": "Story puente: no le pidas el resumen, pídele que te pregunte",
+      "e": "listo",
+      "o": "venta-academy",
+      "s": "",
+      "n": "PROPUESTA (2-nov). Mundo: cuarto de estudio de noche (remotion/academy/). Producido: Noviembre/Edited/Stories/Juanda.Trifuerza/ACE4-1.mp4. Sticker de enlace a trifuerza.co/academy. Fecha movida (2-nov, tarde): Lectura abre el mar 10 y Métodos el mar 24."
+    },
+    {
+      "d": "2026-11-24",
+      "h": "18:00",
+      "c": "tf",
+      "r": "ig",
+      "f": "reel",
+      "p": "ACE1",
+      "t": "Hoja en blanco (curso gratis de métodos de estudio)",
+      "e": "grabar",
+      "o": "venta-academy",
+      "s": "",
+      "n": "PROPUESTA (2-nov): fecha por aprobar. Guion: piezas/2026-11/guiones/academy-estudio.md. Orgánico con caso; la versión anuncio (-P) solo en pauta. Fecha movida (2-nov, tarde): Lectura abre el mar 10 y Métodos el mar 24. MONTADO SIN TUS TOMAS (noche 2→3-nov): mundo, voz clonada en las filas narradas, música, CTA escrito, portada y copy listos; faltan tus tomas a cámara (frases, duraciones y encuadre en piezas/2026-11/academy-tomas-kit.md). Borrador con huecos: Noviembre/Edited/Instagram/Trifuerza.co/ACE1-TF-ig.mp4 (portada: Edited/Portadas/Trifuerza.co/ACE1-TF-ig.jpg). Copy en piezas/2026-11/academy-ace1.json.",
+      "x": [
+        "tt"
+      ]
+    },
+    {
+      "d": "2026-11-24",
+      "h": "19:00",
+      "c": "ctp",
+      "r": "ig",
+      "f": "carrusel",
+      "p": "N32",
+      "t": "5 contratos que todo freelancer debería tener",
+      "e": "listo",
+      "o": "uso-app",
+      "s": "la-clausula-que-nadie-leyo",
+      "n": "Producido 2-nov: láminas, versión LinkedIn y copy en ctp-noviembre-publicar.md. Guion: piezas/2026-11/guiones/ctp-noviembre.md. Cierre (2-nov): Contrappto ya está en la web; CTA «Pruébalo gratis en contrappto.com, link en la bio. Muy pronto, también en App Store y Google Play». Sin lista de espera."
+    },
+    {
+      "d": "2026-11-25",
+      "h": "11:00",
+      "c": "tf",
+      "r": "li",
+      "f": "video",
+      "p": "ACE1",
+      "t": "Hoja en blanco (curso gratis de métodos de estudio)",
+      "e": "grabar",
+      "o": "venta-academy",
+      "s": "",
+      "n": "PROPUESTA (2-nov): fecha por aprobar. Guion: piezas/2026-11/guiones/academy-estudio.md. Orgánico con caso; la versión anuncio (-P) solo en pauta. Fecha movida (2-nov, tarde): Lectura abre el mar 10 y Métodos el mar 24. MONTADO SIN TUS TOMAS (noche 2→3-nov): mundo, voz clonada en las filas narradas, música, CTA escrito, portada y copy listos; faltan tus tomas a cámara (frases, duraciones y encuadre en piezas/2026-11/academy-tomas-kit.md). Borrador con huecos: Noviembre/Edited/Linkedin/Trifuerza/ACE1-TF-li.mp4. Copy en piezas/2026-11/academy-ace1.json."
+    },
+    {
+      "d": "2026-11-25",
+      "h": "11:00",
+      "c": "ctp",
+      "r": "li",
+      "f": "carrusel",
+      "p": "N32",
+      "t": "5 contratos que todo freelancer debería tener",
+      "e": "listo",
+      "o": "uso-app",
+      "s": "la-clausula-que-nadie-leyo",
+      "n": "Producido 2-nov: láminas, versión LinkedIn y copy en ctp-noviembre-publicar.md. Versión LinkedIn: 4:5 (Contrappto 16:9) y texto largo propio de LinkedIn. Guion: piezas/2026-11/guiones/ctp-noviembre.md. Cierre (2-nov): Contrappto ya está en la web; CTA «Pruébalo gratis en contrappto.com, link en la bio. Muy pronto, también en App Store y Google Play». Sin lista de espera."
+    },
+    {
+      "d": "2026-11-25",
+      "h": "11:00",
+      "c": "jd",
+      "r": "li",
+      "f": "video",
+      "p": "N06",
+      "t": "¿Se podría patentar Némesis en Colombia?",
+      "e": "producir",
+      "o": "seguidores",
+      "s": "copia-u-homenaje",
+      "n": "Versión LinkedIn: 4:5 (Contrappto 16:9) y texto largo propio de LinkedIn.",
+      "cara": "no"
+    },
+    {
+      "d": "2026-11-25",
+      "h": "18:00",
+      "c": "tf",
+      "r": "ig",
+      "f": "story",
+      "p": "ACB0",
+      "t": "El viernes, lo mejor es gratis: lee primero la conclusión (3 stories)",
+      "e": "listo",
+      "o": "venta-academy",
+      "s": "",
+      "n": "PROPUESTA (2-nov). Mundo: el libro-territorio de Lectura (remotion/academy/LibroMapa.jsx). Producido: Noviembre/Edited/Stories/Trifuerza.co/ACB0-1.mp4, ACB0-2.mp4, ACB0-3.mp4. Sticker de cuenta regresiva y de enlace en la 3."
+    },
+    {
+      "d": "2026-11-25",
+      "h": "18:00",
+      "c": "tf",
+      "r": "ig",
+      "f": "carrusel",
+      "p": "N18",
+      "t": "Antes de firmar una cotización de software: 5 preguntas",
+      "e": "listo",
+      "o": "venta-technology",
+      "s": "lo-que-estoy-construyendo",
+      "cara": "no",
+      "n": "Carruseles/Trifuerza.co/c26-tech-antes-de-firmar/ (8 láminas MP4). Cotización que se corrige, 5 preguntas. Copy: piezas/2026-11/n18-cotizacion-publicar.md"
+    },
+    {
+      "d": "2026-11-25",
+      "h": "19:00",
+      "c": "ctp",
+      "r": "ig",
+      "f": "reel",
+      "p": "N26",
+      "t": "Mañana en vivo (recordatorio del webinar)",
+      "e": "listo",
+      "o": "venta-academy",
+      "s": "",
+      "x": [
+        "tt"
+      ],
+      "n": "Listo 3-nov: se queda como pieza ilustrada (sketch/collage), re-renderizada con «Contrapto» bien dicho, webinar el jueves 26 y personajes sin temblor. Archivo: Edited/Instagram/Contrappto/N26-CTP-ig.mp4 · portada Portadas/Contrappto/N26-CTP-ig.jpg. Copy: ctp-noviembre-publicar.md."
+    },
+    {
+      "d": "2026-11-26",
+      "h": "10:00",
+      "c": "jd",
+      "r": "ig",
+      "f": "reel",
+      "p": "jd-mercader",
+      "t": "El contrato de la libra de carne",
+      "e": "listo",
+      "o": "seguidores",
+      "s": "derecho-que-nadie-te-explica",
+      "n": "Listo para tus dos tomas (2-nov-2026): Noviembre/Edited/Instagram/Juanda.Trifuerza/jd-mercader-JD-ig.mp4 · portada Portadas/Juanda.Trifuerza/jd-mercader-JD-ig.jpg · copy en piezas/2026-11/jd-mercader-publicar.md. Faltan tu cara y tu voz real en los dos huecos marcados: inicio (5,2 s, el gancho) y final (8 s, la pregunta y el CTA); la clonada narra solo los grabados.",
+      "x": [
+        "tt"
+      ],
+      "cara": "cameo"
+    },
+    {
+      "d": "2026-11-26",
+      "h": "11:00",
+      "c": "tf",
+      "r": "li",
+      "f": "video",
+      "p": "tf-website",
+      "t": "3 reglas para que tu web venda",
+      "e": "producir",
+      "o": "venta-technology",
+      "s": "lo-que-estoy-construyendo",
+      "n": "Cambió el 2-nov: sin historia personal; útil para empresas, con trifuerza.co de ejemplo. Guion con marcas de locución y tomas: piezas/2026-11/guiones/tf-website.md",
+      "cara": "habla"
+    },
+    {
+      "d": "2026-11-26",
+      "h": "18:00",
+      "c": "tf",
+      "r": "ig",
+      "f": "reel",
+      "p": "N14",
+      "t": "Le pediste el resumen a la IA",
+      "e": "grabar",
+      "o": "venta-academy",
+      "s": "",
+      "x": [
+        "tt"
+      ],
+      "n": "Guion: piezas/2026-11/guiones/academy-n14-n15.md. Orgánico con caso; la versión anuncio (-P) solo en pauta. Fecha movida (2-nov, tarde): Lectura abre el mar 10 y Métodos el mar 24. MONTADO SIN TUS TOMAS (noche 2→3-nov): mundo, voz clonada en las filas narradas, música, CTA escrito, portada y copy listos; faltan tus tomas a cámara (frases, duraciones y encuadre en piezas/2026-11/academy-tomas-kit.md). Borrador con huecos: Noviembre/Edited/Instagram/Trifuerza.co/N14-TF-ig.mp4 (portada: Edited/Portadas/Trifuerza.co/N14-TF-ig.jpg). Copy en piezas/2026-11/academy-n14.json."
+    },
+    {
+      "d": "2026-11-26",
+      "h": "19:00",
+      "c": "ctp",
+      "r": "ig",
+      "f": "reel",
+      "p": "N29",
+      "t": "¿Tienes contrato por escrito? (calle)",
+      "e": "falta de su parte",
+      "n": "Salidas a la calle 17–28 nov. Guion: piezas/2026-11/guiones/ctp-noviembre.md. Cierre (2-nov): Contrappto ya está en la web; CTA «Pruébalo gratis en contrappto.com, link en la bio. Muy pronto, también en App Store y Google Play». Sin lista de espera. Falta de su parte: grabar en la calle (preguntas a la gente con su cara). Guion en ctp-noviembre.md; cuando estén los clips se edita con la plantilla Montaje.",
+      "o": "uso-app",
+      "s": "casos-de-la-vida-real",
+      "x": [
+        "tt"
+      ]
+    },
+    {
+      "d": "2026-11-27",
+      "h": "11:00",
+      "c": "jd",
+      "r": "li",
+      "f": "video",
+      "p": "N03",
+      "t": "No lo demandaron por copiar a Pikachu",
+      "e": "producir",
+      "o": "seguidores",
+      "s": "copia-u-homenaje",
+      "n": "Versión LinkedIn: 4:5 (Contrappto 16:9) y texto largo propio de LinkedIn.",
+      "cara": "no"
+    },
+    {
+      "d": "2026-11-27",
+      "h": "11:00",
+      "c": "tf",
+      "r": "li",
+      "f": "video",
+      "p": "ACB1",
+      "t": "Hoy todos te venden algo. Esto es gratis. (Black Friday)",
+      "e": "grabar",
+      "o": "venta-academy",
+      "s": "",
+      "n": "PROPUESTA (2-nov): Black Friday de cursos gratis. Guion: piezas/2026-11/guiones/academy-black-friday.md. 4:5, gancho C y las dos técnicas como lista; enlace en el primer comentario. MONTADO SIN TUS TOMAS (noche 2→3-nov): mundo, voz clonada en las filas narradas, música, CTA escrito, portada y copy listos; faltan tus tomas a cámara (frases, duraciones y encuadre en piezas/2026-11/academy-tomas-kit.md). Borrador con huecos: Noviembre/Edited/Linkedin/Trifuerza/ACB1-TF-li.mp4. Copy en piezas/2026-11/academy-acb1.json."
+    },
+    {
+      "d": "2026-11-27",
+      "h": "12:00",
+      "c": "tf",
+      "r": "ig",
+      "f": "reel",
+      "p": "ACB1",
+      "t": "Hoy todos te venden algo. Esto es gratis. (Black Friday)",
+      "e": "grabar",
+      "o": "venta-academy",
+      "s": "",
+      "n": "PROPUESTA (2-nov): Black Friday de cursos gratis. Guion: piezas/2026-11/guiones/academy-black-friday.md. Enseña una técnica de estudio y una de lectura; CTA a los dos cursos gratis (Métodos y Lectura), link en la bio. Sin «100 % de descuento». MONTADO SIN TUS TOMAS (noche 2→3-nov): mundo, voz clonada en las filas narradas, música, CTA escrito, portada y copy listos; faltan tus tomas a cámara (frases, duraciones y encuadre en piezas/2026-11/academy-tomas-kit.md). Borrador con huecos: Noviembre/Edited/Instagram/Trifuerza.co/ACB1-TF-ig.mp4 (portada: Edited/Portadas/Trifuerza.co/ACB1-TF-ig.jpg). Copy en piezas/2026-11/academy-acb1.json.",
+      "x": [
+        "tt"
+      ]
+    },
+    {
+      "d": "2026-11-27",
+      "h": "13:00",
+      "c": "jd",
+      "r": "li",
+      "f": "video",
+      "p": "jd-mercader",
+      "t": "El contrato de la libra de carne",
+      "e": "listo",
+      "o": "seguidores",
+      "s": "derecho-que-nadie-te-explica",
+      "n": "LinkedIn de trifuerza.co agregado el 4-nov (regla: juanda y trifuerza.co también van a LinkedIn y TikTok).",
+      "cara": "cameo"
+    },
+    {
+      "d": "2026-11-27",
+      "h": "18:00",
+      "c": "tf",
+      "r": "ig",
+      "f": "story",
+      "p": "ACB2",
+      "t": "Black Friday: los dos cursos gratis (3 stories)",
+      "e": "listo",
+      "o": "venta-academy",
+      "s": "",
+      "n": "PROPUESTA (2-nov). Mundo: la calle de tiendas de noche (remotion/academy/Calle.jsx, fondo CraftPix City 3). Producido: Noviembre/Edited/Stories/Trifuerza.co/ACB2-1.mp4, ACB2-2.mp4, ACB2-3.mp4. Sticker de encuesta en la 1 (Sí · Todavía no) y de enlace en la 3."
+    },
+    {
+      "d": "2026-11-27",
+      "h": "19:00",
+      "c": "ctp",
+      "r": "ig",
+      "f": "reel",
+      "p": "S7",
+      "t": "Mi roommate se fue. Su mitad, no.",
+      "e": "listo",
+      "o": "uso-app",
+      "s": "",
+      "x": [
+        "tt"
+      ],
+      "n": "Listo y revisado 3-nov (conversación; referencia px275 (iris)): cuadros cada 2 s, sin temblor ni cuadros congelados, texto en zona segura, «Contrapto» bien dicho. Archivo: Edited/Instagram/Contrappto/S7-CTP-ig.mp4 (el mismo para IG, TikTok y LinkedIn) · portada Portadas/Contrappto/S7-CTP-ig.jpg. Copy: ctp-noviembre-publicar.md."
+    },
+    {
+      "d": "2026-11-28",
+      "h": "10:00",
+      "c": "jd",
+      "r": "ig",
+      "f": "reel",
+      "p": "jd-contrappto-dentro",
+      "t": "Tu primer contrato en 3 minutos",
+      "e": "producir",
+      "o": "seguidores",
+      "s": "lo-que-estoy-construyendo",
+      "n": "Contrappto ya está en la web: tutorial. Guion con marcas de locución: piezas/2026-11/guiones/juanda-locucion.md",
+      "x": [
+        "tt"
+      ],
+      "cara": "habla"
+    },
+    {
+      "d": "2026-11-28",
+      "h": "12:00",
+      "c": "tf",
+      "r": "ig",
+      "f": "carrusel",
+      "p": "ACE2",
+      "t": "Releer no es estudiar",
+      "e": "listo",
+      "o": "venta-academy",
+      "s": "",
+      "n": "PROPUESTA (2-nov). Mundo: cuarto de estudio de noche (remotion/academy/). Producido: Noviembre/Edited/Carruseles/Trifuerza.co/academy-ace2-releer/ (6 láminas academy-ace2-releer-NN.mp4; LinkedIn: academy-ace2-releer-linkedin.mp4). Copy en piezas/2026-11/carruseles/academy-ace2-releer.json. Fecha movida (2-nov, tarde): Lectura abre el mar 10 y Métodos el mar 24."
+    },
+    {
+      "d": "2026-11-29",
+      "h": "12:00",
+      "c": "tf",
+      "r": "ig",
+      "f": "carrusel",
+      "p": "N15",
+      "t": "¿Estudias bien con IA? 5 preguntas",
+      "e": "listo",
+      "o": "venta-academy",
+      "s": "",
+      "n": "PROPUESTA (2-nov). Guion: piezas/2026-11/guiones/academy-n14-n15.md. Mundo: cuarto de estudio de noche (remotion/academy/). Producido: Noviembre/Edited/Carruseles/Trifuerza.co/academy-n15-cinco-preguntas/ (7 láminas academy-n15-cinco-preguntas-NN.mp4; LinkedIn: academy-n15-cinco-preguntas-linkedin.mp4). Copy en piezas/2026-11/carruseles/academy-n15-cinco-preguntas.json. Fecha movida (2-nov, tarde): Lectura abre el mar 10 y Métodos el mar 24."
+    },
+    {
+      "d": "2026-11-30",
+      "h": "10:00",
+      "c": "jd",
+      "r": "ig",
+      "f": "reel",
+      "p": "ACA-JD",
+      "t": "3 apps que puedes construir con IA este fin de semana",
+      "e": "grabar",
+      "o": "seguidores",
+      "s": "hazlo-mejor",
+      "n": "PROPUESTA (2-nov). Guion: piezas/2026-11/guiones/academy-app.md. Formato Hazlo mejor, no historia personal: hablas a cámara con demo real de tres apps (agenda de citas, control de gastos, formulario de pedidos). CTA: «si quieres construir la tuya, sígueme». Sin mención de preventa (la app se vende en enero). MONTADO SIN TUS TOMAS (noche 2→3-nov): mundo, voz clonada en las filas narradas, música, CTA escrito, portada y copy listos; faltan tus tomas a cámara (frases, duraciones y encuadre en piezas/2026-11/academy-tomas-kit.md). Borrador con huecos: Noviembre/Edited/Instagram/Juanda.Trifuerza/ACA-JD-JD-ig.mp4 (portada: Edited/Portadas/Juanda.Trifuerza/ACA-JD-JD-ig.jpg). Copy en piezas/2026-11/academy-aca-jd.json.",
+      "x": [
+        "tt"
+      ]
+    },
+    {
+      "d": "2026-11-30",
+      "h": "11:00",
+      "c": "jd",
+      "r": "li",
+      "f": "video",
+      "p": "HM5",
+      "t": "Hazlo mejor: deja de nombrar tus variables «data»",
+      "e": "producir",
+      "o": "venta-academy",
+      "s": "hazlo-mejor",
+      "n": "Guion con marcas de locución: piezas/2026-11/guiones/juanda-locucion.md",
+      "cara": "habla"
+    },
+    {
+      "d": "2026-11-30",
+      "h": "11:00",
+      "c": "tf",
+      "r": "li",
+      "f": "video",
+      "p": "N14",
+      "t": "Le pediste el resumen a la IA",
+      "e": "grabar",
+      "o": "venta-academy",
+      "s": "",
+      "n": "LinkedIn de trifuerza.co agregado el 4-nov (regla: juanda y trifuerza.co también van a LinkedIn y TikTok)."
+    },
+    {
+      "d": "2026-11-30",
+      "h": "13:00",
+      "c": "jd",
+      "r": "li",
+      "f": "video",
+      "p": "jd-contrappto-dentro",
+      "t": "Tu primer contrato en 3 minutos",
+      "e": "producir",
+      "o": "seguidores",
+      "s": "lo-que-estoy-construyendo",
+      "n": "LinkedIn de trifuerza.co agregado el 4-nov (regla: juanda y trifuerza.co también van a LinkedIn y TikTok).",
+      "cara": "habla"
+    },
+    {
+      "d": "2026-11-30",
+      "h": "18:00",
+      "c": "tf",
+      "r": "ig",
+      "f": "reel",
+      "p": "ACB3",
+      "t": "3 pedidos para que la IA te ayude a estudiar (Cyber Monday)",
+      "e": "listo",
+      "o": "venta-academy",
+      "s": "",
+      "n": "PROPUESTA (2-nov). Sin cámara: voz clonada oficial y pantalla simulada (aprobado por Juan David, 2-nov). Guion: piezas/2026-11/guiones/academy-black-friday.md. Producido: Noviembre/Edited/Instagram/Trifuerza.co/ACB3-TF-ig.mp4 (portada: Edited/Portadas/Trifuerza.co/ACB3-TF-ig.jpg). Copy en piezas/2026-11/academy-acb3.json.",
+      "x": [
+        "tt"
+      ],
+      "cara": "no"
+    },
+    {
+      "d": "2026-12-01",
+      "h": "11:00",
+      "c": "jd",
+      "r": "li",
+      "f": "video",
+      "p": "ACA-JD",
+      "t": "3 apps que puedes construir con IA este fin de semana",
+      "e": "grabar",
+      "o": "seguidores",
+      "s": "hazlo-mejor",
+      "n": "LinkedIn de trifuerza.co agregado el 4-nov (regla: juanda y trifuerza.co también van a LinkedIn y TikTok)."
+    },
+    {
+      "d": "2026-12-01",
+      "h": "13:00",
+      "c": "tf",
+      "r": "li",
+      "f": "video",
+      "p": "ACB3",
+      "t": "3 pedidos para que la IA te ayude a estudiar (Cyber Monday)",
+      "e": "listo",
+      "o": "venta-academy",
+      "s": "",
+      "n": "LinkedIn de trifuerza.co agregado el 4-nov (regla: juanda y trifuerza.co también van a LinkedIn y TikTok).",
+      "cara": "no"
+    }
+  ],
+  "aplazadas": [
+    {
+      "d": "2026-11-02",
+      "h": "19:00",
+      "c": "ctp",
+      "r": "ig",
+      "f": "reel",
+      "p": "N25",
+      "t": "Llega a tu celular (teaser)",
+      "e": "producir",
+      "n": "Aplazada a febrero de 2027 con el lanzamiento de Contrappto (2-nov-2026).",
+      "o": "uso-app"
     },
     {
       "d": "2026-11-22",
@@ -369,48 +1897,7 @@
       "p": "N17",
       "t": "Así llevamos Contrappto a App Store",
       "e": "evento",
-      "n": "Depende de la revisión de las tiendas."
-    },
-    {
-      "d": "2026-11-24",
-      "h": "12:00",
-      "c": "jd",
-      "r": "ig",
-      "f": "reel",
-      "p": "N06",
-      "t": "¿Se podría patentar Némesis en Colombia?",
-      "e": "producir"
-    },
-    {
-      "d": "2026-11-24",
-      "h": "19:00",
-      "c": "ctp",
-      "r": "ig",
-      "f": "carrusel",
-      "p": "N32",
-      "t": "5 contratos que todo freelancer debería tener",
-      "e": "carrusel"
-    },
-    {
-      "d": "2026-11-25",
-      "h": "19:00",
-      "c": "tf",
-      "r": "ig",
-      "f": "carrusel",
-      "p": "N18",
-      "t": "Cómo cotizamos software por puntos",
-      "e": "carrusel"
-    },
-    {
-      "d": "2026-11-26",
-      "h": "19:00",
-      "c": "ctp",
-      "r": "ig",
-      "f": "reel",
-      "p": "N29",
-      "t": "¿Tienes contrato por escrito? (calle)",
-      "e": "evento",
-      "n": "Salidas a la calle 17–28 nov."
+      "n": "Aplazada a febrero de 2027 con el lanzamiento de Contrappto (2-nov-2026)."
     },
     {
       "d": "2026-11-27",
@@ -421,18 +1908,8 @@
       "p": "N35",
       "t": "Tráete tu contrato de ChatGPT y fírmalo aquí",
       "e": "evento",
-      "n": "Tras la aprobación de las tiendas."
-    },
-    {
-      "d": "2026-11-28",
-      "h": "12:00",
-      "c": "ctp",
-      "r": "ig",
-      "f": "reel",
-      "p": "N30",
-      "t": "Las charlas en universidades",
-      "e": "evento",
-      "n": "Recortes de las charlas 3–13 nov."
+      "n": "Aplazada a febrero de 2027 con el lanzamiento de Contrappto (2-nov-2026).",
+      "o": "uso-app"
     },
     {
       "d": "2026-11-30",
@@ -443,7 +1920,199 @@
       "p": "N27",
       "t": "Ya está en las tiendas",
       "e": "evento",
-      "n": "Día del lanzamiento real."
+      "n": "Aplazada a febrero de 2027 con el lanzamiento de Contrappto (2-nov-2026).",
+      "o": "uso-app"
+    }
+  ],
+  "estrategia": {
+    "eje": "Noviembre construye audiencia con piezas útiles y de arte, y la convierte en correos con los dos cursos gratis de Academy. Black Friday (27) es para los cursos gratis. La preventa de «Crea tu primera app con IA» pasa a enero y el curso se dicta en febrero. trifuerza.co vende desarrollo de apps, IA y videojuegos; Contrappto calienta la lista de espera de febrero. Trifuerza Legal, en pausa.",
+    "porque": [
+      "juanda es la puerta de todo: si crece, crecen las demás. Por eso lleva el 70 % de alcance (Derecho que nadie te explica y ¿Copia u homenaje?) y en LinkedIn la serie Hazlo mejor.",
+      "Un curso gratis convierte seguidores en correos. Esa lista es a la que se le vende la preventa de enero.",
+      "Black Friday es la fecha en que más gente sale a buscar ofertas: ahí la oferta es «gratis», para llenar la lista antes de diciembre.",
+      "Contrappto no se lanza hasta febrero: en noviembre no se pide descargar, se pide unirse a la lista."
+    ],
+    "fechas": [
+      {
+        "d": "2026-11-04",
+        "t": "Arranque sin cámara",
+        "x": "Salen N01 y, el sábado, N02. Lo que ya está listo sostiene la primera semana mientras te grabas."
+      },
+      {
+        "d": "2026-11-05",
+        "t": "Hazlo mejor en LinkedIn",
+        "x": "Primer video tuyo hablando (HM1). Uno cada lunes o jueves hasta el 30."
+      },
+      {
+        "d": "2026-11-10",
+        "t": "Abre el curso gratis de lectura estratégica",
+        "x": "Tráiler en trifuerza.co y stories puente en juanda. Primeros correos."
+      },
+      {
+        "d": "2026-11-11",
+        "t": "Legal design 1",
+        "x": "Arranca la serie de tres antes de tu clase del 18 en el Rosario. Kafka sale entre medio, el viernes 13."
+      },
+      {
+        "d": "2026-11-14",
+        "t": "Puente festivo (14–16)",
+        "x": "Menos gente conectada: nada fuerte ese fin de semana."
+      },
+      {
+        "d": "2026-11-18",
+        "t": "Clase de legal design en el Rosario",
+        "x": "Legal design 2 sale la víspera. Ahí grabas el 3, hablando en clase."
+      },
+      {
+        "d": "2026-11-24",
+        "t": "Abre el curso gratis de métodos de estudio",
+        "x": "Segundo curso gratis: más correos justo antes de Black Friday."
+      },
+      {
+        "d": "2026-11-26",
+        "t": "Webinar «Nociones contractuales básicas»",
+        "x": "Recordatorio el 25 en Contrappto."
+      },
+      {
+        "d": "2026-11-27",
+        "t": "Black Friday: los cursos gratis",
+        "x": "Métodos de estudio y Lectura estratégica, gratis. Correos para la preventa de enero."
+      }
+    ]
+  },
+  "pausa": [
+    {
+      "d": "2026-11-05",
+      "h": "07:00",
+      "c": "tf",
+      "r": "li",
+      "f": "video",
+      "p": "N09",
+      "t": "El abogado que refresca la página a las 11 de la noche",
+      "e": "producir",
+      "o": "venta-technology",
+      "s": "lo-que-estoy-construyendo",
+      "n": "En pausa (2-nov-2026): Trifuerza Legal no se promociona; la Rama Judicial bloquea muchas consultas. Posible producto enterprise más adelante."
+    },
+    {
+      "d": "2026-11-05",
+      "h": "19:00",
+      "c": "tf",
+      "r": "ig",
+      "f": "reel",
+      "p": "N09",
+      "t": "El abogado que refresca la página a las 11 de la noche",
+      "e": "producir",
+      "n": "En pausa (2-nov-2026): Trifuerza Legal no se promociona; la Rama Judicial bloquea muchas consultas. Posible producto enterprise más adelante.",
+      "o": "venta-technology",
+      "s": "lo-que-estoy-construyendo",
+      "x": [
+        "tt"
+      ]
+    },
+    {
+      "d": "2026-11-10",
+      "h": "19:00",
+      "c": "tf",
+      "r": "ig",
+      "f": "reel",
+      "p": "N10",
+      "t": "POV: te enteraste del auto tres días después",
+      "e": "producir",
+      "o": "venta-technology",
+      "s": "lo-que-estoy-construyendo",
+      "x": [
+        "tt"
+      ],
+      "n": "En pausa (2-nov-2026): Trifuerza Legal no se promociona; la Rama Judicial bloquea muchas consultas. Posible producto enterprise más adelante."
+    },
+    {
+      "d": "2026-11-13",
+      "h": "19:00",
+      "c": "tf",
+      "r": "ig",
+      "f": "reel",
+      "p": "N11",
+      "t": "El practicante contra la alerta",
+      "e": "producir",
+      "o": "venta-technology",
+      "s": "lo-que-estoy-construyendo",
+      "x": [
+        "tt"
+      ],
+      "n": "En pausa (2-nov-2026): Trifuerza Legal no se promociona; la Rama Judicial bloquea muchas consultas. Posible producto enterprise más adelante."
+    },
+    {
+      "d": "2026-11-14",
+      "h": "10:00",
+      "c": "jd",
+      "r": "ig",
+      "f": "reel",
+      "p": "jd-alertas",
+      "t": "Le conecté una IA a mis alertas judiciales",
+      "e": "producir",
+      "o": "seguidores",
+      "s": "lo-que-estoy-construyendo",
+      "n": "En pausa (2-nov-2026): Trifuerza Legal no se promociona; la Rama Judicial bloquea muchas consultas. Posible producto enterprise más adelante.",
+      "x": [
+        "tt"
+      ],
+      "cara": "habla"
+    },
+    {
+      "d": "2026-11-17",
+      "h": "07:00",
+      "c": "tf",
+      "r": "li",
+      "f": "video",
+      "p": "N12",
+      "t": "Pongo el radicado y me avisa",
+      "e": "producir",
+      "o": "venta-technology",
+      "s": "lo-que-estoy-construyendo",
+      "n": "En pausa (2-nov-2026): Trifuerza Legal no se promociona; la Rama Judicial bloquea muchas consultas. Posible producto enterprise más adelante."
+    },
+    {
+      "d": "2026-11-17",
+      "h": "19:00",
+      "c": "tf",
+      "r": "ig",
+      "f": "reel",
+      "p": "N12",
+      "t": "Pongo el radicado y me avisa",
+      "e": "producir",
+      "o": "venta-technology",
+      "s": "lo-que-estoy-construyendo",
+      "x": [
+        "tt"
+      ],
+      "n": "En pausa (2-nov-2026): Trifuerza Legal no se promociona; la Rama Judicial bloquea muchas consultas. Posible producto enterprise más adelante."
+    },
+    {
+      "d": "2026-11-19",
+      "h": "07:00",
+      "c": "tf",
+      "r": "li",
+      "f": "carrusel",
+      "p": "N13",
+      "t": "¿Cuántas horas al mes pierdes revisando procesos?",
+      "e": "carrusel",
+      "o": "venta-technology",
+      "s": "lo-que-estoy-construyendo",
+      "n": "En pausa (2-nov-2026): Trifuerza Legal no se promociona; la Rama Judicial bloquea muchas consultas. Posible producto enterprise más adelante."
+    },
+    {
+      "d": "2026-11-19",
+      "h": "12:00",
+      "c": "tf",
+      "r": "ig",
+      "f": "carrusel",
+      "p": "N13",
+      "t": "¿Cuántas horas al mes pierdes revisando procesos?",
+      "e": "carrusel",
+      "o": "venta-technology",
+      "s": "lo-que-estoy-construyendo",
+      "n": "En pausa (2-nov-2026): Trifuerza Legal no se promociona; la Rama Judicial bloquea muchas consultas. Posible producto enterprise más adelante."
     }
   ]
 }

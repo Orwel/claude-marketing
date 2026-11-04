@@ -1,0 +1,65 @@
+{
+  "_": "Cuentas que se siguen en el radar (uso interno: nunca se nombran en las piezas). Hay que agregarlas también en Metricool → Competidores de cada marca para que lleguen sus publicaciones. Al 2-nov-2026 Metricool no tiene ningún competidor cargado (0 filas en «competitor reels»): el benchmarking se hizo con el perfil público y el embed de cada publicación. Análisis: docs/radar/benchmarking-2026-11.md.",
+  "cuentas": [
+    {
+      "red": "instagram",
+      "usuario": "feuxui",
+      "porque": "Formato ganador: cara 1–2 s + pantalla que se arregla + 3 verbos + «Comenta PALABRA». Portadas editoriales. Oct-2026: el error común suelto («centrar texto», 86,8 mil vistas) rinde 20× más que su reto diario «Día N/30» (~1,1–1,4 mil).",
+      "marcas": ["juanda", "trifuerza", "contrappto"]
+    },
+    {
+      "red": "instagram",
+      "usuario": "midu.dev",
+      "porque": "Educación técnica: listas guardables y noticias con cifra y 3D. Oct-2026: la noticia urgente de seguridad o caídas es la que más vistas trae; «Deja la palabra X» trae miles de comentarios pero no más vistas.",
+      "marcas": ["juanda", "trifuerza", "contrappto"]
+    },
+    {
+      "red": "instagram",
+      "usuario": "freddiervega",
+      "porque": "Pedida por Juan David (CEO de Platzi). Opinión fuerte sobre IA y educación, preguntas abiertas al público y rarezas personales; su mejor reel del periodo es una colaboración con la cuenta de la empresa («No escriban con IA»).",
+      "marcas": ["juanda", "trifuerza"]
+    },
+    {
+      "red": "instagram",
+      "usuario": "imagineapps.co",
+      "porque": "Pedida por Juan David. Fábrica de software colombiana, el competidor más directo de Trifuerza Technology. Sirve sobre todo como ejemplo de lo que no funciona: consejos corporativos de IA con «escríbenos» (44–160 vistas); su hit fijado es humor de oficina.",
+      "marcas": ["trifuerza"]
+    },
+    {
+      "red": "instagram",
+      "usuario": "nicolasimagine",
+      "porque": "Pedida por Juan David (Nicolás Rojas, fundador de Imagine Apps y CEO de Dapta). Fundador que publica en colaboración con su producto: resumen semanal de IA, reto con cifra («agente en 30 s por $100») y humor de oficina.",
+      "marcas": ["juanda", "trifuerza"]
+    },
+    {
+      "red": "instagram",
+      "usuario": "dotcsv",
+      "porque": "Divulgador de IA en español. Reels poco frecuentes, de análisis de la noticia; su mejor reel es una demo donde él mismo experimenta con la herramienta.",
+      "marcas": ["juanda", "trifuerza"]
+    },
+    {
+      "red": "instagram",
+      "usuario": "arseniomartinezabogado",
+      "porque": "Abogado divulgador (España). Casos reales contados y sketches actuados de la vida cotidiana: sus dos reels fijados de sketch pasan de 0,9 y 1,5 millones de vistas. Referencia de formato para juanda y para los casos de la vida real de Contrappto.",
+      "marcas": ["juanda", "contrappto"]
+    },
+    {
+      "red": "instagram",
+      "usuario": "lemontech_latam",
+      "porque": "Pedida por Juan David: legaltech #1 de LATAM según su bio, «hablan de cambiar la gestión contractual». Le habla a gerencias legales y firmas. Lo que más rinde es cultura de equipo; producto y eventos rinden por debajo de su mediana.",
+      "marcas": ["contrappto"]
+    },
+    {
+      "red": "instagram",
+      "usuario": "legalitas_abogados",
+      "porque": "Legaltech de asesoría para familias, autónomos y pymes (España): el público más parecido al de Contrappto. Pregunta del día a día + «¿A o B? No son lo mismo» + coyuntura con «guárdalo por si acaso».",
+      "marcas": ["contrappto", "juanda"]
+    },
+    {
+      "red": "instagram",
+      "usuario": "legalario",
+      "porque": "Firma electrónica y CLM en México. Ejemplo de lo que no funciona: catálogo de producto en posts estáticos, casi sin interacción.",
+      "marcas": ["contrappto"]
+    }
+  ]
+}

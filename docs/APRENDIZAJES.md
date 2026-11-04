@@ -1018,3 +1018,239 @@ Videos: IMG_3770, IMG_3772 e IMG_3776 de octubre (iPhone). Salieron `la-ia-que-n
 - Pexels, Pixabay, Sonniss, loc.gov y Rawpixel bloquean la descarga automática (Cloudflare): no se esquiva; se baja a mano.
   Videezy pide captcha tras unas 15 descargas y pide crédito «Videezy.com».
 - Kevin MacLeod está en Content ID de YouTube: crédito siempre en el copy.
+
+### 2-nov-2026 · N02 hecho y N01 v3 (qué pidió Juan David)
+- **Portadas contextuales, nunca la plantilla de papel para todo.** «La portada debe ser adaptada a cada video, a su
+  estilo… que la gente lo vea en el feed y diga *tengo que ver esto*». N02: pantalla de título del juego (el gigante
+  con los ojos encendidos y la cicatriz, «EL VILLANO / que te recuerda», ▶ PRESS START), `PortadaNemesis`. N01: la
+  ciudad con la valla anunciando el título y el sello PATENTADO, `PortadaCiudad`. Ambas dentro del recorte 3:4 (y 240–1680).
+- **Lo dibujado a mano se ve pobre al lado del banco de assets:** «se ve muy 8 bits, poco elaborado, la letra, el
+  fondo». N01 v3: la valla es una capa HD (`remotion/n01/VallaHD.jsx`: Space Grotesk + Fraunces itálica, resortes,
+  retícula LED) entre dos lienzos pixel (fondo y frente); neón animado de karsiori (CC0) en los edificios; el carro
+  dibujado se cambió por el aerodeslizador de Warped Vehicles (CC0, reducido a la mitad con BOX + 24 colores);
+  se quitaron las pancartas de Warped City que parpadeaban «como glitch».
+- **Figura: «enclenque» no significa «gorda», significa «poco artística».** La silueta engrosada se rechazó; se usó el
+  Punk de Free 3 Cyberpunk Sprites (CraftPix, uso comercial) animado, al doble. Regla: personajes de packs de autor
+  antes que dibujarlos a mano.
+- **Un vehículo o efecto grande solo en planos generales:** de cerca tapaba la valla y el subtítulo.
+- **En planos ×2, lo importante de la valla va entre y 30 y 720 (de 1016):** debajo lo tapa el subtítulo.
+- **Whisper corre frases enteras** (N02: «Némesis» 0,5 s tarde): anclar a `silencedetect` antes de usar los tiempos
+  para efectos o silencios de música.
+- **El render de Remotion sale yuvj420p:** recodificar a yuv420p bt709 antes de `validar.js`.
+- Pack mirado y descartado para N01: LunaScript «Cyberpunk Civilians» ($1,79): 20 personajes quietos de frente, sin
+  animación; sirve para retratos o multitudes, no para un personaje que actúa.
+- **Qué ya se publicó (2-nov-2026):** el calendario de octubre y su lista `paraNoviembre` no reflejan lo subido: el SOFA, el
+  LinkedIn de octubre, V10/V12 de Trifuerza y los carruseles ya estaban publicados y casi se repiten en noviembre. Antes de
+  meter material «ya producido» en una parrilla, confirmar con Juan David o con el estado de la página del calendario
+  (colección `publicaciones`) o con Metricool qué salió de verdad.
+
+### 2-nov-2026 (tarde) · N02 v3, N03 en 3D y lo que pidió Juan David
+- **N01 v3 «super aprobado»: ese es el nivel.** Ciudad pixel + valla HD + personaje y vehículo de packs de autor.
+- **N02: «los muñequitos y sus animaciones».** Se cambiaron por sprites del banco: caballero de aamatniekss (correr,
+  reposo, golpe, muerte), Goblin de Luiz Melo (correr, atacar, reposo; en espejo y ampliado a saltos al subir de
+  rango) y tres viajeros de Luiz Melo en reposo. **Bug:** `hoja()` usaba `Math.min(n-1, k)` y el caballero corría con
+  las piernas quietas (siempre el último cuadro); el bucle es `k % n` y solo la muerte se limita al llamar.
+- **Lo que más le gustó de N02:** «cuando para (la música) y acerca al villano del fondo, y cómo cierra los ojos».
+  En v3 se agregó un plano ×2 al gigante justo cuando se corta la música en NÉMESIS.
+- **N03 = giro a 3D (diorama de juguete en mundo abierto).** Pidió «otro color de fondo, mundo abierto gigante y
+  precioso, buenas transiciones si el personaje va a hacer algo». Técnica en `remotion/n03/MundoAbierto.jsx`:
+  - Modelos glTF del banco (KayKit, Quaternius) con `useGLTF`; animación determinista con `AnimationMixer`
+    (`accion.time = s` y `mezclador.update(0)` por cuadro) y **mezcla de 0,35 s** entre clips.
+  - **Escala de modelos con esqueleto:** `Box3.setFromObject(obj, true)` (preciso); sin eso los animales de
+    Quaternius (armadura ×100) quedaban invisibles.
+  - **Vertical = campo horizontal de ~17°:** dos personajes lado a lado no caben; la captura se resolvió con plano
+    por encima del hombro (el explorador delante, el zorro al fondo). Nada de giro automático de cámara.
+  - La textura de las losetas KayKit sale amarillo oliva con luz cálida: teñir el material (`color` multiplica).
+  - Titulares sobre cielo con nubes: tinta oscura con halo claro (el blanco se pierde en las nubes).
+  - Render con `--gl=angle --concurrency=2`; ~25 min para 37 s.
+- **Siguiente en cola (pausado por pedido):** «Cómo piensa una IA» con estilo «Luz» (pin #1): voz, mezcla
+  (Echoes of Time, silencio 32,4–34,2) y `remotion/ia/Luz.jsx` hechos; falta revisar la figura nueva y renderizar.
+
+## Zoom infinito (jd-website, 2-nov-2026)
+- Le encantó el estilo («mk divino… me emociono»). Lo guarda para más adelante; v1, v2 y v3 en
+  `Redes sociales/Noviembre/Edited/Guardados/`, código en `remotion/zoom/` (entrada propia, public liviano).
+- Rótulos de su vida: no interpretar por él. «Personero: me tocó representar a otros» estaba mal: «fui elegido
+  democráticamente». Usar sus palabras.
+- Cierre: prefirió el del mundo de videojuego con «trifuerza.co» antes que el bucle a la ciudad; le gusta que el
+  cierre no sea «tan específico».
+- Instagram tapa arriba (~250 px), abajo (desde ~1500) y la franja derecha (~140 px): el texto va entre 270 y 1500.
+- Con renders largos, una imagen grande puede fallar al cargar (ERR_CONNECTION_RESET) y deja una franja en blanco:
+  revisar la tira de cuadros del MP4 y re-renderizar con `--concurrency=4`.
+
+### 2-nov-2026 (noche) · primer radar con Metricool Pro y la parrilla
+- **Lo que más alcance da en juanda: los videojuegos y cosas que él construyó** (mediana 1.331 contra 366 de la cuenta).
+  La opinión de IA en Instagram cae por fatiga (7 iguales en 10 días); en el TikTok de trifuerza.co rinde 4–5 veces más.
+  Las promos de curso con cara de anuncio: 5–6 % de retención a 3 s. Detalle: `docs/radar/2026-11-02.md`.
+- **Metricool + Drive desde Claude:** con Drive vinculado, `createScheduledPost` sigue devolviendo «Failed to normalize
+  media» con enlaces de Drive privados. Hace falta compartir por enlace el archivo o que él lo suba.
+- **Un solo artefacto por cosa:** ya existía «Videos» (https://claude.ai/artifact/XHkQBZiBWUi7obCSngfLQb, con guiones,
+  teleprompter y estados en su base de datos). Antes de publicar una página nueva, actualizar la existente.
+- **Estrategia incremental (2-nov-2026):** la de octubre no funcionó (opinión de IA a cámara con «Comenta CLASE», promos
+  con cara de anuncio). Cada mes se construye sobre los datos del anterior: no se repiten temas ya subidos («Cómo piensa
+  una IA» se cambió por un video práctico de artefactos) y lo que ganó (lo que él construye, funcionando) se repite con
+  algo nuevo. Reglas de guion en `docs/GUIONES.md`.
+- **Trifuerza Legal en pausa:** no se promociona; las piezas de monitoreo judicial y jd-alertas quedaron en `pausa`.
+
+### 2-nov-2026 (noche) · trifuerza.co Technology: tres piezas sin cámara, cada una con su estilo
+- **Ningún guion deja huecos para Juan David** («no me dejes cosas para que complete yo, cambia tema o video»). Si falta
+  un dato, se cambia el enfoque: N16 (Némesis con puntos por llenar) salió y entró `tf-senales-app`.
+- **Revisar si el tema ya salió el mes pasado:** N18 «cómo cotizamos por puntos» repetía el carrusel c24 de octubre; se
+  cambió al punto de vista del que recibe la cotización (5 preguntas).
+- **La plantilla Animado ya no alcanza la vara** (GUIONES §6): dos reels hechos con ella se veían iguales. Cada pieza
+  va en `remotion/tf/` con su mundo: cuaderno de pedidos con Open Peeps (`Senales.jsx`), anillo de vidrio 3D con
+  grabaciones reales (`Vidrio.jsx`), cotización que se corrige (`Cotizacion.jsx`). Entrega: `node src/tf/entregar.mjs`.
+- **Lottie del banco:** se recolorean cambiando `c.k` en el JSON. El resaltador (1920×1080) no cae bajo las palabras:
+  mejor un trazo SVG propio con clip que avanza. El de firma trae una imagen dentro y no sirve tal cual.
+- **Video dentro de 3D CSS:** con el disco ocupado, extraer cuadros de un MP4 1080×1920 largo falló («Failed to fetch
+  …proxy»). Recortar antes cada tramo a clips cortos todo-intra (`-g 1`) y montarlos solo en su tramo; fuera, su JPG.
+- `Firma` de la plantilla Animado salía estirada (el flex de AbsoluteFill la estiraba): `alignItems: 'flex-start'`.
+
+### 2-nov-2026 (noche) · N04–N06 producidos, CTA pegado a N01–N03 y Kafka, N02 corregido
+- **CTA sin relocutar:** cada línea «…sígueme» se generó con la voz oficial (`eleven_v4`, `[serious, calm]`) con la
+  frase anterior delante y se cortó en el silencio (`silencedetect`); se igualó al RMS de la narración y se pegó con
+  0,25 s de aire (`trabajo/voces-nov/armar.py`). La mezcla se rehízo con `mezcla.mjs` y los mismos `--desde` y
+  `--silencio`, que se recuperan de la mezcla vieja correlacionando contra la canción (`trabajo/voces-nov/desde.py`).
+- **No volver a renderizar lo aprobado:** N03 (3D, 25 min) y Kafka solo renderizaron la cola nueva (`--frames`) y se
+  unieron al render anterior con `trim` + `concat` en una sola recodificación. N01 y N02 (canvas) sí completos.
+- **Frase corregida en N02:** la toma nueva medía lo mismo que el hueco (silencio antes + frase): se empalmó sin
+  mover ningún tiempo del video. Si es más larga, comer primero la pausa antes de acelerar.
+- **Entrada propia `remotion/copia/index.jsx`** (N01–N06 y Kafka) con public liviano `trabajo/copia/public` (≈ 70 MB):
+  no se toca Root.jsx y el bundle no copia los 9 GB. Bundlear a otra carpeta si hay un render usando la anterior.
+- **N04 (3D KayKit City):** en vertical, cámara alta y casi cenital (fov 38); de cerca los edificios tapan el carro.
+  Una flecha que «mira a la cámara» se ve de canto (una barra): mejor una vuelta entera, o que apunte hacia el texto.
+  `rumbo()` detenido debe conservar el último rumbo: si vuelve al valor por defecto, el carro queda atravesado.
+- **N05 (mazmorra 0x72):** oscuridad = capa negra al 95 % con hueco radial (`destination-out`) + tinte cálido en modo
+  pantalla; al 98,5 % y con radio 50 quedaba un círculo en un cuadro vacío. Lo que se narra tiene que caer dentro
+  del radio de la antorcha (relieves y ogro pegados al pasillo). Ojo: un comentario `//` en la misma línea se come
+  el resto de la línea (se perdió el `fillRect` de la oscuridad).
+- **N06 reutiliza N02** exportando sus piezas de dibujo (`MUNDO_N02` en `Nemesis.jsx`): no se copian funciones.
+- Los renders de Remotion fallaron a veces por `delayRender` de imágenes con la máquina cargada (varias sesiones
+  renderizando): `--timeout=120000` lo resolvió.
+- **Stories y carruseles de Academy (2-nov-2026):** la plantilla Carrusel con el texto cambiado no pasa la vara; cada
+  curso tiene su mundo (cuarto de estudio de noche, `remotion/academy/`). No reutilizar una composición entre stories
+  de la misma semana. En `ffmpeg concat`, rutas relativas a la lista, nunca `/c/…`. `public/academy/` va en
+  `.gitignore` (pack de Bongseng sin redistribución).
+- **Contrappto ya está en la web:** CTA uno de tres según la pieza («Síguenos…», «Escríbenos», «Entra a contrappto.com
+  y haz tu contrato gratis»). Nunca «lista de espera».
+- **«Nunca el mismo video dos veces» (vara del 2-nov-2026):** N06 primero reusó la escena y el movimiento de N02 (como
+  decía su guion) y se rehízo como póster de px411. Compartir el personaje está bien; compartir escena y cámara, no.
+  Cada episodio parte de una ficha de su pin (`piezas/2026-11/guiones/n04-n06-fichas.md`) antes de animar.
+
+- **Press Start 2P no trae mayúsculas con tilde** («SÍ», «DÍAS» salían con í minúscula): la fuente pixel solo va con
+  textos sin tildes (la Ñ sí la trae); lo demás en Inter.
+- **Viñeta de Contrappto (2-nov-2026):** un `<image>` de SVG no lo espera Remotion; con el equipo saturado, N21 salió sin
+  el ícono de la marca. Toda imagen va con `ImagenSvg` (`remotion/vineta/objetos.jsx`), que retiene el cuadro hasta
+  `onLoad`. Los peeps a tiza dejan el cuerpo transparente: sin la silueta del color del papel, una puerta detrás
+  se veía a través del personaje. Cuando se regenera una pieza con su script, el cierre vuelve al de ese script:
+  después hay que correr otra vez `trabajo/ctp/cierre_tres.py <slug>` (le pasó a N24). En el carrusel, el `pie` y
+  el `texto` de la última lámina chocan: se usa uno de los dos.
+- **El CTA pegado se cortó en la pausa:** la voz clonada dice «…lo que juegas, [pausa] sígueme» y el primer empalme
+  cortó en esa pausa: N01, N02, N03 y Kafka salieron sin la palabra «sígueme». Se tomó la toma hasta el final y se
+  rehízo todo. Para verificar, transcribir el MP4 **entregado** (no la voz suelta) en el último tramo:
+  `node trabajo/copia/verifica/oir.mjs <mp4> <desde> <dura> <nombre>`. Whisper inventa frases en clips de 2 s
+  («hasta la próxima»): usar 3–4 s.
+- **jd-mercader:** estilo 2 «Collage de archivo vivo» por primera vez (papeles que caen y se pegan, máquina de escribir,
+  sellos). La textura «Tape» de ambientCG es un rollo, no un pedazo: la cinta se hace con CSS (`clipPath` rasgado).
+
+- **«Menos muñequitos, más producto» (2-nov, trifuerza.co):** el cuaderno con Open Peeps no gustó para Technology.
+  Lo que quiere: las apps, la IA y los videojuegos **por dentro**, en el celular o el portátil, con las funciones
+  saliendo en capas (como `ctp-capas`). Hay producto real de sobra publicado en trifuerza.co (Archipiélago jurídico,
+  Panadería Tycoon, Ruta del suministro, la plataforma de Academy) y civitapp.org: se graba con `src/tf/grabar.mjs`
+  y se monta con `remotion/tf/Producto.jsx` + `productos.js`.
+- **Grabar los juegos 3D de trifuerza.co:** van en iframes (`/juegos/legal/<juego>/index.html`): se graban directo
+  desde ese HTML. Chrome necesita `--ignore-gpu-blocklist --use-angle=d3d11` y una ventana de 960×600; aun así, con
+  otras sesiones renderizando, los mundos pesados bajan a 1–5 cuadros/s (Vuelo de Divisas, Día de trasteo y Contrato
+  en holograma no salieron). Un clip a 5 cuadros/s se salva con `minterpolate=fps=30:mi_mode=mci`.
+- Los elementos con `position: fixed` tienen `offsetParent` nulo: para saber si se ven, `getClientRects().length`.
+- Locución de lo que él dice a cámara: marcas `/ // /// *palabra* ↗ ↘ °` (modelo `juanda-locucion.md`) y el CTA
+  siempre es comentario + «cotiza» o «sígueme», nunca solo comentario.
+- **Scripts de Node que llaman a `npx` en Windows:** `execFileSync('npx', …)` da ENOENT (es `npx.cmd`); usar `npx.cmd`
+  con `shell: true` (ver `trabajo/kafka-toma/armar.mjs`).
+- **Toma de su cara en un video narrado (Kafka):** se conserva el render original hasta el corte y solo se renderiza el
+  cierre (`kafka-cierre`); la toma se transcribe con Whisper para escribir sus palabras con sus tiempos reales.
+
+- **Contrappto, formato aprobado (2/3-nov-2026, «eso quedó del putas»):** caso narrado de 2–3 frases en tarjetas
+  (chat, correo, documento, fecha) → golpe en el giro con silencio de música → la app real en capas, cada capa al frente
+  cuando la voz la nombra, con insignia «Gratis» o «Plan Pro». Plantilla Capas en modo narrado; generador
+  `trabajo/ctp/historias.py` (una especificación por pieza) y render `trabajo/ctp/historias_render.sh`. Un solo MP4
+  vertical para IG, TikTok y LinkedIn; en LinkedIn solo cambia el copy («enlace en el primer comentario»).
+- **ElevenLabs lee «Contrappto» como «Contrapicto»:** en el texto que va a la voz se escribe «Contrapto» y
+  «contrapto punto com»; se comprueba con faster-whisper sin `initial_prompt` (con el prompt, whisper «corrige» y
+  oculta el error). Whisper a veces no transcribe la última frase corta de una toma: se alinea por silencios.
+- **Pantallas sin login:** la landing pública (contrappto.com) tiene maquetas oficiales con datos de ejemplo; se
+  capturan con `chrome-headless-shell --window-size=430,16000 --force-device-scale-factor=2 --screenshot` y se
+  recortan. Lo que carga al hacer scroll (motor de preguntas, catálogo) no sale así.
+- **Créditos de ElevenLabs:** la cuota de 40 000 se acabó la noche del 2-nov con unas 20 tomas narradas; antes de una
+  tanda grande, `estimate_only`.
+- **Créditos de ElevenLabs (3-nov-2026, madrugada):** la producción de noviembre gastó casi los 40.000 créditos del mes
+  (quedaron ~500). Antes de una tanda grande, revisar el saldo y priorizar las piezas por fecha; las voces que faltan
+  se dejan escritas en el kit y marcadas «falta voz: créditos» para locutarlas de una vez al recargar.
+
+### 3-nov-2026 (madrugada) · trifuerza.co: voz en todo y gameplay fluido
+- **Todo video lleva voz** (Juan David). Las piezas de producto se narran en una toma con la voz oficial y `[long pause]`
+  entre frases; `node src/tf/voz.mjs <id> <frases>` encuentra el inicio de cada frase (los silencios más largos) y
+  `Producto.jsx` estira tramos y capas a la voz. Los créditos de ElevenLabs se acabaron con la primera (40.000 de cuota);
+  las demás quedaron con el texto en su kit y «FALTA VOZ» en el calendario.
+- **Gameplay trabado:** el screencast de DevTools en mundos 3D da cuadros irregulares (130 únicos de 1.199). Lo que
+  funcionó: grabar la ventana con ffmpeg `gdigrab` (región del escritorio) a 30 cps, con Chrome a
+  `--force-device-scale-factor=1` y ventana chica (720×450: la GPU es una Radeon integrada), la ventana fijada encima
+  y reafirmada cada 1,5 s (`src/tf/encima.ps1`, la app de Claude se adelantaba y quedaba grabada). Revisar siempre con
+  `ffmpeg -vf mpdecimate`. Luego ×1,35 (`setpts`) o `mpdecimate,setpts=N/25/TB` si el juego da ~19 cps.
+- `--window-size` va en pixeles físicos (pantalla al 125 %): si la ventana es más chica que la región, se graba lo de al lado.
+- El tope de una grabación se cuenta desde que empieza a grabar: los mundos 3D tardan en cargar.
+- Un reemplazo de texto con `replace` cayó dentro de la función equivocada y dejó una recursión infinita que rompió el
+  paquete de Root para todas las sesiones: después de tocar `remotion/`, probar `npx remotion compositions remotion/index.js`.
+- loudnorm lineal a −1 dBTP a veces deja el pico en −0,7 (civitapp). `entregar.mjs` ahora pasa por `alimiter=limit=0.75:level=false` (0,84 no alcanzó: el AAC dejó −0,4 en videojuegos).
+  Ojo: `alimiter` sin `level=false` sube la ganancia sola (dio −15 LUFS y pico −0,1).
+- Rediseño por referencia (3-nov): archipiélago mg040, panadería mg084, señales mg070, civitapp ad11, ruta mg050,
+  academia mg072, holograma ad12. Antes de escoger, leer `piezas/2026-11/guiones/ctp-referencias.md`: ruta salió primero
+  con mg065, holograma con mg056 y civitapp con mg016, y las tres ya eran de Contrappto (comparten público). Hubo que rehacerlas.
+- Dos `remotion bundle` a la vez chocan en `node_modules/.cache/webpack` (EPERM): no empaquetar fotogramas de prueba
+  mientras `entregar.mjs` está empaquetando. Y mover la versión vieja a `_reemplazados` antes de renderizar.
+## Proxies del artefacto Videos (3-nov-2026)
+- La hora de modificación de los MP4 en G:\ (Drive para escritorio) no sirve para saber si un render es nuevo: salía más
+  vieja que la del proxy aunque el archivo hubiera cambiado. Para saber si hay que volver a subir, regenerar el proxy
+  y compararlo por md5 con el anterior (`src/calendario/proxies.sh` usa la hora: forzar cuando una sesión avise).
+- El artefacto Videos depende del reset de claude.ai (`[hidden]{display:none!important}`): al publicar con un
+  esqueleto propio sin esa regla, el teleprompter quedó abierto tapando todo y «Cerrar» no hacía nada. Ahora
+  `src/calendario/videos.mjs` emite el documento completo con ese reset; publicar siempre su salida tal cual.
+- **Portadas (revisión de Juan David, 3-nov-2026):** «tiene que dar ganas de abrir el video», con un gancho del tema
+  legible en miniatura; nunca un fotograma suelto. N02: el villano en plano cerrado, repintado un tono más claro para
+  que se despegue del cielo, y el sello PATENTADO. N04: el titular sobre una tarjeta oscura (sobre techos grises no se
+  leía). jd-mercader: el titular cuenta el caso («Firmó: si no pagaba, debía UNA LIBRA DE SU CARNE») y una tira deja la
+  pregunta abierta («¿Por qué nunca pudo cobrarla?»). Revisar siempre el recorte 3:4 a 150 px de ancho.
+
+- Norton 360 marca como «IDP.Generic» los scripts nuevos que lanzan otros programas (trabajo/ctp/portadas_venta.*) y
+  borra sus archivos intermedios: el render de portadas falla sin error claro. Es falso positivo; la solución es que
+  Juan David excluya la carpeta del repo en Norton, nunca esquivar el antivirus (3-nov-2026).
+- Metricool solo toma archivos de Drive compartidos con enlace (aunque Drive esté conectado). La carpeta Noviembre
+  quedó compartida con enlace el 3-nov-2026; los meses siguientes, compartir la carpeta del mes antes de programar.
+
+### 4-nov-2026 · Radar (confirmado dos semanas seguidas)
+- **Lo que construiste gana en juanda:** el videojuego del Claustro (1.331 de alcance, señal 28,5) y los juegos
+  colombianos del SOFA (676 y 671) son lo único que pasa 2× la mediana (320). La opinión de IA con «Comenta CLASE»
+  queda debajo en Instagram (254, señal 5,5) pero rinde 3–4× en el TikTok de trifuerza.co (1.262–1.365 vistas): la
+  opinión de IA va a TikTok primero.
+- **`tableros.mjs` guarda el mismo ícono de 44 KB** (mismo md5) para todos los pins desde el 2-nov: la descarga sin
+  sesión devuelve un marcador. Revisar el md5 antes de dar por buenos los pins nuevos.
+- Metricool: `competitors` y `competitor reels` siguen en 0 filas y Meta Ads sin campañas; el alcance de cuenta de
+  juanda (hasta 12.000 por día) no lo explican los reels (123–593).
+
+## 2026-11-04 · propuesta Pumba Aventura (estudio de video automatizado)
+
+- Fuente: `brochures/propuesta-pumba-estudio-video.html` (13 páginas, Trifuerza navy y naranja, rótulo TECHNOLOGY).
+  Vende el mismo estudio con el que Trifuerza produce sus cuentas: servidor siempre encendido, kit y plantillas,
+  flujo desde el celular, página de revisión, programación a las mejores horas, radar de los lunes y voz clonada
+  opcional. $1.500.000 sin IVA a nombre de Juan David + mantenimiento opcional $200.000/mes. Nada de Telegram
+  (lo excluyó él) ni nombres de proveedores: las suscripciones van como "a cargo del cliente", sin precios.
+- **La flecha ↗ del pie salía como fuente Type3** (no está en Inter estática: Chrome la tomaba de una fuente del
+  sistema). Se reemplazó por un SVG (`.flecha` + símbolo `i-ext`): 0 Type3. Revisar lo mismo en las propuestas
+  anteriores si se reimprimen (Dos Tierras tenía 2 Type3).
+- **Choque de clases:** un número de paso con clase `.n` dentro de un contenedor hacía que `.paso .n` también
+  pintara los chips `.chip.n` (salían como círculos o cajas naranjas). Los números de paso van con `.np`.
+- En mockups claros dentro de tarjetas oscuras, las burbujas de chat heredan la tinta clara de la página:
+  fijarles `color` de la app.
+- **v2 (mismo día):** Juan David pidió **nombrar Metricool** (publicación y programación; suscripción aparte que
+  paga el cliente y que puede costar más según el plan, sin precios) y **quitar la voz clonada** del alcance.
+  Excepción consciente a la regla de no nombrar proveedores: se nombra solo cuando él lo pide. La página de voz
+  pasó a "Así se trabaja desde la ruta" (consejos de grabación, día de viaje, ideas de series), sin funciones nuevas.
