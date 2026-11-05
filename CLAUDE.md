@@ -8,7 +8,10 @@ zonas 5, 5B, 7, 8 y la parrilla del mes). Plan de trabajo: zona 5B.
 - Lee `docs/HANDOFF.md` (arquitectura y decisiones) y `docs/APRENDIZAJES.md` (errores ya resueltos).
 - Para producir una pieza, sigue la skill `producir-pieza`. Para un video artístico narrado desde una referencia
   (Pinterest, Instagram, sin cara), la skill `video-artistico` y el catálogo `docs/ESTILOS.md`.
+- Benchmarking, tableros de Pinterest, qué nos funcionó y videos de la semana: skill `radar-redes` (corre los lunes).
 - Tono y restricciones de marca: `docs/TONO.md`.
+- Toda parrilla y todo guion siguen la línea estructural fija: `docs/LINEA-ESTRUCTURAL.md` (emoción primero,
+  «Compártelo y sígueme», historia con sticker, colaboraciones, metas por pieza).
 
 ## Reglas
 - Node ESM. Nombres, comentarios y logs en español; los comentarios explican el porqué.
