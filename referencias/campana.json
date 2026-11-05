@@ -1,0 +1,51 @@
+{
+  "_": "Objetivo de la campaña vigente y metas por cuenta. Lo llena Juan David (o se acuerda con él). La skill radar-redes juzga cada pieza contra el objetivo de su cuenta y de la pieza (`o` en el calendario). Ver docs/SERIES.md.",
+  "campana": "",
+  "desde": "",
+  "hasta": "",
+  "cuentas": [
+    "juanda",
+    "trifuerza",
+    "contrappto"
+  ],
+  "objetivos_por_cuenta": {
+    "juanda": {
+      "objetivo": "seguidores y autoridad",
+      "metricas": [
+        "seguidores ganados",
+        "compartidos",
+        "guardados",
+        "comentarios"
+      ],
+      "metas": {}
+    },
+    "trifuerza-academy": {
+      "objetivo": "vender cursos",
+      "metricas": [
+        "leads",
+        "inscritos",
+        "ventas",
+        "clics al curso"
+      ],
+      "metas": {}
+    },
+    "trifuerza-technology": {
+      "objetivo": "vender servicios tecnológicos y jurídicos",
+      "metricas": [
+        "cotizaciones",
+        "diagnósticos agendados",
+        "DMs comerciales"
+      ],
+      "metas": {}
+    },
+    "contrappto": {
+      "objetivo": "que usen la app",
+      "metricas": [
+        "descargas",
+        "registros",
+        "contratos creados"
+      ],
+      "metas": {}
+    }
+  }
+}
