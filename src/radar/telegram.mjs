@@ -43,16 +43,34 @@ const partes = textoSuelto ? [] : [
   seccion('ropuesta de videos'),
   seccion('auta propuesta'),
 ].filter(Boolean);
-// Telegram corta en 4.096 caracteres; texto plano para no pelear con el Markdown de Telegram.
-let texto = (textoSuelto ?? partes.join('\n\n')).replace(/\*\*/g, '').replace(/`/g, '');
-if (texto.length > 4000) texto = texto.slice(0, 3990) + '\n…';
-if (prueba) { console.log(texto); process.exit(0); }
+// Texto plano para no pelear con el Markdown de Telegram.
+const texto = (textoSuelto ?? partes.join('\n\n')).replace(/\*\*/g, '').replace(/`/g, '');
 
-const r = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
-  method: 'POST',
-  headers: { 'Content-Type': 'application/json' },
-  body: JSON.stringify({ chat_id: chat, text: texto, disable_web_page_preview: true }),
-});
-const j = await r.json();
-if (!j.ok) { console.error('Telegram rechazó el mensaje:', j.description); process.exit(1); }
-console.log(`Enviado a Telegram (${texto.length} caracteres).`);
+// Telegram corta cada mensaje en 4.096 caracteres. En vez de truncar (las noticias por PESTEL pasan de eso), se parte
+// en varios mensajes por párrafos, para que ningún bloque quede cortado a la mitad.
+const MAX = 3900;
+const trozos = [];
+let actual = '';
+for (const parrafo of texto.split(/\n{2,}/)) {
+  // Un párrafo suelto más largo que el máximo se corta por líneas (caso raro, pero no debe perderse).
+  const piezas = parrafo.length > MAX ? parrafo.match(new RegExp(`[\\s\\S]{1,${MAX}}(?=\\n|$)`, 'g')) ?? [parrafo.slice(0, MAX)] : [parrafo];
+  for (const p of piezas) {
+    if (actual && actual.length + p.length + 2 > MAX) { trozos.push(actual); actual = ''; }
+    actual = actual ? `${actual}\n\n${p}` : p;
+  }
+}
+if (actual) trozos.push(actual);
+// Numerar solo si son varios, para que en el celular se sepa que vienen más.
+const mensajes = trozos.length > 1 ? trozos.map((t, i) => `${t}\n\n(${i + 1}/${trozos.length})`) : trozos;
+if (prueba) { console.log(mensajes.join('\n\n——— corte ———\n\n')); process.exit(0); }
+
+for (const m of mensajes) {
+  const r = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ chat_id: chat, text: m, disable_web_page_preview: true }),
+  });
+  const j = await r.json();
+  if (!j.ok) { console.error('Telegram rechazó el mensaje:', j.description); process.exit(1); }
+}
+console.log(`Enviado a Telegram (${texto.length} caracteres en ${mensajes.length} mensaje${mensajes.length > 1 ? 's' : ''}).`);
