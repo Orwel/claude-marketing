@@ -18,7 +18,23 @@ Instagram: alcance 366, retención a 3 s del 24 %, señal (guardados + compartid
 clonada encima. La clonada va solo sobre ilustraciones y pantallas. En los videos mixtos él dice en cámara la frase de
 ese momento (gancho o cierre) y el resto lo narra la clonada.
 
-## 2. Cuerpo: 30–60 s, una sola idea
+## 1b. Emoción e intriga (objetivo: viralizar · datos del 5-nov-2026)
+Análisis completo en `docs/radar/retencion-2026-11-05.md`.
+- **La emoción va antes que el tema.** El primer segundo despierta una de estas emociones:
+  - **nostalgia:** «¿Te acuerdas de cuando se caía el internet…?» (36 % a 3 s y 42 compartidos por mil, el mejor del periodo);
+  - **dilema:** ¿apocalíptico u optimista? (40 %);
+  - **miedo con una persona concreta:** el abogado de las seis sentencias (38 %);
+  - **orgullo o identidad:** el videojuego del Rosario, los juegos colombianos;
+  - **sorpresa:** un dato que nadie sabía.
+
+  Abrir vendiendo («Una clase gratis», «Comenta CURSO») hunde la retención a 3 s al 6–9 %.
+- **Bucle abierto:** en los primeros 3 s queda una pregunta sin responder, y se cierra en los últimos 3. Cada 5–7 s llega una revelación pequeña: casi todos se van entre el segundo 5 y el 11.
+- **El compartido se escribe en el guion.** Antes de escribir, responder: ¿a quién se lo mandaría quien lo ve, y por qué? Sirven la identidad («así somos los que…»), el orgullo, la nostalgia y el dato que dan ganas de contar. Una idea abstracta retiene, pero no se comparte.
+- **Música y ritmo al servicio de la emoción:** tensión en el gancho, alivio en la revelación.
+- **Metas por pieza:** 3 s ≥ 35 %, vista promedio ≥ 40 % de la duración, ≥ 15 compartidos por mil alcanzados. Las mide el radar con Metricool (IGRE28, IGRE24 y IGRE21 entre IGRE11).
+
+## 2. Cuerpo: 20–30 s, una sola idea
+- **Anticipar lo que viene (retención):** en los primeros 3–5 s prometer algo concreto que llega más adelante («al final te digo quién ganó», «el tercero es el que nadie conoce», «y lo peor no es eso…») y cumplirlo; volver a abrir la curiosidad a la mitad (un segundo «pero…»). Listas numeradas («3 cosas…») para que se queden hasta la última. Nunca prometer algo que el video no entrega. (Juan David, 4-nov-2026.)
 - Una idea por video. Si hay dos, son dos videos.
 - Un giro a la mitad (el «pero…», el dato que nadie esperaba) para que no se vayan en el segundo 10.
 - Lo visual cuenta la historia con o sin sonido: cada frase dicha también va en pantalla.
@@ -26,9 +42,13 @@ ese momento (gancho o cierre) y el resto lo narra la clonada.
   describirlo. Etiquetar a la institución o persona que aparece, con su permiso: ellos lo comparten.
 
 ## 3. Llamado a la acción: siempre, dicho, escrito y repetido en el copy
-| Cuenta | Llamado |
+**Outro único (Juan David, 4-nov-2026, noche):** toda pieza, de cualquier cuenta, termina con **«Compártelo y sígueme»**,
+en la voz y en pantalla. El llamado de venta de la tabla va antes; esa es siempre la última frase. Ejemplo de Academy:
+«Llega gratis en diciembre. Compártelo y sígueme.»
+
+| Cuenta | Llamado (antes del outro) |
 |---|---|
-| juanda (Instagram) | Seguir **con un motivo de experto**: «Si te interesa el derecho bien diseñado, sígueme». Nunca «sígueme para la parte 2». |
+| juanda (Instagram) | **«Compártelo y sígueme»** (Juan David, 4-nov-2026): primero mandarlo a alguien concreto («Mándaselo a quien juega Nintendo»), luego seguir **con un motivo de experto** («Si te interesa el derecho bien diseñado, sígueme»). Compartir es la señal que más reparte un reel. Nunca «sígueme para la parte 2» ni «etiqueta a 3 amigos» (engagement bait). |
 | juanda / trifuerza.co (LinkedIn) | Tono profesional: «Si te sirve, sígueme», «Escríbeme por DM», enlace en el primer comentario. |
 | Trifuerza Academy | Vender el curso: «Inscríbete gratis, link en la bio». Si se usa «Comenta PALABRA», **una palabra distinta por curso** y no en todas las piezas («Comenta CLASE» repetido cansó). |
 | Trifuerza Technology | «Agenda un diagnóstico» de desarrollo. **Trifuerza Legal está en pausa desde el 2-nov-2026: no se promociona** (ni monitoreo judicial ni alertas). |

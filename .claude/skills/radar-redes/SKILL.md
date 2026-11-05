@@ -30,6 +30,8 @@ reporte en `docs/radar/`.
 
 Antes de llamar a una métrica, confirmar su nombre con `getAnalyticsAvailableMetrics` (Metricool los cambia).
 
+**Retención en reels de Instagram (5-nov-2026):** IGRE28 `reelsViewRate` es el % de vistas que pasó de 3 s, IGRE24 `averageWatchTime` es la vista promedio en segundos e IGRE21 son los compartidos. IGRE27 `retention` viene vacío en lo orgánico: el % del video visto se saca con IGRE24 dividido por la duración del MP4. IGRE20 `spend` > 0 marca lo pautado. Las columnas de la respuesta se leen por su metricName, no por el orden en que se pidieron. Las metas de cada pieza están en `docs/GUIONES.md` §1b, y cada radar compara contra ellas y contra `docs/radar/retencion-2026-11-05.md`.
+
 ## Pasos
 1. **Tableros:** correr `tableros.mjs`. Para cada pin nuevo, mirar la hoja (`…-analisis/hoja.png`) y anotar en
    `referencias/pinterest-<AAAA-MM>.md` qué técnica trae y para qué estilo o marca sirve. Si es un estilo nuevo, agregar
