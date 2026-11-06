@@ -1,7 +1,25 @@
 {
-  "_": "Piezas que Juan David pautó (casi siempre con «Promocionar» desde la app de Instagram, que a veces no aparece en Metricool → metaAds). Las rutinas de radar y de pauta las excluyen de la comparación orgánica: una pieza pautada se juzga solo por su costo por resultado. Agregar cada pauta nueva aquí.",
+  "_": "Piezas que Juan David pautó (casi siempre con «Promocionar» desde la app de Instagram, que a veces no aparece en Metricool → metaAds). Las rutinas de radar y de pauta las excluyen de la comparación orgánica: una pieza pautada se juzga solo por su costo por resultado y contra sus metas. Agregar cada pauta nueva aquí.",
   "pautadas": [
     { "cuenta": "juanda", "red": "instagram", "pieza": "Si tu trabajo es un desorden…", "nota": "Pautado por Juan David (dicho el 5-nov-2026); fecha y monto por confirmar." },
-    { "cuenta": "juanda", "red": "instagram", "pieza": "Puedes delegarle a la IA…", "nota": "Pautado por Juan David (dicho el 5-nov-2026); fecha y monto por confirmar." }
+    { "cuenta": "juanda", "red": "instagram", "pieza": "Puedes delegarle a la IA…", "nota": "Pautado por Juan David (dicho el 5-nov-2026); fecha y monto por confirmar." },
+    {
+      "cuenta": "juanda",
+      "red": "instagram",
+      "pieza": "¿Te acuerdas de cuando se caía el internet y podías jugar con el dinosaurio? (patente de Namco, publicado 4-nov-2026)",
+      "inicio": "2026-11-06",
+      "dias": 5,
+      "presupuesto_cop": 60000,
+      "objetivo": "visitas al perfil → seguidores",
+      "publico": "CO, MX, AR, CL, PE, ES · 18–40 · videojuegos, Nintendo, retro, desarrollo de videojuegos, propiedad intelectual, derecho",
+      "organico_antes": { "alcance": 237, "pct_3s": 35.8, "compartidos": 10, "compartidos_por_mil": 42.2 },
+      "metas": {
+        "minima": { "alcance": 8000, "visitas_perfil": 200, "seguidores": 20, "costo_por_seguidor_cop": 3000 },
+        "buena": { "alcance": 15000, "visitas_perfil": 400, "seguidores": 45, "costo_por_seguidor_cop": 1300 },
+        "excelente": { "alcance": 25000, "visitas_perfil": 700, "seguidores": 80, "costo_por_seguidor_cop": 750 }
+      },
+      "corte_48h": "Si la visita al perfil sale a más de COP 400 o hay menos de 5 seguidores nuevos, apagar. Si va en «buena» o mejor, subir a COP 20.000/día por 3 días más.",
+      "nota": "Lanzado por Juan David el 6-nov-2026. Metas estimadas por Claude con costos típicos de promociones de Instagram en Hispanoamérica (CPM de ~COP 3.000–6.000, visita al perfil de ~COP 100–300, 5–15 % de visitas que siguen). Medir de verdad y ajustar."
+    }
   ]
 }
