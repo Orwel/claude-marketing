@@ -8,6 +8,7 @@ contra esta página antes de producir.
 
 ## 1. Cada pieza
 - **Primer segundo = una emoción, nunca un anuncio.** Sirven la nostalgia, un dilema, el miedo con una persona concreta, el orgullo o identidad, o la sorpresa. Detalle en `docs/GUIONES.md` §1 y §1b.
+- **Tu cara, 1–2 s, en toda pieza** (Juan David, 6-nov-2026): aunque el video sea ilustrado, aparece su cara un par de segundos, en el gancho o en el cierre, y ahí se oye su voz real (regla «tu cara = tu voz»). El cierre universal «Compártelo y sígueme» se graba una vez en varias versiones (banco de cámara) y se reutiliza en todas las piezas; no cuesta créditos.
 - **Bucle abierto:** una pregunta queda abierta en los primeros 3 s y se cierra al final, con una revelación cada 5–7 s.
 - **Duración de 20 a 30 s** (hasta ~45 s si hay una revelación cada 7 s).
 - **El compartido se diseña:** antes de escribir, responder a quién se lo mandaría quien lo ve y por qué.
