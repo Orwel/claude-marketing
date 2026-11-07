@@ -19,7 +19,7 @@ contra esta página antes de producir.
 - **Copy:** la primera línea (lo que se ve antes de «más») es el mismo gancho emocional. Va una frase «Mándaselo a quien…», el CTA de venta corto y, al cierre, «Compártelo y sígueme».
 - **Historia el mismo día:** 1–2 h después del reel, el reel compartido en historias con un sticker (encuesta de dos opciones o pregunta) ligado a la emoción de la pieza. Si hace falta, una segunda historia al día siguiente con la respuesta. Juan David las pone a mano, porque la API no deja poner stickers.
 - **Etiquetas y colaboraciones:** se etiqueta a quien aparece (institución, estudio, persona) y Juan David invita como colaborador apenas sale. Es lo que más alcance ha traído: AWS, Rosario y los juegos colombianos.
-- **Sin la etiqueta «hecho con IA»** en Metricool. En el copy queda «Voz generada con IA…» (ver la memoria `sin-etiqueta-ia`).
+- **Nada que diga que es IA** (Juan David, 6-nov-2026, urgente): ni la etiqueta «hecho con IA» en Metricool (`isAiGenerated` e `isAigc` en false) ni frases en el copy como «Voz generada con IA…», «Voces generadas con ElevenLabs» o «voz clonada». La idea es que no parezca hecho con IA. Los créditos de música y de arte (licencias CC) sí se conservan: la licencia los exige. Ver la memoria `sin-etiqueta-ia`.
 - **Horas:** las de la analítica (memoria `horas-por-analitica`).
 
 ## 3. Cada semana
