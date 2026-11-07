@@ -38,6 +38,11 @@ contra esta página antes de producir.
 
   Se dice **asistente**, no bot ni secretaria (Juan David, 5-nov-2026).
 
+## 4b. Archivos: no se borra nada (Juan David, 6-nov-2026)
+- **Nunca se elimina ni se sobrescribe lo que ya existe** (videos, portadas, PDF, guiones, kits, copys). Antes de cambiarlo se mueve o se copia a otra carpeta: en Drive, `Edited/_reemplazados/<nombre>-<motivo>-<fecha>.<ext>`; en el repo, `trabajo/_reemplazados/` (o git, si el archivo está versionado).
+- **La versión nueva se hace sobre la anterior,** partiendo de ese original, no desde cero: se corta, se re-renderiza o se corrige a partir de lo que ya está aprobado.
+- En Metricool no se borran posts: se cambian o se pasan a borrador, y el registro (`trabajo/metricool-*.json`) guarda el texto o el archivo anterior.
+
 ## 5. Lo que no se hace
 - Abrir con «Curso gratis», «Comenta X», el nombre del producto o «Hola, soy…».
 - Reels de más de 45 s sin revelaciones.

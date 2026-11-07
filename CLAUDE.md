@@ -22,6 +22,8 @@ zonas 5, 5B, 7, 8 y la parrilla del mes). Plan de trabajo: zona 5B.
 - Ningún cliente identificable ni competidor por nombre. Capturas de la app: recortar datos reales.
 - Drive: `CARPETA_REDES/<AAAA-MM mes>/videos grabados` (entra) y `videos editados` (sale). Ruta en `.env`.
 - `archivo/agente-anterior/` es solo consulta: no se importa ni se ejecuta.
+- Nunca se borra ni se sobrescribe lo existente: se guarda en `_reemplazados/` y la versión nueva se hace sobre ese
+  original (ver `docs/LINEA-ESTRUCTURAL.md` §4b).
 
 ## Al terminar una sesión
 Si algo falló y se resolvió, o se aprendió algo del gusto de Juan David, anótalo en
