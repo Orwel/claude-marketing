@@ -8,7 +8,7 @@ sin que nadie supervise. La crea Juan David a mano en 3 minutos.
 3. En repositorio elige **Orwel/claude-marketing**. En entorno, **Default**, el que ya tiene las variables de Telegram.
 4. Programación: cada 30 minutos, de 7 am a 11 pm. En cron: `5,35 0-3,12-23 * * *`, que va en hora UTC.
 5. Herramientas: Bash, Read, Write, Edit, Glob, Grep, WebSearch, WebFetch y PushNotification.
-6. Conectores: ninguno, para empezar. Si después quieres que suba facturas a Drive y Notion, agrega esos dos conectores y cambia la línea de facturas de abajo.
+6. Conectores: Notion, para que /finanzas lea ✨ Gastos e Ingresos 2026 (si no lo agregas, /finanzas usa docs/direccion/finanzas.md). Si después quieres que suba facturas a Drive, agrega Drive y cambia la línea de facturas de abajo.
 7. Pega este texto como instrucciones:
 
 ```
@@ -28,11 +28,13 @@ Bandeja del asistente de Juan David en Telegram (todo en español). Es una tarea
    - Comando /analiza <ticker> (p. ej. /analiza EC): corre `node src/radar/mercados.mjs --empresa <TICKER> --telegram`. Si responde las preguntas de «Tu lectura primero» en un mensaje siguiente, dale la lectura del tutor: qué acertó, qué se le pasó y la idea de fondo, en corto. Es material de estudio de su MBA: enseñas el método, no dices compra ni vende.
    - Comando /aprende sin tema: lee docs/bandeja/aprende.md y dale la siguiente lección de esta ruta: estados financieros → razones y DuPont → flujo de caja libre → costo de capital (CAPM, WACC, riesgo país) → DCF → múltiplos y comparables → riesgo y portafolio (Sharpe) → PESTEL y tesis de inversión. Al final anota en docs/bandeja/aprende.md la fecha y el tema dado.
    - Comando /aprende <tema> (p. ej. /aprende WACC, /aprende DuPont, /aprende flujo de caja libre): una lección corta de análisis fundamental, de nivel MBA. Incluye qué es y para qué sirve, la fórmula, un ejemplo con cifras reales y citadas (si puedes, de Ecopetrol con `mercados.mjs --empresa EC`), el error típico y un ejercicio de 5 minutos para que lo haga él. Se responde en el chat privado.
+   - Tablero de dirección: /marketing, /estrategia, /finanzas, /entorno, /tendencias y /semana. Lee docs/direccion/README.md y responde cada uno como dice su fila (fuentes, formato, máx. 3.500 caracteres, nada inventado).
+   - /meta <línea>: <meta> a <fecha> → agrega la fila a docs/direccion/metas.md. /avance <línea>: <dato> → actualiza «Último avance» y su fecha. /caja <mes>: … → agrega la fila a docs/direccion/finanzas.md. Confirma en una línea lo que quedó.
    - Nota de voz: dile que por ahora la mande en texto.
    - Brief de propuesta («propuesta para…»): anótalo en docs/bandeja/ideas.md con cliente, necesidad, precio, plazos y dudas. El PDF se arma con /propuesta-servicios.
    - Idea de video o tema: va a docs/bandeja/ideas.md, con la cuenta y el formato que sugieras según docs/LINEA-ESTRUCTURAL.md.
    La entrada nueva va arriba, debajo del encabezado.
-4. Si cambiaste algo en docs/bandeja o docs/convocatorias: git add docs/bandeja docs/convocatorias && git commit -m "Bandeja: <resumen>" && git push origin claude/awesome-hamilton-lxl18t (si falla, git pull --rebase y reintenta una vez).
+4. Si cambiaste algo en docs/bandeja, docs/convocatorias o docs/direccion: git add docs/bandeja docs/convocatorias docs/direccion && git commit -m "Bandeja: <resumen>" && git push origin claude/awesome-hamilton-lxl18t (si falla, git pull --rebase y reintenta una vez).
 5. Respóndele con UN solo mensaje (la respuesta, dónde quedó cada cosa y lo que no pudiste hacer): escríbelo en un archivo temporal y mándalo con `node src/radar/telegram.mjs --archivo <ruta>`.
 6. Al final confirma con `node src/radar/bandeja.mjs --confirmar <ultimo_update_id>`.
 7. Si Telegram falla por red, usa PushNotification.

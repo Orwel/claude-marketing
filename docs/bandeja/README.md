@@ -18,6 +18,9 @@ Comandos que entiende (los atiende la rutina, así que la respuesta tarda hasta 
 | `/secop` | Lo mismo con la lista por defecto de tecnología e IA |
 | `/mercados` | Foto del día: TRM, dólar, S&P 500, Nasdaq, bono a 10 años, Brent y ADR colombianos |
 | `/analiza EC` | Ficha fundamental (estados, DuPont, endeudamiento, caja) y 3 preguntas para que dé su lectura primero |
+| `/semana` | Comité de dirección en una página: marketing, estrategia, finanzas, entorno e innovación |
+| `/marketing` `/estrategia` `/finanzas` `/entorno` `/tendencias` | Cada área por separado (ver `docs/direccion/README.md`) |
+| `/meta`, `/avance`, `/caja` | Guardar metas, avances y cifras del mes para medir |
 | `/ayuda` o «menú» | La lista de comandos con botones fijos debajo del teclado |
 | `/aprende WACC` | Lección corta de análisis fundamental con ejemplo real y ejercicio |
 | `/oportunidades` | Última edición de convocatorias, fondos y concursos; `/oportunidades videojuegos` busca de nuevo sobre ese tema |
