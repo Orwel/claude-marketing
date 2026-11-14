@@ -1254,3 +1254,119 @@ Videos: IMG_3770, IMG_3772 e IMG_3776 de octubre (iPhone). Salieron `la-ia-que-n
   paga el cliente y que puede costar más según el plan, sin precios) y **quitar la voz clonada** del alcance.
   Excepción consciente a la regla de no nombrar proveedores: se nombra solo cuando él lo pide. La página de voz
   pasó a "Así se trabaja desde la ruta" (consejos de grabación, día de viaje, ideas de series), sin funciones nuevas.
+
+## Documentos PDF para LinkedIn (4-nov-2026)
+
+- **Carrusel → documento de LinkedIn:** `trabajo/linkedin-pdf/build_li.py` reusa `build_guia_pdf.py` de la skill
+  guia-clase sin tocarla. En el celular el A4 se lee mal con la letra de la guía impresa: los bloques salen con
+  `zoom: 1.55` (guia.js pagina ya con ese tamaño). Cada sección lleva el arte de la lámina del carrusel que cuenta esa
+  idea (`laminas.py`, recorte sin texto, esquinas pintadas sobre el fondo para no meter máscaras). Más de una lámina
+  por sección se va sola a otra hoja: una por sección, y en un test (N15) ninguna, que la portada no destape respuestas.
+- **Contrappto en el formato guia-clase:** `meta.linea = "contrappto"` cambia colores de `marcas/contrappto.json`,
+  logo, pie y cierre a contrappto.com, y usa Sora **estática** (`fuentes/Sora-*.woff2`, sacadas con fontTools; la
+  variable sale Type3). El script se niega a imprimir si queda "trifuerza" en el HTML.
+- `trabajo/` también se sincroniza con Drive: las carpetas temporales del build se borran al terminar.
+- **v3 corta (mismo día):** Juan David pidió 6-7 páginas: portada, cómo funciona (pasos + celular), lo que incluye
+  en 2x2, desde la ruta, inversión (con a cargo del cliente, fuera del alcance y una línea legal), etapas y cierre.
+  Metricool: plan gratuito para una sola marca, sin cifras; Trifuerza deja la cuenta creada, redes conectadas,
+  horas configuradas y conexión probada con una publicación real. En el cierre, la constelación va **detrás** del
+  contenido (z-index 1): si el CTA cae sobre la zona, la tapa entera; la zona va en el hueco entre título y CTA.
+
+### 4-nov-2026 · voz de los reels de trifuerza.co
+- Regla nueva de Juan David: el outro de todas las piezas cierra con «Compártelo y sígueme», en pantalla y en la voz.
+  El copy de cada publicación puede seguir vendiendo; el video no.
+- Para cambiar solo el final de una narración no hay que relocutarla entera: se genera la última frase nueva
+  (~90 créditos) y se empalma desde el último silencio largo (`inicios` del JSON de voz). Suena continuo con la misma voz.
+- whisper `ggml-medium` se comió frases enteras de tomas que estaban completas; con `ggml-small` y marcas de tiempo aparecieron.
+  Antes de repetir una toma, confirmar con el otro modelo. Con música debajo también se equivoca: transcribir la voz sola.
+- ElevenLabs con varias generaciones a la vez da «concurrency limit» y reintenta solo: no volver a pedirla (cobra doble).
+- En la voz, «IA» se escribe «inteligencia artificial» para que no la lea como «ía».
+## 2026-11-06 · Pumba Aventura: 4 videos de viaje en moto desde 360 (Jordania → AlUla)
+- Cliente externo: código aparte en `remotion/pumba/` con su propia entrada (`index.js` + `Raiz.jsx`) y carpeta
+  pública liviana `trabajo/pumba/publico` (fuentes, música, tramos). No se toca el `Root.jsx` compartido.
+- Material Insta360 X3 ya reencuadrado en la app: MP4 HEVC 2160×3840 con **«Insta360 X3» quemado arriba a la
+  izquierda (y≈15 %)**. `Toma` (comun.jsx) nunca sube el encuadre de y = 0,17 + 0,5/z: la marca queda fuera.
+- HEVC 4K no sirve directo en Remotion; proxies H.264 4K largos tumbaron el render («Failed to fetch …proxy»,
+  aun con -g 15). Lo que funcionó: **un clip corto por toma** (`trabajo/pumba/tramos.mjs`, lee las tomas de los
+  JSX) a 1620×2880 (con zooms ≥1,25× no se pierde definición en la salida 1080), -g 6 -bf 0.
+- Fotos HEIC del iPhone: el ffmpeg completo las lee con `-frames:v 1` (sin -vf: la rejilla HEIC es un
+  filtro complejo y choca con -vf).
+- Pumba pidió **sin voz** (se descartó la locución de ElevenLabs ya generada) y **no mencionar el precio de la
+  visa**. El documental se cuenta con texto serif en pantalla.
+- Marca de agua contra plagio: a media altura a la izquierda (no esquina), fuera de botones de IG; en
+  fotos sobre papel, en tinta oscura.
+- Las páginas de Instagram solo dan caption y métricas por `/embed/captioned/`; el video no se ve.
+
+## 6-nov-2026 · Portadas que venden de Contrappto (11 piezas)
+- Norton borraba `trabajo/ctp/portadas_venta.txt`. Las portadas salieron sin ese archivo, con `remotion still` directo por pieza, y Norton no volvió a bloquear nada. La exclusión de la carpeta sigue pendiente (la decide Juan David). No se esquiva el antivirus.
+- El fondo sale del **MP4 final** (`ffmpeg -ss`), que ya trae subtítulos. En la primera pasada se colaron palabras sueltas del video («Siglos después», «Contrato de palabra»). Por eso el degradado de `remotion/vineta/PortadaVenta.jsx` quedó sólido desde el 64 % del alto.
+- En los Relato y Capas, el contenido queda alto y lo tapa el titular. `portadaVenta.bajar` (px) corre el cuadro hacia abajo. Con un mundo claro (N26, menta) el oscurecido queda gris: mejor un cuadro del tramo oscuro del mismo video.
+- **Primera tanda rechazada (V1–V4: texto cinético, sellos, fichas, barras de ruta, música de librería del
+  repo):** «no están quedando bien… él tiene un estilo con menos texto y más visual, más elegante, mejor
+  editado, menos hecho con IA; los textos y la música están mal, no uses los del repo, sé contextual».
+  Segunda dirección (`V5Cine.jsx`, composición `PumbaCineA`): cortes secos, grado de cine común + viñeta,
+  solo título fino al abrir, nombre del lugar en español y árabe, firma al final, marca de agua de una línea.
+  Sonido real de la cámara filtrado (pasa-bajos 4,2 kHz) con J-cuts; la canción la pone él en Instagram.
+  C13 (AlUla) trae música de fondo: va al 25 % para no arriesgar reclamos.
+- Una muestra de 30 s primero; las otras tres duraciones solo después de que apruebe el look.
+- Pixabay pone una verificación anti-bots: la canción licenciada la elige él a oído y la deja en Drive.
+- ffmpeg 9 imprime una línea después del JSON de loudnorm (cortar hasta la `}`); la salida de Remotion queda
+  `yuvj420p` (rango completo): el final va con `scale=in_range=pc:out_range=tv` y `-color_range tv`.
+- **N01.2 (6-nov-2026) · la voz del clon:** con `[serious, calm]` le sonó suave y «poco colombiana»; con
+  `[confident, firm, Colombian accent]`, «fuerte y falsa». La que aprobó: **eleven_v4 sin ninguna etiqueta**, el texto
+  escrito como él lo diría (muestra A frente a eleven_multilingual_v2). Probar siempre con una frase de 3 s antes de la
+  toma completa, y no locutar sin guion aprobado (se perdieron 506 créditos en un guion que no le gustó).
+- **Pausas del clon:** `silenceremove=stop_periods=-1:stop_duration=0.3` + 1,05× deja 27,5 s de toma en 24 s sin que
+  suene acelerado (`trabajo/n012/armar.mjs`, que además ubica cada bloque de la valla en su palabra con Whisper).
+
+
+## Banco de cámara (6-nov-2026)
+- Los MOV del iPhone traen rotación −90°: ffmpeg los rota solo y el 4K sale vertical 2160×3840 (mismo número de píxeles). No forzar 3840×2160.
+- `loudnorm` lineal solo, sobre frases de 2 s, se queda en −19…−22 LUFS por el límite de pico. Con filtro de graves + `acompressor` + `alimiter` antes del `loudnorm` de dos pasadas llega a −16 LUFS. En clips sin voz no se normaliza: subiría el ruido de cuarto (−68 dBFS).
+- whisper inventa frases («Gracias», «Suscríbete») sobre silencio: para saber si hay voz mirar el nivel (RMS), no el texto.
+- ffmpeg dentro de un `while read` se come el stdin: usar siempre `-nostdin`.
+- Juan David baja la cara a parar la grabación con el iWatch: siempre se recorta ese final. Cambio de rutina pedido: mirar al lente 1 s y recién ahí parar.
+- El banco se usa en todos los videos futuros; detalle en `docs/BANCO-CAMARA.md`.
+
+## Dirección de grabación · 6-nov-2026 (noche)
+- **Ganchos de consejo no se entienden al leerlos:** «Tu web tiene tres segundos», «Times New Roman, tamaño doce, justificado» y «Si tu pedido a la IA cabe en una línea» los rechazó Juan David («no se entiende, el gancho está malísimo»). Abrir con una escena concreta con algo en juego («Un cliente quería contratarte, abrió tu página… y cerró») y dejar el consejo para después. Reescritos en `piezas/2026-11/guiones/reescrituras-ganchos-6nov.md`; HM1, HM4 y HM5 tienen el mismo patrón.
+- **Un solo lugar para llevar la cuenta:** el artefacto «Videos» lo confundía. El registro de grabación (teleprompter continuo por tanda + estado de cada toma, `trabajo/teleprompter-hoy/`) es el único lugar para grabar. Juan David quiere ver los guiones completos primero, con la opción de ocultar las marcas, y un teleprompter continuo, no por toma.
+- **Bug de las marcas:** pintar las pausas «/» en una pasada aparte rompía las etiquetas HTML (se veía `</b>` en el prompter). Una sola pasada sobre el texto escapado.
+- **Banco de cámara, lo que faltó en la primera tanda:** no se grabaron N01.2 ni el silencio de cuarto; logo de TRIFUERZA en la chaqueta; repisa pegada a la cabeza; taza con letras; el gesto de parar con el iWatch baja la cara; el celular se movió entre grupos de clips.
+
+### 11-nov-2026 · Constituciones del Rosario con su intro grabada (legal design)
+- **Su toma y el clon suenan distinto por el micrófono, no por el eco:** Hollyland prendido en la chaqueta, a la altura
+  del pecho → +11 dB cerca de 1 kHz y −11 dB en agudos frente al clon. `trabajo/legal-design/scripts/igualar_voz.py`
+  lleva el clon al timbre de sus tomas (eligió la opción B: `--fuerza 1 --tope 12 --sala 0`). Para la próxima: micrófono
+  en la camisa, a 15–20 cm de la boca, y cancelación de ruido apagada (Lark M2: un toque al transmisor; luz azul = apagada).
+- **Su cara entra como lámina impresa y con el rodillo de la prensa** (escena `hueco` con `archivo`); a pantalla completa
+  y con corte seco rompía el estilo. El outro grabado no le gustó: el cierre quedó con la voz oficial.
+- **Menos de 60 s sin rehacer nada:** se renderiza normal y se acelera parejo con `setpts=PTS/K` + `atempo=K`.
+- Un render con `--concurrency=1` se colgó una vez en un cuadro (timeout de 33 s); con `--timeout=120000` pasó.
+- **Metricool:** para cambiar el video de un post programado se manda otra vez el enlace de Drive del archivo (la
+  carpeta de noviembre está compartida). Metricool lo vuelve a subir; se comprueba bajando el `static.metricool.com`.
+- «Comenta FORMA» + ManyChat (lo configura él) para entregar la guía de la Sesión 15. No hay conector de ManyChat.
+
+## 13-nov-2026 · Subtítulos, mezcla y ritmo
+- **Subtítulos muy abajo no se leen:** entre y ≈ 1330 y 1520 se mezclan con el nombre, el copy y los botones de Reels.
+  Zona común en `remotion/zonas.js` (`SUBTITULOS.top = 1120`, límite 1300); la usan Montaje, Vertical, Relato y los
+  reels de Academy. Las piezas sueltas viejas (n01–n06, mercader, ia/Luz…) conservan su posición: se tocan si se rehacen.
+- **La música tapaba la voz:** la mezcla común tenía música a 0,55 y un sidechain 4:1 con umbral 0,03 que casi no
+  actuaba con el clon (habla suave). Medido con Kafka: voz solo ~9 LU sobre la música. Ahora música 0,42, compresor en
+  la voz y sidechain 8:1 umbral 0,015 → ~21 LU (`src/audio/regla-mezcla.js`). Medir con `ebur128` sobre la voz sola y
+  sobre la música ya agachada (sin la voz) para comprobarlo.
+- **Velocidad:** Kafka a 1,07× le pareció lento. Voz oficial a 1,15× pedida en ElevenLabs (`speed`), no con atempo
+  después: así los tiempos por letra ya vienen bien y no hay que reescalar subtítulos.
+- **Intro con su voz en Kafka:** él dice el gancho a cámara y el dibujo sigue desde la segunda frase (`--reemplaza`), así
+  el gancho no se retrasa. `trabajo/kafka-toma/armar.mjs --intro <clip>`; composición `kafka-intro` (Intro.jsx).
+
+
+## Telegram: avisos por temas, SECOP y convocatorias (14-nov-2026)
+- Los avisos automáticos ahora salen con `--tema` (noticias, radar, avisos, convocatorias, licitaciones) hacia un grupo con Temas (`docs/bandeja/AVISOS.md`). Sin grupo, llegan al chat privado con etiqueta. El chat privado queda solo para la bandeja.
+- El SECOP no necesita scraping: datos.gov.co publica el SECOP II (`p6dx-8zbt`) y el SECOP I (`f789-7hwg`) por API Socrata, sin clave. Los datos llegan con 1–2 días de retraso. Sin filtros, la mitad es contratación directa o persona natural, así que se oculta. «Software» a secas trae compras de licencias.
+- Al buscar en el SECOP se usa `_` en lugar de las letras con tilde: las entidades escriben «INFORMACIÓN» e «INFORMACION».
+- El modo automático no deja que Claude cree tareas programadas: los textos quedan en `docs/licitaciones/README.md` y `docs/convocatorias/README.md` para crearlas a mano.
+- Convocatorias en Colombia a noviembre: casi todo cerró (MinCiencias 54 y 55, Fondo Emprender, ColombIA Inteligente). Lo que hay abierto está en Latam y el mundo.
+- Juan David prefiere pedir la información con el menú de comandos del bot (/secop, /oportunidades, /mercados, /analiza, /aprende) y no recibirla todos los días: se satura. El menú se pone con `npm run telegram-menu`.
+- Mercados es material de estudio del MBA (análisis fundamental), no asesoría: no hace falta repetirle advertencias de «no soy asesor»; enseñar el método y hacer las cuentas con él (skill analisis-financiero).
+- SEC EDGAR: las empresas cambian de concepto XBRL con los años (Apple dejó «Revenues» en 2018); se elige el concepto con el cierre más reciente. EDGAR pide User-Agent con contacto (SEC_USER_AGENT). Yahoo no tiene el COLCAP; la TRM oficial sale de datos.gov.co (32sa-8pi3).

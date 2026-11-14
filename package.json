@@ -35,7 +35,10 @@
     "clase-remontaje": "node src/clase/remontaje.js",
     "parrilla": "node src/calendario/pagina.mjs",
     "videos": "node src/calendario/videos.mjs",
-    "telegram": "node --use-system-ca src/radar/telegram.mjs"
+    "telegram": "node --use-system-ca src/radar/telegram.mjs",
+    "secop": "node --use-system-ca src/radar/secop.mjs",
+    "mercados": "node --use-system-ca src/radar/mercados.mjs",
+    "telegram-menu": "node --use-system-ca src/radar/menu.mjs"
   },
   "dependencies": {
     "@react-three/drei": "^10.7.9",
