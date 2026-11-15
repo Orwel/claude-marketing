@@ -69,6 +69,8 @@ También puedes escribirme normal y te respondo.`,
     texto: '🏛️ Plata y Estado. Para buscar algo puntual en el SECOP escribe, por ejemplo: /secop chatbot. Para que te avise solo de algo nuevo: /vigila <tema>.',
     botones: [
       ['🏛️ Licitaciones de tecnología e IA', 'c:/secop'],
+      ['⚖️ Licitaciones de servicios jurídicos', 'c:/secop juridico'],
+      ['🎓 Licitaciones de capacitaciones y formación', 'c:/secop capacitacion'],
       ['📘 Cómo participar en el SECOP (paso a paso)', 'c:/guiasecop'],
       ['💰 Convocatorias y fondos (última edición)', 'c:/oportunidades'],
       ['🎮 Convocatorias de videojuegos', 'c:/oportunidades videojuegos'],
@@ -112,6 +114,31 @@ const RUIDO = ['SERVICIOS PROFESIONALES', 'APOYO A LA GESTI_N', 'SERVICIOS DE AP
 const NUCLEO = /INTELIGENCIA ARTIFICIAL|DESARROLLO DE SOFTWARE|DESARROLLO E IMPLEMENTACI|CHATBOT|ASISTENTE VIRTUAL|MACHINE LEARNING|CIENCIA DE DATOS|ANAL.TICA|APLICATIVO|APLICACI.N (M.VIL|WEB)|PLATAFORMA (DIGITAL|TECNOL.GICA)|TRANSFORMACI.N DIGITAL|AUTOMATIZACI.N/;
 const COMPRA = /SUMINISTRO|ADQUISICI.N|LICENCIA|EQUIPOS|HARDWARE|MANTENIMIENTO PREVENTIVO|RENOVACI.N|SUSCRIPCI.N|RESONADOR|IMPRESORA/;
 
+// Perfiles de búsqueda: Juan David es desarrollador, abogado y profesor, así que vigila tres frentes.
+// «nucleo» marca lo que de verdad le sirve (sube en el orden); «ruido» se descarta en el nombre del proceso.
+const PERFILES: Record<string, { titulo: string; terminos: string[]; nucleo: RegExp; ruido: string[] }> = {
+  tecnologia: { titulo: 'tecnología e IA', terminos: POR_DEFECTO, nucleo: NUCLEO, ruido: RUIDO },
+  juridico: {
+    titulo: 'servicios jurídicos',
+    terminos: ['ASESOR_A JUR_DICA', 'ASESOR_A LEGAL', 'APOYO JUR_DICO', 'ACOMPA_AMIENTO JUR_DICO', 'DEFENSA JUDICIAL', 'REPRESENTACI_N JUDICIAL',
+      'COBRO COACTIVO', 'COBRO PERSUASIVO', 'PROTECCI_N DE DATOS', 'PROPIEDAD INTELECTUAL', 'GESTI_N CONTRACTUAL', 'CONTRATACI_N ESTATAL',
+      'CUMPLIMIENTO NORMATIVO', 'COMPLIANCE', 'SARLAFT', 'SAGRILAFT', 'ACTUALIZACI_N NORMATIVA', 'SANEAMIENTO', 'CONCEPTO JUR_DICO', 'CONSULTOR_A JUR_DICA'],
+    nucleo: /JUR.DIC|LEGAL|JUDICIAL|COACTIVO|DATOS PERSONALES|PROPIEDAD INTELECTUAL|CONTRACTUAL|NORMATIV|COMPLIANCE|SARLAFT|SAGRILAFT/,
+    // Lo de persona natural («como abogado») ya va por contratación directa; aquí se dejan pasar los servicios a firmas.
+    ruido: ['APOYO A LA GESTI_N', 'PRESTACI_N DE SERVICIOS PERSONALES'],
+  },
+  capacitacion: {
+    titulo: 'capacitaciones y formación',
+    terminos: ['CAPACITACI_N EN INTELIGENCIA ARTIFICIAL', 'FORMACI_N EN INTELIGENCIA ARTIFICIAL', 'INTELIGENCIA ARTIFICIAL GENERATIVA', 'DIPLOMADO',
+      'CAPACITACI_N EN CONTRATACI_N', 'CAPACITACI_N EN PROTECCI_N DE DATOS', 'ALFABETIZACI_N DIGITAL', 'HABILIDADES DIGITALES', 'COMPETENCIAS DIGITALES',
+      'APROPIACI_N DIGITAL', 'APROPIACI_N TECNOL_GICA', 'CAPACITACI_N VIRTUAL', 'PLATAFORMA DE APRENDIZAJE', 'E-LEARNING', 'CURSOS VIRTUALES',
+      'FORMACI_N DOCENTE', 'CAPACITACI_N A SERVIDORES', 'CAPACITACI_N A FUNCIONARIOS', 'CAPACITACI_N A EMPRENDEDORES', 'TRANSFERENCIA DE CONOCIMIENTO'],
+    nucleo: /INTELIGENCIA ARTIFICIAL|DIGITAL|TECNOL.G|VIRTUAL|CONTRATACI|DATOS|JUR.DIC|DIPLOMADO|EMPRENDE|DOCENTE/,
+    ruido: ['APOYO A LA GESTI_N', 'MANIPULACI_N DE ALIMENTOS', 'PRIMEROS AUXILIOS', 'BRIGADA', 'ALTURAS', 'CONDUCCI_N'],
+  },
+};
+const ALIAS_PERFIL: Record<string, string> = { juridico: 'juridico', jurídico: 'juridico', legal: 'juridico', abogados: 'juridico', capacitacion: 'capacitacion', capacitación: 'capacitacion', capacitaciones: 'capacitacion', formacion: 'capacitacion', formación: 'capacitacion', cursos: 'capacitacion', tecnologia: 'tecnologia', tecnología: 'tecnologia' };
+
 async function socrata(dataset: string, params: Record<string, string | number>) {
   const url = new URL(`https://www.datos.gov.co/resource/${dataset}.json`);
   for (const [k, v] of Object.entries(params)) url.searchParams.set(k, String(v));
@@ -128,15 +155,21 @@ async function buscarSecop(argumentos: string) {
   const valor = (n: string, def: number) => { const i = partes.indexOf(n); return i >= 0 ? Number(partes[i + 1]) : def; };
   const conValor = new Set(['--dias', '--min', '--max']);
   const todas = partes.includes('--todas');
-  const palabras = partes.filter((a, i) => !a.startsWith('--') && !conValor.has(partes[i - 1]));
-  const dias = valor('--dias', 30), max = valor('--max', 15), minimo = valor('--min', palabras.length ? 0 : 20e6);
+  let palabras = partes.filter((a, i) => !a.startsWith('--') && !conValor.has(partes[i - 1]));
+  // «/secop juridico» o «/secop capacitacion» usan la lista de ese perfil en vez de buscar la palabra literal.
+  const perfilNombre = palabras.length === 1 && ALIAS_PERFIL[palabras[0].toLowerCase()] ? ALIAS_PERFIL[palabras[0].toLowerCase()] : (palabras.length ? '' : 'tecnologia');
+  const perfil = perfilNombre ? PERFILES[perfilNombre] : null;
+  if (perfil) palabras = [];
+  const dias = valor('--dias', 30), max = valor('--max', 15), minimo = valor('--min', perfil ? (perfilNombre === 'tecnologia' ? 20e6 : 5e6) : 0);
   const aPatron = (t: string) => (ATAJOS[t.toLowerCase()] ?? t).toUpperCase().replace(/[ÁÉÍÓÚÜÑ]/g, '_').replace(/'/g, "''");
-  const terminos = palabras.length ? [aPatron(palabras.join(' '))] : POR_DEFECTO;
+  const terminos = perfil ? perfil.terminos : [aPatron(palabras.join(' '))];
+  const ruido = perfil ? perfil.ruido : RUIDO;
+  const nucleo = perfil ? perfil.nucleo : NUCLEO;
   const desde = new Date(Date.now() - dias * 864e5).toISOString().slice(0, 10);
   const hoy = new Date().toISOString().slice(0, 10);
   const like = (c: string, t: string) => `upper(${c}) like '%${t}%'`;
   const cualquiera = (cs: string[]) => `(${terminos.flatMap((t) => cs.map((c) => like(c, t))).join(' OR ')})`;
-  const ninguno = (c: string) => RUIDO.map((r) => `NOT ${like(c, r)}`).join(' AND ');
+  const ninguno = (c: string) => ruido.map((r) => `NOT ${like(c, r)}`).join(' AND ');
 
   const f2 = [`fecha_de_publicacion_del >= '${desde}'`, `estado_de_apertura_del_proceso = 'Abierto'`, `estado_resumen NOT IN ('Adjudicado', 'No Definido')`,
     `(fecha_de_recepcion_de IS NULL OR fecha_de_recepcion_de >= '${hoy}')`, cualquiera(['nombre_del_procedimiento', 'descripci_n_del_procedimiento'])];
@@ -160,9 +193,9 @@ async function buscarSecop(argumentos: string) {
   const vistos = new Set<string>();
   procesos = procesos.filter((p) => { const k = `${p.entidad}|${p.objeto?.slice(0, 80)}`; if (vistos.has(k)) return false; vistos.add(k); return true; });
   const enTitulo = new RegExp(terminos.map((t) => t.replace(/''/g, "'").replace(/_/g, '.')).join('|'));
-  for (const p of procesos) { const t = (p.objeto ?? '').toUpperCase().replace(/[ÁÉÍÓÚÜÑ]/g, '.'); p.puntaje = (enTitulo.test(t) ? 3 : 0) + (NUCLEO.test(t) ? 2 : 0) - (COMPRA.test(t) ? 1 : 0); }
+  for (const p of procesos) { const t = (p.objeto ?? '').toUpperCase().replace(/[ÁÉÍÓÚÜÑ]/g, '.'); p.puntaje = (enTitulo.test(t) ? 3 : 0) + (nucleo.test(t) ? 2 : 0) - (COMPRA.test(t) ? 1 : 0); }
   procesos.sort((a, b) => b.puntaje - a.puntaje || b.valor - a.valor);
-  return { procesos, dias, max, minimo, palabras, todas, error };
+  return { procesos, dias, max, minimo, palabras, todas, error, titulo: perfil?.titulo ?? '' };
 }
 
 const lineaProceso = (p: P) => [`• ${capital(p.entidad)}${p.lugar ? ` (${capital(p.lugar)})` : ''}`, `  ${recorta(p.objeto)}`,
@@ -176,7 +209,7 @@ async function secop(argumentos: string) {
   const total = r.procesos.length;
   const procesos = r.procesos.slice(0, r.max);
 
-  const busqueda = palabras.length ? `«${palabras.join(' ')}»` : 'tecnología e IA';
+  const busqueda = palabras.length ? `«${palabras.join(' ')}»` : r.titulo;
   const enc = `🏛️ Licitaciones abiertas · ${busqueda} · últimos ${dias} días${minimo ? ` · desde ${pesos(minimo)}` : ''}`;
   if (!procesos.length) return `${enc}\n\nNo hay procesos con esos filtros. Prueba otras palabras o --dias 60.`;
   const cuerpo = procesos.map(lineaProceso);
@@ -381,17 +414,26 @@ async function vigia() {
   const corrio = await sql`insert into bot.vigia (clave, ultima) values ('secop', now())
     on conflict (clave) do update set ultima = now() where bot.vigia.ultima < now() - interval '30 minutes' returning clave`;
   if (!corrio.length) return 'muy seguido';
-  const r = await buscarSecop('--dias 4 --min 5000000');
-  if (r.error) return r.error;
-  // Relevante = lo que Trifuerza sí hace (puntaje ≥ 2): IA, desarrollo, plataformas, apps, datos, automatización.
-  const candidatos = r.procesos.filter((p) => p.puntaje >= 2);
-  if (!candidatos.length) return 'sin candidatos';
-  const ya = new Set((await sql`select id from bot.vistos where id = any(${candidatos.map((p) => p.id)})`).map((x) => x.id as string));
-  const nuevos = candidatos.filter((p) => !ya.has(p.id)).slice(0, 10);
-  if (!nuevos.length) return 'nada nuevo';
-  await sql`insert into bot.vistos ${sql(nuevos.map((p) => ({ id: p.id })))} on conflict do nothing`;
-  await decirLargo(`🚨 ${nuevos.length === 1 ? 'Nueva licitación que te puede servir' : `${nuevos.length} licitaciones nuevas que te pueden servir`}\n\n${nuevos.map(lineaProceso).join('\n\n')}\n\nOjo: la mínima cuantía cierra en pocos días. Para revisar una, pégame el enlace y pregúntame qué piden.`);
-  return `avisados ${nuevos.length}`;
+  // Tres frentes: tecnología, servicios jurídicos y capacitaciones. Relevante = puntaje ≥ 2 (lo que de verdad hace).
+  const bloques: string[] = [];
+  const marcados = new Set<string>();
+  let total = 0;
+  for (const [clave, emoji] of [['tecnologia', '💻'], ['juridico', '⚖️'], ['capacitacion', '🎓']] as const) {
+    const r = await buscarSecop(`${clave} --dias 4 --min 5000000`);
+    if (r.error) continue;
+    const candidatos = r.procesos.filter((p) => p.puntaje >= 2 && !marcados.has(p.id));
+    if (!candidatos.length) continue;
+    const ya = new Set((await sql`select id from bot.vistos where id = any(${candidatos.map((p) => p.id)})`).map((x) => x.id as string));
+    const nuevos = candidatos.filter((p) => !ya.has(p.id)).slice(0, 6);
+    if (!nuevos.length) continue;
+    for (const p of nuevos) marcados.add(p.id);
+    total += nuevos.length;
+    bloques.push(`${emoji} ${PERFILES[clave].titulo.toUpperCase()}\n\n${nuevos.map(lineaProceso).join('\n\n')}`);
+  }
+  if (!total) return 'nada nuevo';
+  await sql`insert into bot.vistos ${sql([...marcados].map((id) => ({ id })))} on conflict do nothing`;
+  await decirLargo(`🚨 ${total === 1 ? 'Nuevo proceso que te puede servir' : `${total} procesos nuevos que te pueden servir`}\n\n${bloques.join('\n\n')}\n\nOjo: la mínima cuantía cierra en pocos días. Para revisar uno, pégame el enlace y pregúntame qué piden.`);
+  return `avisados ${total}`;
 }
 
 // ---------- Atención de cada mensaje ----------

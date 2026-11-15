@@ -5,10 +5,11 @@ hay dos vigías que **solo escriben cuando hay algo nuevo**.
 
 | Vigía | Qué mira | Cuándo | Dónde corre | Gasta suscripción |
 |---|---|---|---|---|
-| Licitaciones SECOP | SECOP I y II (datos abiertos): procesos de tecnología e IA abiertos en los últimos 4 días, desde $5 millones, con puntaje ≥ 2 | cada 2 h, de 6 a.m. a 10 p.m. (pg_cron `bot-vigia-secop`) | función `telegram-bot?tarea=vigia` en Supabase Trifuerza | no |
+| Licitaciones SECOP | SECOP I y II (datos abiertos), en tres perfiles: 💻 tecnología e IA, ⚖️ servicios jurídicos y 🎓 capacitaciones. Procesos de los últimos 4 días, desde $5 millones, con puntaje ≥ 2 | cada 2 h, de 6 a.m. a 10 p.m. (pg_cron `bot-vigia-secop`) | función `telegram-bot?tarea=vigia` en Supabase Trifuerza | no |
 | Oportunidades | Cada tema de `bot.vigilancias`: iNNpulsa, MinCiencias, MinTIC, MinCulturas (Estímulos 2027), Fondo Emprender, Bogotá, Latam e internacional, licitaciones privadas (Ecopetrol, EPM, ISA, Bancolombia…), capacitación en IA para entidades | lunes a viernes, 7 a.m. | rutina «Vigía de oportunidades (Telegram)» `trig_01FqEVanfJ3ykgNiN2cjC6XX` | sí (1 ejecución al día) |
 
 **Desde Telegram:**
+- `/secop juridico` y `/secop capacitacion` buscan en esos perfiles; `/secop` solo es tecnología.
 - `/vigila <tema>` agrega algo a vigilar. Ejemplos: `/vigila licitaciones privadas Grupo Sura software`, `/vigila Estímulos 2027 videojuegos`.
 - `/vigilancias` muestra la lista con números y `/olvida <número>` quita un tema.
 
