@@ -46,6 +46,8 @@ const aPatron = (t) => (ATAJOS[t.toLowerCase()] ?? t).toUpperCase().replace(/[Á
 const terminos = palabras.length ? [aPatron(palabras.join(' '))] : POR_DEFECTO;
 
 // Los procesos de persona natural (servicios profesionales, apoyo a la gestión) son contratos ya amarrados a alguien.
+// Obra civil: no es lo de Trifuerza.
+const OBRA = ['OBRA', 'CONSTRUCCI_N', 'ACUEDUCTO', 'ALCANTARILLADO', 'SANEAMIENTO B_SICO', 'AGUA POTABLE', 'PAVIMENT', 'MALLA VIAL', 'V_AS TERCIARIAS', 'PLACA HUELLA', 'PUENTE', 'REDES EL_CTRICAS', 'ALUMBRADO', 'INTERVENTOR_A', 'ADECUACI_N F_SICA', 'MEJORAMIENTO DE VIVIENDA', 'ESCENARIO DEPORTIVO'];
 const RUIDO = ['SERVICIOS PROFESIONALES', 'APOYO A LA GESTI_N', 'SERVICIOS DE APOYO', 'PRESTACI_N DE SERVICIOS PERSONALES'];
 
 const desde = new Date(Date.now() - dias * 864e5).toISOString().slice(0, 10);
@@ -70,7 +72,7 @@ async function secop2() {
     `(fecha_de_recepcion_de IS NULL OR fecha_de_recepcion_de >= '${new Date().toISOString().slice(0, 10)}')`,
     cualquiera(['nombre_del_procedimiento', 'descripci_n_del_procedimiento']),
   ];
-  if (!todas) filtros.push(`modalidad_de_contratacion NOT IN ('Contratación directa')`, ninguno('nombre_del_procedimiento'));
+  if (!todas) filtros.push(`modalidad_de_contratacion NOT IN ('Contratación directa', 'Contratación Directa (con ofertas)', 'Contratación régimen especial', 'Licitación pública Obra Publica')`, ninguno('nombre_del_procedimiento'), ...OBRA.map((o) => `NOT ${like('nombre_del_procedimiento', o)}`));
   if (minimo) filtros.push(`precio_base >= ${minimo}`);
   const filas = await socrata('p6dx-8zbt', {
     $select: 'id_del_proceso,entidad,ciudad_entidad,departamento_entidad,nombre_del_procedimiento,descripci_n_del_procedimiento,precio_base,modalidad_de_contratacion,fase,fecha_de_publicacion_del,fecha_de_recepcion_de,duracion,unidad_de_duracion,urlproceso',
@@ -100,7 +102,7 @@ async function secop1() {
     `estado_del_proceso = 'Convocado'`,
     cualquiera(['detalle_del_objeto_a_contratar']),
   ];
-  if (!todas) filtros.push(`NOT upper(modalidad_de_contratacion) like 'CONTRATACI_N DIRECTA%'`, ninguno('detalle_del_objeto_a_contratar'));
+  if (!todas) filtros.push(`NOT upper(modalidad_de_contratacion) like 'CONTRATACI_N DIRECTA%'`, `NOT upper(modalidad_de_contratacion) like '%R_GIMEN ESPECIAL%'`, `NOT upper(modalidad_de_contratacion) like 'CONTRATOS Y CONVENIOS%'`, ninguno('detalle_del_objeto_a_contratar'), ...OBRA.map((o) => `NOT ${like('detalle_del_objeto_a_contratar', o)}`));
   if (minimo) filtros.push(`cuantia_proceso >= ${minimo}`);
   const filas = await socrata('f789-7hwg', {
     $select: 'uid,numero_de_constancia,nombre_entidad,municipio_entidad,departamento_entidad,detalle_del_objeto_a_contratar,cuantia_proceso,modalidad_de_contratacion,fecha_de_cargue_en_el_secop,plazo_de_ejec_del_contrato,rango_de_ejec_del_contrato,ruta_proceso_en_secop_i',

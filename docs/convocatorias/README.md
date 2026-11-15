@@ -9,6 +9,7 @@ en Colombia, Latinoamérica y el mundo. Vale tanto lo que pide Trifuerza (SAS) c
 como persona natural (becas, fellowships, estímulos culturales para videojuegos, premios). Cada ítem dice quién lo pide.
 
 ## Reglas
+- **Nunca contratación directa** (no se puede ofertar: Juan David la descartó) ni régimen especial sin convocatoria abierta. **Nada de obra civil ni infraestructura** (acueductos, alcantarillado, vías, construcción, interventoría): solo tecnología, IA, servicios jurídicos, capacitación, videojuegos e innovación.
 - Solo dinero o algo de valor parecido: subvención, premio, capital o créditos de nube grandes. Nada de deuda comercial ni de «visibilidad».
 - Debe estar abierta hoy o abrir en las próximas 8 semanas, y la debe poder pedir una SAS colombiana pequeña (Technology, Legal/Contrappto, Academy) o Juan David como persona natural.
 - Toda fecha y todo monto salen de la página oficial o de prensa con fecha del año en curso. Si el cierre no aparece: «cierre sin confirmar». Nunca se inventa.
