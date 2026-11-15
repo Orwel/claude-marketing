@@ -54,6 +54,7 @@ También puedes escribirme normal: preguntas, links de Pinterest o Instagram, id
     texto: '🏛️ Plata y Estado. Para buscar algo puntual en el SECOP escribe, por ejemplo: /secop chatbot',
     botones: [
       ['🏛️ Licitaciones de tecnología e IA', 'c:/secop'],
+      ['📘 Cómo participar en el SECOP (paso a paso)', 'c:/guiasecop'],
       ['💰 Convocatorias y fondos (última edición)', 'c:/oportunidades'],
       ['🎮 Convocatorias de videojuegos', 'c:/oportunidades videojuegos'],
       ['🔎 Buscar convocatorias de legaltech', 'c:/oportunidades legaltech'],

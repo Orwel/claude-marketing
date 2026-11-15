@@ -10,8 +10,12 @@ aunque el PC esté apagado. Telegram le avisa cada mensaje por webhook y la func
 | Secretos | Supabase → Edge Functions → Secrets: `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`, `TELEGRAM_WEBHOOK_SECRET` y, opcional, `ANTHROPIC_API_KEY` |
 | Conexión con Telegram | `npm run bot-nube` (registrar), `-- --estado` (ver errores), `-- --quitar` (volver al modo PC) |
 
-Qué responde sin IA: el menú, /secop, /mercados, /analiza, /oportunidades (edición guardada), /meta, /avance, /caja.
-Qué necesita `ANTHROPIC_API_KEY`: /semana, /marketing, /estrategia, /finanzas, /entorno, /tendencias, /aprende y preguntas libres.
+Qué responde al instante, sin IA: el menú, /secop, /guiasecop (cómo participar en el SECOP), /mercados, /analiza,
+/oportunidades (edición guardada), /meta, /avance, /caja.
+Lo que necesita pensar (preguntas libres, /semana, /marketing, /entorno, /tendencias, /aprende) y las fotos de facturas
+los resuelve la rutina «Asistente IA (Telegram)» de claude.ai (`RUTINA-IA.md`), con la suscripción Max: la función
+avisa al instante «⏳ Recibido» y la respuesta llega en 1–2 minutos. Necesita el secreto `CLAUDE_ROUTINE_TOKEN`.
+Si algún día se pone `ANTHROPIC_API_KEY`, el texto se responde por API en segundos (de pago) y la rutina queda para las facturas.
 
 Para publicar una edición nueva de oportunidades se inserta en `bot.ediciones` (tema `general`, `videojuegos`, etc.).
 El escucha del PC (`npm run bot`, `ESCUCHA.md`) queda como respaldo: solo funciona si se quita el webhook, porque
