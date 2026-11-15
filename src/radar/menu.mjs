@@ -1,87 +1,99 @@
 #!/usr/bin/env node
 /**
- * Menú del bot, en dos formas, para no tener que acordarse de los comandos:
- *  1. La lista de comandos de Telegram (aparece al tocar «/» o el botón «Menú» junto al campo de texto).
- *  2. Botones fijos debajo del teclado (teclado persistente): tocar uno manda el comando como si se escribiera.
- * Juan David prefirió pedir la información cuando la quiere, en vez de recibirla todos los días (14-nov-2026).
- * Los comandos los atiende la rutina «Bandeja» (docs/bandeja/RUTINA.md), así que la respuesta tarda hasta 30 minutos.
+ * Menú del bot. Botones dentro del mensaje (inline), no un teclado fijo: el teclado fijo tapaba media pantalla y no se
+ * ocultaba (Juan David, 15-nov-2026). Cada botón dice en palabras qué hace, porque los comandos sueltos se olvidan.
+ * Los botones los contesta el escucha del PC (src/radar/escucha.mjs); sin él, Telegram muestra el reloj y no pasa nada.
  *
- *   npm run telegram-menu              pone la lista de comandos y manda la ayuda con los botones
- *   npm run telegram-menu -- --ayuda   solo manda la ayuda con los botones (lo usa la bandeja ante «hola», «menú», /start)
+ *   npm run telegram-menu              pone la lista de comandos, quita el teclado viejo y manda el menú
+ *   npm run telegram-menu -- --ayuda   solo manda el menú
  */
+import { fileURLToPath } from 'node:url';
 import { api } from './tg.mjs';
 
 export const COMANDOS = [
-  { command: 'semana', description: 'Comité de dirección: las cinco áreas en una página' },
-  { command: 'marketing', description: 'Cómo van las cuentas, competencia y videos de la semana' },
-  { command: 'estrategia', description: 'Metas del trimestre: bien, en riesgo o atrasadas' },
+  { command: 'menu', description: 'Abrir el menú con botones' },
+  { command: 'semana', description: 'Resumen de la semana: las cinco áreas' },
+  { command: 'marketing', description: 'Cuentas, competencia y videos de la semana' },
+  { command: 'estrategia', description: 'Metas: ¿voy bien o atrasado?' },
   { command: 'finanzas', description: 'Ingresos, gastos y caja del mes' },
-  { command: 'entorno', description: 'Economía global y Colombia, y qué le cambia a Trifuerza' },
-  { command: 'tendencias', description: 'Innovación en IA, legaltech, edtech y videojuegos' },
-  { command: 'secop', description: 'Licitaciones de tecnología e IA abiertas (o /secop <palabras>)' },
-  { command: 'oportunidades', description: 'Convocatorias, fondos y concursos (o /oportunidades videojuegos)' },
-  { command: 'mercados', description: 'Foto del día: TRM, dólar, S&P 500, tasas, petróleo' },
-  { command: 'analiza', description: 'Ficha fundamental de una empresa: /analiza EC' },
+  { command: 'entorno', description: 'Economía global y de Colombia, y qué me cambia' },
+  { command: 'tendencias', description: 'Tendencias e ideas en IA, legaltech, edtech, videojuegos' },
+  { command: 'secop', description: 'Licitaciones de tecnología (o /secop <palabras>)' },
+  { command: 'oportunidades', description: 'Convocatorias y fondos (o /oportunidades <tema>)' },
+  { command: 'mercados', description: 'Mercados hoy: TRM, dólar, bolsas, tasas' },
+  { command: 'analiza', description: 'Ficha fundamental: /analiza EC' },
   { command: 'aprende', description: 'Lección de análisis fundamental: /aprende WACC' },
-  { command: 'meta', description: 'Guardar una meta: /meta Contrappto: 50 usuarios pagos a 31-mar' },
-  { command: 'ayuda', description: 'Qué sé hacer y los botones' },
+  { command: 'meta', description: 'Guardar meta: /meta Contrappto: 50 usuarios pagos a 31-mar' },
 ];
 
-// Botones fijos: el texto de cada uno es el comando que llega a la bandeja. Los que piden algo más (empresa, tema)
-// traen un ejemplo; para otro, se escribe a mano («/analiza CIB», «/aprende DCF»).
-const BOTONES = [
-  ['/semana'],
-  ['/marketing', '/estrategia', '/finanzas'],
-  ['/entorno', '/tendencias', '/oportunidades'],
-  ['/secop', '/mercados', '/aprende'],
-  ['/ayuda'],
-];
+// Cada sección: texto que explica qué hay dentro y botones de una fila con nombre claro.
+// callback_data: «m:<sección>» abre una sección; «c:<comando>» lo ejecuta (máx. 64 bytes, lo pone Telegram).
+const SECCIONES = {
+  inicio: {
+    texto: `¿Qué necesitas?
 
-export const AYUDA = `Hola, Juan David. Esto es lo que puedes pedirme (toca un botón de abajo o escribe el comando):
+🧭 Dirección: cómo va el negocio (resumen de la semana, marketing, metas, finanzas, economía, tendencias)
+🏛️ Plata y Estado: licitaciones del SECOP, convocatorias y fondos
+📈 MBA y mercados: mercados del día, analizar empresas, lecciones
 
-DIRECCIÓN
-/semana: las cinco áreas en una página, con las 3 decisiones de la semana
-/marketing: cómo van las cuentas, qué funcionó, competencia y videos para esta semana
-/estrategia: tus metas del trimestre, si vas bien o atrasado. Guárdalas con /meta Contrappto: 50 usuarios pagos a 31-mar y actualízalas con /avance Contrappto: 12
-/finanzas: ingresos, gastos y caja del mes
-/entorno: economía global y de Colombia, y qué le cambia a Technology, Legal y Academy
-/tendencias: lo que se mueve en IA, legaltech, edtech, govtech y videojuegos, con ideas para aprovecharlo
+También puedes escribirme normal: preguntas, links de Pinterest o Instagram, ideas, facturas.`,
+    botones: [['🧭 Dirección', 'm:direccion'], ['🏛️ Plata y Estado', 'm:plata'], ['📈 MBA y mercados', 'm:mba']],
+  },
+  direccion: {
+    texto: '🧭 Dirección: ¿qué quieres ver?',
+    botones: [
+      ['🗓️ Resumen de la semana (las 5 áreas)', 'c:/semana'],
+      ['📣 Marketing: cómo van las cuentas', 'c:/marketing'],
+      ['🎯 Metas: ¿voy bien o atrasado?', 'c:/estrategia'],
+      ['💵 Finanzas del mes', 'c:/finanzas'],
+      ['🌎 Economía y qué le cambia a Trifuerza', 'c:/entorno'],
+      ['💡 Tendencias e ideas', 'c:/tendencias'],
+    ],
+  },
+  plata: {
+    texto: '🏛️ Plata y Estado. Para buscar algo puntual en el SECOP escribe, por ejemplo: /secop chatbot',
+    botones: [
+      ['🏛️ Licitaciones de tecnología e IA', 'c:/secop'],
+      ['💰 Convocatorias y fondos (última edición)', 'c:/oportunidades'],
+      ['🎮 Convocatorias de videojuegos', 'c:/oportunidades videojuegos'],
+      ['🔎 Buscar convocatorias de legaltech', 'c:/oportunidades legaltech'],
+    ],
+  },
+  mba: {
+    texto: '📈 MBA y mercados. Para otra empresa escribe /analiza y su ticker (AAPL, CIB, AVAL…).',
+    botones: [
+      ['📊 Mercados hoy', 'c:/mercados'],
+      ['🛢️ Analizar Ecopetrol (EC)', 'c:/analiza EC'],
+      ['🏦 Analizar Bancolombia (CIB)', 'c:/analiza CIB'],
+      ['📚 Siguiente lección de la ruta', 'c:/aprende'],
+    ],
+  },
+};
 
-INNOVACIÓN Y ESTADO
-/secop: licitaciones de tecnología e IA abiertas en el SECOP. Con palabras: /secop chatbot, /secop gestión documental --dias 60
-
-/oportunidades: convocatorias, fondos y concursos para Trifuerza o para ti (tecnología, IA, videojuegos, innovación; Colombia, Latam y mundo). Con tema: /oportunidades videojuegos
-
-MBA Y MERCADOS
-/mercados: foto del día (TRM, dólar, S&P 500, Nasdaq, bono a 10 años, Brent, ADR colombianos)
-
-/analiza EC: ficha fundamental de una empresa que reporta a la SEC (estados, DuPont, deuda, caja) con 3 preguntas para que des tu lectura primero
-
-/aprende WACC: lección corta de análisis fundamental con ejemplo real y ejercicio. Sin tema, te propongo la siguiente de la ruta
-
-También sigo recibiendo lo de siempre: links de Pinterest o Instagram, competidores, ideas de video, facturas y preguntas.
-
-Respondo en máximo 30 minutos. Si se te olvida algo, escribe «menú» o /ayuda.`;
-
-if (!process.env.TELEGRAM_BOT_TOKEN || !process.env.TELEGRAM_CHAT_ID) { console.error('Faltan TELEGRAM_BOT_TOKEN y TELEGRAM_CHAT_ID en .env.'); process.exit(1); }
-
-if (!process.argv.includes('--ayuda')) {
-  const j = await api('setMyCommands', { commands: COMANDOS, scope: { type: 'all_private_chats' } });
-  if (!j.ok) { console.error('Telegram:', j.description); process.exit(1); }
-  // El botón «Menú» junto al campo de texto abre la lista de comandos.
-  await api('setChatMenuButton', { menu_button: { type: 'commands' } });
-  console.log('Lista de comandos puesta.');
+export function seccion(nombre = 'inicio') {
+  const s = SECCIONES[nombre] ?? SECCIONES.inicio;
+  const filas = nombre === 'inicio'
+    ? [s.botones.map(([text, callback_data]) => ({ text, callback_data }))]
+    : [...s.botones.map(([text, callback_data]) => [{ text, callback_data }]), [{ text: '⬅️ Volver al menú', callback_data: 'm:inicio' }]];
+  return { text: s.texto, reply_markup: { inline_keyboard: filas } };
 }
 
-const r = await api('sendMessage', {
-  chat_id: process.env.TELEGRAM_CHAT_ID,
-  text: AYUDA,
-  reply_markup: {
-    keyboard: BOTONES.map((fila) => fila.map((text) => ({ text }))),
-    is_persistent: true, // los botones quedan siempre visibles, no se esconden después de usarlos
-    resize_keyboard: true,
-    input_field_placeholder: 'Escribe o toca un botón',
-  },
-});
-if (!r.ok) { console.error('Telegram:', r.description); process.exit(1); }
-console.log('Ayuda con botones enviada.');
+export async function mandarMenu(chatId = process.env.TELEGRAM_CHAT_ID) {
+  return api('sendMessage', { chat_id: chatId, ...seccion('inicio') });
+}
+
+// Solo si se corre directo (el escucha importa este archivo sin disparar nada).
+if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) {
+  if (!process.env.TELEGRAM_BOT_TOKEN || !process.env.TELEGRAM_CHAT_ID) { console.error('Faltan TELEGRAM_BOT_TOKEN y TELEGRAM_CHAT_ID en .env.'); process.exit(1); }
+  if (!process.argv.includes('--ayuda')) {
+    const j = await api('setMyCommands', { commands: COMANDOS, scope: { type: 'all_private_chats' } });
+    if (!j.ok) { console.error('Telegram:', j.description); process.exit(1); }
+    await api('setChatMenuButton', { menu_button: { type: 'commands' } });
+    // Quita el teclado fijo de antes: Telegram solo lo retira con un mensaje que lleve remove_keyboard.
+    await api('sendMessage', { chat_id: process.env.TELEGRAM_CHAT_ID, text: 'Quité los botones fijos de abajo. Ahora el menú va dentro del mensaje 👇', reply_markup: { remove_keyboard: true } });
+    console.log('Lista de comandos puesta y teclado fijo retirado.');
+  }
+  const r = await mandarMenu();
+  if (!r.ok) { console.error('Telegram:', r.description); process.exit(1); }
+  console.log('Menú enviado.');
+}

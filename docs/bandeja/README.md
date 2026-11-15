@@ -10,7 +10,7 @@ cada hora (`src/radar/bandeja.mjs`) y lo guarda aquí, en el repo, para que lo u
 | `ideas.md` | Ideas de videos, temas, frases | radar-redes (paso 5) y la parrilla del mes |
 | `facturas.md` | Registro de las facturas y soportes que mandó y dónde quedaron (Drive y Notion) | finanzas |
 
-Comandos que entiende (los atiende la rutina, así que la respuesta tarda hasta 30 minutos):
+Comandos que entiende. Con el PC encendido responde al instante el escucha (`ESCUCHA.md`); si no, la rutina de la nube, cuando exista:
 
 | Comando | Qué hace |
 |---|---|

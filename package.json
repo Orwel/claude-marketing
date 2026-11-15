@@ -38,7 +38,10 @@
     "telegram": "node --use-system-ca src/radar/telegram.mjs",
     "secop": "node --use-system-ca src/radar/secop.mjs",
     "mercados": "node --use-system-ca src/radar/mercados.mjs",
-    "telegram-menu": "node --use-system-ca src/radar/menu.mjs"
+    "telegram-menu": "node --use-system-ca src/radar/menu.mjs",
+    "bot": "node --use-system-ca src/radar/escucha.mjs",
+    "bot-arranque": "node -e \"require('fs').copyFileSync('src/radar/arranque.vbs', require('path').join(process.env.APPDATA, 'Microsoft/Windows/Start Menu/Programs/Startup/escucha-bot.vbs')); console.log('Listo: el escucha arrancará al iniciar sesión.')\"",
+    "blender": "node src/blender/render.mjs"
   },
   "dependencies": {
     "@react-three/drei": "^10.7.9",

@@ -1370,3 +1370,9 @@ Videos: IMG_3770, IMG_3772 e IMG_3776 de octubre (iPhone). Salieron `la-ia-que-n
 - Juan David prefiere pedir la información con el menú de comandos del bot (/secop, /oportunidades, /mercados, /analiza, /aprende) y no recibirla todos los días: se satura. El menú se pone con `npm run telegram-menu`.
 - Mercados es material de estudio del MBA (análisis fundamental), no asesoría: no hace falta repetirle advertencias de «no soy asesor»; enseñar el método y hacer las cuentas con él (skill analisis-financiero).
 - SEC EDGAR: las empresas cambian de concepto XBRL con los años (Apple dejó «Revenues» en 2018); se elige el concepto con el cierre más reciente. EDGAR pide User-Agent con contacto (SEC_USER_AGENT). Yahoo no tiene el COLCAP; la TRM oficial sale de datos.gov.co (32sa-8pi3).
+
+## Bot de Telegram: respuesta inmediata y menú (15-nov-2026)
+- La rutina «Bandeja» de la nube nunca se creó: los comandos quedaron 13 horas sin leer. Ahora responde el escucha del PC (`npm run bot`, `docs/bandeja/ESCUCHA.md`), con long polling, y usa `claude -p` para lo que hay que pensar.
+- El `claude` de la terminal tiene su propia sesión, aparte de la app de escritorio, y puede vencerse («OAuth session expired»). El escucha lo avisa en el chat; se arregla con `claude` → `/login`.
+- A Juan David no le sirvió el teclado fijo de abajo: no se oculta y no recordaba qué era cada comando. Ahora los botones van dentro del mensaje, por secciones y con nombres que dicen lo que hacen.
+- Dos lectores de getUpdates a la vez dan 409: el escucha espera y reintenta, no se cierra.
