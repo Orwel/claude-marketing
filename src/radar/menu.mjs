@@ -23,6 +23,8 @@ export const COMANDOS = [
   { command: 'mercados', description: 'Mercados hoy: TRM, dólar, bolsas, tasas' },
   { command: 'analiza', description: 'Ficha fundamental: /analiza EC' },
   { command: 'aprende', description: 'Lección de análisis fundamental: /aprende WACC' },
+  { command: 'vigila', description: 'Vigilar algo y avisarme solo lo nuevo: /vigila Estímulos 2027' },
+  { command: 'vigilancias', description: 'Lo que estoy vigilando' },
   { command: 'meta', description: 'Guardar meta: /meta Contrappto: 50 usuarios pagos a 31-mar' },
 ];
 
@@ -58,6 +60,7 @@ También puedes escribirme normal: preguntas, links de Pinterest o Instagram, id
       ['💰 Convocatorias y fondos (última edición)', 'c:/oportunidades'],
       ['🎮 Convocatorias de videojuegos', 'c:/oportunidades videojuegos'],
       ['🔎 Buscar convocatorias de legaltech', 'c:/oportunidades legaltech'],
+      ['🔭 Qué estoy vigilando (y agregar más)', 'c:/vigilancias'],
     ],
   },
   mba: {

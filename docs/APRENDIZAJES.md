@@ -1379,3 +1379,9 @@ Videos: IMG_3770, IMG_3772 e IMG_3776 de octubre (iPhone). Salieron `la-ia-que-n
 - El bot quedó en una Edge Function del proyecto Trifuerza (`docs/bandeja/NUBE.md`) porque el PC no siempre está prendido. El conector de Supabase autoriza una sola organización cada vez: para ver Contrappto y Trifuerza al tiempo habría que agregarlo dos veces (uno como conector personalizado).
 - Con facturas vencidas, Supabase pausa los proyectos y baja la organización a Free. Para reactivarlos hay que pagar lo pendiente, y pagarlo no renueva el plan Pro. El cupo gratis (2 proyectos activos) se suma entre todos los Owner y Admin de la organización.
 - Claude no puede escribir tokens en los Secrets de Supabase: Juan David los copia desde `.env`.
+
+## Vigías y rutina IA del bot (15-nov-2026)
+- La IA del bot corre como rutina de claude.ai disparada por API (`/fire`): usa la suscripción Max, sin API pagada, y responde en unos 30 s. El token del disparador solo se genera en la web (Trigger → API). Las rutinas creadas por API se pueden editar en la web desde «Editar».
+- Villavieja (mínima cuantía de $20 M) abrió el 9-nov y cerró el 13-nov: los datos abiertos llegan con 1–2 días de retraso. Para eso se montaron los vigías (`docs/bandeja/VIGIAS.md`). La alerta más rápida es la propia del SECOP II por códigos UNSPSC.
+- datos.gov.co recargó el SECOP II el 15-nov y por horas solo mostró 1.000 filas de 2024: si /secop sale vacío, revisar con `$select=max(fecha_de_publicacion_del)` antes de culpar al filtro.
+- Experiencia para licitar: los cursos gratis y los términos y condiciones no cuentan. Cuentan los contratos con valor y certificación de un contratante. Trifuerza tiene 5 años, así que ya no puede usar la experiencia de los socios.

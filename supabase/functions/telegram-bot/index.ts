@@ -6,6 +6,8 @@
  * - /semana, /estrategia, /entorno, /tendencias, /aprende, preguntas y fotos de facturas: los resuelve la rutina
  *   «Asistente IA (Telegram)» de claude.ai con la suscripción Max (1–2 min, sin API pagada). Si algún día se pone
  *   ANTHROPIC_API_KEY, el texto se responde por API (segundos) y la rutina queda para las facturas.
+ * - Vigía: pg_cron llama ?tarea=vigia cada 2 horas y avisa licitaciones nuevas y relevantes del SECOP.
+ * - /vigila, /vigilancias, /olvida: lista que recorre cada mañana la rutina «Vigía de oportunidades».
  *
  * Secretos (los pone Juan David en Supabase → Edge Functions → Secrets; el código nunca los lleva):
  *   TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID, TELEGRAM_WEBHOOK_SECRET, CLAUDE_ROUTINE_TOKEN (token del disparador API de la
@@ -64,13 +66,14 @@ También puedes escribirme normal y te respondo.`,
     ],
   },
   plata: {
-    texto: '🏛️ Plata y Estado. Para buscar algo puntual en el SECOP escribe, por ejemplo: /secop chatbot',
+    texto: '🏛️ Plata y Estado. Para buscar algo puntual en el SECOP escribe, por ejemplo: /secop chatbot. Para que te avise solo de algo nuevo: /vigila <tema>.',
     botones: [
       ['🏛️ Licitaciones de tecnología e IA', 'c:/secop'],
       ['📘 Cómo participar en el SECOP (paso a paso)', 'c:/guiasecop'],
       ['💰 Convocatorias y fondos (última edición)', 'c:/oportunidades'],
       ['🎮 Convocatorias de videojuegos', 'c:/oportunidades videojuegos'],
       ['🔎 Buscar convocatorias de legaltech', 'c:/oportunidades legaltech'],
+      ['🔭 Qué estoy vigilando (y agregar más)', 'c:/vigilancias'],
     ],
   },
   mba: {
@@ -117,7 +120,10 @@ async function socrata(dataset: string, params: Record<string, string | number>)
   return r.json();
 }
 
-async function secop(argumentos: string) {
+type P = { id: string; entidad: string; lugar: string; objeto: string; valor: number; modalidad: string; publicado: string; cierre?: string; duracion: string; url?: string; secop: string; puntaje: number };
+
+// Busca y devuelve datos (la usan /secop y el vigía); el texto lo arma secop().
+async function buscarSecop(argumentos: string) {
   const partes = argumentos.split(/\s+/).filter(Boolean);
   const valor = (n: string, def: number) => { const i = partes.indexOf(n); return i >= 0 ? Number(partes[i + 1]) : def; };
   const conValor = new Set(['--dias', '--min', '--max']);
@@ -141,32 +147,39 @@ async function secop(argumentos: string) {
   if (minimo) f1.push(`cuantia_proceso >= ${minimo}`);
 
   const [r2, r1] = await Promise.allSettled([
-    socrata('p6dx-8zbt', { $select: 'entidad,ciudad_entidad,departamento_entidad,nombre_del_procedimiento,descripci_n_del_procedimiento,precio_base,modalidad_de_contratacion,fecha_de_publicacion_del,fecha_de_recepcion_de,duracion,unidad_de_duracion,urlproceso', $where: f2.join(' AND '), $order: 'fecha_de_publicacion_del DESC', $limit: 400 }),
+    socrata('p6dx-8zbt', { $select: 'id_del_proceso,entidad,ciudad_entidad,departamento_entidad,nombre_del_procedimiento,descripci_n_del_procedimiento,precio_base,modalidad_de_contratacion,fecha_de_publicacion_del,fecha_de_recepcion_de,duracion,unidad_de_duracion,urlproceso', $where: f2.join(' AND '), $order: 'fecha_de_publicacion_del DESC', $limit: 400 }),
     socrata('f789-7hwg', { $select: 'numero_de_constancia,nombre_entidad,municipio_entidad,departamento_entidad,detalle_del_objeto_a_contratar,cuantia_proceso,modalidad_de_contratacion,fecha_de_cargue_en_el_secop,ruta_proceso_en_secop_i', $where: f1.join(' AND '), $order: 'fecha_de_cargue_en_el_secop DESC', $limit: 200 }),
   ]);
-  // deno-lint-ignore no-explicit-any
-  type P = { entidad: string; lugar: string; objeto: string; valor: number; modalidad: string; publicado: string; cierre?: string; duracion: string; url?: string; secop: string };
   let procesos: P[] = [];
   // deno-lint-ignore no-explicit-any
-  if (r2.status === 'fulfilled') procesos.push(...r2.value.map((f: any) => ({ entidad: f.entidad, lugar: [f.ciudad_entidad, f.departamento_entidad].filter((x: string) => x && x !== 'No Definido').join(', '), objeto: f.nombre_del_procedimiento || f.descripci_n_del_procedimiento, valor: Number(f.precio_base) || 0, modalidad: f.modalidad_de_contratacion, publicado: f.fecha_de_publicacion_del, cierre: f.fecha_de_recepcion_de, duracion: Number(f.duracion) > 0 ? `${f.duracion} ${String(f.unidad_de_duracion ?? '').toLowerCase()}` : '', url: f.urlproceso?.url, secop: 'II' })));
+  if (r2.status === 'fulfilled') procesos.push(...r2.value.map((f: any) => ({ id: `II:${f.id_del_proceso}`, puntaje: 0, entidad: f.entidad, lugar: [f.ciudad_entidad, f.departamento_entidad].filter((x: string) => x && x !== 'No Definido').join(', '), objeto: f.nombre_del_procedimiento || f.descripci_n_del_procedimiento, valor: Number(f.precio_base) || 0, modalidad: f.modalidad_de_contratacion, publicado: f.fecha_de_publicacion_del, cierre: f.fecha_de_recepcion_de, duracion: Number(f.duracion) > 0 ? `${f.duracion} ${String(f.unidad_de_duracion ?? '').toLowerCase()}` : '', url: f.urlproceso?.url, secop: 'II' })));
   // deno-lint-ignore no-explicit-any
-  if (r1.status === 'fulfilled') procesos.push(...[...new Map(r1.value.map((f: any) => [f.numero_de_constancia, f])).values()].map((f: any) => ({ entidad: f.nombre_entidad, lugar: [f.municipio_entidad, f.departamento_entidad].filter(Boolean).join(', '), objeto: f.detalle_del_objeto_a_contratar, valor: Number(f.cuantia_proceso) || 0, modalidad: f.modalidad_de_contratacion, publicado: f.fecha_de_cargue_en_el_secop, duracion: '', url: f.ruta_proceso_en_secop_i?.url, secop: 'I' })));
-  if (r1.status === 'rejected' && r2.status === 'rejected') return `No pude consultar el SECOP ahora (${r2.reason?.message}). Intenta en unos minutos.`;
+  if (r1.status === 'fulfilled') procesos.push(...[...new Map(r1.value.map((f: any) => [f.numero_de_constancia, f])).values()].map((f: any) => ({ id: `I:${f.numero_de_constancia}`, puntaje: 0, entidad: f.nombre_entidad, lugar: [f.municipio_entidad, f.departamento_entidad].filter(Boolean).join(', '), objeto: f.detalle_del_objeto_a_contratar, valor: Number(f.cuantia_proceso) || 0, modalidad: f.modalidad_de_contratacion, publicado: f.fecha_de_cargue_en_el_secop, duracion: '', url: f.ruta_proceso_en_secop_i?.url, secop: 'I' })));
+  const error = r1.status === 'rejected' && r2.status === 'rejected' ? String(r2.reason?.message) : '';
 
   const vistos = new Set<string>();
   procesos = procesos.filter((p) => { const k = `${p.entidad}|${p.objeto?.slice(0, 80)}`; if (vistos.has(k)) return false; vistos.add(k); return true; });
   const enTitulo = new RegExp(terminos.map((t) => t.replace(/''/g, "'").replace(/_/g, '.')).join('|'));
-  const puntaje = (p: P) => { const t = (p.objeto ?? '').toUpperCase().replace(/[ÁÉÍÓÚÜÑ]/g, '.'); return (enTitulo.test(t) ? 3 : 0) + (NUCLEO.test(t) ? 2 : 0) - (COMPRA.test(t) ? 1 : 0); };
-  procesos.sort((a, b) => puntaje(b) - puntaje(a) || b.valor - a.valor);
-  const total = procesos.length;
-  procesos = procesos.slice(0, max);
+  for (const p of procesos) { const t = (p.objeto ?? '').toUpperCase().replace(/[ÁÉÍÓÚÜÑ]/g, '.'); p.puntaje = (enTitulo.test(t) ? 3 : 0) + (NUCLEO.test(t) ? 2 : 0) - (COMPRA.test(t) ? 1 : 0); }
+  procesos.sort((a, b) => b.puntaje - a.puntaje || b.valor - a.valor);
+  return { procesos, dias, max, minimo, palabras, todas, error };
+}
+
+const lineaProceso = (p: P) => [`• ${capital(p.entidad)}${p.lugar ? ` (${capital(p.lugar)})` : ''}`, `  ${recorta(p.objeto)}`,
+  `  ${pesos(p.valor)} · ${p.modalidad}${p.duracion ? ` · ${p.duracion}` : ''} · publicado ${fechaCorta(p.publicado)}${p.cierre ? ` · ofertas hasta ${fechaCorta(p.cierre)}` : ''} · SECOP ${p.secop}`,
+  `  ${p.url ?? ''}`].join('\n');
+
+async function secop(argumentos: string) {
+  const r = await buscarSecop(argumentos);
+  if (r.error) return `No pude consultar el SECOP ahora (${r.error}). Intenta en unos minutos.`;
+  const { dias, minimo, palabras, todas } = r;
+  const total = r.procesos.length;
+  const procesos = r.procesos.slice(0, r.max);
 
   const busqueda = palabras.length ? `«${palabras.join(' ')}»` : 'tecnología e IA';
   const enc = `🏛️ Licitaciones abiertas · ${busqueda} · últimos ${dias} días${minimo ? ` · desde ${pesos(minimo)}` : ''}`;
   if (!procesos.length) return `${enc}\n\nNo hay procesos con esos filtros. Prueba otras palabras o --dias 60.`;
-  const cuerpo = procesos.map((p) => [`• ${capital(p.entidad)}${p.lugar ? ` (${capital(p.lugar)})` : ''}`, `  ${recorta(p.objeto)}`,
-    `  ${pesos(p.valor)} · ${p.modalidad}${p.duracion ? ` · ${p.duracion}` : ''} · publicado ${fechaCorta(p.publicado)}${p.cierre ? ` · ofertas hasta ${fechaCorta(p.cierre)}` : ''} · SECOP ${p.secop}`,
-    `  ${p.url ?? ''}`].join('\n'));
+  const cuerpo = procesos.map(lineaProceso);
   return `${enc}\n\n${cuerpo.join('\n\n')}\n\n${total > procesos.length ? `Mostrando ${procesos.length} de ${total}. Afina con más palabras, --min o --dias.\n` : ''}${todas ? '' : 'Oculta contratación directa y persona natural (--todas para verlos).\n'}Confirma fechas y pliegos en la ficha del SECOP (los datos llegan con 1–2 días de retraso).`;
 }
 
@@ -362,6 +375,25 @@ async function rutina(datos: Record<string, unknown>) {
   return true;
 }
 
+// ---------- Vigía del SECOP: lo llama pg_cron cada 2 horas; solo avisa lo nuevo y relevante ----------
+// No lleva secreto: solo puede mandarle mensajes a Juan David, no repite lo ya avisado y no corre dos veces en 30 min.
+async function vigia() {
+  const corrio = await sql`insert into bot.vigia (clave, ultima) values ('secop', now())
+    on conflict (clave) do update set ultima = now() where bot.vigia.ultima < now() - interval '30 minutes' returning clave`;
+  if (!corrio.length) return 'muy seguido';
+  const r = await buscarSecop('--dias 4 --min 5000000');
+  if (r.error) return r.error;
+  // Relevante = lo que Trifuerza sí hace (puntaje ≥ 2): IA, desarrollo, plataformas, apps, datos, automatización.
+  const candidatos = r.procesos.filter((p) => p.puntaje >= 2);
+  if (!candidatos.length) return 'sin candidatos';
+  const ya = new Set((await sql`select id from bot.vistos where id = any(${candidatos.map((p) => p.id)})`).map((x) => x.id as string));
+  const nuevos = candidatos.filter((p) => !ya.has(p.id)).slice(0, 10);
+  if (!nuevos.length) return 'nada nuevo';
+  await sql`insert into bot.vistos ${sql(nuevos.map((p) => ({ id: p.id })))} on conflict do nothing`;
+  await decirLargo(`🚨 ${nuevos.length === 1 ? 'Nueva licitación que te puede servir' : `${nuevos.length} licitaciones nuevas que te pueden servir`}\n\n${nuevos.map(lineaProceso).join('\n\n')}\n\nOjo: la mínima cuantía cierra en pocos días. Para revisar una, pégame el enlace y pregúntame qué piden.`);
+  return `avisados ${nuevos.length}`;
+}
+
 // ---------- Atención de cada mensaje ----------
 async function atender(texto: string) {
   const t = texto.trim();
@@ -396,6 +428,23 @@ async function atender(texto: string) {
     const dato = (k: string) => m[2].match(new RegExp(`${k}\\s*\\$?([\\d.,]+\\s*\\w*)`, 'i'))?.[1] ?? null;
     await sql`insert into bot.finanzas (mes, ingresos, gastos, caja) values (${m[1].trim()}, ${dato('ingresos')}, ${dato('gastos')}, ${dato('caja')})`;
     return void (await decir(`💵 Cifras de ${m[1].trim()} guardadas.`));
+  }
+  // Lista de vigilancia: la recorre cada mañana la rutina «Vigía de oportunidades» y solo avisa lo nuevo.
+  if (c === '/vigila') {
+    if (!args) return void (await decir('¿Qué vigilo? Por ejemplo: /vigila Estímulos 2027 videojuegos, o /vigila licitaciones privadas Ecopetrol software'));
+    await sql`insert into bot.vigilancias (tema) values (${args})`;
+    return void (await decir(`🔭 Listo, lo vigilo desde mañana: «${args}». Te aviso solo cuando aparezca algo nuevo. Ver la lista: /vigilancias`));
+  }
+  if (c === '/vigilancias') {
+    const v = await sql`select id, tema from bot.vigilancias where activa order by id`;
+    return void (await decirLargo(v.length ? `🔭 Lo que vigilo cada mañana (de lunes a viernes):\n\n${v.map((x, i) => `${i + 1}. ${x.tema}`).join('\n')}\n\nAgregar: /vigila <tema> · Quitar: /olvida <número>` : 'No estoy vigilando nada. Agrega con /vigila <tema>.'));
+  }
+  if (c === '/olvida') {
+    const n = Number(args);
+    const v = await sql`select id, tema from bot.vigilancias where activa order by id`;
+    if (!n || !v[n - 1]) return void (await decir('Dime el número de la lista: /olvida 3 (mira los números con /vigilancias).'));
+    await sql`update bot.vigilancias set activa = false where id = ${v[n - 1].id}`;
+    return void (await decir(`Listo, dejé de vigilar: «${v[n - 1].tema}».`));
   }
   if ((c === '/oportunidades' || c === '/convocatorias')) {
     const ed = await oportunidades(args);
@@ -452,6 +501,11 @@ async function procesar(u: Record<string, any>) {
 
 Deno.serve(async (req) => {
   if (req.method !== 'POST') return new Response('ok');
+  if (new URL(req.url).searchParams.get('tarea') === 'vigia') {
+    // @ts-ignore EdgeRuntime existe en Supabase
+    EdgeRuntime.waitUntil(vigia().then((x) => console.log('vigía:', x)).catch((e) => console.error('vigía', e)));
+    return new Response('vigía en marcha');
+  }
   // Solo Telegram conoce este secreto (se lo damos al registrar el webhook).
   const secreto = env('TELEGRAM_WEBHOOK_SECRET');
   if (!secreto || req.headers.get('x-telegram-bot-api-secret-token') !== secreto) return new Response('no', { status: 401 });
