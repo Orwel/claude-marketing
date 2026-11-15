@@ -1376,3 +1376,6 @@ Videos: IMG_3770, IMG_3772 e IMG_3776 de octubre (iPhone). Salieron `la-ia-que-n
 - El `claude` de la terminal tiene su propia sesión, aparte de la app de escritorio, y puede vencerse («OAuth session expired»). El escucha lo avisa en el chat; se arregla con `claude` → `/login`.
 - A Juan David no le sirvió el teclado fijo de abajo: no se oculta y no recordaba qué era cada comando. Ahora los botones van dentro del mensaje, por secciones y con nombres que dicen lo que hacen.
 - Dos lectores de getUpdates a la vez dan 409: el escucha espera y reintenta, no se cierra.
+- El bot quedó en una Edge Function del proyecto Trifuerza (`docs/bandeja/NUBE.md`) porque el PC no siempre está prendido. El conector de Supabase autoriza una sola organización cada vez: para ver Contrappto y Trifuerza al tiempo habría que agregarlo dos veces (uno como conector personalizado).
+- Con facturas vencidas, Supabase pausa los proyectos y baja la organización a Free. Para reactivarlos hay que pagar lo pendiente, y pagarlo no renueva el plan Pro. El cupo gratis (2 proyectos activos) se suma entre todos los Owner y Admin de la organización.
+- Claude no puede escribir tokens en los Secrets de Supabase: Juan David los copia desde `.env`.
