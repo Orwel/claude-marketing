@@ -8,7 +8,7 @@
  *   ANTHROPIC_API_KEY, el texto se responde por API (segundos) y la rutina queda para las facturas.
  * - Vigía: pg_cron llama ?tarea=vigia cada 2 horas y avisa licitaciones nuevas y relevantes del SECOP.
  * - /vigila, /vigilancias, /olvida: lista que recorre cada mañana la rutina «Vigía de oportunidades».
- * - Videos y links: pregunta para qué son (gráfica, marketing, mejora, tener en cuenta), los guarda en bot.referencias
+ * - Videos y links: pregunta para qué son (gráfica, marketing, competencia, mejora, tener en cuenta), los guarda en bot.referencias
  *   y la rutina los analiza (cuadros + Whisper). /referencias los lista.
  *
  * Secretos (los pone Juan David en Supabase → Edge Functions → Secrets; el código nunca los lleva):
@@ -464,20 +464,22 @@ async function transcribir(fileId: string) {
 
 // ---------- Videos y links de referencia ----------
 // Juan David manda videos o links (Pinterest, Instagram, TikTok, YouTube) que pueden ser referencia gráfica, estrategia
-// de marketing, una mejora para el sistema o algo para tener en cuenta. Si el texto no lo dice, el bot pregunta con
+// de marketing, benchmarking de la competencia, una mejora para el sistema o algo para tener en cuenta. Si el texto no lo dice, el bot pregunta con
 // botones; con la etiqueta, la rutina lo analiza y deja la ficha en bot.referencias (la lee el radar de los lunes).
 const ETIQUETAS: Record<string, string> = {
   grafica: '🎨 Referencia gráfica (estilo, look, animación)',
   marketing: '📣 Estrategia de marketing (gancho, formato, por qué pega)',
+  competencia: '🥊 Benchmarking de la competencia (qué les funciona)',
   mejora: '🛠️ Mejora para el sistema (bot, estudio, flujos)',
   tener_en_cuenta: '📌 Tener en cuenta (idea, herramienta, dato)',
 };
-const CORTA: Record<string, string> = { grafica: '🎨 gráfica', marketing: '📣 marketing', mejora: '🛠️ mejora', tener_en_cuenta: '📌 tener en cuenta' };
+const CORTA: Record<string, string> = { grafica: '🎨 gráfica', marketing: '📣 marketing', competencia: '🥊 competencia', mejora: '🛠️ mejora', tener_en_cuenta: '📌 tener en cuenta' };
 const LINK_REDES = /https?:\/\/(?:www\.|m\.|[a-z]{2}\.)?(?:pinterest\.[a-z.]+|pin\.it|instagram\.com|instagr\.am|tiktok\.com|vm\.tiktok\.com|youtube\.com|youtu\.be|x\.com|twitter\.com|facebook\.com|fb\.watch|threads\.net|behance\.net|dribbble\.com|vimeo\.com)\/\S+/i;
 // Si él ya dice para qué es, no se le pregunta.
 function etiquetaDe(texto: string) {
   const t = texto.toLowerCase();
   if (/mejora|sistema|al bot|el bot|automatiz|flujo|implementa|integra/.test(t)) return 'mejora';
+  if (/competencia|competidor|benchmark|la competencia/.test(t)) return 'competencia';
   if (/marketing|estrategia|gancho|viral|algoritmo|alcance|engagement|copy/.test(t)) return 'marketing';
   if (/gr[aá]fic|estilo|look|animaci|referencia visual|paleta|tipograf|transici|est[eé]tica/.test(t)) return 'grafica';
   if (/tener en cuenta|ojo|apunta|guarda esto|para despu[eé]s|idea/.test(t)) return 'tener_en_cuenta';
@@ -508,7 +510,7 @@ async function listarReferencias(filtro: string) {
     : await sql`select id, etiqueta, estado, resumen, url, texto, creado from bot.referencias where estado <> 'descartado' order by id desc limit 15`;
   if (!filas.length) return 'Todavía no hay videos ni links guardados. Mándame uno y te pregunto para qué es.';
   const estado: Record<string, string> = { sin_etiqueta: '❔ sin etiqueta', analizando: '⏳ analizando', analizado: '✅', usado: '🏁 usado' };
-  return `🎬 Videos y links guardados${k ? ` (${CORTA[k]})` : ''}:\n\n${filas.map((x) => `#${x.id} ${x.etiqueta ? CORTA[x.etiqueta] : ''} ${estado[x.estado] ?? ''} · ${fechaCorta(x.creado)}\n  ${recorta(x.resumen || x.texto || x.url || 'video sin texto', 160)}`).join('\n\n')}\n\nFiltrar: /referencias grafica · marketing · mejora · tener\nVer una: /referencia <número>`;
+  return `🎬 Videos y links guardados${k ? ` (${CORTA[k]})` : ''}:\n\n${filas.map((x) => `#${x.id} ${x.etiqueta ? CORTA[x.etiqueta] : ''} ${estado[x.estado] ?? ''} · ${fechaCorta(x.creado)}\n  ${recorta(x.resumen || x.texto || x.url || 'video sin texto', 160)}`).join('\n\n')}\n\nFiltrar: /referencias grafica · marketing · competencia · mejora · tener\nVer una: /referencia <número>`;
 }
 
 // ---------- Atención de cada mensaje ----------

@@ -40,7 +40,7 @@ Mensaje:
 El bot guarda cada video o link en `bot.referencias` y, si el texto no dice para qué es, le pregunta con botones.
 La rutina recibe `{"comando":"referencia","referencia_id","etiqueta","video_file_id","url","texto"}` y hace esto:
 
-1. **Bajar el material** a `trabajo/bandeja/ref-<id>/`:
+1. **Bajar el material** a `trabajo/bandeja/ref-<id>/` (solo para mirarlo: vive en la sesión de la nube y desaparece al terminar; lo que se guarda es el análisis):
    - Video de Telegram: `node src/radar/bajar-archivo.mjs <video_file_id> ref-<id>.mp4` (hasta 20 MB).
    - Link: saca la URL directa como dice la cabecera de `src/archivo/referencia.mjs` (Pinterest: buscar `v1.pinimg.com/videos/…_720w.mp4`
      en el HTML del pin; Instagram: `instagram.com/p/<código>/embed/captioned/`). Si no sale, `pip install -q yt-dlp` y
@@ -60,6 +60,12 @@ La rutina recibe `{"comando":"referencia","referencia_id","etiqueta","video_file
      qué funciona; luego cómo adaptarlo a cada cuenta según `docs/LINEA-ESTRUCTURAL.md` y `docs/TONO.md`, con 1 o 2 ideas
      de video con gancho directo y humano. Si muestra una herramienta (p. ej. un «virality predictor»), explica qué hace,
      cuánto cuesta, si sirve de verdad y qué alternativa gratis o propia hay.
+   - `competencia`: benchmarking. Quién es la cuenta (nombre, seguidores, frecuencia, de qué vive) y, de esta pieza, las cifras
+     que se vean (vistas, me gusta, comentarios, fecha; en Instagram salen en `/embed/captioned/`). Si se puede, compárala con
+     sus últimas 6–12 piezas: ¿le fue mejor o peor que su mediana y por qué? Qué hace bien (gancho, formato, serie, CTA,
+     frecuencia), qué hace mal, qué hueco deja que podamos ocupar y qué haríamos distinto, por cuenta. Si es un competidor
+     nuevo, dilo y recuérdale agregarlo en Metricool → Competidores y en `referencias/competencia.json` (lo hace el radar).
+     En nuestras piezas nunca se nombra al competidor (regla de CLAUDE.md): el análisis es interno.
    - `mejora`: qué muestra y una propuesta concreta para nuestro sistema (bot, estudio Remotion, rutinas, flujos): qué
      cambiaría, qué archivos tocaría, esfuerzo (S/M/L) y riesgo. No se implementa aquí: queda para una sesión en el PC.
    - `tener_en_cuenta`: resumen, por qué importa y dónde se aplicaría.
@@ -68,5 +74,5 @@ La rutina recibe `{"comando":"referencia","referencia_id","etiqueta","video_file
 6. **Responderle** con el resumen del análisis (texto plano, máx. 3.500 caracteres) y al final «Guardado como #<id>.
    Míralo con /referencia <id>».
 
-Lo usan después: el radar de los lunes (referencias `grafica` y `marketing` sin usar) y las sesiones del PC
+Lo usan después: el radar de los lunes (referencias `grafica`, `marketing` y `competencia` sin usar) y las sesiones del PC
 (`select * from bot.referencias where etiqueta='mejora' and estado='analizado'`). Al usar una, marcar `estado='usado'`.
