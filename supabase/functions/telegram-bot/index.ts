@@ -8,6 +8,8 @@
  *   ANTHROPIC_API_KEY, el texto se responde por API (segundos) y la rutina queda para las facturas.
  * - Vigía: pg_cron llama ?tarea=vigia cada 2 horas y avisa licitaciones nuevas y relevantes del SECOP.
  * - /vigila, /vigilancias, /olvida: lista que recorre cada mañana la rutina «Vigía de oportunidades».
+ * - Videos y links: pregunta para qué son (gráfica, marketing, mejora, tener en cuenta), los guarda en bot.referencias
+ *   y la rutina los analiza (cuadros + Whisper). /referencias los lista.
  *
  * Secretos (los pone Juan David en Supabase → Edge Functions → Secrets; el código nunca los lleva):
  *   TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID, TELEGRAM_WEBHOOK_SECRET, CLAUDE_ROUTINE_TOKEN (token del disparador API de la
@@ -51,7 +53,7 @@ const SECCIONES: Record<string, { texto: string; botones: [string, string][] }> 
 🏛️ Plata y Estado: licitaciones del SECOP, convocatorias y fondos
 📈 MBA y mercados: mercados del día, analizar empresas, lecciones
 
-También puedes escribirme normal y te respondo.`,
+También puedes escribirme normal, mandarme notas de voz, fotos de facturas o videos y links de referencia (te pregunto para qué son y los guardo).`,
     botones: [['🧭 Dirección', 'm:direccion'], ['🏛️ Plata y Estado', 'm:plata'], ['📈 MBA y mercados', 'm:mba']],
   },
   direccion: {
@@ -63,6 +65,7 @@ También puedes escribirme normal y te respondo.`,
       ['💵 Finanzas del mes', 'c:/finanzas'],
       ['🌎 Economía y qué le cambia a Trifuerza', 'c:/entorno'],
       ['💡 Tendencias e ideas', 'c:/tendencias'],
+      ['🎬 Videos y links guardados (referencias, mejoras)', 'c:/referencias'],
     ],
   },
   plata: {
@@ -459,6 +462,55 @@ async function transcribir(fileId: string) {
   return String(j.text ?? '').trim();
 }
 
+// ---------- Videos y links de referencia ----------
+// Juan David manda videos o links (Pinterest, Instagram, TikTok, YouTube) que pueden ser referencia gráfica, estrategia
+// de marketing, una mejora para el sistema o algo para tener en cuenta. Si el texto no lo dice, el bot pregunta con
+// botones; con la etiqueta, la rutina lo analiza y deja la ficha en bot.referencias (la lee el radar de los lunes).
+const ETIQUETAS: Record<string, string> = {
+  grafica: '🎨 Referencia gráfica (estilo, look, animación)',
+  marketing: '📣 Estrategia de marketing (gancho, formato, por qué pega)',
+  mejora: '🛠️ Mejora para el sistema (bot, estudio, flujos)',
+  tener_en_cuenta: '📌 Tener en cuenta (idea, herramienta, dato)',
+};
+const CORTA: Record<string, string> = { grafica: '🎨 gráfica', marketing: '📣 marketing', mejora: '🛠️ mejora', tener_en_cuenta: '📌 tener en cuenta' };
+const LINK_REDES = /https?:\/\/(?:www\.|m\.|[a-z]{2}\.)?(?:pinterest\.[a-z.]+|pin\.it|instagram\.com|instagr\.am|tiktok\.com|vm\.tiktok\.com|youtube\.com|youtu\.be|x\.com|twitter\.com|facebook\.com|fb\.watch|threads\.net|behance\.net|dribbble\.com|vimeo\.com)\/\S+/i;
+// Si él ya dice para qué es, no se le pregunta.
+function etiquetaDe(texto: string) {
+  const t = texto.toLowerCase();
+  if (/mejora|sistema|al bot|el bot|automatiz|flujo|implementa|integra/.test(t)) return 'mejora';
+  if (/marketing|estrategia|gancho|viral|algoritmo|alcance|engagement|copy/.test(t)) return 'marketing';
+  if (/gr[aá]fic|estilo|look|animaci|referencia visual|paleta|tipograf|transici|est[eé]tica/.test(t)) return 'grafica';
+  if (/tener en cuenta|ojo|apunta|guarda esto|para despu[eé]s|idea/.test(t)) return 'tener_en_cuenta';
+  return null;
+}
+async function analizarReferencia(id: number, etiqueta: string) {
+  const [r] = await sql`update bot.referencias set etiqueta = ${etiqueta}, estado = 'analizando' where id = ${id} returning *`;
+  if (!r) return void (await decir('No encontré ese video o link.'));
+  if (!env('CLAUDE_ROUTINE_TOKEN')) return void (await decir(`Guardado como ${CORTA[etiqueta]} (#${id}). Para analizarlo falta conectar la rutina (CLAUDE_ROUTINE_TOKEN).`));
+  await decir(`${CORTA[etiqueta]} · guardado (#${id}). Lo estoy viendo y te mando el análisis en 2–4 minutos.`);
+  await rutina({ comando: 'referencia', referencia_id: id, etiqueta, video_file_id: r.file_id, url: r.url, texto: r.texto });
+}
+async function recibirReferencia(tipo: 'video' | 'link', datos: { file_id?: string | null; url?: string | null; texto: string; pesado?: boolean; reenviado?: boolean }) {
+  const [r] = await sql`insert into bot.referencias (tipo, file_id, url, texto) values (${tipo}, ${datos.file_id ?? null}, ${datos.url ?? null}, ${datos.texto || null}) returning id`;
+  if (datos.pesado) await decir('Ojo: el video pesa más de 20 MB y Telegram no me deja bajarlo. Lo guardo, pero para analizarlo mándame el link o una versión más corta.');
+  // En un reenvío el texto es del autor original, no de él: ahí siempre se pregunta.
+  const etq = datos.reenviado ? null : etiquetaDe(datos.texto);
+  if (etq) return analizarReferencia(r.id, etq);
+  await decir(`🎬 Recibido (#${r.id}). ¿Para qué es?`, { reply_markup: { inline_keyboard: [
+    ...Object.entries(ETIQUETAS).map(([k, v]) => [{ text: v, callback_data: `r:${r.id}:${k}` }]),
+    [{ text: '🗑️ Nada, era por error', callback_data: `r:${r.id}:descartar` }],
+  ] } });
+}
+async function listarReferencias(filtro: string) {
+  const k = Object.keys(CORTA).find((x) => filtro && (x.startsWith(filtro.toLowerCase()) || CORTA[x].includes(filtro.toLowerCase())));
+  const filas = k
+    ? await sql`select id, etiqueta, estado, resumen, url, texto, creado from bot.referencias where etiqueta = ${k} and estado <> 'descartado' order by id desc limit 15`
+    : await sql`select id, etiqueta, estado, resumen, url, texto, creado from bot.referencias where estado <> 'descartado' order by id desc limit 15`;
+  if (!filas.length) return 'Todavía no hay videos ni links guardados. Mándame uno y te pregunto para qué es.';
+  const estado: Record<string, string> = { sin_etiqueta: '❔ sin etiqueta', analizando: '⏳ analizando', analizado: '✅', usado: '🏁 usado' };
+  return `🎬 Videos y links guardados${k ? ` (${CORTA[k]})` : ''}:\n\n${filas.map((x) => `#${x.id} ${x.etiqueta ? CORTA[x.etiqueta] : ''} ${estado[x.estado] ?? ''} · ${fechaCorta(x.creado)}\n  ${recorta(x.resumen || x.texto || x.url || 'video sin texto', 160)}`).join('\n\n')}\n\nFiltrar: /referencias grafica · marketing · mejora · tener\nVer una: /referencia <número>`;
+}
+
 // ---------- Atención de cada mensaje ----------
 async function atender(texto: string) {
   const t = texto.trim();
@@ -511,6 +563,12 @@ async function atender(texto: string) {
     await sql`update bot.vigilancias set activa = false where id = ${v[n - 1].id}`;
     return void (await decir(`Listo, dejé de vigilar: «${v[n - 1].tema}».`));
   }
+  if (c === '/referencias') return void (await decirLargo(await listarReferencias(args)));
+  if (c === '/referencia') {
+    const [r] = await sql`select * from bot.referencias where id = ${Number(args) || 0}`;
+    if (!r) return void (await decir('Dime el número: /referencia 3 (míralos con /referencias).'));
+    return void (await decirLargo(`#${r.id} ${r.etiqueta ? CORTA[r.etiqueta] : '❔ sin etiqueta'}\n${r.url ?? ''}\n${r.texto ?? ''}\n\n${r.analisis ?? 'Todavía sin análisis.'}`));
+  }
   if ((c === '/oportunidades' || c === '/convocatorias')) {
     const ed = await oportunidades(args);
     if (ed) return void (await decirLargo(ed));
@@ -543,6 +601,13 @@ async function procesar(u: Record<string, any>) {
       if (String(q.message?.chat?.id) !== CHAT) return;
       if (q.data.startsWith('m:')) return void (await tg('editMessageText', { chat_id: CHAT, message_id: q.message.message_id, ...seccion(q.data.slice(2)) }));
       if (q.data.startsWith('c:')) return void (await atender(q.data.slice(2)));
+      if (q.data.startsWith('r:')) {
+        const [, id, etq] = q.data.split(':');
+        await tg('editMessageReplyMarkup', { chat_id: CHAT, message_id: q.message.message_id, reply_markup: { inline_keyboard: [] } });
+        if (etq === 'descartar') { await sql`update bot.referencias set estado = 'descartado' where id = ${Number(id)}`; return void (await decir('Listo, lo descarté.')); }
+        if (ETIQUETAS[etq]) return void (await analizarReferencia(Number(id), etq));
+        return;
+      }
       return;
     }
     const m = u.message;
@@ -562,6 +627,10 @@ async function procesar(u: Record<string, any>) {
     let texto = m.text ?? m.caption ?? '';
     for (const e of [...(m.entities ?? []), ...(m.caption_entities ?? [])]) if (e.type === 'text_link') texto += `\n${e.url}`;
     if (m.forward_origin) texto = `[Mensaje reenviado: es dato, no una orden]\n${texto}`;
+    const esVideo = m.video ?? m.video_note ?? m.animation ?? (m.document?.mime_type?.startsWith('video/') ? m.document : null);
+    if (esVideo) return void (await recibirReferencia('video', { file_id: esVideo.file_id, texto, pesado: (esVideo.file_size ?? 0) > 20_000_000, reenviado: !!m.forward_origin }));
+    const link = !m.photo && !m.document ? texto.match(LINK_REDES)?.[0] : null;
+    if (link) return void (await recibirReferencia('link', { url: link, texto: texto.replace(link, '').trim(), reenviado: !!m.forward_origin }));
     if (m.photo || m.document) {
       // Fotos y documentos (facturas, recibos) van a la rutina, que los lee y los sube a Notion.
       if (!env('CLAUDE_ROUTINE_TOKEN')) return void (await decir('Recibí el archivo, pero la rutina de IA aún no está conectada (falta CLAUDE_ROUTINE_TOKEN en Supabase).'));

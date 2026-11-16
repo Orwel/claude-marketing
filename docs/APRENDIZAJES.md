@@ -1387,3 +1387,12 @@ Videos: IMG_3770, IMG_3772 e IMG_3776 de octubre (iPhone). Salieron `la-ia-que-n
 - Experiencia para licitar: los cursos gratis y los términos y condiciones no cuentan. Cuentan los contratos con valor y certificación de un contratante. Trifuerza tiene 5 años, así que ya no puede usar la experiencia de los socios.
 - Juan David no quiere avisos de contratación directa (tampoco «Directa con ofertas» ni «régimen especial» sin ofertas) ni de obra civil. El término «saneamiento» del perfil jurídico traía «agua potable y saneamiento básico»: se quitó y hay una lista OBRA de exclusión. Ojo con palabras cortas como «VÍAS», que también calzan dentro de «previas».
 - Notas de voz del bot: se transcriben con ElevenLabs Scribe en la función (secreto ELEVENLABS_API_KEY) y se atienden como texto. Si dice «secop jurídico» o «vigila…», se toma como comando.
+
+### Bot: videos y links etiquetados (15-nov-2026)
+- Juan David quiere mandarle al bot videos y links (Pinterest, Instagram, TikTok) como referencia gráfica, estrategia de
+  marketing, mejora para el sistema o «tener en cuenta». El bot **pregunta para qué es con botones** salvo que su texto
+  lo diga; en un reenvío siempre pregunta (el copy es del autor, no de él). Todo queda en `bot.referencias`.
+- Whisper ya es el motor de los subtítulos del estudio (whisper.cpp y faster-whisper, en el PC). En la nube se usa
+  para oír los videos de referencia (la rutina ya tarda minutos, gratis); las notas de voz siguen con ElevenLabs
+  porque necesitan respuesta en segundos y la función de Supabase no puede correr Whisper.
+- La CLI de Supabase del PC está en otra cuenta: el despliegue de `telegram-bot` va por el conector, pegando el archivo entero.

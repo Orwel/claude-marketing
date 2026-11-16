@@ -25,6 +25,7 @@ export const COMANDOS = [
   { command: 'aprende', description: 'Lección de análisis fundamental: /aprende WACC' },
   { command: 'vigila', description: 'Vigilar algo y avisarme solo lo nuevo: /vigila Estímulos 2027' },
   { command: 'vigilancias', description: 'Lo que estoy vigilando' },
+  { command: 'referencias', description: 'Videos y links guardados (o /referencias grafica)' },
   { command: 'meta', description: 'Guardar meta: /meta Contrappto: 50 usuarios pagos a 31-mar' },
 ];
 
@@ -50,6 +51,7 @@ También puedes escribirme normal: preguntas, links de Pinterest o Instagram, id
       ['💵 Finanzas del mes', 'c:/finanzas'],
       ['🌎 Economía y qué le cambia a Trifuerza', 'c:/entorno'],
       ['💡 Tendencias e ideas', 'c:/tendencias'],
+      ['🎬 Videos y links guardados (referencias, mejoras)', 'c:/referencias'],
     ],
   },
   plata: {
