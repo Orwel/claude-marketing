@@ -10,6 +10,9 @@
  * - /vigila, /vigilancias, /olvida: lista que recorre cada mañana la rutina «Vigía de oportunidades».
  * - Videos y links: pregunta para qué son (gráfica, marketing, competencia, mejora, tener en cuenta), los guarda en bot.referencias
  *   y la rutina los analiza (cuadros + Whisper). /referencias los lista.
+ * - Noticia del día: los botones `n:<id>:<acción>` (Hazlo, Aprobar, Corregir, Descartar) mueven el estado en bot.noticias
+ *   y disparan la rutina que produce el carrusel o deja el borrador en Metricool (docs/bandeja/NOTICIA-DEL-DIA.md).
+ *   Nada se publica desde aquí. Sin el secreto NOTICIAS_RUTINA la noticia queda «pedida» para una sesión del PC.
  *
  * Secretos (los pone Juan David en Supabase → Edge Functions → Secrets; el código nunca los lleva):
  *   TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID, TELEGRAM_WEBHOOK_SECRET, CLAUDE_ROUTINE_TOKEN (token del disparador API de la
@@ -513,6 +516,34 @@ async function listarReferencias(filtro: string) {
   return `🎬 Videos y links guardados${k ? ` (${CORTA[k]})` : ''}:\n\n${filas.map((x) => `#${x.id} ${x.etiqueta ? CORTA[x.etiqueta] : ''} ${estado[x.estado] ?? ''} · ${fechaCorta(x.creado)}\n  ${recorta(x.resumen || x.texto || x.url || 'video sin texto', 160)}`).join('\n\n')}\n\nFiltrar: /referencias grafica · marketing · competencia · mejora · tener\nVer una: /referencia <número>`;
 }
 
+// ---------- Noticia del día ----------
+// La rutina de la mañana guarda 1–3 candidatas en bot.noticias y las manda con botón (src/radar/noticia.mjs). Aquí solo se
+// mueve el estado y se dispara la rutina; producir, verificar y dejar el borrador en Metricool lo hace ella.
+// NOTICIAS_RUTINA se pone cuando la rutina ya tiene las instrucciones de noticia: antes de eso un disparo la haría improvisar.
+const noticiasConRutina = () => Boolean(env('NOTICIAS_RUTINA') && env('CLAUDE_ROUTINE_TOKEN'));
+async function pasoNoticia(id: number, accion: string) {
+  // acción: [estado desde el que vale, estado nuevo, aviso]. El estado de partida evita que dos toques produzcan o aprueben dos veces.
+  const pasos: Record<string, [string, string, string]> = {
+    hazlo: ['candidata', 'produciendo', '🎬 Va. Confirmo el dato en la fuente y te mando la vista previa en 5–8 minutos.'],
+    ok: ['vista_previa', 'aprobada', '✅ Aprobada. La dejo como borrador en Metricool, sin programar.'],
+    corregir: ['vista_previa', 'corregir', '✏️ Escríbeme qué cambio.'],
+    no: ['candidata', 'descartada', 'Listo, esa no.'],
+    descartar: ['vista_previa', 'descartada', '🗑️ Descartada. La pieza queda guardada, sin publicar.'],
+  };
+  const p = pasos[accion];
+  if (!p || !id) return;
+  const dispara = accion === 'hazlo' || accion === 'ok';
+  // Sin rutina conectada, lo pedido queda anotado para la sesión del PC en vez de perderse.
+  const nuevo = dispara && !noticiasConRutina() ? (accion === 'hazlo' ? 'pedida' : 'aprobada') : p[1];
+  const [n] = await sql`update bot.noticias set estado = ${nuevo} where id = ${id} and estado = ${p[0]} returning id`;
+  if (!n) return void (await decir('Esa noticia ya se atendió.'));
+  if (dispara && !noticiasConRutina()) return void (await decir(accion === 'hazlo'
+    ? `🎬 Anotada (#${id}). La producción automática todavía no está conectada: la armo en la próxima sesión del PC y te mando la vista previa.`
+    : `✅ Aprobada (#${id}). El borrador en Metricool lo dejo en la próxima sesión del PC; nada se publica solo.`));
+  await decir(p[2]);
+  if (dispara) await rutina({ comando: accion === 'hazlo' ? 'noticia' : 'noticia_aprobar', noticia_id: id });
+}
+
 // ---------- Atención de cada mensaje ----------
 async function atender(texto: string) {
   const t = texto.trim();
@@ -610,6 +641,11 @@ async function procesar(u: Record<string, any>) {
         if (ETIQUETAS[etq]) return void (await analizarReferencia(Number(id), etq));
         return;
       }
+      if (q.data.startsWith('n:')) {
+        const [, id, accion] = q.data.split(':');
+        await tg('editMessageReplyMarkup', { chat_id: CHAT, message_id: q.message.message_id, reply_markup: { inline_keyboard: [] } });
+        return void (await pasoNoticia(Number(id), accion));
+      }
       return;
     }
     const m = u.message;
@@ -638,6 +674,15 @@ async function procesar(u: Record<string, any>) {
       if (!env('CLAUDE_ROUTINE_TOKEN')) return void (await decir('Recibí el archivo, pero la rutina de IA aún no está conectada (falta CLAUDE_ROUTINE_TOKEN en Supabase).'));
       await decir('🧾 Recibido. Lo leo y, si es factura o recibo, lo subo a Notion. Te aviso en 1–3 minutos.');
       return void (await rutina({ comando: 'archivo', texto, foto_file_id: m.photo?.at(-1)?.file_id ?? null, documento_file_id: m.document?.file_id ?? null }));
+    }
+    // Si tocó «Corregir» en una vista previa, su siguiente mensaje (que no sea un comando) es la corrección.
+    if (texto.trim() && !texto.trim().startsWith('/') && !m.forward_origin) {
+      const [n] = await sql`update bot.noticias set estado = ${noticiasConRutina() ? 'produciendo' : 'pedida'}, correccion = ${texto.trim()} where id = (select id from bot.noticias where estado = 'corregir' order by id desc limit 1) returning id`;
+      if (n) {
+        if (!noticiasConRutina()) return void (await decir(`✏️ Anotado (#${n.id}). La corrijo en la próxima sesión del PC y te mando la vista previa.`));
+        await decir(`✏️ Anotado (#${n.id}). La corrijo y te mando la vista previa en 5–8 minutos.`);
+        return void (await rutina({ comando: 'noticia_corregir', noticia_id: n.id, texto: texto.trim() }));
+      }
     }
     await atender(texto);
   } catch (e) {

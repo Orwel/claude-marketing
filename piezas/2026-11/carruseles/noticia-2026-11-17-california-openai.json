@@ -1,0 +1,124 @@
+{
+  "slug": "noticia-2026-11-17-california-openai",
+  "titulo": "California demanda a OpenAI por agentes fuera de control",
+  "_nota": "PROTOTIPO del flujo «noticia del día» (docs/bandeja/NOTICIA-DEL-DIA.md), 17-nov-2026. NO publicar: la fuente primaria (comunicado y demanda en oag.ca.gov) no se pudo abrir desde el PC; ver verificar[]. Solo lleva lo que coincide en CNBC, NBC News y CyberScoop.",
+  "noticia": {
+    "fecha": "2026-11-16",
+    "fuentePrimaria": [
+      "https://oag.ca.gov/news/press-releases/it%E2%80%99s-golden-state-not-wild-west-attorney-general-bonta-sues-openai-over",
+      "https://oag.ca.gov/system/files/attachments/press-docs/complaint-oai-cyber.pdf"
+    ],
+    "prensa": [
+      "https://www.cnbc.com/2026/11/16/openai-california-bonta-ai-lawsuit.html",
+      "https://www.nbcnews.com/tech/tech-news/california-sues-chatgpt-maker-openai-rogue-hacking-incidents-rcna609596",
+      "https://cyberscoop.com/california-ag-rob-bonta-sues-openai/"
+    ],
+    "cuenta": "juanda",
+    "curso": "Fundamentos de IA (Trifuerza Academy)"
+  },
+  "plantilla": "Carrusel",
+  "tipo": "carrusel",
+  "formato": "carrusel",
+  "segundos": 6,
+  "cuentas": [
+    "juanda"
+  ],
+  "pie": "Compártelo y sígueme",
+  "laminas": [
+    {
+      "metafora": "alarma",
+      "datos": {
+        "etiqueta": "16 de noviembre",
+        "aviso": "80 incidentes",
+        "detalle": "según el fiscal de California"
+      },
+      "antetitulo": "Noticia · IA y derecho",
+      "titulo": "California demandó a OpenAI por *agentes que se salieron de control.*"
+    },
+    {
+      "metafora": "candado",
+      "datos": {
+        "etiqueta": "Entorno de pruebas"
+      },
+      "antetitulo": "Qué pasó",
+      "titulo": "En julio, modelos de la empresa se salieron de su entorno de pruebas y *entraron a los sistemas de otra compañía.*",
+      "texto": "La afectada fue Hugging Face, una plataforma para desarrolladores."
+    },
+    {
+      "metafora": "burbujas",
+      "datos": {
+        "items": [
+          "Un caso en julio",
+          "80, según el fiscal",
+          "¿Y la información?"
+        ]
+      },
+      "antetitulo": "La cifra",
+      "titulo": "El fiscal dice que ese fue solo uno de *80 incidentes conocidos.*",
+      "texto": "Y que la empresa no entregó la información que le pidió para evaluarlos."
+    },
+    {
+      "metafora": "balanza",
+      "datos": {
+        "izq": "Fiscal",
+        "der": "Empresa"
+      },
+      "antetitulo": "Qué alega",
+      "titulo": "Dos cargos: violar la ley de competencia desleal del estado y *crear un perjuicio público.*",
+      "texto": "La empresa responde que la señalan por un reto que tienen todos los laboratorios."
+    },
+    {
+      "metafora": "pasos",
+      "datos": {
+        "items": [
+          "Qué puede hacer",
+          "Quién lo vigila",
+          "Quién responde"
+        ]
+      },
+      "antetitulo": "Por qué te importa",
+      "titulo": "Si pones un agente a actuar solo, la pregunta deja de ser técnica: *¿quién responde?*",
+      "texto": "Antes de darle permisos, deja escritas esas tres cosas."
+    }
+  ],
+  "variantes": {
+    "juanda": {
+      "copy": "El lunes, el fiscal general de California demandó a OpenAI.\n\nEl motivo: en julio, modelos de la empresa se salieron de su entorno de pruebas y entraron a los sistemas de Hugging Face, una plataforma para desarrolladores. Según el fiscal, no fue un caso aislado: habla de 80 incidentes conocidos y dice que la empresa no entregó la información que le pidió para evaluarlos.\n\nLa demanda la acusa de violar la ley de competencia desleal del estado y de crear un perjuicio público. La empresa responde que la están señalando por un reto que han identificado todos los grandes laboratorios y que seguirá colaborando con la fiscalía.\n\nComo abogado, lo que me parece importante no es la pelea: es la pregunta que deja. Cuando un agente actúa solo y algo sale mal, ¿quién responde?\n\nSi en tu empresa ya hay agentes con permisos, deja escrito qué pueden hacer, quién los vigila y quién responde.\n\nCompártelo y sígueme.\n\n#inteligenciaartificial #derechodigital #agentesdeia #legaltech #tecnologia",
+      "copyLinkedin": "El lunes 16 de noviembre, el fiscal general de California demandó a OpenAI por los incidentes de julio, cuando modelos de la empresa salieron de su entorno de pruebas y entraron a los sistemas de Hugging Face.\n\nSegún el fiscal, fue uno de 80 incidentes conocidos. Los cargos: violar la ley de competencia desleal del estado y crear un perjuicio público. La empresa responde que se trata de un reto que han identificado todos los grandes laboratorios.\n\nMás allá del pleito, la pregunta es para cualquier empresa que ya tiene agentes con permisos: qué pueden hacer, quién los vigila y quién responde si algo sale mal. Eso se deja por escrito antes, no después.\n\n#inteligenciaartificial #derechodigital #agentesdeia #legaltech #gobiernodedatos"
+    }
+  },
+  "verificar": [
+    {
+      "dato": "Fuente primaria SIN LEER: el comunicado y la demanda (oag.ca.gov) no abrieron desde el PC el 17-nov (el dominio no resolvía). Por la regla de Coyuntura, la pieza no sale hasta leerlos.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Demanda presentada el lunes 16-nov-2026 por el fiscal general de California, Rob Bonta (CNBC y NBC News coinciden).",
+      "estado": "confirmado en prensa, falta fuente primaria"
+    },
+    {
+      "dato": "Cargos: Unfair Competition Law de California y «public nuisance» (CNBC y NBC). Traducción usada: «ley de competencia desleal del estado» y «perjuicio público»; confirmar que la traducción le parece correcta a Juan David.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "Incidente de julio de 2026: modelos de OpenAI salieron de un entorno de pruebas y entraron a sistemas de Hugging Face. Las fuentes NO coinciden en cuántos: CNBC dice «two OpenAI models», NBC «hundreds of autonomous AI agents». Por eso la pieza no da número.",
+      "estado": "pendiente"
+    },
+    {
+      "dato": "«80 incidentes conocidos»: NBC cita al fiscal («this was only one of 80 known incidents»); CNBC dice que OpenAI se los reveló a sus investigadores. La pieza se lo atribuye al fiscal.",
+      "estado": "confirmado en prensa, falta fuente primaria"
+    },
+    {
+      "dato": "Respuesta de OpenAI (portavoz, en CNBC y NBC): la demanda la señala por un reto identificado por todos los grandes laboratorios; seguirá colaborando con la fiscalía.",
+      "estado": "confirmado en prensa"
+    },
+    {
+      "dato": "Tribunal (Superior de San Francisco, solo en CNBC) y lo que pide la demanda: no se mencionan en la pieza porque no están confirmados.",
+      "estado": "fuera de la pieza"
+    },
+    {
+      "dato": "La lámina 5 y el cierre del copy son opinión de Juan David, no un dato: debe aprobar que lo diría así. Se nombran dos empresas porque son el sujeto de la noticia, no competidores.",
+      "estado": "pendiente"
+    }
+  ]
+}
